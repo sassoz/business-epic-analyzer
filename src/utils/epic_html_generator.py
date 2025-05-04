@@ -1,3 +1,23 @@
+"""
+Module for generating HTML summary reports from JIRA Business Epic data.
+
+This module provides functionality to create rich HTML reports for Business Epics
+using templated generation augmented by Large Language Models. It transforms structured
+JSON summaries into comprehensive HTML reports with embedded visualizations.
+
+The main class, EpicHtmlGenerator, handles template loading, LLM-based content
+generation, image embedding, and HTML file output. It supports customization of
+templates, output locations, and model selection for generation.
+
+Key features:
+- Template-based HTML generation for Business Epics
+- LLM integration for intelligent content transformation and formatting
+- Automatic embedding of visualization images into HTML via Base64 encoding
+- JIRA issue link formatting and hyperlinking
+- Token usage tracking for LLM API calls
+- Batch processing of multiple Business Epics
+"""
+
 import os
 import base64
 import re

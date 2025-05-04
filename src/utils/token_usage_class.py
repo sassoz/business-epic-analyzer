@@ -1,3 +1,23 @@
+"""
+Module for tracking, analyzing, and reporting token usage in LLM API calls.
+
+This module provides functionality to log, persist, and analyze token consumption
+across different language models and time periods. It supports cost calculation based
+on model-specific pricing structures and generates comprehensive usage reports.
+
+The main class, TokenUsage, implements methods for logging API calls, calculating costs,
+filtering usage data by various criteria, and generating summaries and reports in
+multiple formats. It maintains up-to-date pricing information for various LLM models.
+
+Key features:
+- Token usage logging for API calls to different language models
+- Cost calculation based on current pricing structures
+- Temporal and model-based filtering of usage data
+- Statistical analysis and aggregation of usage data
+- Comprehensive report generation in multiple formats (text, JSON, HTML)
+- Support for data export in CSV, JSON, and Excel formats
+"""
+
 import json
 import os
 import datetime
@@ -9,9 +29,23 @@ from utils.config import LOGS_DIR
 
 class TokenUsage:
     """
-    Klasse zur Verwaltung und Analyse des Token-Verbrauchs bei LLM API-Aufrufen.
-    Unterstützt das Logging, die Persistenz und Auswertung des Token-Verbrauchs
-    über verschiedene Zeiträume und Modelle hinweg.
+    Class for managing and analyzing token usage in LLM API calls.
+
+    This class provides comprehensive functionality for logging, persisting, and analyzing
+    token consumption across different language models and time periods. It maintains
+    current pricing structures for various models and supports detailed reporting.
+
+    Key features:
+    - Token usage logging with metadata (model, task, entity identifiers)
+    - Cost calculation based on up-to-date model pricing
+    - Usage data filtering by time periods, tasks, entities, or models
+    - Statistical analysis with customizable grouping and aggregation
+    - Report generation in multiple formats (text, JSON, HTML)
+    - Data export capabilities for further analysis
+
+    The class uses a JSONL file format for storage, enabling continuous logging and
+    easy retrieval of historical data. Each log entry captures timestamp, model, token
+    counts, calculated costs, and optional metadata.
     """
 
     # Preisstruktur für verschiedene Modelle (in USD pro 1000 Tokens)

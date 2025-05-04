@@ -1,3 +1,19 @@
+"""
+Module for cleaning up and filtering Story and Task type issues from JIRA data.
+
+This module helps improve data quality by identifying and removing Story and Task
+type issues from the JIRA data set. Since Stories and Tasks often represent
+implementation details rather than business requirements, they can clutter
+the visualization and business analysis.
+
+The module processes JSON files containing JIRA issue data, identifies issues
+of type "Story" or "Task", removes references to these issues from other issues'
+"realized_by" lists, and optionally deletes the Story/Task JSON files.
+
+This cleanup step helps focus the analysis on the core business requirements and
+improves the quality of visualizations and summaries.
+"""
+
 import json
 import os
 import glob
@@ -24,11 +40,23 @@ def save_jira_json(file_path, data):
 
 def cleanup_story_issues(json_dir):
     """
-    Process all JSON files in directory to:
-    1. Identify "Story" & "Task" type issues
-    2. Remove their keys from "realized_by" lists in other issues
-    3. Delete the Story JSON files after user confirmation
+    Processes all JSON files in the specified directory to clean up Story/Task issues.
+
+    This function:
+    1. Identifies all issues of type "Story" and "Task"
+    2. Removes references to these issues from "realized_by" lists in other issues
+    3. Deletes the Story/Task JSON files
+
+    This cleanup helps focus on business-oriented issues rather than implementation
+    details, improving visualizations and making business analysis clearer.
+
+    Args:
+        json_dir (str): Directory containing JIRA issue JSON files
+
+    Returns:
+        None
     """
+
     # Step 1: Load all JSON files and identify Story issues
     all_files = glob.glob(os.path.join(json_dir, "*.json"))
     issues_data = {}

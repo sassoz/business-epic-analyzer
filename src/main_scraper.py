@@ -1,9 +1,55 @@
 """
 Jira Issue Link Scraper
 
-Dieses Skript automatisiert den Login in Jira und extrahiert Informationen aus "is-realized-by" Links
-und Child Issues. Es speichert die Daten in verschiedenen Formaten (XML, JSON und HTML).
-Anschließend erstellt es Visualisierungen der Issue-Hierarchie und Zusammenfassungen.
+This script automates the process of extracting, analyzing, and summarizing Jira issue data.
+It coordinates multiple components to create a comprehensive knowledge base from Jira issues.
+
+WORKFLOW:
+1. Retrieves Business Epic IDs from a text file (default: BE_Liste.txt)
+2. [Optional] Scrapes Jira issues recursively (controlled by SCRAPE_HTML flag):
+   - Logs into Jira using the provided credentials
+   - Extracts data from each issue page
+   - Follows "is realized by" links and child issues recursively
+   - Stores extracted data as JSON files
+   - Cleans up any Story issues to maintain a clean hierarchy
+3. For each Business Epic:
+   - Builds a hierarchical graph representing issue relationships
+   - Creates a visual diagram of the issue hierarchy (PNG format)
+   - Generates a structured JSON context containing all issue data
+   - Uses AI (Claude/GPT) to create a concise summary of the issue tree
+   - Produces an HTML report with embedded visualizations
+
+COMPONENTS:
+- JiraScraper: Handles web scraping of Jira issue pages
+- JiraTreeGenerator: Builds graph representations of issue relationships
+- JiraTreeVisualizer: Generates visual diagrams of issue hierarchies
+- JiraContextGenerator: Creates structured context data for AI processing
+- ClaudeAPIClient: Interfaces with Claude API for summary generation
+- EpicHtmlGenerator: Creates formatted HTML reports
+
+CONFIGURATION:
+- LLM_MODEL_HTML_GENERATOR: Model for HTML generation (default: gpt-4.1-mini)
+- LLM_MODEL_BUSINESS_VALUE: Model for business value extraction (default: claude-3-7-sonnet-latest)
+- LLM_MODEL_SUMMARY: Model for summary generation (default: gpt-4.1)
+- SCRAPE_HTML: Controls whether to perform web scraping (default: False)
+
+USAGE:
+1. Ensure a text file containing Business Epic IDs (one per line) is available
+2. Run the script: python main_scraper.py
+3. If prompted, enter the path to the Business Epic file or press Enter for default
+4. The script will process all epics and generate output files in the configured directories
+
+OUTPUT DIRECTORIES:
+- JIRA_ISSUES_DIR: Extracted JSON data
+- ISSUE_TREES_DIR: Visual diagrams of issue hierarchies
+- JSON_SUMMARY_DIR: AI-generated summaries in JSON format
+- HTML_REPORTS_DIR: Complete HTML reports
+
+NOTES:
+- The script is designed to work with Deutsche Telekom's Jira instance
+- Login credentials are hardcoded and should be updated for different users
+- Set SCRAPE_HTML to True to enable web scraping; otherwise, the script will use existing JSON files
+- The modular design enables maintenance and extension of individual components
 """
 
 import os

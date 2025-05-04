@@ -1,3 +1,46 @@
+"""
+Business Impact API Module
+
+This module provides functionality for extracting business value metrics from Jira issue descriptions
+using AI-powered analysis. It processes textual descriptions to identify and extract structured
+business value data, which helps in prioritizing and evaluating the impact of business requirements.
+
+Key Components:
+---------------
+1. process_description(): Extracts business value data from a description text
+2. transform_json_file(): Processes a JSON file containing Jira issue data
+
+Business Value Structure:
+------------------------
+The module extracts and structures business value into three main categories:
+- Business Impact: Measures direct revenue/cost effects
+  - Scale (0-5)
+  - Revenue impact
+  - Cost savings
+  - Risk/loss mitigation
+  - Justification
+
+- Strategic Enablement: Measures strategic alignment and benefits
+  - Scale (0-5)
+  - Risk minimization
+  - Strategic enablement details
+  - Justification
+
+- Time Criticality: Measures urgency and timing importance
+  - Scale (0-5)
+  - Time frequency/horizon
+  - Justification
+
+
+Usage Examples:
+--------------
+1. Process a description directly:
+   ```python
+   result = process_description(description_text)
+   business_value = result["business_value"]
+   shortened_description = result["description"]
+"""
+
 import json
 import os
 import anthropic
@@ -8,17 +51,18 @@ _ = load_dotenv(find_dotenv())
 
 def process_description(description_text, api_key=None, model="claude-3-7-sonnet-latest", token_tracker=None):
     """
-    Verarbeitet einen Beschreibungstext, extrahiert business_value und kürzt die Beschreibung.
-
-    Gibt nur dann business_value Informationen zurück, wenn diese tatsächlich
-    im Text vorhanden sind - erfindet keine Daten.
+    Processes a description text, extracts business_value and shortens the description.
+    Only returns business_value information when it actually exists in the text -
+    does not invent any data.
 
     Args:
-        description_text (str): Der zu verarbeitende Beschreibungstext
-        api_key (str, optional): Claude API-Key, falls nicht über Umgebungsvariable gesetzt
+        description_text (str): The description text to process
+        api_key (str, optional): Claude API key, if not set via environment variable
+        model (str, optional): The AI model to use for processing
+        token_tracker (TokenUsage, optional): Instance to track token usage
 
     Returns:
-        dict: Dictionary mit shortened_description und business_value (kann leer sein)
+        dict: Dictionary with shortened_description and business_value (can be empty)
     """
     # Prüfe, ob API-Key vorhanden
     if not api_key:
@@ -210,17 +254,17 @@ def process_description(description_text, api_key=None, model="claude-3-7-sonnet
 
 def transform_json_file(input_file, api_key=None, output_file=None):
     """
-    Transformiert eine BEMABU JSON-Datei mit Claude API, extrahiert business_value Informationen
-    und aktualisiert die Struktur. Fügt nur dann business_value-Informationen hinzu, wenn diese
-    tatsächlich im Text vorhanden sind.
+    Transforms a BEMABU JSON file using Claude API, extracts business_value information
+    and updates the structure. Only adds business_value information if it's
+    actually present in the text.
 
     Args:
-        input_file (str): Pfad zur Eingabe-JSON-Datei
-        api_key (str, optional): Claude API-Key, falls nicht über Umgebungsvariable gesetzt
-        output_file (str, optional): Name der Ausgabedatei (Default: input_file_transformed.json)
+        input_file (str): Path to the input JSON file
+        api_key (str, optional): Claude API key, if not set via environment variable
+        output_file (str, optional): Name of the output file (Default: input_file_transformed.json)
 
     Returns:
-        str: Pfad zur transformierten Ausgabedatei
+        str: Path to the transformed output file
     """
     # JSON-Datei einlesen
     with open(input_file, 'r', encoding='utf-8') as f:

@@ -1,3 +1,24 @@
+"""
+Module for building, visualizing, and processing JIRA issue relationship trees.
+
+This module provides functionality to construct, visualize, and generate context from
+JIRA issue trees based on 'realized_by' relationships. It leverages NetworkX for graph
+representation and Matplotlib for visualization of issue hierarchies.
+
+The module contains three main classes:
+- JiraTreeGenerator: Builds directed graphs from JIRA issues and their relationships
+- JiraTreeVisualizer: Creates visual representations of issue trees with status coloring
+- JiraContextGenerator: Extracts structured context data from issue trees for AI processing
+
+Key features:
+- Graph-based representation of issue relationships
+- Color-coded visualizations based on issue status
+- Hierarchical tree layouts using Graphviz
+- JSON context generation for AI processing
+- Support for deep issue hierarchies and relationship traversal
+- Comprehensive metadata extraction from issue attributes
+"""
+
 import json
 import os
 import networkx as nx
@@ -12,7 +33,28 @@ from utils.config import JIRA_ISSUES_DIR, ISSUE_TREES_DIR, JSON_SUMMARY_DIR, LOG
 
 class JiraTreeGenerator:
     """
-    Class for generating a NetworkX graph from Jira issues.
+    Class for generating NetworkX graphs from JIRA issues and their relationships.
+
+    This class builds directed graphs representing JIRA issue hierarchies based on
+    'realized_by' relationships. It reads issue data from JSON files, establishes
+    parent-child relationships, and constructs a complete graph representation that
+    preserves all issue attributes and relationships.
+
+    The generator handles recursive traversal of issue hierarchies, maintaining the
+    full metadata of each issue node including title, status, type, descriptions,
+    business value data, and temporal information. It implements cycle detection to
+    prevent infinite recursion in complex relationship networks.
+
+    Key features:
+    - Builds directed graphs from JSON issue data
+    - Preserves all issue attributes as node properties
+    - Handles recursive traversal of 'realized_by' relationships
+    - Supports flexible JSON file location and naming conventions
+    - Implements robust error handling for missing or invalid files
+    - Provides detailed logging of graph construction process
+
+    The resulting graph structure is suitable for visualization, analysis, and
+    context generation for AI-powered summaries.
     """
 
     def __init__(self, json_dir=JIRA_ISSUES_DIR):
@@ -353,8 +395,30 @@ class JiraTreeVisualizer:
 
 class JiraContextGenerator:
     """
-    Class for generating context text from a Jira issue tree graph.
-    Outputs data in JSON format for easier processing by language models.
+    Class for generating structured context data from JIRA issue trees for AI processing.
+
+    This class extracts and formats data from NetworkX graphs of JIRA issues into a
+    structured JSON format optimized for language model processing. It traverses the
+    graph in breadth-first order, extracting detailed information about each issue and
+    preserving relationship hierarchies.
+
+    The generator handles complex issue metadata including business value metrics,
+    acceptance criteria, temporal data, and relationship links. It produces a comprehensive
+    JSON representation that includes all relevant business and technical details needed
+    for generating summaries and reports.
+
+    Key features:
+    - Produces structured JSON formatted for AI consumption
+    - Preserves complete issue hierarchies and relationships
+    - Processes complex nested attributes like business value metrics
+    - Handles breadth-first traversal to maintain logical issue ordering
+    - Maps parent-child relationships in both directions
+    - Formats temporal and versioning information consistently
+    - Creates a complete context model suitable for LLM-based summarization
+
+    The output JSON includes a root identifier and detailed information about all
+    connected issues, making it ideal for generating human-readable summaries that
+    accurately represent the JIRA issue structure.
     """
 
     def __init__(self, output_dir=JSON_SUMMARY_DIR):

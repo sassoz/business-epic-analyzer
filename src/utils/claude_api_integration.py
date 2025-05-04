@@ -1,7 +1,22 @@
 #!/usr/bin/env python3
 """
 Module for integrating with Claude API to generate summaries of Jira issue trees.
+
+This module provides functionality to connect to Anthropic's Claude API and generate
+structured summaries of Jira issues in JSON format. It supports customizable prompts
+and handles token usage tracking.
+
+The main class, ClaudeAPIClient, handles the API communication, prompt construction,
+and response processing, returning structured JSON summaries that can be used for
+generating HTML reports.
 """
+
+class ClaudeAPIClient:
+
+    def __init__(self, model: str = "claude-3-7-sonnet-latest", token_tracker=None):
+
+    def generate_summary(self, context, prompt=None, max_tokens=8000):
+
 
 import os
 import json
@@ -15,9 +30,28 @@ _ = load_dotenv(find_dotenv())
 class ClaudeAPIClient:
     """
     Client for interacting with Claude API.
+
+    This class handles authentication, communication, and response processing for
+    Anthropic's Claude API. It provides methods to generate structured summaries
+    from Jira issue data and supports token usage tracking.
+
+    The client uses environment variables for API authentication by default but
+    can also accept explicit API keys.
     """
 
     def __init__(self, model: str = "claude-3-7-sonnet-latest", token_tracker=None):
+        """
+        Initializes the Claude API client with specified parameters.
+
+        Args:
+            model (str): The Claude model to use for generation. Default is "claude-3-7-sonnet-latest".
+            token_tracker: Optional token usage tracker that logs token consumption.
+                          Should implement a log_usage method.
+
+        Raises:
+            ValueError: If no API key is available through environment variables
+                       or direct parameters.
+        """
         self.api_key = os.environ.get("ANTHROPIC_API_KEY")
         if not self.api_key:
             raise ValueError("API key required via constructor or ANTHROPIC_API_KEY environment variable")
@@ -27,15 +61,24 @@ class ClaudeAPIClient:
 
     def generate_summary(self, context, prompt=None, max_tokens=8000):
         """
-        Generate a summary using Claude API.
+        Generates a structured JSON summary of Jira issues using Claude API.
+
+        This method takes the context data from Jira issues and generates a
+        comprehensive summary in JSON format. It supports custom prompts
+        or uses a detailed default prompt designed for Jira issue analysis.
 
         Args:
-            context (str): The context text to summarize
-            prompt (str): Optional custom prompt. If None, a default prompt will be used
-            max_tokens (int): Maximum tokens for the response
+            context (str): The JSON context data containing Jira issues to summarize.
+            prompt (str, optional): Custom prompt for the API. If None, uses a
+                                   default prompt tailored for Jira issue analysis.
+            max_tokens (int): Maximum tokens for the response. Default is 8000.
 
         Returns:
-            str: The generated summary
+            str: The generated JSON summary containing structured information about
+                business goals, features, acceptance criteria, and timelines.
+
+        Raises:
+            Exception: On API communication errors or issues with JSON processing.
         """
         if not prompt:
             prompt = f"""

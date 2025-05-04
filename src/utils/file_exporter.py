@@ -1,3 +1,22 @@
+"""
+Module for exporting JIRA issue data to various file formats.
+
+This module provides functionality to export JIRA issue data to different file formats
+including JSON, XML, and HTML. It handles the serialization and formatting of structured
+issue data, ensuring proper encoding and organization of the exported files.
+
+The main class, FileExporter, implements methods for saving JIRA issues in various formats
+and handles path management, directory creation, and file writing operations. It supports
+both raw HTML exports and processed data exports in structured formats.
+
+Key features:
+- Exports JIRA issue data to JSON, XML, and other formats
+- Handles directory management and path resolution
+- Supports BeautifulSoup-based HTML processing
+- Provides consistent file naming conventions
+- Ensures proper UTF-8 encoding for international character support
+"""
+
 import json
 import xml.dom.minidom as md
 import xml.etree.ElementTree as ET

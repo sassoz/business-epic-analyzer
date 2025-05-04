@@ -1,3 +1,24 @@
+"""
+Module for extracting structured data from JIRA issue web pages.
+
+This module provides functionality to parse and extract data from JIRA web pages
+using Selenium. It handles the extraction of various fields and relationships
+from JIRA issues, including titles, descriptions, statuses, assignees, business
+values, acceptance criteria, attachments, and relationship links.
+
+The main class, DataExtractor, implements robust extraction methods with fallback
+strategies to handle different JIRA UI layouts and configurations. It includes
+special handling for business value information, which can be processed by external
+AI services to extract structured business impact metrics.
+
+Key features:
+- Extracts structured data from JIRA issue web pages
+- Handles "is realized by" links and child issues
+- Supports extraction of business value data
+- Provides fallback extraction mechanisms for robustness
+- Integrates with business impact AI processing
+"""
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import re
@@ -5,7 +26,31 @@ from utils.logger_config import logger
 
 
 class DataExtractor:
-    """Klasse zum Extrahieren von Daten aus den Jira-Issues."""
+    """
+    Class for extracting structured data from JIRA issue web pages.
+
+    This class handles the extraction of various fields and data elements from JIRA
+    web pages using Selenium. It implements robust extraction methods with multiple
+    fallback strategies to ensure reliable data extraction across different JIRA
+    configurations and UI layouts.
+
+    Key features:
+    - Extracts issue metadata (key, title, status, type, priority)
+    - Captures description and business scope text
+    - Processes business value data via external AI service (optional)
+    - Extracts acceptance criteria and fix versions
+    - Captures attachment information (files, images)
+    - Identifies related issues ('realized by' links and child issues)
+    - Supports temporal data (target start/end dates)
+
+    The class uses primary extraction methods first, then falls back to alternative
+    extraction strategies if the primary methods fail. This ensures maximum data
+    extraction even when JIRA's UI structure varies.
+
+    When a description_processor is provided (typically an AI service), the class
+    can analyze business value information from issue descriptions, extracting
+    structured business impact, strategic enablement and time criticality data.
+    """
 
     def __init__(self, description_processor=None, model="claude-3-7-sonnet-latest", token_tracker=None):
         """

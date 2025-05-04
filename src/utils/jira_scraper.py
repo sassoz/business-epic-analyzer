@@ -1,3 +1,24 @@
+"""
+Module for scraping and processing JIRA issues from web interfaces.
+
+This module provides functionality to automate JIRA web interaction, extracting
+issue data through a headless browser. It handles authentication, navigation,
+and recursive traversal of issue relationships to build a complete dataset.
+
+The main class, JiraScraper, manages the browser interaction, login process,
+and extraction of JIRA issues including their relationships. It follows both
+"is realized by" links and child issues to build a comprehensive graph of
+related issues.
+
+Key features:
+- Automated JIRA login and session management
+- Recursive extraction of connected issues
+- Support for "is realized by" relationship traversal
+- Child issue identification and processing
+- Integration with business value extraction
+- Robust error handling and retry mechanisms
+"""
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
