@@ -1,0 +1,170 @@
+{
+  "key": "EOS-6612",
+  "issue_type": "Epic",
+  "title": "Info-Reiter von SeCe-IT in EOS anzeigen/ Information for History from SeCe-IT Orders to EOS",
+  "status": "Resolved",
+  "description": "Description\n Story\nAs EOS-User\nwould like to get the info tab from SeCe-IT displayed in EOS and transfer comments to SeCe-IT,\nto provide the user with as much transparency as possible in the EOS order and also to return information to SeCe-IT.\n   Fragen / Hinweise:\nWann werden die Notes bei SeCe-IT abgeholt Beim Auftragsimport einmalig Oder werden sie im Laufe der Zeit aktualisiert - wann, Trigger\nWhat is the point of time to fetch notes from SeCe-IT At order import Are they updated during the time  \nFetch notes from SeCe-IT when the page is loaded. No updates, direct endpoint call and show data\nWie gehen wir mit einem EOS Auftrag um, hinter dem mehrere SeCe-IT Aufträge hängen?\nHow do we deal with an EOS order with several SeCe-IT orders behind it?  \nIdee: Auswahl des Teilauftrags in dem Bemerkung-Pop-Up\nIdea: Selection of the partial order in the comment pop-up\nWhere is the data displayed? Item detail page \n-> not relevant due to the fact thjat note creation is not intended at the first time\nWo werden die Daten angezeigt? Positionsdetailseite\nWhere is the data displayed? Item detail page?  \nIst es eine Anlage, eine Bemerkung, Verlauf oder wie hängen diese zusammen\nIs it an attachment, a remark, history or how are they related? \nGibt es eine API, die aufgerufen werden muss oder wie gelangen die Daten von SeCe-IT zu EOS?\nIs there an API that needs to be called or how does the data get from SeCe-IT to EOS? \nWenn über O3, wo stehen die Daten\nIf via O3, where is the data located? \nhttps://developer.telekom.de/catalog/do/do-seceit-ProductOrderingService/g_api/cit2/1.1.0\nWieso ein DropDown wenn immer \"Intern Service\" drin stehen soll\nWhy a dropdown if it should always say “Internal Service”?  \nDropdown editierbar oder ausgegraut?\nDropdown editable or grayed out?\n-> not relevant due to the fact thjat note creation is not intended at the first time\n  Problemstellung (Problem Statement)\nHeute hat der EOS Mitarbeiter keine Informationen über Bemerkungen oder Hinweise, die andere Kollegen und Org. Einheiten im SeCe-IT Vorgang vermerken. Wenn diese Informationen in EOS nicht vorhanden sind, findet ggf. eine Falschbearbeitung des Auftrags statt. Der Mitarbeiter muss also in SeCe-IT nachschauen, ob es Bemerkungen oder Hinweise gibt, die er bei der Bearbeitung beachten muss. \nToday, the EOS employee has no information about comments or notes that other colleagues and organizational units record in the SeCe-IT process. If this information is not available in EOS, the order may be processed incorrectly. The employee must therefore look in SeCe-IT to see whether there are any comments or notes that need to be taken into account during processing. \nFachlicher Lösungswunsch (Feature Hypothese)\nDer \"Info\" Reiter aus SeCe-IT wird im EOS Auftragsverlauf mit angezeigt. Somit hat der Mitarbeiter bei der Bearbeitung in EOS volle Transparenz um den Auftrag richtig zu bearbeiten. \nThe “Info” tab from SeCe-IT is also displayed in the EOS order history. This means that the employee has full transparency when processing the order in EOS in order to process it correctly.\nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nNotwendige Änderungen (Erfolgt durch EOS Team)\nFolgende Auflistung dient als erste Orientierung bzgl. der notwendigen Änderungen an EOS zur Umsetzung dieses EPICs:\n....\n.....\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n  Technische CHECKLISTE\nDieser Abschnitt dient als Orientierung zur Prüfung, ob an \"alles\" gedacht wurde.\nDieser Abschnitt soll vor dem Refinement gelöscht werden!\nDie Checkliste für die Stories ist der Vorlage für Stories zu entnehmen (EOS-433)\nZur groben Orientierung hier noch die entsprechenden Stichpunkte:\nExport-Schnittstellen\nImport-Schnittstellen\nLöschkonzept\nBenutzeroberfläche / Dialoge\nRollen & Rechte\nKorrespondenz\nAufgaben\nAuftragsvervollständigung\nNachrichten\nKontakte\nAbhängigkeiten zwischen Domänen\nKommunikation\nWelche Stakeholer müssen über diese Änderung informiert werden?\nAL, TL, OPO, Reporting\nABD: GK-ENK: Ayla Özkara; DTT: Peter Stirnberg; P&PT: Tanja Heß; TL CB05 Bastian Sichhart\nWie werden die Mitarbeiter über diese Änderung informiert?\nMüssen Magenta Infos Artikel geändert oder erstellt werden? News? Newsletter?\nSind Schulungen notwendig? WBT? BrainBite? \nIst eine zusätzliche Kommunikation über YaM notwendig?\nUsesCases / TestCases\nUseCase 1\nUseCase 2\n...",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "2025-01-31",
+  "target_end": "2025-03-13",
+  "fix_versions": [
+    "PI27-stretch",
+    "6.18.1"
+  ],
+  "acceptance_criteria": [
+    "AC1: Der Informationsreiter aus SeCe-IT wird in EOS mit zur Anzeige gebracht. \nDiese Infos werden chronologisch in den Auftragsverlauf integriert. \nDie aus SeCe-IT kommenden Informationen werden in EOS wie folgt gemappt\nSeCe-IT EOS\nKategorie (Typ) Kategorie\nText Details\nZeit Zeitpunkt\nName + E-Mail + Ressort Bearbeiter\nAnlagen Anlagen",
+    "Diese Infos werden chronologisch in den Auftragsverlauf integriert. \nDie aus SeCe-IT kommenden Informationen werden in EOS wie folgt gemappt\nSeCe-IT EOS\nKategorie (Typ) Kategorie\nText Details\nZeit Zeitpunkt\nName + E-Mail + Ressort Bearbeiter\nAnlagen Anlagen",
+    "Die aus SeCe-IT kommenden Informationen werden in EOS wie folgt gemappt\nSeCe-IT EOS\nKategorie (Typ) Kategorie\nText Details\nZeit Zeitpunkt\nName + E-Mail + Ressort Bearbeiter\nAnlagen Anlagen",
+    "SeCe-IT EOS\nKategorie (Typ) Kategorie\nText Details\nZeit Zeitpunkt\nName + E-Mail + Ressort Bearbeiter\nAnlagen Anlagen",
+    "Es gibt eine Neue Spalte \"Anlagen\" für Dokumente in den SeCe-IT Infos\nMit Klick auf eine Anlage wird die Anlage heruntergeladen \n-> zweiten Service aufrufen \"attachments\"\nBearbeiter, E-Mailadresse und Resort werden auch mit an EOS übergeben und in EOS angezeigt. \nAnzeige in separater Tabelle drunter\nTitle: \"Auftragsverlauf SeCe-IT\"\nDargestellte Inhalte siehe Tabelle in Story EOS-6782",
+    "Es gibt eine Neue Spalte \"Anlagen\" für Dokumente in den SeCe-IT Infos\nMit Klick auf eine Anlage wird die Anlage heruntergeladen \n-> zweiten Service aufrufen \"attachments\"\nBearbeiter, E-Mailadresse und Resort werden auch mit an EOS übergeben und in EOS angezeigt. \nAnzeige in separater Tabelle drunter\nTitle: \"Auftragsverlauf SeCe-IT\"\nDargestellte Inhalte siehe Tabelle in Story EOS-6782",
+    "Es gibt eine Neue Spalte \"Anlagen\" für Dokumente in den SeCe-IT Infos\nMit Klick auf eine Anlage wird die Anlage heruntergeladen \n-> zweiten Service aufrufen \"attachments\"",
+    "Mit Klick auf eine Anlage wird die Anlage heruntergeladen \n-> zweiten Service aufrufen \"attachments\"",
+    "-> zweiten Service aufrufen \"attachments\"",
+    "Bearbeiter, E-Mailadresse und Resort werden auch mit an EOS übergeben und in EOS angezeigt.",
+    "Anzeige in separater Tabelle drunter\nTitle: \"Auftragsverlauf SeCe-IT\"\nDargestellte Inhalte siehe Tabelle in Story EOS-6782",
+    "Title: \"Auftragsverlauf SeCe-IT\"",
+    "Dargestellte Inhalte siehe Tabelle in Story EOS-6782",
+    "AC1: The information tab from SeCe-IT is also displayed in EOS.\nThis information is integrated chronologically into the order history.\nThe information coming from SeCe-IT is mapped in EOS as follows -> see table above\nThere is a new column \"Anlagen\" (“Attachments”) for documents in the SeCe-IT information\nClick on an attachment to download it",
+    "This information is integrated chronologically into the order history.\nThe information coming from SeCe-IT is mapped in EOS as follows -> see table above\nThere is a new column \"Anlagen\" (“Attachments”) for documents in the SeCe-IT information\nClick on an attachment to download it",
+    "The information coming from SeCe-IT is mapped in EOS as follows -> see table above",
+    "There is a new column \"Anlagen\" (“Attachments”) for documents in the SeCe-IT information\nClick on an attachment to download it",
+    "Click on an attachment to download it",
+    "-> Call up second service “attachments”\nThe author, her/his e-mail and resort are also transferred to EOS and display in EOS.\nDisplay in separate table below\nTitle: \"Auftragsverlauf SeCe-IT\" (“Order history SeCe-IT”)\nVisible contents see table in EOS-6782",
+    "-> Call up second service “attachments”\nThe author, her/his e-mail and resort are also transferred to EOS and display in EOS.\nDisplay in separate table below\nTitle: \"Auftragsverlauf SeCe-IT\" (“Order history SeCe-IT”)\nVisible contents see table in EOS-6782",
+    "-> Call up second service “attachments”",
+    "-> Call up second service “attachments”",
+    "-> Call up second service “attachments”",
+    "The author, her/his e-mail and resort are also transferred to EOS and display in EOS.",
+    "Display in separate table below\nTitle: \"Auftragsverlauf SeCe-IT\" (“Order history SeCe-IT”)\nVisible contents see table in EOS-6782",
+    "Title: \"Auftragsverlauf SeCe-IT\" (“Order history SeCe-IT”)",
+    "Visible contents see table in EOS-6782",
+    "AC2: Anzeige der Bemerkungen der Positionen im Auftragsverlauf\nTitle der Tabelle wird geändert in: \"Auftragsverlauf EOS\"\nName: \"Position <posNr> Bemerkung erstellt\" für",
+    "Title der Tabelle wird geändert in: \"Auftragsverlauf EOS\"",
+    "Name: \"Position <posNr> Bemerkung erstellt\" für",
+    "AC2: Display of the remarks of the items in the order history\nTitle of the table is changed to: \"Auftragsverlauf EOS\" (“Order history EOS”)\nName: \"Position <posNr> Bemerkung erstellt\" (“Position <posNr> note created”) for",
+    "Title of the table is changed to: \"Auftragsverlauf EOS\" (“Order history EOS”)",
+    "Name: \"Position <posNr> Bemerkung erstellt\" (“Position <posNr> note created”) for",
+    "AC3: Webtest sind erweitert",
+    "AC3: Webtest are implemented",
+    "AC4: Bei der Erstellung einer Bemerkung in der Position in EOS im Pop-Up, gibt es ein Drop Down, welches immer mit \"Intern Service\" vorbelegt ist.",
+    "AC4: When creating a comment in the position in EOS in the pop-up, there is a drop-down which is always pre-assigned with “Intern Service”.",
+    "Dieses Drop Down hat folgende Auswahlmöglichkeiten:\n\"Intern Service\" (default) > nicht an SeCe IT schicken\n\"Externe Systeme\" > auch an SeCe IT schicken\nThis drop-down has the following selection options:\n“Intern Service” (default) > do not send to SeCe IT\n“Externe Systeme” > also send to SeCe IT\nAC4 postponed in Breakout-Session (16.1.25)",
+    "Dieses Drop Down hat folgende Auswahlmöglichkeiten:\n\"Intern Service\" (default) > nicht an SeCe IT schicken\n\"Externe Systeme\" > auch an SeCe IT schicken",
+    "\"Intern Service\" (default) > nicht an SeCe IT schicken",
+    "\"Externe Systeme\" > auch an SeCe IT schicken",
+    "This drop-down has the following selection options:\n“Intern Service” (default) > do not send to SeCe IT\n“Externe Systeme” > also send to SeCe IT",
+    "“Intern Service” (default) > do not send to SeCe IT",
+    "“Externe Systeme” > also send to SeCe IT",
+    "AC4 postponed in Breakout-Session (16.1.25)"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI27",
+    "PI27-stretch"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-12-04-13-15-53-761.png",
+      "url": "https://jira.telekom.de/secure/attachment/5191245/image-2024-12-04-13-15-53-761.png",
+      "mime_type": "image/png",
+      "size": "29 kB",
+      "date": "2024-12-04T13:15:54.184+01:00"
+    },
+    {
+      "filename": "image-2024-12-10-13-52-48-801.png",
+      "url": "https://jira.telekom.de/secure/attachment/5210982/image-2024-12-10-13-52-48-801.png",
+      "mime_type": "image/png",
+      "size": "37 kB",
+      "date": "2024-12-10T13:52:48.948+01:00"
+    },
+    {
+      "filename": "image-2024-12-10-14-14-10-564.png",
+      "url": "https://jira.telekom.de/secure/attachment/5211033/image-2024-12-10-14-14-10-564.png",
+      "mime_type": "image/png",
+      "size": "59 kB",
+      "date": "2024-12-10T14:14:10.785+01:00"
+    },
+    {
+      "filename": "image-2025-01-22-16-31-30-933.png",
+      "url": "https://jira.telekom.de/secure/attachment/5325175/image-2025-01-22-16-31-30-933.png",
+      "mime_type": "image/png",
+      "size": "89 kB",
+      "date": "2025-01-22T16:31:31.121+01:00"
+    },
+    {
+      "filename": "Mapping_SeCe-IT-getAttachment auf EOS-DTO.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5352899/Mapping_SeCe-IT-getAttachment%20auf%20EOS-DTO.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "25 kB",
+      "date": "2025-01-30T14:25:48.610+01:00"
+    },
+    {
+      "filename": "Mapping_SeCe-IT-getInfoCategoriesForNote auf EOS-DTO.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5329115/Mapping_SeCe-IT-getInfoCategoriesForNote%20auf%20EOS-DTO.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "24 kB",
+      "date": "2025-01-23T12:24:01.851+01:00"
+    },
+    {
+      "filename": "Mapping_SeCe-IT-getNotes auf EOS-DTO.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5352878/Mapping_SeCe-IT-getNotes%20auf%20EOS-DTO.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "25 kB",
+      "date": "2025-01-30T14:13:41.302+01:00"
+    },
+    {
+      "filename": "response_attachment.json",
+      "url": "https://jira.telekom.de/secure/attachment/5352903/response_attachment.json",
+      "mime_type": "application/json",
+      "size": "0.3 kB",
+      "date": "2025-01-30T14:29:53.708+01:00"
+    },
+    {
+      "filename": "response_infocategoriesfornote.json",
+      "url": "https://jira.telekom.de/secure/attachment/5325225/response_infocategoriesfornote.json",
+      "mime_type": "application/json",
+      "size": "0.9 kB",
+      "date": "2025-01-22T17:49:55.234+01:00"
+    },
+    {
+      "filename": "response_notes.json",
+      "url": "https://jira.telekom.de/secure/attachment/5325224/response_notes.json",
+      "mime_type": "application/json",
+      "size": "3 kB",
+      "date": "2025-01-22T17:49:55.227+01:00"
+    },
+    {
+      "filename": "Screenshot_Auftragsverlauf_SeCe-IT_authorFull_attachments.png",
+      "url": "https://jira.telekom.de/secure/attachment/5329590/Screenshot_Auftragsverlauf_SeCe-IT_authorFull_attachments.png",
+      "mime_type": "image/png",
+      "size": "80 kB",
+      "date": "2025-01-23T13:33:40.067+01:00"
+    },
+    {
+      "filename": "seceit_notes.jpg",
+      "url": "https://jira.telekom.de/secure/attachment/5322523/seceit_notes.jpg",
+      "mime_type": "image/jpeg",
+      "size": "38 kB",
+      "date": "2025-01-22T11:02:26.966+01:00"
+    },
+    {
+      "filename": "SeCeIT-Notes.http",
+      "url": "https://jira.telekom.de/secure/attachment/5330251/SeCeIT-Notes.http",
+      "mime_type": "application/octet-stream",
+      "size": "1 kB",
+      "date": "2025-01-23T15:17:58.834+01:00"
+    },
+    {
+      "filename": "specification.yaml",
+      "url": "https://jira.telekom.de/secure/attachment/5322521/specification.yaml",
+      "mime_type": "application/octet-stream",
+      "size": "82 kB",
+      "date": "2025-01-22T10:56:40.625+01:00"
+    }
+  ]
+}

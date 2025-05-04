@@ -1,0 +1,132 @@
+```json
+{
+  "epicId": "BEB2B-200",
+  "title": "Betriebliche Sonderleistungen 2023 ff. (Sammelanforderung)",
+  "ziele": {
+    "gesamtziel": "Vollständige und korrekte Abrechnung von BCC Leistungen und Produkten für Geschäftskunden durch permanente Anpassungen im Abrechnungsprozess, um Umsatz zu sichern und Kundenzufriedenheit zu erhöhen. Die Umsetzung erfolgt im Zeitraum 01.01.2023 bis 31.12.2024.",
+    "einzelziele": [
+      "Bearbeitung von Kundenanforderungen im Zuge der betrieblichen Sonderleistungen MWL 2024-2_PI#3",
+      "Bearbeitung von Kundenanforderungen im Zuge der betrieblichen Sonderleistungen MWL 2024-3_PI#4",
+      "Bearbeitung von Kundenanforderungen im Zuge der betrieblichen Sonderleistungen MWL 2024-4_PI#5",
+      "Bearbeitung von Kundenanforderungen im Zuge der betrieblichen Sonderleistungen MWL 2025-1_PI#06",
+      "Konfigurative Leistungen für Abrechnungen MWL 2024-1_PI2"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 20,
+      "beschreibung": "5 Mio. p.a. Umsatz, 5% des ipf Umsatzes (Planung 2023)"
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "<textl. Herleitung des Wertes>"
+    },
+    "timeCriticality": {
+      "skala": 3,
+      "beschreibung": "Geplanter Umsetzungszeitraum Plan Start: 01.01.2023 Plan Ende/Launch: 31.12.2023, Fortlaufende Anpassungen"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "PSB-476",
+      "titel": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-2_PI#3",
+      "funktionalitäten": [
+        "Preisänderungen im AGB Umfeld",
+        "Neue individuelle Preispläne bzw. Änderungen",
+        "Stornierung und Neuerstellung von Rechnungen/Anbietergütungen",
+        "Konfigurative Änderungen in SRN Billing"
+      ]
+    },
+    {
+      "id": "PSB-684",
+      "titel": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-3_PI#4",
+      "funktionalitäten": [
+        "Preisänderungen im AGB Umfeld",
+        "Neue individuelle Preispläne bzw. Änderungen",
+        "Stornierung und Neuerstellung von Rechnungen/Anbietergütungen",
+        "Konfigurative Änderungen in SRN Billing"
+      ]
+    },
+    {
+      "id": "PSB-876",
+      "titel": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-4_PI#5",
+      "funktionalitäten": [
+        "Preisänderungen im AGB Umfeld",
+        "Neue individuelle Preispläne bzw. Änderungen",
+        "Stornierung und Neuerstellung von Rechnungen/Anbietergütungen",
+        "Konfigurative Änderungen in SRN Billing"
+      ]
+    },
+    {
+      "id": "PSB-1015",
+      "titel": "BSL Sammler: Betriebliche Sonderleistungen MWL 2025-1_PI#06",
+      "funktionalitäten": [
+        "Preisänderungen im AGB Umfeld",
+        "Neue individuelle Preispläne bzw. Änderungen",
+        "Stornierung und Neuerstellung von Rechnungen/Anbietergütungen",
+        "Konfigurative Änderungen in SRN Billing"
+      ]
+    },
+    {
+      "id": "PSB-325",
+      "titel": "BSL Sammler: Abrechnungen MWL 2024-1_PI2",
+      "funktionalitäten": [
+        "Preisänderungen im AGB Umfeld",
+        "Neue individuelle Preispläne bzw. Änderungen",
+        "Stornierung und Neuerstellung von Rechnungen/Anbietergütungen",
+        "Konfigurative Änderungen in SRN Billing"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Verarbeitung einzelner KDS-Felder (z.B. Routingkennziffern eliminieren, Causes auswerten)",
+    "Einfache (einzelne) Verzonungen anpassen",
+    "Preisänderungen im AGB Umfeld pro Preisposition ohne Individualvertragsanteil",
+    "Preisänderungen im AGB Umfeld mit Einfluss auf Individualpreispläne (PPL) pro Preisposition je PPL",
+    "Neue konfigurierbare Individualpreispläne, ohne vorhandenen Musterpreispläne",
+    "Stornierung und Neuerstellung von Rechnungen/Anbietervergütungen",
+    "SRN Preisänderungen und -erweiterungen im AGB Umfeld mit Einfluss auf Individualpreispläne (PPL) pro Preisposition je PPL",
+    "Bearbeitung von Kunden gefordert Anforderung im Zuge der betrieblichen Sonderleistungen MWD sichergestellt."
+  ],
+  "domainsAndITApplications": [
+    "MARS"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Keine expliziten Abhängigkeiten zu anderen Vorhaben/BEs laut Business Epic",
+    "Die Anforderungen sind nicht planbar und müssen teilweise sofort angepasst werden (z.B. Rechnungskorrekturen)",
+    "Es handelt sich um viele kleine, voneinander unabhängige Anforderungen"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2023-01-01",
+    "umsetzungsende": "2024-12-31",
+    "fixVersions": ["Q3_25", "2024-1_PSB_PI02", "2024-2_PSB_PI03", "2024-3_PSB_PI04", "2024-3_PSB_PI05", "2025-1_PSB_PI06"],
+    "meilensteine": [
+      {
+        "id": "PSB-325",
+        "beschreibung": "BSL Sammler: Abrechnungen MWL 2024-1_PI2",
+        "zeitraum": "PI02 (2024-1)"
+      },
+      {
+        "id": "PSB-476",
+        "beschreibung": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-2_PI#3",
+        "zeitraum": "PI03 (2024-2)"
+      },
+      {
+        "id": "PSB-684",
+        "beschreibung": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-3_PI#4",
+        "zeitraum": "2024-06-12 bis 2024-09-03"
+      },
+      {
+        "id": "PSB-876",
+        "beschreibung": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-4_PI#5",
+        "zeitraum": "2024-09-11 bis 2024-12-03"
+      },
+      {
+        "id": "PSB-1015",
+        "beschreibung": "BSL Sammler: Betriebliche Sonderleistungen MWL 2025-1_PI#06",
+        "zeitraum": "2024-12-18 bis 2025-03-11"
+      }
+    ]
+  }
+}
+```

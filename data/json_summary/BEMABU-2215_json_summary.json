@@ -1,0 +1,61 @@
+```json
+{
+  "epicId": "BEMABU-2215",
+  "title": "LE – Kampagnenkalender in MagentaForce",
+  "ziele": {
+    "gesamtziel": "Implementierung eines übersichtlichen und transparenten Kampagnenkalenders in MagentaForce zur strategischen Planung von Marketing- und Vertriebsmaßnahmen, der die aktuelle Excel-Liste bei GK-LE ersetzen soll. Das Ziel soll bis zum 30.09.2025 erreicht werden.",
+    "einzelziele": [
+      "Erweiterung des aktuellen Salesforce-Kalenders",
+      "Schaffung einer zentralen Plattform für alle Daten zu Kundenangängen",
+      "Optimierung im Kampagnenmanagement",
+      "Bessere Planung und Übersicht von Kampagnen und Maßnahmen segmentübergreifend",
+      "Unterstützung für Marketing und Sales"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 1,
+      "beschreibung": "Umsatzsteigerung < 100 T€, Kosteneinsparung <25 T€. Um konsistent alles abzudecken, wird das Wachstum angekurbelt."
+    },
+    "strategicEnablement": {
+      "skala": 3,
+      "beschreibung": "Realisierung der Kampagnen termingerecht, gleichmäßig, einheitlich über die gesamte Kundenkontaktstrategie. Liefert Erkenntnisse über Kundenanforderungen oder für architektonische/IT-technische Entscheidungen oder schrittweisen Innovation."
+    },
+    "timeCriticality": {
+      "skala": 13,
+      "beschreibung": "Durch die Transformation und den unterschiedlichen Kanälen im Kundenangang, muss sichergestellt werden, dass eine Transparenz der Kampagnen/Maßnahmen gewährleistet werden kann."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2215",
+      "titel": "LE – Kampagnenkalender in MagentaForce",
+      "funktionalitäten": [
+        "Filtermöglichkeiten nach Zeitraum, Vertriebskanal, Kampagnentyp, Kampagnen-Status, VeranstaltungsRegion und Kampagnenname",
+        "Kalendarische Darstellung aller Marketing- und Vertriebsmaßnahmen",
+        "Zentrale Sammlung aller Daten zu Kundenangängen",
+        "Segmentübergreifende Planung und Übersicht"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Transparenz über alle Kampagnen (Marketingaktivitäten und Vertriebsaktivitäten)",
+    "Verbesserung der Kundenkontaktstrategie",
+    "Bessere Planung von Maßnahmen (Überschneidungen, Terminkonflikte, Feiertage, etc.)"
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce",
+    "DOM0201"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Das Business Epic befindet sich im Status 'Funnel', was darauf hindeutet, dass es sich noch in einer frühen Planungsphase befindet",
+    "Die Umsetzung ist erst für 2025 geplant, was ein Risiko für Änderungen der Anforderungen bis zum Umsetzungsbeginn darstellt"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}
+```

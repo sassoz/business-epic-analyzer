@@ -1,0 +1,84 @@
+{
+  "key": "BEMABU-1855",
+  "issue_type": "Business Epic",
+  "title": "Abbildung KMU-Basic innerhalb GK",
+  "status": "In Progress",
+  "description": "Description\nProblemstellung\nInnerhalb des KMU-Basic Segment werden die KEK Informationen nicht am Geschäftspartner (GP) gepflegt sondern an dem sogenannten DTAG, welcher die Kundennummer zu den Bestandssystemen CRM-T oder Carmen herstellt. Innerhalb GK gibt es eine KEK-Aussage für den Gesamten Geschäftspartner. Durch die Strukturelle Abbildung von KMU-B (PK-Systeme) haben wir mehrere, teils unterschiedliche KEK Aussagen zu einem Geschäftspartner an seinen DTAGs vorliegen.\nEbenso werden die Permission Aussagen am sogenannten DTAG gepflegt und abgelegt, weshalb wir keine Personenbezogene Permission im KMU-B Segment besitzen.\nEine Anzeige und Bearbeitung durch MagentaForce ist für das KMU-B Segment somit nicht möglich.\nLösung\nInnerhalb des Data Consent Master (DCM) wird eine rechtssichere Abbildung von KMU-B umgesetzt, ohne die Struktur in den Bestandssysteme CRM-T oder Carmen umbauen zu müssen.\nAm Geschäftspartner wird immer die letzte Aktualisierung einer KEK seiner DTAGs abgebildet. Alle KEK-Aussagen der verbleibenden DTAGs werden durch den DCM aktualisiert/über die Änderung informiert. Hierdurch Harmonisieren wir die KEK-Aussage über alle DTAGs eines Geschäftspartner und stellen sicher dass die aktuell rechtlich gültige KEK-Aussage an allen Objekten vorhanden ist.\n  Für die rechtssichere Ablage der Permission ist ein 1 zu 1 Bezug zu dem Ansprechpartner notwendig. Um die Permission Aussagen aus CRM-T oder Carmen nutzen zu können, muss der DTAG als Ansprechpartner im Customer Contact Master (CCM) identifiziert oder neu angelegt werden. An diesem Ansprechpartner mit dem 1 zu 1 Bezug darf rechtlich die Permission abgelegt werden. Alle weiteren bekannten Ansprechpartner erhalten keine Permission Aussagen.\n\nBusiness Scope:\nUm auch das KMU-Basic Segment innerhalb den GK-Systemen nutzbar zu gestalten, muss eine rechtlich abgestimmte Systematik für das KMU-Basic Segment implementiert werden",
+  "business_value": {},
+  "assignee": "Kevin Meigel",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "LaO_SEP"
+  ],
+  "realized_by": [
+    {
+      "key": "CRMFN-42523",
+      "title": "CRMFN-42523",
+      "summary": "Consumer-Registrierung Service Accounts v3: Abbildung KMU-Basic innerhalb GK",
+      "url": "https://jira.telekom.de/browse/CRMFN-42523",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-105053",
+      "title": "MAGBUS-105053",
+      "summary": "Exploration des Datenaustausch zwischen SEP und CRM-T",
+      "url": "https://jira.telekom.de/browse/MAGBUS-105053",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-105454",
+      "title": "MAGBUS-105454",
+      "summary": "Sync der KEK über alle DTAGs eines KMU",
+      "url": "https://jira.telekom.de/browse/MAGBUS-105454",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-75762",
+      "title": "MAGBUS-75762",
+      "summary": "Abbildung KMU-B im GK Umfeld inklusive KEK-Abbildung",
+      "url": "https://jira.telekom.de/browse/MAGBUS-75762",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-97147",
+      "title": "MAGBUS-97147",
+      "summary": "Day1Readiness KEK Sicherung Segmentverschiebung KMU (KMU-B & KMU-T) -> M & L",
+      "url": "https://jira.telekom.de/browse/MAGBUS-97147",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-97148",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-97148",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-101117",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101117",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-102329",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-102329",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

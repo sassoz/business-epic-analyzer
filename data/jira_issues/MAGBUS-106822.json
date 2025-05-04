@@ -1,0 +1,153 @@
+{
+  "key": "MAGBUS-106822",
+  "issue_type": "Portfolio Epic",
+  "title": "L2M: Voice Instanz Neuanlage",
+  "status": "Funnel",
+  "description": "",
+  "business_value": {},
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q4_25"
+  ],
+  "acceptance_criteria": [
+    "Aufträge mit einem CompanyFlex Grundpaket als Neubereitstellung (aus dem Geschäftsfall Neu oder Produktwechsel) können automatisiert über EOS und CRM-T abgewickelt werden.\nout of scope (Routing durch O3 zur manuellen Anlage an IRRP, mit Setzen eines auswertbaren Vermerks im O3 Report):\nAufträge mit mehreren CompanyFlex Grundpaket-Neubereitstellungen.\nBei Aufträgen mit mehreren Standortprodukten für unterschiedliche Grundpakete wird nur das Standortprodukt und das Grundpaket wird zur Vervollständigung an EOS gegeben. - Löst sich auf, wenn wir mi einer \"Fake Promotion Group\" arbeiten würden, um den Zusammenhang zwischen Grundpaket und Standort direkt herzustellen",
+    "out of scope (Routing durch O3 zur manuellen Anlage an IRRP, mit Setzen eines auswertbaren Vermerks im O3 Report):\nAufträge mit mehreren CompanyFlex Grundpaket-Neubereitstellungen.\nBei Aufträgen mit mehreren Standortprodukten für unterschiedliche Grundpakete wird nur das Standortprodukt und das Grundpaket wird zur Vervollständigung an EOS gegeben. - Löst sich auf, wenn wir mi einer \"Fake Promotion Group\" arbeiten würden, um den Zusammenhang zwischen Grundpaket und Standort direkt herzustellen",
+    "Aufträge mit mehreren CompanyFlex Grundpaket-Neubereitstellungen.",
+    "Bei Aufträgen mit mehreren Standortprodukten für unterschiedliche Grundpakete wird nur das Standortprodukt und das Grundpaket wird zur Vervollständigung an EOS gegeben. - Löst sich auf, wenn wir mi einer \"Fake Promotion Group\" arbeiten würden, um den Zusammenhang zwischen Grundpaket und Standort direkt herzustellen",
+    "Der EOS-Bearbeiter erhält Aufträge mit CompanyFlex Grundpaket-Neubereitstellungen in EOS\n50003210 CompanyFlex Flat\n50003211 CompanyFlex Basic\n50262230 CompanyFlex Germany",
+    "50003210 CompanyFlex Flat",
+    "50003211 CompanyFlex Basic",
+    "50262230 CompanyFlex Germany",
+    "Auch Aufträge mit Grundpaket und mehreren CoFlex-Standortprodukten können bearbeitet werden.\nDas CoFlex Grundpaket kann unabhängig vom Standortprodukt in EOS bearbeitet werden (eigener Teilauftrag).",
+    "Das CoFlex Grundpaket kann unabhängig vom Standortprodukt in EOS bearbeitet werden (eigener Teilauftrag)."
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    }
+  ],
+  "labels": [
+    "CRM-T",
+    "DigiHub_DOM",
+    "EOS",
+    "Mapis4B2B",
+    "PI30"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Anzeige EOS.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612853/Anzeige%20EOS.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.783+02:00"
+    },
+    {
+      "filename": "Business Value.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5613203/Business%20Value.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2025-04-15T13:55:34.306+02:00"
+    },
+    {
+      "filename": "CoFlex.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5612854/CoFlex.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2025-04-15T13:23:07.743+02:00"
+    },
+    {
+      "filename": "CRM-T-Ansicht.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612857/CRM-T-Ansicht.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.748+02:00"
+    },
+    {
+      "filename": "CRM-T-Ansicht Auftrag.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612855/CRM-T-Ansicht%20Auftrag.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.784+02:00"
+    },
+    {
+      "filename": "CRM-T-Ansicht Vertragsgruppe.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612856/CRM-T-Ansicht%20Vertragsgruppe.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.783+02:00"
+    },
+    {
+      "filename": "image-2024-06-05-10-43-03-835.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612858/image-2024-06-05-10-43-03-835.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.783+02:00"
+    },
+    {
+      "filename": "MAGBUS-79388.zip",
+      "url": "https://jira.telekom.de/secure/attachment/5612851/MAGBUS-79388.zip",
+      "mime_type": "application/zip",
+      "size": "",
+      "date": "2025-04-15T13:22:37.170+02:00"
+    },
+    {
+      "filename": "Partial Order O3 Report KW1-15.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612849/Partial%20Order%20O3%20Report%20KW1-15.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:21:14.393+02:00"
+    },
+    {
+      "filename": "pG_EOS.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612859/pG_EOS.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.752+02:00"
+    },
+    {
+      "filename": "Produktmodell.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612860/Produktmodell.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.792+02:00"
+    },
+    {
+      "filename": "Prozessbild.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612861/Prozessbild.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.791+02:00"
+    },
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612862/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.797+02:00"
+    },
+    {
+      "filename": "screenshot-2.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612863/screenshot-2.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.814+02:00"
+    },
+    {
+      "filename": "Teilaufträge_EOS.png",
+      "url": "https://jira.telekom.de/secure/attachment/5612864/Teilauftr%C3%A4ge_EOS.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-15T13:23:07.812+02:00"
+    }
+  ]
+}

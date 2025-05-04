@@ -1,0 +1,27 @@
+{
+  "key": "ADCL-12218",
+  "issue_type": "Epic",
+  "title": "Shipment: Extend the shipment information in the POT API",
+  "status": "Backlog",
+  "description": "Description\nPOT shall provide more detailed shipment tracking information. All status changes of a shipment shall be available in POT. Furthermore POT shall provide address information for packages.",
+  "business_value": {},
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "POT makes status changes of shipments available",
+    "POT maes addresses of shipments available"
+  ],
+  "components": [],
+  "labels": [
+    "PI28",
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

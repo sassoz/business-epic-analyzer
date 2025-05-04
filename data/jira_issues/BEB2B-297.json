@@ -1,0 +1,52 @@
+{
+  "key": "BEB2B-297",
+  "issue_type": "Business Epic",
+  "title": "GK-Portal-Anforderung (Anbindung Coremedia alter Mobilfunkshop)",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür für KMU Neukunden die Online (www.geschaeftskunden.telekom.de) einen Mobilfunkvertrag abschließen wollen\nist eine funktionierende Bestellstrecke notwendig",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Braun, Martin",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "<In Scope/Akzeptanzkriterien: siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0600",
+      "title": "DOM0600 Business Support System (BSS)"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-KMC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

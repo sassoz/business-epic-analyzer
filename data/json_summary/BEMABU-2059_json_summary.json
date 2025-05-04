@@ -1,0 +1,56 @@
+{
+  "epicId": "BEMABU-2059",
+  "title": "Simplifying Basisportfolio GK in Prozesskette GK",
+  "ziele": {
+    "gesamtziel": "Vereinfachung des Basisportfolios von GK, einschließlich Company Start und Pro sowie Business DSL/Glasfaser Start und Pro. Die Umsetzung ist für den Zeitraum vom 01.07.2025 bis 29.08.2025 geplant.",
+    "einzelziele": [
+      "Keine Informationen verfügbar"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2059",
+      "titel": "Simplifying Basisportfolio GK in Prozesskette GK",
+      "funktionalitäten": [
+        "Umbenennung des bestehenden Portfolios über alle IT-Systeme",
+        "Bereitstellung neuer GF Start Tarife inkl. ZMPs über alle IT-Systeme",
+        "Bereitstellung neuer GF Pro Tarife inkl. ZMPs über alle IT-Systeme",
+        "Bereitstellung neuer Sim-only ZMPs über alle IT-Systeme"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Renaming of existing Portfolio is done via all IT systems",
+    "new GF Start tarifs incl. ZMPs are available via all IT systems",
+    "new GF Pro Tarrifs incl. ZMPs are available via all IT systems",
+    "new Sim-only ZMPs are available via all IT systems",
+    "PP4 Bundles and Prioritization Ranking see BEB2B-258"
+  ],
+  "domainsAndITApplications": [
+    "Keine Informationen verfügbar"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit zu BEB2B-258 für PP4 Bundles und Priorisierungsranking",
+    "Das Business Epic befindet sich im Status 'Review', was auf eine noch nicht abgeschlossene Prüfung hindeutet"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-08-29",
+    "fixVersions": ["Q3_25"],
+    "meilensteine": []
+  }
+}

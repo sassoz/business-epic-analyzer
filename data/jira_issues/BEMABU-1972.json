@@ -1,0 +1,94 @@
+{
+  "key": "BEMABU-1972",
+  "issue_type": "Business Epic",
+  "title": "NG- Business Mobil 5. Generation",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Hillemacher, Thorsten",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2025-01-31",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C14",
+      "title": "C14 Enterprise Services und Angebots Prozesse"
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "GK_Kundencenter",
+    "MaBu-TopThema-2024",
+    "Portfolio",
+    "Roadmap.2024.VSDT"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-98007",
+      "title": "MAGBUS-98007",
+      "summary": "Business Mobil 5. Gen inkl. On-Net Security GKP",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98007",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-98008",
+      "title": "MAGBUS-98008",
+      "summary": "Business Mobil 5. Gen inkl. On-Net Security MBSP",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98008",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-98639",
+      "title": "MAGBUS-98639",
+      "summary": "MBSP [BM 5. Gen] Adapt L-PIM for Business Mobil 5. Gen",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98639",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-100585",
+      "title": "MAGBUS-100585",
+      "summary": "[Comet Crew] Business Mobil Teamcards and 5. Gen Teamcards incl. OnNetSecurity - GoLive",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100585",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-101809",
+      "title": "MAGBUS-101809",
+      "summary": "GoLive Business Mobil 5. Gen",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101809",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

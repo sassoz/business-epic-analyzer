@@ -1,0 +1,25 @@
+{
+  "key": "MAGBUS-95510",
+  "issue_type": "Epic",
+  "title": "[Comet] MBSP: Order Tracking for mobile and Order overview (preparation NGM 1/2)",
+  "status": "Waiting",
+  "description": "Description\nOut of scope after appointment on 24.09.2024 with Matthias, Frank, Johannes, Stefan and Andrea: \nDisplay the order confirmation PDF or XML (because of missing PDFs for MBSP orders)\nDisplay the mobile number (MSISDN)\n    We like to show our customer his complete order overview. This includes the mobile orders. The customer should get the possibility to filter his orders and show and hide his columns. So that he can adapt his orderoveriew by his own preferences. First preperations were done by MAGBUS-81491 [MBSP] 360° Dashboard: Prepare order overview (POT/L-POM).\nThe customer is able to see his orders in two different ways: Tile view and list view. Filtering and sorting is also possible in general.\nPhonenumber: (Out of scope)\nAdditionally in the order overview it is important to have the phonenumber of the order directly to be seen on the tile or in the list. If the phonenumber is available, especially in the case of new business (incliding mobile number porting ) it is a new element in the list. Therefore it is also possible to search for the phonenumber which will be a benefit for the users.\nFor every order in the list or tile view, it is possible to click on the order number and then a detail page with more information about the order opens. Also the phonenumber of the order if available is shown on the order detail page. The user can navigate back to the order overview.\nOrder details page: (Out of scope)\nFor every order in the list by clicking on the order number the order detail page opens with information about the order\nheadline: business process (Auftragsart)\ndate\nordered by (name)\nframe contract\ncustomer number\ncustomer account number\nphonenumber (if available)\nA link to the \"Auftragsbestätigung\" order confirmation\nAction button:\nOn the overview page an action button is implemented. With this it is possible to see the order confirmation (Auftragsbestätigung) and if available the shipment tracking (Sendungsverfolgung).\nAuftragsbestätigung: (Out of scope)\nThe user is able to see the order confirmation of the orders by clicking on Auftragsbestätigung. This can be a order PDF or a order XML file.\nShipment tracking:\nBy selecting the action button \"Sendungsverfolgung\" in the popup of the Aktionen column, the user can see information about shipment of the order, if available. In a new Tab of the Browser, the page of the carrier, e.g. DHL is opened. If shipment is available comes from the LPOM response shipmentTracking -> carrierTrackingUrl.\nUsage of BCPS:\nLogin and check of profiles of the user (JWT): Integration and usage of BCPS API - Business Customer Profile Service\nTime period for showing open and completed orders:\nOn the order overview of MBSP all open order from all sources (MBSP, BSP, BEP, others) and all completed and faulty orders which are not older than 30 days have to be displayed.\nThe final designs and a translation from the incoming data are provided by UX Team.\nLink to UX Design:\nhttps://www.figma.com/design/5c57qCR703ftGmhrJv20gi/MBSP%3A-Orders?node-id=157-3447&t=04uaC2chhnYnuc3I-1\n(to the correct Frame).\nIntegration of automated tests with Cypress.\n  Old description:\nZusätzlicher Wunsch von Matthias Lehmann: \n\"Meine Bitte wäre zu prüfen, ob wir dann gleichzeitig als neues Business Feature auch die Rufnummer für Neuverträge mit anzeigen können. Dazu bräuchten wir evtl. eine rudimentäre Auftrags-Detailseite, wo diese Information angezeigt werden kann.\"\n---------------------------------------------\nWhat we have: \nSame login as on the Fixednet (with JWT)\nRouting to mobilfunk\nLPOM connection\nMapping of LPOM entries to Overview page 80%\nMobileOrderWidget\nLPOM Mock for developing\nOverviewPage:\nsorting\nsearching\nfiltering\ntable column configuring\ntile and table view\n  What we are missing: \nOverviewPage:\naction buttons (download PDF/XML etc.)\nsome mapping might missing ? need to be checked ( I think Quelle is empty for us, also there is more column for us\nOrderDetailsPage? (old mobilfunk auftrage page lack this as well)\nCypress integration tests\nAlso it was not yet integrated to anywhere (besides the widget) so need to be aligned with MBSP regarding that, to make it available\nOutcome: no production deployment, just all stories closed.\n ",
+  "business_value": {},
+  "assignee": "Stefan Wilkes",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 26"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "GK-Kundencenter,",
+    "MB_Comet",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

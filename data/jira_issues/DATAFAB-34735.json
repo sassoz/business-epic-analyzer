@@ -1,0 +1,30 @@
+{
+  "key": "DATAFAB-34735",
+  "issue_type": "Initiative",
+  "title": "IoT - Enable Service Revenue on SAP BRIM",
+  "status": "Funnel",
+  "description": "Description\nPls note : In Data Tribe, Portfolio Epic should only have a length of max. 6 months \nQuality check - List for further processing by the domain can be found in Jira Smart Checklist!\nClone this Portfolio Epic, remove the label \"Template\" and fill up the sections to make sure that your PE is mature enough for implementation. \n1. Business Epic\nBusiness Epic/ Requirement and Scope \nFor customers that purchase products that are internally marked as solution and service revenue I want them to have all their products on one Bill and not have separed bills for one contract / order. Furthermore I want the internal revenues to be booked correct and provisioning for sales working. \nCurrently we have no order/ billing chain that can produce service and solution revenue.\nProdukte die auf SAP Brim abgebildet sind und die eher Service REvenue sind, sollten als solches (auch gemischt mit Solution REvenue Produkten gemeinsam auf einer REchnung stehen können und Kunden angeboten werden können. Zusätzlich funktioniert die korrekte Umsatzzuordung und Zielerreichungszuordnung in Smart und DKK. \nDKK ist nicht für die Umsatzzuordnung zuständig. in DKK muss geprüft werden ob diese Anpassung auswirkungen auf das Forderungsmanagement hat. \nBusiness Value\nyear Additional Revenue (k€) EBITDA (k€) Efficiency (k€) Risk Loss * (k€)\n2025 150   20  \n2026 210   30  \n2027 280   50  \nRisk loss = damage amount × probability of occurrence (e.g., in revenue protection, penalties, etc.)\nReduce effort to onboard products. \nreduce efforts for the customer by providing one bill and one onctract in one system for one order\nenable future products with elements that do have service and solution revenue. \n Beim BEO Konkretisierung angefordert\nStrategic Contribution (RROE)/ Time Criticality  (CoD)\ncustomer satisfaction \nreducing internal revenue booking processes\n  Beim BEO Konkretisierung angefordert\n2.  Portfolio Epic Description\nPortfolio Epic (Requirement and Scope) \n- pls. describe the business requirement clearly from a customer perspective along with information about benefit of this PE to the BE.\n  Business Outcome (quantitative)\n- pls provide, in addition to WSJF/Bus Value, information about the business outcome (quantitative)\n  Acceptance Criteria (conditions which must be satisfied for the PE to be accepted)\n- to be created together with the BEO /VSL or PE Owner; helps to avoid scope change once implementation has begun. \n  Out of Scope\n- pls furnish details regarding what falls beyond the scope of this particular PE\n  Dependencies \n- pls provide details about the dependencies (internal and external to DataTribe) \n  3. NFR (if any)\nNon functional requirements\n- are there any NFRs to be evaluated? if yes, pls provide the detailed information here.  Info regarding NFRs can be found here: https://wiki.telekom.de/pages/viewpage.action?pageId=2281867246 __ \n  4. SLA(if any)\nService Level Agreements\n- are there any SLAs to be evaluated? if yes, pls provide the detailed information here.\n  5. Solution Design \nArchitecture and Solution Design  \n- pls provide details to the Solution/ Technical design ; does the solution align with the architectural roadmap, pls elaborate. \n  Compliance evaluation\n- Has this PE been evaluated for Compliance requirements? Pls provide details here-\n       ",
+  "business_value": {},
+  "assignee": "Tom-Oliver Nolting",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "demand_entry",
+      "title": "demand_entry Marking entrance topic via the central inbox."
+    },
+    {
+      "code": "DVS_RevRecPro",
+      "title": "DVS_RevRecPro "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

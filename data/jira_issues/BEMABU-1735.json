@@ -1,0 +1,70 @@
+{
+  "key": "BEMABU-1735",
+  "issue_type": "Business Initiative",
+  "title": "GK FTTH Monitoring und Reporting",
+  "status": "Analysis",
+  "description": "Description\n  Business Epic Nutzenstatement\nFür Finanzen und Vertriebsteuerung,\ndie Transparenz über die unterjährige Absatzentwicklung der FTTH-basierten Festnetzabsätze über die MagentaBusiness IT-Kette benötigen\nist das Monitoring und Reporting dringend zu erweitern.\nDie bisherigen, kupfer-basierten GK FN-Reportings erfassen Tarifbuchungen erst dann, wenn sie in CRM-T bestandswirksam werden. In der AVIA-Fiber-Journey (PK und KMU-Basic) erfolgt die Erfassung schon bei der Vorvermarktung bevor der Ausbau erfolgt ist. Dies ermöglicht absatzbasierte Provisionierungsmodelle in der Vorvermarktung und eine granulare Maßnahmensteuerung entlang des Bau- und Bereitstellungsprozesses.\nAlle Glasfasertarife, die über die MaBu-Teilautomatisierung an Kunden aus den Midmarket Segmenten (Vor-) vermarktet werden, sind in den aktuellen detaillierten Fiber Reportings nicht sichtbar. Entsprechend können keine Aussagen über den Erfolg der Vorvermarktung getroffen werden.\nKlassifizierung Obligatory\nn.r.\nBusiness Value\nBusiness Outcomes /Business Value\nUmsatz-/Absatzsicherung ca. 10% vom Gesamtumsatz pro Jahr, Tendenz steigend\nSchaffung Absatz-/Ausbautransparenz GK Fiber vor Management\nEnabling Vertriebs-/Kanalsteuerung, entsprechende Absatzsteigernde Maßnahmen zu ergreifen und durchzusteuern\nStrategischer Beitrag & zeitliche Kritikalität\nIn 2024 werden die MagentaBusiness BSS Systeme dahingehend erweitert, dass FTTH-Aufträge automatisiert an das Gigabit Geschäftssystem übermittelt werden können.\nEine Übermittlung der damit verbundenen Tarifaufträge in das Fiber-Reporting und die damit verbundene Erweiterung der Reportings konnte auf Grund von fehlenden IT-Entwicklungsbudgets in 2024 nicht vorgenommen werden.\nUm die Steuerung der vertrieblichen Absätze (mit stark ansteigenden Hochlaufkurven) zu gewährleisten, ist die Erweiterung der Reportings dringend spätestens Anfang 2025 nachzuholen. Andernfalls wären die geplanten Wachstumsziele für Breitband und FTTH im iPF-Zeitraum extrem gefährdet.\nLeading Indicators\nÜbermittlung der über Flamingo realisierten FTTH Tarifabsätze an die Fiber Reportingsysteme\nBerücksichtigung und Ausweisung der GK Midmarket Absätze im Fiber Reporting (Magenta Socket)\nDetaillierte Darstellung der Tarifabsätze VBKZ-spezifisch\nAbhängigkeiten & Eingangsvoraussetzungen\n  Abhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\nn.r.\nEingangsvoraussetzungen, die vor Einführung realisiert sein müssen\nn.r.\nCrossfunktionale Zusammenarbeit\nZuordnung Applikationen/Domains\nBeteiligte Domains/Applikationen in der Tel-IT:   [siehe Feld \"Komponente/n\" im Jira-Issue]\nBeteiligte Applikationen Beteiligte\nDomains Ansprechpartner Bemerkungen                                                                  \nFlamingo DO Simon Keck Kundenangebote\nO3-POM DOM Volker Schmidt Kudnenaufträge\nGIGA GS DOM.... Roland Schier,\nStephan Weber Bauaufträge\nCRMT DOM....   Bestandsführung\n  Beteiligte Bereiche außerhalb des IT-Entwicklungsprozesses (wie bspw. in den Fachbereichen: Service, Wholesale, Finance, ...)\nBetroffene Bereiche                          Ansprechpartner Bemerkungen                                                                  \n< ... > verwende \"@Vorname Nachname\"   \n            Cost of Delay\nHier könnt ihr die Informationen zur Skalierung des Cost of Delay finden. → Cost of Delay (CoD) - Legende\n \n \n     Umsatz [in Tsd. €] EBITDA [in Tsd. €] Effizienz [in Tsd. €] Risiko [in Tsd. €]\n2025 134.000 107.000 5.200 2.600\n2026 192.000 154.000 5.200 2.600\n2027 259.000 207.000 5.200 2.600\n2028 332.000 266.000 5.200 2.600\n  Business Impact1):\nScale     Revenue             Cost Saving/\nRisk loss 2)       Begründung                                                                                                    \n20   X  \nStrategic Enablement/Risk Reduktion: \nScale     Risiko\nMinimierung     Strategisches\nEnablement Begründung                                                                                                    \n        <textl. Herleitung des Wertes>\nTime Criticality: \n    Time Criticality: \n  Scale     Time                                           Begründung                                                                                                    \n  Geplanter Umsetzungszeitraum\nPlan Start: 01/2025\nPlan Ende/Launch:04/2025 Um die Steuerung der vertrieblichen Absätze (mit stark ansteigenden Hochlaufkurven) zu gewährleisten, ist die Erweiterung der Reportings dringend spätestens Anfang 2025 nachzuholen. Andernfalls wären die geplanten Wachstumsziele für Breitband und FTTH im iPF-Zeitraum extrem gefährdet.\n1) Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse\n         \n\nBusiness Scope:\nAls Fachseite wollen wir die Aufträge aus der Magenta-Business IT Strecke in das Fiber-Cockpit Reporting integrieren und zur Auswertung aller FTTH-Absätzen (auf Segment-Ebene) nutzen. Das Reporting soll dementsprechend auch die vvm-Mengen der MaBU-Strecke beinhalten.\n\nQ1: Delayed\nQ2: Exploration\nQ3: Implementierung\n__________________________________\nStatus Q1: Delay\n- Business Epic konnte in Q1 verspätet geplant werden, aufgrund offener Punkte im Design und Anforderungsdefinition. In der Design-Phase in Q1 hat sich außerdem gezeigt, dass die Aufwände höher sind, als ursprünglich geplant.\n- Es ist geplant jetzt eine Exploration-Phase in Q2 (PI28) durchzuführen. Der Scope für Q2 ist mit den Beteiligten abgesprochen.\n- Umsetzung soll dann erst in Q3 (PI29) erfolgen, aufgrund von anderen höher priorisierten Themen.\n- Aktuell erzeugter Business Outcome ist noch nicht vorhanden.\n__________________________________\nStatus Q2:",
+  "business_value": {},
+  "assignee": "Christian Hünerkopf",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "Q3_25",
+    "PrioQ1_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "Erfolgsmessung: Durch detaillierte Berichte kann der Erfolg von Vorvermarktungsmaßnahmen genau gemessen werden. Dies ermöglicht es, den Return on Investment (ROI) zu bewerten und zu verstehen, welche Strategien am effektivsten sind.",
+    "Optimierung von Marketingstrategien: Mit den gewonnenen Erkenntnissen helfen Marketingstrategien zu optimieren",
+    "Verbesserte Kundenansprache: Durch das Verständnis, welche Angebote bei welchen Kundensegmenten gut ankommen, kann die Kundenansprache in der Vorvermarktung gezielter und persönlicher gestaltet werden.",
+    "Ressourcenallokation: Reporting und Monitoring ermöglichen es, Ressourcen effizienter einzusetzen, indem klar wird, welche Maßnahmen den größten wirtschaftlichen Erfolg versprechen",
+    "Marktverständnis: Sie bieten tiefe Einblicke in Marktbedürfnisse und Kundenpräferenzen, was für die zukünftige Produktentwicklung wertvoll sein kann.",
+    "Produktanforderungen",
+    "regulatorische Anforderungen"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "2025",
+    "25_Q2_Wunsch",
+    "25_Q3_Wunsch",
+    "B2B_PRIO",
+    "B2B_Target",
+    "BB-FTTH",
+    "Digihub_DOM",
+    "E2E_Trafo_Broadband",
+    "GK",
+    "GK-FTTH",
+    "GK-FTTH-03",
+    "GK-FTTH-Flamingo",
+    "Portfolio",
+    "Portfolio_Breitband"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-11622",
+      "title": "ADCL-11622",
+      "summary": "Reporting: Transport FTTH reporting information to DWH",
+      "url": "https://jira.telekom.de/browse/ADCL-11622",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-2087",
+      "title": "BEMABU-2087",
+      "summary": "Datenanlieferung der FTTH-O3-Aufträge via POT an Fiber-Cockpit",
+      "url": "https://jira.telekom.de/browse/BEMABU-2087",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

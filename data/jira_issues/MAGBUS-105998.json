@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-105998",
+  "issue_type": "Epic",
+  "title": "MF: Kundenübergabe (KüP) KMU nach D1R",
+  "status": "Analysis",
+  "description": "Description",
+  "business_value": {},
+  "assignee": "Jana Beyer",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 28",
+    "MF 4.600"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

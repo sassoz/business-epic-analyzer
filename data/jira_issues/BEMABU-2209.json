@@ -1,0 +1,61 @@
+{
+  "key": "BEMABU-2209",
+  "issue_type": "Business Epic",
+  "title": "LE - Email-Content (Weiterentwicklung EMU)",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nIst-Situation\nHoher Kostenaufwand bei externen Kosten (MMS)\nAufwendiger Abstimmungsaufwand\nWas ist der Mehrwert?\nKosteneinsparung Ressourcen/FTE für Content-Realisierung über die MKT-AU\nGeschwindigkeiten von Entscheidung bei Erstellungen\nEffizienzsteigerung im Kampagnenmanagement\nGrowth Contribution durch ganzheitliche digitale E2E-Journey mit individuellem Fokus auf den Kunden\nWas ist der Differenzierer – das \"Warum\"?\nimmer weniger Budget\nEinsparung externer Kosten\nMinderung der Aufwände für Abstimmung und langwierige Klärung von Situationen\nChance auf qualifizierte Erstellungen von Journey innerhalb Marketing\nZiele\nDie Journeys sind state of the art. Wir erfüllen die Erwartung der Kundenanforderungen im Handling, Nutzung - Einfachheit in der Bedienung, Usability, ....\nNutzung eines zentralen Tools zum Ausspielen von E-Mail der Vertriebskanäle\nSteigerung der Kundenzufriedenheit durch Bereitstellung von funktionierenden und relevanten Journeys in Verfügbarkeit und Qualität (höhere KPI z.B. Registrierungen und Ergebnisse z.B. AE/Umsatz)\nHerausforderungen\nInnerhalb einer Kampagne soll es möglich sein, eine Mailvorlage für den Seller bereit zu stellen.\nWird die Mailvorlage genutzt soll der ASP-Kunde automatisch als Kampagnenmitglied der Kampagne hinzugefügt werden\nWir der ASP-Kunde nominiert, kann die Mailvorlage ausgewählt werden und das Kampagnenmitglied als Status \"gesendet\" gesetzt werden\nMailvorlage kann nach Bedarf individuell anpassen\nund in seinem Namen versenden werden\nZusätzlich soll sichergestellt werden, bei Email-Nominierung an die Magenta-Cloud, dass Kunde eine Email-Permission besitzt. Falls nicht, soll eine Fehlermeldung an den Nutzer entstehen\nAm ASP-Kunden soll eine Email-Report (Nutzerverhalten| Öffnung, etc.) entstehen, welches wiederum mit der Kampagne/Mailvorlage verknüpft ist\nWichtig:\nDa die Mailvorlagen CI/CD komform sein Müssen und die meisten User über keine HTML-Fähigkeit besitzen, werden die meisten Mailvorlagen von Agenturen eingekauft. (Email-Lighning zu kompliziert).\nDiese Mailvorlagen sollen wenn möglich als Anlage in MagentaForce importiert werden können (oder Alternativlösung).\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=1478524788\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=1329000860\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=1334014907\n  Newsletter:\nWeiterentwicklung von EMU (Emails made uncomplex). Self-Service für Mailvorlagen, welche der CI/CD-Richtlinien ohne HTML-Kenntinsse ermöglichen und keinen hohen Kostenaufwand an die MMS verursachen.\nTracking am ASP-Kunden über EmailContent (Klicks, Öffnung, etc.)\n      Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMarketingCloud DOM0201 Daniel Vater  \nMagentaForce DOM0201 Matthias Hoffmann  \n          BEO und ggf. Vertreter Jennifer Litterscheid\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nWeiterentwicklung der Email-Content Erstellung (EMU). Framework CI/CD Konzernrichtlinien Anpassung, Integrierten Nominierungsprozess aus MagenatForce und Trigger-Journey. Nutzerfreundliches Handling ohne HTML-Sprache zur Content Aufbereitung - ohne externe MMS Kosten.",
+  "business_value": {
+    "business_impact": {
+      "scale": 8,
+      "revenue": "< 1.000 T€",
+      "cost_saving": "< 250 T€",
+      "risk_loss": "< 250 T€",
+      "justification": "Erhöhung der Leadmenge auf ca. 5% im Durchschnitt."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "mittelfristige Reduzierung von Wartungs- und Änderungsrisiken",
+      "strat_enablement": "Erhöht die Kundenerfahrung/-bindung oder das TD-Image in besonderem Maße, z. B. einzigartiger Login, Prozessvereinfachung oder disruptive/architektonische Innovation",
+      "justification": "Skills liegen in Fachbereichen. Abstimmungen zwischen den Agenturen werden seltener – Ressourcen + Zeitersparnis. Mehr Kundenkontakt – beim gleichen Budget."
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025",
+      "justification": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch:"
+    }
+  },
+  "assignee": "Litterscheid, Jennifer",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Erstellung einer nutzerfreundlichen Email-Content (ohne HTML)",
+    "Erstellung im Einklang CI/CD (Telekom Framework)",
+    "Möglichkeit Email-Content Versand über Trigger, Excel-Import und als Mailvorlage in MagentaForce",
+    "Nominierungsprozess aus MagentaForce",
+    "Individueller und personalisierter Email Versand",
+    "Reporting (PowerBI)"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-93465",
+      "title": "MAGBUS-93465",
+      "summary": "LE: Marketing_Email-Content",
+      "url": "https://jira.telekom.de/browse/MAGBUS-93465",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

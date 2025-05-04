@@ -1,0 +1,32 @@
+{
+  "key": "ADCL-12626",
+  "issue_type": "Epic",
+  "title": "Product Change Testing & Ad hoc Requirements",
+  "status": "Backlog",
+  "description": "Description\nTesting of generic Product Change, refer to Product Matrix at\nhttps://wiki.telekom.de/display/MBFY/BEMABU-1489%3A+Product+Change+in+O3\nImplementation at O3 was done in PI23 - ADCL-8029. Flamingo setup still required MAGBUS-88328.\nhttps://wiki.telekom.de/display/MBFY/O3+Change+order\nRomy has performed some tests on CIT2 (DOT-87122 Testaufträge.xlsx).\nFor the non working test cases additional analysis should be taken. Possible causes for the non working orders are:\n1. O3 is calling the LOM incorrectly\n2. The LOM does not provide the expected information\n3. A combination of (1) and (2)\nFor (1) further analysis has to be done together woth someone from DOT in order to find out, how the LOM should correctly be called.\nFor (2) LOM needs to fix the implementation.\nBoth actions are going to take time. As the LOM is going to be retired this has to be prioritized.",
+  "business_value": {},
+  "assignee": "Bjarne Pohlers",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-O3-Template",
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "DOT-87122 Testaufträge.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5561000/DOT-87122%20Testauftr%C3%A4ge.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2025-04-01T10:13:06.686+02:00"
+    }
+  ]
+}

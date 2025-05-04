@@ -1,0 +1,44 @@
+{
+  "key": "SDN-21845",
+  "issue_type": "Epic",
+  "title": "[SysPipeliners] Build Up Infrastructure for new FIB tools microservices (basic) PI 24.4",
+  "status": "Closed",
+  "description": "Description\nAs aligned during the SNP PIP 24.4 between Team Vega & Sys. Architect & Systeam Pipeliners we need to support FIB tool development with Setup of CaaS and CI/CD infrastructure for FIB microservice:\nTasks\nOrder PostgreSQL DbaaS (nonprod cluster) and handover to Developers\nOrder separate nonprod CaaS project in t03 (Decision by Architect Carsten Jupitz to keep the FIB Tool separate from the other MS)\nBuild up CaaS infrastructure for FIB Microservice (Dev & EAT)\nextend namespace resource quotas\nOrder firewall clearances if needed\nCreate additional network policies if needed\nimplement dynatrace integration (and EaaS if requested)\nCreate and adapt helm chart for FIB\nIntegration to panda-deploy repository for unified deployment \nAlign with Vega Team on specifics (implement yet unknown requirements/configurations)\nFeedback from Vega Team that everything is working as intended.\n  Milestones:\nThe new \"FIB Tool basic micoservice infrastructure\" for the Panda DEV and EAT environments need to be ready to start with the development and integration with Panda by 2. Iteration for the  Dev. team Vega.\n  The new \"FIB Tool basic micoservice infrastructure\" for the Panda UAT and PROD Environments are needed in the next PI 25.1 (later)\nWe need to align therefore within the next Pre-PIP phase and finialize it during the next PIP 25.1.\n\nBusiness Scope:\nSupport FIB tool development with Setup of CaaS and CI/CD infrastructure for FIB microservice.",
+  "business_value": {},
+  "assignee": "Jan-Hendrik Liebe",
+  "priority": "",
+  "target_start": "2024-10-17",
+  "target_end": "2024-11-27",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [
+    "CaaS infrastructure (dev & EAT environment) has been prepared for FIB MS (firewall, resource quotas, Network policies etc, Dynatrace integration)",
+    "Order and provision Postgres DBaaS",
+    "Helm chart for FIB has been created and is fully functional",
+    "Deployment via panda-deploy repository is integrated",
+    "Feedback from Vega Team that everything is working as intended."
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    },
+    {
+      "code": "SDN_Systemteam",
+      "title": "SDN_Systemteam Systemteam (Enviroment,Infrastructure, Plattform Engineering"
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5065254/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "98 kB",
+      "date": "2024-10-22T14:55:00.088+02:00"
+    }
+  ]
+}

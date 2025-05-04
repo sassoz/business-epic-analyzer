@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-102983",
+  "issue_type": "Epic",
+  "title": "Decoupling of PUG approvals",
+  "status": "Funnel",
+  "description": "Description\nFor the PUG process the following elements are needed:\nGeneral\nApproval History\nApproved prices in shopping cart\nError cases and messages\na) Request incomplete or wrong\nb) Creation of documents not possible when approvals missing\nc) Sending of order not possible when approvals missing\nThe shopping cart should present the items in a structured way. Grouping the discounts might be a way to do that.\nEmails to approver and requester\nAdjustment for approver roles to have a unique identifier\nOptional: Possibility to filter for different types of approvals\n  Requester View\nDisplaying PUG\nPrefill email address of approver from user settings\nFor every user a segment and region is in his profile. Derived from this information the approvers email address shall be prefilled.\nThe email address for the approver can be overwritten by the user in case a substitute is needed e.g. because of holidays or illnesses.\n  Approver View\nApproval / Rejection must be possible as well as filling in a comment\nForwarding the approval request in case of multilevel approvals\nFor bigger projects several PUG approvals  are needed. These follow a hierarchy for each combination of region and segment. The next approver shall be prefilled like being done for the requester from the profile information.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-04-03",
+  "target_end": "2025-06-25",
+  "fix_versions": [
+    "PI 28 stretch"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "DCAP",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

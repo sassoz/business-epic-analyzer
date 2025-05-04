@@ -1,0 +1,71 @@
+{
+  "key": "BEMABU-2055",
+  "issue_type": "Business Epic",
+  "title": "Q1 2025 EOS Workflow: Erweiterungen FTTH Vervollständigung",
+  "status": "Closed",
+  "description": "Description\nFür die MitarbeiterInnen aus SGrK,\ndie täglich mit EOS arbeiten,\nist es notwendig, dass diese AGB-Kette mit Features erweiter wird\nwodurch das Bearbeiten von Aufträgen direkt in EOS stattfinden kann\nund nicht manuell in den Produktionsstraßen CRM-T, SeCe-IT und FTTH.\nDas Vorhaben schafft durch die optimierte Arbeit mit EOS einen schnelleren und auch besseren Serviceprozess, welcher in Aufwandsreduzierung resultiert. Die Nutzer arbeiten schneller und effizienter im System, können dadurch mehr Zeit für die Beratung der Kunden aufwänden.\nDie Anforderung enthält verschiedene Einzelmaßnahmen zur gezielten Optimierung von Schlüsselfunktionalitäten sowie zur Umsetzung fehlender Geschäftsvorfälle und Erhöhung der End-to-End-Integration über die AGB-Kette. \nIn diesem Business Epic sind folgende Bauabschnitte enthalten: \nPrio 3 Erwiterungen für die FTTH Vervollständigung:\nNachbesserungen Landloard MAGBUS-97682 \nAnzeige des Ausbaustatus Stufe1  MAGBUS-92681",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "",
+      "cost_saving": "Aufwandsreduzierung durch optimierte Arbeit mit EOS",
+      "risk_loss": "",
+      "justification": "Das Vorhaben schafft durch die optimierte Arbeit mit EOS einen schnelleren und auch besseren Serviceprozess, welcher in Aufwandsreduzierung resultiert."
+    },
+    "strategic_enablement": {
+      "scale": 2,
+      "risk_minimization": "",
+      "strat_enablement": "Erhöhung der End-to-End-Integration über die AGB-Kette",
+      "justification": "Die Nutzer arbeiten schneller und effizienter im System, können dadurch mehr Zeit für die Beratung der Kunden aufwänden."
+    },
+    "time_criticality": {
+      "scale": 1,
+      "time": "",
+      "justification": "Tägliche Arbeit mit EOS erfordert Erweiterung der AGB-Kette, um manuelle Bearbeitung in Produktionsstraßen zu vermeiden."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "2025-01-09",
+  "target_end": "2025-04-10",
+  "fix_versions": [
+    "Q1_25",
+    "Q2_25",
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "2025",
+    "B2B_PRIO",
+    "B2B_Target",
+    "Operations"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-92681",
+      "title": "MAGBUS-92681",
+      "summary": "FTTH: Anzeige weiterer FTTH Infos in EOS (Ausbaustatus und NE3/NE4)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-92681",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-92000",
+      "title": "MAGBUS-92000",
+      "summary": "FTTH: GGS Storno aus EOS (MVP2)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-92000",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

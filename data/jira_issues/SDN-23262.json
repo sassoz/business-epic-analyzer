@@ -1,0 +1,31 @@
+{
+  "key": "SDN-23262",
+  "issue_type": "Epic",
+  "title": "FIB-Tool: O2B Integrate FIB Tool in PANDA workflow and data",
+  "status": "Closed",
+  "description": "Description\nPreconditions\nFIB tool has UI based on locations tab in SAP CPQ\nIn FIB tool locations can be added to project\nCommunication between CPQ and FIB tool\nWhen calling FIB tool SAP CPQ sends:\nQuote number\nCompany\naGP / GP Number\nAt an appropriate time (e.g. when a location is added to / deleted from project or the user leaves the locations tab) information about locations are sent to SAP CPQ\nToDo: Get decision from architects\nfor added/updated locations:\naction = add/update\nFIB Site ID\nCustomer Site-ID (Optional)\nLocation Name\nCountry\nISO Country Code\nAddress Long\nZIP Code\nCity\nLocality (optional)\nStreet\nNumber\nNumber Extension (Optional)\nKLS ID\nLatitude\nLongitude\nONKZ\nASB\nNEM Status\nNEM ID\nNEM Treshold\nNEM Validity Date\nFTTH state (optional)\nAvailable Bandwidth FTTH (optional)\nPlanning Date FTTH (optional)\nGFTA (optional) (the one chosen for the project)\nCopper state (optional)\nCPL ID (optional) (the one chosen for the project)\nAvailable Bandwidth Copper (optional)\nfor deleted locations\naction = delete\nFIB Site ID\nAttributes needed for:\n  Attribute GUI Sales Report  Service Overview Price Lists Interface to SNow\nFIB Site ID x x x   x\nCustomer Site-ID (Optional)   x x   x\nLocation Name         x\nCountry x x x    \nISO Country Code x x x x x\nAddress Long x        \nZIP Code   x x x x\nCity   x x x x\nLocality (optional)   x x x  \nStreet   x x x x\nNumber   x x x x\nNumber Extension (Optional)   x x x x\nKLS ID         x\nLatitude x       x\nLongitude x       x\nONKZ   x x    \nASB (Optional)   x x    \nNEM Status (Optional)   x      \nNEM ID (Optional)   x      \nNEM Treshold (Optional)   x      \nNEM Validity Date (Optional)   x      \nFTTH state (optional) x        \nAvailable Bandwidth FTTH (optional) x        \nPlanning Date FTTH (optional) x        \nGFTA (optional) (the one chosen for the project) x        \nCopper state (optional) x        \nCPL ID (optional) (the one chosen for the project) x        \nAvailable Bandwidth Copper (optional) x        \n \nHandling in SAP CPQ\nIntegrate FIB tool in SAP CPQ via mesh UI in locations tab\nreplaces the currently shown tables on GUI\nSend needed data in request to FIB tool when it is opened\nStore information for added locations\nRemove deleted locations from storage\nUse in all product configurators this storage for country and address selection\nToDo: Clarify with Klara Bruns: Data update (e.g. status change FTTH) for locations in project in or out of scope?\nAdd description\nadd Business scope\nadd accpetance criteria\nadd compliance\nadd Job size\nadd fix version (if pulled)\nset target End date (if pulled)\n    DOR Status Comment\nAcceptance criteria are defined.    \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts    \nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA    \nDependencies are identified and there are no external dependencies that can´t be solved within the ART    \nNon-functional requirements (NFR) are identified.    \nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter     \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on    \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs    \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation    \nProcess dependency / adaptations has been defined    \n\nBusiness Scope:\nAs a user of the FIB tool I want to be able to request availability on different technical plattforms and see the result in the tool to use it for my quotes. For this the FIB Tool needs to be integrated within the PANDA workflow, as well as the data are needed within the configurators of PANDA (first Company Access Easy).",
+  "business_value": {},
+  "assignee": "Hendrik Charchulla",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "Integrate FIB Tool into the PANDA workflow\nit can be retrieved",
+    "it can be retrieved",
+    "The necessary infrastructure data for a company access site configuration are send from FIB to PANDA\nFTTH",
+    "FTTH",
+    "The FIB infrastructure data of a site are shown according to the Click-dummy within the PANDA GUI when selected\nInvision link:",
+    "Invision link:"
+  ],
+  "components": [],
+  "labels": [
+    "FTTH_by_LE",
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,33 @@
+{
+  "key": "MAGBUS-104881",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B/DOT: Company Flex - Proof of Concept for New Location Product Acquisition",
+  "status": "In Progress",
+  "description": "Description\nThe objective of this portfolio epic is to create a Proof of Concept to validate the concept to enable the existing M-API integration to create product orders for complex B2B product portfolio (Company Flex - create basic instance & add location products).\n  Proof of Concept\nTarget:\nBe able to place an order for adding a new location to an existing Company Flex in CRM-T\nIdentify gaps within the process to go on to MVP\nScope:\nGet product configuration by MAPI PCM\nHave a given partial order\nPlace order to MAPI POM (Rucksack logic)\n \nMinimum: No coding, proof by simulating API calls\n \nhttps://wiki.telekom.de/display/MBFY/Products+with+more+than+1+location+like+Company+Flex",
+  "business_value": {},
+  "assignee": "Timo Szillat",
+  "priority": "",
+  "target_start": "2025-04-02",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "Enabler",
+    "Mapis4B2B"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-12545",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12545",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

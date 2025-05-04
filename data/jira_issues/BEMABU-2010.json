@@ -1,0 +1,67 @@
+{
+  "key": "BEMABU-2010",
+  "issue_type": "Business Epic",
+  "title": "Exploration Dokumentenhandling (DocID)",
+  "status": "Analysis",
+  "description": "Description\nClick to add description",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Keck, Simon",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-105060",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-105060",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-106185",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-106185",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

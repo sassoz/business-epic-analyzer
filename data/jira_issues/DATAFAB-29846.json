@@ -1,0 +1,66 @@
+{
+  "key": "DATAFAB-29846",
+  "issue_type": "Initiative",
+  "title": "Providing data products for EOS 2.0 Case-Management Reporting [DVS_B2BA]",
+  "status": "Closed",
+  "description": "Description\n2.  Portfolio Epic Description\nPortfolio Epic (Requirement and Scope) \nFür das Case-Management Reporting werden Mengen und Zeiten in Kunden- und Teamsicht aus Magenta Force benötigt. Dieses Element ist zuständig für das Abholden der Daten bei der Quelle (Magenta Force), die Verarbeitung bei AIL und auf dem ODW sowie die Bereitstellung der Daten innerhalb des ODW an den dortigen Bereit SERV. \n  Business Outcome (quantitative)\nBusiness Outcome für 2024 ca. 1,3 Mio. €, für 2025 ca. 5,96 Mio. € durch verbessertes Routing, weniger Nachfragen etc.\n  Acceptance Criteria (conditions which must be satisfied for the PE to be accepted)\nMagenta Force Schnittstelle ist um angefragte Attribute erweitert\nAttribute sind auf dem ODW dem Bereich SERV zur Verfügung gestellt\n  Out of Scope\nAnalyse der benötigten Attribute\nAufbereitung der Daten für spätere Reportings\n  Dependencies \n- Abhängigkeit besteht zu allen beteiligten Bereichen. Magenta Force, AIL, und Teile von SERV sind diese beteiligten Bereiche.\n ",
+  "business_value": {},
+  "assignee": "Birgit Kruckewitt",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "2025_Q1",
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [
+    "Magenta Force Schnittstelle ist um angefragte Attribute erweitert",
+    "Attribute sind auf dem ODW dem Bereich SERV zur Verfügung gestellt",
+    "Analyse der benötigten Attribute",
+    "Aufbereitung der Daten für spätere Reportings",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "GrK_Customer_Contact_Steering",
+    "RM_2025"
+  ],
+  "realized_by": [
+    {
+      "key": "DATAFAB-28177",
+      "title": "DATAFAB-28177",
+      "summary": "Extension of Magenta Force Interface for Case-Management Reporting ODW",
+      "url": "https://jira.telekom.de/browse/DATAFAB-28177",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATAFAB-31606",
+      "title": "DATAFAB-31606",
+      "summary": "MOD: MagentaForce ODE Migration incl. DIL Pipelines",
+      "url": "https://jira.telekom.de/browse/DATAFAB-31606",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATAAAA-19784",
+      "title": "DATAAAA-19784",
+      "summary": "CMR: DataIngest_SolutionDesign: Extension of Magenta Force Interface for Case-Management Reporting",
+      "url": "https://jira.telekom.de/browse/DATAAAA-19784",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

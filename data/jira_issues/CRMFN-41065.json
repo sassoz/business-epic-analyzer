@@ -1,0 +1,36 @@
+{
+  "key": "CRMFN-41065",
+  "issue_type": "Epic",
+  "title": "eRechnungen \"eRechnung Individualmarkt\"",
+  "status": "Review",
+  "description": "Business Scope:\nSUMMARY: From January 1, 2027, businesses are required to receive, process, and issue electronic invoices to comply with the requirements of the Growth Opportunities Act.\n___________________________\n\nBusiness Outcomes /Business Value\nGefährdet ist ein Umsatz von ca. 20,5 Mio. € (Annahme: 25% der Kunden verweigern die Annahme der Rechnung, da keine (korrekte) e-Rechnung gestellt wird)\nErreichen der gesetzlichen Anforderungen\nGleichzeitige Umsetzung auf modernes Kundenportal, um den Kunden die e-Rechnung zur Verfügung zu stellen.\nKundenzufriedenheit wird durch moderne Umsetzung erhöht\nKonsequenz, falls die Anforderung nicht umgesetzt wird: Eine Nichtumsetzung führt zu nicht gesetzeskonformer Abrechnung, dadurch besteht das Risiko, dass ein Kunde erst dann zahlt, wenn wir ihm eine ordnungsgemäß ausgestellte Rechnung (e-Rechnung/XML-Format) bereitgestellt haben.\n\nStrategischer Beitrag & zeitliche Kritikalität\nDas Wachstumschancengesetz ist Ende 2023 verabschiedet worden. Als erste große Maßnahme resultiert daraus die Umsetzung der e-Rechnung. Diese ist ab 1.1.2027 im Livebetrieb gefordert.\nZu betrachten ist für uns im wesentlichen die Prozessstrecke Individualmarkt über Mars → CSB, aber auch die Prozessstrecken \"Massenmarkt über MARS->Abili-T\" und für das Lösungsgeschäft über MARS→ SAP (bei TSBS) spielen eine Rolle.\nMit zeitgerechter Bereitstellung einer e-Rechnung für alle Customer Touchpoints - Kunden reduzieren wir drohenden Umsatzverlust durch nicht korrekt bereit gestellte Rechnungen.\nZudem werden drohenden Klagen durch Kunden oder gar dem Gesetzgeber vorgebeugt.\nes entsteht ein massiver Imageschaden für die Telekom, wenn die gesetzlichen Vorgaben nicht pünktlich umsetzt würden, während andere Unternehmen sich an die Gesetze halten.\nBei Nichteinhaltung eines Gesetzes würde die Öffentlichkeit sicher auf die Überprüfung der Einhaltung anderer gesetzlicher Regelungen pochen, was zu internen Aufwänden führt bei vorhandenen Ressourcenproblemen.\nLeading Indicators\ne-Rechnung ist zum 1.1.2027 für die Mars-CSB-Kette verfügbar.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Vertragspartner\nAnsprechpartner beim Kunden\nRechnungsempfänger auf BKTO-Ebene",
+    "Vertragspartner",
+    "Ansprechpartner beim Kunden",
+    "Rechnungsempfänger auf BKTO-Ebene"
+  ],
+  "components": [
+    {
+      "code": "CRM-T",
+      "title": "CRM-T identifies issues for CRM-T system"
+    },
+    {
+      "code": "DH CRM FN",
+      "title": "DH CRM FN "
+    }
+  ],
+  "labels": [
+    "Consulting",
+    "Exploration"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

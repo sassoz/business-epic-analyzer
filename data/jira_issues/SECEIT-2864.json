@@ -1,0 +1,21 @@
+{
+  "key": "SECEIT-2864",
+  "issue_type": "Epic",
+  "title": "Speedport 7 als Bundle abbilden",
+  "status": "Backlog",
+  "description": "Description\nAls Vertriebseinheit möchte ich in SeCe-IT das neue Portfolio Speedport 7 mit dem GK Anteil (Bundles, Zubehör) konfigurieren und beauftragen können um so unterstützend die Access Bereitstellung mit einem Whitelisted Router unterstützen zu können.\nEin PRIMA Bundle ist in SeCe-IT neu abzubilden, anders als bisherige Logistische HW-Sets, um so die obligatorischen und optionalen Komponenten individuell auswählen/konfigurieren zu können.\nDie Vermarktung von KMU zusammen mit CoFlex/cPBX ist nicht erlaubt, bis auf weiteres.\nDie Kalkulation und Angebote sind entsprechend anzupassen.",
+  "business_value": {},
+  "assignee": "Karsten Kemper",
+  "priority": "",
+  "target_start": "2025-04-24",
+  "target_end": "2025-05-14",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "SeCe-IT_EpicKLM"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

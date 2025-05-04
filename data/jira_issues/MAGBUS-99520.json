@@ -1,0 +1,33 @@
+{
+  "key": "MAGBUS-99520",
+  "issue_type": "Epic",
+  "title": "Tarif-/Optionsänderung für Fixed Net Portfolio (ohne Produktwechselmatrix)/Tariff and Option Change for Fixed Net Products (w/o product change matrix)",
+  "status": "Resolved",
+  "description": "Description\nFlamingo soll für Festnetz-Produkte Änderungsgeschäft, d.h. Tarif-, Bandbreiten- und Optionsänderungen ohne Wechsel der Produktfamilie zulassen (zunächst ohne Beachtung der Produktwechselmatrix => MAGBUS-96008).\n  Die relevanten Produktfamilien für das Änderungsgeschäft sind:\nBusiness Start/Pro\nCompany Access symmetrisch\nCompany EINS\nCompany Pro & IP Voice Data",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-01-09",
+  "target_end": "2025-02-19",
+  "fix_versions": [
+    "PI 26",
+    "PI27"
+  ],
+  "acceptance_criteria": [
+    "Die Vertragslaufzeit braucht nicht berücksichtigt werden",
+    "..."
+  ],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

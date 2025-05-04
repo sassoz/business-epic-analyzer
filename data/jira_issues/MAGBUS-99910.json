@@ -1,0 +1,24 @@
+{
+  "key": "MAGBUS-99910",
+  "issue_type": "Epic",
+  "title": "[BCPS] Expand BCPS with SPRM permission information",
+  "status": "In Progress",
+  "description": "Description\nWithin MAGBUS-99909 BSP will provide the quickfinder context in the JWT.\nIf this information is given and a SIGN account contains placeholders their should be replaced with the context from the quickfinder",
+  "business_value": {},
+  "assignee": "Frank Gehlhaar",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27",
+    "PI 28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

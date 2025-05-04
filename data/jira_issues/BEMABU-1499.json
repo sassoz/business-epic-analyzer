@@ -1,0 +1,93 @@
+{
+  "key": "BEMABU-1499",
+  "issue_type": "Business Initiative",
+  "title": "Q1 MagentaForce - Case Mgmt",
+  "status": "In Progress",
+  "description": "Description\nSammler für Q1 Casemanagement",
+  "business_value": {},
+  "assignee": "Kevin Robeck",
+  "priority": "",
+  "target_start": "2024-03-01",
+  "target_end": "2025-01-16",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0702",
+      "title": "DOM0702 CSSE"
+    },
+    {
+      "code": "DOM1001",
+      "title": "DOM1001 CSSE"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Prio_2024",
+    "B2B_Target",
+    "E2E_Tafo_Service",
+    "LaO_MF",
+    "MaBu-TopThema-2024",
+    "Operations",
+    "Service-Efficiency"
+  ],
+  "realized_by": [
+    {
+      "key": "BESERV-862",
+      "title": "BESERV-862",
+      "summary": "Q1 EOS 2.0 Case-Management Reporting",
+      "url": "https://jira.telekom.de/browse/BESERV-862",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1410",
+      "title": "BEMABU-1410",
+      "summary": "Case Mgmt GrK in MagentaForce",
+      "url": "https://jira.telekom.de/browse/BEMABU-1410",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1612",
+      "title": "BEMABU-1612",
+      "summary": "Q1 OneForce Casemanagement - Reporting",
+      "url": "https://jira.telekom.de/browse/BEMABU-1612",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1814",
+      "title": "BEMABU-1814",
+      "summary": "Q1 Weiterentwicklung Case-Management API",
+      "url": "https://jira.telekom.de/browse/BEMABU-1814",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1815",
+      "title": "BEMABU-1815",
+      "summary": "Q1 Weiterentwicklung Case-Management Sync EOS",
+      "url": "https://jira.telekom.de/browse/BEMABU-1815",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1818",
+      "title": "BEMABU-1818",
+      "summary": "Q1 Weiterentwicklung bestehender Lösung Case-Management",
+      "url": "https://jira.telekom.de/browse/BEMABU-1818",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1967",
+      "title": "BEMABU-1967",
+      "summary": "Q1 Erweiterung Codierung",
+      "url": "https://jira.telekom.de/browse/BEMABU-1967",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

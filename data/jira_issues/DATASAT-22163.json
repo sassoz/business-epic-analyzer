@@ -1,0 +1,29 @@
+{
+  "key": "DATASAT-22163",
+  "issue_type": "Epic",
+  "title": "ODW: Casemanagement Service - Minimal solution",
+  "status": "Closed",
+  "description": "Description\nA minimal solution for the reporting basis of the new case management service is to be provided.\n \nFor this purpose, another view of the customer concerns and customer concerns history entities is to be generated, which are filtered to the new business cases of the service:\nemail2case\nservice case\nAnalogous to the processing of the data in complaint reporting, a historized view of the cases is to be generated: Casemanagement_IM.\n \nThe following key figure are to be made evaluable: \nPeriod between input and output\n A corresponding view is to be provided in the business layer Casemanagement_IM_bva, on the basis of which BSR can build up initial reports.\nThe snapshots for the as-was-view for last week and last month are needed as well.\n \nNot in scope: * No attributes other than those already available are transferred to the view.\nNo further calculations are provided.\nThe provision of the data for the EWS cube is not in scope.\n \n*****************************************************************************\nEs soll eine Minimal-Lösung für die Reportingbasis des neuen Casemanagement Service bereitgestellt werden.\n \nDazu soll eine weitere View von den Entitäten Kundenanliegen und Kundenanliegen Historie generiert werden, die auf die neuen Busisnes Cases des Service gefiltert werden:\nemail2case\nservice case\nAnalog zur Verarbeitung der Daten im Beschwerde-Reporting soll eine historiserte Sicht auf die Cases erzeugt werden: Casemanagement_IM.\n \nEs sollen als Kennzahlen auswertbar gemacht werden:\nZeitraum zwischen Eingang und Ausgang\nEs soll eine entsprechende View im business layer Casemanagement_IM_bva beeitgestellt werden, anhand derer BSR erste Reports aufbauen kann.\nEs werden zwei snapshots wie bei Beschwerden erwartet: letzte Woche und letzter Monat.\n \nNicht im Scope:\nEs werden keine weiteren Attribute, als die bereits vorhandenen in die View übernommen.\nEs werden keine weiteren Berechnungen zur Verfügung gestellt.\nDie Bereitstellung der Daten für den EWS-Cube sind nicht im scope.",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2024-09-26",
+  "target_end": "2024-10-16",
+  "fix_versions": [
+    "2024_Q3",
+    "2024_Q4"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "CMServ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

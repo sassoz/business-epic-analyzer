@@ -1,0 +1,46 @@
+{
+  "key": "SDX-167",
+  "issue_type": "Epic",
+  "title": "(SO) SD-LAN - Aggregated Ethernet interface & LACP",
+  "status": "Closed",
+  "description": "Description\nDESCRIPTION:\nAggregating multiple links between physical interfaces creates a single logical point-to-point trunk link or a LAG. The LAG balances traffic across the member links within an aggregated Ethernet bundle and effectively increases the uplink bandwidth. Another advantage of link aggregation is increased availability, because the LAG is composed of multiple member links. If one member link fails, the LAG continues to carry traffic over the remaining links.\nConfigure a LAG by specifying the link number as a physical device and then associating a set of interfaces (ports) with the link.\nLACP is one method of bundling several physical interfaces to form one logical aggregated Ethernet interface. By default, Ethernet links do not exchange LACP protocol data units (PDUs), which contain information about the state of the link.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Release 2.x",
+    "PI6",
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "logical aggregated Ethernet interface.",
+    "Define the parameters associated with the logical aggregated Ethernet interface",
+    "Define the member links to be contained within the aggregated Ethernet interface",
+    "Configure LACP for link detection",
+    "Maximum interfaces for LAG",
+    "maximum number of LAG per switch",
+    "modifying (add/remove physical interface) LAG",
+    "configuration of LAG on both sides of the link"
+  ],
+  "components": [
+    {
+      "code": "Service Orchestrator",
+      "title": "Service Orchestrator "
+    }
+  ],
+  "labels": [
+    "EPIC_SDE2E-1445",
+    "PI5",
+    "PI5_SO",
+    "PI7",
+    "SDProduct",
+    "SDX_external",
+    "SE_Feature",
+    "SNOW@TC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,25 @@
+{
+  "key": "ADCL-11496",
+  "issue_type": "Epic",
+  "title": "[Voice] Process Relocation orders from Flamingo",
+  "status": "Closed",
+  "description": "Description\nSee the comments section for the current status of the discussion on this epic. At the moment we assume that no adjustments to O3 are necessary.",
+  "business_value": {},
+  "assignee": "Dirk Henning",
+  "priority": "",
+  "target_start": "2025-02-21",
+  "target_end": "2025-03-13",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-O3-Template",
+    "ADCL-PI27",
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

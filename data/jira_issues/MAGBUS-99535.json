@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-99535",
+  "issue_type": "Epic",
+  "title": "MF: IT Netto AE",
+  "status": "Closed",
+  "description": "Description\nAls MF-User in GK-VM möchte ich bei dezidierten Produkten den Netto Auftragseingang anzeigen. Bei diesen Produkten dürfen wir wg. Principal-Agent (Reselling) im Kontext der Bilanzierung bzw. im Zusammenspiel mit Partnern (wie z. B. Microsoft) nur die Marge ausweisen.\n  Ausgewählte TDG-Produkte werden in der VPO-Liste mit einer Zielmarge versehen.\nIn MagentaForce haben wir ein neues Feld auf Vorhaben-Ebene \"IT AE Netto\". In diesem Feld wird die Marge der Vorhaben-Produkte aufsummiert.\nZudem sind folgende Berichte anzupassen, es wird die Spalte \"Betrag Netto\" bzw. \"Gesamtpreis Netto\" ergänzt:\nGK-VM Vorhaben-Export\nGK-VM InSa Vorhaben-Export\nGK-VM Vorhaben Partner-Export",
+  "business_value": {},
+  "assignee": "Hesse, Mike",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27",
+    "MF 4.400",
+    "MF 4.500"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

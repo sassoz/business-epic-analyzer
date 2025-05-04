@@ -1,0 +1,31 @@
+{
+  "key": "SDN-22449",
+  "issue_type": "Epic",
+  "title": "FIB: Implement Preorder@Cloud Interface",
+  "status": "Closed",
+  "description": "Description\nPrerequisites for this epic: \nLocations are added to FIB (manual and excel upload) \nGerman Locations are enhanced with a KLS ID\n  Implement API To Preorder@Cloud, TMF 645\nWhen adding a new location (manually or via upload) the availability check via Preorder@cloud is automatically send \nData to be shown from the request within FIB:\nFTTH Status\nAdditional information will be requested in Q2\nAdditionally there will be a button \"Request FTTH Availability\". Via this button the user has the possibility to request an availability update for choosen (dedicated) locations.\nThirdly a request will be sent to Preorder@Cloud automatically after getting a change event from TechPOM (see below)\nUser Workflow:\nThe user adds locations to the FIB Tool either by Excel upload or by manual adding\nWhen the locations are saved and the KLS ID is added, the request to Preorder@Cloud is done \nIf a location has been added manually, no waiting hint is shown, but the anwser should be there really fast\nIf locations are added by Excelupload a hint is shown that the FTTH data is being fetched\nThe user can update the screen \nWhen all FTTH data is in place, the user filters for the locations in state \"notplanned\" and \"areaplanned\" \nThe user ticks in the locations in that state and chooses (via button \"Request Availability\") \"Send Interests to Interest DB\" \nIn case the locations have a wrong state or mandatory data is missing, a hint is shown so that the user can rework the locations that are \"wrong\"\nA popup opens in which the user needs to confirm the interest of the customer \nThe request is sent to TechPOM\nTechPOM replys with ok and unique ID per location, those information are added to DB and FE table\nWhen the FTTH state of a location is changing to VVMongoing, a request is going out to Preorder@Cloud to update the FTTH information for the location \n--> blue are new FE Requirements that are integrated in FIGMA\n \n \n    DOR Status Comment\nAcceptance criteria are defined.    \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts    \nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA    \nDependencies are identified and there are no external dependencies that can´t be solved within the ART    \nNon-functional requirements (NFR) are identified.    \nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter     \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on    \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs    \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation    \nProcess dependency / adaptations has been defined    \n\nBusiness Scope:\nAs a user of the FIB tool I want to be able to request availability on different technical plattforms and see the result in the tool to use it for my quotes.",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "Interface to Preorder@Cloud is implemented and automatically triggered upon creating a location with KLS ID",
+    "manual update is possible",
+    "Automatic update of the FTTH states and columns when respective event is received from TechPOM",
+    "The field FTTH Status is filled/updated by the interface for the time being",
+    "For operational use, approximately 50,000 address queries per day are expected.",
+    "Responding to queries by the next business day is sufficient, meaning all requests can be received and answered during off-peak hours.",
+    "Additionally, the NFR (Non-Functional Requirements) of TMF-645 should apply."
+  ],
+  "components": [],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

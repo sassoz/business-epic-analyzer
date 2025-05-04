@@ -1,0 +1,36 @@
+{
+  "key": "SDX-5909",
+  "issue_type": "Epic",
+  "title": "[SD] Enhance SD-WAN/LAN/WIFI Product & Production Model for MIST Q3",
+  "status": "Closed",
+  "description": "Description\nFor whom Telekom\nwho Needs a product- and production model\nprovides the data model in CPDM with\na product and production model\nfor further development and other IT Systems\nDifferent from Excel / Powerpoint\noptimizing Same understanding of the product and common data basis\n\nBusiness Scope:\nA ´product- (catalog and price model) and production model is requested for different IT systems in DT. A Model for Juniper SD-WAN already exists and must be enhanced with LAN/WiFi. The PO/PS level will be provided by Offering Management (BO). Basis for the production model shall be the module catalogue of the existing TDG product “mLan”.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2022-08-19",
+  "fix_versions": [
+    "Release 1.1",
+    "Release 1.0",
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "Provide consultancy support for existing WAN/LAN/WIFI tech. designs **",
+    "Handover all new tech. designs to CPDM colleagues",
+    "Product and production model is aligned",
+    "Model is described in CPDM"
+  ],
+  "components": [
+    {
+      "code": "SDx - SD Product",
+      "title": "SDx - SD Product "
+    }
+  ],
+  "labels": [
+    "PI#7",
+    "SDProduct"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

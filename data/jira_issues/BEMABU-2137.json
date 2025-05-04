@@ -1,0 +1,84 @@
+{
+  "key": "BEMABU-2137",
+  "issue_type": "Business Epic",
+  "title": "Next Level Campaigning 2.0 // Überkipper für Q3/2025",
+  "status": "Funnel",
+  "description": "Description\nNach erfolgreicher Anbindung der Outbound u. Inbound Schnittstellen im vorangegangenen PI steht nun die Automatisierung der Prozesse an. Ferner sind relevante Subprozesse wie Planungsprozesse, Entnahmeprozesse, Kontaktsperr-Werkzeug,  Monitoringprozesse zu implementieren um ein automatisiertes Kampagnenmanagement zu etablieren. NLC: Dazu ist eine Exploration durchzuführen bzgl. des Way2Go bzgl. der Infrastruktur einer 360° Kundendatenbasis mit Selfservice-Funktionalitäten wie bereits seit Q3/2024 gemeinsam aus Business & IT besprochen, siehe auch eingehängte Unterlagen.\n--------------------------------------\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür Kampagnenmanager & Marketiers,\ndie eine erfolgreiche Kundenansprache für Up/X-Sell sowie bei Churngefährdung über alle Kommunikationskanäle sicherstellen wollen,\nist  die Novellierung & substanzielle Weiterentwicklung der Kampagnen- sowie darunterliegenden Dateninfrastruktur erforderlich\nwodurch die Transformation gelingt \n - von Kampagnen zu Journeys mit dem Ziel von \n                - Omnichannel-Abstimmung der Botschaften\n                - projektartigen Einzelmaßnahmen zu automatisch triggerbasiertem Versand\n                - kontextbasierter Ansprache zum richtigen Zeitpunkt\n                - integrierter Ansprache & Kundenkontaktstrategie über alle Produkte (Kundensicht) statt in Vertrags-Silos\n                - geeigneter Berücksichtigung der Kundenpräferenzen.\nvon viel Programmierung & Expertensystemen zu umfangreichen Selfservice-Möglichkeiten\nso dass eine konsequente Ausrichtung auf den Customer Lifetime-Value möglich wird und sowohl Effizienz als auch Effektivität gesteigert werden können eine erhöhte CR bei dem Maßnahmen, gesteigerte Kundenzufriedenheit bei gleichzeitiger Reduktion von Ineffizienz durch Schnittstellenverluste sowie Abschluss der Maßnahmen zur Mitigation des Retire OCC\nund nicht weiter in der bestehenden Art und Weise die Kommunikation durchzuführen bzw. keine Platform nach Abschaltung OCC mehr zu haben.\nDas Vorhaben schafft einen wesentlichen Wertbeitrag für GK, insb. KMU, konkret (Umsatzsteigerung, Kundenzufriedenheit sowie Generierung von Cost-Savings)\n  Für GK-Kunden und im speziellen KMU-Kunden,\nwelche churn-gefährdet sind oder Up/X-Selling-Potenziale bestehen\nist  eine Kampagnenplattform mit  Inbound u. Outbound Schnittstelle im Aufbau. Hier sind in Q3 relevante Entwicklungen voranzutreiben um die Funktionsfähigkeit der neuen Plattform zu gewährleisten \nund nicht nach OCC-Abschaltung zu Mitte 2025 für Inbound /Outbound Kundenansprachen für GK keine alternative Plattform mehr bereitstellen zu können. \nDas Vorhaben schafft einen deutlichen Wertbeitrag für GK/KMU.\nKonkret Steigerung/Sicherung:\nUmsatz (bzw. partielle Umsatzsicherung)\nKundenzufriedenheit\n   u. Generierung Cost Savings{}\nRahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMarketing Automation DOM0201 Bayer, Kerstin   \nSales Enablement Platform (CCM&DCM) DOM0201 Kevin Meigel   \nMagenta Force DOM0201 Matthias Johannes Hoffmann   \nData Tribe DOM0300 Joachim Bauß   \n  BEO und ggf. Vertreter Klaus Plangemann und Hack, Lucas, Henry Schnieders  <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nSponsor/Fachseite Torsten Brodt, KMU (GK-KM)\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nNach erfolgreicher Anbindung der Outbound u. Inbound Schnittstellen im vorangegangenen PI steht nun die Automatisierung der Prozesse an. Ferner sind relevante Subprozesse wie Planungsprozesse, Entnahmeprozesse, Kontaktsperr-Werkzeug,  Monitoringprozesse zu implementieren um ein automatisiertes Kampagnenmanagement zu etablieren. NLC: Dazu ist eine Exploration durchzuführen bzgl. des Way2Go bzgl. der Infrastruktur einer 360° Kundendatenbasis mit Selfservice-Funktionalitäten wie bereits seit Q3/2024 gemeinsam aus Business & IT besprochen, siehe auch eingehängte Unterlagen.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "14.600 k€",
+      "cost_saving": "650 k€",
+      "risk_loss": "160 Million per Anno",
+      "justification": "Umsatz-Steigerung 14,6 Mio. € p.a. ab 2026\nEffizienzsteigerung /Kostenreduzierung durch Automatisierung 650 Tsd. € p.a. ab 2026\nUmsatzsicherung 160 Million per Anno\nIst in IPF enthalten"
+    },
+    "strategic_enablement": {
+      "scale": 13,
+      "risk_minimization": "Reduktion von fehlerhaften Übergaben und Probleme bei der Kundenbetreuung",
+      "strat_enablement": "Sehr zeitnahe Umsetzung sichert Kampagnenfähigkeit und erhöht Umsatzerlöse",
+      "justification": "Mittels Umsetzung werden zeitkritische Kundenkontakte mittels Trigger-Kampagnen schneller omnichannel ausgespielt und u.a. eine Kundenabwanderung zum Wettbewerb nach Kündigung wird vermieden\nErhöhung NPS infolge kontextbezogener OB-Ansprache"
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum\nPlan Start: 01.07.2025\nPlan Ende/Launch: 30.09.2025",
+      "justification": "Kundenübergaben sollen nach abgeschlossener iPF Planung zum 1.1.26 Umgesetzt sein"
+    }
+  },
+  "assignee": "Klaus Plangemann",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Mitigation Retire OCC\nOutbound u. Inbound-Strecke ist angebunden u. Steuerung u. Prozessierung der Kampagnen-Datensätze u. Metadaten erfolgt automatisiert \nKampagnenstrecke wurde erfolgreich getestet \nDatenschutz-u. Mitbestimmungs-rechtliche Vorgaben sind eingehalten)\nPlanungsprozesse, Entnahmeprozesse, Kontaktsperr-Werkzeug,  Monitoringprozesse sind implementiert",
+    "Outbound u. Inbound-Strecke ist angebunden u. Steuerung u. Prozessierung der Kampagnen-Datensätze u. Metadaten erfolgt automatisiert",
+    "Kampagnenstrecke wurde erfolgreich getestet",
+    "Datenschutz-u. Mitbestimmungs-rechtliche Vorgaben sind eingehalten)",
+    "Planungsprozesse, Entnahmeprozesse, Kontaktsperr-Werkzeug,  Monitoringprozesse sind implementiert",
+    "NLC: (siehe angehängte Unterlagen SteerCo NLC)\nExploration eines infrastrukturellen Zielbildes mit Definition der erforderlichen Aktivitäten bspw. auf Basis Salesforce Data Cloud oder alternativer Lösungsansätze.\nExploration & Umsetzung einer Selfservice-Lösung zur Email-Erstellung, bspw. Weiterentwicklung EMU (https://jira.telekom.de/browse/BEMABU-2209)\nFormular-Baukasten für Leaderfassung siehe https://jira.telekom.de/browse/BEB2B-286",
+    "Exploration eines infrastrukturellen Zielbildes mit Definition der erforderlichen Aktivitäten bspw. auf Basis Salesforce Data Cloud oder alternativer Lösungsansätze.",
+    "Exploration & Umsetzung einer Selfservice-Lösung zur Email-Erstellung, bspw. Weiterentwicklung EMU (https://jira.telekom.de/browse/BEMABU-2209)",
+    "Formular-Baukasten für Leaderfassung siehe https://jira.telekom.de/browse/BEB2B-286"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0300",
+      "title": "DOM0300 Data"
+    }
+  ],
+  "labels": [
+    "CI-ODS",
+    "Cross-vertical",
+    "GK-KMC",
+    "Inbound",
+    "Inbound-Prozess",
+    "OCC",
+    "Outbound",
+    "call",
+    "campaign"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20241213_SteerCo_NLC.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5398565/20241213_SteerCo_NLC.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "20.95 MB",
+      "date": "2025-02-13T12:13:50.293+01:00"
+    },
+    {
+      "filename": "20250213_ZielbildCRM.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5398564/20250213_ZielbildCRM.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "564 kB",
+      "date": "2025-02-13T12:13:47.743+01:00"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "key": "ADCL-11253",
+  "issue_type": "Epic",
+  "title": "[Inhouse] Enhancement Features",
+  "status": "Closed",
+  "description": "Description\nUpon Inhouse direct orders Go-Live additional enhancements will be added covered in this Epic.\nAs updated at https://wiki.telekom.de/display/MBFY/SeCe-IT+O3+Direct+Sales the following additional information will be transmitted via O3 POM.\nMAGBUS-99077 Download link to Offer document /Transmission via note\nSeCeIT transmitts download link of offer document via NOTE with reference via O3 (similarly to Flamingo document handling). Attribute \"source\" is used in order to add applicable values, either \"Flamingo\" or \"SeCe-IT\"\nEOS uses SeCe-IT (POS) service in order to download this or any other documents\nEOS can further transmitt documents via POS to SeCe-IT\nOUT OF SCOPE: opposite to the Flamingo order documents the SeCe-IT document is not attached to the IRRP emails.\nAs per decision at EOS/SeCeIT/O3 workshop on Nov 26th, 2024 in Bremen\nOut of scope: MAGBUS-98756 Data transmission for additional information like comments (related to an order) is not subject of O3/Order Management funcionality.\nEOS will directly communicate with SeCeIT",
+  "business_value": {},
+  "assignee": "Bjarne Pohlers",
+  "priority": "",
+  "target_start": "2025-01-10",
+  "target_end": "2025-03-13",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-O3-Template",
+    "ADCL-PI27",
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

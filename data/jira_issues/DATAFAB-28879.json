@@ -1,0 +1,34 @@
+{
+  "key": "DATAFAB-28879",
+  "issue_type": "Epic",
+  "title": "Static Pool Report in M2M Self Service Portal",
+  "status": "In Progress",
+  "description": "Description\n1. Epic Description\nEpic (Requirement and Scope) \nThis epic focuses on advancing the Extended Universe through enhancements to the M2M Self Service Portal with new comprehensive functionality. M2M Self Service Portal allows users to generate sophisticated reports based on their own needs.  With introducing new Data Best Pool model it is required to have more specific reports.\nStatic Pool report is based on monthly generated invoice information on TMSP side, which contains all required info about included data volume, home zones, individual roaming pools and it's prices. Charges for usage Data Best product are also available. Based on this information, it is required to create Static Pool Report for better analysis of Data Best Usage and revenue info.\n  Acceptance criteria:\nNew attributes are added in Self Service Portal.\nNew Static Pool report is created.\nStatic Pool report is generated for Data Best Customers only.\nStatic Pool report shows information for last 3(6/12) month.\n  Benefits \nPower users in finance and marketing can directly access relevant data, promoting transparency and independence.\nUsers can generate their own reports, reducing manual service requests and easing support team workloads, leading to efficiency and cost savings.\nEnhanced report generation allows users greater control and informed decision-making.\nThe portal enables users to create sophisticated reports for deeper insights, driving better decisions.\n  Specific Deliverables  \nNone\n  Acceptance Criteria (conditions which must be satisfied for the Epic to be accepted)\nNew attributes are added in Self Service Portal.\nNew Static Pool report is created.\nStatic Pool report is generated for Data Best Customers only.\nStatic Pool report shows information for last 3(6/12) month.\nOut of Scope\nCreation of new reports, system architecture changes. BI Launchpad reports are not affected.\n  Dependencies \nThe mapping in the source system is clear and accessible, and the changes have been approved by a business side.\n2. Technical / Solution Design / Compliance\nTechnical & Solution Design  \nThe proposed solution involves modifying existing folders to incorporate additional attributes and relationships, as well as updating the logic within the M2M Self Service Portal for creating necessary internal reports. This aligns with the architectural roadmap by ensuring compatibility with current systems and minimizing disruption. The implementation will utilize existing technologies and frameworks, focusing on improving performance while maintaining data integrity. The mapping in the source system is clear and accessible, ensuring a smooth integration process.\nCompliance evaluation\nDone.\n  3. NFR (if any)\nNon functional requirements\nNo.\n  4. SLA(if any)\nService Level Agreements\nN/A\n   ",
+  "business_value": {},
+  "assignee": "Katerina Soldatova",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-04-30",
+  "fix_versions": [
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "DEV",
+    "M2M_Rep",
+    "SelfServicePortal"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

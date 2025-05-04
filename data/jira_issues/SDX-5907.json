@@ -1,0 +1,28 @@
+{
+  "key": "SDX-5907",
+  "issue_type": "Epic",
+  "title": "(SO) MIST SDWIFI SDLAN related rework due to CPDM change",
+  "status": "Closed",
+  "description": "",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Service Orchestrator",
+      "title": "Service Orchestrator "
+    }
+  ],
+  "labels": [
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

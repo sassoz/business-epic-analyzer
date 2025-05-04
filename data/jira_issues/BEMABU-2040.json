@@ -1,0 +1,48 @@
+{
+  "key": "BEMABU-2040",
+  "issue_type": "Business Epic",
+  "title": "Alternativeintrag im Feld ACM für alle KMU-Kunden",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür alle KMU-Kundendie im Feld AcM eine Person eingetragen haben (z. B. Andrea Stoer)\nist es notwendig, dass keine Person im Feld AcM eingetragen ist\nwodurch aktuell ein falscher Vertriebskontakt kommuniziert wird und die Kunden zu lange auf die Lösung ihrer Anliegen warten müssen.\nso dass die Vertriebsmitarbeiter der anderen Verticals verstehen, dass es im KMU keine AcM gibt, sondern jeder Vertriebsmitarbeiter aus allen Vertriebskanälen im KMU (alle Shops, Partner, Service-Teams für KMU auch extern inkl. D2D) verantwortlich für alle KMU Kunden sind.\nund nicht das Kundenanliegen an einen falschen Koll. geben der die Kundenanliegen nicht bearbeiten kann, was zu Unzufriedenheit der Kunden führt. und ggü. den Kunden kommunizieren.\nDas Vorhaben schafft Klarheit zur Kundenverantwortung im Vertical KMU und nimmt die Irritation und unterbindet die Verzögerung bei der Bearbeitung der Kundenanliegen.\n  <Ggf. noch charakterisierende Eigenschäften ergänzen. Ggf. Einordnung in ein Zielbild (Business Initiative) geben.>\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n< MagentaForce > DOM0201 <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter Andrea Stoer und Beddies, Olaf\nSponsor/Fachseite Torsten Brodt / GK-KM\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "5.616",
+      "justification": "Effizienz 90"
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": "Erhöht die Kundenerfahrung/-bindung"
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "",
+      "justification": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch: 30.09.2025   Launch innerhalb der nächsten 4 - 6 Monate"
+    }
+  },
+  "assignee": "Andrea Stoer",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "<In Scope/Akzeptanzkriterien: siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-KMC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

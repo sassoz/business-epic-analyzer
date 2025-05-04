@@ -1,0 +1,76 @@
+{
+  "key": "BEMABU-1859",
+  "issue_type": "Business Initiative",
+  "title": "Webex X (2025)",
+  "status": "In Progress",
+  "description": "Description\nBusiness Initiative\nBeschreibung der Maßnahme\nFür potenzielle GK-Kunden aller Segmente,die einen oder mehrere Webex Services nachfragen,\nist es notwendig, die Marktfähigkeit und -attraktivität zu erhalten und USP auszubauen,\nwodurch die Kundenbedürfnisse berücksichtig und befriedigt werden können,\nso dass für GK ein signifikanter, positiver Deckungsbeitrag erreicht werden kann, \nund nicht Portfoliolücken entstehen, die Kunden zu Vertragskündigungen veranlassen und zum Wechsel zu Wettbewerbern führen.\nDas Vorhaben schafft eine z.T. tiefe Integration in kundeneigene Prozesse und Systemen, welche zu langfristigen Kundenbindungen führen.\nBusiness Outcome: Q1/25: Wx Sovereign Control, Q2/25: Wx Calling mit CoFlex/Steam, Q3 + Q4 /25: WxGo  \nCoD allgemein:  iPF-stützend. Ohne termingerechte Umsetzungen, abnehmender Umsatz 2025ff.\nBusiness Value / Value Hypothese\nSicherung der Bestandsverträge Umsatzes sowie weiteres Umsatzwachstum durch die vollumfängliche Cisco-Webex Portfoliobereitstellung.\nGenerierung von Wettbewerbsvorteilen und Ausbau der Marktpositionierung im Webex Umfeld\nWeitere Umsatzpotentiale möglich, durch Kundenweiterentwicklungsmaßnahmen.\nRealisierung der Webex-Anfragen, insb. aus dem Lösungsgeschäft.\nOptimierung der Produktions- und Prozesskosten durch harmonisierte, schlanke und innovative IT-Abbildung\nRealisierung von USP und Wettbewerbsvorteilen durch strategische Partnerschaft mit Cisco.\nReduzierung der Herstellungs-, Betriebs- und Servicekosten durch harmonisierte der Prozess- und IT-Landschaft. \n  Strat. Beitrag & zeitl. Kritikalität\nSicherstellung der IT-Wachstumsziele durch Erschließen neuer Kundengruppen & Marktpotentiale.\nUmsetzung der Self Service Funktionalität sowie Erweiterung des Produkt Portfolios ist zwingende Voraussetzung für eine relevante Positionierung der Telekom im Markt.\nDigitalisierung, Automatisierung und Prozessoptimierung zur Kostensenkung\nBusiness Impact\nJahr zusätzl. Umsatz (Tsd. €) EBITDA (Tsd. €) Effizienz (Tsd. €) Risikoverlust * (Tsd. €)\n2025 350 140    \n2026 910 364    \n2027 1400 560    \nRisikoverlust = Schadenshöhe x Eintrittswahrscheinlichkeit (z. B. bei Umsatzsicherung, Pönnalen, ...)\nUmsetzungskizze (In Scope)\nZusammenführung zweier IT-System (ZMKM und SAP/CRM- Brim)\nEin Prozess- und IT-Kette für unterschiedliche Buchungskreise (DTBS & TDG).\nEin Webex-Portfolio, segmentübergreifen\nSynchronität erhalten, zw. dem Cisco-Webex und DT-Webex Portfolio\nErweiterung unseres Angebotes durch für DT exklusive Webex-Inhalte\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nSAP-BRIM DOM0202 <verwende \"@Vorname Nachname\">  \nPMA-ISEM DOM0200    \n< ... >      \nBetroffenheit bitte fett markieren:\nNutzer Public Large Enterprise Midmarket Massmarket Delivery T-Digital      \nArt Produkt Sales Tool Delivery Tool IT-Enabler       Standard / AGB Lösung/ Rahmenvertrag\nProzesse Lead 2 Offer Offer 2 Order Order 2 Fulfillment Fulfillment 2 Billing Problem 2 Sol Assurance Reporting    \nJob Size\nAufwandsschätzung - T-Shirt Size Tel-IT Technik Sonstige Schätzung durch\nSize\nS: <400 k€ / M: 400 k€ - < 1 m€ / L: 1 - 3 m€ / XL: > 3 m€\nM S   Fachbereich: bernd.melcher@telekom.de \nTel-IT: <@Vorname, Name / Bereich / Datum>\nBeteiligte\nAlignment-Team Portfolio       Moderator: Susanne Matzke\nSponsor/fachl. verantwortlich Claudia Buhne\nBusiness Epic Owner (BEO) Bernd Melcher; Claudius Paul\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nVermarktung von Cisco Webex in Kombination mit Dienstleistung und weiteren Services von DT an Public/Classified, LE, MM. Verträge ab 12 Monate als Dauerschuldverhältnis in unterschiedlichen Zahlungsvarianten (pre-paid, monthly recurring etc.).",
+  "business_value": {},
+  "assignee": "bernd.melcher@telekom.de",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "Q3_25",
+    "PrioQ1_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "Zusammenführung zweier IT-Systeme (ZMKM und SAP/CRM- Brim)",
+    "Ein Prozess- und IT-Kette für unterschiedliche Buchungskreise (DTBS & TDG).",
+    "Ein Webex-Portfolio, segmentübergreifend",
+    "Synchronität erhalten, zw. dem Cisco-Webex und DT-Webex Portfolio",
+    "Erweiterung unseres Angebotes durch für DT exklusive Webex-Inhalte"
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    }
+  ],
+  "labels": [
+    "2025",
+    "B2B_NonTarget",
+    "B2B_PRIO",
+    "Portfolio"
+  ],
+  "realized_by": [
+    {
+      "key": "BEMABU-1872",
+      "title": "BEMABU-1872",
+      "summary": "Webex Go 2025",
+      "url": "https://jira.telekom.de/browse/BEMABU-1872",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1881",
+      "title": "BEMABU-1881",
+      "summary": "Webex Sovereign Control 2025",
+      "url": "https://jira.telekom.de/browse/BEMABU-1881",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1882",
+      "title": "BEMABU-1882",
+      "summary": "Webex Keep Alive 2025",
+      "url": "https://jira.telekom.de/browse/BEMABU-1882",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1883",
+      "title": "BEMABU-1883",
+      "summary": "Webex Lifecycle 2025",
+      "url": "https://jira.telekom.de/browse/BEMABU-1883",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "WxX_SG-Zusammenhänge.jpg",
+      "url": "https://jira.telekom.de/secure/attachment/4885815/WxX_SG-Zusammenh%C3%A4nge.jpg",
+      "mime_type": "image/jpeg",
+      "size": "188 kB",
+      "date": "2024-09-05T13:55:30.017+02:00"
+    }
+  ]
+}

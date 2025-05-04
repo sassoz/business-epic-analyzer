@@ -1,0 +1,27 @@
+{
+  "key": "SDX-8639",
+  "issue_type": "Epic",
+  "title": "(SO) MIST monitoring - NC alarm forwarding to eVA for MIST PULL alarms",
+  "status": "Closed",
+  "description": "Description\npull alarms need to be syslog integrated as well\n    alarms received from MIST should be injected to eVA\n syslog mapping should be updated\n     please update Monitoring table on Mywiki:\n  https://mywiki.confluence.telekom.de/pages/viewpage.action?pageId=1373136752\n  alarms that needs to be handled and alarming build attached\n[^Portal Functionality1.xlsx]",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2022-09-26",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Service Orchestrator",
+      "title": "Service Orchestrator "
+    }
+  ],
+  "labels": [
+    "PI9",
+    "ServiceOrchestrator"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

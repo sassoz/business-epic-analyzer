@@ -1,0 +1,36 @@
+{
+  "key": "MAGBUS-99840",
+  "issue_type": "Initiative",
+  "title": "Expansion of BCPS Service with SPRM Integration",
+  "status": "In Progress",
+  "description": "Description\nObjective:\nThe goal of this initiative is to enhance the BCPS (Business Customer Profil Service) by integrating it with a new service, SPRM, which will provide access to permissions data for IDs found in the SIGN system. The new service, SPRM, will be connected via a REST API made available through TARDIS. This integration aims to extend BCPS’s functionality, allowing it to search for and retrieve permissions information directly from SPRM based on SIGN ID data.\nKey Details:\nNew Integration Service (SPRM): SPRM offers detailed permission data for IDs, which are initially found by the BCPS service in SIGN. \nChallenge – Availability of SPRM: SPRM is not designed for high availability, which introduces a risk of service downtime. This presents a significant challenge in maintaining uninterrupted access to permissions data for BCPS.\nSolution – Backup Strategy: To mitigate the risk of SPRM unavailability, a backup mechanism needs to be implemented. The proposed solution is to create a file-based interface that stores permission data retrieved from SPRM. This backup data can be used as an alternative when SPRM is unavailable, ensuring BCPS continues to function smoothly without relying solely on SPRM’s availability.\nBusiness Value:\nEfficiency in Compliance Processing: By integrating SPRM data into BCPS, the service will be able to provide more accurate and up-to-date permissions information for IDs found in SIGN, enabling faster and more efficient compliance processing.\nRisk Mitigation: The backup file-based solution will reduce the risk of service disruptions, ensuring BCPS can continue operating even if SPRM experiences downtime.\nImplementation Considerations:\nAPI Integration: Develop and implement the integration between BCPS and SPRM via the REST API.\nBackup Mechanism: Design and implement a file-based backup system to ensure data availability when SPRM is unavailable.\nMonitoring and Alerting: Implement robust monitoring tools to track the availability of SPRM and trigger fallback mechanisms when necessary.\n ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C14",
+      "title": "C14 "
+    }
+  ],
+  "labels": [
+    "DT"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-99910",
+      "title": "MAGBUS-99910",
+      "summary": "[BCPS] Expand BCPS with SPRM permission information",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99910",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

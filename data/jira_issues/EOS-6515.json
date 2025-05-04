@@ -1,0 +1,128 @@
+{
+  "key": "EOS-6515",
+  "issue_type": "Epic",
+  "title": "Verzögerungsgrund für SeCe-IT Teilaufträge",
+  "status": "Resolved",
+  "description": "Description\n Story\nAls EOS Vervollständiger\nmöchte ich an jedem Inhouse Teilauftrag einen definierten Verzögerungsgrund setzten können, \num das nicht manuell in SeCe-IT machen zu müssen.\n   Fragen / Hinweise:\nGrundsätzlich gibt es zwei Möglichkeiten\n1. Der VZG wird nur noch für alle Teilaufträge - egal welches Fremdsystem - am Teilauftrag dokumentiert - Out of Scope\n2. Der VZG wird weiterhin übergreifend am EOS Auftrag dokumentiert inkl. am SeCe-IT Teilauftrag\nsiehe MiroBoard: https://miro.com/app/board/uXjVK1IVppM=/\nSeCe-IT VZG:\nEs können bis zu 8 SeCe-IT Teilaufträge an einem EOS Auftrag hängen\nProblemstellung (Problem Statement)\nAktuell müssen Verzögerungen direkt in SeCe-IT hinterlegt werden, da SeCe-IT die Basis für diverse Reportings ist. Dafür müssen die Anwender den SeCe-IT Teilauftrag immer in Nacharbeit nach SeCe-IT versenden, weil dort immer wenn der Auftrag länger als 2 Tage liegt, ein Verzögerungsgrund hinterlegt werden muss. \nFachlicher Lösungswunsch (Feature Hypothese)\nAuswahl in EOS direkt am Teilauftrag, damit dieser final versendet werden kann und der AW für die Phase 1 in SeCe-IT nicht mehr nach SeCe-IT abspringen muss. \nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nNotwendige Änderungen (Erfolgt durch EOS Team)\nFolgende Auflistung dient als erste Orientierung bzgl. der notwendigen Änderungen an EOS zur Umsetzung dieses EPICs:\nNeue Vervollständigungsaufgabe \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\"\nNeuer Vervollständigungs-GAF inkl. Vervollständigungskomponente\nGAF \"Teilauftrag versenden\" um Validierung bei SeCe-IT erweitern\nDokumentation der Vervollständigungsaufgaben erweitern (Reihenfolge)\nService-Dreigestirn für die Anbindung des Services zum Abfragen der VZG bei SeCe-IT (falls notwendig)\nund zum Übermitteln, falls ein VZG ausgewählt wurde.\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n  Technische CHECKLISTE\nDieser Abschnitt dient als Orientierung zur Prüfung, ob an \"alles\" gedacht wurde.\nDieser Abschnitt soll vor dem Refinement gelöscht werden!\nDie Checkliste für die Stories ist der Vorlage für Stories zu entnehmen (EOS-433)\nZur groben Orientierung hier noch die entsprechenden Stichpunkte:\nExport-Schnittstellen\nImport-Schnittstellen\nLöschkonzept\nBenutzeroberfläche / Dialoge\nRollen & Rechte\nKorrespondenz\nAufgaben\nAuftragsvervollständigung\nNachrichten\nKontakte\nAbhängigkeiten zwischen Domänen\nKommunikation\nWelche Stakeholer müssen über diese Änderung informiert werden?\nAL, TL, OPO, Reporting\nABD: GK-ENK: Ayla Özkara; DTT: Peter Stirnberg; P&PT: Tanja Heß; TL CB05 Bastian Sichhart\nWie werden die Mitarbeiter über diese Änderung informiert?\nMüssen Magenta Infos Artikel geändert oder erstellt werden? News? Newsletter?\nSind Schulungen notwendig? WBT? BrainBite? \nIst eine zusätzliche Kommunikation über YaM notwendig?\nUsesCases / TestCases\nUseCase 1\nUseCase 2\n...",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "2025-01-31",
+  "target_end": "2025-03-13",
+  "fix_versions": [
+    "PI27",
+    "6.18.1"
+  ],
+  "acceptance_criteria": [
+    "ACC1: In EOS kann pro Inhouse Teilauftrag ein definierter Verzögerungsgrund (VZG) hinterlegt werden",
+    "Der VZG am EOS Gesamt-Auftrag bleibt bestehen -> keine Änderung\nDie Liste der VZG bleibt bestehen -> keine Änderung",
+    "Die Liste der VZG bleibt bestehen -> keine Änderung",
+    "Es gibt eine neue Aufgabe am SeCe-IT Teilauftrag mit dem Namen \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\" (technisch)\nDie Aufgabe heißt vor Anwender \"Verzögerungsgrund ändern\" (wie die auftragsbezogene)\nDie GUI sieht genau so aus, wie die Auftragsbezogene \"Verzögerungsgrund ändern\" Aufgabe und enthält zusätzlich einen Date Picker und ein Bemerkungsfeld\nDie Logik ist ebenfalls die selbe.\nOberhalb wird eine Hintbox mit folgendem Text angezeigt:\n\"Der hier hinterlegte Verzögerungsgrund wird mit \"Übernehmen\" an SeCe-IT übermittelt.\"\n\"Gleichzeitig wird der SeCe-IT Vorgang auf Wiedervorlage gelegt und in EOS eine Wiedervorlage erstellt.\"\nKlickt der Anwender \"Ja\" an, muss ein VZG ausgewählt werden und der Date Picker und das Bemerkungsfeld befüllt sein.\nKlickt der Anwender \"Nein\" an, wird der VZG und der Date Picker inkl. Bemerkungsfeld ausgegraut\nWenn die Aufgabe mit \"JA\" übernommen wurde, wird zudem eine Neue Aufgabe \"Teilauftrag X Wiedervorlage\" erzeugt. Diese erhält als Fälligkeitsdatum das Ausgewählte Datum in der Aufgabe \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\". \nAls Information findet sich die Positionsnummer inkl. Verlinkung eine Verlinkung zum Teilauftrag \nDie Aufgabe lässt sich Verwerfen und erledigen\nMit Klick auf das Stift Symbol springt man in die Vervollständigungsmaske des Teilauftrags\nScreenshot abweichend\nNachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.\nScreenshot leicht abweichend\nBeim Übernehmen findet eine Prüfung statt:\nIst der EOS Auftrag älter als 2 AT nach EOS Erstellungsdatum, muss der Anwender einen VZG auswählen.\nDie Auswahl \"Nein\" ist nicht gültig\nDie Liste der Verzögerungsgründe ist angepasst\nEs werden nur die VZG Gründe 1 zu 1 angezeigt, wie sie über den Service bei SeCe-IT erfragt werden.\nDie Logik der Magenta Button ist wie gewohnt (Magenta Spur)\nDie neue Aufgabe wird in der Reihenfolge vor der Aufgabe \"Auftrag Vervollständigung Terminierung durchführen\" dargestellt\nDas finale Versenden ist angepasst\nNach 2 AT nach EOS Auftragserstellung muss die Aufgabe \"Auftrag Inhouse Verzögerungsgrund ändern\" erledigt sein und es muss die Auswahl \"Ja\" angegeben sein.\nAnsonsten wird eine Fehlermeldung mit folgendem Text angezeigt:\n\"Hinweis. Der Teilauftrag kann nicht final versendet werden. Beachten Sie die folgenden Hinweise. Diese Aufgaben sind noch nicht erledigt worden: - Verzögerungsgrund ändern (Teilauftrag z.B. 1)\"\nDie Aufgabe muss erledigt sein, um den Teilauftrag final versenden zu können\nDas Versenden in Nacharbeit ändert sich nicht\nKeine Validierung der Aufgabe\nDer ausgewählte VZG wird nach Klick auf \"Übernehmen\" in der Positionsdetailseite in der Kachel \"Informationen aus der Auftragsvervollständigung\" angezeigt",
+    "Die Aufgabe heißt vor Anwender \"Verzögerungsgrund ändern\" (wie die auftragsbezogene)",
+    "Die GUI sieht genau so aus, wie die Auftragsbezogene \"Verzögerungsgrund ändern\" Aufgabe und enthält zusätzlich einen Date Picker und ein Bemerkungsfeld\nDie Logik ist ebenfalls die selbe.\nOberhalb wird eine Hintbox mit folgendem Text angezeigt:\n\"Der hier hinterlegte Verzögerungsgrund wird mit \"Übernehmen\" an SeCe-IT übermittelt.\"\n\"Gleichzeitig wird der SeCe-IT Vorgang auf Wiedervorlage gelegt und in EOS eine Wiedervorlage erstellt.\"\nKlickt der Anwender \"Ja\" an, muss ein VZG ausgewählt werden und der Date Picker und das Bemerkungsfeld befüllt sein.\nKlickt der Anwender \"Nein\" an, wird der VZG und der Date Picker inkl. Bemerkungsfeld ausgegraut\nWenn die Aufgabe mit \"JA\" übernommen wurde, wird zudem eine Neue Aufgabe \"Teilauftrag X Wiedervorlage\" erzeugt. Diese erhält als Fälligkeitsdatum das Ausgewählte Datum in der Aufgabe \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\". \nAls Information findet sich die Positionsnummer inkl. Verlinkung eine Verlinkung zum Teilauftrag \nDie Aufgabe lässt sich Verwerfen und erledigen\nMit Klick auf das Stift Symbol springt man in die Vervollständigungsmaske des Teilauftrags\nScreenshot abweichend\nNachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.",
+    "Die Logik ist ebenfalls die selbe.\nOberhalb wird eine Hintbox mit folgendem Text angezeigt:\n\"Der hier hinterlegte Verzögerungsgrund wird mit \"Übernehmen\" an SeCe-IT übermittelt.\"\n\"Gleichzeitig wird der SeCe-IT Vorgang auf Wiedervorlage gelegt und in EOS eine Wiedervorlage erstellt.\"\nKlickt der Anwender \"Ja\" an, muss ein VZG ausgewählt werden und der Date Picker und das Bemerkungsfeld befüllt sein.\nKlickt der Anwender \"Nein\" an, wird der VZG und der Date Picker inkl. Bemerkungsfeld ausgegraut\nWenn die Aufgabe mit \"JA\" übernommen wurde, wird zudem eine Neue Aufgabe \"Teilauftrag X Wiedervorlage\" erzeugt. Diese erhält als Fälligkeitsdatum das Ausgewählte Datum in der Aufgabe \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\". \nAls Information findet sich die Positionsnummer inkl. Verlinkung eine Verlinkung zum Teilauftrag \nDie Aufgabe lässt sich Verwerfen und erledigen\nMit Klick auf das Stift Symbol springt man in die Vervollständigungsmaske des Teilauftrags\nScreenshot abweichend\nNachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.",
+    "Oberhalb wird eine Hintbox mit folgendem Text angezeigt:\n\"Der hier hinterlegte Verzögerungsgrund wird mit \"Übernehmen\" an SeCe-IT übermittelt.\"\n\"Gleichzeitig wird der SeCe-IT Vorgang auf Wiedervorlage gelegt und in EOS eine Wiedervorlage erstellt.\"",
+    "\"Der hier hinterlegte Verzögerungsgrund wird mit \"Übernehmen\" an SeCe-IT übermittelt.\"",
+    "\"Gleichzeitig wird der SeCe-IT Vorgang auf Wiedervorlage gelegt und in EOS eine Wiedervorlage erstellt.\"",
+    "Klickt der Anwender \"Ja\" an, muss ein VZG ausgewählt werden und der Date Picker und das Bemerkungsfeld befüllt sein.",
+    "Klickt der Anwender \"Nein\" an, wird der VZG und der Date Picker inkl. Bemerkungsfeld ausgegraut",
+    "Wenn die Aufgabe mit \"JA\" übernommen wurde, wird zudem eine Neue Aufgabe \"Teilauftrag X Wiedervorlage\" erzeugt. Diese erhält als Fälligkeitsdatum das Ausgewählte Datum in der Aufgabe \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\". \nAls Information findet sich die Positionsnummer inkl. Verlinkung eine Verlinkung zum Teilauftrag \nDie Aufgabe lässt sich Verwerfen und erledigen\nMit Klick auf das Stift Symbol springt man in die Vervollständigungsmaske des Teilauftrags\nScreenshot abweichend\nNachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.",
+    "Als Information findet sich die Positionsnummer inkl. Verlinkung eine Verlinkung zum Teilauftrag",
+    "Die Aufgabe lässt sich Verwerfen und erledigen",
+    "Mit Klick auf das Stift Symbol springt man in die Vervollständigungsmaske des Teilauftrags\nScreenshot abweichend\nNachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.",
+    "Screenshot abweichend\nNachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.",
+    "Nachdem der Teilauftrag weiterprozessiert wird (Verworfen Versendet etc.) wird die Aufgabe automatisch Verworfen.",
+    "Screenshot leicht abweichend",
+    "Screenshot leicht abweichend",
+    "Beim Übernehmen findet eine Prüfung statt:\nIst der EOS Auftrag älter als 2 AT nach EOS Erstellungsdatum, muss der Anwender einen VZG auswählen.\nDie Auswahl \"Nein\" ist nicht gültig",
+    "Ist der EOS Auftrag älter als 2 AT nach EOS Erstellungsdatum, muss der Anwender einen VZG auswählen.\nDie Auswahl \"Nein\" ist nicht gültig",
+    "Die Auswahl \"Nein\" ist nicht gültig",
+    "Die Liste der Verzögerungsgründe ist angepasst\nEs werden nur die VZG Gründe 1 zu 1 angezeigt, wie sie über den Service bei SeCe-IT erfragt werden.",
+    "Es werden nur die VZG Gründe 1 zu 1 angezeigt, wie sie über den Service bei SeCe-IT erfragt werden.",
+    "Die Logik der Magenta Button ist wie gewohnt (Magenta Spur)",
+    "Die neue Aufgabe wird in der Reihenfolge vor der Aufgabe \"Auftrag Vervollständigung Terminierung durchführen\" dargestellt",
+    "Das finale Versenden ist angepasst\nNach 2 AT nach EOS Auftragserstellung muss die Aufgabe \"Auftrag Inhouse Verzögerungsgrund ändern\" erledigt sein und es muss die Auswahl \"Ja\" angegeben sein.\nAnsonsten wird eine Fehlermeldung mit folgendem Text angezeigt:\n\"Hinweis. Der Teilauftrag kann nicht final versendet werden. Beachten Sie die folgenden Hinweise. Diese Aufgaben sind noch nicht erledigt worden: - Verzögerungsgrund ändern (Teilauftrag z.B. 1)\"\nDie Aufgabe muss erledigt sein, um den Teilauftrag final versenden zu können",
+    "Nach 2 AT nach EOS Auftragserstellung muss die Aufgabe \"Auftrag Inhouse Verzögerungsgrund ändern\" erledigt sein und es muss die Auswahl \"Ja\" angegeben sein.\nAnsonsten wird eine Fehlermeldung mit folgendem Text angezeigt:\n\"Hinweis. Der Teilauftrag kann nicht final versendet werden. Beachten Sie die folgenden Hinweise. Diese Aufgaben sind noch nicht erledigt worden: - Verzögerungsgrund ändern (Teilauftrag z.B. 1)\"",
+    "Ansonsten wird eine Fehlermeldung mit folgendem Text angezeigt:\n\"Hinweis. Der Teilauftrag kann nicht final versendet werden. Beachten Sie die folgenden Hinweise. Diese Aufgaben sind noch nicht erledigt worden: - Verzögerungsgrund ändern (Teilauftrag z.B. 1)\"",
+    "\"Hinweis. Der Teilauftrag kann nicht final versendet werden. Beachten Sie die folgenden Hinweise. Diese Aufgaben sind noch nicht erledigt worden: - Verzögerungsgrund ändern (Teilauftrag z.B. 1)\"",
+    "Die Aufgabe muss erledigt sein, um den Teilauftrag final versenden zu können",
+    "Das Versenden in Nacharbeit ändert sich nicht\nKeine Validierung der Aufgabe",
+    "Keine Validierung der Aufgabe",
+    "Der ausgewählte VZG wird nach Klick auf \"Übernehmen\" in der Positionsdetailseite in der Kachel \"Informationen aus der Auftragsvervollständigung\" angezeigt",
+    "ACC2: EOS übertragt den Inhouse VZG jeweils direkt mit \"Übernehmen\" (auch bei Änderungen) an SeCe-IT (über den Service Noch zu definieren)",
+    "ACC4: EOS übermittelt zusätzlich beim Versenden der Teilaufträge die ausgewählten VZG an O3."
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI27",
+    "PI27",
+    "Verzögerungsgründe"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Fehlermeldung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5160412/Fehlermeldung.png",
+      "mime_type": "image/png",
+      "size": "11 kB",
+      "date": "2024-11-25T14:08:26.834+01:00"
+    },
+    {
+      "filename": "image-2025-01-07-18-18-42-313.png",
+      "url": "https://jira.telekom.de/secure/attachment/5273101/image-2025-01-07-18-18-42-313.png",
+      "mime_type": "image/png",
+      "size": "6 kB",
+      "date": "2025-01-07T18:18:42.586+01:00"
+    },
+    {
+      "filename": "Positionsdetailseite.png",
+      "url": "https://jira.telekom.de/secure/attachment/5160413/Positionsdetailseite.png",
+      "mime_type": "image/png",
+      "size": "6 kB",
+      "date": "2024-11-25T14:09:03.172+01:00"
+    },
+    {
+      "filename": "screenshot-2.png",
+      "url": "https://jira.telekom.de/secure/attachment/5313375/screenshot-2.png",
+      "mime_type": "image/png",
+      "size": "118 kB",
+      "date": "2025-01-20T14:10:07.304+01:00"
+    },
+    {
+      "filename": "SeCe-IT Verzögerungsgründe in EOS.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5389594/SeCe-IT%20Verz%C3%B6gerungsgr%C3%BCnde%20in%20EOS.msg",
+      "mime_type": "application/octet-stream",
+      "size": "210 kB",
+      "date": "2025-02-11T13:21:53.311+01:00"
+    },
+    {
+      "filename": "Teilaufträge.png",
+      "url": "https://jira.telekom.de/secure/attachment/5160418/Teilauftr%C3%A4ge.png",
+      "mime_type": "image/png",
+      "size": "145 kB",
+      "date": "2024-11-25T14:11:05.208+01:00"
+    },
+    {
+      "filename": "Verzögerungsgründe in SeCe-IT.png",
+      "url": "https://jira.telekom.de/secure/attachment/5160417/Verz%C3%B6gerungsgr%C3%BCnde%20in%20SeCe-IT.png",
+      "mime_type": "image/png",
+      "size": "22 kB",
+      "date": "2024-11-25T14:10:31.287+01:00"
+    },
+    {
+      "filename": "VZG am SeCe-IT Auftrag.png",
+      "url": "https://jira.telekom.de/secure/attachment/5160414/VZG%20am%20SeCe-IT%20Auftrag.png",
+      "mime_type": "image/png",
+      "size": "362 kB",
+      "date": "2024-11-25T14:09:36.632+01:00"
+    },
+    {
+      "filename": "VZG mit Datum.png",
+      "url": "https://jira.telekom.de/secure/attachment/5269107/VZG%20mit%20Datum.png",
+      "mime_type": "image/png",
+      "size": "82 kB",
+      "date": "2025-01-06T16:01:50.633+01:00"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "key": "SDLA-1209",
+  "issue_type": "Initiative",
+  "title": "Order Provisioning for Juniper MIST SD LAN/WiFi Q1/23",
+  "status": "Review",
+  "description": "Description\nFor new business we want to do order provisioning for Juniper MIST SD LAN/WiFi in our Employee Portal. \nBusiness Value: high (low/medium/high)\nEnd Users: Implementation Manager, Provisioning Manager, OPSL2, DT ISP, DTS, DTA\n  Workflow Overview: https://mywiki.confluence.telekom.de/pages/viewpage.action?pageId=1409259750 \n  Pre-Requisits:\nprocess descriptions \ndata flow model \ntechnical production model \n  DoR  Comment\nBenefit Hypothesis includes: * Business Value is clearly stated → INVEST \nNot WSJF is missing (tbd)\n\nBusiness Scope:\nOrder Provisioning for New Business for SD LAN/WiFi",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Workflows based on the process descriptions for SD LAN/WiFi service (new network) and site service are implemented and tested",
+    "UI for Order Provisioning is implemented and tested"
+  ],
+  "components": [],
+  "labels": [
+    "SDLA_VS_Order_Management",
+    "SDLA_VS_Process_Design",
+    "SDLA_immature"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-7547",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-7547",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-7550",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-7550",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-7551",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-7551",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-7590",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-7590",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-7591",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-7591",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10876",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10876",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10877",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10877",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-14459",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-14459",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-14460",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-14460",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-14552",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-14552",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20221116_SDLAN_Testcases.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2625538/20221116_SDLAN_Testcases.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-16T14:48:04.966+01:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_Solution_2022-11-02_09-18-45.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2601713/CPDMCATExcel_SDLAN_Solution_2022-11-02_09-18-45.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-11-10T10:12:37.779+01:00"
+    },
+    {
+      "filename": "Juniper_Planning_for_Strategic_Planning.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2602099/Juniper_Planning_for_Strategic_Planning.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-10T10:45:32.243+01:00"
+    },
+    {
+      "filename": "N22-0358 SDLAN-Produktmodell_20221102_093853.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2601712/N22-0358%20SDLAN-Produktmodell_20221102_093853.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-10T10:12:41.932+01:00"
+    }
+  ]
+}

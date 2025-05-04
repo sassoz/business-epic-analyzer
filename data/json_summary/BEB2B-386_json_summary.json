@@ -1,0 +1,65 @@
+{
+  "epicId": "BEB2B-386",
+  "title": "Portfolioerweiterung Telematik Infrastruktur um TI-Gateway & TIM (CRM-T) inkl. Partnerprozess via BPP",
+  "ziele": {
+    "gesamtziel": "Erweiterung des Telematik-Infrastruktur-Portfolios um TI-Gateway und TI-Messenger (TIM) für Kunden der Gesundheitsbranche sowie Implementierung des Business Partner Portals (BPP) für Provisionspartner. Ziel ist die Sicherstellung der Wettbewerbsfähigkeit im wachsenden TI-Markt und die Schaffung eines Zugangsportals für Partner zur Weiterleitung von Kundenaufträgen. Das Ziel soll bis zum 30.09.2025 erreicht werden.",
+    "einzelziele": [
+      "Buchbarkeit der neuen TI-Produkte über die bestehende CRM-T Buchungskette herstellen",
+      "Anlage neuer Materialien in PRIMA+ und Prozessierung über CRM-T",
+      "Onboarding der neuen TI-Produkte: TI-Gateway (Ziellösung für alle Branchen des Gesundheitswesen) und TIM (TI-Messenger)",
+      "Nutzung des Business Partner Portals (BPP) für alle TI-Produkte zur Weiterleitung von Kundenaufträgen durch Provisionspartner"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Sicherung des TI-Umsatzes sowie überproportionales Umsatzwachstum durch neue Berufsgruppen. Prognostizierte Umsätze: 2025: 30.711, 2026: 54.954, 2027: 65.843. Kosteneinsparungen: 2025: 197, 2026: 598, 2027: 461. Risikominimierung von Umsatzverlusten: 2025: 7.678, 2026: 13.738, 2027: 16.460."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Sicherstellung der TI-Wachstumsziele durch Erschließen neuer Kundengruppen & Marktpotentiale. Umsetzung der Provisionsfähigkeit für etablierte Vertriebspartner ermöglicht schnelle Skalierung und Sicherung des Marktanteils der Telekom."
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEB2B-386",
+      "titel": "Portfolioerweiterung Telematik Infrastruktur um TI-Gateway & TIM (CRM-T) inkl. Partnerprozess via BPP",
+      "funktionalitäten": [
+        "Buchbarkeit der neuen TI-Produkte über die bestehende CRM-T Buchungskette (bestehende Schnittstelle CRM-T --> DPM --> AAX)",
+        "Anlage neuer Materialien in PRIMA+ und Prozessierung über CRM-T",
+        "Onboarding von TI-Gateway als Ziellösung für alle Branchen des Gesundheitswesens",
+        "Onboarding von TIM (TI-Messenger) als neue Messenger Lösung für das Gesundheitswesen zur sicheren Kommunikation",
+        "Nutzung des Business Partner Portals (BPP) für alle TI-Produkte, worüber Provisionspartner Kundenaufträge einkippen können und dafür eine Provision erhalten"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "TI-Gateway",
+    "TI-Messenger",
+    "Partner kann Aufträge an die TDG versenden",
+    "Partner bekommt für die vermittelten Aufträge eine Provision"
+  ],
+  "domainsAndITApplications": [
+    "CRM-T",
+    "DPM",
+    "AAX",
+    "PRIMA+",
+    "BPP"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Das Business Epic ist bereits geschlossen (Status: Closed), obwohl das Zieldatum in der Zukunft liegt (30.09.2025)",
+    "Abhängigkeit von der bestehenden CRM-T Buchungskette (CRM-T --> DPM --> AAX)",
+    "Ablösung des TVPP-Systems durch BPP als neues Zugangsportal für Partner",
+    "Koordination zwischen verschiedenen Systemen (CRM-T, PRIMA+, BPP) erforderlich"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": ["Q3_25"],
+    "meilensteine": []
+  }
+}

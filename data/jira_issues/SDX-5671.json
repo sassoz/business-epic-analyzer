@@ -1,0 +1,37 @@
+{
+  "key": "SDX-5671",
+  "issue_type": "Epic",
+  "title": "[SD] LAN - Storm control",
+  "status": "Closed",
+  "description": "Description\nStorm control enables the switch to monitor traffic levels and to drop broadcast, multicast, and unknown unicast packets when a specified traffic level—called the storm control level—is exceeded, thus preventing packets from proliferating and degrading the LAN. As an alternative to having the switch drop packets, you can configure it to shut down interfaces or temporarily disable interfaces when the storm control level is exceeded.\nTo recognize a storm, you must be able to identify when traffic has reached an abnormal level. Suspect a storm when operations begin timing out and network response times slow down. Users might be unable to access expected services. Monitor the percentage of broadcast and unknown unicast traffic in the network when it is operating normally. This data can then be used as a benchmark to determine when traffic levels are too high. You can then configure storm control to set the level at which you want to drop broadcast and unknown unicast traffic.\n\nBusiness Scope:\nLAN product should offer to customer to enable mechanism in order to manage and avoid storm controls in LAN.",
+  "business_value": {},
+  "assignee": "Razvan Bogdan",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "Technical design",
+    "Config templates",
+    "Validation of config template",
+    "UI proposal",
+    "documentation (wiki)",
+    "CPDM handover",
+    "Security handover",
+    "SO handover"
+  ],
+  "components": [
+    {
+      "code": "SDx - Orchestrator",
+      "title": "SDx - Orchestrator "
+    }
+  ],
+  "labels": [
+    "SDProduct"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

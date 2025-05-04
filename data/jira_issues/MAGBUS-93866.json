@@ -1,0 +1,28 @@
+{
+  "key": "MAGBUS-93866",
+  "issue_type": "Epic",
+  "title": "MF: Cases an IRRP übergeben",
+  "status": "Closed",
+  "description": "Description\nEs muss sichergestellt werden, dass folgende Cases per Work-Item über die IRRP geroutet werden :\nIrrläufer\nMobilfunk-Aufträge \nder Klasse+Transfergrund muss vom Case im Betreff der Mail übertragen werden.\nNach Rücksprache mit Tobias werden wir dies so einfach gestalten wie möglich, soll heißen eine Mail an die IRRP mit \"schlagkräftigem\" Email Betreff übergeben.",
+  "business_value": {},
+  "assignee": "Armin Steinmetz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

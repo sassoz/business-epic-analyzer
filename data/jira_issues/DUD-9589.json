@@ -1,0 +1,43 @@
+{
+  "key": "DUD-9589",
+  "issue_type": "Epic",
+  "title": "Web-Whois-Portierung",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nDie Whois-WebSeiten können nicht mehr auf der T-Systems Seite gehostet werden. Daher soll eine Whois-WebSeite auf DAVID& DORIS Seite erstellt werden, um die Funktion gemäß ICANN anzubieten. Dazu sollen die vorhandenen Seiten als statische Seiten übernommen werden.\nDescription of Demand / Problem\nDie Whois-WebSeiten können nicht mehr auf der T-Systems Seite gehostet werden. Daher soll eine Whois-WebSeite auf DAVID& DORIS Seite erstellt werden, um die Funktion gemäß ICANN anzubieten. Dazu sollen die vorhandenen Seiten als statische Seiten übernommen werden.\nDarüber hinaus sind eine Reihe von Verbesserungen vorgesehen, Highlights:\nListe der TLD aus Config von Doris holen\nDokumente und Links in Doris konfigurierbar\nTexte und Links mit rechtlicher Relvanz sauberer gefasst.\nHandle und Username sind keine Suchkriterien mehr.\nAcceptance Criteria\nAlle Subtickets sind geschlossen.\nChecklist\nDependencies fulfilled (Ticket dependencies).\nAccessibility / Barrierefreiheit: Principles fulfilled. -> s. entspr. Stories im Epic\nDoD: Verified by Scrum Master.",
+  "business_value": {},
+  "assignee": "Thomas Klaus Götz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "21.3.0"
+  ],
+  "acceptance_criteria": [
+    "Options",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DORIS/Web-Whois",
+      "title": "DORIS/Web-Whois "
+    }
+  ],
+  "labels": [
+    "DecouplingVelocity",
+    "IT-Retirement",
+    "OperationalStability",
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

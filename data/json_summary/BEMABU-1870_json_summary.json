@@ -1,0 +1,88 @@
+{
+  "epicId": "BEMABU-1870",
+  "title": "FTTH Solution by LE - FTTH basiertes Internetprodukt",
+  "ziele": {
+    "gesamtziel": "Entwicklung eines xDSL/FTTH basierten Internetproduktes als SD-WAN Underlay, das verschiedene Bandbreitenprodukte unter einem Namen vereint. Die Umsetzung ist für den Zeitraum vom 01.07.2024 bis 30.06.2026 geplant.",
+    "einzelziele": [
+      "Einführung des Produkts Company Access Easy mit Kupfer- und FTTH-Varianten",
+      "Bereitstellung verschiedener Bandbreitenprodukte auf xDSL/FTTH Bauweisen unter einem Namen",
+      "Realisierung von Bandbreiten (down/up) 50/20, 100/40 und 250/40 auf xDSL",
+      "Realisierung von Bandbreiten 150/75, 300/150, 600/300, 1000/500 und 2000/1000 auf FTTH-Technik"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine detaillierten Informationen verfügbar"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Keine detaillierten Informationen verfügbar"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine detaillierten Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "TF-5544",
+      "titel": "N/25-0388 Einführung Company Access Easy Copper",
+      "funktionalitäten": [
+        "Erstellung eines PRIMA+ Projekts für den Kupferanteil",
+        "Erstellung eines Template TMF620 für den Kupferanteil",
+        "Erstellung einer Preismatrix",
+        "Abbildung des Produktmodells für den Kupferanteil in Prima+"
+      ]
+    },
+    {
+      "id": "TF-4880",
+      "titel": "N/24-1008 Einführung Company Access Easy FTTH",
+      "funktionalitäten": [
+        "Erstellung eines PRIMA+ Projekts für den Fiberanteil",
+        "Erstellung eines Template TMF620 für den Fiberanteil",
+        "Erstellung einer Preismatrix",
+        "Abbildung des Produktmodells für den Fiberanteil"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Es gibt eine neue Produkt-Gruppe, die verschiedene Bandbreitenprodukte (siehe Bild) auf xDSL/FTTH Bauweisen unter einem Namen vereint. Dabei sind die Bandbreiten (down/up) 50/20, 100/40 und 250/40 auf xDSL realisiert und die Bandbreiten 150/75, 300/150, 600/300, 1000/500 und 2000/1000 auf FTTH-Technik. (10.01.25: 50/10 geändert in 50/20)",
+    "PRIMA+ Projekt wurde angelegt",
+    "Template TMF620 für Kupferanteil wurde erstellt",
+    "Preismatrix wurde erstellt",
+    "Produktmodell für Kupferanteil wurde in Prima+ abgebildet",
+    "LATOE Gate 2 wurde erteilt",
+    "PRIMA+ Projekt",
+    "Template TMF620 für Fiberanteil",
+    "Preismatrix",
+    "Produktmodell für Fiberanteil",
+    "LATOE"
+  ],
+  "domainsAndITApplications": [
+    "PRIMA+",
+    "TMF620"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von LATOE Gate 2 Genehmigung für die Realisierung",
+    "Abhängigkeit von SB Gate 1 und SB Gate 2 Terminen (03.12.24)",
+    "Zeitliche Diskrepanz: Das Business Epic und TF-4880 haben ein Enddatum 30.06.2026, während TF-5544 ein Enddatum 30.09.2026 hat"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2024-07-01",
+    "umsetzungsende": "2026-06-30",
+    "fixVersions": ["Q3_25", "PrioQ1_25", "PrioQ2_25"],
+    "meilensteine": [
+      {
+        "id": "TF-5544",
+        "beschreibung": "Einführung Company Access Easy Copper",
+        "zeitraum": "2025-02-14 bis 2026-09-30"
+      },
+      {
+        "id": "TF-4880",
+        "beschreibung": "Einführung Company Access Easy FTTH",
+        "zeitraum": "2024-07-01 bis 2026-06-30"
+      }
+    ]
+  }
+}

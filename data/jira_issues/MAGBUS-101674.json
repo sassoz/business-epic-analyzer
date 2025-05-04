@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-101674",
+  "issue_type": "Epic",
+  "title": "Multiple BKTO",
+  "status": "Funnel",
+  "description": "Description\nThe Productions Readiness Tab has to be restored.\nThe function to create and edit contact persons including assignment of roles to the contact persons should be accessible from the Production Readiness Tab.\nIt should be possible to assign different booking accounts (Bkto) to the selected products in an offer.\nFurthermore it has to be possible to change contact persons and booking accounts (Bkto) for several items at the same time.\n ",
+  "business_value": {},
+  "assignee": "Vogt, Julieta",
+  "priority": "",
+  "target_start": "2025-04-24",
+  "target_end": "2025-05-14",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "DO_Flamingo",
+    "MB_CPQ",
+    "MB_PRT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

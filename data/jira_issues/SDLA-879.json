@@ -1,0 +1,41 @@
+{
+  "key": "SDLA-879",
+  "issue_type": "Epic",
+  "title": "Exploration for internal and external portal for Juniper MIST",
+  "status": "Funnel",
+  "description": "Description\nExploration with: POs Frontend Factory, UX Designer, Product Offering, Processteam and User Community\n\nBusiness Scope:\nExploration for preparing implementation epics, click dummies, customer- and user journey, specifications to implement the internal and external portal in Q4",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q3_22"
+  ],
+  "acceptance_criteria": [
+    "Click-Dummy for internal portal is done and documented",
+    "User Journey is done and documented",
+    "Epics for implementation (internal portal) are done and documented",
+    "Click-Dummy for external portal is done and documented",
+    "Customer Journey is done and documented",
+    "Epics for implementation (external portal) are done and documented"
+  ],
+  "components": [],
+  "labels": [
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Simpl_MIST.mmap",
+      "url": "https://jira.telekom.de/secure/attachment/2334336/Simpl_MIST.mmap",
+      "mime_type": "application/vnd.mindjet.mindmanager",
+      "size": "",
+      "date": "2022-08-10T09:12:01.000+02:00"
+    }
+  ]
+}

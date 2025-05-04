@@ -1,0 +1,35 @@
+{
+  "key": "SNOWTC-10877",
+  "issue_type": "Epic",
+  "title": "Enabler: Implement SOM for Template based definitions",
+  "status": "Closed",
+  "description": "Description\nTechnical configuration will be realized via SOM to Netrcacker (and MDO).\nFor doing changes, the external SIM must be read, the data decomposed, changed and sent back to the orchestrator.\nThe definition of the JSON structure is associated to the catalog specification.\n ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "ServiceNow SD LAN/WiFi Release 0.9"
+  ],
+  "acceptance_criteria": [
+    "An internal Service Order is forwarded to an external system if the specification is marked 'External'.",
+    "The Amazaons TMF Framework is used for communication",
+    "The Template / JSON handling functionality is used for generating the order",
+    "The order is adapted to the JSON structure and send to the target system",
+    "The Inventory entry is marked as external and the corrosponding links are stored in the Inventory",
+    "Notifications are recieved and processed for status changes and configuration changes"
+  ],
+  "components": [],
+  "labels": [
+    "Accenture",
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SNOW@TC",
+    "SNOWTC",
+    "Sys_Architecture"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,38 @@
+{
+  "key": "DATAFAB-28177",
+  "issue_type": "Epic",
+  "title": "Extension of Magenta Force Interface for Case-Management Reporting ODW",
+  "status": "Closed",
+  "description": "Description\nTo make the Case-Management Reporting available, an extension of the existing Magenta Force interface to ODW (Core schema) is needed.\nDetails on the needed extension will be delivered by Service and Magenta Force.",
+  "business_value": {},
+  "assignee": "Oleg Prill",
+  "priority": "",
+  "target_start": "2024-09-26",
+  "target_end": "2024-11-18",
+  "fix_versions": [
+    "2024_Q4"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    },
+    {
+      "code": "ODW",
+      "title": "ODW "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Excel für Timm.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4911423/Excel%20f%C3%BCr%20Timm.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "650 kB",
+      "date": "2024-09-16T13:33:53.717+02:00"
+    }
+  ]
+}

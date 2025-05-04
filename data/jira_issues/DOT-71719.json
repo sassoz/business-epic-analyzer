@@ -1,0 +1,46 @@
+{
+  "key": "DOT-71719",
+  "issue_type": "Initiative",
+  "title": "LOM Retirement | B2B Basic Integration to M-APIs",
+  "status": "In Progress",
+  "description": "Description\nThe objective of this portfolio epic is to support the creation the basic integration of B2B to M-API in order to be able to place an order for an easy B2B product.\nCompany Start / Pro\nBusiness DSL / Glasfaser Start / Pro\nAn overview of the to do's can be found here:\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2291925353#Business&PortfolioEpicsB2B/DOTIntegrationviaMAPIs-B2BBasicIntegrationtoM-APIs(techn.breakthrough)&NewAcquisitionforEasyB2BProductwithoutframeagreement",
+  "business_value": {},
+  "assignee": "Jayant Bhandari",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "MPP_25.1.2",
+    "MPP_25.2.3"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "LOM_Retirement"
+  ],
+  "realized_by": [
+    {
+      "key": "DOT-71760",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/DOT-71760",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "DOT-70584",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/DOT-70584",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "DOT-70585",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/DOT-70585",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

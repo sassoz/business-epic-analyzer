@@ -1,0 +1,34 @@
+{
+  "key": "MAGBUS-94436",
+  "issue_type": "Epic",
+  "title": "MF: Service GrK User & Rollen",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Jana Beyer",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 25",
+    "PI 26",
+    "MF 4.300"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "aKP",
+      "title": "aKP "
+    },
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

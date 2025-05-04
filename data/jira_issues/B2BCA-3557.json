@@ -1,0 +1,39 @@
+{
+  "key": "B2BCA-3557",
+  "issue_type": "Epic",
+  "title": "Nominet, Änderungen im Registrierungsprozess",
+  "status": "Funnel",
+  "description": "Description\nManagement Summary\nDie Registry Nominet plant umfangreiche Änderungen an den Regiestrierungsprozessen\nDescription of Demand / Problem\nDie Registry Nominet plant Änderungen an den Registrierungsprozessen. Termine sind bisher noch nicht bekannt.\nGeplante Änderungen sind:\nÄnderung des Transfer Prozesses von push auf pull\nEinführung eines Authorisierungscodes zum Transfer einer Domain\nzur Bezahlung der Domains soll ein Autorenewal eingeführt werden\nBei Löschungen soll eine RGP eingeführt werden\nEs wird neue Statusfelder geben wie z.B. ClientTransfer Prohibited \nEvtl. werden Host Objekte eingeführt\nAcceptance Criteria\nDie einzelenen oben genannten Funktionen sind umgesetzt.\nChecklist\nDependencies fulfilled (Ticket dependencies).\nAccessibility / Barrierefreiheit: Principles fulfilled.\nDoD: Verified by PO/BA/TM",
+  "business_value": {},
+  "assignee": "Markus Hofmann",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Options",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DAVID",
+      "title": "DAVID "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

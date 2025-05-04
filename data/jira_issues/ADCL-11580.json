@@ -1,0 +1,42 @@
+{
+  "key": "ADCL-11580",
+  "issue_type": "Epic",
+  "title": "Adapt IRRP eMails for product change and relocation orders",
+  "status": "Closed",
+  "description": "Description\nProcess information:\nRequirements:\n...\nLink for Documentation in Wiki:",
+  "business_value": {},
+  "assignee": "Heinz-Gerd Bendels",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "business requirements understood",
+    "as is process understood",
+    "target process defined",
+    "target process agreed",
+    "migration roadmap agreed",
+    "implementation user stories are described",
+    "user stories implemented, tested and accepted in CIT2",
+    "solution is deployed with feature toggle (header flag processing engine \"remote\") in PROD"
+  ],
+  "components": [],
+  "labels": [
+    "O3",
+    "Pair-Programming",
+    "pair-programming"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Sequence Diagram 3  Finish FTTH (Cancelation; IRRP; Change existing Contracts ... for PI#26.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5201037/Sequence%20Diagram%203%20%20Finish%20FTTH%20%28Cancelation%3B%20IRRP%3B%20Change%20existing%20Contracts%20...%20for%20PI%2326.msg",
+      "mime_type": "application/octet-stream",
+      "size": "",
+      "date": "2024-12-06T13:49:52.490+01:00"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "key": "BEMABU-2253",
+  "issue_type": "Business Epic",
+  "title": "Terminbuchungen für Nachwuchskräfte und Sales Expert in Magenta Force",
+  "status": "Funnel",
+  "description": "Description\nFür die Rolle \"GK-Midmarket Nachwuchskraft\" u. \"GK-Midmarket Sales Expert\"  benötigen wir die Funktionalität \"Termine Buchen\".\nSo dass beide Rollen die Möglichkeit erhalten Kundentermine in Magenta Force zu buchen, um Kundentermine einfach und effizient zu planen.\nDies soll sicherstellen das Kundentermine übersichtlich verwaltet werden.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n<Magenta Force> DOM0201 <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter Zenar Mohamed \nSponsor/Fachseite VM Midmarket\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\n\nBusiness Scope:\n1.Verbesserung der Kundenbindung durch eine optimierte und transparente Terminplanung\n2. Steigerung der Effizienz und Benutzerfreundlichkeit für Nachwuchskräfte und den IoT Expert Sales",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Nachwuchskräfte entlasten AcM/ISS bei der Terminbuchung stützen eine optimierte Terminplanung. 80 AcM1 mit 15 Terminen/Woche * 40 KW = 48.000 Termine p.a.. Winrate 40%, Win AE 3.000€ im Schnitt. XX Nachwuchskräfte mit 15 Terminen/Woche*40 KW = XX.XXX Termine p.a."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "Reduktion einer fehlerhaften Terminplanung",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Geplanter Umsetzungszeitraum Plan Start: 24.01.2025 Plan Ende/Launch: tbd s. Business Impact"
+    }
+  },
+  "assignee": "Zenar Mohamed",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Kunden erhalten nach der Buchung automatisch eine E-Mal mit allen Details.                                                                                                    Änderungen und Stornierungen werden aktualisiert und an den Kunden kommuniziert"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

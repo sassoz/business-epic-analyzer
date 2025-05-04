@@ -1,0 +1,30 @@
+{
+  "key": "MOFUDHS-4339",
+  "issue_type": "Initiative",
+  "title": "GK: Product information - API access for BSP",
+  "status": "Review",
+  "description": "Description\nBenötigt werden (über ein API) folgende Informationen\nBasisprodukte / Optionen: zum Matchcode die Product-ID\nBeziehungen zw. Tarifen:\nBei Kleidergrössen - Vorgänger/Nachfolger, bspw. s vor m\nGenerationen - Vorgänger/Nachfolger, L 4. vorgänger von L 5.\nRabatte/ Preise  für Optionen\nWelche Optionen müssen in einem Tarif in einem RV gebucht werden?\n(bspw. NEMO-Baukastentarife)\nExport aller Produkte (StdV, Basisprodukte) für GK inkl. Vermarktungsstatus\nListe aller Offer \n   ",
+  "business_value": {},
+  "assignee": "Gabi Napierala",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "MPP_25.3"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Carmen CC",
+      "title": "Carmen CC "
+    },
+    {
+      "code": "CCOS_BRE",
+      "title": "CCOS_BRE "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

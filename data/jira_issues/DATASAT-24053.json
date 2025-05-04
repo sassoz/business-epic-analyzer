@@ -1,0 +1,26 @@
+{
+  "key": "DATASAT-24053",
+  "issue_type": "Epic",
+  "title": "ODW: Casemanagement Service: Development of a congruent database - part I",
+  "status": "Closed",
+  "description": "Description\nA new database is to be built up for the case management service. For this purpose, the information from Magenta Force on the new service cases, their history and the contractual partner information is used.\nThe aim is to provide the database with the necessary calculations, which can be imported into the existing EWS cube on the Abacus and displayed there.\nFor this purpose, a delivery is to be generated that provides the necessary dimension information in addition to the key figures described. The tables listed in MyWIKI describe the calculated key figures on the one hand and list the dimensions with which the key figures are to be made presentable on the other.\nhttps://wiki.telekom.de/pages/resumedraft.action?draftId=2559345915&draftShareId=dd6ff8fb-d7ac-4666-b881-72a5f1f5fb1f&\nToDo:\nThe data field list and the import format must be coordinated with the EWS Cube manager.\nThe filling of the dimension topic group must be coordinated in the project.",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2024-11-07",
+  "target_end": "2024-12-18",
+  "fix_versions": [
+    "2024_Q4"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

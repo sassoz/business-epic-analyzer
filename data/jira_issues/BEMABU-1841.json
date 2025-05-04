@@ -1,0 +1,52 @@
+{
+  "key": "BEMABU-1841",
+  "issue_type": "Business Epic",
+  "title": "MSFT Produktportfolio 2025 - Delivery (Q3/25)",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür Kunden in den Segmenten Massmarket bis Large Enterprise,\ndie Microsoft Produkte (Workplace, Azure etc.) über den Telekom Cloud Marktplatz beziehen,\nist es hochrelevant, dass jederzeit das aktuellste Microsoft-Portfolio/-Featureset bereitsteht,\nwodurch die Wettbewerbsfähigkeit sichergestellt und die Grundlage für margenstarkes Cross- und Upselling (u.a. Premium Services, Co-Pilot) geschaffen wird,\nso dass neue Kunden gewonnen und bestehende Kunden weiterentwickelt werden,\nund nicht um Wettbewerb anwandern.\nDas Vorhaben schafft ein wettbewerbsfähiges MSFT-Produktportfolio.\nOveraching Scope ist ausführlich in der Business Initiative https://jira.telekom.de/browse/BEMABU-1838 dokumentiert. Zur Erreichung der definierten Zielstellung müssen in Q3/2025 weitere Deliverables umgesetzt werden. Diese können entlang der MSFT-Roadmap und der Roadmap des Plattform-Partners AppDirect jedoch erst kurzfristig geplant und weiter heruntergebrochen werden.\nRahmenbedingungen\nIn Scope \nRollout von MSFT-Features in Q3, die in Q2 angeliefert werden und vom Plattform-Partner AppDirect über die Roadmap ausgeliefert wurden\nOut of Scope\nkann erst definiert werden, sobald Klarheit seitens Microsoft und AppDirect zu deren Roadmap vorliegt.\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nggfs. Abhängigkeiten zum Rollout von AppDirect V2-Plattform-Funktionalitäten, die zur Nutzung neuer MSFT-Features vorausgesetzt werden\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nTelekom Cloud Marketplace DOM0201 Knut Goebel   \n  BEO und ggf. Vertreter Effelsberg, Andreas Christine Taut \nSponsor/Fachseite Veronique Hauser \nWeitere Stakeholder Maximilian Wittenborg Andreas Kiefer Steinborn, Hannes \nWeitere AnsprP -\nSonstiges \n-\n\nBusiness Scope:\nZwingende Maßnahme zur Sicherstellung der Wettbewerbsfähigkeit und zur Erreichung der MSFT Umsatzziele in Q3/2025. \"Feature-Parität mit MSFT\" und Marktplatz-Wettbewerbsfähigkeit erhalten und verbessern. Zudem: Effektiver Self Service, Microsoft Subscription Management, Reduktion Abrechnungsanfragen, UX Verbesserungen.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "13,2 Mio. € Brutto-Umsatz (Q3-Anteil) - entspricht 1,55 Mio. € IFRS-Umsatz",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "geplantes Brutto-Umsatzwachstum FC0 für 2025 gesamt: 53 Mio. € bzw. 6,2 Mio. € IFRS"
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "Churn Reduktion",
+      "strat_enablement": "Churn, durch wettbewerbsfähiges Produktportfolio",
+      "justification": "Kunden, die aktuelle Produkte und Konditionen nicht auf dem TCMP erhalten würden mit Vertragsende zum Wettbewerb wechseln. Aktuell sehr wettbewerbsintensiv, insb. Vodafone."
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "in Q3",
+      "justification": "im wettbewerbsintensiven Umfeld ist es zwingend erforderlich stets unmittelbar die aktuellsten MSFT-Produkte und Feature anbieten zu können"
+    }
+  },
+  "assignee": "Effelsberg, Andreas",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "MSFT-/AppDirect-Feature-Deliverables aus Q2 wurden validiert, getestet und in Q3/2025 in Produktion überführt",
+    "Endkundeninformation zu umgesetzten Features ist erfolgt",
+    "Vertriebs- und Customer-Care Briefing abgeschlossen"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "Portfolio"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

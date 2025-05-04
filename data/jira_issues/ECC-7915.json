@@ -1,0 +1,57 @@
+{
+  "key": "ECC-7915",
+  "issue_type": "Epic",
+  "title": "Listen-Import für das Number Picking Richtung UC Partner",
+  "status": "Analysis",
+  "description": "Description\nUserStory\n Als berechtigter Anwender\n möchte ich im Self-Service als Bestandteil der Zusatzpaketbuchung meinen bestehenden Rufnummernhaushalt, im BSP als  Bulk-Upload (z.B. als csv-Datei) an meinen UC-Partner übertragen,\n um  zu vermeiden, dass ich den Rufnummernhaushalt komplett über das Number Picking im Portal granular nachbilden muss.\n    HINWEISE\nZeitliche Trennung zwischen Nummernupload und physikalischer Umschaltung des SIP Trunk.\n       Definition of Ready\n - Die User Story ist abgestimmt. (mandatory)\n - Es ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\n - Alle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\n - Die Provisionierungsanforderungen aus der Technik sind seitens DIVA WebCCo angenommen (anhand der Qualitätskriterien geprüft) und Informationen im Epic dokumentiert. (optional)\n - Der GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\n - Schnittstellenentwurf liegt vor. (optional)\n - Alle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\n \n\nBusiness Scope:\nBestehende Rufnummernpläne des Kunden können über das BSP im Rahmen von Number Picking als Listenimport zum UC-Partner hochgeladen werden, Konsistenz zum Nummern-Kontingent im C4-Backend ist dabei gegeben.",
+  "business_value": {},
+  "assignee": "Sebastian Vater",
+  "priority": "",
+  "target_start": "2025-04-14",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "The list import functionality will be introduced for the UC partners MS Teams Operator Connect, Zoom and Webex Calling\n(possibly with a later requirement also for RingCentral and Unify)",
+    "The functionality can be used by all administrative roles in BSP",
+    "The new functionality is switchable (pilotflag) in hpbx portal.",
+    "The new functionality is based on the new portal and requires the redesign of number picking (ECC-8406) and pre-provisioning (ECC-7881) but can be introduced independently at a later date",
+    "In the “Rufnummern verwalten” dialog the option to upload a CSV file is offered",
+    "If no UC partner add-on package is booked, or if there are no number resources at the instance that can be used in the preconfiguration, the funktionality is grayed out.",
+    "The number of phone numbers in the CSV-file is not limited",
+    "Format of the CSV file? Comma, semicolon, - separated?",
+    "phone numbers can have up to 13 digits (without leading 0 or +49)",
+    "phone numbers in the format +49 or 0 are supported",
+    "The portal adapts the phone number format during the upload according to the required format in OLAF-UC",
+    "A phone number is part of the relevant phone number resources of a company. Relevant phone number resources are:\nPhone number resources that are assigned to a SIP trunk without booked UC-Partner\nPhone number resources that are assigned to a SIP trunk with booked UC-Partner\nPhone number resources that are reserved by an order for usage in a SIP Trunk\nFree phone number resources within a company\nNew phone numbers without cpbx assignments (e.g. new locations)",
+    "Phone number resources that are assigned to a SIP trunk without booked UC-Partner",
+    "Phone number resources that are assigned to a SIP trunk with booked UC-Partner",
+    "Phone number resources that are reserved by an order for usage in a SIP Trunk",
+    "Free phone number resources within a company",
+    "New phone numbers without cpbx assignments (e.g. new locations)",
+    "A phone number has already been uploaded to Olaf UC (active or in pre-provisioning)",
+    "A phone number is in maximum 13 digits long",
+    "The phone number limit is not exceeded.\nIf more phone numbers are uploaded than free phone numbers available, only the first phone numbers up to the limit are processed.",
+    "Upload not possible - The phone number is longer than 13 digits.",
+    "Upload not possible - The phone number has already been uploaded to the UC partner.",
+    "Upload not possible - The phone number limit has been reached.",
+    "Upload not possible - The phone number is not part of the phone number range that can be used.",
+    "…",
+    "The phone number limit and number of free phone numbers are displayed",
+    "The phone numbers loaded into the portal are displayed in a table, sorted by phone number ranges",
+    "It is displayed whether the phone number can be uploaded to the UC partner as a pre-configured phone number or directly as an active phone number",
+    "It is possible to select multiple phone number ranges or multiple single phone numbers to delete them",
+    "It is possible to select all uploaded phone numbers to delete them"
+  ],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    }
+  ],
+  "labels": [
+    "ECC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,36 @@
+{
+  "key": "MAGBUS-99394",
+  "issue_type": "Portfolio Epic",
+  "title": "Decoupling von CPQ-Funktionen Stufe 1 (Kundenlokationsdaten)",
+  "status": "In Progress",
+  "description": "Description\nZiel:\nSteigerung der Performance des SAP CPQ, UX-Optimierungen und Reduzierung bekannter Fehlerquellen und Komplexität durch das Decoupling der Kundenlokationsdaten in einen Microservice.\nAnalog zum Decoupling der Bestandsdaten sollen mit dieser Anforderung auch die Kundenlokationsdaten aus der bestehenden CPQ-basierenden Logik in einen Microservice mit entsprechenden Anbindungen gebracht werden. Im Rahmen dessen soll das UX optimiert und die Komplexität reduziert werden, sodass die Nutzenden einen deutlichen Anstieg des Nutzens haben. \nSolution Intent geplant:\n04.11.2024 --> Scoping\n20.11.2024 --> Draft Solution Design\n29.11.2024 --> Final Solution Design\nLink: folgt",
+  "business_value": {},
+  "assignee": "El Azzaoui, Karim",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "Kundenlokationsdaten wurden aus dem CPQ gelöst und in einem Microservice realisiert.",
+    "UX-Design wurde an die aktuelle Bestandstabelle angepasst.",
+    "Alte und nicht mehr benötigte Daten/Tabellen/Designs im CPQ wurden entfernt."
+  ],
+  "components": [],
+  "labels": [
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-100124",
+      "title": "MAGBUS-100124",
+      "summary": "Decoupling Customer location data",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100124",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

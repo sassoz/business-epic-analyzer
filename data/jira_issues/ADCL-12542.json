@@ -1,0 +1,28 @@
+{
+  "key": "ADCL-12542",
+  "issue_type": "Epic",
+  "title": "[L2M] - Order Decomposition NEW ACQ - Integration Test support and Deployment to CIT2",
+  "status": "Backlog",
+  "description": "Description\nAs part of LOM to M-API transition the current processing of Product selection , augmentation, qualification and communicating these with Shopping cart should be transformed to use M-APIs.\nThe transformation involves Inter- mapping of data models,  acquisition of additional data and thereafter invocation of various MAPI APIs.\nThe process is captured in the attached flow.\nhttps://miro.com/app/board/uXjVL5GWlow=/ (ScratchBoard)\nThis Epic handles the pending tasks due to dependent external stories not completed yet. ",
+  "business_value": {},
+  "assignee": "Shantanu Bhavsar",
+  "priority": "",
+  "target_start": "2025-04-25",
+  "target_end": "2025-06-05",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "The E2E tests for Order Decoposition of New Acquisition journey is executed",
+    "The test results are fixed through Jira  bugs",
+    "The tests pass successfully at closure",
+    "The Order Decomposition flow is deployed to CIT2"
+  ],
+  "components": [],
+  "labels": [
+    "ADCL-PI28"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

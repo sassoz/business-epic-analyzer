@@ -1,0 +1,34 @@
+{
+  "key": "DATAFAB-33641",
+  "issue_type": "Epic",
+  "title": "M2M STD Reports Optimization & Enhancement",
+  "status": "In Progress",
+  "description": "Description\n1. Epic Description\nEpic (Requirement and Scope) \nAn optimization or additional development for existing reports is currently delivered by the BI4BS team based on a new story in JIRA. \nBased on business needs it is required to change the logic in existing reports, add some new fields or adapt the existing ones. Changes are required to fix known issues, performance problems and improve usability.\nCurrently there is a new requirement for Standard reporting: \nNew REMAINING_SUSPENSION_DAYS should be added  in 018_STD_SIM_BASICDATA report.\nCustomers want to have new column with Delivery note number in SIM Order information\nCustomers want to have 040_STD_INVOICE_DRILL_DOWN_LEVEL_01, 041_STD_INVOICE_DRILL_DOWN_LEVEL_02 reports translated to English.\nFix issue with NULL value for DASHBOARD ACTIVE_SIMS value\nAdd new column PERIOD into 074_STD_USAGE_BY_TYPE_AND_COUNTRY report.\nBenefits:\nStable environment\nCustomer satisfaction.\nSpecific Deliverables  \nUpdate of the Reporting user manual to reflect the changes in the reports and how to use new fields.\nDocumentation describing the changes in report logic and their impact on business processes, SSV updates.\nAcceptance Criteria (conditions which must be satisfied for the Epic to be accepted)\nREMAINING_SUSPENSION_DAYS is added  in 018_STD_SIM_BASICDATA report.\nSTD SIM Order report is enhanced with new Delivery note Number value\nSTD INVOICE Drill Down reports are translated to English\nACTIVE_SIMS in DASHBOARD is correctly displayed.\nPEIOD is added to STD ARV USAGE_BY_TYPE_AND_COUNTRY\nUser Manual is updated.\nOut of Scope\nCreation of new reports, system architecture changes, or integration with new data sources. The focus is solely on updating existing columns with additional options or adding new column. Or translate columns name with the same content.\nDependencies \n The mapping in the source system is clear and accessible, and the changes have been approved by a business side.\n2. Technical / Solution Design / Compliance\nTechnical & Solution Design  \nThe proposed solution involves modifying existing reports to incorporate additional values for DELIVERY_NOTE_NUMBER information and update the logic accordingly. Also it is required to translate the existing values of Charges type in the Standard reporting. Fixing issue for Dashboard is also required for providing better service for Customers. This aligns with the architectural roadmap by ensuring compatibility with current systems and minimizing disruption. The implementation will utilize existing technologies and frameworks, with a focus on improving report performance while maintaining data integrity. The mapping in the source system is clear and accessible, ensuring a smooth integration process.\nCompliance evaluation\nTBD\n3. NFR (if any)\nNon functional requirements\nNone.\n  4. SLA(if any)\nService Level Agreements\nEnsuring that modified reports are delivered within the agreed timeframe.\n   ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "DEV",
+    "M2M_Rep",
+    "StandardReports"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

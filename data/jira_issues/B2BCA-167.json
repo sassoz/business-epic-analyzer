@@ -1,0 +1,212 @@
+{
+  "key": "B2BCA-167",
+  "issue_type": "Initiative",
+  "title": "Erhaltung Registrar Status 🏃‍♀️",
+  "status": "In Progress",
+  "description": "Description\nManagement Summary\nDie Deutsche Telekom möchte akkreditierter Registar bei den Registries bleiben, um das Domain-Geschäft betreiben zu können.\nDescription of Demand / Problem\nAls akkreditierter Registar ist die Deutsche Telekom verpflichtet für alle TLD`s (z.B. .de, .com, .net, .info, ...) die Vorgaben der Registries zu erfüllen.\nGrundlage hierfür sind vertragliche Verpflichtungen, die wir gegenüber diesen Einrichtungen eingegangen sind.\nHierbei kann es vorkommen, dass die geänderten Vorgaben der Registries auch zu Anpassungen in unseren IT Systemen führen.\nWesentliche Registries sind Denic, Eurid, VeriSign, NOMINET, Afilias, PIR, IT NIC, Neustar, Switch, Mobi, NL NIC, VNIC. Für die generische Toplevel-Domains gelten auch die Regularien der ICANN\nAcceptance Criteria\nDie Deutsche Telekom bleibt akkreditierter Registar bei den Registries und stellt den Kunden der Telekom den Dienst \"Domains bestellen und verwalten\" auf Dauer zur Verfügung.",
+  "business_value": {},
+  "assignee": "Heike Schlief",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Options",
+    "FUNNEL",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DAVID",
+      "title": "DAVID "
+    }
+  ],
+  "labels": [
+    "RegistrarStatus",
+    "Strukturelement"
+  ],
+  "realized_by": [
+    {
+      "key": "B2BCA-3557",
+      "title": "B2BCA-3557",
+      "summary": "Nominet, Änderungen im Registrierungsprozess",
+      "url": "https://jira.telekom.de/browse/B2BCA-3557",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "B2BCA-3559",
+      "title": "B2BCA-3559",
+      "summary": "Update on Registrar Data Escrow Specification Revisions",
+      "url": "https://jira.telekom.de/browse/B2BCA-3559",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "DUD-6409",
+      "title": "DUD-6409",
+      "summary": "neue Anforderungen der ICANN an Registrare - Umsetzung Stufe 1",
+      "url": "https://jira.telekom.de/browse/DUD-6409",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-6955",
+      "title": "DUD-6955",
+      "summary": "PR00018548 Sammel-Ticket für alle Arbeitspakete zur Umsetzung des Fach-Projektes \"ICANN Stufe 2\" I-1265025",
+      "url": "https://jira.telekom.de/browse/DUD-6955",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-7427",
+      "title": "DUD-7427",
+      "summary": "PR00045455 - Registration Data Access Protocol (RDAP)",
+      "url": "https://jira.telekom.de/browse/DUD-7427",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9573",
+      "title": "DUD-9573",
+      "summary": "Änderung Abuse Tel. RDAP und Whois",
+      "url": "https://jira.telekom.de/browse/DUD-9573",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9674",
+      "title": "DUD-9674",
+      "summary": "SWITCH Änderungen domain:info und contact:info Commands",
+      "url": "https://jira.telekom.de/browse/DUD-9674",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9688",
+      "title": "DUD-9688",
+      "summary": "Nominet UK Status Field Standardisation",
+      "url": "https://jira.telekom.de/browse/DUD-9688",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9592",
+      "title": "DUD-9592",
+      "summary": "2-Part DNSsec activation",
+      "url": "https://jira.telekom.de/browse/DUD-9592",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9175",
+      "title": "DUD-9175",
+      "summary": "EURid October 2019 Finalisation",
+      "url": "https://jira.telekom.de/browse/DUD-9175",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9691",
+      "title": "DUD-9691",
+      "summary": "VeriSign: Änderungen bzgl. TLS 2021 Halbjahr 1",
+      "url": "https://jira.telekom.de/browse/DUD-9691",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9567",
+      "title": "DUD-9567",
+      "summary": "VeriSign Änderungen November 2020",
+      "url": "https://jira.telekom.de/browse/DUD-9567",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-8382",
+      "title": "DUD-8382",
+      "summary": "Nutzen des Escrow-Services der DENIC",
+      "url": "https://jira.telekom.de/browse/DUD-8382",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9589",
+      "title": "DUD-9589",
+      "summary": "Web-Whois-Portierung",
+      "url": "https://jira.telekom.de/browse/DUD-9589",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9951",
+      "title": "DUD-9951",
+      "summary": "Änderungen EPP-Statusbefehle bei Verisign",
+      "url": "https://jira.telekom.de/browse/DUD-9951",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9877",
+      "title": "DUD-9877",
+      "summary": "KNIPP-Sammler 2021",
+      "url": "https://jira.telekom.de/browse/DUD-9877",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9880",
+      "title": "DUD-9880",
+      "summary": "DNSSec für IT-NIC",
+      "url": "https://jira.telekom.de/browse/DUD-9880",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9878",
+      "title": "DUD-9878",
+      "summary": "UK-Domains über KNIPP bestellen",
+      "url": "https://jira.telekom.de/browse/DUD-9878",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-10053",
+      "title": "DUD-10053",
+      "summary": "Umzug der .info-Domains nach Donuts",
+      "url": "https://jira.telekom.de/browse/DUD-10053",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9991",
+      "title": "DUD-9991",
+      "summary": "Remove Tech-C",
+      "url": "https://jira.telekom.de/browse/DUD-9991",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-10055",
+      "title": "DUD-10055",
+      "summary": "AutoDom: Umzug auf OASIS Plattform",
+      "url": "https://jira.telekom.de/browse/DUD-10055",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-10278",
+      "title": "DUD-10278",
+      "summary": "Upgrading the PIR Registry System - May 2022",
+      "url": "https://jira.telekom.de/browse/DUD-10278",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-10120",
+      "title": "DUD-10120",
+      "summary": "Unlock Domain kann in David nicht gesetzt werden",
+      "url": "https://jira.telekom.de/browse/DUD-10120",
+      "relation_type": "child"
+    },
+    {
+      "key": "DUD-9325",
+      "title": "DUD-9325",
+      "summary": "Erhaltung Registrar Status (alter Sammler)",
+      "url": "https://jira.telekom.de/browse/DUD-9325",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

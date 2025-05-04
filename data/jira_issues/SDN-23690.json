@@ -1,0 +1,66 @@
+{
+  "key": "SDN-23690",
+  "issue_type": "Epic",
+  "title": "FIB: Implement KLS Interface (Restwork from Q4)",
+  "status": "Closed",
+  "description": "Description\nPrerequisites for this epic: \nLocations are added to FIB (manual and excel upload) \n  KLS Validation for national Locations (DE) Excel upload\nwhen national locations are added, a KLS validation is done. \nThe KLS data (KLS ID, ONKZ, ASB, Google Maps)  is added automatically accordingly when a location can be found.\nThe KLS Data is always read-only and not changeable for the user.\nWhen locations are added uploaded, the KLS validation is done via the upload. If a national cannot be found within KLS, the location is added at the top of the location list (red) (suggestion function for valid KLS location will come in Q1).\nThis way we assure that only valid national locations are added in FIB.\n  Some adresses have missing Geo-Data within KLS (appr. 1mio adresses), especially geo-data and ASB. FIB allows to add also locations with missing KLS-data, but will show these in the GUI:\n  Integration for manual adding: \nCustomer locations in FIB can be added the following way:\n2.1 manuall\nincrementell: locations can be added manual via an incremental enter. FIB always suggest valid locations on the Basis of KLS data, see example screenshot:\n  KLS Search: locations can be added manual via entering a KLS ID. FIB shows the valid Location of KLS, see screenshot:\n    free text search: Locations can be added via a free text search of adress data. FIB shows the valid location of KLS, see screenshot:\n    DOR Status Comment\nAcceptance criteria are defined.    \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts    \nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA    \nDependencies are identified and there are no external dependencies that can´t be solved within the ART    \nNon-functional requirements (NFR) are identified.    \nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter     \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on    \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs    \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation    \nProcess dependency / adaptations has been defined    \n\nBusiness Scope:\nAs a user of the FIB tool I want to be able to upload quotes and get the KLS ID for my national locations.",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2025-01-23",
+  "target_end": "2025-03-26",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "On Excel Upload start GAM Service and get geolocation data",
+    "When KLS is not directly available due to typos and missing mandatory data, show possible corrections (from the fuzzy search) in the FE",
+    "Integrate the GAM service for the manual adding of locations",
+    "For operational use, approximately 50,000 address queries per day are expected.",
+    "Responding to queries by the next business day is sufficient, meaning all requests can be received and answered during off-peak hours.",
+    "Additionally, the NFR (Non-Functional Requirements) of TMF-645 should apply."
+  ],
+  "components": [],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2025-01-15-10-37-56-751.png",
+      "url": "https://jira.telekom.de/secure/attachment/5296675/image-2025-01-15-10-37-56-751.png",
+      "mime_type": "image/png",
+      "size": "176 kB",
+      "date": "2025-01-15T10:37:56.870+01:00"
+    },
+    {
+      "filename": "image-2025-01-15-10-40-39-258.png",
+      "url": "https://jira.telekom.de/secure/attachment/5296679/image-2025-01-15-10-40-39-258.png",
+      "mime_type": "image/png",
+      "size": "132 kB",
+      "date": "2025-01-15T10:40:39.360+01:00"
+    },
+    {
+      "filename": "image-2025-01-15-10-41-40-989.png",
+      "url": "https://jira.telekom.de/secure/attachment/5296681/image-2025-01-15-10-41-40-989.png",
+      "mime_type": "image/png",
+      "size": "84 kB",
+      "date": "2025-01-15T10:41:41.179+01:00"
+    },
+    {
+      "filename": "image-2025-01-15-10-43-07-917.png",
+      "url": "https://jira.telekom.de/secure/attachment/5296685/image-2025-01-15-10-43-07-917.png",
+      "mime_type": "image/png",
+      "size": "61 kB",
+      "date": "2025-01-15T10:43:08.132+01:00"
+    },
+    {
+      "filename": "image-2025-01-15-10-43-48-628.png",
+      "url": "https://jira.telekom.de/secure/attachment/5296686/image-2025-01-15-10-43-48-628.png",
+      "mime_type": "image/png",
+      "size": "64 kB",
+      "date": "2025-01-15T10:43:48.717+01:00"
+    }
+  ]
+}

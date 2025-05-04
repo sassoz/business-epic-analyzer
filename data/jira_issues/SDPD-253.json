@@ -1,0 +1,32 @@
+{
+  "key": "SDPD-253",
+  "issue_type": "Epic",
+  "title": "FtR - MIST SD LAN/WLAN - Process design",
+  "status": "Closed",
+  "description": "Description\nAs a customer\nI want to open an incident for my MIST S LAN/WLAN solution through a customer self service portal or via a hotline or Mail, and I want some status information’s and the solution date.\nSo that I can be sure that a solution is being worked on.\n  As a Telekom employee\nI want to receive all the necessary information’s about an Incident and solve it by following a clean, straightforward and well documented process with clear roles and responsibilities\nSo that our customer gets a quick solution.\n  User Story: Exploration Simplification: Send and implementation HW à Nummer an Yvonne Winkelmann\n ",
+  "business_value": {},
+  "assignee": "Patrick Heich (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7",
+    "R1.1 SDx Platform"
+  ],
+  "acceptance_criteria": [
+    "A clear process is defined",
+    "It is clear who executes which tasks",
+    "Interfaces and parameters to other systems are defined and coordinated",
+    "Documentation is finished (Aris – Happy Path and Fallouts)"
+  ],
+  "components": [],
+  "labels": [
+    "IT7.2",
+    "IT7.3",
+    "IT7.4",
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

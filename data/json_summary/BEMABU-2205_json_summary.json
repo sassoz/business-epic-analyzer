@@ -1,0 +1,85 @@
+```json
+{
+  "epicId": "BEMABU-2205",
+  "title": "LE – Lead to Oppty (MF – LDA)",
+  "ziele": {
+    "gesamtziel": "Optimierung des Leadmanagements für Telemarketing-Maßnahmen im Direktvertrieb durch Schaffung einer Lösung, die es ermöglicht, Leads und ASP-Kunden an externe Outbound-Agenturen zur Weiterqualifizierung zu übermitteln. Dadurch soll die Leadqualität für Sales verbessert, der Umsatz gesteigert und unnötiger Arbeitsaufwand reduziert werden. Die Umsetzung ist für den Zeitraum 01.07.2025 bis 30.09.2025 geplant.",
+    "einzelziele": [
+      "Nutzung eines zentralen Tools zum Aus- und Einspielen von Leads und ASP-Kunden (Potenzialkunden)",
+      "Weiterqualifizierung von Leads, die nicht den notwendigen Leadscore erreichen",
+      "Schaffung einer erweiterten Schnittstelle zur LeadDialogAPP (LDA) oder eines in Salesforce integrierten Tools",
+      "Verbesserung der Reichweite im Marketing-MIX durch Kundenansprache über alle Outbound-Kanäle",
+      "Erhöhung der Transparenz für Sales zur Gestaltung strukturierter Fahrpläne",
+      "Optimierung des Einsatzes des Marketing-Budgets durch Identifikation von Optimierungspotenzialen in den Kanälen",
+      "Ressourceneinsparung und Ableitung von Folgekampagnen zur Umsatzsicherung",
+      "Verbesserung der Lead-Qualität durch definierte Lead-Parameter für zielgenaues Routing"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 20,
+      "beschreibung": "Zwischen 5-10% mehr Leads = ca. 7.500.000 € ungewichtet (gesamt). Mehr Real Selling Time für Vertriebs-MA und Marketing (größer KMU). Hebel: Leadmenge & Leadqualität. Leads erreichen durch weiteres Nurturing über Outbound einen höheren Reifegrad. Dadurch erhalten wir ein höheres Commitment des Vertriebs und die Leads werden auch wertvoller zugestellt und abgearbeitet. Prozessvereinfachung des Outboundmaßnahmen in GK-VM, GK-LE und Public."
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "Transparente E2E-Leadbearbeitung zwischen CRM und dem Callcenter-Tool. Leads oder ASP-Kunden können zwischen Marketing, Sales und externe Callagentur bearbeitet werden. Erhöht die Kundenerfahrung/-bindung oder das TD-Image in besonderem Maße, z. B. einzigartiger Login, Prozessvereinfachung oder disruptive/architektonische Innovation. Mittelfristige Reduzierung von Wartungs- und Änderungsrisiken."
+    },
+    "timeCriticality": {
+      "skala": 8,
+      "beschreibung": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025. Der Hebel liegt bei Leadmenge und Leadqualität. Wird die Anforderung umgesetzt, wird dieser Hebel aktiviert."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-93466",
+      "titel": "LE: Marketing_Outbound/Telemarketing",
+      "funktionalitäten": [
+        "Weiterleitung von Leads an LDA zur Weiterqualifizierung",
+        "Nominierung von ASP-Kunden mit relevanten Attributen (GP, TelefonNr., Segment, WZ-Nr., Branche, etc.) an LDA",
+        "Automatische Statusänderung für ASP-Kunden auf 'gesendet'",
+        "Übermittlung von Ergebnissen aus LDA an Lead in MagentaForce (negativ/verworfen - positiv/Routing an Sales)",
+        "Automatisierte Ergänzung von Abschlussbericht/Gesprächsleitfaden am Lead aus LDA",
+        "Erstellung von Potenzialkundenlisten aus ODL/ODW für LDA-Import",
+        "Hinterlegung von Potenzialkunden als Kampagnenmitglieder",
+        "Fehlermeldung/Rückmeldung bei Leadexport aus LDA an MagentaForce/MarketingAutomation"
+      ]
+    },
+    {
+      "id": "BEMABU-938",
+      "titel": "Marketing: Outbound Schnittstelle LDA",
+      "funktionalitäten": [
+        "Optimaler Einsatz des Marketing-Budgets durch Identifikation von Optimierungspotenzialen in den Kanälen",
+        "Ressourceneinsparung und Ableitung von Folgekampagnen zur Umsatzsicherung",
+        "Verbesserung der Lead-Qualität durch definierte Lead-Parameter für zielgenaues Routing",
+        "Automatisiertes Lead-Routing zwischen LDA und Magenta-Force",
+        "Vereinfachung des aktuell manuellen, komplizierten und fehleranfälligen Statusreports der Kundendaten"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Transparenz zu Leads aus dem Marketing ist Ende-zu-Ende innerhalb MagentaForce hergestellt",
+    "Dabei muss eindeutig nachvollziehbar sein, aus welche Marketingkampagne, Marketingmaßnahme oder Marketingkanal der Lead stammt",
+    "PSA-Prozess durchlaufen, Mitbestimmungspflichtige Aspekte geklärt und freigegeben",
+    "Schnittstelle zum externen Tool (Lead APP)",
+    "Schnittstelle zu MarketingAutomationen, hier liegen bereits einige Schnittstellen vor, die erweitert werden müssen (https://wiki.telekom.de/pages/viewpage.action?pageId=2091353668)"
+  ],
+  "domainsAndITApplications": [
+    "MarketingCloud DOM0201",
+    "MagentaForce DOM0201",
+    "LDA extern"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Schnittstelle zum externen Tool (Lead APP)",
+    "Abhängigkeit von der Schnittstelle zu MarketingAutomationen",
+    "Abhängigkeit von der Zusammenarbeit zwischen Marketing, Sales und externen Callagenturen",
+    "Das Business Epic BEMABU-938 befindet sich noch im Status 'Funnel', während BEMABU-2205 bereits im 'Review' ist",
+    "MAGBUS-93466 ist bereits geschlossen, was auf eine mögliche Diskrepanz in der Planung hindeuten könnte"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}
+```

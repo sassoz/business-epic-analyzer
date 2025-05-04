@@ -1,0 +1,33 @@
+{
+  "key": "DATASAT-28689",
+  "issue_type": "Epic",
+  "title": "ODW2ODE: Casemanagement: migrate data basis and key figures to ODE - Poc",
+  "status": "In Progress",
+  "description": "Description\nAssumption: Magenta Force data is delivered to ODE\nWith this Epic, we want to demonstrate the applicability of the ODE Guideline (DATASAT-31459) with an exemplary ODE implementation.\nThis epic is not about professionalism, but about creating a good and simple example of how a typical project of the ValueStream DATAFOS can be implemented on the ODE.\nAs a technical feature, a simple join of two tables written to a third target table is sufficient.\nTo get a little closer to a realistic example, let's use the CMS logic for this POC.\nIf the CMS expertise turns out to be too complex, we will make simplifications for the POC.\nThe goal is to be able to show the other developers of the ValueStream an example.\n*********************************************************************************************\nMit diesem Epic werden wir mit einer beispielhaften ODE-Implementierung die Anwendbarkeit des ODE-Guidelines (DATASAT-31459) nachweisen.\nEs geht in diesem Epic nicht um die Fachlichkeit, sondern darum, ein gutes und einfaches Beispiel zu haben, wie ein typisches Projekt des ValueStreams DATAFOS auf dem ODE umgesetzt werden kann.\nAls Fachlichkeit ist ein einfacher Join zweier Tabellen, der in eine dritte Zieltabelle geschrieben wird, ausreichend.\nUm etwas näher an ein realistisches Beispiel zu kommen, verwenden wir die CMS-Logik für diesen POC.\nSollte sich die CMS-Fachlichkeit als zu komplex herausstellen, werden wir für den POC hier Vereinfachungen vornehmen.\nZiel ist es, den anderen Entwicklern des ValueStream ein Beispiel zeigen zu können.\n ",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2025-05-08",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [
+    "The implementation of this POC runs successfully in ODE production and starts at least 1 time every day (schedule-driven).",
+    "The implementation fits the guilline, which we are developing in DATASAT-31459.",
+    "Die Implementierung dieses POC läuft erfolgreich in ODE-Produktion und startet jeden Tag mind. 1 Mal (Schedule-driven).",
+    "Die Implementierung passt zur Guildeline, die wir in DATASAT-31459  erarbeiten."
+  ],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "CMServ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

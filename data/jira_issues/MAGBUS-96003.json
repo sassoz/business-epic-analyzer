@@ -1,0 +1,41 @@
+{
+  "key": "MAGBUS-96003",
+  "issue_type": "Epic",
+  "title": "Implementierung Geschäftsfall \"Umzug\" / Business Case Location Change",
+  "status": "Resolved",
+  "description": "Description\nMit diesem Epic wird der Geschäftsfall \"Umzug\" für das Fixed Net Portfolio umgesetzt\nWerden durch die Kündigung des Produktes am alten Standort wegfallende Optionen im Angebotsdokument aufgelistet?\n=> Nein, in der CRMT-Auftragsbestätigung für Kündigung(Umzug) werden bei Umzug wegfallende Leistungen ebenfalls nicht im Detail aufgeführt. \nThis epic is used to implement the “Relocation” business case for the Fixed Net Portfolio\nmore details: https://wiki.telekom.de/x/L766j",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-01-09",
+  "target_end": "2025-02-19",
+  "fix_versions": [
+    "PI 26 stretch",
+    "2025",
+    "PI27"
+  ],
+  "acceptance_criteria": [
+    "Nach Auswahl \"Änderung\" in der Bestandssicht, erscheint der Vorgang \"Umzug\" im Konfigurator (Vorgang read-only) und der Hauptstandort ist änderbar."
+  ],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-11440",
+      "title": "ADCL-11440",
+      "summary": "Support E2E testing of product relocation and change processes part I",
+      "url": "https://jira.telekom.de/browse/ADCL-11440",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

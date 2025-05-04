@@ -1,0 +1,117 @@
+{
+  "key": "BEMABU-2059",
+  "issue_type": "Business Epic",
+  "title": "Simplifying Basisportfolio GK in Prozesskette GK",
+  "status": "Review",
+  "description": "Business Scope:\nto symplify the basic portfolio of GK, including Company Start and Pro and Business DSL/Glasfaser Start and Pro shall be the scope of this project.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Michael Besler",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-08-29",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Renaming of existing Portfolio is done via all IT systems",
+    "new GF Start tarifs incl. ZMPs are available via all IT systems",
+    "new GF Pro Tarrifs incl. ZMPs are available via all IT systems",
+    "new Sim-only ZMPs are available via all IT systems",
+    "PP4 Bundles and Prioritization Ranking see BEB2B-258"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "25_Q3_Wunsch",
+    "B2B_Prio",
+    "BB-FTTH",
+    "GK",
+    "NSN",
+    "Portfolio",
+    "Portfolio_Breitband",
+    "VGK_MiBesler"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "GK Stage GateSimplicityGate2V4 (003).pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5404519/GK%20Stage%20GateSimplicityGate2V4%20%28003%29.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2025-02-14T16:22:13.947+01:00"
+    },
+    {
+      "filename": "image-2025-02-14-14-03-51-055.png",
+      "url": "https://jira.telekom.de/secure/attachment/5403990/image-2025-02-14-14-03-51-055.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-14T14:03:51.335+01:00"
+    },
+    {
+      "filename": "image-2025-02-14-14-07-20-949.png",
+      "url": "https://jira.telekom.de/secure/attachment/5403992/image-2025-02-14-14-07-20-949.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-14T14:07:21.203+01:00"
+    },
+    {
+      "filename": "image-2025-02-14-14-12-20-755.png",
+      "url": "https://jira.telekom.de/secure/attachment/5403993/image-2025-02-14-14-12-20-755.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-14T14:12:21.001+01:00"
+    },
+    {
+      "filename": "image-2025-04-10-08-15-02-600.png",
+      "url": "https://jira.telekom.de/secure/attachment/5596602/image-2025-04-10-08-15-02-600.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-10T08:15:02.941+02:00"
+    },
+    {
+      "filename": "image-2025-04-10-08-16-57-015.png",
+      "url": "https://jira.telekom.de/secure/attachment/5596605/image-2025-04-10-08-16-57-015.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-10T08:16:57.332+02:00"
+    },
+    {
+      "filename": "image-2025-04-16-09-50-13-653.png",
+      "url": "https://jira.telekom.de/secure/attachment/5615910/image-2025-04-16-09-50-13-653.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-04-16T09:50:14.022+02:00"
+    },
+    {
+      "filename": "Kacheldarstellung Flamingo Projekt Simplifizierung.docx",
+      "url": "https://jira.telekom.de/secure/attachment/5623471/Kacheldarstellung%20Flamingo%20Projekt%20Simplifizierung.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "",
+      "date": "2025-04-17T16:03:14.932+02:00"
+    }
+  ]
+}

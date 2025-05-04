@@ -1,0 +1,34 @@
+{
+  "key": "DATAFAB-31283",
+  "issue_type": "Epic",
+  "title": "M2M Self Service Portal V1.13 SIM Material Billing enhancement",
+  "status": "Closed",
+  "description": "Description\n1. Epic Description\nEpic (Requirement and Scope) \nThis epic focuses on advancing the Extended Universe through enhancements to the M2M Self Service Portal. M2M Self Service Portal allows users to generate sophisticated reports based on their own needs. Many important TMSP attributes and features are missing in the M2M Self Service Portal currently.\nThe DTAG internal user (Finance, PM, PO, CM) of the BI4BS is not able to report all the relevant attributes and features that are relevant to carry out the business analyses to create the corresponding business case to offer new products or change the exiting products based on the available features. \nIn the case of TMSP migration project, it is not possible to report all relevant features that are currently in use by the migrated customer (e.g. CSD, …) since the corresponding technical attributes are missing in the M2M Self Service Portal .\nThe M2M Self Service Portal must contain all for the business relevant attributes and features.\nNew Features:\nThe following topics are covered in this EPIC:\nAll types of SIM-orders are in SIM order folders\nRemap SIM_MATERIAL_BILLING attributes\nMVP\nImprove the functionality of the M2M Self Service Portal, enabling users to effortlessly generate detailed reports tailored to their specific requirements.\nStreamline the user interface of the portal to enhance usability and facilitate intuitive navigation for all users.\nImplement optimizations to ensure the portal operates efficiently, providing quick response times even when handling complex queries and large datasets.\nBenefits\n Power users in departments can leverage the portal to access relevant data directly, promoting transparency and enabling them to address queries independently.\n By providing users with the tools to generate their own reports, the need for manual service requests diminishes, freeing up resources and reducing the workload on support teams. This leads to greater efficiency and cost savings for the organization.\nWith enhanced report generation capabilities, users gain greater control over accessing and analyzing data, empowering them to make informed decisions.\n By enabling users to generate sophisticated reports based on their unique needs, the portal facilitates deeper insights into data, driving better-informed decision-making processes\n  Specific Deliverables  \nNone\n  Acceptance Criteria (conditions which must be satisfied for the Epic to be accepted)\nAll type of SIM-orders are available in SIM order folders\nMapping for SIM_MATERIAL_BILLING attributes are changed.\nOut of Scope\nCreation of new reports, system architecture changes. BI Launchpad reports are not affected.\nDependencies \nThe mapping in the source system is clear and accessible, and the changes have been approved by a business side.\n2. Technical / Solution Design / Compliance\nTechnical & Solution Design  \nThe proposed solution involves modifying existing folders to incorporate additional attributes and relationships, as well as updating the logic within the M2M Self Service Portal for creating necessary internal reports. This aligns with the architectural roadmap by ensuring compatibility with current systems and minimizing disruption. The implementation will utilize existing technologies and frameworks, focusing on improving performance while maintaining data integrity. The mapping in the source system is clear and accessible, ensuring a smooth integration process.\nCompliance evaluation\nDone.\n  3. NFR (if any)\nNon functional requirements\nNo.\n  4. SLA(if any)\nService Level Agreements\nN/A",
+  "business_value": {},
+  "assignee": "Katerina Soldatova",
+  "priority": "",
+  "target_start": "2025-01-06",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "2025_Q1"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "DEV",
+    "M2M_Rep",
+    "SelfServicePortal"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

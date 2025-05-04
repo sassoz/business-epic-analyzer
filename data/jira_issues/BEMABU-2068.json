@@ -1,0 +1,91 @@
+{
+  "key": "BEMABU-2068",
+  "issue_type": "Business Epic",
+  "title": "Q2 2025 EOS Workflow: Inhouse Vervollständigung abschließen",
+  "status": "In Progress",
+  "description": "Description\nFür die MitarbeiterInnen aus SGrK,\ndie täglich mit EOS arbeiten,\nist es notwendig, dass diese AGB-Kette mit Features erweiter wird\nwodurch das Bearbeiten von Aufträgen direkt in EOS stattfinden kann\nund nicht manuell in den Produktionsstraßen CRM-T, SeCe-IT und FTTH.\nDas Vorhaben schafft durch die optimierte Arbeit mit EOS einen schnelleren und auch besseren Serviceprozess, welcher in Aufwandsreduzierung resultiert. Die Nutzer arbeiten schneller und effizienter im System, können dadurch mehr Zeit für die Beratung der Kunden aufwänden.",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "",
+      "cost_saving": "Aufwandsreduzierung durch optimierte Arbeit mit EOS",
+      "risk_loss": "",
+      "justification": "Das Vorhaben schafft durch die optimierte Arbeit mit EOS einen schnelleren und auch besseren Serviceprozess, welcher in Aufwandsreduzierung resultiert."
+    },
+    "strategic_enablement": {
+      "scale": 2,
+      "risk_minimization": "",
+      "strat_enablement": "Optimierung des Serviceprozesses durch direkte Bearbeitung in EOS statt manuell in verschiedenen Produktionsstraßen",
+      "justification": "Die Nutzer arbeiten schneller und effizienter im System, können dadurch mehr Zeit für die Beratung der Kunden aufwänden."
+    },
+    "time_criticality": {
+      "scale": 2,
+      "time": "Täglich",
+      "justification": "Für die MitarbeiterInnen aus SGrK, die täglich mit EOS arbeiten, ist es notwendig, dass diese AGB-Kette mit Features erweitert wird."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q2_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "2025",
+    "B2B_PRIO",
+    "B2B_Target",
+    "Operations"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-84671",
+      "title": "MAGBUS-84671",
+      "summary": "Inhouse Basic: Vertragsarten nach EOS übergeben",
+      "url": "https://jira.telekom.de/browse/MAGBUS-84671",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-98982",
+      "title": "MAGBUS-98982",
+      "summary": "Inhouse: Übermittlung des Verzögerungsgrund nach SeCe-IT",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98982",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-100840",
+      "title": "MAGBUS-100840",
+      "summary": "Inhouse Basic: Erweiterung der Änderungsaufträge um den Umzug und SLA Nachvermarktung",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100840",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-100369",
+      "title": "MAGBUS-100369",
+      "summary": "Inhouse Basic: Overdippers after Go Live",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100369",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-100706",
+      "title": "MAGBUS-100706",
+      "summary": "Inhouse Basic: Umbau des FKTO Service auf V2",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100706",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

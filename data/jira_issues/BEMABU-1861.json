@@ -1,0 +1,53 @@
+{
+  "key": "BEMABU-1861",
+  "issue_type": "Business Initiative",
+  "title": "Zoom X Individualgeschäft 2025",
+  "status": "In Progress",
+  "description": "Description\nBusiness Initiative\nBeschreibung der Maßnahme\nFür alle Zoom X Kunden im Individualgeschäft ,\ndie Zoom X Leistungen beziehen ,\nist der Grad der Automatisierung zu erhöhen und die Prozessierung zu optimieren ,\nwodurch Kosten gesenkt und Effizienz gehoben werden ,\nso dass  weniger Aufwände durch manuelle Prozesse bestehen bleiben ,\nund nicht manuelle Arbeiten durchgeführt werden.\nDas Vorhaben schafft die weitere Automatisierung von Sales-, Provisionierungs- und Abrechnungsprozessen.\n  Business Value / Value Hypothese\nSynergien heben\nProzessierung auf der GK-Zielarchitektur\nKosteneinsparung und Hebung von Effizienzen\nObligatory (neue gesetzl./regulatorische Vorgabe): nein \nUnterlage zur Klassifizierung von Obligatory-Themen\nStrat. Beitrag & zeitl. Kritikalität\nAutomatisierung und Prozessoptimierung\nSynergien heben\nBusiness Impact\nJahr zusätzl. Umsatz (Tsd. €) EBITDA (Tsd. €) Effizienz (Tsd. €) Risikoverlust * (Tsd. €)\n2025     540  \n2026     720  \n2027     720  \nRisikoverlust = Schadenshöhe x Eintrittswahrscheinlichkeit (z. B. bei Umsatzsicherung, Pönnalen, ...)\nUmsetzungskizze (In Scope)\nAufbau einer „Low- bis Zero-Touch Delivery Models“ gemeinsam mit dem Partner Zoom\nOrderautomatisierung ggü. Zoom\nVolle Automatisierung der Schnittstelle zu Zoom bei den Geschäftsfällen (Bereitstellung, Änderung, Kündigung)\nLizenzmanagement & User-Self-Administration\nHerstellung einer Self-Service Funktionalität für Kunden zur eigenständigen Verwaltung / Buchung eigener Lizenzen inkl. Anbindung Telekom-Systeme\nImplementierung einer Quick-Run Bereitstellung in ZMKM\nImplementierung eines Fast-Track-Durchlaufs für standardisierte Bereitstellungen inkl. Provisionierung in den Schnittstellen- und Partnersystemen, Berücksichtigung der Haupt-Usecases (Neu/Änderung/Replace/Kündigung)\nAutomatisierung Customer Service & Incident **\nSchnittstellenanbindung Ticket-X zum Sync der definierten Servicefälle inkl. Incidents mit dem Partner Zoom\nAutomatisierung Partnersettlement\nder Partnerabrechnung ggü. Zoom\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nZMKM DOM0202 <verwende \"@Vorname Nachname\">  \nBRIM DOM0202    \n< ... >      \nBetroffenheit bitte fett markieren:\nNutzer Public Large Enterprise Midmarket Massmarket Delivery T-Digital      \nArt Produkt Sales Tool Delivery Tool IT-Enabler       Standard / AGB Lösung/ Rahmenvertrag\nProzesse Lead 2 Offer Offer 2 Order Order 2 Fulfillment Fulfillment 2 Billing Problem 2 Sol Assurance Reporting    \nJob Size\nAufwandsschätzung - T-Shirt Size Tel-IT Technik Sonstige Schätzung durch\nSize\nS: <400 k€ / M: 400 k€ - < 1 m€ / L: 1 - 3 m€ / XL: > 3 m€\nM     Fachbereich: <@Vorname, Name / Bereich / Datum>\nTel-IT: <@Vorname, Name / Bereich / Datum>\nBeteiligte\nAlignment-Team <Delivery>       Moderator: Matzke, Susanne \nSponsor/fachl. verantwortlich Niels Kunkel (GK-PPMWO), Claudia Buhne (GK-PMC)\nBusiness Epic Owner (BEO) Katrin Denner (GK-SBFC3), Sven Warnecke (GK-PMCC)\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {},
+  "assignee": "Sven Warnecke",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q3_25",
+    "PrioQ1_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "<In Scope/Akzeptanzkriterien: siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>"
+  ],
+  "components": [
+    {
+      "code": "DOM0202",
+      "title": "DOM0202 Order2Cash"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "B2B_NonTarget",
+    "B2B_PRIO",
+    "Portfolio"
+  ],
+  "realized_by": [
+    {
+      "key": "BEMABU-1862",
+      "title": "BEMABU-1862",
+      "summary": "Impl. Quick-Run Bereitstellung Zoom",
+      "url": "https://jira.telekom.de/browse/BEMABU-1862",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ORCA-9453",
+      "title": "ORCA-9453",
+      "summary": "[Team ZMKM] PI-25.2: Digitalisierung Zoom X",
+      "url": "https://jira.telekom.de/browse/ORCA-9453",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

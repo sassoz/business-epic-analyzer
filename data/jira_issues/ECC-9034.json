@@ -1,0 +1,30 @@
+{
+  "key": "ECC-9034",
+  "issue_type": "Epic",
+  "title": "CPBX 2.0 - Skip hidden admin creation in BWKS",
+  "status": "Backlog",
+  "description": "Description\n _UserStory\n As Telekom I would like to skip the local creation of hidden admin users in order to save licence fees.\n_Business Value\nBusiness Value auf Basis Cost of Delay\nCost of Delay für Bemabu-xxx: \n  Begründung des Cost of Delay\nBusiness Impact:  Revenue x \nBegründung\nStrategic Enablement / Risk reduction: 20",
+  "business_value": {},
+  "assignee": "Markus Schulze",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Skip creation of corresponding BWKS hidden admin user",
+    "Continue creation of webex user",
+    "Continue creation of email forwarding"
+  ],
+  "components": [
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    }
+  ],
+  "labels": [
+    "MBC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

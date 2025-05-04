@@ -1,0 +1,42 @@
+{
+  "key": "BEB2B-320",
+  "issue_type": "Business Initiative",
+  "title": "Versandkosten für Geschäftskunden (Mobilfunk-Endgeräte, Festnetz und IT-Geschäft)",
+  "status": "Funnel",
+  "description": "Description\nBusiness Initiative\nBeschreibung der Maßnahme",
+  "business_value": {},
+  "assignee": "Lucas Clement",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Versandkosten werden für folgende Bereich berechnet\nMobilfunkendgeräte\nFestnetz-Endgeräte\nIT-Geschäft-Versand",
+    "Mobilfunkendgeräte",
+    "Festnetz-Endgeräte",
+    "IT-Geschäft-Versand",
+    "Es besteht die Möglichkeit die Versandkosten zu rabattieren auf 0%, 50% und 100%",
+    "Für jede Art wird dem Kunden eine verständlich Rechnung erstellt",
+    "Es besteht die Möglichkeit die (berechneten) Versandkosten ggf. im Nachgang einfach zu erstatten"
+  ],
+  "components": [
+    {
+      "code": "DOM0100",
+      "title": "DOM0100 \t HR Delivery"
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0600",
+      "title": "DOM0600 Business Support System (BSS)"
+    }
+  ],
+  "labels": [
+    "GK-KMC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

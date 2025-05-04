@@ -1,0 +1,58 @@
+{
+  "key": "EOS-7177",
+  "issue_type": "Epic",
+  "title": "EOS: Show Order Tracking for GGS / Anzeige von GGS Auftragsnachverfolgung",
+  "status": "Analysis",
+  "description": "",
+  "business_value": {},
+  "assignee": "Przybylski, Matthias",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-04-24",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [
+    "AC1: Am EOS GGS-Teilauftrag gibt es einen neuen Button \"Teilauftrag nachverfolgen\" / \"Track partial order\"\nAC1.1: Auf die Seite kann jederzeit abgesprungen werden\nAC1.2: Auch Nicht-Bearbeiter können auf die Seite zugreifen\nAC1.3: Sobald der Teilauftrag versendet wurde, wird der Button in Magenta angezeigt - davor ist der Button weiß\nDas Icon lautet: assets/img/icons/new-window_outline.svg",
+    "AC1.1: Auf die Seite kann jederzeit abgesprungen werden",
+    "AC1.2: Auch Nicht-Bearbeiter können auf die Seite zugreifen",
+    "AC1.3: Sobald der Teilauftrag versendet wurde, wird der Button in Magenta angezeigt - davor ist der Button weiß",
+    "Das Icon lautet: assets/img/icons/new-window_outline.svg",
+    "AC2: In der GGS Teilauftragskachel wird unter der KLS-ID auch die FOL-ID angezeigt",
+    "AC3: Mit Klick öffnet sich eine neue Seite\nAC3.1: Vollständiger Titel:\n\"Auftragsnachverfolgung <EOS-AuftragsID>\"+ \"Teilauftrag \" + <laufendeTeilauftragsnummer> + <Standort>\n\"Order Tracking<EOS-AuftragsID>\" + \"Partial Order\" + <laufendeTeilauftragsnummer> + <Standort>\nAC3.2: Darunter werden das Partnersystemsowie externe Teilauftragsnummer angezeigt",
+    "AC3.1: Vollständiger Titel:\n\"Auftragsnachverfolgung <EOS-AuftragsID>\"+ \"Teilauftrag \" + <laufendeTeilauftragsnummer> + <Standort>\n\"Order Tracking<EOS-AuftragsID>\" + \"Partial Order\" + <laufendeTeilauftragsnummer> + <Standort>",
+    "\"Auftragsnachverfolgung <EOS-AuftragsID>\"+ \"Teilauftrag \" + <laufendeTeilauftragsnummer> + <Standort>",
+    "\"Order Tracking<EOS-AuftragsID>\" + \"Partial Order\" + <laufendeTeilauftragsnummer> + <Standort>",
+    "AC3.2: Darunter werden das Partnersystemsowie externe Teilauftragsnummer angezeigt"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI28",
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Nachverfolgung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5401386/Nachverfolgung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-14T07:25:27.176+01:00"
+    },
+    {
+      "filename": "POT_Data_Exchange.jpg",
+      "url": "https://jira.telekom.de/secure/attachment/5455183/POT_Data_Exchange.jpg",
+      "mime_type": "image/jpeg",
+      "size": "",
+      "date": "2025-03-03T09:21:08.710+01:00"
+    },
+    {
+      "filename": "Start Nachverfolgung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5401385/Start%20Nachverfolgung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-14T07:24:55.957+01:00"
+    }
+  ]
+}

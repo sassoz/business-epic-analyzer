@@ -1,0 +1,89 @@
+{
+  "key": "MAGBUS-99497",
+  "issue_type": "Portfolio Epic",
+  "title": "ADCL: Bestands- & Änderungsgeschäft CRM-T (Umzug, Kündigung/Neu + Storno)",
+  "status": "In Progress",
+  "description": "Description\nDas IT-System „Flamingo“, ein Angebots- und Auftragskonfigurator, soll in der Lage sein, die Geschäftsfälle Umzug, Produktwechsel sowie Kündigung/Neubereitstellung und Storno für das Festnetzgeschäft vollständig und effizient abzubilden. Ziel ist es, eine benutzerfreundliche und automatisierte E2E-Prozessführung zu gewährleisten, die alle relevanten Daten berücksichtigt und eine reibungslose Abwicklung sicherstellt.\n1. Geschäftsvorfall Umzug:\nEs soll der Geschäftsfall \"Umzug\" für das Fixed Net Portfolio (CRM-T) umgesetzt werden. Dies inkludiert die Realisierung von Kündigung/Neu = Kündigung des Altprodukts am Altstandort und Neubereitstellung am neuen Standort. \nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2361048623\nVariante 1) Umzug nach TKG (keine Änderung Vertragslaufzeit) = Relocation without Product Change\nVariante 2) Kündigung+Neu: 2 Geschäftsfälle aktuell nicht separiert (keine Implementierung 2025 seitens Flamingo)\n2. Geschäftsvorfall Produktwechsel:\nEs soll der Geschäftsfall \"Produktwechsel\" für das Fixed Net Portfolio (CRM-T) umgesetzt werden. Dies inkludiert die Realisierung von Kündigung/Neu = Kündigung des Altprodukts  und Neubereitstellung des neuen Produktes. \nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2361048623\n3. Geschäftsvorfall Storno durch Flamingo/\"Flamingo-induzierter Gesamtauftragsstorno in O3\":\nFlamingo-Angebote, die an Flamingo zurückgegeben wurden, können in Flamingo verworfen werden und führen in O3 zum einem Storno der abhängigen Gesamtaufträge und der zughörigen Teilaufträge. Das gilt nur für Aufträge, die noch nicht an EOS zur Weiterverarbeitung abgegeben wurden. \nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2361048623\n ",
+  "business_value": {},
+  "assignee": "Volker Schmidt",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "E2E-Umsetzung des Geschäftsfalls \"Umzug\" über alle CRM-T Festnetzprodukte hinweg",
+    "E2E-Umsetzung des Geschäftsfalls \"Produktwechsel\" über alle CRM-T Festnetzprodukte hinweg",
+    "Ermöglichung des Sondergeschäftsfalls \"Kündigung/Neu\" in Kontext Umzug und Produktwechsel",
+    "Vorerst müssen die Aufträge mit Umzug und Kündigung/Neu an die Orderform übergeben werden, bis bei EOS https://jira.telekom.de/browse/MAGBUS-92774 zur Vervollständigung dieser Aufträge umgesetzt."
+  ],
+  "components": [],
+  "labels": [
+    "ACDL-PI27",
+    "DigiHub_DOM",
+    "O3",
+    "O3-POM",
+    "PI27"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-12638",
+      "title": "ADCL-12638",
+      "summary": "Implement O3 total order cancellation API",
+      "url": "https://jira.telekom.de/browse/ADCL-12638",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12390",
+      "title": "ADCL-12390",
+      "summary": "Implement batch processing for oPOM total order cancellation API and activate for Midmarket",
+      "url": "https://jira.telekom.de/browse/ADCL-12390",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-88360",
+      "title": "MAGBUS-88360",
+      "summary": "Voice: Produktwechsel (ohne Mengen- Staffelpreise) in der EOS Vervollständigung",
+      "url": "https://jira.telekom.de/browse/MAGBUS-88360",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11498",
+      "title": "ADCL-11498",
+      "summary": "[Voice] Partial order cancellation for FXN",
+      "url": "https://jira.telekom.de/browse/ADCL-11498",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11443",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11443",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11444",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11444",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11496",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11496",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11584",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11584",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

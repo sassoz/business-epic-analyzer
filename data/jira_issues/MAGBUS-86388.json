@@ -1,0 +1,51 @@
+{
+  "key": "MAGBUS-86388",
+  "issue_type": "Epic",
+  "title": "[NGMobile][Options] Identification and Delivery of Included/Discounted Tariff Options",
+  "status": "Closed",
+  "description": "Description\nDescription: Develop a solution to identify and deliver all bookable options for a specific selected tariff, focusing on distinguishing between included options (priced at 0€) and discounted options. This requires comparing prices from the Nepal system and the Carmen list to identify discrepancies due to varying contexts. The solution will ensure that customers receive accurate information about available tariff options, highlighting any special pricing or included benefits.\nAcceptance Criteria:\nAccurately identify and list all bookable options for the selected tariff.\nOnly display options that are not included (0€) but could be discounted.\nVerify option pricing against Nepal and Carmen systems to account for context-specific variations.\nPotentially Open:\nroleType in the request?\nPerformance improvements?\ncan we identify relevant options properly\nthere might be a better way to identify included/discounted options... CCOS?\nAll in one request?\ndistinguishable? \nDetails:\nIncluded Options are shown to the customer like this: ",
+  "business_value": {},
+  "assignee": "Holger Peters",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "Accurately identify and list all bookable options for the selected tariff.",
+    "Only display options that are not included (0€) but could be discounted.",
+    "Verify option pricing against Nepal and Carmen systems to account for context-specific variations.",
+    "distinguishable?",
+    "Options",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "MB_Phoenix",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2025-03-03-11-55-31-393.png",
+      "url": "https://jira.telekom.de/secure/attachment/5456276/image-2025-03-03-11-55-31-393.png",
+      "mime_type": "image/png",
+      "size": "126 kB",
+      "date": "2025-03-03T11:55:31.631+01:00"
+    }
+  ]
+}

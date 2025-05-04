@@ -1,0 +1,114 @@
+```json
+{
+  "epicId": "BEMABU-2051",
+  "title": "Q1 2025 EOS Workflow: Inhouse Vervollständigung Erweiterungen",
+  "ziele": {
+    "gesamtziel": "Erweiterung der AGB-Kette mit Features, damit MitarbeiterInnen aus SGrK das Bearbeiten von Aufträgen direkt in EOS durchführen können, ohne manuell in den Produktionsstraßen CRM-T, SeCe-IT und FTTH arbeiten zu müssen. Dies soll bis zum 10.04.2025 umgesetzt werden und zu einem schnelleren und besseren Serviceprozess führen.",
+    "einzelziele": [
+      "Übermittlung der Bemerkungsfelder nach SeCe-IT und zu EOS (MAGBUS-98756)",
+      "Übermittlung von Dokumenten nach EOS (MAGBUS-99077)",
+      "Anzeige von Bemerkungen aus SeCe-IT in EOS (EOS-6612)",
+      "Anzeige der Angebotsdokumente aus SeCe-IT Direktaufträge in EOS (EOS-6618)",
+      "Integration von SeCe-IT Dokumenten in IRRP-eMails (ADCL-12453)"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Das Vorhaben schafft durch die optimierte Arbeit mit EOS einen schnelleren und auch besseren Serviceprozess, welcher in Aufwandsreduzierung resultiert."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Optimierung von Schlüsselfunktionalitäten sowie zur Umsetzung fehlender Geschäftsvorfälle und Erhöhung der End-to-End-Integration über die AGB-Kette. Die Nutzer arbeiten schneller und effizienter im System, können dadurch mehr Zeit für die Beratung der Kunden aufwänden."
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Für die MitarbeiterInnen aus SGrK, die täglich mit EOS arbeiten, ist es notwendig, dass diese AGB-Kette mit Features erweiter wird."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-98756",
+      "titel": "Inhouse: Anzeige von Bemerkungen aus SeCe-IT",
+      "funktionalitäten": [
+        "Bemerkungen (Infos) eines SeCe-IT Vorgangs werden nach EOS übertragen und dort angezeigt",
+        "In EOS können Bemerkungen für den Innendienst oder Außendienst Techniker, AUDI und alle anderen SeCe-IT Rollen hinterlegt werden, die nach SeCe-IT übergeben werden",
+        "Bemerkungen können sowohl am Teilauftrag als auch am Gesamtauftrag hinterlegt werden",
+        "Bei Änderungsaufträgen wird das Feld \"Artikel Text\" aus SeCe-IT nach EOS übermittelt"
+      ]
+    },
+    {
+      "id": "MAGBUS-99077",
+      "titel": "Inhouse: Anzeige der Angebotsdokumente aus SeCe-IT Direktaufträge",
+      "funktionalitäten": [
+        "SeCe-IT Angebotsdokumente werden für SeCe-IT Direktaufträge als Anhang am EOS Vorgang angezeigt",
+        "Archivierungspflichtige Dokumente (wie SMN, etc.) werden nach EOS übermittelt und dort in DMS archiviert",
+        "In EOS hinterlegte Dokumente werden an SeCe-IT übergeben, um diese für weitere SeCe-IT Bearbeiter zugänglich zu machen",
+        "O3 ruft das Angebotsdokument bei SeCe-IT ab, um es als Datei mit an die IRRP Mail des Auftrags zu hängen"
+      ]
+    },
+    {
+      "id": "EOS-6612",
+      "titel": "Info-Reiter von SeCe-IT in EOS anzeigen/ Information for History from SeCe-IT Orders to EOS",
+      "funktionalitäten": [
+        "Der Informationsreiter aus SeCe-IT wird in EOS angezeigt und chronologisch in den Auftragsverlauf integriert",
+        "Neue Spalte \"Anlagen\" für Dokumente in den SeCe-IT Infos mit Download-Funktion",
+        "Bearbeiter, E-Mailadresse und Resort werden mit an EOS übergeben und angezeigt",
+        "Anzeige in separater Tabelle mit Titel \"Auftragsverlauf SeCe-IT\""
+      ]
+    },
+    {
+      "id": "EOS-6618",
+      "titel": "SeCe-IT Dokumente bei Direktaufträgen importieren und archivieren",
+      "funktionalitäten": [
+        "Das Angebots-Dokument aus SeCe-IT wird in EOS wie bei Flamingo Angeboten angezeigt",
+        "Nach dem Start der Auftragsbearbeitung sind die Dokumente aus SeCe-IT als Anlagen am EOS-Auftrag hinzugefügt",
+        "Nach dem Import eines SeCe-IT-Teilauftrags werden noch nicht hinzugefügte Dokumente als Anlagen am EOS-Auftrag ergänzt",
+        "Die Dokumente, die über SeCe-IT an EOS gegangen sind, werden aus EOS heraus archiviert"
+      ]
+    }
+  ],
+  "domainsAndITApplications": [
+    "EOS",
+    "SeCe-IT",
+    "O3",
+    "CRM-T",
+    "FTTH",
+    "DMS"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit zwischen EOS und SeCe-IT für die Übermittlung von Bemerkungen und Dokumenten",
+    "Abhängigkeit von O3 für die Integration der SeCe-IT Dokumente in IRRP-eMails",
+    "Zeitliche Diskrepanz: MAGBUS-99077 hat ein geplantes Ende am 30.06.2025, während das Business Epic BEMABU-2051 bereits am 10.04.2025 enden soll",
+    "Mehrere Teams müssen koordiniert zusammenarbeiten (EOS, SeCe-IT, O3)",
+    "Abhängigkeit von Schnittstellen wie dem Product Ordering Service"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-01-09",
+    "umsetzungsende": "2025-04-10",
+    "fixVersions": ["Q2_25", "PrioQ1_25", "Q1_25", "PI27", "PI27-stretch", "6.18.1", "PI 28"],
+    "meilensteine": [
+      {
+        "id": "EOS-6612",
+        "beschreibung": "Info-Reiter von SeCe-IT in EOS anzeigen",
+        "zeitraum": "31.01.2025 - 13.03.2025"
+      },
+      {
+        "id": "EOS-6618",
+        "beschreibung": "SeCe-IT Dokumente bei Direktaufträgen importieren und archivieren",
+        "zeitraum": "31.01.2025 - 13.03.2025"
+      },
+      {
+        "id": "SECEIT-2914",
+        "beschreibung": "Product Ordering Service - REA I und Test/Abnahme",
+        "zeitraum": "30.01.2025 - 12.03.2025"
+      },
+      {
+        "id": "ADCL-12453",
+        "beschreibung": "Go-Live of SeCe-IT offer documents implementation into IRRP-eMails for EOS",
+        "zeitraum": "04.04.2025 - 15.05.2025"
+      }
+    ]
+  }
+}
+```

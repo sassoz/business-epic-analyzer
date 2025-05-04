@@ -1,0 +1,26 @@
+{
+  "key": "MAGBUS-98639",
+  "issue_type": "Epic",
+  "title": "MBSP [BM 5. Gen] Adapt L-PIM for Business Mobil 5. Gen",
+  "status": "Closed",
+  "description": "Description\nAdapt L-PIM for Business Mobil 5. Gen",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 26"
+  ],
+  "acceptance_criteria": [
+    "MBSP L-PIM supports handling of Business Mobil 5. Gen"
+  ],
+  "components": [],
+  "labels": [
+    "GK-Kundencenter,",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

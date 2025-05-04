@@ -1,0 +1,24 @@
+{
+  "key": "EOS-6880",
+  "issue_type": "Epic",
+  "title": "LOM to MAPI: Teilauftrag vervollständigen - Teil 1 Pflichtaufgaben fürs Versenden zur Nacharbeit",
+  "status": "Funnel",
+  "description": "Description\n Story\nAls User,\nmöchte ich mit den MAPIs umgehen können wir vorher über den LOM,\num in Zukunft weiter CRM-T Aufträge über EOS Vervollständigen zu können .\n   Fragen / Hinweise:\n...",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "2025-04-25",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI28-stretch"
+  ],
+  "acceptance_criteria": [
+    "Die Initialen Aufgaben die für das erste Versenden in Nacharbeit benötigt werden sind angepasst und können mit den MAPI Funktionalitäten umgehen\nWelche sind das?",
+    "Welche sind das?"
+  ],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

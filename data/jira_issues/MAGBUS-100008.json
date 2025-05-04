@@ -1,0 +1,32 @@
+{
+  "key": "MAGBUS-100008",
+  "issue_type": "Epic",
+  "title": "Flamingo: VP-Nummern Validierung",
+  "status": "Closed",
+  "description": "Description\nZiel:\nAufnahme der VP-Validierung in den Flamingo zur Validierung, bevor die VP-Nummer in die nachfolgende Order Orchestration geht. \nUm die Fehlerquelle rund um die VP-Nummern Validierung zu reduzieren, soll die Validierung bereits vor der Order Orchestration durchgeführt werden.\nFolgende Punkte sollen mit dieser Validierung erfüllt werden:\nImplementierung der VP-Nummer Validierung im Flamingo auf Basis zur Verfügung gestellter Daten (Favorit: automatischer Input)\nAbschaltung der Validierung im o3 POM\nOptimierung der Validierung im LOM (Vermeidung einer Rückvalidierung von VO zu VP)\nSolution Intent geplant:\n06.11.2024 --> Scoping\n04.12.2024 --> Draft Solution Design\n06.12.2024 --> Final Solution Design\nLink: https://wiki.telekom.de/display/MBFY/VP-number+validation",
+  "business_value": {},
+  "assignee": "El Azzaoui, Karim",
+  "priority": "",
+  "target_start": "2025-01-30",
+  "target_end": "2025-03-12",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "Implementierung der VP-Nummer Validierung im Flamingo auf Basis zur Verfügung gestellter Daten (Favorit: automatischer Input)",
+    "Abschaltung der Validierung im o3 POM",
+    "Optimierung der Validierung im LOM (Vermeidung einer Rückvalidierung von VO zu VP)"
+  ],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

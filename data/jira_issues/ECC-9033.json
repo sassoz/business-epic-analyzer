@@ -1,0 +1,40 @@
+{
+  "key": "ECC-9033",
+  "issue_type": "Initiative",
+  "title": "CPBX 2.0 - Skip hidden admin creation in BWKS",
+  "status": "In Progress",
+  "description": "",
+  "business_value": {},
+  "assignee": "Markus Schulze",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "MBC PI26"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    },
+    {
+      "code": "Technik",
+      "title": "Technik "
+    }
+  ],
+  "labels": [
+    "MBC"
+  ],
+  "realized_by": [
+    {
+      "key": "ECC-9034",
+      "title": "ECC-9034",
+      "summary": "CPBX 2.0 - Skip hidden admin creation in BWKS",
+      "url": "https://jira.telekom.de/browse/ECC-9034",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

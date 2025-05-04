@@ -1,0 +1,64 @@
+{
+  "key": "MAGBUS-98756",
+  "issue_type": "Portfolio Epic",
+  "title": "Inhouse: Anzeige von Bemerkungen aus SeCe-IT",
+  "status": "In Progress",
+  "description": "Description\n Story\nAls EOS Vervollständiger\nmöchte ich Bemerkungen am SeCe-IT Auftrag und Angebotsdokumente direkt in EOS sehen können,\num mir den Absprung nach SeCe-IT zu sparen.\n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)\nAktuell müssen diese Infos noch manuell in CRM-T eingesehen werden. \nFachlicher Lösungswunsch (Feature Hypothese)\nAnzeige in EOS direkt am Auftrag. \nWichtige Fachexperten (Key subject matter experts)\n...\nWie sieht der Prozess heute aus? Wie sieht der Prozess künftig aus?\ngrafische Prozessdarstellung Vorher Nachher\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nUseCases/Testcases \nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\nWichtige Ansprechpartner\n        ",
+  "business_value": {},
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "2025-01-10",
+  "target_end": "2025-04-03",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "ACC1: Die Bemerkungen (Infos) eines SeCe-IT Vorgangs (Info Reiter) werden nach EOS übertragen und dort angezeigt.",
+    "ACC2: In EOS können Bemerkungen für den Innendienst oder Außendienst Techniker, AUDI und alle anderen SeCe-IT Rollen hinterlegt werden (z.B. bei der Terminierung), die nach SeCe-IT übergeben und dort unter dem Info Riter angezeigt werden",
+    "ACC3: Es können Bemerkungen sowohl am Teilauftrag als auch am Gesamtauftrag hiterlegt werden",
+    "NEU ACC4:  Bei Änderungsaufträgen wird das Feld \"Artikel Text\" aus SeCe-IT nach EOS übermittelt (ist nötig, da man ansonsten nicht erkennen kann für welches Bestandsprodukt die Änderung oder der Umzug durchgeführt wird)"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "SeCe-IT",
+      "title": "SeCe-IT "
+    }
+  ],
+  "labels": [
+    "27.3",
+    "DigiHub_DOM",
+    "EOS",
+    "PI27",
+    "SeCe-IT"
+  ],
+  "realized_by": [
+    {
+      "key": "EOS-6612",
+      "title": "EOS-6612",
+      "summary": "Info-Reiter von SeCe-IT in EOS anzeigen/ Information for History from SeCe-IT Orders to EOS",
+      "url": "https://jira.telekom.de/browse/EOS-6612",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-2914",
+      "title": "SECEIT-2914",
+      "summary": "Product Ordering Service - REA I und Test/Abnahme",
+      "url": "https://jira.telekom.de/browse/SECEIT-2914",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5240780/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "245 kB",
+      "date": "2024-12-19T11:16:44.461+01:00"
+    }
+  ]
+}

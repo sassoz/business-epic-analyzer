@@ -1,0 +1,75 @@
+{
+  "key": "BEMABU-1831",
+  "issue_type": "Business Epic",
+  "title": "Q1: Permission Handling for all accounts (incl. Internal) - Technical Enabler",
+  "status": "In Progress",
+  "description": "Description\nSituation as is\nToday internal employees or partners can not use the benefits of the MBSP UI because it was build as selfservice portal only. \nPermission Handling for all accounts (incl. Internal) content:\nWith this EPIC we create new roles that enable the use of MBSP functionalities - that are developed in the carmen scale down initative plus other connected initiatives - by internal employees (sales&service) and partners\nthe roles define witch mode of the use cases are displayed to internal employees (sales&service) and partners\ninternal & partners will e.g. see a professional mode that is has more booking and change opportunities than the customer mode\nwith this opportunity we ensure that each mobile product order or change can be only developed once, but then be user specificly displayed\nAdditionally full accessbility is implemented\nthis initiative and EPIC is fully depend on the step by step new development in the initiative carmen scale down\nthe carmen scale down develops in Q1/2025 the Optimized generic New Mobile Business Order Process\ntherefore the new permission handling will be first connected to this new process only\nwithin carmen scale we develop one new process after another so that each new process gets the the permission\nTo enable internal users & partners early the use of the new functionalities from carmen scale down we replace the old functionalities in the today by internal users & partners used legacy BSP by the new carmen scale down functionalities - connected with the rights and roles.\nThat means that the internal users & partners will be using step by step more and more new carmen scale functionalities via legacy before we fullfil the full step into MBSP that requieres e.g. customer service dashboard, customer search and more.\nAs of now, we will deploy the first new use case \"Optimized generic New Mobile Business Order Process\" in Q2 to legacy for  internal users & partners\n  Implementation Sketch: \nReview Role Concept of BSP and align on Roles which shall be available in the future in the CAIMAN roleshop\nConnect MBSP to EntraID\nImplement some kind of Quickfinder in MBSP\nMap Sales & Service roles in BCPS to respective SIGN accounts\nExtend BCPS and MBSP to act on behalf of other users",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "Nicht spezifiziert",
+      "cost_saving": "Reduzierung von Entwicklungsaufwand durch einmalige Entwicklung von Funktionen",
+      "risk_loss": "Nicht spezifiziert",
+      "justification": "Durch die Erweiterung des MBSP für interne Mitarbeiter und Partner wird die Effizienz gesteigert, da jede mobile Produktbestellung oder -änderung nur einmal entwickelt werden muss und dann benutzerspezifisch angezeigt werden kann."
+    },
+    "strategic_enablement": {
+      "scale": 4,
+      "risk_minimization": "Reduzierung von Legacy-Systemen",
+      "strat_enablement": "Ermöglicht die schrittweise Migration von Legacy BSP zu MBSP für interne Mitarbeiter und Partner",
+      "justification": "Das Projekt ist Teil der Carmen Scale Down Initiative und ermöglicht die strategische Nutzung neuer Funktionalitäten durch interne Mitarbeiter und Partner, bevor die vollständige Migration zu MBSP erfolgt."
+    },
+    "time_criticality": {
+      "scale": 3,
+      "time": "Q2 2025 für erste Implementierung des 'Optimized generic New Mobile Business Order Process'",
+      "justification": "Die Implementierung ist zeitkritisch, da sie von der schrittweisen Entwicklung in der Carmen Scale Down Initiative abhängt, die in Q1/2025 beginnt."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Möller, Martin",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "Q1_25",
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C14",
+      "title": "C14 Enterprise Services und Angebots Prozesse"
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "GK_Kundencenter",
+    "Operations",
+    "Roadmap.2025.VSDT"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-100445",
+      "title": "MAGBUS-100445",
+      "summary": "Process Starter",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100445",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-99840",
+      "title": "MAGBUS-99840",
+      "summary": "Expansion of BCPS Service with SPRM Integration",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99840",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

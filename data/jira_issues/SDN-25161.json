@@ -1,0 +1,29 @@
+{
+  "key": "SDN-25161",
+  "issue_type": "Epic",
+  "title": "PANDA - Exploration DIVE in Solutions Business",
+  "status": "Backlog",
+  "description": "Description\nD!VE is a tool which is currently connected to Flamingo and used for standard business. The tool enables the users to request offers by presuppliers or to upload offers by presuppliers, then give those offers to Flamingo. When a quote is won, the information needs to be given back to D!VE as D!VE is integrated into the order flow. \nFor PANDA two integration ways are possible, depending on business decisions regarding the current Flamingo integration:\nCopy the Flamingo integration (as D!VE can not deal with two different processes) \nIntegrate D!VE analogous to the current RPK integration in Integrated offer\n--> The decision will be met before the start of this exploration \n  Todos\nAlign on process between PANDA and D!VE on basis of the decision by the Initiative Owner --> Márk, Anastasiia, Patricia \nCreate UX process --> Márk\nCreate process workflow --> Anastasiia\nReview current Flamingo API and deduce PANDA interface from it\nCreate datamapping for an import from D!VE --> Anastasiia \nCheck if Lotex Data can be handed over to D!VE from PANDA in case of win --> Initiative Owner, Patricia, Thorsten Gansen (later step)\n      Change Issue Name\nChange Epic Name \nAdd description\nadd Business scope\nadd accpetance criteria\nadd SAFE value type\nadd compliance\nadd delivery type\nAdd affect Version\nadd initiative \nadd CoD (Business Value + RROE + time Criticality)\nadd Job size\n  add fix version (if pulled)\nset target End date (if pulled)\n      DOR Status Comment\nAcceptance criteria are defined.    \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts    \nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA    \nDependencies are identified and there are no external dependencies that can´t be solved within the ART    \nNon-functional requirements (NFR) are identified.    \nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter     \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on    \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs    \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation    \nProcess dependency / adaptations has been defined    ",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2025-05-01",
+  "target_end": "2025-07-02",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "Architectural definition: PANDA-D!VE integration with Flamingo Logic or RPK Logic",
+    "Design a user journey how dive pre-provider parts can be added to a quote",
+    "Design a process how dive pre-provider part can be added to a quote",
+    "Define and clarify the scope of an implementation with all stakeholders",
+    "(Review the existing DIVE API (from Flamingo))"
+  ],
+  "components": [],
+  "labels": [
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

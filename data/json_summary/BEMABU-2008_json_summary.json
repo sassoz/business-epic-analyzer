@@ -1,0 +1,158 @@
+```json
+{
+  "epicId": "BEMABU-2008",
+  "title": "Next Gen Voice - AI-Powered Business Line (MVP)",
+  "ziele": {
+    "gesamtziel": "Integration von KI-Funktionen in die GK-Festnetzanschlüsse der Telekom, um Geschäftskunden durch automatische Gesprächszusammenfassungen zu unterstützen. Die KI erstellt Zusammenfassungen von Telefonaten und sendet diese per E-Mail an den Kunden. Das MVP soll bis September 2025 bereitgestellt werden und bei der Digital X 2025 präsentiert werden.",
+    "einzelziele": [
+      "Ermöglichung der Sammelbuchung des AI-Features für mehrere Arbeitsplätze in einem Buchungsvorgang",
+      "Bereitstellung des Produktkerns mit Aktivierungs- und Deaktivierungsfunktionen während eines Gesprächs",
+      "Implementierung eines internen Reportings für Voice AI Notes über DWH",
+      "Integration des Zusatzpakets Voice AI Notes in Flamingo für die Angebotserstellung",
+      "Aufnahme des Voice AI Notes Zusatzpakets in den CloudPBX Konfigurator",
+      "Entwicklung eines Support-Konzepts für AI Powered Business Line",
+      "Bereitstellung eines neuen CloudPBX Zusatzpakets auf Arbeitsplatzebene"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "AI Feature am Anschluss stützt das Festnetzgeschäft mit einem erwarteten Umsatz von 4.800.000 €"
+    },
+    "strategicEnablement": {
+      "skala": 20,
+      "beschreibung": "Ist Teil der 6+1 Handlungssfelder und von großer strategischer Bedeutung für die gesamte DTAG oder Kern der Momentum Hotspots"
+    },
+    "timeCriticality": {
+      "skala": 13,
+      "beschreibung": "MVP soll zur Digital X 2025 bereitstehen, geplanter Umsetzungszeitraum: Start 11/2024, Ende/Launch 09/2025"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "ECC-9783",
+      "titel": "AIPBL Sammelbuchung mehrere Arbeitsplätze",
+      "funktionalitäten": [
+        "Buchung des AI-Features für mehrere vom Administrator ausgewählte Arbeitsplätze in einem Buchungsvorgang",
+        "Analog zu anderen Zusatzpaketen an der CloudPBX"
+      ]
+    },
+    {
+      "id": "ECC-9745",
+      "titel": "Beschreibt den Produktkern und seine Funktionen",
+      "funktionalitäten": [
+        "Nutzung des AI-Features während jedes Calls an der CloudPBX Festnetz-Rufnummer und an der per M1B integrierten Mobilfunknummer",
+        "Aktivierung und Deaktivierung der Funktion während eines Gesprächs mittels Tastenkombination",
+        "Automatische Ansagen für alle Gesprächsteilnehmer bei Aktivierung und Deaktivierung",
+        "Erstellung von Gesprächszusammenfassungen für den aktivierten Teil des Gesprächs"
+      ]
+    },
+    {
+      "id": "ECC-9746",
+      "titel": "internes Reporting AIPBL - Voice AI Notes",
+      "funktionalitäten": [
+        "Übermittlung der Voice AI Notes Materialnummern und Anzahl der Buchungen an DWH",
+        "Nutzung der Schnittstelle zu DWH für Auswertungen über Buchung und Nutzung von Voice AI Notes"
+      ]
+    },
+    {
+      "id": "ECC-9827",
+      "titel": "Voice AI Notes Zusatzpaket in Flamingo",
+      "funktionalitäten": [
+        "Abbildung des Materials \"Zusatzpaket Voice AI Notes\" in Flamingo",
+        "Erstellung von Angeboten für Kunden mit dem Zusatzpaket",
+        "Buchung in Verbindung mit einer CompanyFlex CloudPBX"
+      ]
+    },
+    {
+      "id": "SECEIT-3054",
+      "titel": "Voice AI Notes als Zusatzpaket in den CloudPBX Konfigurator aufnehmen",
+      "funktionalitäten": [
+        "Integration des neuen Zusatzpakets 50356512 - Zusatz-Paket Voice AI Notes in den Konfigurator von Company Flex CloudPBX"
+      ]
+    },
+    {
+      "id": "ECC-9744",
+      "titel": "AIPBL: new Cloud PBX additional package on workplace level",
+      "funktionalitäten": [
+        "Buchung des AI Powered Business Line Zusatzpakets auf Arbeitsplatzebene im BSP Portal",
+        "Konfiguration der Funktion durch den Nutzer",
+        "Automatische Aktivierung nach Buchung",
+        "Übertragung von Parametern an BWKS und STEAM auf OTC",
+        "Bereitstellung von FAC für Call Recording",
+        "Implementierung eines Zustimmungsdialogs für Datenschutz und Nutzungsbedingungen"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Vertrieb kann Zusatzpaket für CoFlex CloudPBX ins Angebot über Flamingo oder SeCe-IT aufnehmen. ZMP (50356512 - Zusatz-Paket Voice AI Notes) bitte in Flamingo und SeCe-IT aufnehmen. Nachtrag am 28.3.25",
+    "Buchung/ Kündigung und Konfiguration im BSP Portal (für Festnetz) im Self Service durch den Kunden am Arbeitsplatz der CloudPBX",
+    "Kunde erhält Buchungsbestätigung per E-Mail",
+    "Provisionierung in der Technik",
+    "Reporting gebuchte Pakete über DWH",
+    "Aktivieren und deaktivieren der Option über FAC während des laufenden Telefonats",
+    "Alle Gesprächsteilnehmer hören eine Ansage",
+    "Unser Telekom Kunde erhält nach Ende des Gesprächs eine Zusammenfassung per E-Mail",
+    "Nutzung der Funktion am Handy, nur durch M1B Integration",
+    "Der Nutzer kann AIPBL während eines Gespräches zu jeder beliebigen Zeit mit einer Tastenkombination auf seinem Endgerät aktivieren und deaktivieren.",
+    "In der Ziellösung ist angedacht, die Funktion mit einem \"wake\" Wort zu steuern",
+    "Nach der Aktivierung muss eine Ansage #1 (Voicefile wird geliefert)  für alle Gesprächsteilnehmer erfolgen.",
+    "Nach der Deaktivierung muss eine Ansage #2 (Voicefile wird geliefert)  für alle Gesprächsteilnehmer erfolgen. Danach stoppt die AI-Funktion und die Zusammenfassung enthält nur den Teil zwischen Aktivierung und Deaktivierung",
+    "Sobald die Funktion in einem Gespräch aktiviert wurde, läuft sie bis zum Ende des Gesprächs, sofern sie nicht manuell per Tastenkombination aufgehoben wird.",
+    "Nur der CloudPBX Nutzer kann diese Funktion steuern.",
+    "Die AI Zusammenfassung wird nur für den Teil des Gespräches erstellt, wo die Funktion aktiviert war.",
+    "Bei jeder Erweiterung des Gespräches um weitere Teilnehmer, müssen diese, die Aktivierungs-Ansage #1 (s.o.) vorgespielt bekommen, sobald sie dem Gespräch beitreten. (betrifft Dreierkonferenz, Rückfrage und Weiterleitung).",
+    "Sobald der CloudPBX Nutzer das Konferenzgespräch verlässt endet die AI Funktion.",
+    "Hat ein Arbeitsplatz die Assistenzfunktion gebucht, so muss sowohl dieser Arbeitsplatz als auch des Leitenden die AI Funktion buchen, damit die Assistenz dies für den Leitenden nutzen kann. AI Funktion ist nicht übertragbar.",
+    "Die Gruppenfunktion kann die AI Funktion nicht zubuchen, die Arbeitsplätze der Nutzer müssen diese Funktion buchen."
+  ],
+  "domainsAndITApplications": [
+    "C4/BSP/OLAF-UC DOM0201",
+    "Flamingo DOM0201",
+    "SeCe-IT DOM0201",
+    "T-SOV/T-VM(Voice)",
+    "BWKS",
+    "STEAM auf OTC",
+    "DMS (Document Management System)"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Bereitstellung der Voice-Files für die Ansagen bei Aktivierung und Deaktivierung",
+    "Abhängigkeit von der Integration mit M1 Business für die mobile Nutzung",
+    "Risiko bei der Implementierung der Zustimmungsdialoge für Datenschutz und Nutzungsbedingungen",
+    "Abhängigkeit von der rechtzeitigen Bereitstellung der Materialnummer 50356512 in allen relevanten Systemen",
+    "Zeitliche Abhängigkeit zur Digital X 2025, bei der das MVP präsentiert werden soll"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2024-12-17",
+    "umsetzungsende": "2025-10-31",
+    "fixVersions": ["Q3_25"],
+    "meilensteine": [
+      {
+        "id": "ECC-9746",
+        "beschreibung": "Internes Reporting AIPBL - Voice AI Notes",
+        "zeitraum": "2025-03-13 bis 2025-09-08"
+      },
+      {
+        "id": "ECC-9827",
+        "beschreibung": "Voice AI Notes Zusatzpaket in Flamingo",
+        "zeitraum": "2025-04-02 bis 2025-08-01"
+      },
+      {
+        "id": "SECEIT-3054",
+        "beschreibung": "Voice AI Notes als Zusatzpaket in den CloudPBX Konfigurator aufnehmen",
+        "zeitraum": "2025-03-26 bis 2025-05-16"
+      },
+      {
+        "id": "ECC-9711",
+        "beschreibung": "AI Powered Business Line: Support Concept Design",
+        "zeitraum": "Ab 2025-01-27"
+      },
+      {
+        "id": "ECC-9744",
+        "beschreibung": "AIPBL: new Cloud PBX additional package on workplace level",
+        "zeitraum": "Ab 2025-05-12"
+      }
+    ]
+  }
+}
+```

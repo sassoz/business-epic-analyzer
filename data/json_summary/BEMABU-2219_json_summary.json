@@ -1,0 +1,64 @@
+{
+  "epicId": "BEMABU-2219",
+  "title": "LE - AI in MagentaForce (SDR Sales Representative Sales Assist)",
+  "ziele": {
+    "gesamtziel": "Implementierung von KI-gestützten Assistenzfunktionen in MagentaForce für vertrieblich agierende Mitarbeiter aller Verticals, um die Arbeitsqualität zu verbessern, manuelle Recherchetätigkeiten zu reduzieren und Verkaufschancen zu erhöhen. Das Ziel soll bis zum 30.09.2025 erreicht werden.",
+    "einzelziele": [
+      "Bereitstellung eines personalisierten Coachings auf Abruf direkt aus einer Verkaufschance heraus",
+      "Implementierung von Einstein Sales Coach für simulierte Kundengespräche zur Vorbereitung von Kundenterminen",
+      "Entwicklung von KI-geführtem Coaching zur Weiterentwicklung von Fähigkeiten für erfolgreiche Kundenbeziehungen",
+      "Integration von Einstein Sales Coach Agent für realitätsnahe Rollenspiele mit personalisiertem Feedback",
+      "Nutzung von RAG-Technologie zur Simulation von Kundenreaktionen basierend auf CRM-Daten",
+      "Steigerung der Produktivität des Verkaufsteams durch bessere Vorbereitung auf Kundengespräche"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "3,25 Mio EUR Einsparungen (umgerechnet gesparte Arbeitszeit 62.500 EUR/Woche). Einsparung zusätzlicher Salescoaches durch Training von Verkaufsgesprächen mit dem KI Agenten. Effizienzsteigerung: 1 Sales Coach = 200.000 Euro p.a. Ziel ist nicht primär Effizienz, sondern mehr Zeit für Real Selling Time."
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "NPS Steigerung (Mitarbeiterzufriedenheit), Digitale Transformation und Einsatz AI, Erhöhte Verkaufschancen durch Verkaufssteigerung und Umsatzsteigerung."
+    },
+    "timeCriticality": {
+      "skala": 8,
+      "beschreibung": "Geplanter Umsetzungszeitraum: Start 01.07.2025, Ende/Launch 30.09.2025. Kritisch für Erhöhung der Hitrate und NPS Verbesserung."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2219",
+      "titel": "AI in MagentaForce (SDR Sales Representative Sales Assist)",
+      "funktionalitäten": [
+        "Agentforce Sales Coach für personalisiertes Coaching auf Abruf",
+        "Einstein Sales Coach für simulierte Kundengespräche",
+        "Einstein Sales Coach Agent für realitätsnahe Rollenspiele mit personalisiertem Feedback",
+        "Text-zu-Sprache-Umwandlung mittels generativer KI",
+        "RAG-Technologie zur Simulation von Kundenreaktionen basierend auf CRM-Daten",
+        "Rollenspiel-Sitzungen für Angebotspräsentation, Einwandbehandlung und Verhandlung",
+        "RM-Datenintegration für kontextbezogene Informationen",
+        "Autonomer Agent für selbstständige Unterstützung"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Keine Informationen verfügbar"
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce",
+    "DOM0201"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Das Business Epic befindet sich im Status 'Funnel', was auf eine frühe Planungsphase hindeutet",
+    "Zeitliche Abhängigkeit: Geplanter Umsetzungszeitraum von Juli bis September 2025",
+    "Abhängigkeit von der Zusammenarbeit mit Andrej Deckel als Ansprechpartner für MagentaForce",
+    "Abhängigkeit von BEO und Vertretern (Markus Hellmold, Frank Nähring)"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}

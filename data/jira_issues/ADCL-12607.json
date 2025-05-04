@@ -1,0 +1,23 @@
+{
+  "key": "ADCL-12607",
+  "issue_type": "Epic",
+  "title": "[L2M] - Order Decomposition - Handover & KT of Decomposition flow for Change Order",
+  "status": "Backlog",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Shantanu Bhavsar",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-04-24",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-PI28"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,36 @@
+{
+  "key": "MAB-2090",
+  "issue_type": "Epic",
+  "title": "Analyse eRechnung: MWL",
+  "status": "Backlog",
+  "description": "Description\nPortal:MBSP\nCSB post auf TMF678 ",
+  "business_value": {},
+  "assignee": "Jan Bauer",
+  "priority": "",
+  "target_start": "2025-01-02",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "2025-2_committed"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Proton",
+      "title": "Proton "
+    }
+  ],
+  "labels": [
+    "PIP2025-2"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Epic Template BMM_Analyse zur Lösungs-findung für MWL  (KIT TMF 678 ReO).docx",
+      "url": "https://jira.telekom.de/secure/attachment/5265291/Epic%20Template%20BMM_Analyse%20zur%20L%C3%B6sungs-findung%20f%C3%BCr%20MWL%20%20%28KIT%20TMF%20678%20ReO%29.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "237 kB",
+      "date": "2025-01-03T14:32:58.051+01:00"
+    }
+  ]
+}

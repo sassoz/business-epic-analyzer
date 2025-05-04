@@ -1,0 +1,83 @@
+{
+  "key": "BEB2B-295",
+  "issue_type": "Business Epic",
+  "title": "Versandkosten (Mobilfunk-Endgeräte) - Stufe 1 Versandkosten für KMUB, Midmarket und BGE",
+  "status": "Funnel",
+  "description": "Business Scope:\nFür GK-Kunden (hier speziell KMUB-Kunden, Midmarket und BGE) sollen in einem ersten Schritt die Versandkosten erhoben werden.\nDadurch werden Kosten, die die DT im Moment trägt, an den Kunden weitergegeben, so dass der Versand von Geräten kostenneutral wird,\nund nicht die Kosten der DT erhöht.\nDas Vorhaben schafft eine konkrete EBITDA-Margenerhöhung für das Jahr 2025 und darüber hinaus",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "Dadurch werden Kosten, die die DT im Moment trägt, an den Kunden weitergegeben, so dass der Versand von Geräten kostenneutral wird, und nicht die Kosten der DT erhöht.",
+      "risk_loss": "",
+      "justification": "Das Vorhaben schafft eine konkrete EBITDA-Margenerhöhung für das Jahr 2025 und darüber hinaus"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Timo Ramaker",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "In diesem EPIC werden bei KMUB, Midmarket und BGE- Kunden die Versandkosten für die Endgeräte berechnet.",
+    "Die Kosten sollen auf der Endgeräterechnung aufgeführt werden"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0600",
+      "title": "DOM0600 Business Support System (BSS)"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-KMC"
+  ],
+  "realized_by": [
+    {
+      "key": "MOFUDHS-4358",
+      "title": "MOFUDHS-4358",
+      "summary": "GK: Versandkosten (Mobilfunk-Endgeräte, Festnetz und IT-Geschäft) Stufe 1 KMU",
+      "url": "https://jira.telekom.de/browse/MOFUDHS-4358",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEB2B-320",
+      "title": "BEB2B-320",
+      "summary": "Versandkosten für Geschäftskunden (Mobilfunk-Endgeräte, Festnetz und IT-Geschäft)",
+      "url": "https://jira.telekom.de/browse/BEB2B-320",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20241122_Shipping_BC(1).xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5384749/20241122_Shipping_BC%281%29.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "4.39 MB",
+      "date": "2025-02-10T12:54:05.210+01:00"
+    },
+    {
+      "filename": "image-2025-02-10-13-33-50-409.png",
+      "url": "https://jira.telekom.de/secure/attachment/5385388/image-2025-02-10-13-33-50-409.png",
+      "mime_type": "image/png",
+      "size": "98 kB",
+      "date": "2025-02-10T13:33:50.735+01:00"
+    }
+  ]
+}

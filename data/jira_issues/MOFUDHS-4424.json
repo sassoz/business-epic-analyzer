@@ -1,0 +1,27 @@
+{
+  "key": "MOFUDHS-4424",
+  "issue_type": "Epic",
+  "title": "GK: Rabattierte EG Versandkosten in BOSS",
+  "status": "Waiting",
+  "description": "Description\nWir benötigen in BOSS die Möglichkeit der Preisüberschreibung bei EG-Versandkosten, da das Offer in CARMEN (dort ist es heute noch möglich) demnächst rausgenommen wird.",
+  "business_value": {},
+  "assignee": "Csilla Író",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "MPP_25.3",
+    "MPP_25.4"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Scrungary",
+      "title": "Scrungary "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

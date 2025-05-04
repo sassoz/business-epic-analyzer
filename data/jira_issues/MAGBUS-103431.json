@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-103431",
+  "issue_type": "Epic",
+  "title": "MF: LE-NPS-Maßnahmen/LE-User Feedback Q2 (Kleinstmaßnahmen)",
+  "status": "Backlog",
+  "description": "Description\nIn diesem Epic sollen alle Maßnahmen enthalten sein, die Improvements nach D1R für die Seller liefern\n  Basis der Auswahl ist die abgestimmte Liste unter https://wiki.telekom.de/display/MBFY/LE+Day+2\n ",
+  "business_value": {},
+  "assignee": "Hesse, Mike",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 28 stretch"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF",
+    "MB_MF_T1",
+    "MB_MF_T2"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

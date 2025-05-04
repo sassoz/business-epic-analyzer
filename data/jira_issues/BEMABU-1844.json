@@ -1,0 +1,67 @@
+{
+  "key": "BEMABU-1844",
+  "issue_type": "Business Epic",
+  "title": "KI@MagentaForce – Standard Feature (Inbetriebnahme von Funktionen innerhalb bestehender Lizenzen)",
+  "status": "Closed",
+  "description": "Description\nAls erster strategischer Schritt, um das zentrale Thema \"Künstliche Intelligenz\"  in das zentrale CRM-System MagentaForce - und somit in den Vertriebs- und Service-Alltag -einzubinden, sollen KI-Funktionalitäten, die bereits in den bestehenden Salesforce-Lizenzen enthalten sind, geprüft und - sofern als sinnvoll bewertet - in Betrieb genommen werden.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Keine konkreten Angaben zu finanziellen Auswirkungen im Text vorhanden"
+    },
+    "strategic_enablement": {
+      "scale": 3,
+      "risk_minimization": "",
+      "strat_enablement": "Integration von KI-Funktionalitäten in das zentrale CRM-System MagentaForce",
+      "justification": "Erster strategischer Schritt zur Einbindung des zentralen Themas 'Künstliche Intelligenz' in den Vertriebs- und Service-Alltag durch Nutzung bereits vorhandener Lizenzen"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Keine konkreten Zeitangaben im Text vorhanden"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Mirco Svensson",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-101567",
+      "title": "MAGBUS-101567",
+      "summary": "KI@MF Standard Features (Inbetriebnahme von Funktionen innerhalb bestehender Lizenzen)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101567",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "OneDataDrivenSales@T-Business_Struktur_Jira.jpg",
+      "url": "https://jira.telekom.de/secure/attachment/4996746/OneDataDrivenSales%40T-Business_Struktur_Jira.jpg",
+      "mime_type": "image/jpeg",
+      "size": "117 kB",
+      "date": "2024-09-27T12:24:35.128+02:00"
+    }
+  ]
+}

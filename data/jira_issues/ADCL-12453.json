@@ -1,0 +1,40 @@
+{
+  "key": "ADCL-12453",
+  "issue_type": "Epic",
+  "title": "Go-Live of SeCe-IT offer documents implementation into IRRP-eMails for EOS",
+  "status": "Backlog",
+  "description": "Description\nProcess information:\nRequirements:\nO3 loads the SeCe-IT offer document from SeCe-IT in order to attach it as link to a file (PDF, etc.) to the IRRP email (similar to the implementation at Flamingo)\nE2E-Test for PI28\nPROD-deployment for PI28\nLink for Documentation in Wiki:\nTarget process (in progress):\n  Useful links and requirements from PI26:\n...\nResources:\nFlamingo:\nSimon Keck (PM)\nAshtar Siegle (PO)\nDirk Berthold (PO)\nSimon Köppel (BA/Fachexperten)\nMartin Wendler (Fachseite & Auftragsübertragung)\nThorsten Gansen (Testing)\nMareen Jarick (Testing)\nKarim Azzaoui (Architekt/BA)\nStefan Fischer (Architekt)\nSece-IT:\nMarkus Fracke (BA)\nKarim Azzaoui (Architekt/BA)\nStefan Fischer (Architekt)\nThomas Maier (Developer), TMaier@telekom.de\nPrerequisites\nRequires Sece-IT interface specification (yaml)\nRequires running document API on Sece-IT\nRequires joint test phase with Sece-IT",
+  "business_value": {},
+  "assignee": "Fazli Ilter Satiroglu",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "business requirements understood",
+    "as is process understood",
+    "target process defined",
+    "target process agreed",
+    "migration roadmap agreed",
+    "implementation user stories are described",
+    "user stories implemented, tested and accepted in CIT2",
+    "solution is deployed with feature toggle (header flag processing engine \"remote\") in PROD"
+  ],
+  "components": [],
+  "labels": [
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Sequence Diagram 3  Finish FTTH (Cancelation; IRRP; Change existing Contracts ... for PI#26.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5512505/Sequence%20Diagram%203%20%20Finish%20FTTH%20%28Cancelation%3B%20IRRP%3B%20Change%20existing%20Contracts%20...%20for%20PI%2326.msg",
+      "mime_type": "application/octet-stream",
+      "size": "886 kB",
+      "date": "2025-03-18T13:09:37.472+01:00"
+    }
+  ]
+}

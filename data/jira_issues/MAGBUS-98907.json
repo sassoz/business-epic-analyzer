@@ -1,0 +1,56 @@
+{
+  "key": "MAGBUS-98907",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B/DOT: Easy B2B Products - Read Frame Agreements & Place Order with Frame Agreement",
+  "status": "In Progress",
+  "description": "Description\nThe objective of this portfolio epic is to create a new frame agreemen service that enables consumers to read frame agreement information. As a goal a product order for an easy product portfolio with frame agreement reference should be possible.\nEOS\nIntegration into\nB2B Agreement API\nEOS / O3 / Flamingo\nTesting of the new business use case for easy B2B fixed net products with frame agreements",
+  "business_value": {},
+  "assignee": "Timo Szillat",
+  "priority": "",
+  "target_start": "2025-01-13",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "Enabler",
+    "Mapis4B2B",
+    "PI27",
+    "Q1_25"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-12475",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12475",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11708",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11708",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11731",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11731",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11841",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11841",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

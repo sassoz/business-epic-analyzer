@@ -1,0 +1,28 @@
+{
+  "key": "SNOWTC-10922",
+  "issue_type": "Epic",
+  "title": "Enabler: Mapping parameters OFI, RCS, Combridge, DTA",
+  "status": "Closed",
+  "description": "Description\nThe existing APIs are to be used for SD LAN/WiFi. It is necessary to map the parameters required to operate the respective APIs for SD LAN/WiFi, to identify deltas and to adapt these deltas. This way, the APIs can also be used for SD LAN/WiFi.\n  Required Inputs:\nParameters from the Early Site Enrichment: OFI, RCS, DTA and Combridge - until 09.09.\nBOM (Bill of Material) - until 09.09.\nProcess Description: Early Site Enrichment - until 09.09.",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Parameters were mapped",
+    "Deltas were identified and documented"
+  ],
+  "components": [],
+  "labels": [
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

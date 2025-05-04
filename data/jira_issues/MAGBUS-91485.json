@@ -1,0 +1,33 @@
+{
+  "key": "MAGBUS-91485",
+  "issue_type": "Epic",
+  "title": "MF: User & Rollen - Umsetzung PI 24",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Jana Beyer",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 24"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "aKP",
+      "title": "aKP "
+    },
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF",
+    "MB_OF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

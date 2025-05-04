@@ -1,0 +1,47 @@
+{
+  "key": "SDN-24213",
+  "issue_type": "Epic",
+  "title": "FIB: Design_expand requirements for Location Management (Q2/25)",
+  "status": "Backlog",
+  "description": "Business Scope:\nThe epic creates the Requirements for the FIB Tool next steps.\n\nFIB shell be used especially for our L and XL customers as well as public, classified customers(?), M. (VBKZnummern aufschreiben)\nIn the 1st step FIB is prepared for customers that can be processed via D3 applications.\nFIB will be used by SSE, SBU, Services, Accountmanagement\nThe infrastructure workflow Tool (FIB) shell support:\n- FIB supports the overall process for large customers for infrastructure expansion with fiber optics\n1: Upload of mass data and create KLS ID ✅\n2: request fiber availability status ✅\n3: Entry in technik database of interested parties ✅\n4: Quality Gate for state \"VVMongoning\" ✅\n5: Anstoßen der HTN Erfassung\n6: Order removal, comply with HTN if necessary\n7: Order Bau in Standardbauweise oder additional GF-TAs if necessary\n8: Order notifications/updates\n- FIB is a project management / rollout management tool with a focus on address and location mgmt for larger customers/many locations\n- FIB integrates into the existing application landscape and does not replace it (shell be possible to integrate from many systems, SAP CPQ; customer portal, Salesforce etc.)",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2025-05-22",
+  "target_end": "2025-07-02",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "AC1  The solution is found and described to update the FTTH status regularely",
+    "AC2 A UX design is in place and aligned with the users to copy a location with adjusted additional adress data (building, floor, room)"
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "FTTH_by_LE",
+    "UX_Design"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-09-04-10-22-43-900.png",
+      "url": "https://jira.telekom.de/secure/attachment/5383269/image-2024-09-04-10-22-43-900.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-10T09:11:12.779+01:00"
+    },
+    {
+      "filename": "WG_ Status Area und Adresse.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5436957/WG_%20Status%20Area%20und%20Adresse.msg",
+      "mime_type": "application/octet-stream",
+      "size": "",
+      "date": "2025-02-25T12:14:00.509+01:00"
+    }
+  ]
+}

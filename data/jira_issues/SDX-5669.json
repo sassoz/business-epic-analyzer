@@ -1,0 +1,39 @@
+{
+  "key": "SDX-5669",
+  "issue_type": "Epic",
+  "title": "[SD] LAN - IGMP - multicast traffic",
+  "status": "Closed",
+  "description": "Description\nIGMP\nThe Internet Group Management Protocol (IGMP) manages the membership of hosts and routing devices in multicast groups. IP hosts use IGMP to report their multicast group memberships to any immediately neighboring multicast routing devices. Multicast routing devices use IGMP to learn, for each of their attached physical networks, which groups have members.\nIGMP Snooping \nInternet Group Management Protocol (IGMP) snooping constrains the flooding of IPv4 multicast traffic on VLANs on a device. With IGMP snooping enabled, the device monitors IGMP traffic on the network and uses what it learns to forward multicast traffic to only the downstream interfaces that are connected to interested receivers. The device conserves bandwidth by sending multicast traffic only to interfaces connected to devices that want to receive the traffic, instead of flooding the traffic to all the downstream interfaces in a VLAN.\n\nBusiness Scope:\nCustomer would like to enable at LAN multicast traffic in order to have audio/video, streaming broadcast in customer network.",
+  "business_value": {},
+  "assignee": "Mhd Eyad Almolki (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "Technical design for IGMP snooping",
+    "Config templates for IGMP snooping",
+    "Technical designs for IGMP settings",
+    "Config templates for IGMP settings",
+    "Validation of config template",
+    "UI proposal",
+    "documentation (wiki)",
+    "CPDM handover",
+    "Security handover",
+    "SO handover"
+  ],
+  "components": [
+    {
+      "code": "SDx - Orchestrator",
+      "title": "SDx - Orchestrator "
+    }
+  ],
+  "labels": [
+    "SDProduct"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

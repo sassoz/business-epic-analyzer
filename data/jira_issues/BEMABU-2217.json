@@ -1,0 +1,46 @@
+{
+  "key": "BEMABU-2217",
+  "issue_type": "Business Epic",
+  "title": "LE - AI in MagentaForce (CoPilot Usage / Sales Assist)",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nFür alle vertrieblich agierenden Mitarbeiter aller Verticals welche MagentaForce als CRM System nutzen\ndie im CRM (MagentaForce) System arbeiten und ihren Kundenangang dort durchführen,\nist es notwendig eine Verbesserung der Kundendokumentation darzustellen,\nwodurch die Zeit von manuellen Dokumentationen und finden verkürzt wird\nso dass  dadurch die Kundenbeziehung gestärkt/verbessert werden kann ,\nund nicht zu viel Zeit in unübersichtlichen Vor-/Nachbearbeitungen investiert werden muss.\nDas Vorhaben schafft mehr Zeit für relevante Vertriebstätigkeiten und dadurch bessere Gewährleitung der Zielerreichung..\nVertriebsleiter verbringen zu viel Zeit mit dem manuellen Schreiben von Besprechungsnotizen und die Verwaltung nach Kundenbesprechungen zu erledigen, was Vertriebs freie Zeit kostet und zu unvollständigen Gesprächsnotizen führt, übersehene Chancen, Ermüdung bei der Nachbereitung und langsamere Entscheidungsfindung.\nDer Salesforce Copilot ist direkt in Ihre Prozesse integriert – in allen Anwendungen, für alle Mitarbeiter:innen und Abteilungen – und ein echter Effizienz-Turbo.\nDer KI-Assistent beantwortet Fragen und Anweisungen zuverlässig mit konkreten Handlungsempfehlungen.\nMit Out-of-the-Box-Aktionen – vom Erstellen von Abschlussplänen für Top-Opportunities bis zum Beantworten von Kundenanliegen auf Grundlage Ihrer Knowledge Base – vereinfacht der Copilot die tägliche Arbeit. \nDurchsicht von Notizen\nÄndern seiner Notizen\nZusammenfassung der Besprechung und Erkenntnisse\nAktualisieren von Kontaktinformationen\nNachforschungen über potenzielle Kunden\nErstellen einer neuen Verkaufschance/eines neuen Leads\nEntwürfe für E-Mails\nVertrieb: Recherche zu Kunden, Vorbereitung auf Meetings und automatische Aktualisierung von Kundeninformationen in Salesforce. Vertriebsteams profitieren von der automatischen Zusammenfassung von Highlights, Analysen der Kundenstimmung oder aus Videoanrufen extrahierten Vorschlägen für nächste Schritte. Sie können Kundengespräche nach bestimmten Details durchsuchen oder nur stöbern, anstatt Abschriften zu lesen. Zudem generiert Copilot automatisch Vertriebs-E-Mails, die auf den benötigten Tonfall und Stil abgestimmt sind und sich an den Kundenkontext anpassen. \nService: Unternehmen können den Kundenservice optimieren, indem vertrauenswürdige Unternehmensdaten als Referenz genutzt und Agent:innen mit zeitnahen, relevanten Antworten aus Echtzeit-Kundendaten ausgestattet werden. Ihnen stehen zudem automatische Zusammenfassungen und Vereinfachungen von Servicefällen in prägnanten, handlungsrelevanten Übersichten zur Verfügung, die Service-Mitarbeiter:innen klare nächste Schritte vorgeben. \n  In Folge ist es auch Möglich den Sales Assist nicht nur innerhalb der eigenen Systemen anzubinden - er wäre denkbar an externe Daten, für KI-gesteuerte Empfehlungen für Folgemaßnahmen und intelligente Aufgaben, Aufgabenplanung mit Flow und Apex. Dies minimiert die manuelle Aufgabenerstellung und sichert, dass keine Gelegenheit verpasst wird.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n        MagentaForce DOM0201 Andrej Deckel  \n          BEO und ggf. Vertreter Jennifer Litterscheid\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nFragen beantworten, Inhalte zusammenfassen, neue Inhalte generieren, komplexe Konversationen interpretieren und Aufgaben dynamisch automatisieren – konsistent aufgebaut über alle CRM-Applikationen.",
+  "business_value": {
+    "business_impact": {
+      "scale": 13,
+      "revenue": "",
+      "cost_saving": "3,25 Mio EUR savings (umgerechnet gesparte Arbeitszeit 62.500 EUR / Woche)",
+      "risk_loss": "",
+      "justification": "Allerdings ist dies kein Effizienzcase; Ambition ist, diese Zeit für mehr Real Selling Time zu nutzen NPS (!!!!) Mit dieser Funktion werden wir die erwartete Verbesserung des NPS (Nutzerzufriedenheit via Net Promotor Score) erhöhen (Ambition Klaus Werner war 10 Punkte je NPS Frage)."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "",
+      "strat_enablement": "NPS Steigerung (Mitarbeiterzufriedenheit) Digitale Transformation und Einsatz AI",
+      "justification": "Vereinfachter Arbeitsablauf spart Zeit Verbessert Datengenauigkeit"
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch: 30.09.2025",
+      "justification": "Erhöhung der Hitrate und NPS Verbesserung"
+    }
+  },
+  "assignee": "Frank Nähring",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

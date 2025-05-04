@@ -1,0 +1,67 @@
+{
+  "epicId": "BEIOT-112",
+  "title": "SNI (Seamless Network Integration) project - Operating Model",
+  "ziele": {
+    "gesamtziel": "Das Ziel des Business Epics ist die Etablierung eines standardisierten und mit allen Stakeholdern abgestimmten Vorgehens für M2M Reselling Deals im IoT-Geschäft der Deutschen Telekom. Dies umfasst die Definition technischer und prozessualer Leistungen für das M2M Reselling-Portfolio, um die Verhandlungen mit MNOs zu erleichtern und zu beschleunigen. Dadurch soll ein schnellerer Time-to-Market erreicht und Umsatz generiert werden. Das Zielbild ist die Einführung von 'M2M Reselling' als Geschäftsmodell innerhalb des IoT-Geschäfts der DT bis zum 20.12.2025.",
+    "einzelziele": [
+      "Bereitstellung des SNI GSIM Outbound Use Case (sponsored roaming) in EMEA.",
+      "Bereitstellung des SNI Local SIM Inbound Use Case (Lokalisierung gemäß SNI reziprokem Framework und Sales Pipeline)."
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "Erwarteter kumulierter inkrementeller Umsatz von 834 Mio. € in 10 Jahren für Auto und Non-Auto durch Reselling der GSIM in der EU. Umsatz in Höhe von 1,4 Mio. € ist für 2025 im FC0 eingeplant. Kosteneffizienz durch degressive Stückkosten beim Reselling der GSIM, da das Onboarding weiterer Kunden eines MNO pro Kunde/SIM günstiger wird."
+    },
+    "strategicEnablement": {
+      "skala": 20,
+      "beschreibung": "Das Operating Model ist erforderlich, um die geplanten Umsätze zu realisieren. SNI ist eines der strategischen Wachstumsprogramme der T-Business und im FC0 2025 berücksichtigt. Es ermöglicht die Erschließung neuer Kunden, die nur über ihren Heimat-MNO weltweit Connectivity einkaufen, und verbessert den Zugang zu Endkunden."
+    },
+    "timeCriticality": {
+      "skala": 13,
+      "beschreibung": "Hohe zeitliche Kritikalität, da der Launch im September 2025 erfolgen muss, um geplante Umsätze zu realisieren und Wettbewerbsnachteile zu vermeiden."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEIOT-112",
+      "titel": "SNI (Seamless Network Integration) project - Operating Model",
+      "funktionalitäten": [
+        "Definition und Bereitstellung eines standardisierten Vorgehens für M2M Reselling Deals.",
+        "Bereitstellung des SNI GSIM Outbound Use Case (sponsored roaming) in EMEA.",
+        "Bereitstellung des SNI Local SIM Inbound Use Case (Lokalisierung gemäß SNI reziprokem Framework und Sales Pipeline)."
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "SNI GSIM Outbound Use Case",
+    "SNI Local SIM Inbound Use Case"
+  ],
+  "domainsAndITApplications": [
+    "ConMed ICTO-19913 DOM0712",
+    "ngIBMD ICTO-8947 DOM0712",
+    "BI4 DOM0202"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Abstimmung und Zusammenarbeit mit allen relevanten Stakeholdern.",
+    "Abhängigkeit von regulatorischen, TK-rechtlichen, Sicherheits- und Datenschutzbestimmungen.",
+    "Risiko, dass ohne standardisiertes Vorgehen der Zugang zu Endkunden mit MNO-Bindung nicht möglich ist.",
+    "Risiko, dass Deals verloren gehen, wenn die Umsetzung zu langsam erfolgt oder das Angebot für MNOs zu unattraktiv ist.",
+    "Abhängigkeit von der Entscheidung des Board of Management bezüglich der Bedingungen für das Reselling von GSIM.",
+    "Risiko, dass die vollständige, termingerechte Ablieferung gefährdet ist, falls regulatorische oder technische Vorgaben nicht rechtzeitig abgestimmt werden."
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-01-06",
+    "umsetzungsende": "2025-12-20",
+    "fixVersions": [
+      "Q3_25"
+    ],
+    "meilensteine": [
+      {
+        "id": "MILESTONE-1",
+        "beschreibung": "Launch des Operating Models für M2M Reselling",
+        "zeitraum": "September 2025"
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "key": "BEMABU-1870",
+  "issue_type": "Business Epic",
+  "title": "FTTH Solution by LE - FTTH basiertes Internetprodukt",
+  "status": "In Progress",
+  "description": "Business Scope:\nEntwicklung eines xDSL/FTTH basiertes Internetproduktes als SD-WAN Underlay.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Uwe Antonin",
+  "priority": "",
+  "target_start": "2024-07-01",
+  "target_end": "2026-06-30",
+  "fix_versions": [
+    "Q3_25",
+    "PrioQ1_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "Es gibt eine neue Produkt-Gruppe, die verschiedene Bandbreitenprodukte (siehe Bild) auf xDSL/FTTH Bauweisen unter einem Namen vereint. Dabei sind die Bandbreiten (down/up)  50/20, 100/40 und 250/40 auf xDSL realisiert und die Bandbreiten 150/75, 300/150, 600/300, 1000/500 und 2000/1000 auf FTTH-Technik.\n(10.01.25: 50/10 geändert in 50/20)"
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0202",
+      "title": "DOM0202 Order2Cash"
+    },
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD-X"
+    },
+    {
+      "code": "DOM0704",
+      "title": "DOM0704 Problembehebung"
+    },
+    {
+      "code": "DOM0800",
+      "title": "DOM0800 Gigabit"
+    },
+    {
+      "code": "DOM0802",
+      "title": "DOM0802 Copper OSS"
+    },
+    {
+      "code": "DOM0805",
+      "title": "DOM0805 Magenta Field Force"
+    },
+    {
+      "code": "DOM1002",
+      "title": "DOM1002 Problembehebung"
+    },
+    {
+      "code": "E2E Solution Test",
+      "title": "E2E Solution Test E2E Solution Test"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Prio_2024_neu",
+    "B2B_Target",
+    "FTTH_by_LE",
+    "Portfolio",
+    "Portfolio_Breitband"
+  ],
+  "realized_by": [
+    {
+      "key": "DIGIHUB-278229",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/DIGIHUB-278229",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "TF-5571",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/TF-5571",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20240829_IT-Architektur_Company-Access-Easy.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4883379/20240829_IT-Architektur_Company-Access-Easy.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2024-09-05T06:29:27.561+02:00"
+    },
+    {
+      "filename": "20241011_requirements_Company Access Easy.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5039064/20241011_requirements_Company%20Access%20Easy.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2024-10-14T08:56:32.224+02:00"
+    },
+    {
+      "filename": "20250113_requirements_Company Access Easy.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5293044/20250113_requirements_Company%20Access%20Easy.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2025-01-14T12:45:06.226+01:00"
+    },
+    {
+      "filename": "BusinessCase_New Version_20241010.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5064308/BusinessCase_New%20Version_20241010.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2024-10-22T12:19:51.436+02:00"
+    }
+  ]
+}

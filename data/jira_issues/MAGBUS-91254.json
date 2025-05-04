@@ -1,0 +1,50 @@
+{
+  "key": "MAGBUS-91254",
+  "issue_type": "Portfolio Epic",
+  "title": "Flamingo: Implementierung der Produktwechselmatrix CRM-T Festnetz",
+  "status": "Closed",
+  "description": "Description\nZiel: Sicherstellen, dass nur Bestands- und Änderungsgeschäfte durchgeführt werden können, die der definierten Produktwechselmatrix entsprechen.\nPrüfung bei Angebotserstellung:\nBei der Erstellung eines neuen Angebots muss die Applikation überprüfen, ob der Wechsel vom aktuellen Produkt (Bestandsprodukt) zu dem im Angebot gewählten Produkt zulässig ist.\nWenn der Wechsel nicht zulässig ist, muss eine entsprechende Meldung angezeigt werden, die den Grund des Ausschlusses angibt.\ntbd: Idee: Werden nur Produkte angezeigt, die auch als Zielprodukt in Frage kommen?\nPrüfung bei Auftragserstellung:\nBei der Erstellung eines neuen Auftrags muss eine ähnliche Prüfung wie bei Angeboten durchgeführt werden.\nAuch hier muss die Applikation sicherstellen, dass der Produktwechsel dem in der Produktwechselmatrix festgelegten Regelwerk entspricht.\ntbd: Ist eine separate Prüfung notwendig?",
+  "business_value": {},
+  "assignee": "Olaf Benken",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2024-03-31",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DO_Flamingo",
+    "GIGA",
+    "GK",
+    "GK-FTTH-Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-96008",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-96008",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Kopie von PWM_GK_20240215.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4403284/Kopie%20von%20PWM_GK_20240215.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2024-03-22T10:28:30.859+01:00"
+    },
+    {
+      "filename": "PWM_GK_WS_2050207.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5462356/PWM_GK_WS_2050207.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2025-03-04T16:54:08.561+01:00"
+    }
+  ]
+}

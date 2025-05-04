@@ -1,0 +1,61 @@
+{
+  "key": "BEMABU-2323",
+  "issue_type": "Business Epic",
+  "title": "MF: Wichtige Optimierungen des Zusammenspiels MagentaForce/Flamingo im PI28/Q2",
+  "status": "Analysis",
+  "description": "Description\nClick to add description",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Mirco Svensson",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-103622",
+      "title": "MAGBUS-103622",
+      "summary": "MF: Wichtige Optimierungen des Zusammenspiels MagentaForce/Flamingo im PI28/Q2",
+      "url": "https://jira.telekom.de/browse/MAGBUS-103622",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,55 @@
+{
+  "key": "BEMABU-1999",
+  "issue_type": "Business Epic",
+  "title": "Integrationssteigerung SeCe-IT in Flamingo Stufe 2",
+  "status": "Analysis",
+  "description": "Description\nSpezifikation findet im Rahmen des Solution Intent statt.\nZiel:\nSukzessive Integration des Produktportfolios (Hardware und Services) aus SeCe-IT, um eine konsistente One-Tool-Lösung im Look and Feel für die Nutzer zu schaffen.\nDaten-/Produktintegration:\nEs sollen benötigte Daten/Produkte so integriert werden, dass die Nutzenden innerhalb des Flamingos alle Informationen zur Angebots-/Auftragserstellung zur Verfügung haben. \nBenutzeroberfläche:\nDie Benutzeroberfläche der Applikation soll so gestaltet werden, dass sie ein einheitliches Look and Feel bietet, welches den Nutzenden eine intuitive und konsistente Erfahrung ermöglicht.\nSukzessive Umsetzung:\nDie Integration soll in Phasen erfolgen, beginnend mit den am häufigsten genutzten Produkten und Services, um schnelleren Nutzen zu erzielen und schrittweise weitere Produkte zu integrieren.\nSchulung und Support:",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Sukzessive Integration des Produktportfolios für eine konsistente One-Tool-Lösung, die alle Informationen zur Angebots-/Auftragserstellung zur Verfügung stellt"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Schaffung einer konsistenten One-Tool-Lösung im Look and Feel für die Nutzer",
+      "justification": "Einheitliches Look and Feel bietet den Nutzenden eine intuitive und konsistente Erfahrung"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "Sukzessive Umsetzung in Phasen, beginnend mit den am häufigsten genutzten Produkten und Services",
+      "justification": "Phasenweise Integration ermöglicht schnelleren Nutzen und schrittweise Integration weiterer Produkte"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Keck, Simon",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "tbd im Rahmen Solution Intent"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

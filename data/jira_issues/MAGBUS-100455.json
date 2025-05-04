@@ -1,0 +1,64 @@
+{
+  "key": "MAGBUS-100455",
+  "issue_type": "Initiative",
+  "title": "Headless-CMS Q1",
+  "status": "In Progress",
+  "description": "Description\nFor any user of our portals\nwho wants to interact with our new microfrontends\nthe handling of the session and providing the user profile\nis a requirement to work with microfrontends in a safe manner\nthat ensures secured decoupled microfrontends\nUnlike todays solution using the session of the portal\nour solution is decoupled from the portal",
+  "business_value": {},
+  "assignee": "Stephan Schmitz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C14",
+      "title": "C14 "
+    }
+  ],
+  "labels": [
+    "DT"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-101521",
+      "title": "MAGBUS-101521",
+      "summary": "Headless Server Initial Setup",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101521",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-101547",
+      "title": "MAGBUS-101547",
+      "summary": "Headless CM - Product data import",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101547",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-101837",
+      "title": "MAGBUS-101837",
+      "summary": "Headless CM - IAM",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101837",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-101807",
+      "title": "MAGBUS-101807",
+      "summary": "Technisches Design „Catalog & Configurator (basics)\"",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101807",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-101548",
+      "title": "MAGBUS-101548",
+      "summary": "New SPA „Catalog & Configurator (basics)\"",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101548",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

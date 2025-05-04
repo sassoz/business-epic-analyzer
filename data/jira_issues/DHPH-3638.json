@@ -1,0 +1,55 @@
+{
+  "key": "DHPH-3638",
+  "issue_type": "Epic",
+  "title": "P@C SQ: Extension of P@C for GK",
+  "status": "In Progress",
+  "description": "Description\nWho is the Customer (Business Owner, stakeholder) ?\nThomas Heider\nWhy is the Demand needed ?\nThe FTTH business is becoming increasingly important in the corporate customer environment. To make this business GK-capable, the Fiber Infrastructure Construction Tool (FIB Tool) is being developed as part of the \"FTTH Solution by Large Enterprise\" project. This tool enables a comprehensive view of the FTTH supply situation at the customer location, also in order to be able to create offers on this basis.\nWhat does the Customer Need ?\nThe currently offered PreOrder@Cloud information (TMF-645) is not sufficient for this purpose. In order to be able to avoid the connection of another data source for reasons of cost and time, we ask you to expand the existing service. The additional attributes are offered on the T-MAGIC website according to the functional interface specification \"FiberAvailabilityCheck Service\".\nWhat has to be done on DigiHub PHANTOMs or its applications side to fulfill the requirements (high-level Solution Outline) ?\n  ADC   P@C  \nAusbaustatus Ausbaustand Glasfaser serviceCharacteristic/service buildstatus service\nNetz-Anbieter name/role relatedParty/service carrierName relatedParty/service\nverfügbare Bandbreite BBProfile serviceCharacteristic/service Guaranteed Down- and Upstream Bandwidth serviceCharacteristic/service\n      AdditionalInformation: BBProfile serviceCharacteristic/service\nPlanungsdatum DatumVon\nDatumBis serviceCharacteristic/service expectedServiceAvailabilityDate serviceQualificationItem\nListe von:        \nBedarfspunkt (GF-AP)  name (Vorderhaus) service   service\n  type (BuildingSection) place/service    \n          Technology Technologie serviceCharacteristic/Service Technology  \nGlasfaser ID ??      \nHTN Status =>   ??      \nisClarifiedWithLandlord isClarifiedWithLandlord serviceCharacteristic/Service new: isClarifiedWithLandlord AdditionalData?serviceCharacteristic/Service\nKostenpflichtiger Hausanschluss    GF AP Kostenpflichtig serviceCharacteristic/Service new (porposal): gf_ap_chargeable AdditionalData?serviceCharacteristic/Service\nCPL-ID (Kupfer)     List of available CPL-ID of Address:\nThis is NOT part of Service Qualification! (can be orchestrated with CLM)  \n  For information about subaddresses, furthe ServiceQualificationItems will be added to ServiceQualification in P@C.\nThey must be distinguishable from pure address information services.\nIn ADC this is transported via the place type and name:\nPlace Name = Building part (\"Vorderhaus\", \"Hinterhaus\", ..),\nPlace type = BuildingSection.\nFor P@C service qualification, the name attribute is only to find in \"service\" - here the name is always set to \"Access\" (applies to all technologies).\nIntroduction of a variable name value for Service:\nAccess --> as addressbased availability;\nall other values quaracterise a subaddress and are set accordingly to the respective \"Service name\" of ADC:\ne.g. \"Vorderhaus\", \"Hinterhaus\", \"whatever\".\nThe structure \"Place\" offers the type as subUnitType = Gebaeude in P@C ServiceQualification.\n  All additional data from ADC will be combined in a separate value array \nserviceCharacteristic  name = \"AdditionalInformationGK\" (Proposal) value = \n{\"@type\":\"additionalInformationDigiOSS_GK\",\"isClarifiedWithLandlord\": true,\"gf_ap_chargeable\": false, (...)]}\n  As example, this would look like this:\n  FiberAvailabilityCheck:    ADC_example.json\nP@C:  PatC_example.json\n ",
+  "business_value": {},
+  "assignee": "Paul, Doris",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2025-04-28",
+  "fix_versions": [
+    "PI_2025_Q1"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "App_P@C",
+      "title": "App_P@C Application P@C (PreOrder@Cloud), ICTO-21177"
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "ADC_example.json",
+      "url": "https://jira.telekom.de/secure/attachment/5188421/ADC_example.json",
+      "mime_type": "application/json",
+      "size": "10 kB",
+      "date": "2024-12-03T17:54:14.732+01:00"
+    },
+    {
+      "filename": "image-2024-12-03-17-45-59-862.png",
+      "url": "https://jira.telekom.de/secure/attachment/5188414/image-2024-12-03-17-45-59-862.png",
+      "mime_type": "image/png",
+      "size": "155 kB",
+      "date": "2024-12-03T17:46:00.027+01:00"
+    },
+    {
+      "filename": "PatC_example.json",
+      "url": "https://jira.telekom.de/secure/attachment/5188415/PatC_example.json",
+      "mime_type": "application/json",
+      "size": "13 kB",
+      "date": "2024-12-03T17:48:01.459+01:00"
+    },
+    {
+      "filename": "PatC_example-1.json",
+      "url": "https://jira.telekom.de/secure/attachment/5188422/PatC_example-1.json",
+      "mime_type": "application/json",
+      "size": "13 kB",
+      "date": "2024-12-03T17:54:24.022+01:00"
+    }
+  ]
+}

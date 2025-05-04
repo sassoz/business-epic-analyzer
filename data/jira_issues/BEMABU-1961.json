@@ -1,0 +1,146 @@
+{
+  "key": "BEMABU-1961",
+  "issue_type": "Business Epic",
+  "title": "E-invoice (e-Rechnung) in Germany - CSB-MWL",
+  "status": "Analysis",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Name/Bezeichnung E-invoice (e-Rechnung) in Germany - CSB-MWL\nBusiness Epic ID BEMABU-1961\nBusiness Epic Owner Kratzer, Ina \nSponsor/Tribe/Geschäftsbereich Claudia Buhne, BCC /GFGK     \nBusiness Epic Nutzenstatement\nFür alle Customer Touchpoint Kunden,\ndie Leistungen, z.B. Contact Solutions Produkte, Servicenummern oder KI-Produkte von uns beziehen,\nist eine e-Rechnung nach gesetzlichen Vorgaben zu erstellen,\nwodurch die Leistungen weiterhin abgerechnet werden,\nso dass die gesetzlichen Vorgaben erfüllt werden,\nund nicht gegen Gesetze verstößt.\nDas Vorhaben schafft weiterhin Umsatz mit einer gesetzeskonformen Abrechnung.\nKlassifizierung Obligatory\nwenn relevant: Gesetzl./regulatorische Anforderung, weil: Richtlinienentwurf der EU-Kommission zu \"Mehrwertsteuervorschriften für das digitale Zeitalter\" (ViDA = Value Added Tax in an digital age) und deren Umsetzung im Wachstumschancengesetz.\n[bitte auch Feld \"Compliance Relevance\" im Jira-Issue befüllen] \nHier könnt ihr die Informationen zur Klassifizierung von Obligatory-Themen finden. → https://mywiki.telekom.de/pages/viewpage.action?pageId=1183843156\nRahmenbedingungen\nIn Scope / Akzeptanzkriterien\nDie e-Rechnung muss über die Prozessstrecke Individualmarkt über Mars → CSB entwickelt werden.\nDie erstellten e-Rechnungen muss für den Kunden über sein ReO- oder Nachfolge-Portal (MBSP) abrufbar sein\nDie e-Rechnung muss auf Wunsch dem Kunden per Mail zugeschickt werden können über eine verifizierte Mailadresse\nDie e-Rechnung muss ab 1.1.2027 allen Customer Touchpoints Kunden bereit gestellt werden können.\nDabei gibt es derzeit folgende ToDo´s:\n CRM-T erfasst für MWL-Kunden die von der SEP verifizierten E-Mailadressen für Vertragspartner, Ansprechpartner und Rechnungsempfänger auf BKTO-Ebene\n CSB muss für MWL eine verifizierte E-Mail-Adresse und die buyer reference (Leitweg-ID) bei SEP abfragen/erhalten können (per API/SSt) und empfangen können. Die verifizierte Mailadresse ist entsprechend abzulegen ODER\nTMF666 holt sich MWL-Kundenstammdaten über die SEP und ordnet die MARS-BKTO´n den Kundennummern zu.\n CSB muss die neuen Logiken zur Rechnungscodezuordnung der e-Rechnung für MWL realisieren \n Die Schnittstelle CSB zu TMF678 Bill ist bzgl. MWL anzupassen – Rechnungsdaten müssen an TMF678 gesendet werden, dort wird die XML gebildet. Der Versand der Rechnung an den Kunden im gewünschten Format und über den gewünschten Übertragungsweg ist zu gewährleisten. Die XML und das PDF müssen von TMF678 an das CSB Archiv zurückgeschickt werden oder anderweitig gesetzesgemäß archiviert werden.\n Der Kunde muss die Rechnung (XML und PDF) in einem Portal einsehen und downloaden können\n Das Portal muss die Schnittstelle mit XML und PDF empfangen und kundenindiziert ablegen können es wird evtl. eine Schnittstelle TESY-KIT und KIT-TESY notwendig um Updates von Kundendaten auszutauschen. Der Endkunde muss seine E-Mailadresse für Rechnungsempfänger auf BKTO-Ebene im Portal eingeben können (um den Customer Service nicht zu überfordern). Diese muss an das Frontend zurückgereicht werden und verifiziert werden.\nes wird ggf. eine Schnittstelle CRM-T - ZMKM notwendig um Updates von Kundendaten auszutauschen\n es wird ggf. ein Update der Schnittstelle CRM-T - TESY oder über die SEP (s. Punkt 9) als Transfersystem notwendig zum Austausch erweiterter Kundendaten\n Es ist eine SSt von TESY zur SEP für die Übermittlung der MARS-BKTO´n je Kundennummer erforderlich und eine Rückschnittstelle mit den verifizierten E-Mailadressen für diese Kundennummern.\nMussfelder für die e-Rechnung (buyer reference) und verifizierte E-Mailadressen für Rechnungsempfänger auf BKTO-Ebene werden derzeit nicht über die alte Prozesskette geliefert. Hier muss eine Möglichkeit geschaffen werden diese Felder je MARS-BKTO an das Billing zu transferieren.\nEs kann nicht ausgeschlossen werden, dass bei e-Rechnung weitere Felder zu Muss-Feldern definiert werden. Innerhalb der Telekom wird derzeit diskutiert, welche optionalen Felder dem Kunden zur Information angeboten werden können. Diese optionale Felder müssen dann, wenn sie nicht über die Altkette bereits angeliefert werden, analog über einen Alternativweg zum Billing gelangen.\nEin Problem dabei ist, dass im MWL-Bereich mit \"MARS-BKTO´n\"  aus einem TESY-Nummernkontingent gearbeitet wird um die Individualkunden abrechnen zu können.\nZur Zeit wird die angestrebte Architektur diskutiert.\nEs gibt noch Kunden, die eine Papierrechnung erhalten. Wie diese behandelt werden sollen, wollte im Projekt noch entschieden werden\nOut of Scope\nDer Aufbau eines neuen Kundenportals bzw. der Umzug in das neue Kundenportal MBSP ist nicht Gegenstand dieses EPICs.\nAbhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\n-\nEingangsvoraussetzungen, die vor Einführung realisiert sein müssen\n-\n Crossfunktionale Zusammenarbeit\nZuordnung Applikationen/Domains\nBeteiligte Domains/Applikationen in der Tel-IT:   [siehe Feld \"Komponente/n\" im Jira-Issue]\nBeteiligte Applikationen Beteiligte\nDomains Ansprechpartner Bemerkungen                                                                  \nMars alt DOM0701\nneu DOM0712 Heike Neumann\nJörg Günther  \nCSB (MWL) DOM0202 Thomas Gwosdz Elisabeth Bee  \nReO alt: DOM0701\nneu: DOM0712 Matthias Claußen \n@Uwe Flüß  \nZMKM alt: DOM0201\nneu:DOM0202 Lorenz Machens\nSabine Heydebreck  \nMBSP (MSP) DOM0201 Matthias Lehmann\nEnrico Graupner  \nSEP DOM0201 Stefan Schürmeyer  \nTMF678 unbekannt Jan Bauer, Holger Meyer  \nKIT alt DOM0701\nneu DOM0712 Holger Meyer  \nTESY DOM0200 Daniel Heimann  \nCRM-T DOM0600 Hans-Werner Lohe  \nTMF 666 alt DOM0701\nneu DOM0712 Anke Sypli\nJan Bauer  \n  BEO und ggf. Vertreter Kratzer, Ina , Marc Steinweg \nSponsor/Fachseite Kai Unkel \nWeitere Stakeholder s. o.\nWeitere AnsprP  \nSonstiges \nAus der alten Epic-Vorlage:\nBusiness Value\nBusiness Outcomes /Business Value\nGefährdet ist ein Umsatz von ca. 20,5 Mio. € (Annahme: 25% der Kunden verweigern die Annahme der Rechnung, da keine (korrekte) e-Rechnung gestellt wird)\nErreichen der gesetzlichen Anforderungen\nGleichzeitige Umsetzung auf modernes Kundenportal, um den Kunden die e-Rechnung zur Verfügung zu stellen.\nKundenzufriedenheit wird durch moderne Umsetzung erhöht\nKonsequenz, falls die Anforderung nicht umgesetzt wird: Eine Nichtumsetzung führt zu nicht gesetzeskonformer Abrechnung, dadurch besteht das Risiko, dass ein Kunde erst dann zahlt, wenn wir ihm eine ordnungsgemäß ausgestellte Rechnung (e-Rechnung/XML-Format) bereitgestellt haben. \nStrategischer Beitrag & zeitliche Kritikalität\nDas Wachstumschancengesetz ist Ende 2023 verabschiedet worden. Als erste große Maßnahme resultiert daraus die Umsetzung der e-Rechnung. Diese ist ab 1.1.2027 im Livebetrieb gefordert.\nZu betrachten ist für uns im wesentlichen die Prozessstrecke Individualmarkt über Mars → CSB, aber auch die Prozessstrecken \"Massenmarkt über MARS->Abili-T\"  und für das Lösungsgeschäft über MARS→ SAP (bei TSBS) spielen eine Rolle.\nMit zeitgerechter Bereitstellung einer e-Rechnung für alle Customer Touchpoints - Kunden reduzieren wir drohenden Umsatzverlust durch nicht korrekt bereit gestellte Rechnungen.\nZudem werden drohenden Klagen durch Kunden oder gar dem Gesetzgeber vorgebeugt. \nes entsteht ein massiver Imageschaden für die Telekom, wenn die gesetzlichen Vorgaben nicht pünktlich umsetzt würden, während andere Unternehmen sich an die Gesetze halten. \nBei Nichteinhaltung eines Gesetzes würde die Öffentlichkeit sicher auf die Überprüfung der Einhaltung anderer gesetzlicher Regelungen pochen, was zu internen Aufwänden führt bei vorhandenen Ressourcenproblemen.\nLeading Indicators\ne-Rechnung ist zum 1.1.2027 für die Mars-CSB-Kette verfügbar.\n   \n\nBusiness Scope:\nBereitstellung der E-Rechnung nach gesetzlichen Vorgaben für Customer Touchpoints.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "20,5 Mio €",
+      "justification": "Es besteht das Risiko, dass Kunden, die keine gesetzeskonforme Rechnung erhalten, diese nicht bezahlen. Annahme ist, das 25% des Umsatzes gefährdet ist, weil Kunden aufgrund falscher Rechnungsstellung, die Rechnungen nicht bezahlen."
+    },
+    "strategic_enablement": {
+      "scale": 13,
+      "risk_minimization": "Reduzierung oder Beseitigung von rechtlichen oder datenschutzrelevanten Risiken",
+      "strat_enablement": "",
+      "justification": "Gesetzliche Vorgabe erfordert die Einführung der e-Rechnung zum 1.1.2027."
+    },
+    "time_criticality": {
+      "scale": 3,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.12.23 Plan Ende/Launch: 31.12.26",
+      "justification": "gesetzliche Vorgabe: Umsetzung bis 1.1.2027"
+    }
+  },
+  "assignee": "Kratzer, Ina",
+  "priority": "",
+  "target_start": "2023-12-01",
+  "target_end": "2026-12-31",
+  "fix_versions": [
+    "Q3_25",
+    "PrioQ1_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "Die e-Rechnung muss über alle Prozessstrecken: 1. MARS->Abili-T, 2. Individualmarkt über Mars → CSB und 3. Lösungsgeschäft über MARS→ SAP (bei TSBS) für Customer Touchpoints entwickelt werden.",
+    "Die erstellten e-Rechnungen muss der Kunde über sein ReO- oder Nachfolge-Portal (MBSP) abrufbar sein",
+    "Die e-Rechnung muss auf Wunsch dem Kunden per Mail zugeschickt werden können.",
+    "Die e-Rechnung muss ab 1.1.2027 allen Customer Touchpoints Kunden bereit gestellt werden können."
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    }
+  ],
+  "labels": [
+    "B2B_NonTarget",
+    "B2B_PRIO",
+    "Individualverträge",
+    "LaO_SEP",
+    "MWL",
+    "Portfolio",
+    "e-Rechnung"
+  ],
+  "realized_by": [
+    {
+      "key": "B2BCA-3911",
+      "title": "B2BCA-3911",
+      "summary": "e-Rechnung MWL (TESY)",
+      "url": "https://jira.telekom.de/browse/B2BCA-3911",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-99872",
+      "title": "MAGBUS-99872",
+      "summary": "SEP: Zentrale eMail-Verifikation für MWL Kunden",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99872",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "TDGM-81",
+      "title": "TDGM-81",
+      "summary": "E-invoice (e-Rechnung) in Germany - CSB-MWL",
+      "url": "https://jira.telekom.de/browse/TDGM-81",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BCCR-709",
+      "title": "BCCR-709",
+      "summary": "ViDA: eRechnung MWL",
+      "url": "https://jira.telekom.de/browse/BCCR-709",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2024-10-15-einfuehrung-e-rechnung.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/5050915/2024-10-15-einfuehrung-e-rechnung.pdf",
+      "mime_type": "application/pdf",
+      "size": "160 kB",
+      "date": "2024-10-17T07:50:23.452+02:00"
+    },
+    {
+      "filename": "241203_MWL E-Rechnung Lösungsdiskussion.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5342166/241203_MWL%20E-Rechnung%20L%C3%B6sungsdiskussion.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "3.28 MB",
+      "date": "2025-01-28T11:19:45.214+01:00"
+    },
+    {
+      "filename": "AW_ e-Rechnung und CVS.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5050912/AW_%20e-Rechnung%20und%20CVS.msg",
+      "mime_type": "application/octet-stream",
+      "size": "368 kB",
+      "date": "2024-10-17T07:47:14.464+02:00"
+    },
+    {
+      "filename": "BMF_2023-0922192-R.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/5050942/BMF_2023-0922192-R.pdf",
+      "mime_type": "application/pdf",
+      "size": "175 kB",
+      "date": "2024-10-17T08:21:43.066+02:00"
+    },
+    {
+      "filename": "Ist-Zustand eRechnung MWL.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5401213/Ist-Zustand%20eRechnung%20MWL.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "173 kB",
+      "date": "2025-02-14T07:32:30.865+01:00"
+    },
+    {
+      "filename": "Lösungsentwurf eRechnung MWL 160425.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5629984/L%C3%B6sungsentwurf%20eRechnung%20MWL%20160425.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "196 kB",
+      "date": "2025-04-22T13:54:18.614+02:00"
+    },
+    {
+      "filename": "Meilensteinplanung MWL 170225.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5629979/Meilensteinplanung%20MWL%20170225.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "25 kB",
+      "date": "2025-04-22T13:53:09.224+02:00"
+    },
+    {
+      "filename": "WG_ eRechnung und MWL_ Analyse-Epic(s) für die Massenmarktkette.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5059804/WG_%20eRechnung%20und%20MWL_%20Analyse-Epic%28s%29%20f%C3%BCr%20die%20Massenmarktkette.msg",
+      "mime_type": "application/octet-stream",
+      "size": "133 kB",
+      "date": "2024-10-21T10:13:02.522+02:00"
+    }
+  ]
+}

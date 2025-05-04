@@ -1,0 +1,43 @@
+{
+  "key": "DUD-10278",
+  "issue_type": "Epic",
+  "title": "Upgrading the PIR Registry System - May 2022",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nPIR is committed to improving the operational experience of our registrar channel and is\npleased to provide a registry upgrade scheduled to begin on May 31st 2022.\nDescription of Demand / Problem\nPIR is committed to improving the operational experience of our registrar channel and is\npleased to provide a registry upgrade scheduled to begin on May 31st 2022.\nUpgrading the PIR Registry System v1 FINAL.pdf\nAcceptance Criteria\nAlle automatisch bedienten TLD der entsprechenden NIC funktioniere unverändert - im Fall von PIR ist das die TLD \".org\"\nChecklist\nDependencies fulfilled (Ticket dependencies).\nAccessibility / Barrierefreiheit: Principles fulfilled.\nDoD: Verified by Scrum Master.",
+  "business_value": {},
+  "assignee": "Thomas Klaus Götz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "22.4.0"
+  ],
+  "acceptance_criteria": [
+    "Options",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "OperationalStability",
+    "SPL"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Upgrading the PIR Registry System v1 FINAL.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/1833660/Upgrading%20the%20PIR%20Registry%20System%20v1%20FINAL.pdf",
+      "mime_type": "application/pdf",
+      "size": "198 kB",
+      "date": "2022-03-07T08:45:37.000+01:00"
+    }
+  ]
+}

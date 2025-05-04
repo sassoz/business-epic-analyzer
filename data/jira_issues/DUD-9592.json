@@ -1,0 +1,35 @@
+{
+  "key": "DUD-9592",
+  "issue_type": "Epic",
+  "title": "2-Part DNSsec activation",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nInsert a waiting period between updating the name servers at the registry and transferring DNSSec data to the registry.\nDescription of Demand / Problem\nThe reason for this is that a large customer domain cannot be reached after DNSsec has been activated. More precisely, the change from AutoDom Primary-Nameservice to T-ProDomian Primary-Nameservice + DNSSec.\n  The cause is assumed to be that the name server and DNSSec data were transmitted to the NIC at the same time (in an update request). Resolvers (some ?!) still use the old AutoDom name servers. The old zone is - of course - not \"DNS-Signed\" but DNSSec data are already in the registry. The chain of trust is thus interrupted.\n  Therefore, in the first step, no DNSSec data may be transferred to the registry (only the new name servers etc.). In the second step, after a waiting period, the DNSSec data is transferred to the registry. The waiting time is calculated as follows:\nTTL-NS-RRs of the registry + TTL-NS-RRs of the zone\nThere are different TTLs for each registry\nVeriSign requires a three day wait\nAcceptance Criteria\nDomains are permanently reachable during DNSSec activation.\nChecklist\n  DoD: Verified by Scrum Master.",
+  "business_value": {},
+  "assignee": "Daniel Schimek",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Options",
+    "CLOSED",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,53 @@
+{
+  "key": "EOS-7111",
+  "issue_type": "Epic",
+  "title": "SeCe-IT business case extension: change requests for relocation and SLA remarketing / SeCe-IT Geschäftsfallerweiterung: Änderungsaufträge um den Umzug und SLA Nachvermarktung",
+  "status": "Funnel",
+  "description": "Description\n Story\nAls ANWENDERROLLE / ANFORDERER ( z.B. :Auftragsbearbeiter, Teamleiter, Admin)\nmöchte ich ANFORDERUNG,\num BEGRÜNDUNG/MEHRWERT.\n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)\nWie ist der heutige Prozess/Ablauf? Welche Einschränkungen/Probleme gibt es? Was läuft suboptimal? Warum ist die Änderung/ Neuerung mit der Anforderung notwendig?\nFachlicher Lösungswunsch (Feature Hypothese)\nWas sind die MINIMAL-Anforderungen an die Lösung? Was konkret ist der Umfang/Inhalt der anzustrebenden Lösung innerhalb des nächsten PI?\nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nNotwendige Änderungen (Erfolgt durch EOS Team)\nFolgende Auflistung dient als erste Orientierung bzgl. der notwendigen Änderungen an EOS zur Umsetzung dieses EPICs:\n....\n.....\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n  Technische CHECKLISTE\nDieser Abschnitt dient als Orientierung zur Prüfung, ob an \"alles\" gedacht wurde.\nDieser Abschnitt soll vor dem Refinement gelöscht werden!\nDie Checkliste für die Stories ist der Vorlage für Stories zu entnehmen (EOS-433)\nZur groben Orientierung hier noch die entsprechenden Stichpunkte:\nExport-Schnittstellen\nImport-Schnittstellen\nLöschkonzept\nBenutzeroberfläche / Dialoge\nRollen & Rechte\nKorrespondenz\nAufgaben\nAuftragsvervollständigung\nNachrichten\nKontakte\nAbhängigkeiten zwischen Domänen\nKommunikation\nWelche Stakeholer müssen über diese Änderung informiert werden?\nAL, TL, OPO, Reporting\nABD: GK-ENK: Ayla Özkara; DTT: Peter Stirnberg; P&PT: Tanja Heß; TL CB05 Bastian Sichhart\nWie werden die Mitarbeiter über diese Änderung informiert?\nMüssen Magenta Infos Artikel geändert oder erstellt werden? News? Newsletter?\nSind Schulungen notwendig? WBT? BrainBite? \nIst eine zusätzliche Kommunikation über YaM notwendig?\nUsesCases / TestCases\nUseCase 1\nUseCase 2\n...",
+  "business_value": {},
+  "assignee": "Pavol Dydňanský",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-05",
+  "fix_versions": [
+    "PI28-stretch"
+  ],
+  "acceptance_criteria": [
+    "The change business case was cut smaller due to negative tests; this portfolio EPic is used to address the use cases that have not yet been implemented:\nRelocation and change of location (EOS-7330)\n1. Main item\n      a. 1st business case = change  \n      b. 2nd sub-business case = relocation > Only recognized via the product attribute??EOS, SeCeIT-, O3-\n      c. Product attribute = deinstalling/installing (as on the old interface but via O3) EOS-, SeCeIT-, O3-\nInstalling / deinstalling (montage/demontage)\nfor relocation, steps:\non 1st. place deinstall – Location 1\non 2nd. place Install – Location 2",
+    "Relocation and change of location (EOS-7330)\n1. Main item\n      a. 1st business case = change  \n      b. 2nd sub-business case = relocation > Only recognized via the product attribute??EOS, SeCeIT-, O3-\n      c. Product attribute = deinstalling/installing (as on the old interface but via O3) EOS-, SeCeIT-, O3-\nInstalling / deinstalling (montage/demontage)\nfor relocation, steps:\non 1st. place deinstall – Location 1\non 2nd. place Install – Location 2",
+    "Installing / deinstalling (montage/demontage)\nfor relocation, steps:\non 1st. place deinstall – Location 1\non 2nd. place Install – Location 2",
+    "for relocation, steps:\non 1st. place deinstall – Location 1\non 2nd. place Install – Location 2",
+    "on 1st. place deinstall – Location 1",
+    "on 2nd. place Install – Location 2",
+    "SLA remarketing (EOS-6652)",
+    "SLA position is transferred to EOS and displayed there\nIRRP trigger mail texts should be identical for in-house and voice (GF change on partial order) **",
+    "SLA position is transferred to EOS and displayed there",
+    "IRRP trigger mail texts should be identical for in-house and voice (GF change on partial order) **",
+    "DoR\nThe acceptance criteria are formulated:\nFormulated, comprehensible sentences on what the target image should look like, which can later be checked by a user.\nListing of administrative or configurative adjustments that are necessary for the function of the requirement.\nThe problem and the desired technical solution are formulated in detail\nWhat is the current pain that needs to be improved? Why should something be changed?\nHow / What should be changed?",
+    "The acceptance criteria are formulated:\nFormulated, comprehensible sentences on what the target image should look like, which can later be checked by a user.\nListing of administrative or configurative adjustments that are necessary for the function of the requirement.",
+    "Formulated, comprehensible sentences on what the target image should look like, which can later be checked by a user.",
+    "Listing of administrative or configurative adjustments that are necessary for the function of the requirement.",
+    "The problem and the desired technical solution are formulated in detail\nWhat is the current pain that needs to be improved? Why should something be changed?\nHow / What should be changed?",
+    "What is the current pain that needs to be improved? Why should something be changed?",
+    "How / What should be changed?",
+    "DoR:\nDie Akzeptanzkriterien sind ausformuliert:\nAusformulierte, verständliche Sätze, wie das Zielbild aussehen soll, die später durch einen Anwender geprüft werden können.\nAuflistung administrativer oder konfigurativer Anpassungen, die für die Funktion der Anforderung notwendig sind.\nDie Problemstellung und der fachliche Lösungswunsch ist ausformuliert\nWas ist der heutige Schmerz, der geheilt werden soll? Warum soll etwas geändert werden?\nWie soll der Schmerz geheilt werden? Was soll sich ändern?",
+    "Die Akzeptanzkriterien sind ausformuliert:\nAusformulierte, verständliche Sätze, wie das Zielbild aussehen soll, die später durch einen Anwender geprüft werden können.\nAuflistung administrativer oder konfigurativer Anpassungen, die für die Funktion der Anforderung notwendig sind.",
+    "Ausformulierte, verständliche Sätze, wie das Zielbild aussehen soll, die später durch einen Anwender geprüft werden können.",
+    "Auflistung administrativer oder konfigurativer Anpassungen, die für die Funktion der Anforderung notwendig sind.",
+    "Die Problemstellung und der fachliche Lösungswunsch ist ausformuliert\nWas ist der heutige Schmerz, der geheilt werden soll? Warum soll etwas geändert werden?\nWie soll der Schmerz geheilt werden? Was soll sich ändern?",
+    "Was ist der heutige Schmerz, der geheilt werden soll? Warum soll etwas geändert werden?",
+    "Wie soll der Schmerz geheilt werden? Was soll sich ändern?"
+  ],
+  "components": [
+    {
+      "code": "EOS",
+      "title": "EOS "
+    }
+  ],
+  "labels": [
+    "EOS-PI28"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

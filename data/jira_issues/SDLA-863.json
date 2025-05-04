@@ -1,0 +1,21 @@
+{
+  "key": "SDLA-863",
+  "issue_type": "Epic",
+  "title": "(SO) MIST SDLAN WIFI monitoring - MIST default capabilities",
+  "status": "Closed",
+  "description": "Description\nits important that this EPIC is focusing on the in box CSO / MIST vendor cabalitities si the default from vendor pushed alarm list and the integration of it\n  Event managgement adapter build? / Webhook?\n  PUSH from MIST:\naquire the full scope of LAN and WIFI related monitoring events and vendoir capabilities from SD\ncrosscheck the needed events with eVA / Ops\ncheck adapter for webhook / monitoring / eva\nbuild alarming for those àintegrate to syslog comms for eVA\n   ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

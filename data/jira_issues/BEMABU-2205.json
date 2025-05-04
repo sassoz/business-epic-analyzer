@@ -1,0 +1,60 @@
+{
+  "key": "BEMABU-2205",
+  "issue_type": "Business Epic",
+  "title": "LE – Lead to Oppty (MF – LDA)",
+  "status": "Review",
+  "description": "Description\nBusiness Epic Nutzenstatement\nFür Verticals größer als KMU,\ndie im Direktvertrieb mit Leads (Leadmanagement-Prozess) arbeiten,\nist es notwendig eine Lösung zu finden, wodurch man Leads und ASP-Kunden an externe Outbound-Agenturen weiterqualifizieren kann,\nwodurch die Leadqualität für Sales verbessert wird ,\nso dass  der Umsatz steigen soll ,\nund nicht unqualifizierte Leads einen zusätzlichen Arbeitsaufwand in Sales verursachen und hoher manueller Aufwand zweischen Marketing und Vertrieb entsteht.\nDas Vorhaben schafft eine Verbesserung der Reichweite im Marketing-MIX. Kunden sollen über alle Kanäle (Outbound) im Vertriebszyklus herangezogen werden können. Und Sales soll darüber eine umfangreiche Transparenz erhalten, um strukturierte Fahrpläne zu gestalten.\nAllgemeine Informationen zum Business Epic (BE)\nIST-Situation\nExcel-Listen mit Daten über Leads oder Potenzialkunden werden zwischen Sales, Marketing und Callagentur mit Statusberichten und Kunden-Gesprächsprotokollen hin und her kommuniziert.\nWas ist der Mehrwert?\nGeschwindigkeiten von Entscheidung, Nachjustieren der Strategie durch Transparenz der Leadabarbeitung bei Callagenturen\nEffizienzsteigerung im Kampagnenmanagement\nGrowth Contribution durch ganzheitliche digitale E2E-Journey zwischen Sales, Marketing und Callagentur\nWas ist der Differenzierer – das \"Warum\"?\nVerbesserung von Compliance/Datenschutz, da Daten zwischen den System verschickt werden können und keine Excel mehr benötigt wird.\nMinderung der Aufwände für Abstimmung und langwierige Klärung von Situationen\nChance auf qualifizierte Erstellungen von Leads und höheres Commitment bei Sales im Leadmanagement\nZiele\nDie Journeys sind state of the art. Wir erfüllen die Erwartung der Kundenanforderungen im Handling, Nutzung - Einfachheit in der Bedienung, Usability, ....\nNutzung eines zentralen Tools zum Aus- und Einspielen von Leads und ASP-Kunden (Potenzialkunden)\nViele generierte Leads erreichen nicht den notwendigen Leadscore und müssen weiterqualifiziert werden.\nDafür brauchen wir eine erweiterte Schnittstelle Richtung LeadDialogAPP (LDA) oder eine innerhalb Saleforce integriertes Tool, indem wir Leads oder Potenzialkunden an ein externes Callcenter weitergeben können.\nZielbild\nCase 1:\nLeads über einen Kanal (oder Lead Inhaber ändern) an LDA weiterleiten\nLead landet in LDA in einer ausgewählten Kampagne (Channel) (der Lead/Kontakt muss in der LDA in eine bestimmte Kampagne hinzugefügt werden)\nLead wird vom Callagenten abtelefoniert und weiterqualifiziert\nJe nach Reifegrad des Leads, wird der gleiche Lead (Lead-ID) in MagentaForce mit angereicherten Informationen aus der LDA angepasst\nCase 2:\nASP-Kunde wird zu einer Kampagne als Kampagnenmitglied hinzugefügt\nOder ASP-Kunden als Kampagnenmitglieder wurden einer Kampagne importiert\nDiese Kampagnenmitglieder sollen nach LDA geschickt werden\nmit relevanten Attributen (GP, TelefonNr., Segment, WZ-Nr., Branche, etc.) an LDA weiterleiten\n(ggf. Datenanreicherung aus dem ODL?) = alles aus MF kann an LDA mitgeliefert werden.\nAutomatisch soll ein KampagnenmitgliederStatus „zb. gesendet LDA“ gesetzt werden\nCase 3:\nNominierungsprozess von Leads als Kampagnenmitglieder\nBeispiel/Idee:\nwebinar Lead hat nicht den Reifegrad an Sales weitergeleitet zu werden\nLead wird in webinar Kampagne auf \"verworfen\" gesetzt mit Begründung \"Nuturing über Callagentur\"\nLead wird in neue Kampagne als Kampagnenmitglied hinzugefügt\nKampagnenmitglied wird mit allen notwenigen Informationen (webinar-Infos, GP, Telefon, Segment, Branche, etc.) an LDA geliefert\nCallagentur kontaktiert Kunden\nje nach Reifegrad wird Kontakt als Lead mit Lead-Status (verworfen, Status 2-3) nach MagentaForce geliefert \nSonstiges:\nProduktcluster aus LDA soll an MagentaForce übermittelt werden können\nIT, TK, Mobile, ICT, etc.\nRegeln des übermitteln des Lead-Status von LDA nach MagentaForce sollen neu definiert werden\nEs soll je nach Reifegrad des Leads der Lead-Status (0,1,2,3,4 \"verworfen mit Begründung\") bereits in der LDA definiert werden und nach MagentaForce übermittelt werden können\nWiedervorlage Datum soll nach MagentaForce übermittelt werden können\nEin Lead mit hohen Reifegrad soll innerhalb 7 Tagen abgearbeitet werden. Dafür bedarf es eine Datumsübermittlung der Wiedervorlage\nFehlermeldung/Rückmeldung MagentaForce/MarketingAutomation bei Leadexport aus LDA\naktuell bekommt man keine Informationen, ob der Lead beim Export aus LDA wirklich in MF angekommen ist (oder Fehlgeschlagen ist, weil = Grund?)\n  Was ist die Differenzierung - das \"Warum\"?\nStand heute\nManueller, komplizierter und fehlerbehaftender Statusreport der Kundendaten über SDR-Excellistenpflege.\nJeder einzelne Kundenkontakt muss in Magenta-Force mit individuellen Leadinformationen angelegt werden.\nLead-Bögen/Gesprächsnotizen müssen separat per E-Mail an Lead-Inhaber versendet werden.\nJeder Lead-Inhaber muss über Informationstool rausgesucht und in Magenta-Force + E-Mail eingetragen werden.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nSchnittstelle zum externen Tool (Lead APP)\nSchnittstelle zu MarketingAutomationen, hier liegen bereits einige Schnittstellen vor, die erweitert werden müssen (https://wiki.telekom.de/pages/viewpage.action?pageId=2091353668) \nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMarketingCloud DOM0201 Daniel Vater  \nMagentaForce DOM0201 Matthias Hoffmann  \nLDA extern Holger Spiekmann  \n  BEO und ggf. Vertreter Jennifer Litterscheid\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nOptimierung des Leadmanagement für Telemarketing-Maßnahmen im Direktvertrieb.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "zwischen 5-10% mehr Leads = ca. 7.500.000 € ungewichtet (gesamt)",
+      "cost_saving": "MEHR Real Selling Time für Vertriebs-MA und Marketing (größer KMU)",
+      "risk_loss": "",
+      "justification": "Hebel: Leadmenge & Leadqualität. Leads erreichen durch weiteres Nurturing über Outbound einen höheren Reifegrad. Dadurch erhalten wir ein höheres Commitment des Vertriebs und die Leads werden auch wertvoller zugestellt und abgearbeitet. Prozessvereinfachung des Outboundmaßnahmen in GK-VM, GK-LE und Public. Dadurch können mehr Kundenangänge produziert werden. Stand 2024: ca. 4.000 Leads / ca. 1.000 Vorhaben Gewonnen 274.919€ / Gewichtet 1.448.270€ / Ungewichtet 11.639.092€|| GK-LE * Sicherstellung Zielerreichung (Target Neugeschäft) gemäß iPF: * AE 2024 à 2,6 Mrd. €, davon 132 Mio. € International Thereof Ziel AE über Neugeschäft 2024 à 0,9 Mrd. €"
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "mittelfristige Reduzierung von Wartungs- und Änderungsrisiken",
+      "strat_enablement": "Erhöht die Kundenerfahrung/-bindung oder das TD-Image in besonderem Maße, z. B. einzigartiger Login, Prozessvereinfachung oder disruptive/architektonische Innovation",
+      "justification": "Transparente E2E-Leadbearbeitung zwischen CRM und dem Callcenter-Tool. Leads oder ASP-Kunden können zwischen Marketing, Sales und externe Callagentur bearbeitet werden."
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch:",
+      "justification": "Der Hebel liegt bei Leadmenge und Leadqualität. Wird die Anforderung umgesetzt, wird dieser Hebel aktiviert."
+    }
+  },
+  "assignee": "Litterscheid, Jennifer",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Transparenz zu Leads aus dem Marketing ist Ende-zu-Ende innerhalb MagentaForce hergestellt",
+    "Dabei muss eindeutig nachvollziehbar sein, aus welche Marketingkampagne, Marketingmaßnahme oder Marketingkanal der Lead stammt",
+    "PSA-Prozess durchlaufen, Mitbestimmungspflichtige Aspekte geklärt und freigegeben",
+    "Schnittstelle zum externen Tool (Lead APP)",
+    "Schnittstelle zu MarketingAutomationen, hier liegen bereits einige Schnittstellen vor, die erweitert werden müssen (https://wiki.telekom.de/pages/viewpage.action?pageId=2091353668)"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-93466",
+      "title": "MAGBUS-93466",
+      "summary": "LE: Marketing_Outbound/Telemarketing",
+      "url": "https://jira.telekom.de/browse/MAGBUS-93466",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

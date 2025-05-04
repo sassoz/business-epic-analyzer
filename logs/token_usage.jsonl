@@ -1,0 +1,10 @@
+{"timestamp": "2025-05-04T12:47:21.448608", "model": "claude-3-7-sonnet-latest", "input_tokens": 4569, "output_tokens": 940, "total_tokens": 5509, "cost_usd": 0.027807, "task_name": "business_impact"}
+{"timestamp": "2025-05-04T12:55:32.570471", "model": "gpt-4.1", "input_tokens": 7474, "output_tokens": 1396, "total_tokens": 8870, "cost_usd": 0.026116, "task_name": "summary_generation"}
+{"timestamp": "2025-05-04T12:56:13.970220", "model": "gpt-4.1-mini", "input_tokens": 4759, "output_tokens": 2936, "total_tokens": 7695, "cost_usd": 0.006601, "task_name": "html_generation"}
+{"timestamp": "2025-05-04T13:01:13.522885", "model": "gpt-4.1", "input_tokens": 7474, "output_tokens": 1443, "total_tokens": 8917, "cost_usd": 0.026492, "task_name": "summary_generation"}
+{"timestamp": "2025-05-04T13:01:58.243614", "model": "gpt-4.1-mini", "input_tokens": 4806, "output_tokens": 2930, "total_tokens": 7736, "cost_usd": 0.00661, "task_name": "html_generation"}
+{"timestamp": "2025-05-04T13:11:00.168806", "model": "gpt-4.1", "input_tokens": 7474, "output_tokens": 1524, "total_tokens": 8998, "cost_usd": 0.02714, "task_name": "summary_generation"}
+{"timestamp": "2025-05-04T13:13:49.495384", "model": "gpt-4.1", "input_tokens": 7474, "output_tokens": 1921, "total_tokens": 9395, "cost_usd": 0.030316, "task_name": "summary_generation"}
+{"timestamp": "2025-05-04T13:15:16.120875", "model": "gpt-4.1-mini", "input_tokens": 5284, "output_tokens": 3628, "total_tokens": 8912, "cost_usd": 0.007918, "task_name": "html_generation"}
+{"timestamp": "2025-05-04T13:19:44.779337", "model": "gpt-4.1", "input_tokens": 7474, "output_tokens": 1428, "total_tokens": 8902, "cost_usd": 0.026372, "task_name": "summary_generation"}
+{"timestamp": "2025-05-04T13:20:24.572820", "model": "gpt-4.1-mini", "input_tokens": 4791, "output_tokens": 2908, "total_tokens": 7699, "cost_usd": 0.006569, "task_name": "html_generation"}

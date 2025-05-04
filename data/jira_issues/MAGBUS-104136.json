@@ -1,0 +1,31 @@
+{
+  "key": "MAGBUS-104136",
+  "issue_type": "Epic",
+  "title": "OnNet Security Fixed: Implementierung",
+  "status": "Analysis",
+  "description": "Description\nDie gesamte Struktur sieht nun so aus:\nhttps://jira.telekom.de/browse/BEMABU-1787 - Initiative für OnNet Security Fixed alle Pakete – Basic, Comfort, Advanced\nBasic:\nhttps://jira.telekom.de/browse/BEMABU-1788 - Enabler Q2/25\nhttps://jira.telekom.de/browse/BEMABU-1790- Touchpoints Q3/ 25\nhttps://jira.telekom.de/browse/BEMABU-1791 - Validation & Launch Q4/25\nComfort/Advanced:\nhttps://jira.telekom.de/browse/BEMABU-2265 - Enabler Q3/25\nhttps://jira.telekom.de/browse/BEMABU-2266 - Touchpoints Q3/25\nhttps://jira.telekom.de/browse/BEMABU-2267 - Validation & Launch Q4/25",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_BPP",
+    "MB_BPP_extern",
+    "MB_BPP_intern"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2025-04-10_Basisportfolio_Simplicity_OnNetBasic_zMP.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5599698/2025-04-10_Basisportfolio_Simplicity_OnNetBasic_zMP.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "44 kB",
+      "date": "2025-04-10T15:35:57.434+02:00"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "key": "MAGBUS-92465",
+  "issue_type": "RAID item",
+  "title": "ToDos SEP/MF",
+  "status": "Funnel",
+  "description": "Description\n1:N Beziehung von einem Ansprechpartner an mehreren GP\nmehrere Telefonnummern am Asp\nmehrere eMail-Adressen am Asp\nLöschen der in MF nicht bekannten Daten verhindern\n   ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "LaO"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

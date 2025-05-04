@@ -1,0 +1,25 @@
+{
+  "key": "ADCL-12259",
+  "issue_type": "Epic",
+  "title": "[Inhouse] O3 Data structure updates & enhancements",
+  "status": "In Progress",
+  "description": "Description\n  As a PO of the O3 Team\nI would like to support several enhancements on the Inhouse E2E Chain to have more orders transmitted, enriched and best case completed in/from EOS\nSo that EOS users can deliver faster & at higher quality to our end customers.\nFeatures i.e.:\nSupport transmission of contract type information between SeCeIT and EOS as long as oPIM does not support this feature. This requires extension of O3 order structure. As soon as oPIM supports this feature (Data transfer SECE-IT ALMV <-> oPIM) the process is to be amended (PI29?)\nMAGBUS-84671 - Inhouse Basic: Vertragsarten nach EOS übergeben\nsupported by ADCL-12006\nOrder Structure amendment & E2E Testing Support for\nMAGBUS-100840 - Inhouse Basic: Erweiterung der Änderungsaufträge um den Umzug und SLA Nachvermarktung\nsee SECEIT Umzug , SLA Nachvermarktung\nsupported by ADCL-12473\nCritical Ad hoc requirements on Inhouse Chain (on exception basis)\n ",
+  "business_value": {},
+  "assignee": "Dirk Henning",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-O3-Template",
+    "ADCL-PI28",
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

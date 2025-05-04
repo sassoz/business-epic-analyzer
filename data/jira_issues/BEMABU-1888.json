@@ -1,0 +1,49 @@
+{
+  "key": "BEMABU-1888",
+  "issue_type": "Business Epic",
+  "title": "Mobilfunk KEK/Permission Abmeldung im DCM",
+  "status": "Funnel",
+  "description": "Description\nProblembeschreibung (ggf. Nutzungstatement)\nIm B2B Umfeld werden heute kundenseitige Ansprechpartner mit ihren Permission Aussagen in vielen verschiedenen Systeme gepflegt. Permission Abmeldungen für Mobilfunk Kunden werden heute lediglich über die Marketing Automation nach OMS OE übertragen und dort zeitverzögert bearbeitet. Permission Abmeldungen über weitere Systeme können aktuell nicht nach Carmen übertragen werden und es existiert zwischen den Systemen ein Datenschiefstand, wodurch wir in die Gefahr laufen von Datenschutzvorfällen, da Personen kontaktiert werden, welche ihre Permission entzogen haben.\n  Hierfür ist es notwendig die Abmeldung der Permissions über die verschiedensten Kanäle unserer kundenseitigen Ansprechpartnerdaten in die heutigen Mobilfunk Systeme CARMEN zu überführen um einen identischen Stand der Permissions zu besitzen.\nDadurch verbessern wir die Datenqualität und vermeiden Datenschutzvorfälle.\n  Business Epic Outcome Hypothesis\nDer Data Consent Master meldet die Permissions der Mobilfunk Kunden in Carmen ab.\nStrategischer Beitrag & zeitliche Kritikalität\nAufgrund des SOA-BP Retirement wird die Schnittstelle der Marketing Automation zur Abmeldung einer Permission in den Data Consent Master überführt, um an zentraler Stelle die Abmeldung der Permissions vorzunehmen.\nLeading Indicators\nDie Data Consent Master übernimmt die Datenmasterschaft der Mobilfunk KEK/Permission und meldet Mobilfunk-Permissions weiter nach Carmen\nIn Scope / Akzeptanzkriterien\nPermission Abmeldung der Mobilfunk-Kunden werden nach Carmen überführt\nDCM übernimmt zentral die Abmeldung der Permissions\nIn der MA wird die Abmeldung der Permission zurück gebaut.\nOut of scope\nNeue Schnittstelle auf Seiten Carmen aufbauen\nAbhängigkeiten (auch technisch)/Wechselbeziehungen\n  Voraussetzungen\nFreigabe zur Nutzung der SOAP Schnittstelle „CC_changePermissions2\"",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "Vermeidung von Datenschutzvorfällen",
+      "justification": "Wir laufen in die Gefahr von Datenschutzvorfällen, da Personen kontaktiert werden, welche ihre Permission entzogen haben."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "Vermeidung von Datenschutzvorfällen durch zentralisierte Permission-Verwaltung",
+      "strat_enablement": "Überführung der Schnittstelle der Marketing Automation zur Abmeldung einer Permission in den Data Consent Master",
+      "justification": "Data Consent Master übernimmt die Datenmasterschaft der Mobilfunk KEK/Permission und meldet Mobilfunk-Permissions weiter nach Carmen"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Aufgrund des SOA-BP Retirement wird die Schnittstelle der Marketing Automation zur Abmeldung einer Permission in den Data Consent Master überführt"
+    }
+  },
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "Cross-vertical",
+    "LaO_SEP"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-97698",
+      "title": "MAGBUS-97698",
+      "summary": "Permission Abmeldung nach Carmen übertragen",
+      "url": "https://jira.telekom.de/browse/MAGBUS-97698",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

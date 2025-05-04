@@ -1,0 +1,37 @@
+{
+  "key": "MAGBUS-99800",
+  "issue_type": "Initiative",
+  "title": "Product Catalog Presentation",
+  "status": "Funnel",
+  "description": "Description\nFor an internal user\nwho wants to create a new mobile contract on behalf of the customer\nthe Product Catalog\nIs a Crucial source to support all sales and service processes with necessary product data and price information.\nthat contains the complete portfolio that is to be offered to the customer. For the presentation of all products, the product catalog contains descriptions, product images or instructions or specifications. The consistent descriptions enable products to be compared.\nUnlike todays solution like BSP or CARMEN\nour solution ...\n ",
+  "business_value": {},
+  "assignee": "Susan Neßlinger",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C14",
+      "title": "C14 "
+    }
+  ],
+  "labels": [
+    "GK_Kundencenter",
+    "Roadmap.2025.VSDT"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-100521",
+      "title": "MAGBUS-100521",
+      "summary": "[NEPAL] Expose all available Product Base Data",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100521",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

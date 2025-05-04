@@ -1,0 +1,72 @@
+{
+  "key": "BEMBN-18",
+  "issue_type": "Business Initiative",
+  "title": "SNP Juniper MIST LAN/Wifi Bundles - Finalization and Get well",
+  "status": "Closed",
+  "description": "Business Scope:\nOur customers can react more flexible to the network market by minimizing process times and control on a single self service platform, thus reducing costs on the one hand and satisfying customers on the other. This solution is not yet available on the market and is therefore an innovation that promotes our image.\n\nThe new SD-WAN/WLAN product is a product which can be separately and independently booked from SD-WAN. But, it is expected to be mostly marketed together with SD-WAN as a SD-Branch Offer.\n\nAn extension of the product portfolio leads to long-term revenue assurance through a more cost-effective solution compared to the previous offering (complex, project-based). Economies of scale can be utilized through self-service and an automated platform chain (development, operating costs).\n\nFewer disruptions through AI (e.g. 96% fewer trouble tickets at T-Mobile US)\nImproved end-user satisfaction\nLower operating costs through AI\nLess effort and higher customer satisfaction through “real” SD-Branch approach",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "2024-10-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "PrioQ1_25",
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    },
+    {
+      "code": "DOM0202",
+      "title": "DOM0202 Order2Cash"
+    },
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "MHS_B2B_Powerhouse",
+      "title": "MHS_B2B_Powerhouse "
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 TOP-Demand"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Prio_2024",
+    "B2B_Target",
+    "E2E_Trafo_SD-X",
+    "MIST",
+    "Portfolio"
+  ],
+  "realized_by": [
+    {
+      "key": "SDLA-713",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-713",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMBN-114",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/BEMBN-114",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-33",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-33",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

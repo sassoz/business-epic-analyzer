@@ -1,0 +1,88 @@
+{
+  "key": "EOS-6935",
+  "issue_type": "Epic",
+  "title": "Inhouse tracking/afterwork (incl. invoicing) / Inhouse - Nachverfolgung (inkl. Faktura)",
+  "status": "Review",
+  "description": "",
+  "business_value": {},
+  "assignee": "Bratzke, Florian",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "PI28-stretch"
+  ],
+  "acceptance_criteria": [
+    "A new button labeled \"Track Suborder\" is available on the EOS SeCe-IT suborder.\nThe tracking page can be accessed after the suborder has been successfully completed (i.e., after a successful click on \"Send\" or \"Send for revision\").\nBefore sending, the button is white and clickable — however, clicking it triggers a pop-up:\n\"Before you can track this suborder, it must be sent.\"\nNon-editing users (read-only access) can also access the page.\nThe same logic applies: the suborder must be sent before the page is accessible.\nThe page remains accessible in read-only mode even after the order is closed in EOS.\nIn read-only view (non-editors), the button always remains white.\nIcon: assets/img/icons/new-window_outline.svg\nClicking the button opens a new page titled: \"Order Tracking [ATT Order ID – linked]\"\nBelow the title, the partner system, suborder, and location are displayed.\nBelow that, the customer number and customer name are shown.\nIn the header, there are buttons: \"Close\", \"Back\", and \"Next\" (logic remains unchanged).",
+    "The tracking page can be accessed after the suborder has been successfully completed (i.e., after a successful click on \"Send\" or \"Send for revision\").",
+    "Before sending, the button is white and clickable — however, clicking it triggers a pop-up:\n\"Before you can track this suborder, it must be sent.\"",
+    "\"Before you can track this suborder, it must be sent.\"",
+    "Non-editing users (read-only access) can also access the page.\nThe same logic applies: the suborder must be sent before the page is accessible.",
+    "The same logic applies: the suborder must be sent before the page is accessible.",
+    "The page remains accessible in read-only mode even after the order is closed in EOS.\nIn read-only view (non-editors), the button always remains white.\nIcon: assets/img/icons/new-window_outline.svg",
+    "In read-only view (non-editors), the button always remains white.",
+    "Icon: assets/img/icons/new-window_outline.svg",
+    "Clicking the button opens a new page titled: \"Order Tracking [ATT Order ID – linked]\"\nBelow the title, the partner system, suborder, and location are displayed.\nBelow that, the customer number and customer name are shown.\nIn the header, there are buttons: \"Close\", \"Back\", and \"Next\" (logic remains unchanged).",
+    "Below the title, the partner system, suborder, and location are displayed.",
+    "Below that, the customer number and customer name are shown.",
+    "In the header, there are buttons: \"Close\", \"Back\", and \"Next\" (logic remains unchanged)."
+  ],
+  "components": [],
+  "labels": [
+    "Acceptance",
+    "EOS-PI28"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Auftragsnachverfolgung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5399600/Auftragsnachverfolgung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-13T14:30:08.175+01:00"
+    },
+    {
+      "filename": "Faktura-anstoßen.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526243/Faktura-ansto%C3%9Fen.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:05:03.697+01:00"
+    },
+    {
+      "filename": "FakturaCall.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526239/FakturaCall.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T11:57:45.192+01:00"
+    },
+    {
+      "filename": "Hardware-Zustellung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526205/Hardware-Zustellung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T11:34:04.070+01:00"
+    },
+    {
+      "filename": "image-2025-02-26-11-44-42-063.png",
+      "url": "https://jira.telekom.de/secure/attachment/5441527/image-2025-02-26-11-44-42-063.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-26T11:44:43.091+01:00"
+    },
+    {
+      "filename": "Leistungserbringung_sicherstellen.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526223/Leistungserbringung_sicherstellen.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T11:48:36.887+01:00"
+    },
+    {
+      "filename": "SeCe-IT-Nachverfolgung - Absprung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5399582/SeCe-IT-Nachverfolgung%20-%20Absprung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-13T14:12:24.837+01:00"
+    }
+  ]
+}

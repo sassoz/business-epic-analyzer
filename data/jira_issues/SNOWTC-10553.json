@@ -1,0 +1,28 @@
+{
+  "key": "SNOWTC-10553",
+  "issue_type": "Epic",
+  "title": "Enabler: Configure and Use DTA interface (Replace Tesy-Tafel by SeCe-IT)",
+  "status": "Closed",
+  "description": "Description\nThe existing interface in the direction of DTA is to be adapted to include SD LAN/WiFi. \nSD WAN Juniper@CSO steuert mit der DTA Order Form die Tesy-Tafel an. Juniper MIST SD LAN/WiFi soll mit den gleichen Format das Tool SeCe-IT ansteuern.\n  Required Inputs:\nData Flow Model: Part of DTA Parameters (DTA Order Form) - until 09.09.\nProcess/Workflow Description: DTA- until 09.09.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "ServiceNow SD LAN/WiFi Release 1.0",
+    "Q1_2023"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SNOW@TC",
+    "SNOWTC",
+    "Solution_Architecture"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

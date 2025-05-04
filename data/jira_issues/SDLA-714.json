@@ -1,0 +1,105 @@
+{
+  "key": "SDLA-714",
+  "issue_type": "Initiative",
+  "title": "Simplification of Product Model and Implementation in all Systems Q3 Exploration",
+  "status": "Closed",
+  "description": "Description\n  For whom Telekom\nwho has to fulfill the order of a managed WAN / LAN / WiFi service\n\nBusiness Scope:\nThe current Product Model and related Architecture of current mode of operations (CMO) shall be simplified exposing less technical features to the ServiceNow Portal (internal and external) using in addition the native vendor portals for additional technical enrichment of parameters in future mode of operations (FMO) and shall be implemented in all systems. For that purpose the Dataflow of Inventory of CMO shall be modified to FMO as shown in picture.\n\nThis will lead to a more consistent and less change prone PO/PS layer which is required to be implemented in multiple tools consistently (P+, CPQ, SN, ...). Thus to add a feature only a smaller portion of the tool chain will be affected reducing the implementation effort.",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q3_22"
+  ],
+  "acceptance_criteria": [
+    "Exploration phase FMO Simplification of Product Model shall be done and documented",
+    "The FMO Dataflow of Inventory for new Architecture using also MIST Portal for technical network configuration is done and documented"
+  ],
+  "components": [],
+  "labels": [
+    "Assurance",
+    "NGO",
+    "OKR_Q3_Simplification_&_Automation",
+    "SDLA_VS_Assurance",
+    "SDLA_VS_Billing&Contract_Mgmt",
+    "SDLA_VS_Digital_Customer_Touchpoints",
+    "SDLA_VS_Finance_Procurement&Logistic",
+    "SDLA_VS_Lead&Opportunity",
+    "SDLA_VS_Order_Management",
+    "SDLA_VS_Technical_Fulfillment&Domain_Orcherstration",
+    "SDX",
+    "SDxHub",
+    "SNOW@TC",
+    "SNOWTC",
+    "assurance"
+  ],
+  "realized_by": [
+    {
+      "key": "SDX-6000",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-6000",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-861",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-861",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5907",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5907",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5919",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5919",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20220714_SDX-Simplification and Automation CMO-FMO.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334221/20220714_SDX-Simplification%20and%20Automation%20CMO-FMO.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-19T08:41:35.000+02:00"
+    },
+    {
+      "filename": "image-2022-06-20-13-43-21-028.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334222/image-2022-06-20-13-43-21-028.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-06-20T13:43:21.000+02:00"
+    },
+    {
+      "filename": "image-2022-06-20-13-45-03-769.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334223/image-2022-06-20-13-45-03-769.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-06-20T13:45:04.000+02:00"
+    },
+    {
+      "filename": "image-2022-06-29-15-51-16-608.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334224/image-2022-06-29-15-51-16-608.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-06-29T15:51:17.000+02:00"
+    },
+    {
+      "filename": "image-2022-07-19-08-23-10-951.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334225/image-2022-07-19-08-23-10-951.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-07-19T08:23:11.000+02:00"
+    }
+  ]
+}

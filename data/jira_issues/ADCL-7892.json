@@ -1,0 +1,77 @@
+{
+  "key": "ADCL-7892",
+  "issue_type": "Epic",
+  "title": "Build B2B Fiber/FTTH Product Change Order (Partial Order)",
+  "status": "Closed",
+  "description": "Description\nProcess information:\nA new fiber/FTTH fixed-net product* has been sold to B2B customers that\nalready have an existing copper access with a copper-based product, but\nnot a fiber/FTTH access\nFlamingo or MBSP (touchpoints) delivers the sales order to oPOM in TMF 622 format\noPOM delivers/exposes the sales order/total order to EOS for verfication and quality checks\nAfter having qualitiy checked and verified the sales order, EOS deliveres the total order back to oPOM with the \"ATT-ID\" as a bundling total order indicator",
+  "business_value": {},
+  "assignee": "Heinz-Gerd Bendels",
+  "priority": "",
+  "target_start": "2024-02-29",
+  "target_end": "2024-04-10",
+  "fix_versions": [
+    "PI 23"
+  ],
+  "acceptance_criteria": [
+    "business requirements understood",
+    "as is process understood",
+    "target process defined",
+    "target process agreed",
+    "migration roadmap agreed",
+    "implementation user stories are described",
+    "user stories implemented, tested and accepted",
+    "solution is deployed with feature toggle (header flag processing engine \"remote\")"
+  ],
+  "components": [],
+  "labels": [
+    "ADCL-PI23",
+    "MaBu_Connect",
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "231211_Team OPOM2_Short_V1.2.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/3626982/231211_Team%20OPOM2_Short_V1.2.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2023-12-12T14:12:14.766+01:00"
+    },
+    {
+      "filename": "Core Studio_GK_Anforderung 2024 - Stand 26.07.2023.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/3626984/Core%20Studio_GK_Anforderung%202024%20-%20Stand%2026.07.2023.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2023-12-12T14:12:15.256+01:00"
+    },
+    {
+      "filename": "image-2023-12-04-11-50-31-708.png",
+      "url": "https://jira.telekom.de/secure/attachment/3499099/image-2023-12-04-11-50-31-708.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2023-12-04T11:50:31.966+01:00"
+    },
+    {
+      "filename": "OrgChart9.1.24.png",
+      "url": "https://jira.telekom.de/secure/attachment/3742990/OrgChart9.1.24.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-01-29T17:05:01.308+01:00"
+    },
+    {
+      "filename": "Projekt FTTH4B2B Onboarding Unterlage.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/3626985/Projekt%20FTTH4B2B%20Onboarding%20Unterlage.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2023-12-12T14:12:15.049+01:00"
+    },
+    {
+      "filename": "WS- IT Leitbild FTTH Stand 13.06.2023.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/3626983/WS-%20IT%20Leitbild%20FTTH%20Stand%2013.06.2023.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2023-12-12T14:12:15.188+01:00"
+    }
+  ]
+}

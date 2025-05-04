@@ -1,0 +1,47 @@
+{
+  "key": "ECC-7764",
+  "issue_type": "Epic",
+  "title": "Neue Einstellung für spezielle VPN-Nutzung am Desktop-Client (DT Lösung für Quad 9 Ersatz)",
+  "status": "Backlog",
+  "description": "",
+  "business_value": {},
+  "assignee": "Etscheid Andreas",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "The device population is extended with a new attribute to control the “VPN” for each device profile.",
+    "The device population is extended with new device custom tag profile with new feature \"VPN\" and associated custom tags (device custom tags)",
+    "For devices that have in C4 an assigned custom tag profile “VPN” in the section \"Endgeräte Einstellungen\" there should be toggler to activate/deactivate the VPN-Usage.",
+    "The new functionality is switchable (pilotflag) in hpbx portal.",
+    "The option is visible for all users in hpbxPortal / myPortal when the expertview is activated",
+    "The option can only be changed by administrative users",
+    "The following note is also displayed:\n\"Hinweis: Beachten Sie, dass diese Nutzung nur in speziellen Szenarien funktioniert und bei Falschnutzung dazu führt, dass nicht telefoniert werden kann. Kontaktieren Sie unseren Service, um sicherzustellen, dass das Szenario für Sie relevant ist.\"",
+    "Activating / deactivating triggers a synchronous request to update the device configuration",
+    "Activating: VPN Device Custom tag set “VPN_BroadSoft” is assigned to the device ID",
+    "Deactivating: default configuration is restored - C4 removes the VPN custom tags",
+    "A rebuild must be triggert",
+    "If “VPN-Nutzung aktivieren” is selected for a device only the VPN_Domain including the CustomTag (introduced with ECC-9030) is displayed in the hpbx portal under the device settings - \"SIP Accountdaten\" - Proxy-Server\" Example \" xxxxxxxx.hpbxvpn.deutschland-lan.de (mit Verschlüsselung, Port 5061)\" )\nHint: \"xxxxxxxx.hpbx.deutschland-lan.de /xxxxxxxx.hpbxsec.deutschland-lan.de” are not shown in the portal"
+  ],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    },
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    },
+    {
+      "code": "Technik",
+      "title": "Technik "
+    }
+  ],
+  "labels": [
+    "CompanyFlex"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

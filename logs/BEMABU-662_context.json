@@ -1,0 +1,251 @@
+{
+  "root": "BEMABU-662",
+  "issues": [
+    {
+      "key": "BEMABU-662",
+      "title": "Automatisierter Kundensteckbrief",
+      "issue_type": "Business Epic",
+      "status": "In Progress",
+      "assignee": "Frank Nähring",
+      "target_start": "2025-04-01",
+      "target_end": "2025-09-30",
+      "fix_versions": [
+        "Q3_25",
+        "PrioQ2_25"
+      ],
+      "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür TD GK B2B  (T-Business) = Customer View Cockpit / Data Driven Sales\ndie Seller und Accountverantwortlichen ist die Konsolidierung der Informationen aus den relevanten Datenquellen in entsprechende DataCubes (bspw. allokiert im BDI-Hub), dort verarbeitet und Provisioniert an die Zielsysteme (MagentaForce) notwendig,\nwodurch die nötige Transparenz für den für Kunden relevante Herausforderungen erreicht sein können, zu dem der Vertrieb relevante Salesstories entwickeln kann\nso dass die Hitrate/Winrate der Vorhaben erhöht wird\nund nicht Vorhaben vertrieblich getrieben werden, die weder eine Herausforderungen eines Großkunden adressieren, noch einer existierenden Geschäftsinitiave zugeordnet werden können.\nDas Vorhaben schafft die nötige Transparenz bei der Entwicklung von für den Kunden relevanten und für den Vertrieb erfolgversprechende Mission und Vision für die Sales Story eines jeden Großkunden.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nPowerBI und MagentaForce\nMVP Accountplanning (https://jira.telekom.de/browse/BEMABU-173)\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMagenta Force DOM0201 Matthias Hoffmann  \nBDI DOM.... Sven Peplau  \n        Data Tribe   Birgit Kruckewitt  \n  BEO und ggf. Vertreter Markus Hellmold, Frank Nähring\nSponsor/Fachseite  \nWeitere Stakeholder  \nWeitere AnsprP Carolin Schämann, Daniel Zamzow, Heckel, Alexander\nSonstiges \n  Hier ist bei Bedarf Platz für sonstige Information.\n  +++++++++++++++++ alte Daten ++++++++++++++++++++++++++++\n  WAS: Funktionserweiterung für das Accountplanning, welches in 2022 (bis Ende Q3) auf ein MVP beschränkt werden musste. Gleichzeitig wächst die Notwendigkeit mehr Informationen und \"Datenprodukte\" verfügbar zu machen.\nWARUM: höhere Nutzerfreundlichkeit für die Accountmanager, die alles auf einen Blick über ihren Kunden sehen können und somit mehr Zeit haben\nNutzen: M\nKosten: M\n(S = Gering; M = Hoch; L = Sehr hoch)\nGröße/Aufwand/Dauer des BE: \n  Infos für BDI:\nAllgemeine Informationen zum Business Epic (BE)\n BEO Lucas Hack /Markus Hellmold\nSponsor/Tribe/Geschäftsbereich B2B Powerhouse Markus Hellmold\nBusiness Epic Nutzenstatement\nFunktionserweiterung für das Accountplanning, welches in 2022 (bis Ende Q3) auf ein MVP beschränkt werden musste. Gleichzeitig wächst die Notwendigkeit mehr Informationen und \"Datenprodukte\" verfügbar zu machen.\nWARUM: höhere Nutzerfreundlichkeit für die Accountmanager, die alles auf einen Blick über ihren Kunden sehen können und somit mehr Zeit haben\nPriorisiertes Thema aus der IT Prio 23\n  Klassifizierung Obligatory\nHier könnt ihr die Informationen zur Klassifizierung von Obligatory Themen finden. → https://mywiki.telekom.de/pages/viewpage.action?pageId=1183843156\n[siehe Feld Compliance Relevance im Jira-Issue]\nBusiness Value\nBusiness Outcomes /Business Value\nBusiness Case:\n2023: 5 Mio €\n2024: 10 Mio €\n2025: 18,54 Mio €\n2026: 25 Mio €\nund 1.407.500 Minuten zusätzliche vertriebsaktive Zeit\n \n  In der COD habe ich den BV mit 13 und somit  > 6 mio € bewertet, weil die oben aufgeführten Werte erst über die Zeit realisiert werden (aufgrund der verspäteten Umsetzung werden die ersten 5 mio € erst 2024 realisiert), jedoch die 6 mio € wesentlich übersteigen.\nStrategischer Beitrag & zeitliche Kritikalität\nTime Criticality:\nDas Accountplanning ist für dieses Jahr priorisiert, die Implementierung in MagentaForce ist bis Ende Q3 geplant und die Kollegen dafür \"abgestellt\", Vorbereitungen laufen\nStrategic Enablement/Risk Reduktion: Die Accounter müssen weiterhin händisch Ihre Accounts planen, es gibt keine Aggregation für bspw. Regionalleiter, die 1.407.500 Min werden nicht realisiert und enstpechend kann die nicht freigewordene Zeit nicht für Vertrieb genutzt werden und das Potential von 5 Mio € im ersten Jahr kann nicht realisiert werden. Zusätzlich gibt es ein Akzeptanzproblem für das CRM-System, welches zentrale Funktionen weiterhin nicht abdeckt.\n  In der COD habe ich das Strategische Enablement/ die Riskreduction mit 13 bewertet, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können.\nIn der COD habe ich die zeitliche Kritikalität mit 13 beziffert, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können.\n      Leading Indicators\n•Die geforderten Informationen für ein standardisiertes Accountplanning (Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände) werden in MagentaForce korrekt angezeigt\nKategorisierung der Business Epics\nDie Kategorisierung der Business Epics im Backlog dienen auf der fachlichen Ebene zur Diskussion mit der GF und Guidance aus der GF. Damit wird eine transparente Darstellung und Ableitung der Geschäftsstrategie ermöglicht.\nGlossar Kategorisierung der Business Epics -> https://mywiki.telekom.de/pages/viewpage.action?pageId=1148378586\n[siehe Felder Development Category/Life Cycle/ Outcome im Jira-Issue]\nMVP Scope & Akzeptanzkriterien\nMVP Scope\n#MVP\nAusweitung des MVP, um Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände, Power Map zur Abbildung von Kundenstrukturen, Wettbewerberverträge, Auslaufende Verträge,\nIn Scope / Akzeptanzkriterien\n•  Daten und Reports stehen für die Anzeige in MagentaForce bereit\nOut of Scope\n•Keine neue Datenschnittstelle\n  Abhängigkeiten & Eingangsvoraussetzungen\nAbhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\nMVP Accountplanning (https://jira.telekom.de/browse/BEMABU-173)\n  Eingangsvoraussetzungen, die vor Einführung realisiert sein müssen\nNicht bekannt\nCrossfunktionale Zusammenarbeit\nAnsprechpartner -> https://yam.telekom.de/groups/canvas/projects/canvas-%C3%BCbersicht\n  Bitte Ihr vollständig befülltes Business Epics bei den zu beteiligenden Canvasen einsenden. Ansprechpartner finden Sie hier: https://mywiki.confluence.telekom.de/pages/viewpage.action?pageId=1067833510\n  Beteiligte Canvas: [siehe Feld \"Komponenteim Jira-Issue]\nBeteiligte Canvas Bemerkung\nCanvas, @Ansprechparter Bemerkung\nCanvas, @Ansprechparter Bemerkung\nCanvas, @Ansprechparter Bemerkung\n  Betroffene Bereiche außerhalb Canvas IT-Entwicklungsprozess (wie bspw. in den Fachbereichen (wie bspw. in den Fachbereichen: Service, Wholesale, Finance, ...)\nBetroffene Bereiche Bemerkung\nBereich, @Ansprechparter Bemerkung\nBereich, @Ansprechparter Bemerkung\nBereich, @Ansprechparter Bemerkung\n   \n\nBusiness Scope:\nOptimierung des strategischen Kundenangangs (Potenzialermittlung, TimeToMarket für Churn Prevention / Winback / Up und Crossselling) eine strukturierte Sicht auf wesentliche Informationen/KPI zur Ableitung von Handlungsfeldern (Ergänzend: Gleichermaßen auch als Briefing-Information für Accountteams und Business Reviews)",
+      "business_value": {
+        "business_impact": {
+          "scale": 13,
+          "revenue": "2025: 18,54 Mio €\n2026: 25 Mio €",
+          "cost_saving": "1.407.500 Minuten zusätzliche vertriebsaktive Zeit",
+          "justification": "Unter Berücksichtigung von derzeitiger Mindestanforderung (Gesamtumsatz des Kunden > 250T pro Jahr) erstellen bzw. aktualisieren die Seller im Bereich GK-LE etwa 1.100 Accountpläne. Für die Datensammlung in internen und externen Datenquellen benötigt der Accountverantwortlich 1 - 8 Stunden je Accountplan. Durch die automatisierte Zuführung von Informationen in den Kundensteckbrief kann diese Zeit eingespart werden Durch die Automatosierung können auch schnell Accountpläne für Kunden erstellt werden, die unter den Mindestanforderungen liegen (GK-LE Kunden < 250T Jahresumsatz, oder Midmarket-Kunden)"
+        },
+        "strategic_enablement": {
+          "scale": 20,
+          "strat_enablement": "Fokussierung auf zielorientiertes Handeln und damit Absicherung unserer Ziele in TD GK B2B\nEntwicklung relevanter Geschäftschancen für Telekom\nUnterstützung im gesamten Vertriebszyklus",
+          "justification": "Fokussierung auf zielorientiertes Handeln und damit Absicherung unserer Ziele in TD GK B2B\nEntwicklung relevanter Geschäftschancen für Telekom\nUnterstützung im gesamten Vertriebszyklus"
+        },
+        "time_criticality": {
+          "scale": 3,
+          "justification": "Geplanter Umsetzungszeitraum Plan Start: 01.01.2025 Plan Ende/Launch: 30.09.2025 Der Business Steckbrief wird bei GK-LE unter \"Data Driven Sales\" geführt. Hierbei soll durch die Nutzung interner und externer Daten und Informationen ein Wettbewerbsvorteil generiert werden. Tätigkeiten im Tagesgeschäft der Seller sollen unterstützt werden. Durch fokusiertes Handeln soll die Hitrate / Winrate der Vertriebsvorhaben gesteigert werden und fundierte Entscheidungen unterstützt werden."
+        }
+      },
+      "acceptance_criteria": [
+        "Umsetzung des definierten Kundensteckbriefs (Details siehe Attachment am EPIC BEMABU-1892) in OneGK Reporting (Data Hub) und Einbindung in MagentaForce (CRM) mindestens als iFrame am jeweiligen Kunden (GP)",
+        "Die Umsetzung in OneGK erfolgt im Fachbereich außerhalb JIRA. Die Einbindung in MF erfolgt in Abhängigkeit zur OneGK Enwicklung."
+      ],
+      "realized_by": [
+        {
+          "key": "MAGBUS-105311",
+          "title": "MAGBUS-105311",
+          "summary": "MF: Einbindung in MagentaForce von ersten bereitgestellten PowerBI-Berichten"
+        },
+        {
+          "key": "DATAFAB-28432",
+          "title": "DATAFAB-28432",
+          "summary": "DATA - One View Datenbereitstellung auf GROOT"
+        },
+        {
+          "key": "DATAFAB-5516",
+          "title": "DATAFAB-5516",
+          "summary": "DATA - Accountplanning 2.0 / 360° Kundensicht"
+        }
+      ]
+    },
+    {
+      "key": "MAGBUS-105311",
+      "title": "MF: Einbindung in MagentaForce von ersten bereitgestellten PowerBI-Berichten",
+      "issue_type": "Epic",
+      "status": "Review",
+      "assignee": "Matthias Johannes Hoffmann",
+      "fix_versions": [
+        "MF 4.600",
+        "PI 28 stretch"
+      ],
+      "description": "Description\nClick to add description",
+      "realizes": [
+        {
+          "key": "BEMABU-662",
+          "title": "Automatisierter Kundensteckbrief"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-28432",
+      "title": "DATA - One View Datenbereitstellung auf GROOT",
+      "issue_type": "Portfolio Epic",
+      "status": "Closed",
+      "assignee": "Birgit Kruckewitt",
+      "target_start": "2025-01-01",
+      "target_end": "2025-12-31",
+      "fix_versions": [
+        "2024_Q3",
+        "2024_Q4"
+      ],
+      "description": "Description\nOneView: Ziel: Alle Infos, die es über Kunden gibt, in einer Sicht (SalesForce) zur Anzeige bringen \nOneView ist der Nachfolgename von Accountplanning 2.0\n  (analog Magenta View in PK Bereich)\neinspielen über Cloudversion PowerBI \n  Technische Voraussetzung, die geklärt werden muß, bevor Umsetzung erfolgen kann\nWie kommen die Daten aus private Google Sovereign Cloud in public Power BI (M365 Cloud)/Power BI Premium\n  mögliche Anforderungen\nDaten an BI anbinden (um sie zur Anzeige zur bringen) : Erweiterung um ~1-3 weitere Tabellen (für BVA Schema im OneReporting) : (laut Matthias können Daten mit BR Auflage zur weiteren VErtestung zur Verfügung gestellt werden Email von BR vom Mai 2025, bei Inbetriebnahme ist die richtige BR Freigabe notwendig)\nDaten auf GROOT zur Verfügung stellen : Komplette Daten auf GROOT zur Verfügung stellen\n   ",
+      "realized_by": [
+        {
+          "key": "DATAFAB-28668",
+          "title": "DATAFAB-28668",
+          "summary": "DATA - One View Datenbereitstellung"
+        }
+      ],
+      "realizes": [
+        {
+          "key": "BEMABU-662",
+          "title": "Automatisierter Kundensteckbrief"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-5516",
+      "title": "DATA - Accountplanning 2.0 / 360° Kundensicht",
+      "issue_type": "Portfolio Epic",
+      "status": "Closed",
+      "assignee": "Thorsten Kasten",
+      "fix_versions": [
+        "C10 PI 23_1",
+        "2024_Q2"
+      ],
+      "description": "Description\nBitte beachten, dass in Canvas 10 PE nur eine Länge von 2 PI haben!\nQualicheck-Liste zur weiteren Bearbeitung durch die Expert Group als Attachment beigefügt. \n  Expert Group: Sven Peplau, Miriam Schultes\nDescription\nBusiness Epic Nutzen Statement \nBusiness Value\nBusiness Outcomes /Business Value\nBusiness Case:\n2023: 5 Mio €\n2024: 10 Mio €\n2025: 18,54 Mio €\n2026: 25 Mio €\nund 1.407.500 Minuten zusätzliche vertriebsaktive Zeit\n \n  In der COD habe ich den BV mit 13 und somit  > 6 mio € bewertet, weil die oben aufgeführten Werte erst über die Zeit realisiert werden (aufgrund der verspäteten Umsetzung werden die ersten 5 mio € erst 2024 realisiert), jedoch die 6 mio € wesentlich übersteigen.\nStrategischer Beitrag & zeitliche Kritikalität\nTime Criticality:\nDas Accountplanning ist für dieses Jahr priorisiert, die Implementierung in MagentaForce ist bis Ende Q3 geplant und die Kollegen dafür \"abgestellt\", Vorbereitungen laufen\nStrategic Enablement/Risk Reduktion: Die Accounter müssen weiterhin händisch Ihre Accounts planen, es gibt keine Aggregation für bspw. Regionalleiter, die 1.407.500 Min werden nicht realisiert und enstpechend kann die nicht freigewordene Zeit nicht für Vertrieb genutzt werden und das Potential von 5 Mio € im ersten Jahr kann nicht realisiert werden. Zusätzlich gibt es ein Akzeptanzproblem für das CRM-System, welches zentrale Funktionen weiterhin nicht abdeckt.\n  In der COD habe ich das Strategische Enablement/ die Riskreduction mit 13 bewertet, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können.\nIn der COD habe ich die zeitliche Kritikalität mit 13 beziffert, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können\nLeading Indicators\n•Die geforderten Informationen für ein standardisiertes Accountplanning (Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände) werden in MagentaForce korrekt angezeigt\n  MVP Scope & Akzeptanzkriterien\nMVP Scope & Akzeptanzkriterien\nMVP Scope\n#MVP\nAusweitung des MVP, um Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände, Power Map zur Abbildung von Kundenstrukturen, Wettbewerberverträge, Auslaufende Verträge,\nIn Scope / Akzeptanzkriterien\n•  Daten und Reports stehen für die Anzeige in MagentaForce bereit\nOut of Scope\n•Keine neue Datenschnittstelle\nAbhängigkeiten & Eingangsvoraussetzungen\nAbhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\nMVP Accountplanning (https://jira.telekom.de/browse/BEMABU-173)\n  Eingangsvoraussetzungen, die vor Einführung realisiert sein müssen\nNicht bekannt\n ",
+      "realized_by": [
+        {
+          "key": "DATAAAA-157",
+          "title": "DATAAAA-157",
+          "summary": "Integration von PowerBI in MagentaForce"
+        },
+        {
+          "key": "DATAFAB-720",
+          "title": "DATAFAB-720",
+          "summary": "MBN/MBC - Umsetzung BVA-Schema für One-Reporting mit Magenta-Force-Daten"
+        }
+      ],
+      "realizes": [
+        {
+          "key": "BEMABU-662",
+          "title": "Automatisierter Kundensteckbrief"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-28668",
+      "title": "DATA - One View Datenbereitstellung",
+      "issue_type": "Initiative",
+      "status": "Closed",
+      "assignee": "Unassigned",
+      "realized_by": [
+        {
+          "key": "DATAFAB-25988",
+          "title": "DATAFAB-25988",
+          "summary": "MagF: User Territory Data"
+        },
+        {
+          "key": "DATAFAB-30289",
+          "title": "DATAFAB-30289",
+          "summary": "MagF: User Territory Data"
+        },
+        {
+          "key": "DATAFAB-33556",
+          "title": "DATAFAB-33556",
+          "summary": "DATA - One View Datenbereitstellung auf GROOT - Platzhalter"
+        }
+      ],
+      "realizes": [
+        {
+          "key": "DATAFAB-28432",
+          "title": "DATA - One View Datenbereitstellung auf GROOT"
+        }
+      ]
+    },
+    {
+      "key": "DATAAAA-157",
+      "title": "Integration von PowerBI in MagentaForce",
+      "issue_type": "Epic",
+      "status": "Closed",
+      "assignee": "Nicole-Sandra Kempa",
+      "description": "Description\nDescription\nBusiness Epic Nutzen Statement \nBusiness Value\nBusiness Outcomes /Business Value\nBusiness Case:\n2023: 5 Mio €\n2024: 10 Mio €\n2025: 18,54 Mio €\n2026: 25 Mio €\nund 1.407.500 Minuten zusätzliche vertriebsaktive Zeit\n \n  In der COD habe ich den BV mit 13 und somit  > 6 mio € bewertet, weil die oben aufgeführten Werte erst über die Zeit realisiert werden (aufgrund der verspäteten Umsetzung werden die ersten 5 mio € erst 2024 realisiert), jedoch die 6 mio € wesentlich übersteigen.\nStrategischer Beitrag & zeitliche Kritikalität\nTime Criticality:\nDas Accountplanning ist für dieses Jahr priorisiert, die Implementierung in MagentaForce ist bis Ende Q3 geplant und die Kollegen dafür \"abgestellt\", Vorbereitungen laufen\nStrategic Enablement/Risk Reduktion: Die Accounter müssen weiterhin händisch Ihre Accounts planen, es gibt keine Aggregation für bspw. Regionalleiter, die 1.407.500 Min werden nicht realisiert und enstpechend kann die nicht freigewordene Zeit nicht für Vertrieb genutzt werden und das Potential von 5 Mio € im ersten Jahr kann nicht realisiert werden. Zusätzlich gibt es ein Akzeptanzproblem für das CRM-System, welches zentrale Funktionen weiterhin nicht abdeckt.\n  In der COD habe ich das Strategische Enablement/ die Riskreduction mit 13 bewertet, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können.\nIn der COD habe ich die zeitliche Kritikalität mit 13 beziffert, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können\nLeading Indicators\n•Die geforderten Informationen für ein standardisiertes Accountplanning (Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände) werden in MagentaForce korrekt angezeigt\n  MVP Scope & Akzeptanzkriterien\nMVP Scope & Akzeptanzkriterien\nMVP Scope\n#MVP\nIntegration von PowerBI in MagentaForce\nIn Scope / Akzeptanzkriterien\n•  PowerBI stehen für die Anzeige in MagentaForce bereit\nOut of Scope\n•Keine neue Datenschnittstelle\nAbhängigkeiten & Eingangsvoraussetzungen\nAbhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\nMVP Accountplanning (https://jira.telekom.de/browse/BEMABU-173)\n  Eingangsvoraussetzungen, die vor Einführung realisiert sein müssen\nNicht bekannt\n ",
+      "realizes": [
+        {
+          "key": "DATAFAB-5516",
+          "title": "DATA - Accountplanning 2.0 / 360° Kundensicht"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-720",
+      "title": "MBN/MBC - Umsetzung BVA-Schema für One-Reporting mit Magenta-Force-Daten",
+      "issue_type": "Epic",
+      "status": "Closed",
+      "assignee": "Tom Lück",
+      "target_end": "2023-06-14",
+      "fix_versions": [
+        "C10 PI 23_1"
+      ],
+      "description": "Description\nMit diesem Epic stellen wir die für das MBN/MBC-Reporting benötigten Daten für die in MagF geführten Kundensegmente auf dem ODW in Form eines BVA-Schemas für das Team One-Reporting bereit. Neben den zwingend für MBN/MBC benötigten Tabellen und Feldern werden weitere Tabellen und Felder bereitgestellt, die vom One-Reporting-Team perspektivisch für andere Reporting-Anforderungen wie z.B.  das Account-Planning benötigt werden.\nDie benötigten Tabellen und Felder wurden bereits im Vorgänger-Epic definiert. Dieses Epic umfasst die technische Realisierung inkl. Dokumentation sowie die Betriebsaufnahme und schließt somit die aus dem MBN-Business-Epic hervorgegangenen Anforderungen ab.",
+      "acceptance_criteria": [
+        "Für das Fachbereichsteam ONE-Reporting wurde ein BVA-Schema realisiert, das die geforderten MagF-Daten sowie die zusäzlich benötigten Daten zu den Dimensionen Kunde und Produkt beinhaltet."
+      ],
+      "realizes": [
+        {
+          "key": "DATAFAB-5516",
+          "title": "DATA - Accountplanning 2.0 / 360° Kundensicht"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-25988",
+      "title": "MagF: User Territory Data",
+      "issue_type": "Epic",
+      "status": "Closed",
+      "assignee": "Oleg Prill",
+      "target_start": "2024-10-16",
+      "target_end": "2024-10-21",
+      "fix_versions": [
+        "2024_Q4"
+      ],
+      "description": "Description\nTägliches abholen von UserTerritory2Association  aus MagentaForce und push an ODW\nSELECT Id, Territory2.Name, User.Email FROM UserTerritory2Association\n  Query wird für PowerBI ReportServer benötigt um Row Level Secruity für den RS bereitzustellen.\n   ",
+      "realizes": [
+        {
+          "key": "DATAFAB-28668",
+          "title": "DATA - One View Datenbereitstellung"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-30289",
+      "title": "MagF: User Territory Data",
+      "issue_type": "Epic",
+      "status": "Closed",
+      "assignee": "Tom Lück",
+      "target_start": "2024-04-08",
+      "target_end": "2024-06-07",
+      "fix_versions": [
+        "2024_Q3"
+      ],
+      "description": "Description\nTägliches abholen von UserTerritory2Association  aus MagentaForce und push an ODW\nSELECT Id, Territory2.Name, User.Email FROM UserTerritory2Association\n  Query wird für PowerBI ReportServer benötigt um Row Level Secruity für den RS bereitzustellen.\n   ",
+      "realizes": [
+        {
+          "key": "DATAFAB-28668",
+          "title": "DATA - One View Datenbereitstellung"
+        }
+      ]
+    },
+    {
+      "key": "DATAFAB-33556",
+      "title": "DATA - One View Datenbereitstellung auf GROOT - Platzhalter",
+      "issue_type": "Epic",
+      "status": "Closed",
+      "assignee": "Oleg Prill",
+      "target_start": "2024-10-16",
+      "target_end": "2024-10-21",
+      "description": "Description\nin Abstimmung mit Sven Peplau\n   ",
+      "realizes": [
+        {
+          "key": "DATAFAB-28668",
+          "title": "DATA - One View Datenbereitstellung"
+        }
+      ]
+    }
+  ]
+}

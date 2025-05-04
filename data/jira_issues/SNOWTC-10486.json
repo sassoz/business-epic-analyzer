@@ -1,0 +1,24 @@
+{
+  "key": "SNOWTC-10486",
+  "issue_type": "Epic",
+  "title": "Enabler: Create Site Enrichment GUI(Early Enrichment)",
+  "status": "Closed",
+  "description": "Description\nSite Enrichment = Early Enrichment\nThis Epic focuses on the Early Site Enrichment.\nRequired Inputs:\nClick-Dummy for Create Site Enrichment - until 09.09.\nData Flow Model (Part: Site Enrichment: (OFI/RCS, DTA, Combridge, NC) - until 09.09.\nProcess/Workflow Description Site Enrichment - until 09.09.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

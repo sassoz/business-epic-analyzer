@@ -1,0 +1,44 @@
+{
+  "key": "BEMABU-1813",
+  "issue_type": "Business Epic",
+  "title": "Prozessoptimierung/ Nacharbeiten im SeCe-IT goes EOS Prozess",
+  "status": "Funnel",
+  "description": "Description\nIn diesem Business Epic sind alle Bauabschnitte enthalten, die aufgrund bisheriger Depriorisierungen oder Edge Cases in der Bearbeitung in EOS nicht berücksichtigt wurden. Darüber hinaus auch Themen, die von Mitarbeitenden als Feedback gegeben wurden, um die Akzeptanz der Systemkette zu stärken.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Enthält Bauabschnitte, die aufgrund bisheriger Depriorisierungen oder Edge Cases in der Bearbeitung in EOS nicht berücksichtigt wurden"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Stärkung der Akzeptanz der Systemkette",
+      "justification": "Berücksichtigung von Feedback der Mitarbeitenden zur Stärkung der Akzeptanz der Systemkette"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2025-01-16",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

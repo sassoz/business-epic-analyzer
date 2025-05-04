@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-91698",
+  "issue_type": "Epic",
+  "title": "Mobilfunk Permission Aussagen des VP2 übernehmen",
+  "status": "Resolved",
+  "description": "Description\nFür die Abbildung der Permission-Aussage werden wir nicht der Logik des DWH-Mobile folgen, sondern die Permission-Aussage des VP2 aus Carmen im TMF644 abbilden und sowohl zum Indivual als auch zum ContactMedium referenzieren\n\nBusiness Scope:\nIch als PO möchte dass wir die Permission Aussagen des VP2 in Carmen in dem TMF644 ablegen und an unser Individual referenzieren",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 24"
+  ],
+  "acceptance_criteria": [
+    "Die Permission-Aussage des VP2 in Carmen ist im TMF644 abgebildet und referenziert auf das Individual und die ContactMedien"
+  ],
+  "components": [
+    {
+      "code": "SEP-Platform",
+      "title": "SEP-Platform "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

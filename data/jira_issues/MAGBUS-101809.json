@@ -1,0 +1,23 @@
+{
+  "key": "MAGBUS-101809",
+  "issue_type": "Epic",
+  "title": "GoLive Business Mobil 5. Gen",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Höck, Felix",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

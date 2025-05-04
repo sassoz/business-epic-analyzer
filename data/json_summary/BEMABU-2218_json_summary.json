@@ -1,0 +1,58 @@
+{
+  "epicId": "BEMABU-2218",
+  "title": "LE - AI in MagentaForce (Text to Speech to Action)",
+  "ziele": {
+    "gesamtziel": "Implementierung einer AI-gestützten Sprach-zu-Text-zu-Aktion-Funktionalität in MagentaForce, um Vertriebsmitarbeitern die Möglichkeit zu geben, CRM-Daten schnell und mobil per Spracheingabe zu aktualisieren. Dies soll die Datenqualität erhöhen, administrative Aufwände reduzieren und mehr Zeit für Vertriebstätigkeiten schaffen. Die Umsetzung ist für den Zeitraum 01.07.2025 bis 30.09.2025 geplant.",
+    "einzelziele": [
+      "Erhöhung der Adoption und Nutzbarkeit von MagentaForce",
+      "Zeitersparnis für Vertriebsmitarbeiter (ca. 15 Min/Tag pro Mitarbeiter)",
+      "Signifikante Verbesserung der Datenqualität in MagentaForce",
+      "Ermöglichung mobiler Dateneingabe über die Salesforce Mobile App",
+      "Steigerung des NPS (Net Promotor Score) für Mitarbeiterzufriedenheit",
+      "Mehr Zeit für relevante Vertriebstätigkeiten"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "3,25 Mio EUR Einsparungen (umgerechnet gesparte Arbeitszeit 62.500 EUR/Woche). Allerdings ist dies kein Effizienzcase; Ambition ist, diese Zeit für mehr Real Selling Time zu nutzen. Mit dieser Funktion wird eine Verbesserung des NPS (Nutzerzufriedenheit via Net Promotor Score) erwartet (Ambition: 10 Punkte je NPS Frage)."
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "NPS Steigerung (Mitarbeiterzufriedenheit), Digitale Transformation und Einsatz AI, Vereinfachter Arbeitsablauf spart Zeit, Verbessert Datengenauigkeit"
+    },
+    "timeCriticality": {
+      "skala": 8,
+      "beschreibung": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch: 30.09.2025. Erhöhung der Hitrate und NPS Verbesserung"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2218",
+      "titel": "AI in MagentaForce (Text to Speech to Action)",
+      "funktionalitäten": [
+        "Voice-to-Text-Funktionalität für direkte Eingabe in MagentaForce",
+        "Mobile Dateneingabe über Salesforce Mobile App",
+        "Schnelle Erfassung und Protokollierung von Besprechungsdetails",
+        "Reduzierung des administrativen Verwaltungsaufwands",
+        "Verbesserung der Datengenauigkeit für rechtzeitige Folgemaßnahmen"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Keine Informationen verfügbar"
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce",
+    "DOM0201"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Keine spezifischen Abhängigkeiten oder Risiken dokumentiert"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}

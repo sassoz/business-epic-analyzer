@@ -1,0 +1,148 @@
+{
+  "epicId": "BEMABU-1782",
+  "title": "Rechtliche Sicherstellung und Schöpfung von Marktpotentialen - Konzerneinwilligungsklausel",
+  "ziele": {
+    "gesamtziel": "Etablierung eines zentralen Mastersystems innerhalb GK für die Konzerneinwilligungsklausel (KEK), um eine rechtssichere systemische Abbildung der Datenschutzeinwilligung des Geschäftspartners und der Kanal-Permissionen der Ansprechpartner für alle Segmente (KMU, Midmarket, Large Enterprise, Public) zu gewährleisten. Dies soll bis zum 30.06.2025 umgesetzt werden.",
+    "einzelziele": [
+      "Schaffung eines Single Point of Truth für die Konzerneinwilligungsklausel innerhalb GK mit einer konsolidierten Sicht auf die Person",
+      "Übernahme der Datenmasterschaft der KEK/Permission Informationen für Geschäftspartner und deren kundenseitige Ansprechpartner im Geschäftsfeld Festnetz und Mobilfunk",
+      "Einführung von KEK-X für KMU-Kunden in Abhängigkeit mit PK",
+      "Erweiterung und Optimierung des KEK-Sets mit gezielter KEK-Einholung durch freigegebene Rollen",
+      "Systemübergreifende Konsolidierung der KEK insbesondere der Kanal-Permissionen zur Vermeidung von Dubletten und inkonsistenten Daten",
+      "Analyse und Entscheidung für eine übergreifende B2B KEK für alle Gesellschaften (DTBS, TDG, MMS, T-Sec, IoT, International, T-System)"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Vermeidung von Strafzahlungen von bis zu 20 Mio. € bzw. 4% des Konzernumsatzes bei Verstößen gegen die DSGVO. Verbesserung der Datenqualität und Verringerung von Prozesslaufzeiten und Rückfragen bei der Bereitstellung von Produkten."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Etablierung eines zentralen Datenmaster (Sales Enablement Platform) für kundenseitige Ansprechpartnerdaten und KEK/Permission Informationen. Schaffung einer rechtsverbindlichen Dokumentation im Umfeld von juristischen Personen zur Zustimmung der werblichen Ansprache auf allen Marketingkanälen innerhalb der TDG und relevanten Tochtergesellschaften."
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Absicherung des OCC-Retirement Stufe 2 bis 31.12.2024. MVP-Lösung bis 30.06.2024 notwendig, finale Ausbaustufe bis 31.12.2024. Gesamtprojekt soll bis 30.06.2025 abgeschlossen sein."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-656",
+      "titel": "KEK Management - Zentraler Datenmasterschaft der KEK x für GK",
+      "funktionalitäten": [
+        "Übernahme der Datenmasterschaft der KEK/Permission Informationen der Geschäftspartner und deren kundenseitigen Ansprechpartner-Daten im Geschäftsfeld Festnetz inklusive Ü-Wege",
+        "Synchronisation der KEK Daten mit T-IVU für KMU",
+        "Synchronisation der KEK Daten mit MagentaForce und Marketing Automation für Midmarket, LargeEnterprise, Public",
+        "Übernahme der Datenmasterschaft der KEK/Permission Informationen der Geschäftspartner und deren kundenseitigen Ansprechpartner-Daten im Geschäftsfeld Mobilfunk",
+        "Synchronisation der KEK Daten mit Carmen",
+        "Synchronisation der KEK Daten mit weiteren Systemen/Consumenten (MMS, IoT, T-Sec, INT)",
+        "Systemübergreifende Etablierung einer neuen KEK-Version mit Gültigkeit aller B2B Konzerneinheiten",
+        "Einheitliches und rechtssicheres Statusmodell und Löschkonzept im Data Consent Master"
+      ]
+    },
+    {
+      "id": "BEMABU-1129",
+      "titel": "Einführung KEK X im KMU-Segment",
+      "funktionalitäten": [
+        "Bereitstellung eines Registrierungsprozesses mit KEK- und Permission-Erfassung für Interessenten und Bestandskunden GK",
+        "Nutzung des Momentums bei Kundenregistrierung zur Erfassung oder Aktualisierung der Datenschutz-Einwilligung (KEK)",
+        "Ermöglichung eines personalisierten, zielgruppenorientierten Vertriebsangangs durch juristische Legitimierung"
+      ]
+    },
+    {
+      "id": "BEMABU-1784",
+      "titel": "Erweiterung und Optimierung KEK-Set",
+      "funktionalitäten": [
+        "Anpassung des KEK-Sets für Midmarket, LargeEnterprise, Public",
+        "Einholung der KEK (Datenschutzeinwilligung) durch freigegebene Rollen (Vertragspartner, Geschäftsführer)",
+        "Gezielte KEK-Einholung eines Geschäftspartners in Abhängigkeit der Rolle in MagentaForce",
+        "Optimierung der Workflows zur Verbesserung des KEK-Prozesses"
+      ]
+    },
+    {
+      "id": "BEMABU-1786",
+      "titel": "Systemübergreifende Konsolidierung der KEK insbesondere Kanal-Permissionen",
+      "funktionalitäten": [
+        "Schaffung eines Single Point of Truth für die Konzerneinwilligungsklausel innerhalb GK mit einer konsolidierten Sicht auf die Person",
+        "Systemübergreifende Konsolidierung der KEK insbesondere der Kanal-Permission für die Person",
+        "Vermeidung von Dubletten der Personen und inkonsistenten Permissionen",
+        "Sicherstellung des aktuellen Stands der KEK (Datenschutzeinwilligung und Kanal-Permission) systemübergreifend"
+      ]
+    },
+    {
+      "id": "BEMABU-1783",
+      "titel": "KEK Management - Analyse inkl. Entscheidung übergreifende B2B KEK",
+      "funktionalitäten": [
+        "Analyse der KEK Landschaft in B2B für alle Gesellschaften (DTBS, TDG, MMS, T-Sec, IoT, International, T-System)",
+        "Entscheidungsfindung für ein gemeinsames fachliches und architekturelles Zielbild innerhalb GK",
+        "Beauftragung von Legal zur Verfassung eines KEK-Textes für B2B",
+        "Definition von Regeln für den Übergang eines Kunden von SME+ nach KMU (KMU nach Midmarket/LargeEnterprise)"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Mitarbeiter werden bzw. wurden geschult",
+    "Kennung werden bzw. wurden an Mitarbeiter in dem benannten Bereich versandt",
+    "Zugriff auf die Anwendung ist erfolgt",
+    "Support-Weg beim Störungen ist aufgebaut (z.B. via NIMBUS)",
+    "Rollen- und Berechtigungskonzept ist erstellt und ist aktiv",
+    "Reporting ist sichergestellt --> tbd.",
+    "Eine Analye der KEK Landschaft in B2B ist für alle Gesellschaften (DTBS, TDG, MMS, T-Sec, IoT, International, T-System) erfolgt",
+    "Anhand der Analyse wurden Entscheidungen für ein gemeinsames fachliches und architekturelles Zielbild innerhalb GK getroffen",
+    "Legal wurde beauftragt einen KEK-Text für B2B zu verfassen.",
+    "Regeln für den Übergang eines Kunden von SME+ nach KMU (KMU nach Midmarket/LargeEnterprise) sind definiert"
+  ],
+  "domainsAndITApplications": [
+    "SEP (Sales Enablement Platform)",
+    "MagentaForce",
+    "TIVU/CRM-T",
+    "Carmen",
+    "Services@BNG",
+    "ODE/ODL",
+    "CDP (Consent Data Platform)",
+    "CCM (Customer Contact Master)",
+    "DCM (Data Consent Master)",
+    "Marketing Automation"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Analyse der KEK Landschaft in B2B für alle Gesellschaften (DTBS, TDG, MMS, T-Sec, IoT, International, T-System) als Grundlage für weitere Entscheidungen",
+    "Abhängigkeit vom OCC-Retirement, das für den 30.06.2024 geplant ist und eine MVP-Lösung bis zu diesem Datum erfordert",
+    "Risiko durch unterschiedliche Datenbestände zwischen den Systemen, die zu Datenschutzvorfällen führen können",
+    "Risiko durch inkonsistente KEK-Daten, was zu regulatorischen Verstößen führen kann",
+    "Abhängigkeit von der Freigabe zur Nutzung der SOAP Schnittstelle „CC_changePermissions2" für die Mobilfunk KEK/Permission Abmeldung",
+    "Risiko bei der Segmentverschiebung von Kunden (KMU nach M&L oder M nach KMU), wenn die KEK-Informationen nicht korrekt migriert werden"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-04-01",
+    "umsetzungsende": "2025-06-30",
+    "fixVersions": ["PrioQ2_25"],
+    "meilensteine": [
+      {
+        "id": "BEMABU-1783",
+        "beschreibung": "KEK Management - Analyse inkl. Entscheidung übergreifende B2B KEK",
+        "zeitraum": "2025-01-01 bis 2025-03-31"
+      },
+      {
+        "id": "BEMABU-1387",
+        "beschreibung": "KEK Historie GK",
+        "zeitraum": "bis 2024-12-31"
+      },
+      {
+        "id": "BEMABU-1485",
+        "beschreibung": "Datenmasterschaft Mobilfunk KEK/Permission Informationen",
+        "zeitraum": "bis 2024-12-31"
+      },
+      {
+        "id": "BEMABU-1487",
+        "beschreibung": "Datenmasterschaft Festnetz KEK/Permission Informationen",
+        "zeitraum": "bis 2024-12-31"
+      },
+      {
+        "id": "BEMABU-1732",
+        "beschreibung": "Synchronisation der KMU-B KEK/Permissions zwischen PK & GK",
+        "zeitraum": "bis 2024-12-31"
+      }
+    ]
+  }
+}

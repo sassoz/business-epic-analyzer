@@ -1,0 +1,26 @@
+{
+  "key": "DIGIVLEK-22862",
+  "issue_type": "Epic",
+  "title": "Exploration: D!VE - Nutzung in Lösungsgeschäft",
+  "status": "In Progress",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Pascal Werlein",
+  "priority": "",
+  "target_start": "2025-04-03",
+  "target_end": "2025-06-25",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "Ein Scope für die Abbildung in 2025 wurde erarbeitet",
+    "Der Workflow zwischen den Systemen ist ausgearbeitet",
+    "Ein Zeitplan zur Umsetzung liegt vor (vorbehaltlich Priorisierung)",
+    "Eine Abstimmung mit Projekt One Solution Chain ist erfolgt."
+  ],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

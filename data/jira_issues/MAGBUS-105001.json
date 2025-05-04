@@ -1,0 +1,23 @@
+{
+  "key": "MAGBUS-105001",
+  "issue_type": "Epic",
+  "title": "EXPLORATION: Multiple BKTO",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-03-13",
+  "target_end": "2025-04-02",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

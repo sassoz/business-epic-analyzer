@@ -1,0 +1,71 @@
+{
+  "key": "BEB2B-386",
+  "issue_type": "Business Epic",
+  "title": "Portfolioerweiterung Telematik Infrastruktur um TI-Gateway & TIM (CRM-T) inkl. Partnerprozess via BPP",
+  "status": "Closed",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nCRM-T Onboarding Produkte TI-Gateway & TI-Messenger für Kunden der Gesundheitsbranche\nFür Kunden im Gesundheitswesen, (...Provisionspartner)\ndie zur Anbindung an die Telematik Infrastruktur verpflichtet sind, (...der Telekom Leads und Aufträge von Kunden im Gesundheitswesen bringen)\nist es notwendig die Produkte TI-Gateway und TI-Messenger einzuführen, (\nwodurch das Zielportfolio (Ziellösung) für alle Kunden und Branchen im Gesundheitswesen geschaffen wird,\nso dass  die Wettbewerbsfähigkeit der Telekom im wachsenden TI-Markt sichergestellt ist\nund nicht ihre Marktposition gegenüber den Wettbewerbern verliert, die bereits ähnliche Angebote am Markt haben.\nDas Vorhaben schafft das notwendige Portfolio an TI-Produkten zur Wettbewerbsfähigkeit der Telekom im wachsenden TI-Markt\nBPP Onboarding Provisions-Partner zur Weiterleitung von Kundenaufträgen und Auslösen der Provisionszahlung\nFür Provisionspartner\ndie der Telekom Leads und Aufträge von Kunden im Gesundheitswesen bringen\nist es notwendig BPP als Zugangsportal als Ersatz für die Ablösung von TVPP zu haben\nwodurch der Partner Kundenaufträge an die TDG zur Buchung weiterleitet und dafür eine Provisionszahlung bekommt\nso dass  eine verstärkte Vermarktung der TI-Produkte der Telekom über in der Branche etablierten Vertriebspartner als Wettbewerbsvorteil erfolgen kann\nund nicht Marktanteile an den Wettbewerb verloren gehen.\nDas Vorhaben schafft die notwendigen Voraussetzungen, damit Partner TI-Produkte im Auftrag der Telekom vermarkten können\n    Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n< ... > DOM.... <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nBuchbarkeit der neuen TI-Produkte über die bestehende CRM-T Buchungskette (bestehende Schnittstelle CRM-T --> DPM --> AAX) herstellen\nAnlage neuer Materialien in PRIMA+ und Prozessierung über CRM-T.\nFolgende neue TI-Produkte sollen neu ongeboardet werden\n- TI-Gateway (Ziellösung für alle Branchen des Gesundheitswesen)\n- TIM (TI-Messenger) die neue Messenger Lösung für das Gesundheitswesen zur sicheren Kommunikation\nParallel soll das Business Partner Portal (BPP) für alle (neue und bestehende) TI-Produkte genutzt werden, worüber Provisionspartner der TDG Kundenaufträge einkippen können und dafür eine Provision erhalten",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": {
+        "2025": 30711,
+        "2026": 54954,
+        "2027": 65843
+      },
+      "cost_saving": {
+        "2025": 197,
+        "2026": 598,
+        "2027": 461
+      },
+      "risk_loss": {
+        "2025": 7678,
+        "2026": 13738,
+        "2027": 16460
+      },
+      "ebitda": {
+        "2025": 2596,
+        "2026": 4746,
+        "2027": 5770
+      },
+      "justification": "Sicherung des TI-Umsatzes sowie weiteres überproportionales Umsatzwachstum (hinzukommen neuer Berufsgruppen, wie Pflege, Therapeuten, Heil- und Hilfsmittelerbringer, Optiker, etc.) durch die Produkteinführung von TI-Gateway und TI-Messenger"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "Sicherstellung der TI-Wachstumsziele durch Erschließen neuer Kundengruppen & Marktpotentiale.",
+      "strat_enablement": "Umsetzung der Provisionsfähigkeit für die in der Branche etablierten Vertriebspartner ermöglicht schnelle Skalierung und damit Sicherung des Marktanteils der Telekom.",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Zink, Mario",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "TI-Gateway",
+    "TI-Messenger",
+    "Partner kann Aufträge an die TDG versenden",
+    "Partner bekommt für die vermittelten Aufträge eine Provision"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0600",
+      "title": "DOM0600 Business Support System (BSS)"
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

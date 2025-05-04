@@ -1,0 +1,73 @@
+{
+  "key": "BEMABU-2087",
+  "issue_type": "Business Epic",
+  "title": "Datenanlieferung der FTTH-O3-Aufträge via POT an Fiber-Cockpit",
+  "status": "Analysis",
+  "description": "Description\nFachliche Anforderung\nBisher wertet das FiberCockpit nur Aufträge aus, die über die AVIA Prozesskette gebucht werden.\nAlle GK-Aufträge, die über die neue teilautomatisierte MagentaBusiness-Prozesskette (MaBu-Prozesskette) über Flamingo gebucht wurden, werden im FiberCockpit nicht erfasst, da die dazu gehörigen  Daten an FiberCockpit nicht übertragen werden.\nMit dieser Anforderung soll das ProductOrderTracking (POT) in die Lage versetzt werden, die für das Reporting im FiberCockpit  benötigten Daten sämtlicher  in Flamingo gebuchter FTTH-Aufträge (O3-Aufträge)  in der von FiberCockpit vorgegebenen Form und Zeit (tägliches Update) zu liefern.\n     \n\nBusiness Scope:\nDaten sämtlicher in Flamingo gebuchter FTTH-Aufträge werden in der von FiberCockpit vorgegebenen Form und Zeit vom POT angeliefert; Ausweis der GK Midmarket Absätze",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Ausweis der GK Midmarket Absätze"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Daten sämtlicher in Flamingo gebuchter FTTH-Aufträge werden in der von FiberCockpit vorgegebenen Form und Zeit vom POT angeliefert",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "tägliches Update",
+      "justification": ""
+    }
+  },
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "Die für das Reporting im FiberCockpit  benötigten Daten sämtlicher  in Flamingo gebuchter FTTH-Aufträge (O3-Aufträge) werden in der von FiberCockpit vorgegebenen Form und Zeit (tägliches Update) vom POT angeliefert\n...",
+    "..."
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "2025",
+    "B2B_PRIO",
+    "B2B_Target",
+    "BB-FTTH",
+    "GK",
+    "GK-FTTH-03",
+    "Portfolio",
+    "Portfolio_Breitband",
+    "VGK_Steffen"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-11622",
+      "title": "ADCL-11622",
+      "summary": "Reporting: Transport FTTH reporting information to DWH",
+      "url": "https://jira.telekom.de/browse/ADCL-11622",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-99949",
+      "title": "MAGBUS-99949",
+      "summary": "O3 stellt Daten aller O3 Order an Fiber-Cockpit bereit",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99949",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

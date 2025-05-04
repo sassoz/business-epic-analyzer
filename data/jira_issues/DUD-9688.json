@@ -1,0 +1,42 @@
+{
+  "key": "DUD-9688",
+  "issue_type": "Epic",
+  "title": "Nominet UK Status Field Standardisation",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nNominet passt zum 01.03.2021 seine EPP Info und Update Befehle an. Die Funktionalität von Doris muss gewährleistet bleiben.\nDescription of Demand / Problem\nNominet passt zum 01.03.2021 seine EPP Info und Update Befehle an. Knipp ist bereits informiert. Die neue Version wird am  02.02.2021 in der Testumgebung freigeschaltet.\n90 Day Notice - EPP Status Field Standardisation  \nDate: Tuesday 2nd March 2021\nAdditional Information: .UK Status Field Standardisation\n \nWhat is changing?\n \nResponses of INFO and UPDATE EPP commands will be updated to implement the EPP status fields contained in the following EPP RFCs:\nRFC5731: Extensible Provisioning Protocol (EPP) Domain Name Mapping\nRFC5732: Extensible Provisioning Protocol (EPP) Host Mapping\nRFC5733: Extensible Provisioning Protocol (EPP) Contact Mapping\n \nFor details of the changes to these responses, please visit Registrar Resources.\n \nWhy are we making these changes?\n \nBased on your feedback, and a recognition that standardisation is a positive change (providing that it preserves online standards for all while enhancing registrars' and registrants' user experiences), we intend to introduce EPP status fields to the .UK registry.\n \nWhat action do I need to take?\n \nIt is important that you ensure your systems are set up and ready to process these new responses by 1st March 2021. Registrar Resources provides a detailed breakdown of changes to functionality along with samples of the new status fields in EPP responses.\n \nWe will be deploying to the .UK Testbed environment on Tuesday 2nd February 2021 to give you plenty of time to try out this new functionality ahead of the launch date. The Testbed will be configured to allow you to test all functionality\n \nFurther Support\n \nRegistrar documentation for .UK EPP commands are available on Registrar Resources.|\n  Acceptance Criteria\nDavid und Doris funktionieren einwandfrei mit den Änderungen von Nominet.\nChecklist\nDependencies fulfilled (Ticket dependencies).\nAccessibility / Barrierefreiheit: Principles fulfilled.\nUnit Tests: Have been developed. If not, please explain.\nSoapUI Tests: Have been developed. If not, please explain.\nRegression Test: Test case has been added. If not, please explain.\nGUI Test: Done. If not, please explain.\nTest idea?\nRelease Notes? (Yes/No)\nDoD: Verified by Scrum Master.\n   ",
+  "business_value": {},
+  "assignee": "Daniel Schimek",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "OhneLieferung"
+  ],
+  "acceptance_criteria": [
+    "Options",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DORIS",
+      "title": "DORIS "
+    }
+  ],
+  "labels": [
+    "OperationalStability",
+    "RegistrarStatus",
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

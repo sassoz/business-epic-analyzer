@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-105202",
+  "issue_type": "Epic",
+  "title": "MC: Weiterentwicklung Lead-Importtool (LACHS) Q2",
+  "status": "Backlog",
+  "description": "",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 28 stretch"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MarketingCloud (MC)",
+      "title": "MarketingCloud (MC) "
+    }
+  ],
+  "labels": [
+    "FunctionalRequirement",
+    "MB_MA"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

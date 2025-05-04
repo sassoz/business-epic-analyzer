@@ -1,0 +1,92 @@
+{
+  "key": "BEMABU-1823",
+  "issue_type": "Business Epic",
+  "title": "DTS - Integration Vertriebskanal in MagentaForce",
+  "status": "Backlog",
+  "description": "Description",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "9.663.767 €",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Es wird eine Umsatzsicherung von ca. 9,6 Mio € bis Ende 2025 prognostiziert -> Herleitung bezogen auf SIP Trunk Migration, dazugehörigen IT Absatz (siehe Excel im Anhang)"
+    },
+    "strategic_enablement": {
+      "scale": 13,
+      "risk_minimization": "",
+      "strat_enablement": "Kundenbindung über strategische Produkte",
+      "justification": "Reduzierung Datenschutzrelevanter Risiken und Absicherung strategischer Wettbewerbsfähigkeit im GK Umfeld"
+    },
+    "time_criticality": {
+      "scale": 20,
+      "time": "Q2/2025",
+      "justification": "Arbeitsfähigkeit und Absicherung der Erreichung der Sales-/Qualität und Umsatzziele"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Schmidt, Michel",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "Mitarbeiter werden bzw. wurden geschult",
+    "Kennung werden bzw. wurden an Mitarbeiter in dem benannten Bereich versandt",
+    "Zugriff auf die Anwendung ist erfolgt; Bearbeitung Segmentübergreifend ist möglich",
+    "Support-Weg beim Störungen ist aufgebaut",
+    "Weiterleitungen zwischen den (Segment-) Bereichen ist möglich",
+    "Rollen- und Berechtigungskonzept ist erstellt und ist aktiv",
+    "Reporting ist sichergestellt",
+    "Zusätzliche Kennung sind im Forecast berücksichtigt"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_PRIO_EXPL",
+    "B2B_Target",
+    "Cross-vertical",
+    "KMU-Service",
+    "Massenmarkt",
+    "Midmarket",
+    "Q1/2025",
+    "Q2-2025",
+    "SK-11"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-105996",
+      "title": "MAGBUS-105996",
+      "summary": "MF: DTS - Integration Vertriebskanal in MagentaForce",
+      "url": "https://jira.telekom.de/browse/MAGBUS-105996",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20241217_Schätzung_Umsatzerwartung SIPtoCoFlex mit IT_Router oder BKS_System_JM.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5235543/20241217_Sch%C3%A4tzung_Umsatzerwartung%20SIPtoCoFlex%20mit%20IT_Router%20oder%20BKS_System_JM.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "472 kB",
+      "date": "2024-12-18T08:15:25.607+01:00"
+    },
+    {
+      "filename": "eMail2case_Leads_&_Sonder-Business Warteschlangen@Magenta Force.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5573907/eMail2case_Leads_%26_Sonder-Business%20Warteschlangen%40Magenta%20Force.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "281 kB",
+      "date": "2025-04-03T17:16:30.039+02:00"
+    }
+  ]
+}

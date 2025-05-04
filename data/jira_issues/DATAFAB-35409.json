@@ -1,0 +1,47 @@
+{
+  "key": "DATAFAB-35409",
+  "issue_type": "Epic",
+  "title": "TMSP Impact analysis for Q2",
+  "status": "In Progress",
+  "description": "Description\n1. Epic Description\nEpic (Requirement and Scope) \nThis epic focuses on the continuous analysis and adaptation required for our M2M Reporting system in response to changes introduced by the TMSP Source system with each Release . The objective is to ensure seamless integration and functionality by proactively identifying, assessing, and implementing necessary adjustments based on the TMSP side updates.\nWith the frequent updates and enhancements made to the TMSP, M2M reporting system must remain robust and adaptable. This epic encompasses a series of activities aimed at monitoring, analyzing, and responding to these changes to maintain data integrity, system performance, and overall reliability of our reporting capabilities.\nThe key goals and activities within this epic include:\nContinuously track and document all changes introduced by the TMSP system with each release or sprint.\nMaintain a comprehensive change log detailing the nature and scope of updates. \nConduct thorough impact analysis for each identified change, evaluating how it affects M2M Reporting.\nIdentify potential risks, data discrepancies, and performance issues that may arise from the TMSP changes.\nCollaborate with stakeholders to understand the implications of TMSP updates on reporting requirements.\nGather and document new or modified requirements needed to accommodate TMSP changes.\nDevelop and implement necessary changes or enhancements in our reporting system to align with TMSP system updates.\nPerform rigorous testing to ensure the implemented changes do not introduce new issues and that the system operates seamlessly with the TMSP.\nUpdate relevant documentation to reflect changes made to the M2M Reporting system in response to TMSP changes.\nCommunicate the impact and adjustments clearly to all relevant stakeholders to ensure alignment and awareness.\nIdentify opportunities for process improvements in handling Source system changes.\nImplement best practices for efficient impact analysis and system adaptation.\n  Todo:\nAfter each TMSP release implementation, create a user story to review and refine the impact analysis.\nValidate that all identified changes have been addressed and integrated appropriately.\nConduct a retrospective to gather feedback and improve future impact analysis and adaptation processes.\nBenefits\nEnsures M2M Reporting remains robust and can adapt smoothly to TMSP changes.\nMinimizes risks of data discrepancies and maintains high data quality.\nStreamlines the process of integrating TMSP updates, reducing downtime and operational disruptions.\nIdentifies potential issues early, allowing for timely interventions and mitigations.\n  Specific Deliverables  \nNone\nAcceptance Criteria (conditions which must be satisfied for the Epic to be accepted)\nImpact analysis is performed.\nReporting system is adapted to changes\nOut of Scope\nDevelopment of new features or functionalities.\nDependencies \nTMSP changes list should be available.\nChanges should be communicated in advance.\n2. Technical / Solution Design / Compliance\nTechnical & Solution Design  \nN/A\nCompliance evaluation\nDone.\n3. NFR (if any)\nNon functional requirements\nDeployment processes must handle varying loads without affecting performance.\nEnsure 99.9% uptime during deployment activities to avoid major service disruptions.\nThe system should maintain optimal performance during deployment with no noticeable degradation.\nData and access must be secured throughout the deployment, with compliance to security standards.\n4. SLA(if any)\nService Level Agreements\nEnsure technical support availability during the deployment window and for 24 hours post-deployment.",
+  "business_value": {},
+  "assignee": "Katerina Soldatova",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [
+    "Impact analysis is performed.",
+    "Reporting system is adapted to changes",
+    "Development of new features or functionalities.",
+    "CLOSED",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "DEV",
+    "M2M_Rep"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

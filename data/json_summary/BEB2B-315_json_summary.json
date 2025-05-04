@@ -1,0 +1,77 @@
+```json
+{
+  "epicId": "BEB2B-315",
+  "title": "B2B Breitband & IT I Business DSL 16 Basic (DP Alternativprodukt für MSAN-POTS bei GK)",
+  "ziele": {
+    "gesamtziel": "Bereitstellung eines preiswerten Double Play Produkts aus der Business Start Linie für Geschäftskunden, die aktuell noch analoge Anschlüsse auf Basis MSAN-POTS nutzen, um ca. 90 Tsd. MSAN-POTS Verträge bis Ende 2026 abzulösen und die Kunden zu halten. Das Produkt soll bis Mitte 2025 zur Verfügung stehen, um Umsatzsicherung zu gewährleisten, Churn zu vermindern und die Kundenzufriedenheit durch ein alternatives Angebot zu erhalten.",
+    "einzelziele": [
+      "Bereitstellung eines Double Play Produkts 'Business DSL 16 Basic' als Alternativangebot für MSAN-POTS Kunden",
+      "Migration von 15-25 Tsd. Kunden auf das neue Produkt bis Ende 2026",
+      "Umsatzsicherung durch Kundenbindung und Vermeidung von Abwanderungen"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 20,
+      "beschreibung": "Die avisierten 25 Tsd. MSAN-POTS, die in das neue Produkt migrieren, erbringen einen Umsatz von 8,25 Mio € p.a. (Grundentgelt + 2,5 € Verbindungsentgelte). Ohne dieses Angebot könnten ca. 80% der Kunden/Anschlüsse verloren gehen, was einem Risikoverlust von 6,6 Mio € entspricht."
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "Durch die sehr kurzfristige Kündigung erwartet der Kunde ein adäquates und kostengünstiges Alternativprodukt. Ansonsten wird die Kundenbindung und das Vertrauen in die Leistungsfähigkeit der Telekom erheblich geschwächt."
+    },
+    "timeCriticality": {
+      "skala": 13,
+      "beschreibung": "Die 90 Tsd MSAN-POTS müssen bis 31.12.2026 abgeschaltet und auf Nachfolgeprodukte migriert werden. Im April 2025 gehen die Ankündigungsschreiben an die Kunden raus. Danach erfolgt die finale Kündigung in mehreren Wellen ab Juni 2025. Das Produkt muss daher bis zum 31. Mai 2025 gelauncht werden."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-104642",
+      "titel": "Flamingo: Business DSL 16 Basic (DP Alternativprodukt für MSAN-POTS bei GK)",
+      "funktionalitäten": [
+        "Implementierung des Business DSL 16 Basic Produkts in Flamingo",
+        "Einrichtung von CPS-Fähigkeit und BCA-Fähigkeit (nicht rabattierbar)",
+        "Integration von Speedport 3 refurbed (Kauf/Miete) mit Dealcloser 12M 4free",
+        "Einrichtung der Montageleistung mit Anfahrt (Persönliche Installation 2.0)"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Angebote und Preiskalkulationen können erstellt werden (über Flamingo)",
+    "Aufträge können prozessiert werden (über Eos/O3)",
+    "Rechnungslegung an Kunden ist möglich (über Abilit)",
+    "Da das Produkt ausschließlich für die MSAN Pots Migration benötigt wird, ist eine Buchung für Neugeschäft nicht vorgesehen"
+  ],
+  "domainsAndITApplications": [
+    "Tariffabrik",
+    "EOS (DOM0201)",
+    "Flamingo (DOM0201)",
+    "SeCe-IT (DOM0201)",
+    "Abilit"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Die Kündigung der MSAN-POTS beginnt im April 2025, was einen engen Zeitplan für die Produkteinführung bedeutet",
+    "Bis Ende 2026 müssen alle 90 Tsd. MSAN-POTS abgeräumt sein, was einen hohen Migrationsdruck erzeugt",
+    "Das Produkt wird nur auf Kupfer realisiert, keine Abbildung auf Glasfaser",
+    "Risiko der Kundenabwanderung, falls das Alternativprodukt nicht rechtzeitig verfügbar ist",
+    "Der Status des Business Epics ist 'Review', während das Portfolio Epic noch im Status 'Funnel' ist, was auf eine mögliche Verzögerung hindeutet"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-01",
+    "fixVersions": ["Q3_25"],
+    "meilensteine": [
+      {
+        "id": "Produktlaunch",
+        "beschreibung": "Produktlaunch Business DSL 16 Basic",
+        "zeitraum": "31. Mai 2025"
+      },
+      {
+        "id": "Migration",
+        "beschreibung": "Migration von MSAN-POTS Kunden",
+        "zeitraum": "Juni 2025 - Dezember 2026"
+      }
+    ]
+  }
+}
+```

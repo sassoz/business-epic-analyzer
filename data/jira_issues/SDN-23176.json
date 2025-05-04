@@ -1,0 +1,39 @@
+{
+  "key": "SDN-23176",
+  "issue_type": "Epic",
+  "title": "[SysPipeliners] Build Up Infrastructure for new FIB tools microservices (Q1/25) PI 25.1",
+  "status": "Closed",
+  "description": "Description\nto do:\nDescrpition for infra. reqs for Q1/25, based on sync and aligment with O2B Dev.team Vega & Sys Arch...\n    Old desciption for Q4/24:\nAs aligned during the SNP PIP 24.4 between Team Vega & Sys. Architect & Systeam Pipeliners we need to support FIB tool development with Setup of CaaS and CI/CD infrastructure for FIB microservice:\nTasks\nOrder PostgreSQL DbaaS (nonprod cluster) and handover to Developers\nOrder separate nonprod CaaS project in t03 (Decision by Architect Carsten Jupitz to keep the FIB Tool separate from the other MS)\nBuild up CaaS infrastructure for FIB Microservice (Dev & EAT)\nextend namespace resource quotas\nOrder firewall clearances if needed\nCreate additional network policies if needed\nimplement dynatrace integration (and EaaS if requested)\nCreate and adapt helm chart for FIB\nIntegration to panda-deploy repository for unified deployment \nAlign with Vega Team on specifics (implement yet unknown requirements/configurations)\nFeedback from Vega Team that everything is working as intended.\n  Milestones:\nThe new \"FIB Tool basic micoservice infrastructure\" for the Panda DEV and EAT environments need to be ready to start with the development and integration with Panda by 2. Iteration for the  Dev. team Vega.\n  The new \"FIB Tool basic micoservice infrastructure\" for the Panda UAT and PROD Environments are needed in the next PI 25.1 (later)\nWe need to align therefore within the next Pre-PIP phase and finialize it during the next PIP 25.1.\n\nBusiness Scope:\nSupport FIB tool development with Setup of the CaaS, DBaaS and CI/CD infrastructure for multiple FIB microservices based on the growing development within Q1/25.",
+  "business_value": {},
+  "assignee": "Jan-Hendrik Liebe",
+  "priority": "",
+  "target_start": "2025-01-23",
+  "target_end": "2025-03-26",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "CaaS infrastructure (UAT & Prod environment) has been prepared for the FIB Microservices (firewall, resource quotas, Network policies etc, Dynatrace integration)",
+    "Needed order and provision Postgres DBaaS done",
+    "Helm chart for FIB has been created and is fully functional",
+    "Deployment via panda-deploy repository is integrated",
+    "Feedback from Vega Team that everything is working as intended.",
+    "..."
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    },
+    {
+      "code": "SDN_Systemteam",
+      "title": "SDN_Systemteam Systemteam (Enviroment,Infrastructure, Plattform Engineering"
+    }
+  ],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

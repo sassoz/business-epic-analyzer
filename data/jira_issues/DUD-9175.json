@@ -1,0 +1,54 @@
+{
+  "key": "DUD-9175",
+  "issue_type": "Epic",
+  "title": "EURid October 2019 Finalisation",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nFinalisation of the EURid's code breaking changes Oct. 2019\nInclusion of citizenship in DuD\nBug fixes (found while implementing the feature DUD-9118)\nDescription of Demand / Problem\nCurrent state; What have we done so far:\nWe have implemented the feature DUD-9118. Sprint 4.9.4 vWBA 23.10.2019\nThe implemented feature is a workaround, because we just use the countryCode (CC) to set the countryOfCitizenship, but the CC is an address based value and might differ from the holder's countryOfCitizenship \nseveral bug fixes are needed (all legacy)\n Finalisation; Next steps: \nFinal state code breaking changes Oct. 2019:\ncountryOfCitizenship is stored in database\ncountryOfCitizenship is part of the NicContainer for EURid\ncountryOfCitizenship is part of the RegistrarService-Interface\nDetailed consultation with TPD necessary \nadd SubAction \"ForceContactModfy\" to RegistrarService-Interface (polling.xsd)\nrevert changes/workaround made under DUD-9153.\nExtend interface agreement dcumentation\nCreate and deliver NicContainer dcumentation\nValidationService can handle countryOfCitizenship\nDetailed consultation with TPD necessary\nNew error code&test needed?\nContact- and Domain-Synchonization can handle countryOfCitizenship\nNew/Changed regressiontests (Soap-UI) \nBug fixes (all legacy):\nChanges for Onsite-C (technically a Tech-C) has to be confirmed (ContactModify-Order, not within a domain related order)\ncontact-ext:lang is set hardcoded to \"en\", why?\nSynchronization of a contact (type organisation) looses First- and Lastname\nAcceptance Criteria\nCitizenship of the contacts is displayed in the GUI and transferred to EURid.\nChecklist\n  DoD: Geprüft von Scrum Master.",
+  "business_value": {},
+  "assignee": "Frank Breidenstein",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Options",
+    "CLOSED",
+    "ANALYSIS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DAVID",
+      "title": "DAVID "
+    },
+    {
+      "code": "DORIS",
+      "title": "DORIS "
+    }
+  ],
+  "labels": [
+    "RegistrarStatus",
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [
+    {
+      "key": "DUD-9325",
+      "title": "DUD-9325",
+      "summary": "Erhaltung Registrar Status (alter Sammler)",
+      "url": "https://jira.telekom.de/browse/DUD-9325",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

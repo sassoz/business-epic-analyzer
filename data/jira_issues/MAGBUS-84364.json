@@ -1,0 +1,185 @@
+{
+  "key": "MAGBUS-84364",
+  "issue_type": "Portfolio Epic",
+  "title": "Voice Basic: Sendungsverfolgung von Endgeräten / Delivery Status",
+  "status": "Backlog",
+  "description": "",
+  "business_value": {},
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "ACC1: In EOS wird der Lieferstatus eines versendeten (Voice und Inhouse - noch in Klärung mit POT) Endgeräts angezeigt",
+    "ACC2: In EOS soll Sendeverfolgung bei der Endgerätposition in einer Spalte als embedded Link angezeigt werden. Der Nutzer wird weitergeleitet.",
+    "( Platzhalterstatus, wenn noch keine Sendeverfolgung vorhanden? Was, wenn bei bereits erstellten Endgerätpositionen kein Link über den Service angeboten wird?)",
+    "Info: Bestellungen über elog Bestellverfahren werden immer über DHL versendet. Speziellere Hardware geht über das Beschaffungsmanagement (kann 2-3 Wochen dauern, Bestellung nicht bei Auftragserstellung) und Ware wird von dort aus bei einem Onlinehändler oder sonstiges bestellt und mit DPD verschickt. In KuDiBel ist DPD nicht einsehbar.",
+    "Info: Bestellungen über elog Bestellverfahren werden immer über DHL versendet. Speziellere Hardware geht über das Beschaffungsmanagement (kann 2-3 Wochen dauern, Bestellung nicht bei Auftragserstellung) und Ware wird von dort aus bei einem Onlinehändler oder sonstiges bestellt und mit DPD verschickt. In KuDiBel ist DPD nicht einsehbar.",
+    "ACC3: In EOS soll neben der Sendeverfolgung eine weitere Spalte sein, die den Sendeerfolg anhand eines Häkchens bestätigen soll. ( Welche Icons? Welche Farbe? Was, wenn kein Sendeerfolg ausstehend ) ( Was passiert bei einem Negativfall, also wenn Sendeerfolg behindert?)"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    }
+  ],
+  "labels": [
+    "CRM-T",
+    "DigiHub_DOM",
+    "EOS",
+    "PI28",
+    "SeCe-IT"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-12392",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12392",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "EOS-2796",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/EOS-2796",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "EOS-7017",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/EOS-7017",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-3018",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SECEIT-3018",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12215",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12215",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12216",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12216",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12217",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12217",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12218",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12218",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12223",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12223",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12282",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12282",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12434",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12434",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12438",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12438",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Ansicht für Inhouse Positionen/Teilaufträge.png",
+      "url": "https://jira.telekom.de/secure/attachment/5355475/Ansicht%20f%C3%BCr%20Inhouse%20Positionen%2FTeilauftr%C3%A4ge.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-31T10:24:31.181+01:00"
+    },
+    {
+      "filename": "Ansicht in EOS an den Positionen.png",
+      "url": "https://jira.telekom.de/secure/attachment/5354667/Ansicht%20in%20EOS%20an%20den%20Positionen.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-31T10:15:13.480+01:00"
+    },
+    {
+      "filename": "image-2025-01-21-14-57-24-271.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318678/image-2025-01-21-14-57-24-271.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-21T14:57:24.382+01:00"
+    },
+    {
+      "filename": "image-2025-01-21-14-57-45-808.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318677/image-2025-01-21-14-57-45-808.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-21T14:57:45.896+01:00"
+    },
+    {
+      "filename": "image-2025-01-21-14-58-01-679.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318676/image-2025-01-21-14-58-01-679.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-21T14:58:01.789+01:00"
+    },
+    {
+      "filename": "image-2025-01-21-14-58-28-813.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318675/image-2025-01-21-14-58-28-813.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-21T14:58:28.916+01:00"
+    },
+    {
+      "filename": "Positionen Teilaufträge.png",
+      "url": "https://jira.telekom.de/secure/attachment/5360893/Positionen%20Teilauftr%C3%A4ge.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-03T10:38:59.627+01:00"
+    },
+    {
+      "filename": "pot_crmt_sample.json",
+      "url": "https://jira.telekom.de/secure/attachment/5390649/pot_crmt_sample.json",
+      "mime_type": "application/json",
+      "size": "",
+      "date": "2025-02-11T16:25:20.988+01:00"
+    }
+  ]
+}

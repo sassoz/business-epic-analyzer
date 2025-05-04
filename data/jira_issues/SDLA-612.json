@@ -1,0 +1,52 @@
+{
+  "key": "SDLA-612",
+  "issue_type": "Initiative",
+  "title": "Enhance SD-WAN/LAN/WIFI Product & Production Model for MIST Q2",
+  "status": "Funnel",
+  "description": "Description\nFor whom Telekom\nwho Needs a product- and production model\nprovides the data model in CPDM with\na product and production model\nfor further development and other IT Systems\n\nBusiness Scope:\nA ´product- (catalog and price model) and production model is requested for different IT systems in DT. A Model for Juniper SD-WAN already exists and must be enhanced with LAN/WiFi. The PO/PS level will be provided by Offering Management (BO). Basis for the production model shall be the module catalogue of the existing TDG product “mLan”.\n\nProcess and Dataflow Model, update PRIMA+",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Product and production model is aligned",
+    "Model is described in CPDM",
+    "Process and Dataflow Model is done and documented",
+    "update PRIMA+ is done and documented"
+  ],
+  "components": [
+    {
+      "code": "SDN",
+      "title": "SDN B2B Software Defined Networks"
+    }
+  ],
+  "labels": [
+    "Assurance",
+    "NGO",
+    "OKR_Q2_Get_ready_for_Juniper_MIST",
+    "SDLA_VS_Assurance",
+    "SDLA_VS_Billing&Contract_Mgmt",
+    "SDLA_VS_Digital_Customer_Touchpoints",
+    "SDLA_VS_Finance_Procurement&Logistic",
+    "SDLA_VS_Lead&Opportunity",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SDxHub",
+    "SNOW@TC",
+    "SNOWTC",
+    "assurance"
+  ],
+  "realized_by": [
+    {
+      "key": "SDX-4504",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4504",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

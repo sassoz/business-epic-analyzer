@@ -1,0 +1,79 @@
+{
+  "key": "EOS-5744",
+  "issue_type": "Epic",
+  "title": "[Voice] Produktwechsel in EOS ermöglichen",
+  "status": "Resolved",
+  "description": "",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "2025-01-10",
+  "target_end": "2025-01-30",
+  "fix_versions": [
+    "Q4_24 stretch",
+    "PI25-stretch",
+    "PI26-stretch",
+    "PI27",
+    "6.16.1"
+  ],
+  "acceptance_criteria": [
+    "EOS kann mit dem Geschäftsfall \"Produktwechsel\" kommend aus dem O3 umgehen.",
+    "Bei einem Produktwechsel, wird eine Position angelegt, welche den Geschäftsfall \"Produktwechsel\" und den Untergeschäftsfall \"Neu\" hat.",
+    "Diese Position enthält als Produkt, dass von O3 mitgegeben neue Produkt",
+    "Es gibt ein neues Produktattribut \"Alt Produkt\" hier wird das Produkt angezeigt, welches der Kunde heute hat (das Produkt welches gewechselt wird) \nEOS lädt die Daten des Alt-Produktbestandes mittels Referenz vom O3 beim oPIM.\nDas Alt-Produkt wird nicht als Position angezeigt, wie es bei Produktwechseln aus CRM-T der Fall ist.",
+    "EOS lädt die Daten des Alt-Produktbestandes mittels Referenz vom O3 beim oPIM.",
+    "Das Alt-Produkt wird nicht als Position angezeigt, wie es bei Produktwechseln aus CRM-T der Fall ist.",
+    "Die Möglichkeit der Vervollständigung eines solchen Auftrags besteht. \nDie Aufgaben und Validierungen sind identisch zu einer Neubereitstellung.",
+    "Die Aufgaben und Validierungen sind identisch zu einer Neubereitstellung.",
+    "Mit dem Import der Auftragsdaten aus CRM-T importiert EOS das Alt-Produkt als Position.",
+    "Die Produktattribute bleiben bei dem O3 Import gleich wie heute bei der Neubereitstellung (PW spezifische Attribute werden erst mit dem CRM-T Import gefüllt)"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI25",
+    "EOS-PI27",
+    "GK-FTTH-EOS",
+    "PI25-stretch",
+    "PI26-stretch",
+    "PI27"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "1e3ff504-d466-4aa4-8e33-4cfcd5eac09f.PNG",
+      "url": "https://jira.telekom.de/secure/attachment/4808791/1e3ff504-d466-4aa4-8e33-4cfcd5eac09f.PNG",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-08-13T09:13:06.546+02:00"
+    },
+    {
+      "filename": "Draft_PW_Auftragsdetails.PNG",
+      "url": "https://jira.telekom.de/secure/attachment/4808794/Draft_PW_Auftragsdetails.PNG",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-08-13T09:15:06.582+02:00"
+    },
+    {
+      "filename": "Draft_PW_Positionsdetails.PNG",
+      "url": "https://jira.telekom.de/secure/attachment/4808793/Draft_PW_Positionsdetails.PNG",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-08-13T09:15:06.550+02:00"
+    },
+    {
+      "filename": "image-2024-08-16-09-11-37-958.png",
+      "url": "https://jira.telekom.de/secure/attachment/4818677/image-2024-08-16-09-11-37-958.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-08-16T09:11:38.021+02:00"
+    },
+    {
+      "filename": "Positionskachel.png",
+      "url": "https://jira.telekom.de/secure/attachment/4818418/Positionskachel.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-08-16T08:02:58.218+02:00"
+    }
+  ]
+}

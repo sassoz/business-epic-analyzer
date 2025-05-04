@@ -1,0 +1,61 @@
+{
+  "epicId": "BEMABU-1239",
+  "title": "MobFu - eSIM Rollen- und Berechtigungs-Konzept (Produktentwicklung)",
+  "ziele": {
+    "gesamtziel": "Ablösung des manuellen, Excel-basierten Blacklisting-Prozesses für Geschäftsvorfälle am Entitlement-Server (ES) durch eine digitale, performante und ausfallsichere Lösung. Entwicklung eines Frontends in MBSB/BSP/BSP NEU zur Verwaltung der zu sperrenden RVen, Speicherung im Backend und Bereitstellung einer API für den ES zur Entscheidungsfindung über Geschäftsvorfälle. Geplantes Zielerreichungsdatum: 30.09.2024.",
+    "einzelziele": [
+      "Ablösung des manuellen Blacklisting-Prozesses durch eine digitale Lösung.",
+      "Bereitstellung eines Frontends für Zugriffsberechtigte zur Verwaltung der zu sperrenden RVen.",
+      "Implementierung eines Backends zur Speicherung der Sperrlisten und Anbindung einer API für den ES.",
+      "Sicherstellung von hoher Performance und Ausfallsicherheit, insbesondere bei Lastspitzen (z.B. Launch neues iPhone)."
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-1239",
+      "titel": "MobFu - eSIM Rollen- und Berechtigungs-Konzept (Produktentwicklung)",
+      "funktionalitäten": [
+        "Frontend in MBSB/BSP/BSP NEU zur Verwaltung der zu sperrenden RVen für Zugriffsberechtigte.",
+        "Backend zur Speicherung der Sperrlisten.",
+        "API-Anbindung des Backends an den Entitlement-Server (ES) zur Entscheidungsfindung über Geschäftsvorfälle.",
+        "Hohe Performance und Ausfallsicherheit, insbesondere bei Lastspitzen."
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Scenario n:\nGIVEN: current Status of the Software\nWHEN: User Action\nTHEN: Resulting Status of the Software"
+  ],
+  "domainsAndITApplications": [
+    "MBSB",
+    "BSP",
+    "BSP NEU",
+    "ES"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Performance und Ausfallsicherheit des Backends, insbesondere bei Lastspitzen (z.B. Launch neues iPhone).",
+    "Abhängigkeit von der erfolgreichen API-Integration zwischen Backend und Entitlement-Server (ES).",
+    "Keine weiteren Informationen verfügbar"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2023-04-01",
+    "umsetzungsende": "2024-09-30",
+    "fixVersions": [
+      "Q3_25"
+    ],
+    "meilensteine": []
+  }
+}

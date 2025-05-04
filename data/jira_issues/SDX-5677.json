@@ -1,0 +1,38 @@
+{
+  "key": "SDX-5677",
+  "issue_type": "Epic",
+  "title": "[SD] LAN - SNMPv3",
+  "status": "Closed",
+  "description": "Description\nThree new elements were introduced with SNMP v3: SNMP View, SNMP Group, and SNMP User. These new elements work together to provide authentication and encryption to every interaction with devices on a network and help make sure no one is reading, writing or accessing data they shouldn't be.\n\nBusiness Scope:\nIn order to be aligned with DT architecture guideline, is necessary to enable for SDX project for LAN devices capability to use SNMPv3 user access.",
+  "business_value": {},
+  "assignee": "Mhd Eyad Almolki (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "Technical design\nAuthentication concept\nSNMP group\nSNMP view\nSNMP user",
+    "Authentication concept",
+    "SNMP group",
+    "SNMP view",
+    "SNMP user",
+    "UI proposal",
+    "CPDM handover",
+    "Handover to SO, Security",
+    "operation manual"
+  ],
+  "components": [
+    {
+      "code": "SDx - Orchestrator",
+      "title": "SDx - Orchestrator "
+    }
+  ],
+  "labels": [
+    "SDProduct"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

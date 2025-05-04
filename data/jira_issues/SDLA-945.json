@@ -1,0 +1,380 @@
+{
+  "key": "SDLA-945",
+  "issue_type": "Initiative",
+  "title": "SD LAN/WiFi: MVP Create Organization/Create Site based on Juniper MIST (Order Provisioning) Q4",
+  "status": "Funnel",
+  "description": "Description\nClick to add description\n\nBusiness Scope:\nAs DT <user> I want to be able to process Juniper MIST SD-LAN/WiFi/WAN orders along the entire process chain with all related workflows necessary to realize customers orders.",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Solution Release SD LAN/WIFI R1.0"
+  ],
+  "acceptance_criteria": [
+    "Processes are described and documented",
+    "Order Provisioning is implemented and tested"
+  ],
+  "components": [
+    {
+      "code": "SDN",
+      "title": "SDN B2B Software Defined Networks"
+    }
+  ],
+  "labels": [
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-7659",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-7659",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDPD-373",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDPD-373",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDPD-374",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDPD-374",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-849",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-849",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-1013",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-1013",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDPD-371",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDPD-371",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-7530",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-7530",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-7531",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-7531",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10694",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10694",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10913",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10913",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10922",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10922",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10924",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10924",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-4322",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-4322",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10327",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10327",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10483",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10483",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10484",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10484",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10485",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10485",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10486",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10486",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10505",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10505",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10508",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10508",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10540",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10540",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10552",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10552",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10553",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10553",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10555",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10555",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10558",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10558",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10559",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10559",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10560",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10560",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10561",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10561",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10674",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10674",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10875",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10875",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10876",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10876",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10877",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10877",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10914",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10914",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10920",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10920",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10921",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10921",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-11052",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-11052",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2022-07-08_Roadmap MIST- DRAFT.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334405/2022-07-08_Roadmap%20MIST-%20DRAFT.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-28T07:38:53.000+02:00"
+    },
+    {
+      "filename": "20220719_Preismatrix_SDLAN.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334406/20220719_Preismatrix_SDLAN.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-28T07:39:58.000+02:00"
+    },
+    {
+      "filename": "22-06-01_Juniper LAN-WiFi_EXTRACT CUX.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334407/22-06-01_Juniper%20LAN-WiFi_EXTRACT%20CUX.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-26T08:05:21.000+02:00"
+    },
+    {
+      "filename": "Co-Mgt Use Cases.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334409/Co-Mgt%20Use%20Cases.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-28T07:37:34.000+02:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_2022-07-20_10-24-19.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334408/CPDMCATExcel_SDLAN_2022-07-20_10-24-19.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-28T07:37:51.000+02:00"
+    },
+    {
+      "filename": "Handover Value Stream Order Management SD LAN.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334410/Handover%20Value%20Stream%20Order%20Management%20SD%20LAN.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-08-12T12:26:00.000+02:00"
+    },
+    {
+      "filename": "Mist Licensing Model.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2334411/Mist%20Licensing%20Model.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2022-07-28T07:39:33.000+02:00"
+    },
+    {
+      "filename": "Price Model V4.0 LAN_WiFi.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334412/Price%20Model%20V4.0%20LAN_WiFi.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-28T07:39:50.000+02:00"
+    },
+    {
+      "filename": "ReportETPS_SDLAN_23_06_2022.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334413/ReportETPS_SDLAN_23_06_2022.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-26T08:05:21.000+02:00"
+    },
+    {
+      "filename": "SDLAN-Produktmodell_20220708_095347.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2334414/SDLAN-Produktmodell_20220708_095347.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-07-26T08:05:21.000+02:00"
+    },
+    {
+      "filename": "SDLAN-Produktmodell_20220720_101629.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2334415/SDLAN-Produktmodell_20220720_101629.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-07-28T07:38:41.000+02:00"
+    },
+    {
+      "filename": "Site bundles.zip",
+      "url": "https://jira.telekom.de/secure/attachment/2334416/Site%20bundles.zip",
+      "mime_type": "application/zip",
+      "size": "",
+      "date": "2022-07-28T07:39:15.000+02:00"
+    },
+    {
+      "filename": "Site-bundles-v7.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334417/Site-bundles-v7.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-28T07:37:15.000+02:00"
+    }
+  ]
+}

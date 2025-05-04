@@ -1,0 +1,45 @@
+{
+  "key": "BEMBN-114",
+  "issue_type": "Business Initiative",
+  "title": "SD MIST WAN - Bundling of all leftover topics 2024",
+  "status": "Closed",
+  "description": "Description\nThis PE serves to bracket all MIST SD WAN leftover activities on Secure Networking Platform (SNP) for 2024, to support the product-life-cycle for below products. Topics are worked upon according to agreed prioritization!\n---------------------------------------------------------------------------------------\n1. MIST SD WAN SRX\nDt.: Telekom SD-WAN auf Basis Juniper (MIST)\nEngl.: Telekom SD-WAN based on Juniper (MIST)\nVPO-Nr: 460405 (same as for SRX)\nOffer Module ID:  60000029\n2 MIST SD WAN SSR \nDt.: Telekom SD-WAN auf Basis Juniper (SSR)\nEngl.: Telekom SD-WAN based on Juniper (SSR)\nVPO-Nr: 460405 (same as for SRX)\nOffer Module ID:  60000035\n\nBusiness Scope:\nThis PE serves to bracket all MIST SD WAN leftover activities on Secure Networking Platform (SNP) for 2024.\n\n---------------------------------------------------------------------------------------\nTopics are worked upon according to agreed prioritization",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "2024-07-08",
+  "target_end": "2024-12-20",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C23",
+      "title": "C23 "
+    },
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "SDN",
+      "title": "SDN Wenn SDX betroffen ist muss die Components SDN gesetzt werden"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "B2B_Prio_2024",
+    "DOM0204",
+    "Portfolio"
+  ],
+  "realized_by": [
+    {
+      "key": "BEMBN-115",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/BEMBN-115",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

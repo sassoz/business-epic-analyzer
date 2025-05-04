@@ -1,0 +1,91 @@
+{
+  "key": "SDN-22480",
+  "issue_type": "Initiative",
+  "title": "FTTH_FIB-Tool concept and implementation further requirements (Q1/25)",
+  "status": "Closed",
+  "description": "Description\nImplementation\nFurther requirements for the FIB (Fiber infrastructure build) tool, which should be realized in Q1/part will be descripted here:\ninterface to PreOrder@Cloud\n(details and open topics about interface requirements see https://wiki.telekom.de/display/B2BSOM/Schnittstelle+PreOrder+at+Cloud )\ninterface to POM (reuse and switch from FTTH Interims solution)\n(general information see https://wiki.telekom.de/pages/viewpage.action?pageId=2408757208 )\nfurther Usability of the FIB-GUI\nPlanning/preparation of retirement of \"FTTH Interimslösung Interessentenerfassung\" \nfinalization of FIB-Tool Excel-Import Sheet\nmigration of location data from Panda-DB to FIB-Tool area\nBusiness Analysis (done by Thomas H.)\ninterfaces to GIGA GS (to be defined)\nRealisation on GIGA-side is roughly planned for second year 2025, solution design should start beginning of 2025\npossible interface to SGrk Parkhaus (to be discussed and defined) => decision done, not in scope anymore\nclarification about needed HTN or similar information (e.g. \"Gestattung\") to find out, if interface to LandLord-Portal is needed",
+  "business_value": {},
+  "assignee": "Thomas Heider",
+  "priority": "",
+  "target_start": "2025-01-16",
+  "target_end": "2025-04-09",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "Concept FIB-Tool is available and logon via Panda microservices is possible",
+    "GUI functionality is similar to Panda location solution available",
+    "Button and functionality for manual upload of location data to POM is available",
+    "Button and functionality for manual update of marked location with PreOrder@Cloud date is available",
+    "...",
+    "all requested attributes, which currently available in TMF645, will be imported into the FIB-Tool übernommen\n(details see https://wiki.telekom.de/display/B2BSOM/Schnittstelle+PreOrder+at+Cloud)",
+    "when location data via Excel are imported into the FIB-Tool or when data in the GUI are added/corrected, an automatic update from PreOrder@Cloud will be done",
+    "location could be marked in the GUI and via button there is a manuell data update possible",
+    "if there is an location update from POM-interface belonging data records will be also automatically updated via PreOrder@cloud interface",
+    "...",
+    "location data can be uploaded via FIB-Tool Excelformat to POM",
+    "concept for POM reverse interface is connected to FIB Tool to get the results into FIB-DB",
+    "daily updates from POM will be marked / shown in the GUI",
+    "..."
+  ],
+  "components": [
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "DOM0204",
+    "FTTH_by_LE"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-22284",
+      "title": "SDN-22284",
+      "summary": "FIB: Usability Features",
+      "url": "https://jira.telekom.de/browse/SDN-22284",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-22448",
+      "title": "SDN-22448",
+      "summary": "FIB: Design_expand requirements (Q1/25)",
+      "url": "https://jira.telekom.de/browse/SDN-22448",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-22449",
+      "title": "SDN-22449",
+      "summary": "FIB: Implement Preorder@Cloud Interface",
+      "url": "https://jira.telekom.de/browse/SDN-22449",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-22868",
+      "title": "SDN-22868",
+      "summary": "[Creators] O2B Implementation - Integrate FIB Tool in PANDA workflow and data: General Communication",
+      "url": "https://jira.telekom.de/browse/SDN-22868",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-23262",
+      "title": "SDN-23262",
+      "summary": "FIB-Tool: O2B Integrate FIB Tool in PANDA workflow and data",
+      "url": "https://jira.telekom.de/browse/SDN-23262",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-23690",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-23690",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

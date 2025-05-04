@@ -1,0 +1,33 @@
+{
+  "key": "SDPD-371",
+  "issue_type": "Epic",
+  "title": "OtC - MIST SD LAN/WLAN - Exploration Simplification: Send and implementation of Hardware",
+  "status": "Closed",
+  "description": "Description\n Identify and explore impact of the architectural adaption for MIST LAN/WIFI (as worked out and explained in the architectural workshop/Tribe offsite workshops) on the respective process step ‘send & implementation of hardware’. Consider dependencies on other measures of the simplification program and align also with technical product management.\n   \n\nBusiness Scope:\nIdentify and explore impact of the architectural adaption for MIST LAN/WIFI (as worked out and explained in the architectural workshop/Tribe offsite workshops) on the respective process step ‘send & implementation of hardware’. Consider dependencies on other measures of the simplification program and align also with technical product management.",
+  "business_value": {},
+  "assignee": "Beata Kusnirikova (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Solution Release SD LAN/WIFI R1.0"
+  ],
+  "acceptance_criteria": [
+    "Necessary adaptions in the process and related workflows and tools are known, prioritizes and aligned with dependencies of other measures in simplification program to have foundation implementation in processes and also other hubs to start the implementation of the process impact with the goal to simplify the overall process to gain faster time to market incl. automation approach."
+  ],
+  "components": [],
+  "labels": [
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "SDX-Simplification and Automation CMO-FMO V12_Wo_Backup.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/1479319/SDX-Simplification%20and%20Automation%20CMO-FMO%20V12_Wo_Backup.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-06-29T18:41:07.000+02:00"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "key": "SDX-5684",
+  "issue_type": "Epic",
+  "title": "(SO) creating integration between NC and eVA - MIST and new SDWAN",
+  "status": "Closed",
+  "description": "Description\nNEW MIST alarms needs to be integrated to eVA\nNEW SDWAN alarms needs to be tracjked and integrated to eVA\n    ***********************************************\n  need to create interface connection between NC and eVA with emphasys on alarm correlation and automation also to make sure potential in NC is used.\nLEan as possible\nsyslog needs to be discussed with eVA\n  Stakeholders are : Marcus Thielemann, Frank Buijs // Barbara Küch \nEVA: Ralf Barlösius Contact on Tel-IT side / michael duras - head of engineering\n    As a customer, I want that Telekom identifies immediately, when my SD WAN service is faulty and takes proactive action so that my service is running smoothly. Therefore, alarms need to be send to the event management system so that incident tickets can be automatically created based on a set of rules and service works on the solution.\n  all updates designs and progress with documentation should be tracked:\nhttps://seu30.gdc-bln03.t-systems.com/confluence/display/SDE2E/eVA+integration\n    Features Details:\n•Defined alarms must be pushed via SYSLOG format from Netcracker to eVA\n•Alarm processing (avoid alarm duplication / make correlation) must be done by Netcracker\n•Netcracker must have a policy engine (to split between SN and eVA SYSLOG direction\n•Netcracker must have a Syslog automation towards eVA\n•Netcracker must be able to process and send the aligned alarms\n•Netcracker must have a poll for the new set of alarms\nDescription\nAs a customer, I want that Telekom identifies immediately, when my SD WAN service is faulty and takes proactive action so that my service is running smoothly. Therefore, alarms need to be send to the event management system so that incident tickets can be automatically created based on a set of rules and service works on the solution.\nFeatures Details:\nNC must be able to preprocess alarms from CSO Juniper to events that may result in incidents that can be sent to eVA\nNC must be able to send events to eVA in a way that eVA can understand and process\n  Use Cases:\nEvents (based on alarms from CSO Juniper) are sent (as defined) with enriched information to eVA\n  Pre-Conditions:\nDefinition of events\nJuniper CSO sends alarms to NetCracker\nAlarm definition for SD WAN service must be available for definition of event rules\n  Acceptance Criteria:\neVA is able to receive all defined alarms in the correct form NetCracker and is able to process these alarms to open incident tickets in eTTS\nPre-Conditions:\n•Align on data within alarms (based on service tree structure)\n•Align on type of alarms to be sent (with Operations – Norbert Csonka)\n•Discuss the exact Syslog tech structure\nconnection between SO and eVA\n  Business impact if delayed\nEvent management process can't be implemented\nPro-active incident management won't be possible\nIt won't be possible to proactively avoid downtimes or performance issues to the service\nIncidents will only be visible after service is impacted - only agzer customer raises the issue",
+  "business_value": {},
+  "assignee": "Péter Pallagi",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Release 1.1",
+    "PI6",
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "eVA is able to receive all defined alarms in the correct form NetCracker and is able to process these alarms to open incident tickets in eTTS",
+    "Options",
+    "CLOSED",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "Service Orchestrator",
+      "title": "Service Orchestrator "
+    }
+  ],
+  "labels": [
+    "PI7",
+    "SDX_external",
+    "SE_Feature"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Alarm&Monitoring_API_v1.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2567187/Alarm%26Monitoring_API_v1.pdf",
+      "mime_type": "application/pdf",
+      "size": "2.40 MB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "Alarm&Monitoring_API_v1-1.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2567186/Alarm%26Monitoring_API_v1-1.pdf",
+      "mime_type": "application/pdf",
+      "size": "2.40 MB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "AlarmMonitoring_API_v1 (002).pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2567188/AlarmMonitoring_API_v1%20%28002%29.pdf",
+      "mime_type": "application/pdf",
+      "size": "2.33 MB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "AW_ _Jira@TelIT_ Updates for SDLA-365_ Assurance TC Ops_ Interface Netcracker - eVA Eventmanagement.msg",
+      "url": "https://jira.telekom.de/secure/attachment/2567185/AW_%20_Jira%40TelIT_%20Updates%20for%20SDLA-365_%20Assurance%20TC%20Ops_%20Interface%20Netcracker%20-%20eVA%20Eventmanagement.msg",
+      "mime_type": "application/octet-stream",
+      "size": "236 kB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "Epic_Definition_InterfaceNC-eVA.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2567189/Epic_Definition_InterfaceNC-eVA.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "7.68 MB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "eSP_eVA_Probe-uniform_syslog-message-format.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2567193/eSP_eVA_Probe-uniform_syslog-message-format.pdf",
+      "mime_type": "application/pdf",
+      "size": "258 kB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "eSP_eVA_Probe-uniform_syslog-message-format-1.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2567192/eSP_eVA_Probe-uniform_syslog-message-format-1.pdf",
+      "mime_type": "application/pdf",
+      "size": "267 kB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "eVA_Alarmintegration_Checklists.docx",
+      "url": "https://jira.telekom.de/secure/attachment/2567195/eVA_Alarmintegration_Checklists.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "315 kB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "eVA_Alarmintegration_Checklists-1.docx",
+      "url": "https://jira.telekom.de/secure/attachment/2567194/eVA_Alarmintegration_Checklists-1.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "312 kB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "NC_Alarmdocumentation.docx",
+      "url": "https://jira.telekom.de/secure/attachment/2567190/NC_Alarmdocumentation.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "192 kB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    },
+    {
+      "filename": "WG_ Questions regarding NC-eVA interface.msg",
+      "url": "https://jira.telekom.de/secure/attachment/2567191/WG_%20Questions%20regarding%20NC-eVA%20interface.msg",
+      "mime_type": "application/octet-stream",
+      "size": "11.08 MB",
+      "date": "2022-06-07T12:12:10.000+02:00"
+    }
+  ]
+}

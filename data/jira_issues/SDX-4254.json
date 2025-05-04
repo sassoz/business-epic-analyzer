@@ -1,0 +1,40 @@
+{
+  "key": "SDX-4254",
+  "issue_type": "Epic",
+  "title": "SO Consistency Check MIST",
+  "status": "Closed",
+  "description": "Description\nFeature –  Enabler Exploration Consistency Check \nBenefit hypothesis – To figure out which changes in SN and CSO are congruent and not causing any mistakes in the network.  It only includes Analysis before implementing. After analysis Part it will be implemented.\n(Old Description) \nThe SDx project approach is that configuration information is entered in the ServiceNow portal and pushed down to CSO via Netcracker.\nIn the event that some changes are done directly in CSO, an event/alarm is generated and forwarded to the operational team.\nThis will help to identify inconsistencies in the system.\n  there is to understand how to react to such changes/inconsistencies.!!!!!!!!!!!!!!\n  Pure Polling from NetCracker to CSO and Synchronization between CSO and NetCracker.\n ___\nPreconditions/Dependencies\nNeed Operational Model before thinking about this\nNeed to know what synchronization mechanism we need to have in place?\nNeed to know what cannot be configured in SN so that we can configure in CSO. \n  Risks\n  Testing\nE2E Testing Required? Y\nTeam Testing sufficient? N\n  Acceptance Criteria\nAll the consistency checks have been provided\nidentified problems between the instances\nimplementation is not part of this feature - requirements for new feature are updated",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI6",
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "All the consistency checks have been provided",
+    "identified problems between the instances",
+    "implementation is not part of this feature - requirements for new feature are updated",
+    "Options",
+    "CLOSED",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

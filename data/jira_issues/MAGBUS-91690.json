@@ -1,0 +1,31 @@
+{
+  "key": "MAGBUS-91690",
+  "issue_type": "Epic",
+  "title": "Abbildung des VP2 als Individual innerhalb des TMF632",
+  "status": "Closed",
+  "description": "Description\nFür alle Mobilfunk-Referenzen, welche wir durch CDI erhalten werden wir den VP2 im MVP als Individual im TMF632 anlegen und an den existierenden Geschäftspartner referenzieren. Hierbei wird auf die bereits vorhandene Implementierung aufgebaut und entweder an das finale GP-Objekt von CDI verwiesen, oder an die GP-Hülle, welche wir eigenständig angelegt haben.\n\nBusiness Scope:\nIch als PO möchte dass wir den VP2 von Carmen als Individual innerhalb des TMF632 abbilden",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 24"
+  ],
+  "acceptance_criteria": [
+    "Der VP2 in Carmen wird als Individual im TMF632 angelegt",
+    "Das neu erzeugte Individual wird an den GP von CDI/SEP referenziert"
+  ],
+  "components": [
+    {
+      "code": "SEP-Platform",
+      "title": "SEP-Platform "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

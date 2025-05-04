@@ -1,0 +1,33 @@
+{
+  "key": "MAGBUS-98400",
+  "issue_type": "Epic",
+  "title": "Product Change Special Cases for Fixed Net Products",
+  "status": "In Progress",
+  "description": "Description\nThis epic collects edge cases that need to be implemented in order to improve stability and reduce the risk of errors.\nFlamingo soll für das neue Fiber-Portfolio nur die Produktwechsel  von BMP und zMP zulassen, die gemäß in PRIMA gepflegter Produktwechselbeziehung erlaubt sind. => MAGBUS-96008\nZur Veranschaulichung und mögliche Priorisierung der Umsetzung ist im Anhang eine Produktwechselmatrix PWM für alle neuen Business DSL/Glasfaser Start/Pro Produkte. Stand 15. Februar (PWM_GK_20240215.xlsx) beigefügt. Bei  dieser Unterlage gilt es zu beachten, dass die für den Wechsel von zMP auf zMP ein eigener Reiter existiert. => MAGBUS-96008\nIn https://wiki.telekom.de/x/obCGdQ ist beschrieben:\nMitnahmekenner: Wenn im neuen Produkt bestimmte Unterprodukte ebenfalls enthalten sind, so werden diese bereits bestehenden Unterprodukte übernommen und werden nicht neu angeboten.",
+  "business_value": {},
+  "assignee": "Gourie, Ashtar",
+  "priority": "",
+  "target_start": "2025-02-20",
+  "target_end": "2025-04-02",
+  "fix_versions": [
+    "PI 26",
+    "PI27"
+  ],
+  "acceptance_criteria": [
+    "Die Vertragslaufzeit braucht nicht berücksichtigt werden",
+    "..."
+  ],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,59 @@
+{
+  "key": "BEMABU-1927",
+  "issue_type": "Business Epic",
+  "title": "Zoom X TCMP Add-On Onboarding 2025",
+  "status": "In Progress",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür kleinere und mittlere Unternehmen sowie Reseller,\ndie Einzellizenzen bis hin zu 499 Lizenzen von Zoom X Produkten und Add-Ons benötigen.\nist die Bereitstellung eines Zoom X Portfolios im TCMP mit einer verbesserten UX\nwodurch die Vertriebsoberfläche erweitert wird und der Partnervertrieb neben Microsoft ein weiteres attraktives Angebot erhält\nso dass  die Reseller zusätzlich noch Zoom X Lizenzen im Self-Service für ihre Kunden buchen und provisionieren können\nund nicht in einem manuell aufwändigen Prozess über ZMKM angelegt werden müssen.\nDas Vorhaben  schafft die Möglichkeit, dass Zoom X massenmarktfähig bereitgestellt werden kann.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nTCMP\nTCMP-R DOM0201 Melanie Wirges  Sebastian Weik Für die Integration neuer APIs von Zoom muss AppDirect mit entwickeln.\n< ... >      \n< ... >      \n  BEO und ggf. Vertreter Christina, Brand Sven Warnecke \nSponsor/Fachseite Claudia Buhne\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nWeitere Add-ons, auf die Kunden bereits warten, sollen im TCMP onboarded werden. (Zoom X PowerPack; Common Area; Translation) Aktuell für Kunden publizierte, sowie neue Add-ons sollen ebenfalls im TCMP-R bereitgestellt werden.\nZoom stellt neue APIs bereit, die im Connector implementiert werden müssen, um die UX deutlich zu steigern und das Geschäft massenmarktfähiger zu gestalten.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Das Vorhaben schafft die Möglichkeit, dass Zoom X massenmarktfähig bereitgestellt werden kann."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Christina, Brand",
+  "priority": "",
+  "target_start": "2025-01-15",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Die Add-ons wurden in Produktion getestet und sind live im TCMP",
+    "Die neue API zur UX Steigerung (Emailadresse bereits für Zoom Basic Account in Nutzung und ist daher für Zoom X gesperrt) ist im Connector implementiert und eine bessere UX geschaffen."
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "Portfolio"
+  ],
+  "realized_by": [
+    {
+      "key": "BEMABU-2031",
+      "title": "BEMABU-2031",
+      "summary": "Onboarding of new Non-MSFT partner (incl. know-how transfer towards Nearshore)",
+      "url": "https://jira.telekom.de/browse/BEMABU-2031",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

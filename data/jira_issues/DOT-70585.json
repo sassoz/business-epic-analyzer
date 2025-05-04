@@ -1,0 +1,30 @@
+{
+  "key": "DOT-70585",
+  "issue_type": "Epic",
+  "title": "PCM: enabling GK addOns",
+  "status": "Closed",
+  "description": "Description\nFor B2B customer the following B2B products should be enabled:\nCompany Start\nCompany Pro\nBusiness DSL Start\nBusiness DSL Pro\nBusiness Glasfaser Start\nBusiness Glasfaser Pro\nAs these products might as well have addOns, the list of GK addOns have to be adjusted and the following addOns have to be removed from that list:\n  AddOn Material Number\nEntstörungsservice 8 Stunden 89711394",
+  "business_value": {},
+  "assignee": "Saigal, Avinav",
+  "priority": "",
+  "target_start": "2024-12-12",
+  "target_end": "2025-01-08",
+  "fix_versions": [
+    "MPP_25.1.2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Cap_Product_Catalogue",
+      "title": "Cap_Product_Catalogue "
+    },
+    {
+      "code": "Dom_Product",
+      "title": "Dom_Product "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

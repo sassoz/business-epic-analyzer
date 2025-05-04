@@ -1,0 +1,41 @@
+{
+  "key": "DATASAT-23953",
+  "issue_type": "Epic",
+  "title": "FCI: Casemanagement Service: Provide data to MagFoCMS-database",
+  "status": "Closed",
+  "description": "Description\nanalysis of EWS-database and the Tabular model\nconfigure TULE\nset up SFTP environment -> P&E\nETL processing / references\ncreate views for delivering data to Tabular\nHarvester-Information to be depoyed?\nArchivierungskonzept?\nInitial-Lieferung?\nTägliches Delta o. täglich full?",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2025-01-16",
+  "target_end": "2025-03-19",
+  "fix_versions": [
+    "2025_Q1"
+  ],
+  "acceptance_criteria": [
+    "TULE is configured",
+    "ETL is running",
+    "views are created",
+    "Tabular is triggered for processing data"
+  ],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "CMServ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "new_attributes.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4936479/new_attributes.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "36 kB",
+      "date": "2024-09-24T17:40:55.757+02:00"
+    }
+  ]
+}

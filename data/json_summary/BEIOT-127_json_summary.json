@@ -1,0 +1,52 @@
+{
+  "epicId": "BEIOT-127",
+  "title": "Vision - Unified Customer Touchpoint - UnifiedOrder2Cash",
+  "ziele": {
+    "gesamtziel": "Das Ziel des Business Epics ist die Konsolidierung der unterschiedlichen Billingsysteme und -kanäle für IoT-Kunden, die Verträge mit der DT IoT GmbH oder IoT-Produkte per TDG abschließen. Dadurch sollen Rechnungen ein einheitliches Layout erhalten und, wenn möglich, zusammengefasst werden, um eine erhöhte Transparenz für den Kunden über bestehende Verträge und Produkte zu schaffen. Das Ziel soll bis Q3_25 erreicht werden.",
+    "einzelziele": [
+      "Keine Informationen verfügbar"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Wiedererkennung und Transparenz vor Kunde."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Erhöhte Transparenz vor Kunde über bestehende Verträge mit der DT IoT GmbH bzw. deren Produkte über die TDG."
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEIOT-127",
+      "titel": "Vision - Unified Customer Touchpoint - UnifiedOrder2Cash",
+      "funktionalitäten": [
+        "Konsolidierung der unterschiedlichen Billingsysteme und -kanäle für IoT-Kunden.",
+        "Einheitliches Rechnungs-Layout und Zusammenfassung von Rechnungen, wenn möglich.",
+        "Erhöhte Transparenz für Kunden über bestehende Verträge und Produkte."
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Keine Informationen verfügbar"
+  ],
+  "domainsAndITApplications": [
+    "Keine Informationen verfügbar"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Keine Informationen verfügbar"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "Keine Informationen verfügbar",
+    "umsetzungsende": "Q3_25",
+    "fixVersions": [
+      "Q3_25"
+    ],
+    "meilensteine": []
+  }
+}

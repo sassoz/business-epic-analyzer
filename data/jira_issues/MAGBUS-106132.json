@@ -1,0 +1,23 @@
+{
+  "key": "MAGBUS-106132",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B/DOT: Easy B2B Products & Company Flex - Improvements for Fixed Net Product Handling",
+  "status": "Funnel",
+  "description": "Description\nThe objective of this portfolio epic is to enable the existing M-API integration to create change orders for complex B2B product portfolio (Company Flex).",
+  "business_value": {},
+  "assignee": "Timo Szillat",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "Enabler",
+    "Mapis4B2B"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

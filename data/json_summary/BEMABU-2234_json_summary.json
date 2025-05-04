@@ -1,0 +1,234 @@
+```json
+{
+  "epicId": "BEMABU-2234",
+  "title": "Produkt- und Plattformaktualisierungen CoFlex & MBC MM zur Umsatzsicherung - Q3/25",
+  "ziele": {
+    "gesamtziel": "Umsetzung von obligatorischen Produktpflegemaßnahmen, regelmäßigen Feature- und Produktupdates sowie notwendigen Maßnahmen zur Adaption von Veränderungen im CompanyFlex Ecosystem zur Sicherstellung der Markt- und Wettbewerbsfähigkeit des CompanyFlex bis zum 30.09.2025.",
+    "einzelziele": [
+      "Umsetzung der Kundenanforderungen an das Rufnummernmanagement (Rufnummernverlängerung auf 13 Stellen, Aufhebung Verdeckung)",
+      "Optimierung des Lizenzmanagements der BroadWorks Plattform zur Reduktion von Lizenzkosten",
+      "Systemintegration von Cisco Endgeräten (Cloud Awareness) für Cloud Features",
+      "Erweiterung der Adressbuchsynchronisation um Gruppe/Standort für CPBX 2.0",
+      "Implementierung von Anonymous Call Rejection für Company Flex SIP-Trunk",
+      "Listen-Import für das Number Picking Richtung UC Partner",
+      "Anpassung Storno und Terminverschiebung in C4",
+      "Wiederherstellung der E2E Testfähigkeit für CAS nach Abschaltung der Testplattform",
+      "Rückbau alter Schnittstellen für UC Partner-Anbindung",
+      "Neue Einstellung für spezielle VPN-Nutzung am Desktop-Client",
+      "Optimierung der Device-Provisionierung (Workplace specific DNS label)",
+      "Refactoring der BSP Classic UI mit vue.js",
+      "Verbesserung der Deployment-Automatisierung für Hulk",
+      "Interne C4-Optimierung zur Unterstützung höherer Auslastung",
+      "Rufnummernänderung für mehrere Arbeitsplätze"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Optimierung des Lizenzmanagements der BroadWorks Plattform zur Reduktion von Lizenzkosten und Sicherstellung der Markt- und Wettbewerbsfähigkeit des CompanyFlex"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Umsetzung der Kundenanforderungen an das Rufnummernmanagement, um wettbewerbsfähig zu bleiben und die Kundenbindung zu erhöhen"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "ECC-8832",
+      "titel": "Anonymous Call Rejection for Company Flex SIP-Trunk",
+      "funktionalitäten": [
+        "Ermöglichung für Company Flex SIP-Trunk Kunden, Anonymous Call Rejection ein- und auszuschalten",
+        "Erfüllung der Anforderungen gemäß § 15 Abs. 1 Satz 2 TTDSG",
+        "Implementierung eines Schalters im Portal unter 'SIP-Trunk -> Leistungsmerkmale -> Anrufe blockieren'"
+      ]
+    },
+    {
+      "id": "ECC-7664",
+      "titel": "CPBX Rufnummernverlängerung auf 13 Stellen",
+      "funktionalitäten": [
+        "Unterstützung von 13-stelligen Rufnummern für Administratoren",
+        "Anpassung der Rufnummernlänge im Dropdown-Menü",
+        "Erweiterung der Rufnummernblöcke (Dekaden) auf 13 Stellen",
+        "Korrekte Anzeige und Auswahl der 13-stelligen Nummern bei der Zuweisung zu Arbeitsplätzen oder Service-Usern"
+      ]
+    },
+    {
+      "id": "ECC-7915",
+      "titel": "Listen-Import für das Number Picking Richtung UC Partner",
+      "funktionalitäten": [
+        "Bulk-Upload von bestehenden Rufnummernplänen als CSV-Datei an UC-Partner",
+        "Unterstützung für UC-Partner MS Teams Operator Connect, Zoom und Webex Calling",
+        "Überprüfung der Rufnummern auf Gültigkeit und Verfügbarkeit",
+        "Anzeige der hochgeladenen Rufnummern in einer Tabelle, sortiert nach Rufnummernbereichen"
+      ]
+    },
+    {
+      "id": "ECC-6803",
+      "titel": "UC: Partner Anbindung: Rückbau der alten Strecken",
+      "funktionalitäten": [
+        "Entfernung alter Schnittstellen und Logik nach erfolgreicher Implementierung der neuen Lösung",
+        "Implementierung von Schaltern in allen Systemen für den Wechsel von der alten zur neuen Lösung",
+        "Beibehaltung der Portalteile bis zur vollständigen Umstellung auf die neue Lösung"
+      ]
+    },
+    {
+      "id": "ECC-8600",
+      "titel": "VPW: Anpassung Storno und Terminverschiebung C4",
+      "funktionalitäten": [
+        "Änderung des Verhaltens bei Stornierung für VPW in C4",
+        "Direkte Verarbeitung des Stornierungsauftrags nach Eintreffen der Nachricht",
+        "Unterstützung verschiedener Szenarien: Storno eines einzigen Komplements, Verschiebung eines einzigen Komplements, Storno nach Eintreffen beider Komplemente, Verschiebung nach Eintreffen beider Komplemente"
+      ]
+    },
+    {
+      "id": "ECC-8734",
+      "titel": "CAS: Restore E2E test capability for CAS",
+      "funktionalitäten": [
+        "Implementierung eines Simulators an der Schnittstelle (C4 - Zylinc) nach Abschaltung der CAS Testumgebung",
+        "Sicherstellung der Testfähigkeit der internen IT-Prozesse für das Zusatzpaket CAS",
+        "Beibehaltung der Belieferung von SMD durch C4"
+      ]
+    },
+    {
+      "id": "ECC-6868",
+      "titel": "CPBX 2.0 – Erweiterung der Adressbuchsynchronisation um Gruppe/Standort",
+      "funktionalitäten": [
+        "Provisionierung der Informationen für Gruppe/Standort in der CPBX 2.0",
+        "Ermöglichung der Nutzung von bis zu 30.000 Gruppenkontakten in der Cloud PBX 2.0",
+        "Übertragung der spEnterpriseGroupId bei Anlage und Änderung eines Benutzers"
+      ]
+    },
+    {
+      "id": "ECC-7665",
+      "titel": "CPBX Aufhebung Verdeckung",
+      "funktionalitäten": [
+        "Ermöglichung der Nutzung von Nummern 'hinter' zugewiesenen Nummern",
+        "Schaltbare Funktionalität in C4",
+        "Verfügbarkeit von x+n-langen Nummern, wenn eine x-lange Nummer zugewiesen ist",
+        "Korrekte Anzeige bei der Zuweisung von Nummern zu Arbeitsplätzen oder Service-Usern"
+      ]
+    },
+    {
+      "id": "ECC-7764",
+      "titel": "Neue Einstellung für spezielle VPN-Nutzung am Desktop-Client",
+      "funktionalitäten": [
+        "Erweiterung der Gerätepopulation mit einem neuen Attribut zur Steuerung des 'VPN' für jedes Geräteprofil",
+        "Implementierung eines Umschalters zur Aktivierung/Deaktivierung der VPN-Nutzung",
+        "Schaltbare Funktionalität (Pilotflag) im hpbx-Portal",
+        "Synchrone Anfrage zur Aktualisierung der Gerätekonfiguration bei Aktivierung/Deaktivierung"
+      ]
+    },
+    {
+      "id": "ECC-9030",
+      "titel": "CPBX Device provisioning change (Workplace specific DNS label)",
+      "funktionalitäten": [
+        "Festlegung von Geräte-CustomTags für neue Geräte vor der Zuweisung eines Geräteprofils zu einem Arbeitsplatz",
+        "Bereitstellung eines eDNS-Labels für Host und Gast bei Flex Seating",
+        "Generierung des CustomTag-Werts durch C4 einmalig für jeden Arbeitsplatz während der Arbeitsplatzerstellung",
+        "Migration aller bestehenden Geräte ohne Reset-Notwendigkeit"
+      ]
+    },
+    {
+      "id": "ECC-9176",
+      "titel": "BSP Classic: Refactoring new vue.js UI",
+      "funktionalitäten": [
+        "Implementierung von Code-Optimierungen in der neuen vue.js UI"
+      ]
+    },
+    {
+      "id": "ECC-9741",
+      "titel": "DevOps: Deployment Automation Improvement for Hulk - Step 2",
+      "funktionalitäten": [
+        "Erhöhung des Automatisierungsgrads des Deployments für das Produktionssystem von Hulk"
+      ]
+    },
+    {
+      "id": "ECC-9033",
+      "titel": "CPBX 2.0 - Skip hidden admin creation in BWKS",
+      "funktionalitäten": [
+        "Überspringen der Erstellung von versteckten Admin-Benutzern in BWKS zur Einsparung von Lizenzgebühren",
+        "Fortführung der Erstellung von Webex-Benutzern",
+        "Fortführung der Erstellung von E-Mail-Weiterleitungen"
+      ]
+    },
+    {
+      "id": "ECC-9792",
+      "titel": "C4 interne Optimierung zur Unterstützung höherer Auslastung - Step 2",
+      "funktionalitäten": [
+        "Optimierung des DWH-Bereichs",
+        "Verbesserung der Auftrags-Prozessierung zur Vermeidung von QueryTimeoutExceptions",
+        "Optimierung synchroner Anfragen zur Verbesserung der Antwortzeiten"
+      ]
+    },
+    {
+      "id": "ECC-6384",
+      "titel": "P+S: CFLX/CPBX: Rufnummernänderung für mehrere Arbeitsplätze",
+      "funktionalitäten": [
+        "Implementierung einer neuen Funktion 'Mehrfach-Rufnummernänderung' in der Expertenansicht",
+        "Auswahl von Arbeitsplätzen über Suche nach Vorname, Nachname und Rufnummer sowie Filterung nach Gruppe/Standorten",
+        "Unterstützung von bis zu 100 Arbeitsplätzen pro Auftrag",
+        "Durchführung der Änderung als Order mit Bestätigungsdialog"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Erweiterung des Company Flex Produktes um unten stehende Epics",
+    "neue Funktionen können im BSP gebucht und Konfiguriert werden",
+    "Aus BSP bzw. Konfig-Portal wird C4, Technik und STEAM angesteuert"
+  ],
+  "domainsAndITApplications": [
+    "C4",
+    "BSP",
+    "STEAM",
+    "BWKS",
+    "OLAF-UC",
+    "SMD",
+    "Hulk",
+    "BroadWorks"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit zu Cisco-Systemen für die Cloud Awareness-Funktionalität",
+    "Abhängigkeit zu UC-Partnern (MS Teams, Zoom, Webex) für die Number Picking-Funktionalität",
+    "Risiko bei der Migration bestehender Geräte für die Device Provisioning-Änderung (ECC-9030)",
+    "Risiko bei der Optimierung des C4-Systems (ECC-9792), da Änderungen an kritischen Komponenten vorgenommen werden",
+    "Zeitliche Diskrepanz: Einige Epics haben bereits Starttermine in Q2/2025, während das Business Epic für Q3/2025 geplant ist",
+    "Nach Abschaltung der CAS Testumgebung ist keine vollständige E2E-Testfähigkeit mehr gegeben, Fehleranalyse nur in Produktion möglich"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": ["Q3_25"],
+    "meilensteine": [
+      {
+        "id": "ECC-7664",
+        "beschreibung": "CPBX Rufnummernverlängerung auf 13 Stellen",
+        "zeitraum": "2025-06-06 bis 2025-06-25"
+      },
+      {
+        "id": "ECC-7915",
+        "beschreibung": "Listen-Import für das Number Picking Richtung UC Partner",
+        "zeitraum": "Start am 2025-04-14"
+      },
+      {
+        "id": "ECC-8832",
+        "beschreibung": "Anonymous Call Rejection for Company Flex SIP-Trunk",
+        "zeitraum": "Start am 2025-04-28"
+      },
+      {
+        "id": "ECC-9030",
+        "beschreibung": "CPBX Device provisioning change (Workplace specific DNS label)",
+        "zeitraum": "Start am 2025-05-26"
+      },
+      {
+        "id": "ECC-6384",
+        "beschreibung": "P+S: CFLX/CPBX: Rufnummernänderung für mehrere Arbeitsplätze",
+        "zeitraum": "Start am 2025-07-03"
+      }
+    ]
+  }
+}
+```

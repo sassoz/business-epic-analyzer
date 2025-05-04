@@ -1,0 +1,28 @@
+{
+  "key": "ADCL-11327",
+  "issue_type": "Epic",
+  "title": "Extend available partner information",
+  "status": "Closed",
+  "description": "Description\nIntegration with O3 POM shall be improved in several ways. Due to inconsistencies in the O3 POM API orders partly can't be accepted by POT. As result such orders are not available for POT consumers.",
+  "business_value": {},
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "2024-10-17",
+  "target_end": "2024-12-18",
+  "fix_versions": [
+    "PI 26"
+  ],
+  "acceptance_criteria": [
+    "Invalid O3 orders are accepted by POT",
+    "O3 POM orders can be created from ProductOrderStateChangeEvents"
+  ],
+  "components": [],
+  "labels": [
+    "PI26",
+    "POT",
+    "PlanChangePI26"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

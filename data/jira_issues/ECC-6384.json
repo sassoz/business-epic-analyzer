@@ -1,0 +1,40 @@
+{
+  "key": "ECC-6384",
+  "issue_type": "Epic",
+  "title": "P+S: CFLX/CPBX: Rufnummernänderung für mehrere Arbeitsplätze",
+  "status": "Waiting",
+  "description": "Description\nUserStory\n Als Admin mit bestimmten Rechten",
+  "business_value": {},
+  "assignee": "Etscheid Andreas",
+  "priority": "",
+  "target_start": "2025-07-03",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Ein WBV Schalter ist vorzusehen",
+    "In der Expertenansicht soll die neue Funktion \"Mehrfach-Rufnummernänderung\" unterhalb von \"Arbeitsplätze verwalten\" zur verfügung stehen",
+    "Es soll eine Auswahl an Arbeitsplätzen geben für die, die Rufnummernänderung erfolgen soll.",
+    "Die Auswahl kann über eine Suche nach Vorname, Nachname und der Rufnummer erfolgen. Neben der Suche kann über eine Dropdown nach Gruppe/Standorten gefiltert werden.",
+    "Bei Auswahl eines Arbeitsplatzes wird der Vor- und Nachname, sowie die aktuelle Rufnummer angezeigt.",
+    "Es wird ein Feld zur Auswahl der neuen Rufnummer angeboten. Dazu wird der Rufnummernauswahl Dialog angezeigt.",
+    "Bis zu 100 Arbeitsplätze können hier für einen Auftrag ausgewählt werden.",
+    "Die Änderung erfolgt als Order.",
+    "Nach Abschicken der Order wird ein Popup angezeigt."
+  ],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    },
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    }
+  ],
+  "labels": [
+    "WBV-Relevanz"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

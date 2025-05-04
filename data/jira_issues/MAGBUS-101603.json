@@ -1,0 +1,22 @@
+{
+  "key": "MAGBUS-101603",
+  "issue_type": "Epic",
+  "title": "SeCeIT Integration pt I: Part for Team IBIS",
+  "status": "Closed",
+  "description": "Description\nAim is to terminate the obligation to select the right provisioning path by integrating the selection logic into the configurator.\nOffers for all hardware and services in every configurator shall work according to the specific rules.\nThe provisioning path selection will be made when handing over the configured product to the shopping cart.\nFor preparation of the main configurators the four tiles for accessoires will be transformed first.\nThese are \"Hardware Zubehör\", \"Headsets\", \"IP Phones\" and \"Router\".\nWe will start with an exploration for one of them and then four implementations will follow.\nAfter this preparation step the main configurators will be transformed in the following order:\nCompany Access symmetrisch\nCompany Start\nCompany Pro\nBusiness Start Pro\nBaustellenanschluss\nCompany EINS\nCompany Flex\nEach one of them will have an exploration and an implementation story afterwards.\nFor number 2-5 there are three accessoires configurator which leads to the assumption of being the same.",
+  "business_value": {},
+  "assignee": "Dirk Berthold",
+  "priority": "",
+  "target_start": "2025-02-20",
+  "target_end": "2025-04-02",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_CPQ",
+    "MB_SCITI1"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

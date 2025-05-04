@@ -1,0 +1,44 @@
+{
+  "key": "MAGBUS-87226",
+  "issue_type": "Epic",
+  "title": "[NGMobile][MOST] Development & Delivery of Most Booked Tariffs Recommendation Solution",
+  "status": "Closed",
+  "description": "Description\nDescription: This epic involves the creation and deployment of a recommendation system that dynamically showcases the most booked tariffs based on the current customer inventory. The solution will focus on eco tariffs, ensuring environmentally friendly options are prioritized. The system will involve filtering and ordering mechanisms to provide customers with the most relevant tariff options. Additional characteristics will be integrated to enhance the recommendation flow, ensuring customers receive tailored suggestions without the inclusion of hardware options.\nBusiness Value: By providing customers with tailored tariff recommendations, the solution enhances user satisfaction and engagement. The focus on eco tariffs aligns with sustainability goals and reinforces brand commitment to environmentally responsible options. Additionally, the solution supports increased conversion rates by offering relevant and appealing choices based on customer preferences, ultimately driving revenue growth and customer loyalty.\nAcceptance Criteria:\nThe recommendation system accurately identifies and displays the most booked tariffs for customers.\nThe whole inventory is considered.\nEco tariffs are prioritized and showcased within the recommendation flow.\nFiltering and ordering mechanisms are implemented to ensure relevance and efficiency.\nAdditional characteristics are integrated to enhance the recommendation process.\nPotentially Open:\nCan it be made more performant \nAre we counting correctly",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "The recommendation system accurately identifies and displays the most booked tariffs for customers.",
+    "The whole inventory is considered.",
+    "Eco tariffs are prioritized and showcased within the recommendation flow.",
+    "Filtering and ordering mechanisms are implemented to ensure relevance and efficiency.",
+    "Additional characteristics are integrated to enhance the recommendation process.",
+    "Options",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "MB_Phoenix",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

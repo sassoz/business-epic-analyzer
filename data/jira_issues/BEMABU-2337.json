@@ -1,0 +1,59 @@
+{
+  "key": "BEMABU-2337",
+  "issue_type": "Business Epic",
+  "title": "Mehrgewerke Angebotserstellung im Solution Business - Budget-Preis Kalkulations-Tool",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür die Vertriebsmitarbeiter Large Enterprise (Fokus liegt auf den Rollen Pre-Sales, Fachvertriebe und Deal-Manager, Delivery/SBU tbc)\ndie heute zur Ermittlung eines Budget-Preises für Mehrgewerke div. Tools bedienen bzw. Zulieferungen von verschiedenen Gewerken anfordern müssen\nist eine einfachere, direkte Budget-Preis-Kalkulation mit der Möglichkeit zur Übernahme in ein Angebot erforderlich\nwodurch sich die zeitliche und auch personelle Aufwände reduzieren, \nso dass die Zeit und der manuelle Aufwand für die Budget-Preis-Ermittlung deutlich reduziert und das Pricing vereinfacht wird, die Budget-Preis-Kalkulation mit ihren Komponenten als Grundgerüst in ein Angebot übernommen werden kann und damit die Nutzerzufriedenheit mit dem Angebotsprozess steigt\nund nicht weiter zeitraubende manuelle Workarounds zur Budget-Preis-Kalkulation und der darauf basierenden Angebotserstellung genutzt werden müssen.\n<Ggf. noch charakterisierende Eigenschäften ergänzen. Ggf. Einordnung in ein Zielbild (Business Initiative) geben.>\nArchitekturale Vorgabe: SAP CPQ / Microservice / Magenta CPQ\nErster Blueprint Company Sase Baukasten v1.0.xlsm \nTool soll mit weiteren Blueprints erweitert werden können\nPreise der benötigten Komponenten in Tabellen hinterlegt\nAktualisierung per Hand / Upload später Anbindung an preishaltende Systeme vorsehen\nRechen- und Konfigurationslogik pro Blueprint im Tool hinterlegt\nAuf Basis der Budget-Preis-Kalkulation kann Angebotsgerüst in Angebotstool generiert werden\nLaut Budget-Preis-Kalkulationstool benötigte Komponenten werden als \"Stubs\" im Angebot mit allen bisher bekannten Parametern im Angebotstool angelegt, auf denen dann weiter gearbeitet werden kann\nStufe 1: Standalone Tool\nOffen: Wie erfolgt die Produkt- / Preispflege?\nEinfache Abhängigkeiten zwischen den Produkten sind umgesetzt\nStufe 2: \nStruktur für Angebots-Bausteine wird an PANDA Warenkorb übergeben \nStufe 3: Übergang zu PANDA\nBereitstellung der Daten zur Übernahme ins integrierte Angebot\nVerarbeitung siehe BEMABU-2339:\nDaten aus dem Budget-Angebot werden in hinterlegt\nfür in PANDA bekannte Produkte\nAnlegen des Produktes im Warenkorb\nSites müssen vom Nutzer hinzugefügt werden\nStubs für unbekannte Produkte\nKeine Übergabe der Daten an die externen Konfiguratoren / Systeme\nAnfrage stellen \nStufe 4: Integration der anderen Konfiguratoren in PANDA - out of scope\n  Rahmenbedingungen\nIn Scope \n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nAbhängig von ** architekturaler Vorgabe, wie das Tool umzusetzen ist.\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nPANDA DOM0204 Angelo Pietra \nPatricia Glöß \nHendrik Charchulla \nJupitz, Carsten  \n< ... > DOM.... <verwende \"@Vorname Nachname\">  \n< ... > DOM.... <verwende \"@Vorname Nachname\">  \n  BEO und ggf. Vertreter Hendrik Charchulla \nSponsor/Fachseite Markus Hellmold Thomas Claßen\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "die zeitliche und auch personelle Aufwände reduzieren, so dass die Zeit und der manuelle Aufwand für die Budget-Preis-Ermittlung deutlich reduziert und das Pricing vereinfacht wird",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "Risiko Minimierung",
+      "strat_enablement": "Strat. Enablement",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Hendrik Charchulla",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Eine schnelle Ermittlung von Budgetpreisen von ENS-Blueprints (Overlay, Underlay, Security, Inhouse) durch Nicht-Experten (z.B. Deal-Manager) ist möglich.",
+    "Die Budget-Preis-Kalkulation unterstützt in der Herstellung eines vollständigen und konsistenten Angebots (zB Checkliste, Plausibilitätsprüfung).",
+    "Der Kalkulator kann einfach und schnell in den bestehenden Workflow der relevanten Rollen (reg. Fachvertrieb ENS, Presales ENS) in MagentaForce und Panda eingebunden werden.",
+    "EinBudgetpreis-Vorhabens kann in ein Lösungsvorhaben umgewandelt werden.",
+    "Es gibt eine architekturale Vorgabe, wie das Tool umzusetzen ist."
+  ],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Company Sase Baukasten v1.0.xlsm",
+      "url": "https://jira.telekom.de/secure/attachment/5577979/Company%20Sase%20Baukasten%20v1.0.xlsm",
+      "mime_type": "application/vnd.ms-excel.sheet.macroEnabled.12",
+      "size": "92 kB",
+      "date": "2025-04-04T15:21:36.653+02:00"
+    },
+    {
+      "filename": "image-2025-04-11-10-17-11-317.png",
+      "url": "https://jira.telekom.de/secure/attachment/5601357/image-2025-04-11-10-17-11-317.png",
+      "mime_type": "image/png",
+      "size": "57 kB",
+      "date": "2025-04-11T10:17:11.419+02:00"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-100137",
+  "issue_type": "Epic",
+  "title": "MF: oPIM BVGK & ALMVB für MagentaForce",
+  "status": "Closed",
+  "description": "Description\nAls MF Enduser\nmöchte ich dass die vorhandene Tabelle \"Festnetz Bestände für Kundennummer\" mit Übertragungswege (Ü-Wege)- und HW Endgerät-Info erweitert wird (für jeden Produkt)\ndamit wir sehen können,\nwelche Business Access Produkt hat der Kunde, wann wurde Produkt angeschaltet, Kündigungsperiode, und wie viel sind die Zahlungen\nund \nwelche Endgeräte wurden dafür installiert.\nSo können wir besser entscheiden welche weitere / andere Produkte können dem Kunde weiter empfohlen werden, wann und zu welchem Prise.\nZu Übertragungsweg gehören die Business Access Transport inklusive Baugruppe, Netzwerkport, Clientports. Information über Ü-wege wird in Bestandsverwaltungssystem-Geschäftskunden (BVGK) gespeichert.\nALMV-B (Auftragslenkung Marketing und Vertrieb) Service provides HW Info about Hardware products, like routers, hardware firewalls, telephone equipment. Communication with ALMV-B is carried out through TIMB-adapter (Technische Infrastruktur Messaging Backbone).",
+  "business_value": {},
+  "assignee": "Eugenia Hornung",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27",
+    "MF 4.400"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

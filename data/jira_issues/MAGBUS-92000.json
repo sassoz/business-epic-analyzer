@@ -1,0 +1,134 @@
+{
+  "key": "MAGBUS-92000",
+  "issue_type": "Portfolio Epic",
+  "title": "FTTH: GGS Storno aus EOS (MVP2)",
+  "status": "Closed",
+  "description": "Description\n Story\nAls EOS Nutzer\nmöchte ich GGS Teilaufträge in EOS stornieren können, \num dafür nicht ein Nimbus Ticket oder ähnliches in Richtung GGS einstellen zu müssen.\n   Fragen / Hinweise:\nSequenzdiagramm: https://wiki.telekom.de/pages/viewpage.action?spaceKey=MBFY&title=Cancellation+Processes+FTTH\nUseCases:\nDer Infrastruktur Bauauftrag wurde in EOS noch NICHT vervollständigt und der Kunde wünscht bei der Durchsprache im A1 Anruf einen Storno - Hier ist bereits jetzt ein „verwerfen“ des Auftrags in EOS möglich \nDer Infrastruktur Bauauftrag wurde in EOS schon vervollständigt und der Kunde wünscht Tage/Wochen später eine nachträgliche Stornierung – Die gewünschte Stornierung muss hier jetzt im Frontend (EOS) gestartet werden und über die ganze Kette bis ggs weitergegeben werden und das „Abräumen“ des Auftrags bewirken - aus meiner Sicht ein höherer Aufwand für die ganze Kette und der UseCase, für den wir zum FTTH Start den von euch beschriebenen Workarround härten sollten:\nSchreibrechte für eingeschränkte Nutzergruppe auf IBT zum Stornieren der Aufträge aus MaBu.\nFür die Storno, muss in EOS eine Storno Grund ausgewählt werden. Dieser wird an den O3 gesendet. \n  Liste der Stornogründe aus der IBT Schnittstelle: \nAREA_CANCELED,\nBULK_PRODUCTION,\nCUSTOMER_CANCELLATION,\nCUSTOMER_NOT_REACHABLE_CANCELLATION,\nDISTRIBUTION_POINT_CHANGE,\nDUPLICATE_ORDER,\nFTTH_TO_FTTB_CANCELLATION,\nFORCE_MAJEURE_CANCELLATION,\nINCORRECT_OWNER_DATA,\nNO_OWNERS_AGREEMENT_RESPONSE_CANCELLATION,\nNO_OWNERS_AGREEMENT_RESPONSE_NE4_CANCELLATION,\nOWNER_EXPANSION_REJECTION,\nOWNER_EXPLORATION_REJECTION,\nOWNER_NOT_REACHABLE_CANCELLATION,\nPREVENTION_OF_CONSTRUCTION_CANCELLATION,\nTECHNICAL_CANCELLATION,\nWAITING_REASON,\nWHOLEBUY_CARRIER_CANCELLATION\nHier die Liste der Stornogründe, die in EOS auswählbar sein sollen: \nKundenwunsch: Ablehnung Bauarbeiten \nKundenwunsch: Verzug Lieferung\nKundenwunsch: Falschberatung \nKundenwunsch: FTTH zu FTTB \nKundenwunsch: Stornierung Anbieterwechsel \nKundenwunsch: Sonstiges\nProzessfehler: Storno & Neueinstellung\nProzessfehler. Auftrags-Dublette \nProzessfehler: Sonstiges\nNacharbeit: Keine Eigentümerdaten \nNacharbeit: Falsche Eigentümerdaten \nNacharbeit: Sonstiges \n  Problemstellung (Problem Statement)\nWie ist der heutige Prozess/Ablauf? Welche Einschränkungen/Probleme gibt es? Was läuft suboptimal? Warum ist die Änderung/ Neuerung mit der Anforderung notwendig?\nFachlicher Lösungswunsch (Feature Hypothese)\nWas sind die MINIMAL-Anforderungen an die Lösung? Was konkret ist der Umfang/Inhalt der anzustrebenden Lösung innerhalb des nächsten PI?\nWichtige Fachexperten (Key subject matter experts)\n...\nWie sieht der Prozess heute aus? Wie sieht der Prozess künftig aus?\ngrafische Prozessdarstellung Vorher Nachher\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nUseCases/Testcases \nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\nWichtige Ansprechpartner\n        ",
+  "business_value": {},
+  "assignee": "Josef Berkemeier",
+  "priority": "",
+  "target_start": "2024-09-26",
+  "target_end": "2025-04-03",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "Hier ist bereits jetzt ein „verwerfen“ des Auftrags in EOS möglich\nweitere Teilaufträge werden nach dem Verwerfen des GGS Teilauftrags in EOS angezeigt bzw. (wenn keine passende Leitung verfügbar ist) erfolgt die Aussteuerung an die IRPP\nder Anwender hat in EOS die Möglichkeit diese Teilaufträge ebenfalls zu verwerfen oder zu vervollständigen",
+    "Hier ist bereits jetzt ein „verwerfen“ des Auftrags in EOS möglich",
+    "weitere Teilaufträge werden nach dem Verwerfen des GGS Teilauftrags in EOS angezeigt bzw. (wenn keine passende Leitung verfügbar ist) erfolgt die Aussteuerung an die IRPP",
+    "der Anwender hat in EOS die Möglichkeit diese Teilaufträge ebenfalls zu verwerfen oder zu vervollständigen",
+    "In EOS gibts einen Button, um diesen ggs Teilauftrag stornieren zu können",
+    "Storno kann in jedem Status erfolgen, außer wenn schon fertig gebaut",
+    "Ein Storno ist unwiderruflich",
+    "Zudem kann ein Stornierungsgrund ausgewählt werden -  Welche gibts bei ggs? @Josef.Berkemeier",
+    "O3 übergibt diese Stronierung inklusive des Grunds an GGS",
+    "In EOS wird der Storno Status und der Grund angezeigt",
+    "wie bei 1.: \nweitere Teilaufträge werden nach dem Verwerfen des GGS Teilauftrags in EOS angezeigt - geht das technisch, obwohl der Glas Anschluss nicht gebaut wurde und die Leitungsverfügbarkeit auf dem Kupfer Anschluss läuft? - falls nicht dann müssen die Produkte manuell in den Produktionsstraßen erfasst werden\nder Anwender hat in EOS die Möglichkeit diese Teilaufträge ebenfalls zu verwerfen oder zu vervollständigen",
+    "weitere Teilaufträge werden nach dem Verwerfen des GGS Teilauftrags in EOS angezeigt - geht das technisch, obwohl der Glas Anschluss nicht gebaut wurde und die Leitungsverfügbarkeit auf dem Kupfer Anschluss läuft? - falls nicht dann müssen die Produkte manuell in den Produktionsstraßen erfasst werden",
+    "der Anwender hat in EOS die Möglichkeit diese Teilaufträge ebenfalls zu verwerfen oder zu vervollständigen"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    }
+  ],
+  "labels": [
+    "1.Sprint",
+    "BB-FTTH",
+    "DigiHub_DOM",
+    "EOS",
+    "FTTH",
+    "GK",
+    "GK-FTTH",
+    "GK-FTTH-EOS",
+    "PI27",
+    "VGK_Josef"
+  ],
+  "realized_by": [
+    {
+      "key": "EOS-6738",
+      "title": "EOS-6738",
+      "summary": "EOS: Storno eines GGS-Auftrags aus EOS heraus / Cancellation of a GGS order from EOS - Part 2",
+      "url": "https://jira.telekom.de/browse/EOS-6738",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-9584",
+      "title": "ADCL-9584",
+      "summary": "Build B2B Fiber/FTTH GGS infrastructure order cancellation coming from EOS during GIGA construction process",
+      "url": "https://jira.telekom.de/browse/ADCL-9584",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-9716",
+      "title": "ADCL-9716",
+      "summary": "Introduction of a new Cancellation Order Operation in O3 O-POM",
+      "url": "https://jira.telekom.de/browse/ADCL-9716",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-10551",
+      "title": "ADCL-10551",
+      "summary": "E2E implementation and go-live of B2B Fiber/FTTH GGS infrastructure order cancellation coming from EOS during GIGA construction process",
+      "url": "https://jira.telekom.de/browse/ADCL-10551",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "EOS-6632",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/EOS-6632",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2024-04-15 08_30_56-Stornofelder - Transparenz - Nachricht (HTML).png",
+      "url": "https://jira.telekom.de/secure/attachment/4463068/2024-04-15%2008_30_56-Stornofelder%20-%20Transparenz%20-%20Nachricht%20%28HTML%29.png",
+      "mime_type": "image/png",
+      "size": "65 kB",
+      "date": "2024-04-15T08:47:59.162+02:00"
+    },
+    {
+      "filename": "2024-04-15 08_32_44-Stornofelder - Transparenz - Nachricht (HTML).png",
+      "url": "https://jira.telekom.de/secure/attachment/4463066/2024-04-15%2008_32_44-Stornofelder%20-%20Transparenz%20-%20Nachricht%20%28HTML%29.png",
+      "mime_type": "image/png",
+      "size": "70 kB",
+      "date": "2024-04-15T08:47:51.831+02:00"
+    },
+    {
+      "filename": "2024-04-15 08_33_55-Stornofelder - Transparenz - Nachricht (HTML).png",
+      "url": "https://jira.telekom.de/secure/attachment/4463069/2024-04-15%2008_33_55-Stornofelder%20-%20Transparenz%20-%20Nachricht%20%28HTML%29.png",
+      "mime_type": "image/png",
+      "size": "90 kB",
+      "date": "2024-04-15T08:48:27.143+02:00"
+    },
+    {
+      "filename": "2024-04-15 08_35_13-Stornofelder - Transparenz - Nachricht (HTML).png",
+      "url": "https://jira.telekom.de/secure/attachment/4463067/2024-04-15%2008_35_13-Stornofelder%20-%20Transparenz%20-%20Nachricht%20%28HTML%29.png",
+      "mime_type": "image/png",
+      "size": "107 kB",
+      "date": "2024-04-15T08:47:56.453+02:00"
+    },
+    {
+      "filename": "20240419_MaBu generische Darstellung_abgestimmt.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4487235/20240419_MaBu%20generische%20Darstellung_abgestimmt.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "5.24 MB",
+      "date": "2024-04-22T15:11:44.938+02:00"
+    },
+    {
+      "filename": "Screenshot_Stornoansicht_Traning_inkl.Stornogründe.png",
+      "url": "https://jira.telekom.de/secure/attachment/4467694/Screenshot_Stornoansicht_Traning_inkl.Stornogr%C3%BCnde.png",
+      "mime_type": "image/png",
+      "size": "96 kB",
+      "date": "2024-04-16T09:45:21.252+02:00"
+    }
+  ]
+}

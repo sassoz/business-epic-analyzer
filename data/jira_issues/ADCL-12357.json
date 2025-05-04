@@ -1,0 +1,54 @@
+{
+  "key": "ADCL-12357",
+  "issue_type": "Epic",
+  "title": "Implement IRRP eMail requirements for Inhouse/SeCe-IT relocation and SLA after-market sales orders",
+  "status": "Backlog",
+  "description": "Description\nProcess information:\nRequirements:\nIRRP-eMail texts for Inhouse related relocation orders must be standardized for Inhouse and Voice related products and orders\nIRRP-eMail texts for Inhouse related relocation orders must be designed, implemented, tested and deployed to Production\nIRRP-eMail texts for Inhouse related SLA after-market sales orders must be designed, implemented, tested and deployed to Production\nLink for Documentation in Wiki:\nhttps://wiki.telekom.de/display/MBFY/SECEIT+Umzug+%2C+SLA+Nachvermarktung\nTarget process (in progress):\n  Useful links and requirements from PI26:\n...\nResources:\nFlamingo:\nSimon Keck (PM)\nAshtar Siegle (PO)\nDirk Berthold (PO)\nSimon Köppel (BA/Fachexperten)\nMartin Wendler (Fachseite & Auftragsübertragung)\nThorsten Gansen (Testing)\nMareen Jarick (Testing)\nKarim Azzaoui (Architekt/BA)\nStefan Fischer (Architekt)\nMBSP@FTTH:\nPO 360 Degrees/Portal: Matthias Lehmann\nBA 360 Degrees/Portal: Frank Gehlhaar\nBEO: Thorsten Hillemacher\nPO Team Comet (Cart/Checkout/POT): Andrea Öder\nBA Team Comet (Cart/Checkout/POT): Peter Max Messelken\nBA Team Comet (Cart/Checkout/POT): Stefan Wilkes\nPO GSP/Offer Preparation: Holger Peters\nBA GSP/Offer Preparation: Anil Kilickaplan\nFiber Deployment/GGS:\nTeam Dumbledore for Giga interfaces, incl. milestones, etc.:\nAndre Meyer (PO)\nArmela Memeti (BA)\nTeam Moon for FTTH/fiber availability checks:\nJürgen Kirch (PO)\nMagenta Force:\nBoban Bekic (PO)\nJürgen Brunner (BA)\nMatthias Johannes Hoffmann (BA/Architect)",
+  "business_value": {},
+  "assignee": "Heinz-Gerd Bendels",
+  "priority": "",
+  "target_start": "2025-04-25",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "business requirements understood",
+    "as is process understood",
+    "target process defined",
+    "target process agreed",
+    "migration roadmap agreed",
+    "implementation user stories are described",
+    "user stories implemented, tested and accepted in CIT2",
+    "solution is deployed with feature toggle (header flag processing engine \"remote\") in PROD"
+  ],
+  "components": [],
+  "labels": [
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Sequence Diagram 3  Finish FTTH (Cancelation; IRRP; Change existing Contracts ... for PI#26.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5501348/Sequence%20Diagram%203%20%20Finish%20FTTH%20%28Cancelation%3B%20IRRP%3B%20Change%20existing%20Contracts%20...%20for%20PI%2326.msg",
+      "mime_type": "application/octet-stream",
+      "size": "886 kB",
+      "date": "2025-03-14T11:13:51.718+01:00"
+    },
+    {
+      "filename": "WG Zusammenfassung der Ergebnisse - IRRP-Mail Änderungen im Zuge AnpassungNeueinführung GF in Flamingo.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5501349/WG%20Zusammenfassung%20der%20Ergebnisse%20-%20IRRP-Mail%20%C3%84nderungen%20im%20Zuge%20AnpassungNeueinf%C3%BChrung%20GF%20in%20Flamingo.msg",
+      "mime_type": "application/octet-stream",
+      "size": "275 kB",
+      "date": "2025-03-14T11:13:51.741+01:00"
+    },
+    {
+      "filename": "Zusammenfassung der Ergebnisse - IRRP-Mail Änderungen im Zuge Anpassung_Neueinführung GF in Flamingo.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5501350/Zusammenfassung%20der%20Ergebnisse%20-%20IRRP-Mail%20%C3%84nderungen%20im%20Zuge%20Anpassung_Neueinf%C3%BChrung%20GF%20in%20Flamingo.msg",
+      "mime_type": "application/octet-stream",
+      "size": "308 kB",
+      "date": "2025-03-14T11:13:51.752+01:00"
+    }
+  ]
+}

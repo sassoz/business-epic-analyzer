@@ -1,0 +1,30 @@
+{
+  "key": "SDN-23065",
+  "issue_type": "Epic",
+  "title": "[SysNow] Preparation of Interfaces needed for Q1",
+  "status": "Closed",
+  "description": "Description\nThe stories for upcoming interfaces in Q1/25 are collected here. These stories will be created in advance before upcoming PIP, so the dev teams can grab them during the PI planning. The related stories for system team will be added to Q4/24 to prepare mockups so they are ready if the next PI starts. In this way the dev teams can immediately start development without waiting for interface ramp up.\n  Interfaces to be expected in 2025:\nQ1:\nWMS-TK (Brainstormers), -> Need of Mockup\nbeyond Q1:\nDigiOSS (Spiderpigs)\nWOMBAT production (AP-Vengers)\nFIB TOOL (PANDA teams, Mars+)\n  To check if in our scope: (ask Heinrich Vlaminck )\nIPA \nSputnik \nKreitenmeyer, Andreas  check with DevTeams about needs in Q1\n\nBusiness Scope:\nCollector for all stories regarding interfaces which will be developed in Q1",
+  "business_value": {},
+  "assignee": "Kreitenmeyer, Andreas",
+  "priority": "",
+  "target_start": "2025-01-16",
+  "target_end": "2025-03-05",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "Stories for Dev Teams are collected in this Epic"
+  ],
+  "components": [
+    {
+      "code": "SDN_O2A",
+      "title": "SDN_O2A ValueStream Order to Activate"
+    }
+  ],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

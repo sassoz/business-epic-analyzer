@@ -1,0 +1,23 @@
+{
+  "key": "SECEIT-2914",
+  "issue_type": "Epic",
+  "title": "Product Ordering Service - REA I und Test/Abnahme",
+  "status": "Closed",
+  "description": "Description\nIn diesen EPIC werden alle Storys zusammengefasst, die für eine Realisierung zum Thema benötigt werden.\n  Terminierungsservice\nInfoservice",
+  "business_value": {},
+  "assignee": "Markus Fracke",
+  "priority": "",
+  "target_start": "2025-01-30",
+  "target_end": "2025-03-12",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DO_SeCeIT",
+    "MB_Decoupling",
+    "VS_enabling"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

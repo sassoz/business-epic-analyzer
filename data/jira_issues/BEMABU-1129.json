@@ -1,0 +1,29 @@
+{
+  "key": "BEMABU-1129",
+  "issue_type": "Business Epic",
+  "title": "Einführung KEK X im KMU-Segment",
+  "status": "Funnel",
+  "description": "Description\nMuss überarbeitet werden\n  Für wen? Interessenten und Bestandskunden GK\nWelches Bedürfnis? die sich für Events jegliche Art registrieren oder aktiv als Bestandskunde angesprochen werden\nWie wird es gemacht? soll ein Registrierungsprozess mit KEK- und Permission-Erfassung bereitgestellt werden.\nWas ist der Mehrwert? Mit der Registrierung eines Kunden können wir das Momentum nutzen, die Datenschutz-Einwilligung (KEK) zu erfassen oder zu aktualisieren.\nWas ist der Differenzierer - das \"Warum\"? Eine personalisierter, zielgruppenorientierter Vertriebsangang ist mit diesem Prozess juristisch legitimiert.\n ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "LaO_MA",
+    "LaO_SEP",
+    "State_of_the_art_CRM"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

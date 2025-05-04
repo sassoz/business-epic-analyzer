@@ -1,0 +1,69 @@
+```json
+{
+  "epicId": "BEMABU-2221",
+  "title": "Breitband & IT I MaRe GK FTTC (Magenta Regio GK für FTTC)",
+  "ziele": {
+    "gesamtziel": "Harmonisierung der CU-Wholebuy-Prozesse, Vereinfachung der Provisionierung im Service und Kostenreduktion. Die Umsetzung ist für den Zeitraum vom 01.07.2025 bis 30.09.2025 geplant.",
+    "einzelziele": [
+      "Wholebuy Produkte zur manuellen Bearbeitung aussteuern",
+      "Buchung der Produkte für den KS nur noch in CRM-T (Entfall der Buchung des Wholebuy-Access über Congstar AAX)",
+      "Umbau oder Neubau der bisherigen GK-Produkte CompanyFlex Regio und CompanyFlex MSN Regio",
+      "Neubau der Produkte Business (Regio) Start und Business (Regio) Pro"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Kostenreduktion"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Harmonisierung der CU-Wholebuy-Prozesse, Vereinfachung der Provisionierung im Service"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-103777",
+      "titel": "Wholebuy Produkte zur manuellen Bearbeitung aussteuern",
+      "funktionalitäten": [
+        "Aussteuern von Wholebuy Produkten zur manuellen Bearbeitung",
+        "Umbau oder Neubau der GK-Produkte CompanyFlex Regio und CompanyFlex MSN Regio",
+        "Neubau der Produkte Business (Regio) Start und Business (Regio) Pro",
+        "Buchung der Produkte nur noch in CRM-T für den KS"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Die bisherigen GK-Produkte CompanyFlex Regio, CompanyFlex MSN Regio sollen so umgebaut oder neu-gebaut werden, dass der Wholebuy-Access Anteil aus CRM-T heraus mit gebucht werden kann. Damit wird die Produktion von Regio-Produkten aus Sicht des KS mit der Regio-Produktion wie bei den PK-Produkten vereinheitlicht.",
+    "Info: Bislang muss der Wholebuy-Access aus Sicht des KS-Mitarbeits immer noch über das Congstar-AAX-System gebucht werden.",
+    "Die Produkte Business (Regio) Start und Business (Regio) Pro sollen neu gebaut werden.",
+    "1 Die Buchung der Produkte erfolgt für den KS nur noch in CRM-T (die Buchung des Wholebuy-Access über Congstar AAX entfällt für den KS).",
+    "2 Keine funktionalen Änderungen ggü. dem Endkunden für die betroffenen GK-Regio Produkte (Info: Arbeitsannahme ist, dass die Ablöse PlusNet vollständig umgesetzt wurde)",
+    "3 Die GK-Regio-Produkte werden neu durch die Tariffabrik abgebildet.",
+    "Ausformulierter Sätze",
+    "Mit Screenshots",
+    "ACC1:",
+    "ACC2:"
+  ],
+  "domainsAndITApplications": [
+    "CRM-T",
+    "Congstar-AAX-System",
+    "Tariffabrik"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der vollständigen Umsetzung der Ablöse PlusNet",
+    "Das Business Epic ist im Status 'Review', während das Portfolio Epic 'MAGBUS-103777' noch im Status 'Funnel' ist, was auf eine mögliche Verzögerung hindeuten könnte",
+    "Beide Issues haben das gleiche Zieldatum (Q3_25), was bei dem aktuellen Status des Portfolio Epics ein Risiko darstellen könnte"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": ["Q3_25"],
+    "meilensteine": []
+  }
+}
+```

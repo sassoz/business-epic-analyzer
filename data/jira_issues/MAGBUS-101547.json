@@ -1,0 +1,23 @@
+{
+  "key": "MAGBUS-101547",
+  "issue_type": "Epic",
+  "title": "Headless CM - Product data import",
+  "status": "Closed",
+  "description": "Description\nhttps://wiki.telekom.de/pages/viewpage.action?spaceKey=MBFY&title=Headless+Content",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

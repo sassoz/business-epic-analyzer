@@ -1,0 +1,54 @@
+{
+  "key": "MOFUDHS-3820",
+  "issue_type": "Epic",
+  "title": "GK: Anbindung von SEP an Carmen (KEK-/Permission-Event + Lese-Rest-APIs) - Beratung",
+  "status": "Closed",
+  "description": "Description\nAnforderung von Kevin Meigel bzgl. Nutzung des bestehenden Horizon Events, das die KEK und Permissions auf GP-Ebene beauskunftet:\nwie in unserem letzten Termin ja besprochen, würden wir gerne den damals aufgebauten Eventservice von euch für Änderungen an den KEK & Permission nutzen.\nWir planen dies nun für unseren nächste PI ( vom 12.04.2024 bis 02.07.2024) ein.\nDu hattest erwähnt dass ihr den Service noch für uns aktivieren und mit Daten befüttern müsst. Kannst du mir hier sagen wie wir hier jetzt am besten vorgehen, damit wir bei uns im nächsten PI entsprechend unsere Anpassungen durchführen können?\n=> Antw.: über dieses Epic hier\n  => NOtwendige Unterstützung durch Torero:\nEvent (digihu.mob.party.privacy.profile.attribute.value.change.event.v1) in Produktion wieder freizuschalten\nUnterstützung bei Fragen\nTardis-KOnfig.\nSDSK-Anpassung \nHinweis: die Punkte c) und d) gelten aus meiner Sicht auch für die Nutzung der Carmen-REST-APIs (Yoda), um den Kunden in Carmen auszulesen\n    Status Kevin Meigel, 26.4.:\n=> ja wir haben das Thema in unserem PI eingeplant und werden bis Anfang Juli den Service an unsere Systeme anbinden.\n  --------------------------------------------------------------------------------------------------\nFrage an Yoda: dieses Epic auch für die Anbindung der REST-APIs an SEP verwenden , damit darüber die Kunden ausgelesen werden ?\n@Michael, Du müsstest überlegen, ob Du wegen Support und SDSK-Anpassung dasselbe Epic auch für die Anbindung von SEP an eure Carmen-REST-APIs verwenden willst. Im letzten Meeting hatten wir ja gesagt, dass SEP darüber die Kunden auslesen kann, da die bestehenden Initiallieferungen die Aussage von Geschäftspartnern zu KEK und Permissionen  nicht enthalten.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "MPP_24.2",
+    "MMP_24.3"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Carmen CC",
+      "title": "Carmen CC "
+    },
+    {
+      "code": "Torero",
+      "title": "Torero "
+    },
+    {
+      "code": "Yoda",
+      "title": "Yoda "
+    }
+  ],
+  "labels": [
+    "ART_Explorer",
+    "PI19_243_Atlantis",
+    "PI_MPP_24.3_program_board"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-07-25-16-25-37-494.png",
+      "url": "https://jira.telekom.de/secure/attachment/4759809/image-2024-07-25-16-25-37-494.png",
+      "mime_type": "image/png",
+      "size": "55 kB",
+      "date": "2024-07-25T16:25:37.671+02:00"
+    },
+    {
+      "filename": "WG_ Eventverarbeitung KEK_Permission Service für die SEP.msg",
+      "url": "https://jira.telekom.de/secure/attachment/4453876/WG_%20Eventverarbeitung%20KEK_Permission%20Service%20f%C3%BCr%20die%20SEP.msg",
+      "mime_type": "application/octet-stream",
+      "size": "47 kB",
+      "date": "2024-04-10T15:31:27.335+02:00"
+    }
+  ]
+}

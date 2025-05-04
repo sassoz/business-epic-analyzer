@@ -1,0 +1,79 @@
+```json
+{
+  "epicId": "BEMABU-1858",
+  "title": "LE ONEPROCESS - MagentaForce Optimierungen (Day2)",
+  "ziele": {
+    "gesamtziel": "Optimierung der Prozessierung in den sales-related Applikationen (Schwerpunkt MagentaForce und nachgelagerte CPQ Systeme) für den Direktvertrieb im Large Enterprise Bereich nach der Transformation in 2024. Fokus liegt auf definierten, businesskritischen Issues seit dem Go Live am 1.11.2024, um reibungslose Arbeitsabläufe im Sales LE zu gewährleisten. Die Umsetzung soll bis zum 31.10.2025 abgeschlossen sein.",
+    "einzelziele": [
+      "Umsetzung der mit Prio A identifizierten Findings aus Nutzerfeedback seit dem GoLive 01.11.2024 in Q1",
+      "Finalisierung der A Maßnahmen und Start der Umsetzung der B Maßnahmen in Q2",
+      "Umsetzung der restlichen Maßnahmen inkl. Prio C in Q3",
+      "Verbesserung des NPS-Werts durch Optimierungen für die Seller"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "1.300.000 Minuten MEHR Real Selling Time für LE Vertriebs-MA (650 MA national, 100 Arbeitstage/CRM Bedienung, 20 Min Zeitersparnis) = 900 TSD / Jahr"
+    },
+    "strategicEnablement": {
+      "skala": 13,
+      "beschreibung": "Abwenden von Risiken der Fehlbedienung, Auswahl falsche Prozesskette (Kundenreputation, zusätzlicher administrativer Aufwand für Sales); Reduzierung erforderlicher IT-Spends für Anpassungen in 2 Applikationsketten; Nicht-Erreichung der Umsatztargets Neugeschäft (Digitaler Vorleistereinkauf heute nicht für DTBS Verträge nutzbar!)"
+    },
+    "timeCriticality": {
+      "skala": 8,
+      "beschreibung": "LE startet zum 01.11.2024, Zusammenlegung der unterschiedlichen Prozesswelten wird schnellstmöglich benötigt (Zum Start von LE technisch nicht realisierbar)"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-101036",
+      "titel": "MF: LE-NPS-Maßnahmen/LE-User Feedback Q1",
+      "funktionalitäten": [
+        "Improvements nach D1R für die Seller",
+        "Umsetzung der mit Prio A identifizierten Findings aus Nutzerfeedback seit dem GoLive 01.11.2024"
+      ]
+    },
+    {
+      "id": "MAGBUS-103431",
+      "titel": "MF: LE-NPS-Maßnahmen/LE-User Feedback Q2 (Kleinstmaßnahmen)",
+      "funktionalitäten": [
+        "Improvements nach D1R für die Seller",
+        "Umsetzung von Maßnahmen basierend auf der abgestimmten Liste unter https://wiki.telekom.de/display/MBFY/LE+Day+2"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Q1: Umsetzung der mit Prio A identifizierten Findings aus Nutzerfeedback seit dem GoLive 01.11.2024 (Acceptance Criteria je Story, Liste siehe Link Business Scope)",
+    "Q2: Finalisierung der A Maßnahmen und Start der Umsetzung der B Maßnahmen.",
+    "Q3: Umsetzung der restlichen Maßnahmen inkl. Prio C"
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce",
+    "DOM0201"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Risiko der Fehlbedienung und Auswahl falscher Prozessketten durch Vertriebsmitarbeiter",
+    "Nicht-Erreichung der Umsatztargets im Neugeschäft",
+    "MAGBUS-101036 ist bereits als 'Resolved' markiert, während MAGBUS-103431 noch im 'Backlog' Status ist",
+    "Das Business Epic läuft bis 31.10.2025, während die verbundenen Epics nur bis PI 27/28 stretch geplant sind"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-01-02",
+    "umsetzungsende": "2025-10-31",
+    "fixVersions": ["Q3_25", "Q2_25", "PrioQ1_25", "PrioQ2_25", "PI 27 stretch", "PI 28 stretch"],
+    "meilensteine": [
+      {
+        "id": "MAGBUS-101036",
+        "beschreibung": "MF: LE-NPS-Maßnahmen/LE-User Feedback Q1",
+        "zeitraum": "PI 27 stretch"
+      },
+      {
+        "id": "MAGBUS-103431",
+        "beschreibung": "MF: LE-NPS-Maßnahmen/LE-User Feedback Q2 (Kleinstmaßnahmen)",
+        "zeitraum": "PI 28 stretch"
+      }
+    ]
+  }
+}
+```

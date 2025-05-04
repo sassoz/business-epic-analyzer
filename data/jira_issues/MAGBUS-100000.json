@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-100000",
+  "issue_type": "Epic",
+  "title": "MF: KI@MagentaForce POC",
+  "status": "In Progress",
+  "description": "Description\nBereitstellung einer MagentaForce Sandbox und Aktivierung von Salesforce Einstein GPT",
+  "business_value": {},
+  "assignee": "Matthias Johannes Hoffmann",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27",
+    "PI 28",
+    "2025"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,19 @@
+{
+  "key": "DIGIHUB-278229",
+  "issue_type": "Portfolio Epic",
+  "title": "FTTH by LE",
+  "status": "Todo",
+  "description": "Description\nThis is a template for an Initiative. Here are a few basic rules:\nAny paragraph starting with is either a comment or an example. Such text can be removed while filling out the Initiative description.\nIt is recommended to use only plain text with no coloring and bold, underline and italics if needed.\nProposal Studio:\nBenefit Hypothesis:\nWhich business value do we have?\nWhat will I solve?\nWhat is the risk when we don't realize this demand? Cost of delay\nProposal:\n<An elevator pitch (value statement) that describes the initiative in a clear and concise way.>\nFor <customers>\nwho <do something>\nthe <solution>\nis a <something – the ‘how’>\nthat <provides this value>\nunlike <competitor, current solution or non-existing solution>\nour solution <does something better — the ‘why’>\nCurrent situation:\nProblem statement:\nIn which situation does the problem occur? (Addition Daniel)\nWhat is the problem and who is affected? (Addition Daniel)\nNew feature:",
+  "business_value": {},
+  "assignee": "Eker Ayse",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

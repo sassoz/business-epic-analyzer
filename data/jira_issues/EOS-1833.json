@@ -1,0 +1,172 @@
+{
+  "key": "EOS-1833",
+  "issue_type": "Epic",
+  "title": "SeCe-IT contract types ( buy, rent, maintenance, installation) / SeCe-IT Vertragsarten (Kauf, Miete, Instandhaltung, Installation)",
+  "status": "Review",
+  "description": "Description\n Story\nAls Auftragsbearbeiter\nmöchte ich Vertragsinformationen (insbesondere zu Instandhaltungsverträgen bei SeCe-IT-Vorgängen) mit auf dem Kundenanschreiben andrucken,\num den Kunden angemessen über seine Vertragssituation zu informieren.\nI as EOS user \nWould like to have contract information (especially on maintenance contracts for SeCe IT processes) on the customer letter,\nto inform the customer appropriately about their contract situation.\n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)\nEin bestelltes Produkt in SeCe-IT (Endgerät) kann mehreren Verträgen zugeordnet sein. Einem Kauf- oder einem Mietvertrag und einem Instandhaltungsvertrag. Diese Verträge werden heute nicht korrekt in EOS verarbeitet. EOS kennt pro Position nur einen Vertrag (Produktattribut). Weitere Verträge (insbesondere Instandhaltungsverträge) gehen verloren und können daher auch nicht auf der Auftragsbestätigung angedruckt werden. Seit Anbindung der SeCe-IT Schittstellung im Oktober 2020 wird dies von Anwendern bemängelt. Ohne die Instandhaltungsverträge in EOS, werden unvollständige Auftragsbestätigungen erzeugt oder es entstehen manuelle Mehraufwände beim Anwender.\n(Problem Statement)\nAn ordered product in SeCe-IT (end device) can be assigned to several contracts. A purchase or rental contract and a maintenance contract. These contracts are not processed correctly in EOS today. EOS only recognizes one contract (product attribute) per item. Other contracts (especially maintenance contracts) are lost and therefore cannot be printed on the order confirmation. Users have been complaining about this since the SeCe-IT interface was connected in October 2020. Without the maintenance of contracts in EOS, incomplete order confirmations are generated or additional manual work is required by the user.\nFachlicher Lösungswunsch (Feature Hypothese)\nAlle Verträge pro Position werden von EOS verarbeitet. Der Anwender kann diese inkl. Laufzeiten in EOS ablesen. Ebenfalls werden sämtliche Verträge pro Position in der Auftragsbestätigung mit angedruckt. \n(Feature Hypothese)\nAll contracts per item are processed by EOS. The user can read these, including terms, in EOS. All contracts per item are also printed in the order confirmation.\nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Verfügbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nNotwendige Änderungen (Erfolgt durch EOS Team)\nFolgende Auflistung dient als erste Orientierung bzgl. der notwendigen Änderungen an EOS zur Umsetzung dieses EPICs:\n....\n.....\n     Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n     Kommunikation\nWelche Stakeholer müssen über diese Änderung informiert werden?\nAL, TL, OPO, Reporting\nWie werden die Mitarbeiter über diese Änderung informiert?\nYaM, WINS, WBT\n   Ablauf:\nAufträge sind heute in ATT als Produktattribut an einer Position sichtbar.\nCRM-T übermittelt:\nRahmenVertragsTyp\nVertragsart (Kauf oder Miete)\nVertragsbeginn\nVertragsende\nVertragsfrist\nArtVertragsfristTage\nVertragsfristEinheit\nSeCe-IT übermittelt:\nVertragsnummer\nNachtragsnummer\nProduktattributte ohne Belegung (mapping):\nVertragslaufzeit\nVertragsverlängerung\nDatumVorzeitigesVertragsende\nDiese Produktattribute sollen künftig als Attribute an einer Vertragsentität stehen und nicht mehr an jeder Position/Produkt. Die Position/Produkt wird dann mit der Vertragsentität verknüpft. Ein ATT Auftrag kann 0 bis n Verträge abbilden. Jede Position kann mit 0-3 Verträgen verknüpft sein. \nSeCe-IT übermittelt künftig die Verträge, bestehend aus den Attributen:\nVertragsart\nVertragsnummer\nNachtragsnummer\nVertragslaufzeit\nServicelevel?\nDie übermittelten Auftragspositionen erhalten einen zusätzlichen Verweis, auf die jeweiligen Verträge, denen sie zugehörig sind. Jede Auftragsposition kann dabei 0-3 Verträgen zugeordnet sein.\nDatenmodell-Beispiel von Torsten:\n\n  Mögliche Verträge/Vertragskombinationen pro Position:\nKauf\nMiete\nInstandhaltung\nInstallation\nKauf + Instandhaltung\nKauf + Instandhaltung + Installation\nBeispiel mit 4 Verträgen (2x Kauf, Miete, Instandhaltung): 121101815\n   Fragen/Antworten\nKann sich ein Vertrag/Vertragsart einer Position ändern (nach 810)?\nKann eine Vertragsart pro Position mehrfach vorhanden sein? (eine Position ist 2 Kaufverträgen zugeordnet)  \nIst eine Position immer einem Vertrag zugeordnet? (oder kann eine Position auch keine Vertrag haben? z.B. Installation nach Aufwand)  \nWie lässt sich eine Vertragsart in SeCe-IT erkennen?\nReiter Auftragsbearbeitung\ndort sind alle Verträge inkl der jeweils betroffenen Positionen/Produkte abgebildet\n  Kann ein Standort mehrere Vertragsarten abdecken?\nJa\nKann eine Position mehrere Vertragsarten abdecken?\nJa\nHaben alle Positionen unterhalb eines Standorts dieselben Vertragsarten?\nNein!\nHängt der Instandhaltungsvertrag ein jeder Standortposition?\nNein\nWir verhält es sich bei Kaufverträgen?\nindividuell. Jede Position kann jede Vertragsart abbilden. Siehe Logik unten\nKorrespondenzfragen:\nWenn die Vertragsart usw, welche heute Produktattribute sind, in die Entität wandern, was passiert dann mit den Produktattributen? Können diese dann noch bei manuellen Positionen diese noch editieren?\nWie sieht das Anschreiben bei mehr als einer Vertragsart pro Position aus?\nKönnen Vertragsinformationen, insofern sie für alle Positionen eines Standorts gelten (Standortposition) konsolidiert in den Details der Standortposition angedruckt werden (anstatt einzeln an jeder Unterposition)?\nAlle Verträge des gesamten Auftrags sollen in der Korrespondenz als Vertrag 1, Vertrags 2 Vertrag 3 usw. zur Verfügung stehen. Aufliste aller Verträge, siehe Screenshot Vertragsdetails\nPro Position 4 Vertragsarten vorbereiten, da jede Position nur einen Kauf- Mietvertrag usw. haben kann. Ähnlich wie bei den Standorten (Stand A, B, Lieferanschrift).\nIdee:\nVertragsnummer wird in den Positions bzw. Unterpositionsdetails angedruckt.\nAlle Verträge mit ihren jeweiligen Details (Vertragsart, Vertragsnummer, Laufzeit, Nachtragsnummer, Servicelevel) werden unterhalt der Positionen als seperater Abschnitt angedruckt. \ndazu müssen die Vertragsattribute auf Auftragsebene verfügbar sein\nDer Kunde kann über die Vertragsnummer referenzieren.",
+  "business_value": {},
+  "assignee": "Bratzke, Florian",
+  "priority": "",
+  "target_start": "2025-04-25",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI28-stretch"
+  ],
+  "acceptance_criteria": [
+    "Within the SeCe-IT location item (Hardware & Services) in EOS, the following information regarding the contract of the respective contract types (purchase, rental, maintenance, installation) is visible in a new tile and serves as an overview for the EOS user:\nContract number\nAddendum number\nContract term\nContract items\nWhich order item is linked in the respective contract? With a link to the corresponding subposition (see screenshot below)",
+    "Contract number",
+    "Addendum number",
+    "Contract term",
+    "Contract items\nWhich order item is linked in the respective contract? With a link to the corresponding subposition (see screenshot below)",
+    "Which order item is linked in the respective contract? With a link to the corresponding subposition (see screenshot below)",
+    "A maximum of 5 subpositions should be displayed in the view – if more than 5 subpositions are assigned to this contract, all positions can be displayed in a accordeon by clicking on a button \"+\".",
+    "A maximum of 5 subpositions should be displayed in the view – if more than 5 subpositions are assigned to this contract, all positions can be displayed in a accordeon by clicking on a button \"+\".",
+    "A maximum of 5 subpositions should be displayed in the view – if more than 5 subpositions are assigned to this contract, all positions can be displayed in a accordeon by clicking on a button \"+\".",
+    "The contents of the new \"Contract Information\" tile will be filled in, provided that the corresponding data is transmitted from O3 (this should happen at the latest after contract creation in SeCe-IT – status 810).\nThe links to the contract subpositions are transmitted from SeCe-IT to EOS via O3.\nIf there are no cantract available, there is a hint box displayed",
+    "The links to the contract subpositions are transmitted from SeCe-IT to EOS via O3.",
+    "If there are no cantract available, there is a hint box displayed",
+    "The new tile is placed within the main item between the \"Unterspositionen\" tile and the \"Anlagen\" tile and appears as follows:\nIt is a line-oriented listing of contracts with pagination with search hit count and a selector for the number of rows displayed\nContract View in SeCe-IT:\nEOS does not require AL numbers or prices for the items.",
+    "It is a line-oriented listing of contracts with pagination with search hit count and a selector for the number of rows displayed",
+    "Contract View in SeCe-IT:\nEOS does not require AL numbers or prices for the items.",
+    "EOS does not require AL numbers or prices for the items.",
+    "Positions and subpositions can be assigned to multiple contracts (contract types).",
+    "The contract information is made available to the correspondence administrator for processing based on individual identifiers. These can, for example, begin with \"ContractInfo.\" (e.g., ContractInfo.ContractNumber).",
+    "The following attributes must be retrievable per item (and on the order):\nContract type\nContract number\nAmendment number\nContract term",
+    "Contract type",
+    "Contract number",
+    "Amendment number",
+    "Contract term",
+    "Customer Correspondence (still under clarification as of 21.02):\nA new page for displaying contracts is needed so that the customer gets an overview of the contracts (including items) contained in the order – preferred solution.\nAdditionally, the most important information will also be displayed at the respective sub-item (contract type, contract number, amendment number, term).",
+    "A new page for displaying contracts is needed so that the customer gets an overview of the contracts (including items) contained in the order – preferred solution.",
+    "Additionally, the most important information will also be displayed at the respective sub-item (contract type, contract number, amendment number, term).",
+    "Create sample order confirmations for both variants.",
+    "Innerhalb der SeCe-IT Standortposition (Hardware & Services) in EOS sind die folgenden Informationen zum Vertrag der jeweiligen Vertragsarten (Kauf, Miete, Instandhaltung, Installation) in einer neuen Kachel sichtbar und dienen zur Übersicht für den Bearbeiter:\nVertragsnummer\nNachtragsnummer\nVertragslaufzeit\nVertragspositionen\nwelche Auftragsposition hängt im jeweiligen Vertrag - mit Verlinkung bzw. Absprung in die entsprechende Unterposition\nEs sollen in der Ansicht maximal 5 Unterpositionen angezeigt werden - sollten mehr als 5 Unterpositionen diesem Vertrag zugeordnet sein, können alle Positionen via Knopfdruck auf einen Button \"+\" eingeblendet werden",
+    "Vertragsnummer",
+    "Nachtragsnummer",
+    "Vertragslaufzeit",
+    "Vertragspositionen\nwelche Auftragsposition hängt im jeweiligen Vertrag - mit Verlinkung bzw. Absprung in die entsprechende Unterposition\nEs sollen in der Ansicht maximal 5 Unterpositionen angezeigt werden - sollten mehr als 5 Unterpositionen diesem Vertrag zugeordnet sein, können alle Positionen via Knopfdruck auf einen Button \"+\" eingeblendet werden",
+    "welche Auftragsposition hängt im jeweiligen Vertrag - mit Verlinkung bzw. Absprung in die entsprechende Unterposition",
+    "Es sollen in der Ansicht maximal 5 Unterpositionen angezeigt werden - sollten mehr als 5 Unterpositionen diesem Vertrag zugeordnet sein, können alle Positionen via Knopfdruck auf einen Button \"+\" eingeblendet werden",
+    "Die Inhalte der neuen \"Vertragsinformationen-Kachel\" wird mit Inhalt befüllt, insofern entsprechende Daten von O3 übermittelt werden (dies sollte spätestens nach Vertragsanlage in SeCe-IT - Status 810 - geschehen)\nDie Verknüpfung zu den Vertragspositionen werden von SeCe-IT über O3 an EOS übergeben\nWenn keine Verträge vorhanden sind, wird ein Hinweis mit fehlenden Verträgen angezeigt",
+    "Die Verknüpfung zu den Vertragspositionen werden von SeCe-IT über O3 an EOS übergeben",
+    "Wenn keine Verträge vorhanden sind, wird ein Hinweis mit fehlenden Verträgen angezeigt",
+    "Die neue Kachel ist innerhalb der Hauptposition zwischen der \"Unterpositionen\"-Kachel und der \"Anlagen\"-Kachel platziert und sieht folgendermaßen aus:\nSie ist eine zeilenorientierte Auflistung der Verträge mit einer Paginierung mit Suchtrefferanzahl und einem Selektor für die Anzahl der angezeigten Zeilen\nVertragsansicht in SeCe-IT:\nEOS benötigt keine AL-Nr oder Preise zu den Positionen",
+    "Sie ist eine zeilenorientierte Auflistung der Verträge mit einer Paginierung mit Suchtrefferanzahl und einem Selektor für die Anzahl der angezeigten Zeilen",
+    "Vertragsansicht in SeCe-IT:\nEOS benötigt keine AL-Nr oder Preise zu den Positionen",
+    "EOS benötigt keine AL-Nr oder Preise zu den Positionen",
+    "Unterpositionen können mehreren Verträgen (Vertragsarten) zugeordnet sein",
+    "Die Vertragsinformationen werden dem Korrespondenz-Administrator zur Verregelung anhand einzelner Kenner zur Verfügung gestellt. Diese können beispielsweise mit \"Vertragsinformation.\" beginnen (z.B. Vertragsinformation.Vertragsnummer). Folgende Attribute müssen je Position abrufbar sein (und am Auftrag):\nVertragsart, Vertragsnummer, Nachtragsnummer, Vertragslaufzeit",
+    "Vertragsart, Vertragsnummer, Nachtragsnummer, Vertragslaufzeit",
+    "Kundenkorrespondenz (noch in Klärung 21.02.):\nEine neue Seite zur Darstellung der Verträge wird benötigt, damit der Kunde einen Überblick über die im Auftrag befindlichen Verträge (inkl. Positionen) erhält - Präferierte Lösung\nZusätzlich werden die wichtigsten Informationen auch an der jeweiligen Unterposition dargestellt (Vertragsart, Vertragsnummer, Nachtragsnummer, Laufzeit)",
+    "Eine neue Seite zur Darstellung der Verträge wird benötigt, damit der Kunde einen Überblick über die im Auftrag befindlichen Verträge (inkl. Positionen) erhält - Präferierte Lösung",
+    "Zusätzlich werden die wichtigsten Informationen auch an der jeweiligen Unterposition dargestellt (Vertragsart, Vertragsnummer, Nachtragsnummer, Laufzeit)",
+    "Beispiel-AB für beide Varianten bauen"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-Korrespondenz",
+    "EOS-PI28"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Fachliches DomainModel - Domäne Auftrag_20211025.png",
+      "url": "https://jira.telekom.de/secure/attachment/2120856/Fachliches%20DomainModel%20-%20Dom%C3%A4ne%20Auftrag_20211025.png",
+      "mime_type": "image/png",
+      "size": "288 kB",
+      "date": "2021-10-25T13:45:20.000+02:00"
+    },
+    {
+      "filename": "GUI Idee.png",
+      "url": "https://jira.telekom.de/secure/attachment/3003153/GUI%20Idee.png",
+      "mime_type": "image/png",
+      "size": "26 kB",
+      "date": "2023-04-26T11:46:46.919+02:00"
+    },
+    {
+      "filename": "image-2025-01-16-11-30-36-783.png",
+      "url": "https://jira.telekom.de/secure/attachment/5301674/image-2025-01-16-11-30-36-783.png",
+      "mime_type": "image/png",
+      "size": "34 kB",
+      "date": "2025-01-16T11:30:37.114+01:00"
+    },
+    {
+      "filename": "image-2025-01-16-11-31-12-254.png",
+      "url": "https://jira.telekom.de/secure/attachment/5301675/image-2025-01-16-11-31-12-254.png",
+      "mime_type": "image/png",
+      "size": "44 kB",
+      "date": "2025-01-16T11:31:12.572+01:00"
+    },
+    {
+      "filename": "image-2025-01-16-12-04-14-018.png",
+      "url": "https://jira.telekom.de/secure/attachment/5301726/image-2025-01-16-12-04-14-018.png",
+      "mime_type": "image/png",
+      "size": "25 kB",
+      "date": "2025-01-16T12:04:14.307+01:00"
+    },
+    {
+      "filename": "image-2025-01-21-14-24-28-065.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318334/image-2025-01-21-14-24-28-065.png",
+      "mime_type": "image/png",
+      "size": "48 kB",
+      "date": "2025-01-21T14:24:28.304+01:00"
+    },
+    {
+      "filename": "image-2025-04-10-22-15-50-639.png",
+      "url": "https://jira.telekom.de/secure/attachment/5600525/image-2025-04-10-22-15-50-639.png",
+      "mime_type": "image/png",
+      "size": "198 kB",
+      "date": "2025-04-10T22:15:50.892+02:00"
+    },
+    {
+      "filename": "Pop-Up.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318333/Pop-Up.png",
+      "mime_type": "image/png",
+      "size": "48 kB",
+      "date": "2025-01-21T14:24:14.489+01:00"
+    },
+    {
+      "filename": "Positionsdetails.png",
+      "url": "https://jira.telekom.de/secure/attachment/2120857/Positionsdetails.png",
+      "mime_type": "image/png",
+      "size": "59 kB",
+      "date": "2021-12-08T16:02:38.000+01:00"
+    },
+    {
+      "filename": "SeCe-IT_Schema.png",
+      "url": "https://jira.telekom.de/secure/attachment/2120858/SeCe-IT_Schema.png",
+      "mime_type": "image/png",
+      "size": "525 kB",
+      "date": "2021-10-04T11:32:53.000+02:00"
+    },
+    {
+      "filename": "Vertragsansicht_SECEIT.png",
+      "url": "https://jira.telekom.de/secure/attachment/5296671/Vertragsansicht_SECEIT.png",
+      "mime_type": "image/png",
+      "size": "34 kB",
+      "date": "2025-01-15T10:35:10.709+01:00"
+    },
+    {
+      "filename": "Vertragsarten.png",
+      "url": "https://jira.telekom.de/secure/attachment/2120859/Vertragsarten.png",
+      "mime_type": "image/png",
+      "size": "94 kB",
+      "date": "2021-10-22T14:03:34.000+02:00"
+    },
+    {
+      "filename": "Vertragsdetails.png",
+      "url": "https://jira.telekom.de/secure/attachment/2120860/Vertragsdetails.png",
+      "mime_type": "image/png",
+      "size": "62 kB",
+      "date": "2021-12-08T16:02:56.000+01:00"
+    },
+    {
+      "filename": "Vertragsinformationen_mit_Button.png",
+      "url": "https://jira.telekom.de/secure/attachment/5318286/Vertragsinformationen_mit_Button.png",
+      "mime_type": "image/png",
+      "size": "28 kB",
+      "date": "2025-01-21T13:51:14.404+01:00"
+    }
+  ]
+}

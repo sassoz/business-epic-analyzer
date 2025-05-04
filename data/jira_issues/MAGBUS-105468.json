@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-105468",
+  "issue_type": "Initiative",
+  "title": "Enhancement MB2B (-POM) Q1",
+  "status": "Funnel",
+  "description": "Description\nThe MB2B-POM takes the data from the shopping cart and creates one or more OMS orders.\nNew orders of identical products with a quantity will be considered as one OMS order.\nNew orders of identical products with MNP and a quantity greater than 1 are split into separate OMS orders.\nFor each OMS/OE order, an order number is sent to the checkout and displayed on the confirmation screen. No clustering of multiple orders in one transaction occurs in the frontend (as today in MBSP).\nXML orders that come via the MB2B are formatted to correspond to the BSP documents (.pdf).\nhttps://miro.com/app/board/uXjVK2d9uJ0=/\nCa_magenta!",
+  "business_value": {},
+  "assignee": "Hampel, Bodo",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "C14",
+      "title": "C14 "
+    }
+  ],
+  "labels": [
+    "GK_Kundencenter",
+    "Roadmap.2025.VSDT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

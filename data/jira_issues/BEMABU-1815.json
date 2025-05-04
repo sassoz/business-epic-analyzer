@@ -1,0 +1,96 @@
+{
+  "key": "BEMABU-1815",
+  "issue_type": "Business Epic",
+  "title": "Q1 Weiterentwicklung Case-Management Sync EOS",
+  "status": "In Progress",
+  "description": "Description\nUm Effizienzen zu heben und Doppelbearbeitungen zu vermeiden sollen sowohl Stati-Updates, als auch Wiedervorlage/Verzögerungs-Gründe aus EOS nach MagentaForce synchronisiert werden. \nNach Möglichkeit ebenfalls Freitextfelder.",
+  "business_value": {
+    "business_impact": {
+      "scale": 2,
+      "revenue": "",
+      "cost_saving": "Vermeidung von Doppelbearbeitungen",
+      "risk_loss": "",
+      "justification": "Effizienzsteigerung durch Vermeidung von Doppelbearbeitungen bei der Synchronisierung von Stati-Updates und Wiedervorlage/Verzögerungs-Gründen zwischen EOS und MagentaForce"
+    },
+    "strategic_enablement": {
+      "scale": 1,
+      "risk_minimization": "",
+      "strat_enablement": "Systemintegration zwischen EOS und MagentaForce",
+      "justification": "Strategische Verbesserung der Systemintegration durch Synchronisierung von Daten zwischen den Systemen"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Keine Zeitkritikalität im Text angegeben"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Kevin Robeck",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "Q1_25",
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0300",
+      "title": "DOM0300 Data"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "B2B_Target",
+    "EOS",
+    "EOS2.0",
+    "KMU-Service",
+    "Midmarket",
+    "Operations",
+    "SGrK"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-97589",
+      "title": "MAGBUS-97589",
+      "summary": "EOS Tiefenintegration Verarbeitung (Events)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-97589",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "EOS-6607",
+      "title": "EOS-6607",
+      "summary": "EOS Sync MF: Informationen an Magenta Force geben / Give Event Data from EOS to Magenta Force",
+      "url": "https://jira.telekom.de/browse/EOS-6607",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-95669",
+      "title": "MAGBUS-95669",
+      "summary": "EOS 2.0: EOS Events an Magenta Force übergeben",
+      "url": "https://jira.telekom.de/browse/MAGBUS-95669",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-99498",
+      "title": "MAGBUS-99498",
+      "summary": "o3 POM: Weiterentwicklung Case-Management Sync EOS",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99498",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

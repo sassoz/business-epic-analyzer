@@ -1,0 +1,22 @@
+{
+  "key": "BEMABU-1784",
+  "issue_type": "Business Initiative",
+  "title": "Erweiterung und Optimierung KEK-Set",
+  "status": "Funnel",
+  "description": "Description\nFür  TD GK B2B (Midmarket, LargeEnterprise, Public)\ndie eineVerbesserung des KEK-Prozesses durch Automatisierung und Optimierung der Workflows benötigt,\nist die KEK 4.5 eine Datenschutzeinwilligung mit Vertragsanalyse (zusätzlich zur Kanal Permission). Dies ist dann sinnvoll, wenn ein Vertrags- bzw. Kunden Verhältnis entsteht/entstanden ist. ABER: in Geschäftsbeziehungen ist nicht der ASP/Kontakt der Vertragsinhaber sondern der Geschäftspartner/Firma. Vertragsdaten hängen am GP nicht am ASP (Erlaubnis zu Vertragsdatenanalyse ist nicht für Verträge am GP nutzbar)\nwodurch der ASP/Kontakt seine Einwilligung (Douple-opt-in) gegeben hat,\nso dass  für den regelmäßigen werblichen Kontakt und Nurturing eines ASP eine Kanal Permission ausreichend ist\nund nicht zwingend notwendig, die KEK (Permission) in einem Kontaktformular als Pflichtfeld abzufragen, um den ASP auf „Grund seiner Anfrage“ zu diesem Thema kontaktieren zu dürfen. => KEK sollte kein Pflichtfeld in Formularen sein (Self-Service).\nDas Vorhaben schafft eine rechtsverbindliche Dokumentation im Umfeld von juristischen Personen zur Zustimmung der werblichen Ansprache auf allen Marketingkanälen innerhalb der TDG und relevanten Tochtergesellschaften. Die Nichtbeachtung dieser Gesetze kann Strafzahlungen von bis zu 20 Mio. € bzw. 4% des Konzernumsatzes zur Folge haben. Beim Verstoß gegen den Datenschutz ist außerdem eine persönliche Haftung möglich.\n    Umsetzungs-Skizze (in Scope)\nAnpassung KEK-Set\nEinholung KEK (Datenschutzeinwilligung) durch freigegebene Rollen (Vertragspartner, Geschäftsführer) – Kann auch auf KMU adaptiert werden.\nGezielte KEK Einholung eines Geschäftspartner in Abhängigkeit der Rolle in MagentaForce",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "Cross-vertical",
+    "LaO_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

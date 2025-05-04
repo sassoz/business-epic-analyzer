@@ -1,0 +1,38 @@
+{
+  "key": "MAGBUS-98909",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B/DOT: Company Flex - New Product Acquisition (add location products)",
+  "status": "Funnel",
+  "description": "Description\nThe objective of this portfolio epic is to enable the existing M-API integration to create product orders for complex B2B product portfolio (Company Flex - create basic instance & add location products).",
+  "business_value": {},
+  "assignee": "Timo Szillat",
+  "priority": "",
+  "target_start": "2025-08-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "Enabler",
+    "Mapis4B2B"
+  ],
+  "realized_by": [
+    {
+      "key": "DOT-79342",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/DOT-79342",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12546",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12546",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

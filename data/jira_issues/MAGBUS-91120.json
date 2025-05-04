@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-91120",
+  "issue_type": "Epic",
+  "title": "MF: Service GrK Case - Aufbau und Bearbeitung",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Noemi Anschlag",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 25",
+    "PI 26",
+    "MF 4.300"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

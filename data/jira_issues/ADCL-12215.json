@@ -1,0 +1,27 @@
+{
+  "key": "ADCL-12215",
+  "issue_type": "Epic",
+  "title": "Shipment: Process Shipment Tracking Events for CRM-T orders",
+  "status": "Backlog",
+  "description": "Description\nPOT consumers shall be able to get notified when a shipment status changes. To achieve this POT shall process events provided by the CRM-T shipment tracking service and",
+  "business_value": {},
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "POT processes shipment create events of the CRM-T shipment tracking service",
+    "POT processes shipment update events of the CRM-T shipment tracking service"
+  ],
+  "components": [],
+  "labels": [
+    "PI28",
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,72 @@
+{
+  "key": "BEB2B-134",
+  "issue_type": "Business Epic",
+  "title": "Exploration: D!VE - Nutzung in Lösungsgeschäft",
+  "status": "In Progress",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür alle Vertriebssegemente\ndie Kunden Angebote unter Zuhilfenahme eines Vorleisters untertreiben\nist es notwendig, den Digitalen Vorleistereinkauf auch in den Lösungsgeschäftsworkflows (Panda, Servicenow, TDN) verfügbar zu machen\nwodurch manueller Aufwand, ungelenkte Prozesse sowie Zeitverzug vermieden wird\nso dass wir Effizient und in hohem Tempo Angebote Compliance-Gerecht erstellen und in die Beauftragung geben können.\nund nicht manuell Angebote unter Zuhilfenahme diverser lokaler Tools erstellen und das eBanf Webportal händisch bedienen.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nD!VE DOM0201 Pascal Werlein <verwende \"@Vorname Nachname\">  \nPanda DOM0204 Klara Bruns   \nServicenow@TC DOM0204    \nSAP P02 DOM0202    \n  BEO und ggf. Vertreter Zalewski, Matthias , Pascal Werlein \nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "1,23m€",
+      "risk_loss": "",
+      "justification": "Schätzung vor Exploration, Manuelle Tätigkeiten werden durch (teil-)automatisierte Prozesse substitutiert."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": "<textl. Herleitung aus \"Strategischer Beitrag\">"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.01.2025 Plan Ende/Launch: 01.10.2025",
+      "justification": "Umsetzungszeitraum: Geschätzt vor Exploration"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Pascal Werlein",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "Ein Scope für die Abbildung in 2025 wurde erarbeitet",
+    "Der Workflow zwischen den Systemen ist ausgearbeitet",
+    "Ein Zeitplan zur Umsetzung liegt vor (vorbehaltlich Priorisierung)"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "B2B_Target",
+    "Operations"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-22486",
+      "title": "SDN-22486",
+      "summary": "D!VE_PANDA - Exploration Nutzung in Lösungsgeschäft",
+      "url": "https://jira.telekom.de/browse/SDN-22486",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "DIGIVLEK-22862",
+      "title": "DIGIVLEK-22862",
+      "summary": "Exploration: D!VE - Nutzung in Lösungsgeschäft",
+      "url": "https://jira.telekom.de/browse/DIGIVLEK-22862",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

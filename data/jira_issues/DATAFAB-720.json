@@ -1,0 +1,48 @@
+{
+  "key": "DATAFAB-720",
+  "issue_type": "Epic",
+  "title": "MBN/MBC - Umsetzung BVA-Schema für One-Reporting mit Magenta-Force-Daten",
+  "status": "Closed",
+  "description": "Description\nMit diesem Epic stellen wir die für das MBN/MBC-Reporting benötigten Daten für die in MagF geführten Kundensegmente auf dem ODW in Form eines BVA-Schemas für das Team One-Reporting bereit. Neben den zwingend für MBN/MBC benötigten Tabellen und Feldern werden weitere Tabellen und Felder bereitgestellt, die vom One-Reporting-Team perspektivisch für andere Reporting-Anforderungen wie z.B.  das Account-Planning benötigt werden.\nDie benötigten Tabellen und Felder wurden bereits im Vorgänger-Epic definiert. Dieses Epic umfasst die technische Realisierung inkl. Dokumentation sowie die Betriebsaufnahme und schließt somit die aus dem MBN-Business-Epic hervorgegangenen Anforderungen ab.",
+  "business_value": {},
+  "assignee": "Tom Lück",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2023-06-14",
+  "fix_versions": [
+    "C10 PI 23_1"
+  ],
+  "acceptance_criteria": [
+    "Für das Fachbereichsteam ONE-Reporting wurde ein BVA-Schema realisiert, das die geforderten MagF-Daten sowie die zusäzlich benötigten Daten zu den Dimensionen Kunde und Produkt beinhaltet."
+  ],
+  "components": [
+    {
+      "code": "BI4BS_MS",
+      "title": "BI4BS_MS "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "BDI_CC2_ODW_DataEnabler",
+    "C10_Waiting_Partner",
+    "MPP",
+    "Migrate2DataTribe_BDI",
+    "ROCK_MBC",
+    "ROCK_MBN",
+    "Uncommitted"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2023-02-06-11-29-13-293.png",
+      "url": "https://jira.telekom.de/secure/attachment/2823518/image-2023-02-06-11-29-13-293.png",
+      "mime_type": "image/png",
+      "size": "153 kB",
+      "date": "2023-02-06T11:29:13.569+01:00"
+    }
+  ]
+}

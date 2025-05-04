@@ -1,0 +1,89 @@
+{
+  "key": "MAGBUS-85941",
+  "issue_type": "Portfolio Epic",
+  "title": "MVP: Anbindung der SEP an die Carmen party-API",
+  "status": "Closed",
+  "description": "Description\nZur Absicherung des OCC-Retirement ist es notwendig das Zentrale Ansprechpartnerdatenmanagement @ GK mit den Mobilfunk Ansprechpartner zu erweitern.\nHierfür wird der MVP Ansatz, Nutzung vorhandener Schnittstellen, gefahren.\n  Im MVP wird die Sales Enablement Platform (SEP) mit dem Zentralen Ansprechpartnerdatenmanagement an die Party-API von Carmen angebunden und fragt Mobilfunk-Ansprechpartner inkl. KEK/Permission Informationen über die Schnittstelle ab.\nDie Abgefragten Mobilfunk-Ansprechpartner und dazugehörigen KEK/Permission Informationen werden in der SEP gespeichert und in regelmäßigen Abständen mit Carmen in Richtung der SEP aktuell gehalten. Es gilt zu prüfen ob die Carmen Party-Api eine PubSup Komponente zur Aktualisierung der Daten anbietet.\nEine Änderung der Daten über andere CRM-Systeme ist nicht möglich da der Master der Daten weiterhin Carmen ist.\n   \n\nBusiness Scope:\nDie Sales Enablement Platform erhält Zugriff auf die kundenseitigen Mobilfunk-Ansprechpartner-Daten inklusive KEK/Permission Informationen",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Wir bilden den VP2 als kundenseitigen Mobilfunk Ansprechpartner innerhalb der SEP ab",
+    "Wir bilden die KEK Aussage des Business Partners im TMF644 ab",
+    "Wir bilden die Permission Aussagen des VP2 im TMF644 ab.",
+    "schleichende Migration der Daten in die SEP",
+    "Änderung an den Mobilfunkdaten sind nur über den Master - Carmen -  möglich"
+  ],
+  "components": [
+    {
+      "code": "SEP-Platform",
+      "title": "SEP-Platform "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-85942",
+      "title": "MAGBUS-85942",
+      "summary": "Exploration: Anbindung an Carmen Party-API - Ansprechpartner",
+      "url": "https://jira.telekom.de/browse/MAGBUS-85942",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-87812",
+      "title": "MAGBUS-87812",
+      "summary": "MVP: Erhalt der Mobile Only Geschäftspartner-Daten",
+      "url": "https://jira.telekom.de/browse/MAGBUS-87812",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-88109",
+      "title": "MAGBUS-88109",
+      "summary": "Exploration: Anbindung Carmen API - KEK/Permission",
+      "url": "https://jira.telekom.de/browse/MAGBUS-88109",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91692",
+      "title": "MAGBUS-91692",
+      "summary": "Eventverarbeitung von Carmen implementieren - Business Partner & VP2",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91692",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91695",
+      "title": "MAGBUS-91695",
+      "summary": "Mobilfunk KEK Aussage am GP abbilden",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91695",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91698",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91698",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91699",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91699",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91690",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91690",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

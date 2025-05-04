@@ -1,0 +1,22 @@
+{
+  "key": "SECEIT-2110",
+  "issue_type": "Epic",
+  "title": "EOS-MVP2c 4.1. Vertragsanlage - Konzept",
+  "status": "Closed",
+  "description": "Description\nIn diesen EPIC werden alle Storys zusammengefasst, die für eine Konzeptionierung zum Thema benötigt werden.\nSequenzdiagramme sind im PortfolioEpic verlinkt.",
+  "business_value": {},
+  "assignee": "Markus Fracke",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Decoupling",
+    "PI21"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

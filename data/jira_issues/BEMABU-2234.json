@@ -1,0 +1,169 @@
+{
+  "key": "BEMABU-2234",
+  "issue_type": "Business Epic",
+  "title": "Produkt- und Plattformaktualisierungen CoFlex & MBC MM zur Umsatzsicherung - Q3/25",
+  "status": "Funnel",
+  "description": "Business Scope:\nUmsetzung von obligatorischen Produktpflegemaßnahmen, regelmäßigen Feature- und Produktupdates, notwendige Maßnahmen zur Adaption von Veränderungen im CompanyFlex Ecosystem zur Sicherstellung der Markt- und Wettbewerbsfähigkeit des CompanyFlex.\n\nIm Rahmen des Epics sind folgende Maßnahmen geplant:\n\n- Umsetzung der Kundenanforderungen an das Rufnummernmanagement, um wettbewerbsfähig zu bleiben und die Kundenbindung zu erhöhen\n(Anteile aus: ECC-7664, ECC-7665, ECC-4052, ECC-7177).\n- Optimierung des Lizenzmanagements der BroadWorks Plattform zur Reduktion von Lizenzkosten (ECC-7792, ECC-9033).\n- Systemintegration von Cisco Endgeräten (Cloud\nAwareness), um Cloud Features bereitstellen zu können\n(ECC-8887) und die aktuelle Geräte-Generation\nanbieten zu können.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "Optimierung des Lizenzmanagements der BroadWorks Plattform zur Reduktion von Lizenzkosten",
+      "risk_loss": "",
+      "justification": "Sicherstellung der Markt- und Wettbewerbsfähigkeit des CompanyFlex"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Umsetzung der Kundenanforderungen an das Rufnummernmanagement, um wettbewerbsfähig zu bleiben und die Kundenbindung zu erhöhen",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Thorsten Holtkämper",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Erweiterung des Company Flex Produktes um unten stehende Epics",
+    "neue Funktionen können im BSP gebucht und Konfiguriert werden",
+    "Aus BSP bzw. Konfig-Portal wird C4, Technik und STEAM angesteuert"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "ECC_CoD_valid",
+    "MBC_MM",
+    "Portfolio",
+    "Portfolio_Breitband"
+  ],
+  "realized_by": [
+    {
+      "key": "ECC-8832",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-8832",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-7664",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-7664",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-7915",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-7915",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-9774",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-9774",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-6803",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-6803",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-8600",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-8600",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-8734",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-8734",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-6868",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-6868",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-7665",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-7665",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-7764",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-7764",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-9030",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-9030",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-9176",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-9176",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-9741",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-9741",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-9033",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-9033",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-9792",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-9792",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ECC-6384",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ECC-6384",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

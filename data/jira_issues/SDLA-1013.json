@@ -1,0 +1,28 @@
+{
+  "key": "SDLA-1013",
+  "issue_type": "Epic",
+  "title": "Create GUI for “Add technical parameters”",
+  "status": "Closed",
+  "description": "Description\nNOT RELEVANT FOR SD LAN/WiFi IN THIS BUSINESS FEATURE --> technical parameters later",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q4_22"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "OKR_Q3_Get_ready_for_Juniper_MIST",
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

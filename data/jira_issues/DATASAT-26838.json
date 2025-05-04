@@ -1,0 +1,54 @@
+{
+  "key": "DATASAT-26838",
+  "issue_type": "Portfolio Epic",
+  "title": "[ODE] EOS 2.0: MagentaForceCasemanagement - Abschluss der Implementierung",
+  "status": "Funnel",
+  "description": "Description\nPlanungs Hülle für 2025 Aktivitäten{}\n1. Business Epic\nBusiness Epic/ Requirement and Scope \nAnforderung:\nIch als Reporter Business Support GK benötige die angeforderten Reportingdaten idealerweise integriert in das Tabulare Modell EWS, um die Daten optimal mittels PowerBI visualisieren zu können.\nBeschreibung:\nDie angeforderten Mengen und Zeiten in Kundensicht und Teamsicht aus MagentaForce sollen nicht in einem eigenen Datenmodell (Business Layer) bereitgestellt werden, sondern sollen abgebildet werden auf die bereits existierenden Kennzahlen und Dimensionen aus dem EWS Datenmodell, soweit möglich.\nEs soll über die Dimension System erkennbar sein, aus welcher Quelle die Daten stammen (heute IRRP und IN, zukünftig MagentaForce, Sprinklr, ..).\n  Begründung:\ndie Daten gehören fachlogisch zusammen. Egal aus welchem Routingsystem sie stammen und wie sie dort heißen (z.B. Workitem, Interaction, Case, ...), handelt es sich um vergleichbare Vorgänge.\nNur bei einer gemeinsamen Datenquelle (hier: EWS) lässt sich in PowerBI eine Live-Verbindung erstellen. Bei Nichtumsetzung müssten die Daten aus verschiedenen Quellen importiert werden und in dem jeweiligen Bericht zusammengeführt werden.\nWichtig auch für das Mengen(reduktions-)programm, Forecasting, Workload/-force-Planung, dass die Daten aus den verschiedenen Routingsystemen, die im Service genutzt werden, an einer Stelle zusammengeführt werden.\n  Business Value\nOneForce Casemanagement hat die zMali-ID: GrK – 3097 d à 1,22 Mio. PAM mit u.a. Streams in JIRA:\nBasisaufwand im Bestand: (360 Grad Sicht im BC Case Management) 2 Min à 1,595 Mio. PAM\nKontaktmengen (Fullyear): (IRRP Menge KB, CRM-T Aktivität alle) à 0,334 Mio. PAM\nEinfache GF: (Chat Collobration und E-Mail to Case im BC Case Mnagagement) 3,7 Min à 2,951 Mio. PAM\n--> For details pls. see calculation attached on linked BE (Steckbrief page 2)\nStrategic Contribution (RROE)/ Time Criticality  (CoD)\nStrateg. Contribution: EOS 2.0 als integrierte Systemlösung is part of Big5+2 --> see RM24\nTime criticality: BE is seen in context retire IRRP and integration Sprinklr\n  2.  Portfolio Epic Description\nPortfolio Epic (Requirement and Scope) \nBestand dieses Portfolio Epic sind die mit der Fachseite abgestimmten Prio 1 Kennzahlen... Diese sind im Wiki dokumentiert\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2559345904\nBusiness Outcome (quantitative)\nSteuerung der Mengen und Zeiten im Casemangagement Service GrK \nTransparenz durch Kennzahlensteuerung analag bisheriger IRRP Datenmodell \nWorkforce Steuerung über neue Plattform \nAcceptance Criteria (conditions which must be satisfied for the PE to be accepted)\nDie Prio 1 Kennzahlen stehen rechtzeitig im EWS tabularen Datenmodell bereit.\n  Out of Scope\nFor Q1/2025:\nAlle Kennzahlen die nicht als Prio 1 Kennzahlen identifiziert wurden.\nDependencies \nKeine Abhängigkeiten derzeit erkennbar.\n  3. NFR (if any)\nNon functional requirements\n- Mit der täglichen Bereitstellung des tabularen Modells müssen auch diese Prio 1 Kennzahlen zur Verfügung stehen.\n  4. SLA(if any)\nService Level Agreements\n- \n  5. Solution Design \nArchitecture and Solution Design  \n- Entscheidung wird zwischen VSL und Domän Leads noch getroffen \n  Compliance evaluation\n- Compliance muss mit eingebunden. ",
+  "business_value": {},
+  "assignee": "Heike Reitz",
+  "priority": "",
+  "target_start": "2025-10-01",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "2025_Q4"
+  ],
+  "acceptance_criteria": [
+    "Die Prio 1 Kennzahlen stehen rechtzeitig im EWS tabularen Datenmodell bereit.",
+    "Alle Kennzahlen die nicht als Prio 1 Kennzahlen identifiziert wurden.",
+    "Keine Abhängigkeiten derzeit erkennbar.",
+    "Options",
+    "IN PROGRESS",
+    "CLOSED",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "demand_entry",
+      "title": "demand_entry Marking entrance topic via the central inbox."
+    },
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "GrK_Customer_Contact_Steering",
+    "RM2025_316",
+    "RM25_01",
+    "RM_2025",
+    "SO1",
+    "customer_contact_steering"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

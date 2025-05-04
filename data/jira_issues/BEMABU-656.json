@@ -1,0 +1,91 @@
+{
+  "key": "BEMABU-656",
+  "issue_type": "Business Initiative",
+  "title": "KEK Management - Zentraler Datenmasterschaft der KEK x für GK",
+  "status": "Funnel",
+  "description": "Description\nProblembeschreibung (ggf. Nutzungstatement)\nFür  TD GK B2B \ndie ab dem 01.11. Kunden mit unterschiedlichen Vertragsverhältnissen betreuen (TDG, DTBS, INT, MMS, T-Sec, IoT, T-System), muss eine Anpassung des KEK-Prozesses durchgeführt werden.\nHeute ist die KEK 4.5 eine Datenschutzeinwilligung mit Vertragsanalyse (zusätzlich zur Kanal Permission) für TDG rechtskonform. Kunden mit anderen Vertragsverhältnissen sind heute nicht berücksichtigt\nwodurch die TDG bei Datenschutzeinwilligung und UWG einen Rechtsverstoß aufzeigt,\nso dass  für Kunden außerhalb der TDG Datenschutzeinwilligung keine Vertragsanalysen und regelmäßigen werblichen Kontakt und Nurturing durchgeführt werden dürfte.\nIm B2B Umfeld wird heute die KEK (Datenschutzeinwilligung & Permission) über verschiedene Kanäle und in verschiedenen Systemen gepflegt.\nDie KEK für KMU Kunden wird am sogenannten DTAG (CRM-T Kundennummer, Carmen-Kundennummer) abgelegt. Dies beinhaltet eine Datenschutzeinwilligung und Permission auf Kunden/Vertrags-Ebene.\nDie Datenschutzeinwilligung der KEK für Kunden der Segmente Midmarket, Large Enterprise wird am sogenannten Geschäftspartner abgebildet. Die Permissions liegen auf Ansprechpartner-Ebene vor.\nFür B2B soll eine neue KEK eingeführt werden, welche auch weitere B2B relevante Konzerneinheiten beeinhaltet. Diese neue Version soll nach erfolgter Analyse systemisch in der B2B Welt eingeführt werden.\nBusiness Epic Outcome Hypothesis\nErfahrungswerte PK: Circa 1/3 aller Absätze sind KEK implicated (Auswertung Juni 24 , Bereich PVG), d.h. ohne KEK hätte man den Kunden nicht ansprechen können und es wäre zu keinem Absatz gekommen.\nObligatory (neue gesetzl./regulatorische Vorgabe)\nUnterlage zur Klassifizierung von Obligatory-Themen\nStrategischer Beitrag & zeitliche Kritikalität\nVermeidung eines regulatorischen Risikos wegen inkonsistenter KEK Daten. Der Verstoß gegen die DSGVO kann zu Strafzahlungen von bis zu 20 Mio. bzw. bis zu 4% des Konzernumsatzes zur Folge haben. In der Vergangenheit bewegen sich die Strafzahlungen bei 2.000 bis 500.000 EUR pro Fall.\nWenn PK ab Q2/2025 KEK X launcht, ist das nicht eine bloße Änderung des KEK Textes, sondern eine viel weitreichendere Änderung der Struktur der KEK mit Integration UWG 7.3, DSGVO 6.1.f und weiterer Consents in das neue Master-System (ConsentDPS).\nLeading Indicators\nDer Data Consent Master der Sales Enablement Platform tritt als neues Master-System für KEK/Permission Informationen der Geschäftspartner und deren kundenseitige Ansprechpartnerdaten auf und besitzt die Daten für das Geschäftsfeld Festnetz inkl. Ü-Wege und Mobilfunk\nHierfür erfolgt eine Übernahme der KEK Masterschaft für B2B in folgenden Systemen:\nMagentaForce\nTIVU/CRM-T\nCarmen\nServices@BNG\nLegacy-Systeme?\nweitere Systeme?\nDie heutigen Bestandssysteme müssen sich mit dem neuen Master-System synchronisieren.\nIn Scope / Akzeptanzkriterien\nÜbernahme der Datenmasterschaft der KEK/Permission Informationen der Geschäftspartner und deren kundenseitigen Ansprechpartner-Daten im Geschäftsfeld Festnetz inklusive Ü-Wege\nSynchronisation der KEK Daten mit T-IVU für KMU\nSynchronisation der KEK Daten mit MagentaForce und Marketing Automation für Midmarket, LargeEnterprise, Public\nÜbernahme der Datenmasterschaft der KEK/Permission Informationen der Geschäftspartner und deren kundenseitigen Ansprechpartner-Daten im Geschäftsfeld Mobilfunk\nSynchronisation der KEK Daten mit Carmen\nSynchronisation der KEK Daten mit weiteren Systemen/Consumenten (MMS, IoT, T-Sec, INT)\nSystemübergreifende Etablierung einer neuen KEK-Version mit Gültigkeit aller B2B Konzerneinheiten\nEinheitliches und rechtssicheres Statusmodell und Löschkonzept im Data Consent Master\nOut of scope\n  Abhängigkeiten (auch technisch)/Wechselbeziehungen\nErfoderliche Analyse in Q1 2025 BEMABU-1783",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "LaO_SEP"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-100898",
+      "title": "MAGBUS-100898",
+      "summary": "Anbindung ODE/ODL",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100898",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1387",
+      "title": "BEMABU-1387",
+      "summary": "KEK Historie GK",
+      "url": "https://jira.telekom.de/browse/BEMABU-1387",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1485",
+      "title": "BEMABU-1485",
+      "summary": "Datenmasterschaft Mobilfunk KEK/Permission Informationen",
+      "url": "https://jira.telekom.de/browse/BEMABU-1485",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1487",
+      "title": "BEMABU-1487",
+      "summary": "Datenmasterschaft Festnetz KEK/Permission Informationen",
+      "url": "https://jira.telekom.de/browse/BEMABU-1487",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1732",
+      "title": "BEMABU-1732",
+      "summary": "Synchronisation der KMU-B KEK/Permissions zwischen PK & GK",
+      "url": "https://jira.telekom.de/browse/BEMABU-1732",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1855",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/BEMABU-1855",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "BEMABU-1295",
+      "title": "BEMABU-1295",
+      "summary": "Masterschaft kundenseitige Ansprechpartner Daten Festnetz",
+      "url": "https://jira.telekom.de/browse/BEMABU-1295",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1302",
+      "title": "BEMABU-1302",
+      "summary": "Datenmasterschaft der kundenseitige Ansprechpartner aus MagentaForce übernehmen",
+      "url": "https://jira.telekom.de/browse/BEMABU-1302",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-1303",
+      "title": "BEMABU-1303",
+      "summary": "Datenmasterschaft der kundenseitigen Festnetz Ansprechpartner",
+      "url": "https://jira.telekom.de/browse/BEMABU-1303",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,43 @@
+{
+  "key": "MAGBUS-83020",
+  "issue_type": "Epic",
+  "title": "[NGMobile][ML][Research] Introducing Machine Learning to Optimize the Recommendation Service",
+  "status": "Closed",
+  "description": "Description\nEpic Summary: This epic aims to integrate machine learning into our recommendation service to enhance the quality and relevance of the recommended plans, included options in framework agreements, and ordered options. Initially, the focus will be on using recently ordered plans and recommended plans as training data. Later, more extensive and relevant customer data will be incorporated to refine the analyses.\nEpic Description: Our current recommendation service already provides recommended plans and options based on simple rules. To increase the accuracy and usefulness of these recommendations, we want to leverage machine learning. This will enable us to generate personalized and more precise recommendations based on customer behavior and preferences.\nAcceptance Criteria:\nThe machine learning model is successfully integrated into the recommendation service.\nRecommendation quality has demonstrably improved through the use of machine learning.\nAdditional customer data has been successfully integrated, leading to more precise recommendations.\nRegular evaluations and adjustments of the model are conducted to further optimize recommendation quality.\nDependencies:\nAvailability and quality of customer data\nResources and expertise in machine learning\nSupport from the development team for integration",
+  "business_value": {},
+  "assignee": "Holger Peters",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "The machine learning model is successfully integrated into the recommendation service.",
+    "Recommendation quality has demonstrably improved through the use of machine learning.",
+    "Additional customer data has been successfully integrated, leading to more precise recommendations.",
+    "Regular evaluations and adjustments of the model are conducted to further optimize recommendation quality.",
+    "Options",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "MB_Phoenix",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

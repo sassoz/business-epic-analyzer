@@ -1,0 +1,28 @@
+{
+  "key": "ZMKMTCR-9245",
+  "issue_type": "Epic",
+  "title": "PI25.1: Digitalisierung Zoom",
+  "status": "Open",
+  "description": "Description\nIn diesem Epic werden alle Userstories zusammengefasst, die dazu beitragen die Prozessierung des Produkts Zoom zu digitalisieren mit dem Ziel einen \"Zero Touch\" Prozess zu etablieren",
+  "business_value": {},
+  "assignee": "Nicole Meinhart",
+  "priority": "",
+  "target_start": "2025-01-06",
+  "target_end": "2025-03-31",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "ZMKM",
+      "title": "ZMKM ZMKM"
+    },
+    {
+      "code": "ZMKM_AD-CAPEX",
+      "title": "ZMKM_AD-CAPEX "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

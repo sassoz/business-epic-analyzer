@@ -1,0 +1,26 @@
+{
+  "key": "EOS-7093",
+  "issue_type": "Epic",
+  "title": "LOM to MAPI: CAIMAN Anbindung an EOS",
+  "status": "Funnel",
+  "description": "Description\n Story\nAls PO\nmöchte ich mit den MAPIs User to maschiene kommunizieren können,\num nachvollziehen zu können, wer eine Kommunikation startet\n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-04-25",
+  "target_end": "2025-06-05",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [
+    "EOS ist an CAIMAN angebunden.",
+    "EOS kann damit mit den MAPIs \"User to maschiene\" kommunizieren."
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI28"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

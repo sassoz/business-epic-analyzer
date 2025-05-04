@@ -1,0 +1,83 @@
+{
+  "key": "BEB2B-310",
+  "issue_type": "Business Epic",
+  "title": "B2B Business Epic AlarmRuf Betrieb & Service sicherstellen",
+  "status": "Backlog for Analysis",
+  "description": "Business Scope:\nAlarmRuf Betrieb über 2025 hinaus sicherstellen\nAGB-Produkt mit einer Kündigungsfrist von >12 Monaten",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "AlarmRuf Betrieb über 2025 hinaus sicherstellen",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Schäfer, Hubert",
+  "priority": "",
+  "target_start": "2025-02-14",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Den Betrieb des Produktes AlarmRuf für die Jahre 2026 und 2027 mit einer Verfügbarkeit von 99,8 % sicherstellen.",
+    "Budget für Betrieb und Technik (IT & Technik) wird zu Verfügung gestellt.",
+    "Budget für die Migration auf eine andere Plattform, wenn die VASP 2026 ausläuft wird zu Verfügung gestellt.",
+    "Plattform bis spätestens Ende 2025 bereitgestellt und die Kunden dorthin migrieren.",
+    "Der Betrieb der neuen Plattform soll durch eine B2B-Domain erfolgen.",
+    "Die Kundenselbstadministration und die Oberfläche für den DT-Kundenservice müssen ein barrierefrei sein und ein entsprechendes Testat muss vorliegen.",
+    "AlarmRuf ist ein AGB-Produkt. Das Produkt muss der Leistungsbeschreibung entsprechen:",
+    "https://www.telekom.de/agb/downloads/53752.pdf"
+  ],
+  "components": [
+    {
+      "code": "B2B_Architektur",
+      "title": "B2B_Architektur "
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "Portfolio"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2024_11_15_AlarmRuf (003).pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5499186/2024_11_15_AlarmRuf%20%28003%29.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "312 kB",
+      "date": "2025-03-13T15:49:11.734+01:00"
+    },
+    {
+      "filename": "20241125_Alarmruf.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5499193/20241125_Alarmruf.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "91 kB",
+      "date": "2025-03-13T15:51:37.608+01:00"
+    },
+    {
+      "filename": "2025-02-02-GK30 AlarmRuf.docx",
+      "url": "https://jira.telekom.de/secure/attachment/5499185/2025-02-02-GK30%20AlarmRuf.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "44 kB",
+      "date": "2025-03-13T15:48:35.654+01:00"
+    }
+  ]
+}

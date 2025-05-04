@@ -1,0 +1,58 @@
+{
+  "key": "BEMABU-2259",
+  "issue_type": "Business Epic",
+  "title": "Sales Enablement Tool",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\n  Problem:\nBestandssysteme sind dazu ungeeignet (MagentaInfo), Nutzung von verschiedene, nicht kompatible Systeme verhindern die effizientere Vertriebswege.\nEnablement- und Marketing-Teams investieren Zeit, Energie und Budget in die Erstellung von Inhalten für Vertriebsmitarbeiter.\nWenn die Vertriebsmitarbeiter diese Inhalte jedoch nicht nutzen oder nicht finden können, ist der ganze Aufwand umsonst.\nSales muss immer bestens informiert sein und muss auf aktuellen Informationsstand abgeholt werden.\nEine Kombination aus intelligenten Vorschlägen und semantischer Suche stellt sicher, dass Inhalte und Verkäufe gleichzeitig die Produktivität steigern.\nDie Software ermöglicht es Teams, mit Kunden in Verbindung zu treten und Inhalte über Bildschirmfreigabe, E-Mail und Mobilgeräte zu verteilen, und stellt gleichzeitig Echtzeitbenachrichtigungen und handlungsorientierte Informationen bereit.\nRelevante Vertriebsinhalte schnell finden\nRelevante Inhalte stets verfügbar mit kuratierten Kollektionen und Anleitung, wie und wann sie zu nutzen sind. Intuitive, KI-gestützte Suche und Empfehlungen sparen Zeit für Fokus auf die Kundenansprache.\nOptimierte Organisation von Inhalten\nFörderung der Akzeptanz von Inhalten, indem Sammlungen organisieren und präsentieren, die auf bestimmte Verkaufsszenarien oder Kundenbedürfnisse zugeschnitten sind. So haben Vertriebsmitarbeiter einfachen Zugriff auf die wichtigsten Materialien.\nGovernance von Inhalten vereinfachen\nGlobale Governance-Tools überprüfen Inhalte auf Effizienz, Einhaltung von Markenkonsistenz und stellen sicher, dass die Assets konform und aktuell sind und zum gewünschten Geschäftserfolg führen.\n  Was ist die Differenzierung - das \"Warum\"?\nSo haben Vertriebler direkten Zugriff auf die neuesten Contents, die am besten zum jeweiligen Kunden passen.\nEs schafft eine “360-Grad-Übersicht auf Account-Ebene”. \nDer Vertrieb gewinnt Zeit für seine eigentliche Arbeit: Verkaufen.\nDie Lösung liefere direkt alle relevanten Daten. Dank CRM-Integration erhalten Vertriebsmitarbeiter gezielt Content-Empfehlungen, die für jeden Account individuell ausgesteuert werden.\nDamit kann der Verkäufer den Kunden genau dort abholen, wo er gerade steht.\n      Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n        MagentaForce DOM0201 Matthias Hoffmann  \n          BEO und ggf. Vertreter Jennifer Litterscheid\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nRelevante Vertriebsinhalte schnell finden (Dokumentenmanagement), Optimierte Organisation von Inhalten, Governance von Inhalten vereinfachen.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "> 6.000 T€",
+      "cost_saving": ">1.500 T€",
+      "risk_loss": ">1.500 T€",
+      "justification": "Leads erreichen durch weiteres Nurturing über Outbound einen höheren Reifegrad. Dadurch erhalten wir ein höheres Commitment des vertriebs und die Leads werden auch wertvoller zugestellt und abgearbeitet. Prozessvereinfachung des Outboundmaßnahmen in GK-VM, GK-LE und Public. Dadurch können mehr Kundenangänge produziert werden."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "mittelfristige Reduzierung von Wartungs- und Änderungsrisiken",
+      "strat_enablement": "Erhöht die Kundenerfahrung/-bindung oder das TD-Image in besonderem Maße, z. B. einzigartiger Login, Prozessvereinfachung oder disruptive/architektonische Innovation",
+      "justification": "Transparente E2E-Leadbearbeitung zwischen CRM und dem Callcenter-Tool. Leads oder ASP-Kunden können zwischen Marketing, Sales und externe Callagentur bearbeitet werden."
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.10.2025 Plan Ende/Launch:",
+      "justification": ""
+    }
+  },
+  "assignee": "Litterscheid, Jennifer",
+  "priority": "",
+  "target_start": "2025-10-01",
+  "target_end": "2025-12-31",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Nahtlose Interaktion: keine Medienbrüche. Versenden/suchen von Dokumente direkt über MagentaForce",
+    "Passende Inhalte zum richtigen Zeitpunkt bereitstellen, um Geschäftszyklen zu beschleunigen",
+    "Sammlungen verwandter Inhalte, die auf die Bedürfnisse der Verkäufer in verschiedenen Verkaufsszenarien und -initiativen abgestimmt sind"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2025-02-20-13-44-34-285.png",
+      "url": "https://jira.telekom.de/secure/attachment/5422995/image-2025-02-20-13-44-34-285.png",
+      "mime_type": "image/png",
+      "size": "280 kB",
+      "date": "2025-02-20T13:44:34.626+01:00"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "key": "SNOWTC-10928",
+  "issue_type": "Epic",
+  "title": "Enabler: SN@TC: Integrate DTA WMS-TK via API into SDX Plattform (simple orders < 1day)",
+  "status": "Closed",
+  "description": "Description\nFirst details see attachment; Contact person WMS-TK APIs: Michael Wald",
+  "business_value": {},
+  "assignee": "Sven Schmeller",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "ServiceNow SD LAN/WiFi Release 1.0"
+  ],
+  "acceptance_criteria": [
+    "logic to differentiate between simple / complex field service orders is implemented",
+    "connection to WMS-TK: Appointment-API (TMF646) and Workorder-API (TMF-697) is established",
+    "API for return messages is implemented",
+    "use cases/workflows to use WMS-TK interfaces and return messages are defined and implemented",
+    "\"simple orders\" are send via defined APIs (Provide Appointment-API (TMF646) and Workorder-API (TMF-697)) to WMS-TK"
+  ],
+  "components": [],
+  "labels": [
+    "OKR_Q4_Exploration_DTA-Anbindung:SNow/WMS-TK_API_und_Orderform_SeCe-IT",
+    "SDLA_VS_Order_Management",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "service Now@TC  https___jira_devops_telekom_de_browse_WOM-3353_ https___jira_devops_telekom_de_browse_SDLA-999.msg",
+      "url": "https://jira.telekom.de/secure/attachment/2504129/service%20Now%40TC%20%20https___jira_devops_telekom_de_browse_WOM-3353_%20https___jira_devops_telekom_de_browse_SDLA-999.msg",
+      "mime_type": "application/octet-stream",
+      "size": "",
+      "date": "2022-08-11T17:22:00.000+02:00"
+    }
+  ]
+}

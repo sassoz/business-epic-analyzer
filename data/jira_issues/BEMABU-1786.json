@@ -1,0 +1,35 @@
+{
+  "key": "BEMABU-1786",
+  "issue_type": "Business Initiative",
+  "title": "Systemübergreifende Konsolidierung der KEK insbesondere Kanal-Permissionen",
+  "status": "Funnel",
+  "description": "Description\nBeschreibung der Maßnahme\nFür  TD GK B2B (KMU, Midmarket, LargeEnterprise, Public)die eine Konzerneinwilligungsklausel abgeben oder widerrufen,\nist  eine systemübergreifende Konsolidierung der KEK insbesondere der Kanal-Permission für die Person notwendig. Dubletten der Personen und inkonsistente Permissionen \nwodurch wir einen Single Point of Truth der KEK und Kanal Permissionen erzeugen und systemübergreifend immer den aktuellen Stand der KEK (Datenschutzeinwilligung und Kanal-Permission) besitzen und Dubletten der Personen und inkonsistente Permissionen vermeiden.\nso dass wir innerhalb GK eine rechtssichere Abbildung der KEK besitzen\n\nund nicht wie bisher Inkonsistente Daten und unzählige Dubletten zwischen und innerhalb den Systemen Carmen, CRM-T und MagentaForce besitzen.\nDas Vorhaben schafft einen Single Point of Truth für die Konzerneinwilligungsklausel innerhalb GK mit einer konsolidierten Sicht auf die Person. An der Person ist immer die aktuell gültige KEK (Datenschutzeinwilligung und Kanal-Permission abgebildet, unabhängig ob diese Information durch Carmen, CRM-T oder MagentaForce erfasst wurde. Die Systeme werden über den Zentralen Master synchron gehalten.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "LaO_SEP"
+  ],
+  "realized_by": [
+    {
+      "key": "BEMABU-2048",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/BEMABU-2048",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

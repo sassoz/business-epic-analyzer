@@ -1,0 +1,23 @@
+{
+  "key": "MAGBUS-101866",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B/DOT: Company Flex - New Product Acquisition (create basic instance)",
+  "status": "Funnel",
+  "description": "Description\nThe objective of this portfolio epic is to enable the existing M-API integration to create product orders for complex B2B product portfolio (Company Flex - create basic instance & add location products).",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "Enabler",
+    "Mapis4B2B"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

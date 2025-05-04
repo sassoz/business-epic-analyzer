@@ -1,0 +1,553 @@
+{
+  "epicId": "BEIOT-185",
+  "title": "M2M Reporting 2025",
+  "ziele": {
+    "gesamtziel": "Bereitstellung eines modernen, skalierbaren und AI-gestützten M2M Reporting- und Analytics-Systems als integraler Bestandteil des IoT-Konnektivitätsprodukts. Ziel ist es, Kunden, Management und internen Nutzern umfassende, zuverlässige und benutzerfreundliche Reporting- und Analysefunktionen bereitzustellen, um IoT-Projekte zu optimieren, Umsätze zu steigern und regulatorische Anforderungen zu erfüllen. Die Umsetzung erfolgt schrittweise im Zeitraum 01.01.2025 bis 31.12.2025.",
+    "einzelziele": [
+      "Implementierung eines M2M Self Service Portals, das als zentrale Plattform für Reporting und Analysen für Kunden, Management und interne Nutzer dient.",
+      "Automatisierte Bereitstellung von Automotive-Umsatzdatenberichten für die Deutsche Telekom IoT GmbH.",
+      "Effiziente Bearbeitung und Unterstützung von Serviceanfragen im Zusammenhang mit dem M2M Self Service Portal.",
+      "Aggregation und Analyse von Nutzungsdaten für das Data Best Pool Modell im Self Service Portal.",
+      "Integration der Data Best Modell-Logik in die SIM_PROFILE- und INVOICE-Ordner des Portals.",
+      "Einführung der Business Partner ID (GP-ID) für den AKP-Export.",
+      "Erweiterung und Optimierung des Datenmodells für Data Best im Self Service Portal.",
+      "Erstellung von Static Pool Reports und spezifischen Nutzungs- und Umsatzberichten für Data Best Kunden.",
+      "Optimierung des POOL_OVERUSAGE-Reportings für den Vertrieb.",
+      "Optimierung und Erweiterung der Preisinformationen und Reportlogik im Portal.",
+      "Durchführung von Impact Analysen und Anpassungen des Reportings bei Änderungen im TMSP-Quellsystem.",
+      "Optimierung der SIM Material Billing Funktionalitäten.",
+      "Optimierung und Erweiterung von Standard-Reports.",
+      "Erstellung und Pflege eines umfassenden User Manuals für das Self Service Portal.",
+      "Kundenspezifische Pooling Aggregation Reports (z.B. für Bosch)."
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 20,
+      "beschreibung": "Das gesamte DT IoT Connectivity Geschäft ist gefährdet, wenn die Anforderungen nicht umgesetzt werden. Es steht ein Umsatz von 245 Mio. € (2025) und insgesamt 641,9 Mio. € (2025-2028) auf dem Spiel. Die Lösung sichert die Kundenbindung durch ein modernes Reporting, ermöglicht dem Management die Überwachung und Optimierung des Geschäfts und unterstützt interne Nutzer bei der Produktoptimierung und Umsatzsteigerung."
+    },
+    "strategicEnablement": {
+      "skala": 20,
+      "beschreibung": "Das Vorhaben ist von hoher strategischer Bedeutung für die gesamte DTAG und ein Innovationstreiber in der Branche. Es minimiert das Risiko von Imageschäden, sichert die Wettbewerbsfähigkeit, ermöglicht den Gewinn neuer M2M-Kunden und verhindert die Abwanderung bestehender Kunden."
+    },
+    "timeCriticality": {
+      "skala": 3,
+      "beschreibung": "Die Umsetzung ist zeitkritisch und für das Geschäftsjahr 2025 geplant (01.01.2025 - 31.12.2025). Die Realisierung erfolgt schrittweise über das gesamte Jahr 2025."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "DATAFAB-29354",
+      "titel": "M2M self service portal (2025)",
+      "funktionalitäten": [
+        "Bereitstellung eines zentralen Self Service Portals für Reporting und Analysen für Kunden, Management und interne Nutzer.",
+        "Integration von AI-gestütztem Reporting, Customer API, Self-Service-Reporting und Ad-hoc-Analysen.",
+        "Single Sign-On über die gesamte IoT-Landschaft inklusive Reporting."
+      ]
+    },
+    {
+      "id": "DATAFAB-29355",
+      "titel": "[T-Digital] M2M self service portal (IT)",
+      "funktionalitäten": [
+        "Umsetzung und technische Weiterentwicklung des M2M Self Service Portals.",
+        "Integration und Optimierung von Berichtslogik, Datenmodellen und Schnittstellen.",
+        "Unterstützung zahlreicher Teilprojekte (z.B. Automotive Reporting, Data Best Modell, Pooling, Preisinformationen, User Manual)."
+      ]
+    },
+    {
+      "id": "DATAFAB-35114",
+      "titel": "M2M Automotive Reporting Delivery Q2",
+      "funktionalitäten": [
+        "Automatisierte Bereitstellung von Automotive-Umsatzdatenberichten für die Deutsche Telekom IoT GmbH.",
+        "Versand der Berichte an jedem 1. und 16. eines Monats per verschlüsselter E-Mail.",
+        "Nutzung bestehender Systemdaten ohne Neuentwicklung."
+      ]
+    },
+    {
+      "id": "DATAFAB-34733",
+      "titel": "Support for M2M Self Service Portal requests in Q2",
+      "funktionalitäten": [
+        "Effiziente Bearbeitung von Serviceanfragen und Support für das M2M Self Service Portal.",
+        "Laufende Überwachung und Dokumentation von Kundenfeedback und Support-Tickets.",
+        "Sicherstellung der zeitnahen Lösung von Problemen und prozeduralen Anfragen."
+      ]
+    },
+    {
+      "id": "DATAFAB-27185",
+      "titel": "Aggregation Usage data for Data Best in M2M Self Service Portal",
+      "funktionalitäten": [
+        "Aggregation und Analyse von Nutzungsdaten für das Data Best Pool Modell.",
+        "Bereitstellung konsolidierter Nutzungsdaten in täglichen und monatlichen Ordnern.",
+        "Vergleich und Analyse von Data Best und anderen Tarifnutzungen."
+      ]
+    },
+    {
+      "id": "DATAFAB-28376",
+      "titel": "Enhance SIM_PROFILE folder with Data Best model logic in M2M Self Service Portal",
+      "funktionalitäten": [
+        "Integration der DATA_BEST Modell-Logik in den SIM_PROFILE-Ordner.",
+        "Erweiterung der Attributstruktur für umfassendere Berichte.",
+        "Verbesserung der Datenmanagement- und Analysefunktionen."
+      ]
+    },
+    {
+      "id": "DATAFAB-28651",
+      "titel": "Enhance INVOICE folder with Data Best model logic in M2M Self Service Portal",
+      "funktionalitäten": [
+        "Integration der DATA_BEST Modell-Logik in den INVOICE-Ordner.",
+        "Erweiterung um neue Attribute und Beziehungen für bessere Analysen.",
+        "Sicherstellung der Kompatibilität mit bestehenden Funktionen."
+      ]
+    },
+    {
+      "id": "DATAFAB-28843",
+      "titel": "Introduce business partner ID (GP-ID) for updating AKP export",
+      "funktionalitäten": [
+        "Einführung der Business Partner ID (GP-ID) als Attribut im AKP-Export.",
+        "Anpassung der TMSP-AKP-Schnittstelle zur verbesserten Datenreferenzierung.",
+        "Erleichterung der Kundenanlage und Datenabgleiche."
+      ]
+    },
+    {
+      "id": "DATAFAB-34594",
+      "titel": "Enhance Data Best Model in M2M Self Service Portal: Part 2",
+      "funktionalitäten": [
+        "Erweiterung des Datenmodells für Data Best im Self Service Portal.",
+        "Vorbereitung für die Entwicklung neuer Data Best Funktionalitäten.",
+        "Verbesserung der Berichtserstellung und Datenanalyse."
+      ]
+    },
+    {
+      "id": "DATAFAB-28879",
+      "titel": "Static Pool Report in M2M Self Service Portal",
+      "funktionalitäten": [
+        "Erstellung eines Static Pool Reports für Data Best Kunden.",
+        "Bereitstellung von Informationen zu Datenvolumen, Roaming-Pools und Umsätzen.",
+        "Anzeige von Daten für die letzten 3, 6 oder 12 Monate."
+      ]
+    },
+    {
+      "id": "DATAFAB-32156",
+      "titel": "Data Best Usage and Revenue Report in M2M Self Service Portal",
+      "funktionalitäten": [
+        "Bereitstellung von Nutzungs- und Umsatzberichten für Data Best Kunden.",
+        "Aggregation von Nutzungs- und Umsatzdaten nach Produkt, Standard- und Kundenangebot.",
+        "Integration von Rechnungsinformationen in die DATA_BEST-Ordner."
+      ]
+    },
+    {
+      "id": "DATAFAB-34732",
+      "titel": "M2M Self Service Portal: POOL_OVERUSAGE optimization for Sales",
+      "funktionalitäten": [
+        "Optimierung des POOL_OVERUSAGE-Reportings für den Vertrieb.",
+        "Erweiterung um neue Attribute (z.B. SALES_SEGMENT, GP_ID).",
+        "Anpassung der Logik zur Aggregation und Filterung von Übernutzungen."
+      ]
+    },
+    {
+      "id": "DATAFAB-34791",
+      "titel": "M2M Self Service Portal: Pricing info optimization Part 2",
+      "funktionalitäten": [
+        "Optimierung der Preisinformationen und Erweiterung der Attributlogik.",
+        "Integration neuer Attribute für Umsatzberechnungen und Produktlogik.",
+        "Erweiterung der iPFR-Logik um neue Produkte und Preismodelle."
+      ]
+    },
+    {
+      "id": "DATAFAB-35409",
+      "titel": "TMSP Impact analysis for Q2",
+      "funktionalitäten": [
+        "Durchführung von Impact Analysen bei Änderungen im TMSP-Quellsystem.",
+        "Anpassung des Reportings an Systemänderungen.",
+        "Sicherstellung der Datenintegrität und Systemperformance."
+      ]
+    },
+    {
+      "id": "DATAFAB-34844",
+      "titel": "M2M Self Service Portal: SIM Material Billing enhancement",
+      "funktionalitäten": [
+        "Optimierung der SIM Material Billing Funktionalitäten.",
+        "Remapping von Attributen und Erweiterung der SIM-Order-Ordner.",
+        "Verbesserung der Datenqualität und Usability."
+      ]
+    },
+    {
+      "id": "DATAFAB-33641",
+      "titel": "M2M STD Reports Optimization & Enhancement",
+      "funktionalitäten": [
+        "Optimierung und Erweiterung bestehender Standard-Reports.",
+        "Hinzufügen neuer Felder und Übersetzungen.",
+        "Behebung von Performance- und Usability-Problemen."
+      ]
+    },
+    {
+      "id": "DATAFAB-34067",
+      "titel": "M2M Self Service Portal optimization",
+      "funktionalitäten": [
+        "Optimierung der Preis- und Pooling-Informationen im USAGE-Ordner.",
+        "Erweiterung der Optionen für MRC und OTC Preise.",
+        "Verbesserung der Usability und Performance."
+      ]
+    },
+    {
+      "id": "DATAFAB-34287",
+      "titel": "M2M Self Service Portal: New LPWA reporting folder",
+      "funktionalitäten": [
+        "Erstellung eines neuen LPWA-Reporting-Ordners.",
+        "Integration von Attributen aus INVOICE, SIM_PROFILE und DIMENSIONAL.",
+        "Ermöglichung von LPWA-spezifischen Berichten und SIM-Analysen."
+      ]
+    },
+    {
+      "id": "DATAFAB-34845",
+      "titel": "M2M Self Service Portal: Sales reporting",
+      "funktionalitäten": [
+        "Optimierung der Pooling- und Umsatzinformationen für Standard- und Kundenangebote.",
+        "Erweiterung der INVOICE-Ordner für bessere Umsatzanalysen.",
+        "Verbesserung der Datenaufbereitung für den Vertrieb."
+      ]
+    },
+    {
+      "id": "DATAFAB-34083",
+      "titel": "AES export filenames change (Full Delivery)",
+      "funktionalitäten": [
+        "Anpassung der Export-Filenames für die AES-Schnittstelle.",
+        "Optimierung der Datenübertragung und Vermeidung von Datenverlust.",
+        "Automatisierung der Dateibenennung für Voll-Exporte."
+      ]
+    },
+    {
+      "id": "DATAFAB-30007",
+      "titel": "M2M Reports Optimization & Enhancement",
+      "funktionalitäten": [
+        "Optimierung und Erweiterung bestehender Berichte.",
+        "Behebung bekannter Probleme und Performance-Optimierung.",
+        "Erhöhung der Kundenzufriedenheit durch stabile Berichtslandschaft."
+      ]
+    },
+    {
+      "id": "DATAFAB-30217",
+      "titel": "M2M Self Service Portal V1.9 Pricing info optimization",
+      "funktionalitäten": [
+        "Optimierung der Preisinformationen im iPFR-Ordner.",
+        "Erweiterung um Subunit-Informationen und Testtarifpreise.",
+        "Verbesserung der Datenstruktur für Preisauswertungen."
+      ]
+    },
+    {
+      "id": "DATAFAB-30320",
+      "titel": "M2M Self Service Portal: SIM Profile optimization with Tariff change report",
+      "funktionalitäten": [
+        "Integration von Tarifwechsel-Daten für SIM-Karten.",
+        "Bereitstellung von Berichten zu Tarifwechseln der letzten 12/24 Monate.",
+        "Erweiterung der Analysefunktionen für Profit/Loss-Bewertungen."
+      ]
+    },
+    {
+      "id": "DATAFAB-30708",
+      "titel": "M2M Self Service Portal V1.11 Individual Pricing info extension",
+      "funktionalitäten": [
+        "Integration des MRC_AMOUNT_NET-Attributs für Umsatzberechnungen.",
+        "Bereitstellung von Pool-Volumeninformationen für Pooling-Tarife.",
+        "Erweiterung der Preisanalysefunktionen."
+      ]
+    },
+    {
+      "id": "DATAFAB-30709",
+      "titel": "M2M Self Service Portal V1.12 Sales reporting",
+      "funktionalitäten": [
+        "Optimierung der Pooling- und Umsatzinformationen für Standard- und Kundenangebote.",
+        "Erweiterung der USAGE-Ordner für bessere Vertriebsanalysen.",
+        "Verbesserung der Datenaufbereitung für den Vertrieb."
+      ]
+    },
+    {
+      "id": "DATAFAB-31283",
+      "titel": "M2M Self Service Portal V1.13 SIM Material Billing enhancement",
+      "funktionalitäten": [
+        "Optimierung der SIM Material Billing Funktionalitäten.",
+        "Remapping von Attributen und Erweiterung der SIM-Order-Ordner.",
+        "Verbesserung der Datenqualität und Usability."
+      ]
+    },
+    {
+      "id": "DATAFAB-31532",
+      "titel": "M2M Self Service Portal V1.14 MECC Heartbeat Tariff",
+      "funktionalitäten": [
+        "Integration neuer Attribute für MECC (Heartbeat Tarife).",
+        "Abbildung spezieller LTF- und MRC-Tarife für MECC-Kunden.",
+        "Erweiterung der Tariflogik im Self Service Portal."
+      ]
+    },
+    {
+      "id": "DATAFAB-31756",
+      "titel": "M2M Self Service Portal optimization and improving",
+      "funktionalitäten": [
+        "Optimierung der INVOICE- und POOLING-Attribute.",
+        "Erweiterung der Contingent-Informationen.",
+        "Entfernung redundanter Attribute zur Verbesserung der Datenqualität."
+      ]
+    },
+    {
+      "id": "DATAFAB-31768",
+      "titel": "M2M Reports Optimization & Enhancement",
+      "funktionalitäten": [
+        "Erweiterung bestehender Berichte um das Feld REMAINING_SUSPENSION_DAYS.",
+        "Anpassung der Reportlogik und Benutzerhandbuch.",
+        "Verbesserung der Transparenz für Kunden."
+      ]
+    },
+    {
+      "id": "DATAFAB-31891",
+      "titel": "Support for M2M Self Service Portal requests",
+      "funktionalitäten": [
+        "Effiziente Bearbeitung von Serviceanfragen und Support für das M2M Self Service Portal.",
+        "Sicherstellung der zeitnahen Lösung von Problemen und prozeduralen Anfragen.",
+        "Laufende Überwachung und Dokumentation von Kundenfeedback und Support-Tickets."
+      ]
+    },
+    {
+      "id": "DATAFAB-31892",
+      "titel": "M2M Automotive Reporting Delivery",
+      "funktionalitäten": [
+        "Automatisierte Bereitstellung von Automotive-Umsatzdatenberichten für die Deutsche Telekom IoT GmbH.",
+        "Versand der Berichte an jedem 1. und 16. eines Monats per verschlüsselter E-Mail.",
+        "Nutzung bestehender Systemdaten ohne Neuentwicklung."
+      ]
+    },
+    {
+      "id": "DATAFAB-31937",
+      "titel": "M2M Self Service Portal: POOL_OVERUSAGE optimization for Sales",
+      "funktionalitäten": [
+        "Optimierung des POOL_OVERUSAGE-Reportings für den Vertrieb.",
+        "Erweiterung um neue Attribute (z.B. SALES_SEGMENT, GP_ID).",
+        "Anpassung der Logik zur Aggregation und Filterung von Übernutzungen."
+      ]
+    },
+    {
+      "id": "DATAFAB-31950",
+      "titel": "Creation of User Manual for M2M Self Service Portal",
+      "funktionalitäten": [
+        "Erstellung eines umfassenden User Manuals für das M2M Self Service Portal.",
+        "Bereitstellung von Schritt-für-Schritt-Anleitungen, Screenshots und FAQs.",
+        "Verbesserung der Nutzerautonomie und Reduktion von Supportanfragen."
+      ]
+    },
+    {
+      "id": "DATAFAB-32452",
+      "titel": "Enhance Data Best Model in M2M Self Service Portal",
+      "funktionalitäten": [
+        "Erweiterung des Datenmodells für Data Best im Self Service Portal.",
+        "Vorbereitung für die Entwicklung neuer Data Best Funktionalitäten.",
+        "Verbesserung der Berichtserstellung und Datenanalyse."
+      ]
+    },
+    {
+      "id": "DATAFAB-34887",
+      "titel": "New Customer-specific Pooling Aggregation Report",
+      "funktionalitäten": [
+        "Erstellung eines kundenspezifischen Pooling Aggregation Reports (z.B. für Bosch).",
+        "Aggregation von SIM-Daten nach kundenspezifischer Logik.",
+        "Bereitstellung des Reports im WEBi-Interface mit CSV-Download."
+      ]
+    },
+    {
+      "id": "DATAFAB-35411",
+      "titel": "User Manual for M2M Self Service Portal",
+      "funktionalitäten": [
+        "Erstellung und Bereitstellung eines User Manuals für das M2M Self Service Portal.",
+        "Abdeckung aller Schlüsselfunktionen und Integration von visuellen Hilfsmitteln.",
+        "Verfügbarkeit als digitale PDF-Version für alle Nutzergruppen."
+      ]
+    },
+    {
+      "id": "DATAFAB-35773",
+      "titel": "M2M Self Service Portal: Sales reporting",
+      "funktionalitäten": [
+        "Optimierung der Pooling- und Umsatzinformationen für Standard- und Kundenangebote.",
+        "Erweiterung der USAGE-Ordner für bessere Vertriebsanalysen.",
+        "Verbesserung der Datenaufbereitung für den Vertrieb."
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "All NatCos und ihre Kunden haben Zugang zum Reporting-Portal und können Standard-, Rechnungsbegleit- und kundenspezifische Berichte ad-hoc erstellen, analysieren und exportieren.",
+    "AI-gestütztes IoT-Reporting ist verfügbar.",
+    "Customer API ist verfügbar.",
+    "Customer Self-Service Reporting ist verfügbar.",
+    "Single Sign-On über die gesamte IoT-Landschaft inklusive Reporting ist verfügbar.",
+    "Self-Service Reporting für interne Nutzer der NatCos ist verfügbar.",
+    "Provide Automotive revenue data reports for Deutsche Telekom IoT GMBH.",
+    "All Service Requests for M2M Self Service Portal are completed",
+    "Aggregated usage data for Data Best is added in USAGE Daily and Monthly folders.",
+    "It is be possible to analyze Data Best Pool Model usages together with all other usages by using existing attributes.",
+    "Data consumption values is correct for Data Best.",
+    "Data Best Pool model works in SIM_PROFILE  folder of M2M Self Service Portal with new and old attributes.",
+    "Data Best Pool model works in INVOICE folder of M2M Self Service Portal with new and old attributes.",
+    "New Business Partner-ID (GP_ID) attribute is available in AKP export in 30 Übergeordnete Geschäftskundennummer (Kundennummer) column.",
+    "GP_ID can be empty (null). Empty field should not lead to the error in aggregations/export jobs.",
+    "Data model for Data Best is enhanced in  M2M Self Service Portal.",
+    "New attributes are added in Self Service Portal.",
+    "New Static Pool report is created.",
+    "Static Pool report is generated for Data Best Customers only.",
+    "Static Pool report shows information for last 3(6/12) month.",
+    "Invoice-related information is added into DATA_BEST folder.",
+    "Aggregated usage information is available per Product, per Standard offering, per Customer Offering.",
+    "Total Usage data is available per product",
+    "Aggregated Revenue (OTC, MRC, Charges per Usages) is available per Product, Per Standard offering, Per Customer offering.",
+    "SALES_SEGMENT is added into POOL_OVERUSAGE folder.",
+    "The scheduled job is changed to include 2 new attribute into export: GP_ID and SALES_SEGMENT",
+    "Overusage logic is added to see the overusage for the whole monitoring period and not for the each month.",
+    "Logic is adapted  to see only rows with Overusage amount >0",
+    "Specific export for Sales department with only required fields included is created.",
+    "Subunit info reportable under Partner in iPFR",
+    "OTC price for Test tariff in IPFR",
+    "New MRC_AMOUNT_NET attribute is available for calculating revenue for MRC charges.",
+    "iPFR folder logic is extended with Campus PLS product",
+    "Charge type value is added for  Pool Overusage instead of Others in CHARGE_MODE in iPFR folder.",
+    "Impact analysis is performed.",
+    "Reporting system is adapted to changes",
+    "All type of SIM-orders are available in SIM order folders",
+    "Mapping for SIM_MATERIAL_BILLING attributes are changed.",
+    "REMAINING_SUSPENSION_DAYS is added  in 018_STD_SIM_BASICDATA report.",
+    "STD SIM Order report is enhanced with new Delivery note Number value",
+    "STD INVOICE Drill Down reports are translated to English",
+    "ACTIVE_SIMS in DASHBOARD is correctly displayed.",
+    "PEIOD is added to STD ARV USAGE_BY_TYPE_AND_COUNTRY",
+    "User Manual is updated.",
+    "Price per SIM charge mode  is set to MRC.",
+    "Options MRC and OTC prices in USAGE folder are available.",
+    "Pooling info is optimized in USAGE folder",
+    "Adding new attributes for LPWA folder",
+    "New reporting folder for LPWA is working as expected",
+    "Pooling info is optimized for Standard and Customer offerings in USAGE folder.",
+    "Charges info for Standard and Customer offerings is available in USAGE folder.",
+    "Options information is optimized in INVOICE folder.",
+    "INVOICE folder is optimized  to see changes for STANDARD_OFFERING information. Charges and usages aggregated on Standard Offering level, so Customers can calculate the total revenue for standard products.",
+    "INVOICE folder is optimized to see Revenue info for Products.",
+    "Extended Contingent info is available in M2M Self Service Portal.",
+    "Remove ACTIVE_SIMS attribute from the INVOICE/INVOICE folder",
+    "Optimize POOLING attribute to make it possible be used as an Input control filter",
+    "Remove PLS info from SIM_PROFILE folder to avoid context errors",
+    "Tariff change dates are available for analysis of profits/losses in M2M Self Service Portal.",
+    "With new attributes it should be possible to get report for all tariff changes for 12(24) last month",
+    "New MRC_AMOUNT_NET attribute  is available for calculating revenue for MRC charges.",
+    "Actual Pool volume info is added for Pooling tariffs in iPFR folder",
+    "First version of User Manual for M2M Self Service Portal for internal users is created.",
+    "First version of User Manual for M2M Self Service Portal for internal users is reviewed and provided to customers.",
+    "New POOLING_AGGREGATION_REPORT is created in Bosch folder in WEBi interface",
+    "It should be possible to download in in CSV format from WEBi.",
+    "Change export filenames for AES interface."
+  ],
+  "domainsAndITApplications": [
+    "BI4BS_BO",
+    "DOM0300",
+    "TMSP",
+    "AKP",
+    "MAGENTA-FORCE",
+    "ONE-FORCE",
+    "TDG",
+    "TMA",
+    "AES"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Verfügbarkeit und rechtzeitigen Kommunikation von Änderungen im TMSP-Quellsystem.",
+    "Die Mapping-Informationen im Quellsystem müssen klar und zugänglich sein und Änderungen müssen von der Fachseite freigegeben werden.",
+    "Bei Problemen auf der Quellseite ist das TMSP-Supportteam für die Lösung verantwortlich.",
+    "Risiko signifikanter Umsatzverluste und Imageschäden bei Nichtumsetzung.",
+    "Terminkritikalität: Die Umsetzung aller Teilprojekte muss im Jahr 2025 erfolgen, um die Geschäftsziele zu erreichen.",
+    "Keine externen Abhängigkeiten, die nicht durch die Teams beeinflussbar sind, explizit genannt.",
+    "Die Zielenddaten der Teilprojekte stimmen mit dem Business Epic (31.12.2025) überein oder liegen innerhalb des geplanten Zeitraums."
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-01-01",
+    "umsetzungsende": "2025-12-31",
+    "fixVersions": [
+      "Q3_25",
+      "2025_Q1",
+      "2025_Q2"
+    ],
+    "meilensteine": [
+      {
+        "id": "DATAFAB-35114",
+        "beschreibung": "Automotive Reporting Delivery Q2: Bereitstellung und Versand von Automotive-Umsatzdatenberichten.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-34733",
+        "beschreibung": "Support für M2M Self Service Portal Requests in Q2.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-27185",
+        "beschreibung": "Aggregation Usage data for Data Best in M2M Self Service Portal.",
+        "zeitraum": "Keine Informationen verfügbar"
+      },
+      {
+        "id": "DATAFAB-28376",
+        "beschreibung": "Enhance SIM_PROFILE folder with Data Best model logic.",
+        "zeitraum": "Keine Informationen verfügbar"
+      },
+      {
+        "id": "DATAFAB-28651",
+        "beschreibung": "Enhance INVOICE folder with Data Best model logic.",
+        "zeitraum": "Keine Informationen verfügbar"
+      },
+      {
+        "id": "DATAFAB-28843",
+        "beschreibung": "Introduce business partner ID (GP-ID) for updating AKP export.",
+        "zeitraum": "2025_Q1"
+      },
+      {
+        "id": "DATAFAB-34594",
+        "beschreibung": "Enhance Data Best Model in M2M Self Service Portal: Part 2.",
+        "zeitraum": "bis 2025-01-31"
+      },
+      {
+        "id": "DATAFAB-28879",
+        "beschreibung": "Static Pool Report in M2M Self Service Portal.",
+        "zeitraum": "2025-04-01 bis 2025-04-30"
+      },
+      {
+        "id": "DATAFAB-32156",
+        "beschreibung": "Data Best Usage and Revenue Report in M2M Self Service Portal.",
+        "zeitraum": "2025-04-01 bis 2025-04-30"
+      },
+      {
+        "id": "DATAFAB-34732",
+        "beschreibung": "POOL_OVERUSAGE optimization for Sales.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-34791",
+        "beschreibung": "Pricing info optimization Part 2.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-35409",
+        "beschreibung": "TMSP Impact analysis for Q2.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-34844",
+        "beschreibung": "SIM Material Billing enhancement.",
+        "zeitraum": "2025-04-01 bis 2025-04-30"
+      },
+      {
+        "id": "DATAFAB-33641",
+        "beschreibung": "STD Reports Optimization & Enhancement.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-35411",
+        "beschreibung": "User Manual für M2M Self Service Portal.",
+        "zeitraum": "2025-04-01 bis 2025-06-30"
+      },
+      {
+        "id": "DATAFAB-35773",
+        "beschreibung": "Sales reporting.",
+        "zeitraum": "2025-04-21 bis 2025-05-16"
+      }
+    ]
+  }
+}

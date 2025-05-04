@@ -1,0 +1,31 @@
+{
+  "key": "MAGBUS-98911",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B/DOT: Company Flex - Product Change",
+  "status": "Funnel",
+  "description": "Description\nThe objective of this portfolio epic is to enable the existing M-API integration to create change orders for complex B2B product portfolio (Company Flex).",
+  "business_value": {},
+  "assignee": "Timo Szillat",
+  "priority": "",
+  "target_start": "2025-10-01",
+  "target_end": "2025-12-15",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "Enabler",
+    "Mapis4B2B"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-106822",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-106822",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,57 @@
+{
+  "key": "SDN-16880",
+  "issue_type": "Epic",
+  "title": "MARS+ Implementation from SD-(W)LAN Bundles",
+  "status": "In Progress",
+  "description": "Description\nOverview price model SDWLAN Bundles\n\nBusiness Scope:\nAs a user of PANDA within the PLAN Process, I would like to have an overview about the network and the products a customer has within its networks in form of an inventory view so that I get an general overview about the customer's SDx inventories.\nPossible scenarios include a stand alone inventory of SDWAN CSO, SDWAN MIST SSR/SRX, SDWLAN MIST, as well as a mixed inventory of SDWLAN MIST and SDWAN MIST SSR/SRX.\nAdditionally, existing network via add new site shell be possible for SDWLAN via PIM services",
+  "business_value": {},
+  "assignee": "Christine Bienias",
+  "priority": "",
+  "target_start": "2025-04-10",
+  "target_end": "2025-06-11",
+  "fix_versions": [
+    "Solution Release MIST WiFi/LAN R1.0",
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "SDWLAN is available in all Microservices",
+    "POM is ready for handover",
+    "new product ist available within PCM",
+    "Bundles are shown within PIM UI"
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "O2B_Q2_OKR",
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-02-22-13-32-40-130.png",
+      "url": "https://jira.telekom.de/secure/attachment/4364544/image-2024-02-22-13-32-40-130.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-03-11T16:37:37.941+01:00"
+    },
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/4232326/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-02-15T11:19:36.756+01:00"
+    },
+    {
+      "filename": "SiteLevelChange_LANWiFi_20241128.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5216106/SiteLevelChange_LANWiFi_20241128.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2024-12-11T15:41:46.445+01:00"
+    }
+  ]
+}

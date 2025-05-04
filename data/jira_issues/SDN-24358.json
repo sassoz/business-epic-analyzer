@@ -1,0 +1,33 @@
+{
+  "key": "SDN-24358",
+  "issue_type": "Initiative",
+  "title": "FTTH_FIB-Tool implementation infrastructure order GIGA GS topics (Q3/25)",
+  "status": "Funnel",
+  "description": "Description\nRequirements for the FIB tool regarding the capability Infrastructure Order, where concept and implementation to be done Q3/2025 will be descripted here:\nOverview of topics see checklist below\nout-of-scope in first MVP for FIB-Tool\nno Public and Classified customers with extra security requirements \nno access for Offshore colleagues\nno Geo-customers\nExpand \"Standardbauweise\" for GK-customer\nWholebuy  \nFIB Stand alone?          \nSelf.Service\nIntegration IKLE",
+  "business_value": {},
+  "assignee": "Thomas Heider",
+  "priority": "",
+  "target_start": "2025-07-04",
+  "target_end": "2025-10-02",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "DOM0204",
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

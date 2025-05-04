@@ -1,0 +1,37 @@
+{
+  "key": "MAGBUS-103765",
+  "issue_type": "Epic",
+  "title": "SeCeIT Integration pt.2",
+  "status": "Funnel",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-04-24",
+  "target_end": "2025-06-25",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "MB_CPQ",
+    "MB_SCIT2"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "NPS Microservice Konfigurator 2025.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5430957/NPS%20Microservice%20Konfigurator%202025.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "5.09 MB",
+      "date": "2025-02-24T09:56:24.897+01:00"
+    }
+  ]
+}

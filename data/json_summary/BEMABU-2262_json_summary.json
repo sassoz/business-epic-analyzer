@@ -1,0 +1,63 @@
+{
+  "epicId": "BEMABU-2262",
+  "title": "Ü-Wege Einmalkosten in monatliche Kosten",
+  "ziele": {
+    "gesamtziel": "Ermöglichung der Umwandlung von einmaligen Kosten für die Bereitstellung von hochwertigen und dedizierten DIA-Anschlüssen oder Netzwerken in monatliche Zahlungen, um die Wettbewerbsfähigkeit in Angeboten zu erhöhen und die Absatzleistung bei DIAs mit hohem einmaligen Invest für den Kunden zu sichern. Die Umsetzung ist für den Zeitraum vom 01.08.2025 bis 20.08.2027 geplant.",
+    "einzelziele": [
+      "Erweiterung der bestehenden Produkte DCIP, BPA und EC2.0 im AGB Geschäft",
+      "Ermöglichung der monatlichen Umlage von Erschließungskosten >30T€",
+      "Bereitstellung von Optionen zur monatlichen Umlage über Laufzeiten von 12 bis 60 Monaten",
+      "Abbildung als separates Feld im Angebots- und Prozess-Tool Gecko",
+      "Ausweisung als separate Zeile im Angebots-/Auftragsformular",
+      "Regelung von Sonderfällen wie Umzug, Kündigung und Insolvenz"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 20,
+      "beschreibung": "Ca. 12 Mio. € Umsatz über 3 Jahre. Ü-Wege sind maßgeblich relevant zur Erschließung der Cross Selling Potenziale beim Kunden, insbesondere in Richtung IT und IOT Campusnetze. Verlust nicht realisierter Cross Selling Potenziale ca. 5 Mio. € pro Jahr. Annahme: 10 Anschlüsse mit einem Einmalentgeltvolumen von Minimum 50.000€ können je Region zusätzlich vermarktet werden. 60 Anschlüsse * 60.000€ (durchschnittlicher Wert) = 10.800.000€. Laufende mtl. Einnahmen ca. 450€ bei Laufzeit über 36 Monaten = 972.000 €. Maßnahme ist iPF stützend."
+    },
+    "strategicEnablement": {
+      "skala": 20,
+      "beschreibung": "Konnektivität ist Kerngeschäft der DTAG und Unternehmensstrategie. Festnetz trägt die höchste Marge bei und ist Enabler des Geschäftsmodells für IT Anwendungen, Collaboration-Anwendungen und Aufsatzpunkt für Security Themen. Maßnahme zahlt auf das strategische Programm 6+1 ein (Push Breitband) und liefert signifikanten Beitrag zum Ergebnisbeitrag durch TK-Umsatz mit höchstem DB."
+    },
+    "timeCriticality": {
+      "skala": 13,
+      "beschreibung": "Thema ist länger als 12 Monate relevant mit den Umsatz, DB 1 und Absatzeffekten und auch schon länger angefordert. Geplanter Umsetzungszeitraum: Start 01.08.2025, Open End."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2262",
+      "titel": "Ü-Wege Einmalkosten in monatliche Kosten",
+      "funktionalitäten": [
+        "Monatliche Umlage und Berechnung über eine Laufzeit von wahlweise 12 bis 60 Monaten",
+        "Berücksichtigung evtl. fälliger Zinsen",
+        "Abbildung als separates Feld im Angebots- und Prozess-Tool Gecko",
+        "Ausweisung als separate Zeile im Angebots-/Auftragsformular",
+        "Bei Umzug: Abrechnung restlicher offener Beträge als Ablösebetrag (einmalig oder weiterhin monatlich)",
+        "Bei Kündigung: Abrechnung restlicher offener Beträge als Ablösebetrag (einmalig oder weiterhin monatlich)",
+        "Bei Insolvenz: Abrechnung aller restlichen offenen Beträge als einmaliger Ablösebetrag",
+        "Abbildung und Prozessierung der Geschäftsfälle in Konkal"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Umsetzung des oben beschriebenen Business Scope. Konkret: in allen Fällen bei denen Investitionskosten über 30.000 € anfallen muss es die Möglichkeit geben, die Investitionskosten über die bekannten Laufzeiten der Ü-Wege zu verteilen. Dies muss bei Neugeschäft mit Neukunden und Bestandskunden möglich sein, auch im Änderungsgeschäft, also Umzug und nach Übernahmen."
+  ],
+  "domainsAndITApplications": [
+    "Gecko",
+    "Konkal"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abstimmung der juristischen Rahmenbedingungen für die beschriebenen Geschäftsfälle muss erfolgen",
+    "Das Business Epic befindet sich im Status 'Funnel', was auf eine frühe Planungsphase hindeutet",
+    "Der geplante Umsetzungszeitraum beginnt erst am 01.08.2025, was auf eine langfristige Planung hindeutet"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-08-01",
+    "umsetzungsende": "2027-08-20",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}

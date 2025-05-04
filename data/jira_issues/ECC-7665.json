@@ -1,0 +1,42 @@
+{
+  "key": "ECC-7665",
+  "issue_type": "Epic",
+  "title": "CPBX Aufhebung Verdeckung",
+  "status": "Backlog",
+  "description": "Description\nUserStory\n As a admin of CPBX\n I want to be able to use numbers \"behind\" assigned numbers\n in order to to fully use my numbers and features already available for competing products.\n  Definition of Ready\n - Die User Story ist abgestimmt. (mandatory)\n - Es ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\n - Alle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\n - Die Provisionierungsanforderungen aus der Technik sind seitens DIVA WebCCo angenommen (anhand der Qualitätskriterien geprüft) und Informationen im Epic dokumentiert. (optional)\n - Der GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\n - Schnittstellenentwurf liegt vor. (optional)\n - Alle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\n - Alle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\nHINWEISE\n - HINWEIS\n - HINWEIS\nIT Verarbeitungssequenz bzw. Abläufe\n - Darstellung des Ablaufes von …… bis ….. in Anlage A oder Referenz auf Innovatormodell\n - Begründung, falls keine Darstellung des Ablaufes geplant ist.\nHINWEISE für den Prozesstest BSS\n - HINWEIS\n - HINWEIS\nHINWEISE für den Teil-Prozesstest BSS\n - HINWEIS\n - HINWEIS\nHINWEISE für den Prozesstest OSS\n - HINWEIS\n - HINWEIS\n  HINWEISE für den Prozesstest MCS\n - HINWEIS\n - HINWEIS\n    HINWEISE für den Betreiber\n - Einmalige Aktionen notwendig? Wenn ja, welche?\n - Bestands-Migrationen notwendig? Wenn ja, welche?\n - Änderungen an der Referenz Enterprise notwendig? Wenn ja, welche?\n - Abhängigkeiten zu Technik-Releases, Versionen von Datenbanken, Middleware, OS,…?\n - Die Beschreibung kann noch in der Production detailliert werden.  \n  Hinweis zum Template\nAlle Punkte sind in dem EPIC aufzuführen und zu beschreiben. Es ist zulässig. n.r. einzutragen, also „nicht relevant“",
+  "business_value": {},
+  "assignee": "Tobias Fischer",
+  "priority": "",
+  "target_start": "2025-06-06",
+  "target_end": "2025-06-25",
+  "fix_versions": [
+    "MBC PI28"
+  ],
+  "acceptance_criteria": [
+    "the functionality is switchable in C4",
+    "If a x-long number is assigned to either an Arbeitsplatz or a service function (Gruppenfunktion, Vermittlungsplatz, Sprachdialogystem), x+n-long numbers should still be available. (Meaning phone numbers \"behind\" the assigned number remain available)",
+    "Example:\n+49 228 123456 is assigned, +49 228 1234560, +49 228 1234561, ... , +49 228 1234569 remain available and can be assigned",
+    "Example:\n+49 228 123456 is assigned, +49 228 1234560, +49 228 1234561, ... , +49 228 1234569 remain available and can be assigned",
+    "The maximum length of phone numbers remains unchanged.",
+    "This functions must be displayed correctly when assigning numbers to Arbeitsplätze or service users (Gruppenfunktion, Vermittlungsplatz, Sprachdialogsystem)\nIf the leading phone number is assigned, numbers can be selected and assigned.\nIf an extended number is assigned, the leading numbers can be selected and assigned",
+    "If the leading phone number is assigned, numbers can be selected and assigned.",
+    "If an extended number is assigned, the leading numbers can be selected and assigned",
+    "Additionally, the numbers must be also available for assignment of an additional number (zusätzlich Rufnummern) to an Arbeitsplatz or service user."
+  ],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    },
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    }
+  ],
+  "labels": [
+    "CompanyFlex"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

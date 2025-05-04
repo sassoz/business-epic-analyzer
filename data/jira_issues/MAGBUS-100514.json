@@ -1,0 +1,21 @@
+{
+  "key": "MAGBUS-100514",
+  "issue_type": "Epic",
+  "title": "[Comet Crew] Prepare existing Checkout for Carmen Scale Down",
+  "status": "Closed",
+  "description": "Description\nSimplified Use of Images: We expect more images to be displayed during the ordering process. The Checkout shall be extended for an easier use of images. (Abhängigkeit zu Fusion team) -> Eigenes MAGBUS-101622\nAccessibility: The Checkout shall be prepared for Accessibility compliance according to WCAG 2 AA (Web Content Accessibility Guidelines). -> Eigenes Epic MAGBUS-101181\nConnect MB2B or BSP: The order management system for the new SPA is not ADBC, but MB2B. The Checkout shall be connected to the order management system MB2B. According to Andre Bonin, MB2B will certainly not be fully ready for Phase 1 of Carmen Scale Down; he recommends implementing an order interface to BSP as interim solution. -> Eigenes Epic MAGBUS-101126.\nThere are other topics as part of Carmen Scale Down where the decision is still open as to which components and thus by which teams will mainly implement them and how the features will be integrated into the Checkout process:\nConnect Digital Signature: For contracts ordered in the shop, the customer's consent must be documented by Digital Signature. The Checkout may be connected to the relevant APIs. -> Eigenes Epic MAGBUS-102589\nConnect Identity Check: If new customers are also in scope of the new SPA, an Identity Check and Legitimation must be done for these new customers. For this purpose, the service from the Phoenix team may be connected with the Checkout. -> nicht im Scope Q2/2025. Soll im Workshop Anfang März noch mal ausführlich besprochen werden. (PO Sync 25.02.2025)",
+  "business_value": {},
+  "assignee": "Peter Max Messelken",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Comet"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

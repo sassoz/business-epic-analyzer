@@ -1,0 +1,76 @@
+{
+  "key": "BEMABU-2224",
+  "issue_type": "Business Initiative",
+  "title": "Mehrgewerke Angebotserstellung im Solution Business",
+  "status": "Funnel",
+  "description": "Description\nMehrgewerkevorhaben Input BusinessEpic.pptxAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür  die Vertriebsmitarbeiter Large Enterprise (Fokus liegt auf den Rollen Pre-Sales, Fachvertriebe und Deal-Manager, Delivery/SBU tbc)\ndie heute zur Angebotserstellung für Mehrgewerke div. Tools bedienen müssen bzw. Zulieferungen zu diesen machen\nist eine stärkere Digitalisierung des Angebotsprozess erforderlich\nwodurch sich die manuelle Aufwände reduzieren, \nso dass  Fehler im Angebotsprozess vermieden werden, Zeit für die Angebotserstellung reduziert wird, das Pricing  transparenter/vereinfacht wird, das Angebot digital in einen Vertrag übernommen werden kann und damit die Nutzerzufriedenheit mit dem Angebotsprozess steigt\nund nicht weiter manuelle Workarounds zur Angebotserstellung genutzt werden müssen.\n  Business Value / Cost of Delay \n(siehe Ausfüllhilfe: https://wiki.telekom.de/x/UEVbfQ)\nBusiness Impact1)\nScale Revenue             Cost Saving/\nRisk loss 2) Begründung                                                                                                    \n13 5 Mio. 0,5 Mio. Zahlt auf TC-Turnaround und NPS ein:\nOptimierung unseres TimeToMarket (Schneller Angebote, speziell zu TC SD-X an den Kunden zu bringen, zu wettbewerbsfähigen Preisen. Ziel ist es, nicht für jedes Kundenangebot aus unzähligen Tools von vorn zu beginnen, sondern BluePrints für diese Angebote im Zielsystem vorzuhalten (PANDA).\nDurch die Digitalisierung des Angebotsprozess für Mehrgewerke reduziert sich der manuelle Aufwand / Zeit für die Angebotserstellung, die Angebotsqualität erhöht sich und die Nutzerzufriedenheit (NPS) steigt.\nAngebotsfähigkeit: Es können mehr Angebote erstellt werden.\nStrategic Enablement/Risk Reduktion\nScale     Risiko\nMinimierung     Strat.\nEnablement Begründung                                                                                                    \n13   Verbesserung NPS Umsetzung der NPS Optimierungsstrategie\nStandardisierung des Lösungsgeschäfts.\nNearshore/Offshore-Fähigkeit des komplexen Geschäfts herstellen.\nSchaffung von mehr Zeit vor Kunde.\nTime Criticality \nScale Time Begründung                                                                                                    \n13 4-6 Monate Launch der ersten Implementierungen (Details werden in der Studiophase erarbeitet)\n1) Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse\n2) Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit\n  Dies ist eine vorläufige Schätzung, die im Rahmen der Studiophase validiert werden wird. Die Effekte treten über den gesamten Zeitraum zu betrachten und wird nicht alleine durch die erste Auslieferung erreicht.\nRahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\nDas Order-Management soll weiterhin über die einzelnen Teilgewerke und deren Prozess-Straßen angestoßen werden. \nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nPanda DOM0204 Angelo Pietra   \nLotex DOM0201 Gansen, Thorsten   \nweitere in späteren Stufen      \n                < ... >      \n  BEO und ggf. Vertreter Wandel, Tim \nSponsor/Fachseite Markus Hellmold Thomas Claßen\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n  Umsetzungs-Skizze (in / out of Scope)\nFolgende Punkte sind in Scope:\nBereitstellung aller (technischen) Kundenbestände auf Knopfdruck\nMöglichkeit zur Erstellung einen schnellen und unverbindlichen Budget-Angebots (inkl. Möglichkeit zur Weiterverwendung für ein verbindliches Angebot)\nErstellung eines zentralen übergeordneten Mehrgewerke-Angebots unter Einbindung produktspezifischer Konfiguratoren und Angebots-Tools\nZentrales Pricing des Mehrgewerke-Angebots über alle zugelieferten Teilgewerke (unter Berücksichtigung der Pricing-/Kalkulationsregeln der Teilgewerke, und der Abbildung eines zentralen Genehmigungsworkflows)\nAngebotsdokumente (insb. auch Leistungsbeschreibungen zu den Teilgewerken) sollen einfach und zentral verfügbar und ergänzbar sein \nÜberführung des Mehrgewerke-Angebots in einen digitalen Vertrag (zur Weiterverwendung im Contract Lifecycle Management)\nDas zeitliche/inhaltliche Vorgehen soll die im Produkt-Management und Pre-Sales erarbeiteten Portfolio Blue-Prints (-> Vereinfachung und Standardisierung von zusammenhängenden Angebotsbausteinen z.B. aus SD-WAN, Underlay und Security) unterstützen. ** \n \n\nBusiness Scope:\nDie Angebotserstellung für Mehrgewerke im Lösungsgeschäft ist ein hoch manueller Prozess der über verschiedene IT-Systeme und Tools verteilt ist. Dementsprechend ist die Nutzerzufriedenheit mit diesem Prozess sehr gering (NPS minus 84). Ergänzend dazu können Angebote nicht direkt digital in einen Vertrag überführt werden.\nIm Rahmen dieser Anforderung soll der Workflow durch die verschiedenen Tools und Konfiguratoren intelligent verknüpft und digitalisiert werden. Gleichzeitig sollen fehlende Funktionen ergänzt werden, so dass im Ergebnis die Teil-Konfigurationen zu einem Gesamt-Angebot zusammengeführt werden können und das Pricing zentral und Gewerk-übergreifend durchgeführt werden kann.",
+  "business_value": {},
+  "assignee": "Wandel, Tim",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2026-06-30",
+  "fix_versions": [
+    "Q3_25",
+    "Q4_25"
+  ],
+  "acceptance_criteria": [
+    "Während der Exploration wird geprüft, ob eine vollständige Integration der \"alten\" Angebotstool und deren Retirements möglich ist."
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [
+    {
+      "key": "BEMABU-2337",
+      "title": "BEMABU-2337",
+      "summary": "Mehrgewerke Angebotserstellung im Solution Business - Budget-Preis Kalkulations-Tool",
+      "url": "https://jira.telekom.de/browse/BEMABU-2337",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-2338",
+      "title": "BEMABU-2338",
+      "summary": "Mehrgewerke Angebotserstellung im Solution Business - Zentrale technische Bestandssicht",
+      "url": "https://jira.telekom.de/browse/BEMABU-2338",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-2339",
+      "title": "BEMABU-2339",
+      "summary": "Mehrgewerke Angebotserstellung im Solution Business - Smart Panda Import- Workflow für Kalk.-Tool",
+      "url": "https://jira.telekom.de/browse/BEMABU-2339",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-2340",
+      "title": "BEMABU-2340",
+      "summary": "Mehrgewerke Angebotserstellung im Solution Business - Zentrales Pricing in Panda Deal-View",
+      "url": "https://jira.telekom.de/browse/BEMABU-2340",
+      "relation_type": "child"
+    },
+    {
+      "key": "BEMABU-2341",
+      "title": "BEMABU-2341",
+      "summary": "Mehrgewerke Angebotserstellung im Solution Business - Übergreifende Document-Engine",
+      "url": "https://jira.telekom.de/browse/BEMABU-2341",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Mehrgewerkevorhaben Input BusinessEpic.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5411834/Mehrgewerkevorhaben%20Input%20BusinessEpic.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "1.34 MB",
+      "date": "2025-02-18T11:37:55.810+01:00"
+    }
+  ]
+}

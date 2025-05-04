@@ -1,0 +1,42 @@
+{
+  "key": "MAGBUS-87516",
+  "issue_type": "Epic",
+  "title": "MF: HyperForce",
+  "status": "Closed",
+  "description": "Description\nIm Rahmen der Optimierung von MagentaForce wird alles Orgs (Produktion + Sandboxes) auf Hyperforce migriert. Dabei wird die Infrastruktur in ein AWS-Rechenzentrum in Frankfurt verlagert und damit die Voraussetzung für die Nutzung Hyperforce-basierter Salesforce Features wie z.B. Data Cloud geschaffen. Die Migration bietet Vorteile wie eine höhere Skalierbarkeit, schnellere Zugriffszeiten und eine bessere Anpassung an zukünftige Geschäftsanforderungen.\nDer Rahmenvertrag zwischen der Telekom und Salesforce (MSA) wurde am 14.11.2023 für die Nutzung von Hyperforce erweitert und gezeichnet.\nTS&A Boardvorlage für die Migration MagentaForce nach Hyperforce und der zugehörige IRON Demand ist freigegeben. \nDie Umstellung erfolgt in drei Schritten:\nAnalyse der der erforderlichen Anpassungen\nTestmigration der Umgebungen INT und FCSB ((27.01.2025, 0.00-3.00) Uhr\nMigration der Produktionsumgebung MagentaForce auf HyperForce (18.02.2025, 0.00-3.00 Uhr)",
+  "business_value": {},
+  "assignee": "Matthias Johannes Hoffmann",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    },
+    {
+      "code": "TC-Force",
+      "title": "TC-Force "
+    }
+  ],
+  "labels": [
+    "MB_MA",
+    "MB_MF",
+    "Operations"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-09-11-13-10-04-332.png",
+      "url": "https://jira.telekom.de/secure/attachment/4900495/image-2024-09-11-13-10-04-332.png",
+      "mime_type": "image/png",
+      "size": "88 kB",
+      "date": "2024-09-11T13:10:04.486+02:00"
+    }
+  ]
+}

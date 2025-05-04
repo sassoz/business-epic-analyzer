@@ -1,0 +1,75 @@
+{
+  "key": "BEMABU-1846",
+  "issue_type": "Business Epic",
+  "title": "Bestands- & Änderungsgeschäft CRM-T (Umzug, Kündigung/Neu)",
+  "status": "In Progress",
+  "description": "Description\nDas IT-System „Flamingo“, ein Angebots- und Auftragskonfigurator, soll in der Lage sein, die Geschäftsfälle Umzug, Produktwechsel sowie Kündigung/Neubereitstellung für das Festnetzgeschäft vollständig und effizient abzubilden. Ziel ist es, eine benutzerfreundliche und automatisierte E2E-Prozessführung zu gewährleisten, die alle relevanten Daten berücksichtigt und eine reibungslose Abwicklung sicherstellt.\nGeschäftsvorfall Umzug:\nEs soll der Geschäftsfall \"Umzug\" für das Fixed Net Portfolio (CRM-T) umgesetzt werden. Dies inkludiert die Realisierung von Kündigung/Neu = Kündigung des Altprodukts am Altstandort und Neubereitstellung am neuen Standort. \nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2361048623\nGeschäftsvorfall Produktwechsel:\nEs soll der Geschäftsfall \"Produktwechsel\" für das Fixed Net Portfolio (CRM-T) umgesetzt werden. Dies inkludiert die Realisierung von Kündigung/Neu = Kündigung des Altprodukts  und Neubereitstellung des neuen Produktes. \nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2361048623\nSolution Intent geplant:\n11.11.2024 --> Scoping\n25.11.2024 --> Draft Solution Design\n02.12.2024 --> Final Solution Design\nLink: folgt",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Das IT-System 'Flamingo' soll Geschäftsfälle wie Umzug, Produktwechsel und Kündigung/Neubereitstellung für das Festnetzgeschäft vollständig und effizient abbilden, was auf eine Prozessoptimierung hindeutet."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Benutzerfreundliche und automatisierte E2E-Prozessführung für Festnetzgeschäft",
+      "justification": "Das System zielt auf eine benutzerfreundliche und automatisierte E2E-Prozessführung ab, die alle relevanten Daten berücksichtigt und eine reibungslose Abwicklung sicherstellt."
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "Scoping: 11.11.2024, Draft Solution Design: 25.11.2024, Final Solution Design: 02.12.2024",
+      "justification": "Der Text enthält einen klaren Zeitplan für die Solution Intent Planung mit definierten Meilensteinen."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Keck, Simon",
+  "priority": "",
+  "target_start": "2025-01-09",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "Q1_25",
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "E2E-Umsetzung des Geschäftsfalls \"Umzug\" über alle CRM-T Festnetzprodukte hinweg",
+    "E2E-Umsetzung des Geschäftsfalls \"Produktwechsel\" über alle CRM-T Festnetzprodukte hinweg",
+    "Ermöglichung des Sondergeschäftsfalls \"Kündigung/Neu\" in Kontext Umzug und Produktwechsel"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical",
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-97388",
+      "title": "MAGBUS-97388",
+      "summary": "Flamingo: Bestands- & Änderungsgeschäft CRM-T (Umzug, Kündigung/Neu)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-97388",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-99497",
+      "title": "MAGBUS-99497",
+      "summary": "ADCL: Bestands- & Änderungsgeschäft CRM-T (Umzug, Kündigung/Neu + Storno)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99497",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

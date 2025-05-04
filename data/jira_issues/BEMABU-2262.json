@@ -1,0 +1,48 @@
+{
+  "key": "BEMABU-2262",
+  "issue_type": "Business Epic",
+  "title": "Ü-Wege Einmalkosten in monatliche Kosten",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür den TK Fachvertrieb und Accountmanager und die Midmarket Kunden,\ndie hochwertige und dedizierte DIA Anschlüsse oder Netzwerke nutzen müssen ,\nist es notwendig, die einmaligen Kosten für die Bereitstellung dieser Leitungen auf monatliche Zahlung umlegen zu können,\nwodurch die Wettbewerbsfähigkeit in den Angeboten deutlich erhöht wird,\nso dass  die Absatzleistung bei DIAs mit hohem einmaligen Invest für den Kunden möglich bleibt ,\nund nicht der Wettbewerb mit seinen Optionen zur Staffelung der Einmalentgelte den Anschluss an den Kunden verkauft. \nDas Vorhaben schafft den Vorteil bei kritischen Grenzen der Einmalentgelt (ca. ab 50.000€) dem Kunden eine Zahlungsoption anzubieten, die heute nur der Wettbewerb anbietet. Die Investitionskosten müssen aber ab der vorgegebenen Schwelle von 30.000 € bereits auf die Laufzeit verteilt werden können. Dies gilt für alle Midmarket, LE und Public Kunden, die über AGB Geschäft Ü-Wege adressiert werden können und bei denen an mehreren Standorten oder einem diese Kosten anfallen können. \nEs handelt sich hier um eine Anforderung mit einem Effekt über 3-5 Jahre, da die Wettbewerbssituation nicht nur in den kommenden 12 Monaten diese Flexibilität erfordert, die der Wettbewerb heute bereits bietet und auch weiterhin bieten wird.\nAnforderungen an das Produkt\nDie angeforderten Leistungen sollen als Erweiterung der bestehenden Produkte DCIP, BPA und EC2.0 im AGB Geschäft gelten.\nSofern das Ergebnis der IKLE für den Kunden eine Beteiligung an den Erschließungskosten von >30T€ ergibt, soll es die Möglichkeit der monatlichen Umlage geben.\nEs gelten folgende Anforderungen.\nBereitstellung:\nMonatliche Umlage und Berechnung über eine Laufzeit von wahlweise 12 bis 60 Monaten\nBerücksichtigung evtl. fälliger Zinsen\nAbbildung als separates Feld im Angebots- und Prozess-Tool Gecko\nAusweisung als separate Zeile im Angebots- / Auftrags-Formular\nFür den Fall, dass während der Laufzeit der monatlichen Zahlungen für Infrastrukturkosten Änderungen an der Bestands-Leitung auftreten, gelten unsere folgenden Anforderungen.\nUmzug:\nAlle restlichen offenen Beträge werden dem Kunden in einem Ablösebetrag in Rechnung gestellt,\nwahlweise als Einmalbetrag oder weiterhin monatlich bis zum Ende der Laufzeit.\nDie Leitung am neuen Standort muss in einer separaten Rechnung erfolgen.\nAbbildung und Prozessierung des Geschäftsfalles in Konkal\nKündigung:\nAlle restlichen offenen Beträge werden dem Kunden in einem Ablösebetrag in Rechnung gestellt,\nwahlweise als Einmalbetrag oder weiterhin monatlich bis zum Ende der Laufzeit.\nAbbildung und Prozessierung des Geschäftsfalles in Konkal\nInsolvenz:\nAlle restlichen offenen Beträge werden dem Insolvenzverwalter in einem einmaligen Ablösebetrag in Rechnung gestellt.\nAbbildung und Prozessierung des Geschäftsfalles in Konkal\nEine Abstimmung der juristischen Rahmenbedingungen für die beschriebenen Geschäftsfälle muss erfolgen.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "ca. 12 Mio. € über 3 Jahre",
+      "cost_saving": "",
+      "risk_loss": "Risiko nicht Erfüllung iPF TK wird durch die Wins aus dieser Anforderung minimiert",
+      "justification": "Ü-Wege maßgeblich relevant zur Erschließung der Cross Selling Potenziale beim Kunden, insbesondere in Richtung IT und IOT Campusnetze. Verlust nicht realisierter Cross Selling Potenziale ca. 5 Mio. € pro Jahr auf Basis der nicht realisierten Ü-Wege. Annahme: 10 Anschlüsse mit einem Einmalentgeltvolumen von Minimum 50.000€ können je Region zusätzlich ggü. heute vermarktet werden. 60 Anschlüsse * 60.000€ (durchschnittlicher Wert)10.800.000€. Laufende mtl. Einnahmen ca. 450€ bei Laufzeit über 36 Monaten = 972.000 €. Massnahme ist iPF stützend."
+    },
+    "strategic_enablement": {
+      "scale": 20,
+      "risk_minimization": "Verlust relevanter Kundenbeziehung Konnektivität bei diesen Kunden sowie der Cross Selling Potenziale",
+      "strat_enablement": "",
+      "justification": "Konnektivität ist Kerngeschäft der DTAG und Unternehmensstrategie. Aus Vertriebssicht entscheidet Konnektivität über die Werthaltigkeit der Kundenbeziehung, da Festnetz die höchste Marge beiträgt. Zugleich ist die Konnektivität aus Kundensicht immer der Enabler des Geschäftsmodells und daher relevant für IT Anwendungen, Collaboration-Anwendungen und Aufsatzpunkt für Security Themen über mehrere Standorte hinweg. Daher auch Fokus Thema BB Push bei TK und wöchentliches Monitoring der Absätze Maßnahme zahlt auf das strategische Programm 6+1 ein -> Push Breitband Es handelt sich um TK-Umsatz. Höchster DB, daher signifikanter Beitrag dieser Maßnahme auf den Ergebnisbeitrag."
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.08.2025 Open end",
+      "justification": "Thema ist länger als 12 Monate relevant mit den Umsatz, DB 1 und Absatzeffekten und auch schon länger angefordert."
+    }
+  },
+  "assignee": "Herz, Alexander",
+  "priority": "",
+  "target_start": "2025-08-01",
+  "target_end": "2027-08-20",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Umsetzung des oben beschriebenen Business Scope. Konkret: in allen Fällen bei denen Investitionskosten über 30.000 € anfallen muss es die Möglichkeit geben, die Investitionskosten über die bekannten Laufzeiten der Ü-Wege zu verteilen. Dies muss bei Neugeschäft mit Neukunden und Bestandskunden möglich sein, auch im Änderungsgeschäft, also Umzug und nach Übernahmen."
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "Portfolio"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

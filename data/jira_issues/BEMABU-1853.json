@@ -1,0 +1,57 @@
+{
+  "key": "BEMABU-1853",
+  "issue_type": "Business Epic",
+  "title": "Next Level Campaigning 2.0 // Sicherstellung Outbound Mobilfunk Q1/2025 Expl.",
+  "status": "Closed",
+  "description": "Description\nIn Anbetracht der bevorstehenden OCC Abschaltung zu 06/2025 ist eine alternative Prozess-Strecke zu implementieren. Zentrale Ausgangsplattform ist die Sales Force Marketing Cloud GK (KURZ: MA). Ziel ist von der MA eine Schnittstelle in Richtung Service Outbound zu etablieren, über die Kampagnen-Datensätze prozessiert werden. Dabei ist sowohl die reine Kampagnen-Kunden-Daten Prozessierung sicherzustellen als auch die Kampagnen-Meta-Daten-Übertragung zu betrachten. Ferner ist hier insbesondere die Funktionalität des CI-ODS zu berücksichtigen. Für diesen Anteil ist auch eine zwingende Beistellung aus dem Data Tribe PK bereitzustellen, da sonst die Strecke in Richtung Callcenter nicht anforderungsgemäß bedient werden kann.\n  Allgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür KMU-Bestandskunden ,\ndie churn-gefährdet sind oder bei denen Up/X-Selling-Potenziale existieren ,\nsoll eine deutlich fokussiertere dynamische Kampagnen-Zielgruppenauswahl (u. werthaltigeres Offering) mittels AI realisiert werden u. eine überwiegend omnichannel, Trigger-basierte Kampagnensteuerung implementiert werden. Ergänzend ist es das Ziel die NPS-Erhebung zu optimieren und aus dem NPS-Feedback passgenaue Maßnahmen abzuleiten ,\nso dass  deutliche Umsatzpotenziale erschlossen werden, gepaart mit einer nachhaltigen Kundenbindung bei gleichzeitiger NPS-Steigerung ,\nund nicht eine nicht existente Kundenentwicklung im worst case zu einer ungebremsten Kundenabwanderung führen.\nDas Vorhaben schafft einen nachhaltigen Umsatzanstieg.\n    Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\nAnforderungen aus NLC-Projekt in Kooperation mit MMS\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nUmsetzung benötigt PK Mitarbeit /CI-ODS ist in PK-Verantwortung\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n< ... > DOM.... <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "> 20 Mio. € p.a.",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Im Outbound Call werden jährlich mehr als 40 Mio. Euro Umsatz generiert"
+    },
+    "strategic_enablement": {
+      "scale": 12,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": "Relevanter Wettbewerbsvorteil der TDG, durch optimale Kundenansprache Kunden zu binden/zu entwickeln"
+    },
+    "time_criticality": {
+      "scale": 20,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 31.03.2025",
+      "justification": "Infolge OCC-Abmanagement ist Bereitstellung des Features äußerst zeitkritisch"
+    }
+  },
+  "assignee": "Klaus Plangemann",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "Outbound Call-Strecke ist angebunden",
+    "Kampagnenstrecke wurde erfolgreich getestet",
+    "Datenschutz-u. Mitbestimmungs-rechtliche Vorgaben sind eingehalten"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical",
+    "OCC",
+    "Outbound",
+    "call",
+    "salesforce"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

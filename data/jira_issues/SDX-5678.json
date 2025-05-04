@@ -1,0 +1,34 @@
+{
+  "key": "SDX-5678",
+  "issue_type": "Epic",
+  "title": "[SD] LAN - Syslog",
+  "status": "Closed",
+  "description": "Description\nThe Junos OS generates system log messages (also called syslog messages) to record events that occur on the switch, including the following:\nRoutine operations, such as a user login into the configuration database.\nFailure and error conditions, such as failure to access a configuration file.\nEmergency or critical conditions, such as power-down of the switch due to excessive temperature.\nEach system log message identifies the Junos OS process that generated the message and briefly describes the operation or error that occurred. \n\nBusiness Scope:\nIn order to be aligned with DT architecture guideline, is necessary to enable for SDX project for LAN devices capability to use Syslog.",
+  "business_value": {},
+  "assignee": "Stefan Gula",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "Technical design",
+    "UI proposal",
+    "CPDM handover",
+    "Handover to SO, Security",
+    "operation manual"
+  ],
+  "components": [
+    {
+      "code": "SDx - Orchestrator",
+      "title": "SDx - Orchestrator "
+    }
+  ],
+  "labels": [
+    "SDProduct"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

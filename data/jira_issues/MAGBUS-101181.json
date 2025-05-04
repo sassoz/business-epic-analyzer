@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-101181",
+  "issue_type": "Epic",
+  "title": "[Comet Crew] Accessibility for Checkout (NGMobile)",
+  "status": "Closed",
+  "description": "Description\nAfter discussion with front end developer, this Epic is withdrawn. We will cover Accessibility for NGMobile as part of our frontend stories for NGM Checkout.\nAccessibility means that devices, programs and content (including portals like BSP) are designed that they can be used by people with disabilities in the same way as by people without disabilities.\nAccessibility is often abbreviated as A11y where 11 refers to the number of letters omitted, similar to Internationalization (I18n) and Localization (L10n).\nThe new SPA for NGMobile including Checkout shall be accessible.\nWe shall update our UI elements for accessibility, making all pages that use that UI element accessible.\nReference documents\nTelekom's Brand & Design provides information on the topic: OneExperience Accessibility. There are PDF documents \"Accessibility Quick-Start Guide\" in English and German (see attached PDF).\nThe page links to:\nwiki page Accessibility for Developers which contains useful resources, e.g.\nDeveloper's A11Y Checklist for Web\nwiki page Accessibility for QA Testers which contains\nA11Y Testing: Basic Methods and Tools\nQA testers' A11Y checklist\nFYI When the colleagues (CM Ninjas) implemented accessibility for MBSP in 2022, they created a wiki page: MBSP Accessibility Guide",
+  "business_value": {},
+  "assignee": "Peter Max Messelken",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Comet",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "T_accessibility_qs_guide_EN.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/5236943/T_accessibility_qs_guide_EN.pdf",
+      "mime_type": "application/pdf",
+      "size": "2.11 MB",
+      "date": "2024-12-18T12:28:52.337+01:00"
+    }
+  ]
+}

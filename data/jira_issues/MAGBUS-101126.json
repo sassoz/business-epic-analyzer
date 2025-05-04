@@ -1,0 +1,32 @@
+{
+  "key": "MAGBUS-101126",
+  "issue_type": "Epic",
+  "title": "[Comet Crew] Part 1 Map ShoppingCart to MB2B order structure for NGMobile",
+  "status": "Closed",
+  "description": "Description\nOrders will be sent to Carmen via MB2B (using OMS/OE).\nWe shall map the shopping cart's content into the MB2B order structure for NGMobile Checkout.\nThis BE feature will be used by the FE on the Summary Page of the NGMobile Checkout (see epic MAGBUS-101130).\nOpen points for target solution\ndocument generation?\nAuftragsdokument\nVVI/VZF\ndigital signature?\nidentity check?\nwhen are known limitations of MB2B fixed (e.g. \"parking\" of an order)?\nBefore an order can be sent to MB2B for execution, some documents (Auftragsdokument, VVI/VZF) must be created for compliance reasons and, if necessary, signed by the customer. Who generates these documents? Can BSP's existing business logic be re-used? How is the customer's consent obtained and documented?\nMB2B supports fewer order features than BSP and will need to be extended accordingly by the BSPace team.",
+  "business_value": {},
+  "assignee": "Stefan Wilkes",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Comet",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "mb2b-documentation_preview.zip",
+      "url": "https://jira.telekom.de/secure/attachment/5280019/mb2b-documentation_preview.zip",
+      "mime_type": "application/zip",
+      "size": "184 kB",
+      "date": "2025-01-09T14:02:02.464+01:00"
+    }
+  ]
+}

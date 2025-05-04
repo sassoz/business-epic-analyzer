@@ -1,0 +1,31 @@
+{
+  "key": "MAGBUS-102329",
+  "issue_type": "Epic",
+  "title": "KEK Änderung an Carmen übertragen",
+  "status": "Closed",
+  "description": "Description\nEs existiert aufCarmen Seite der Service service CC_changeCorporateConsent worüber Änderungen an der KEK möglich sind. (Vermutlich auch Anbindung via Skygate)\nBitte bei Michael Marten nachfragen ob es bereits eine Alternative zu dem Service gibt.\nAnmeldung der Anforderung bei DL Funnel-Team Mobilfunk <Funnel-Team_Mobilfunk@internal.telekom.com> und Freigabe zur Nutzung des Services einholen.\nWir wollen eine Freigabe zur Nutzung dieses Services erwirken und diesen in unsere Systemlandschaft implementieren.\nWenn bei Integrierten Kunden eine Änderung der KEK stattfindet, soll diese Änderung nicht nur an die CRM-T Kundennummern in Richtung T-IVU, sondern auch bei Carmen Kundennummern an Carmen übertragen werden.\nDadurch stellen wir Sicher dass zwischen CRM-T und Carmen die identische KEK-Aussage am Kunden vorliegt.\n\nBusiness Scope:\nIch als PO möchte dass wir für integrierte Kunden die KEK Änderungen auch an Carmen übertragen",
+  "business_value": {},
+  "assignee": "Jan Kerkmann",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "Alle Kundennummern inklsuive Carmen besitzen die selbe KEK Aussage des Geschäftspartner"
+  ],
+  "components": [
+    {
+      "code": "SEP-DCM",
+      "title": "SEP-DCM "
+    }
+  ],
+  "labels": [
+    "BA",
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

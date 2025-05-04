@@ -1,0 +1,86 @@
+{
+  "key": "BEMABU-1818",
+  "issue_type": "Business Epic",
+  "title": "Q1 Weiterentwicklung bestehender Lösung Case-Management",
+  "status": "In Progress",
+  "description": "Description\nDie Interimslösung zum 01.11.2024 muss entsprechend weiterentwickelt werden.\nHierzu ist eine Unterstützung beim Flächenrollout nötig (Scharfschaltung der bereit im Hintergrund entwickelten Email2Case-Lösung). \nEtwaige Anpassungen an der UI müssen umgesetzt werden, Bug-Fixing muss gewährleistet sein und die Ziellösung für das Reporting über Data-Tribe ist zwingend erforderlich.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Kevin Robeck",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "Bug-Fixes habenstattgefunden",
+    "UI-Anpassungen sind erfolgt",
+    "Das Reporting über Data-Tribe ist sichergestellt.",
+    "Alle Works für FN und EN wandern von IRRP zu MagentaForce."
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    },
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0300",
+      "title": "DOM0300 Data"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "EOS2.0",
+    "Operations",
+    "SGrK"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-99728",
+      "title": "MAGBUS-99728",
+      "summary": "MF: Service Case - Weiterentwicklungen nach D1",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99728",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-100774",
+      "title": "MAGBUS-100774",
+      "summary": "MF: Service Case - Erweiterungen des Routings inkl. Omnichannel und Supervisor",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100774",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-93463",
+      "title": "MAGBUS-93463",
+      "summary": "MF: Auftragstracking und Mail2Case- Sammler für 2025",
+      "url": "https://jira.telekom.de/browse/MAGBUS-93463",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

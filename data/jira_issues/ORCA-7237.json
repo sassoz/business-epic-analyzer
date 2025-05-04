@@ -1,0 +1,29 @@
+{
+  "key": "ORCA-7237",
+  "issue_type": "Portfolio Epic",
+  "title": "[Zoom X] Impl. Quick-Run Bereitstellung Zoom",
+  "status": "Funnel",
+  "description": "",
+  "business_value": {},
+  "assignee": "Roger Kunz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DOMO2C_ORCA"
+  ],
+  "realized_by": [
+    {
+      "key": "ORCA-11055",
+      "title": "ORCA-11055",
+      "summary": "[Zoom X] Implementierung Quick Run Zoom X",
+      "url": "https://jira.telekom.de/browse/ORCA-11055",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,32 @@
+{
+  "key": "ADCL-11444",
+  "issue_type": "Epic",
+  "title": "Implement O3 total order cancellation originating in EOS",
+  "status": "Closed",
+  "description": "Description\nProcess information:\nRequirements:\nBusiness transaction cancellation by EOS_\"EOS-induced total order cancellation in O3\":\nTo be verified: orders currently being processed in EOS can be cancelled in EOS.\nThis requires:\na cancellation of all partial orders and",
+  "business_value": {},
+  "assignee": "Heinz-Gerd Bendels",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "business requirements understood",
+    "as is process understood",
+    "target process defined",
+    "target process agreed",
+    "migration roadmap agreed",
+    "implementation user stories are described",
+    "user stories implemented, tested and accepted in CIT2",
+    "solution is deployed with feature toggle (header flag processing engine \"remote\") in PROD"
+  ],
+  "components": [],
+  "labels": [
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

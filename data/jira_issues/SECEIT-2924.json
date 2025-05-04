@@ -1,0 +1,47 @@
+{
+  "key": "SECEIT-2924",
+  "issue_type": "Epic",
+  "title": "Inhouse Basic: Direkteinstieg - GetWell",
+  "status": "Resolved",
+  "description": "Description\nEPIC bündelt alle Storys zum Theme  OrderServices -> Direkteinstieg SeCe IT über O3 nach EOS\n \n1. SeCe IT unterstützt die GetWell Phase\n   ",
+  "business_value": {},
+  "assignee": "Markus Fracke",
+  "priority": "",
+  "target_start": "2025-01-09",
+  "target_end": "2025-02-19",
+  "fix_versions": [
+    "PI27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DO_SeCeIT",
+    "MB_Decoupling",
+    "VS_enabling"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "flamingo_POST_O3_example.json",
+      "url": "https://jira.telekom.de/secure/attachment/5278524/flamingo_POST_O3_example.json",
+      "mime_type": "application/json",
+      "size": "36 kB",
+      "date": "2025-01-09T10:07:11.662+01:00"
+    },
+    {
+      "filename": "seceit-624720216-formatted.json",
+      "url": "https://jira.telekom.de/secure/attachment/5278525/seceit-624720216-formatted.json",
+      "mime_type": "application/json",
+      "size": "103 kB",
+      "date": "2025-01-09T10:07:11.677+01:00"
+    },
+    {
+      "filename": "specification (5).yaml",
+      "url": "https://jira.telekom.de/secure/attachment/5278526/specification%20%285%29.yaml",
+      "mime_type": "application/octet-stream",
+      "size": "166 kB",
+      "date": "2025-01-09T10:07:11.686+01:00"
+    }
+  ]
+}

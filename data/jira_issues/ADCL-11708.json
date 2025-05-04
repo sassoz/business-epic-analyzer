@@ -1,0 +1,59 @@
+{
+  "key": "ADCL-11708",
+  "issue_type": "Epic",
+  "title": "Support LOM-MAPI-oPOM (O3)-EOS integration part II",
+  "status": "Closed",
+  "description": "Description\nBasic Integration into MAPIs:\nBuild up MAPI decomposer with integration to:",
+  "business_value": {},
+  "assignee": "Fazli Ilter Satiroglu",
+  "priority": "",
+  "target_start": "2025-02-21",
+  "target_end": "2025-04-03",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "Basic Integration into MAPIs delivered by O3:\nO3-MAPI decomposer with integration to:\nProduct Catalog M-API\nProduct Offering Qualification M-API\nGeographic Address M-API into O3\nParty (CGE) M-API\nhas been implemented\nM-API order to EOS can be provided by O3\nEnriched M-API order from EOS can be received by O3\nA O3 generated M-API order can be delivered to Product Ordering M-API",
+    "O3-MAPI decomposer with integration to:\nProduct Catalog M-API\nProduct Offering Qualification M-API\nGeographic Address M-API into O3\nParty (CGE) M-API\nhas been implemented",
+    "Product Catalog M-API",
+    "Product Offering Qualification M-API",
+    "Geographic Address M-API into O3",
+    "Party (CGE) M-API",
+    "has been implemented",
+    "M-API order to EOS can be provided by O3",
+    "Enriched M-API order from EOS can be received by O3",
+    "A O3 generated M-API order can be delivered to Product Ordering M-API",
+    "O3 can create Product Orders against Frame Agreements:\nFrame agreement information can be read by O3\nProduct orders against existing frame agreements can be created by O3",
+    "Frame agreement information can be read by O3",
+    "Product orders against existing frame agreements can be created by O3"
+  ],
+  "components": [],
+  "labels": [
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "LOM_MAPI_O3_II_Bild1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5244231/LOM_MAPI_O3_II_Bild1.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-12-20T12:53:33.040+01:00"
+    },
+    {
+      "filename": "LOM_MAPI_O3_III_ 2024-12-20 125242.png",
+      "url": "https://jira.telekom.de/secure/attachment/5244230/LOM_MAPI_O3_III_%202024-12-20%20125242.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-12-20T12:53:32.901+01:00"
+    },
+    {
+      "filename": "LOM_MAPI_O3_image-2024-12-18-12-14-19-491.png",
+      "url": "https://jira.telekom.de/secure/attachment/5244232/LOM_MAPI_O3_image-2024-12-18-12-14-19-491.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-12-20T12:53:33.245+01:00"
+    }
+  ]
+}

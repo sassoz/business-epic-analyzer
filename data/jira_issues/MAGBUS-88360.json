@@ -1,0 +1,160 @@
+{
+  "key": "MAGBUS-88360",
+  "issue_type": "Portfolio Epic",
+  "title": "Voice: Produktwechsel (ohne Mengen- Staffelpreise) in der EOS Vervollständigung",
+  "status": "In Progress",
+  "description": "",
+  "business_value": {},
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "2024-07-03",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "Automated, trouble-free and query-free ordering process of the business case described below",
+    "GGS leitungsbezogen von Cu auf Fiber\nBauauftrag auf GiGa unabhängig vom Verfügbarkeitsstatus\ngleiche Funktionalität wie bei der Neubereitstellung\nWenn Produkte nicht EOS fähig sind, muss geklärt werden, wann und wie ausgesteuert werden sollen. ToDo Sven",
+    "Bauauftrag auf GiGa unabhängig vom Verfügbarkeitsstatus",
+    "gleiche Funktionalität wie bei der Neubereitstellung",
+    "Wenn Produkte nicht EOS fähig sind, muss geklärt werden, wann und wie ausgesteuert werden sollen. ToDo Sven",
+    "GGS leitungsbezogen von Fiber auf Fiber",
+    "O3 und LOM sind produktwechselfähig",
+    "Flamingo kann Produktwechsel noch nicht korrekt übertragen\nFlamingo fragt die die Bestände ab",
+    "Flamingo fragt die die Bestände ab"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    }
+  ],
+  "labels": [
+    "1.Sprint",
+    "ADCL-PI27",
+    "DigiHub_DOM",
+    "EOS",
+    "GK",
+    "GK-FTTH",
+    "GK-FTTH-EOS",
+    "MaBu_Connect",
+    "O3",
+    "O3-POM",
+    "PI28",
+    "VGK_Josef"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-12626",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12626",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-98400",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98400",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "EOS-5744",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/EOS-5744",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91461",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91461",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-99520",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99520",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-7892",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-7892",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-7874",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-7874",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-8980",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-8980",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-9219",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-9219",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-10830",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-10830",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11580",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11580",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11852",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11852",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "MaBu Generische Prozessbeschreibung_abgestimmt.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4400055/MaBu%20Generische%20Prozessbeschreibung_abgestimmt.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2024-03-21T14:11:31.736+01:00"
+    },
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5485710/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-11T10:17:19.901+01:00"
+    },
+    {
+      "filename": "WEB01496_TN_Gigabit_Bearbeitung_in_CRM_T_und_AVIA_für_SGrK.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/4372861/WEB01496_TN_Gigabit_Bearbeitung_in_CRM_T_und_AVIA_f%C3%BCr_SGrK.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2024-03-13T15:12:57.482+01:00"
+    }
+  ]
+}

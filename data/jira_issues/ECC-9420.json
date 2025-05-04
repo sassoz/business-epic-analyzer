@@ -1,0 +1,24 @@
+{
+  "key": "ECC-9420",
+  "issue_type": "Portfolio Epic",
+  "title": "OnNet Security - Fixed - Business DSL / Glasfaster Pro - Customer Devices",
+  "status": "Funnel",
+  "description": "",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Commercial Management",
+      "title": "Commercial Management "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

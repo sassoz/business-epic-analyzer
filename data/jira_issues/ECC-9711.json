@@ -1,0 +1,32 @@
+{
+  "key": "ECC-9711",
+  "issue_type": "Epic",
+  "title": "AI Powered Business Line: Support Concept Design",
+  "status": "Waiting",
+  "description": "",
+  "business_value": {},
+  "assignee": "Etscheid Andreas",
+  "priority": "",
+  "target_start": "2025-01-27",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    },
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    },
+    {
+      "code": "Titan",
+      "title": "Titan "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

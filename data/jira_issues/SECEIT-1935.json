@@ -1,0 +1,22 @@
+{
+  "key": "SECEIT-1935",
+  "issue_type": "Epic",
+  "title": "EOS-MVP2c 4.0. point of no return",
+  "status": "Funnel",
+  "description": "Description\nIn diesem EPIC sind alle Storys zusammengefasst, die für das Thema PONR in Bezug auf die Vertragsanlage in AL-MV beim MVP2c EOS auf Seiten SeCe IT relevant sind. ",
+  "business_value": {},
+  "assignee": "Markus Fracke",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Decoupling",
+    "VS_enabling"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

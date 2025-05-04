@@ -1,0 +1,44 @@
+{
+  "key": "DATASAT-30182",
+  "issue_type": "Epic",
+  "title": "ODW: Casemanagement: Enlarge database on ODW with head-count information",
+  "status": "In Progress",
+  "description": "Description\nThe pseudonymized Mitarbeiter_ID and the team name are to be ressolved.\nA table is to be provided that shows the number of employees per team and day, week and month. This is to be handed over to Amalthea.\nThe IA shall be updated.\nInnovator-Link Interface-Layer on MSFI:\ninno:///Business_Intelligence/INOX/Arbeitsmodell?uuid=88d20e9b-705b-2f7b-cc80-fcb0d7e663d7",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2025-03-27",
+  "target_end": "2025-06-25",
+  "fix_versions": [
+    "2025_Q1",
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "CMServ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Plan for ODW - Casemanagement - Enlarge database on ODW with head-count information.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5511070/Plan%20for%20ODW%20-%20Casemanagement%20-%20Enlarge%20database%20on%20ODW%20with%20head-count%20information.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "38 kB",
+      "date": "2025-03-18T09:37:33.338+01:00"
+    },
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5510359/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "43 kB",
+      "date": "2025-03-18T09:34:51.213+01:00"
+    }
+  ]
+}

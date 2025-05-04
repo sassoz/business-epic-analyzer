@@ -1,0 +1,24 @@
+{
+  "key": "MAGBUS-105089",
+  "issue_type": "Epic",
+  "title": "Decoupling of BCA approvals",
+  "status": "Funnel",
+  "description": "Description\nFor the BCA process the following elements are needed:\nGeneral\nApproval History\nError cases and messages\na) Request incomplete or wrong\nb) Creation of documents not possible when approvals missing\nc) Sending of order not possible when approvals missing\nEmails to approver and requester\nAdjustment for approver roles to have a unique identifier\nOptional: Possibility to filter for different types of approvals\n  Requester View\nDisplaying BCA\nPrefill email address of approver from user settings\nFor every user a segment and region is in his profile. Derived from this information the approvers email address shall be prefilled.\nThe email address for the approver can be overwritten by the user in case a substitute is needed e.g. because of holidays or illnesses.\n  Approver View\nApproval / Rejection must be possible as well as filling in a comment\nForwarding the approval request in case of multilevel approvals\nDisplay relevant information to approver for BCA (tbd with approvers)",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-04-24",
+  "target_end": "2025-06-25",
+  "fix_versions": [
+    "PI 28 stretch"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DCAP",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

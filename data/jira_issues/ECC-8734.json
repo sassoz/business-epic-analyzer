@@ -1,0 +1,52 @@
+{
+  "key": "ECC-8734",
+  "issue_type": "Epic",
+  "title": "CAS: Restore E2E test capability for CAS",
+  "status": "Backlog",
+  "description": "Description\n UserStory\n Als Telekom\n möchte ich nach Abschaltung der CAS Testplattform einen Simulator Implementieren,\n um die Testfähigkeit der interne IT-Prozesse für das Zusatzpaket CAS sicherstellen.\nDefinition of Ready\n - HINWEIS\n - HINWEIS\n - HINWEIS\nHINWEISE\n - HINWEIS\n - HINWEIS\nIT Verarbeitungssequenz bzw. Abläufe\n - HINWEIS\n - HINWEIS\nHINWEISE für den Prozesstest BSS\n - HINWEIS\n - HINWEIS\nHINWEISE für den Teil-Prozesstest BSS\n - HINWEIS\n - HINWEIS\nHINWEISE für den Prozesstest OSS\n - HINWEIS\n - HINWEIS\n  HINWEISE für den Prozesstest MCS\n - HINWEIS\n - HINWEIS\n    HINWEISE für den Betreiber\n - HINWEIS\n - HINWEIS\n - HINWEIS\n  Hinweis zum Template\n - HINWEIS\n - HINWEIS\n   ",
+  "business_value": {},
+  "assignee": "Etscheid Andreas",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Nach dem Rückbau der CAS Testumgebung im Rahmen von ECC-7800 soll die E2E Testfähigkeit für die internen IT-Prozesse wiederhergestellt werden.\nUm einen Test der IT-internen Prozesse sicherzustellen wird anstelle der CAS Testumgebung ein Simulator (keine speziellen Anforderungen) an der Schnittstelle (C4 - Zylinc) implementiert\nDie Belieferung von SMD durch C4 bleibt bestehen",
+    "Um einen Test der IT-internen Prozesse sicherzustellen wird anstelle der CAS Testumgebung ein Simulator (keine speziellen Anforderungen) an der Schnittstelle (C4 - Zylinc) implementiert",
+    "Die Belieferung von SMD durch C4 bleibt bestehen",
+    "Mit dem Rückbau der CAS Testumgebung in den IT-Testumgebungen kann zukünftig im E2E Test kein Test der Gesamtfunktionalität (Telekom interne IT-Prozesse inkl. Zylinc Plattform) erfolgen. Testergebnisse sind ausschließlich für die Telekom-internen IT-Prozesse aussagekräftig.",
+    "Bei Fehlern in der Produktion ist eine Fehleranalyse und Bug-Fixing ausschließlich in der Produktionsumgebung möglich, da ein Nachstellen im Test nicht möglich ist.",
+    "Zukünftige Weiterentwicklungen zur Unterstützung neuer Funktionalitäten in der CAS-Plattform von Zylinc können nur entwickelt und getestet werden sofern eine neue CAS Testumgebung temporär angebunden wird."
+  ],
+  "components": [
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    },
+    {
+      "code": "Technik",
+      "title": "Technik "
+    }
+  ],
+  "labels": [
+    "CAS"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "AW Kündigung CAS-Testumgebung.msg",
+      "url": "https://jira.telekom.de/secure/attachment/3709346/AW%20K%C3%BCndigung%20CAS-Testumgebung.msg",
+      "mime_type": "application/octet-stream",
+      "size": "129 kB",
+      "date": "2024-01-17T13:47:14.573+01:00"
+    },
+    {
+      "filename": "WG_ Current developments in CaaS and influence on the provision of resources_.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5560661/WG_%20Current%20developments%20in%20CaaS%20and%20influence%20on%20the%20provision%20of%20resources_.msg",
+      "mime_type": "application/octet-stream",
+      "size": "96 kB",
+      "date": "2025-04-01T09:38:07.108+02:00"
+    }
+  ]
+}

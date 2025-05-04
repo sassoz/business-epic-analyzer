@@ -1,0 +1,47 @@
+{
+  "key": "BEMABU-2261",
+  "issue_type": "Business Epic",
+  "title": "Bericht MF Terminauswertung für Inside Sales Leiter",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür den Inside Sales 1 bzw. den Leiter Inside Sales im Midmarket,\ndie 2/3 des Kundenbestands von Midmarket (C-Segment) bearbeiten und für die Terminierung der AcM 1 vor Ort verantwortlich sind,\nist es notwendig einen Überblick / ein Monitoring für die erreichten Termine zu haben. \nwodurch die Steuerung überhaupt erst ermöglicht wird, zumal der KPI Termine AcM I für die Inside Sales 1 verzielt wird\nso dass  15 Außendiensttermine pro Woche pro AcM 1 erreicht werden\nDas Vorhaben schafft <Transparenz über den Kundenangang im C Segment und den erforderlichen Umsatzhub durch Präsenztermine beim Kunden. Durch den Präsenztermin entsteht in der Regel ein höherer Umsatz/Win bei den Kunden. \n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMagenta Force DOM0201 <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter Thomas Gibowski\nSponsor/Fachseite Vertical Midmarket\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nMit den aktuellen Berichten zur Terminauswertung InSA 1 & 2 herrscht keine Transparenz im Zusammenhang mit der Verzielung der operativ arbeitenden Kollegen.\nZielgruppe des Berichts: Leiter Inside Sales\nZiel: Überblick über die aktuellen Termine welche über Insa 1 & 2 eingestellt werden um die entsprechende Unterstützung bei Gefährdung der Zielerreichung zu gewährleisten.",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "30-40 Mio. € p.a.",
+      "cost_saving": "",
+      "risk_loss": "80",
+      "justification": "80 AcM1 mit 15 Terminen/Woche * 40 KW = 48.000 Termine p.a.. Winrate 40%, Win AE 3.000€ im Schnitt. 30-40 Mio. € p.a.. Maßnahme ist iPF stützend für den Angang des C Segments Manueller Aufwand für Leiter Inside Sales und negativer Einfluss auf NPS zum Thema Terminierung und Terminsteuerung. EPIC ermöglich es, Termine gezielt zu steuern und zu messen. Ansonsten hoher manueller Aufwand bzw. nicht nachvollziehbarer Way to Go Zielerreichung."
+    },
+    "strategic_enablement": {
+      "scale": 3,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": "Ein unvollständiges und/ oder unregelmäßiges Monitoring bei Inbound, Outbound und Außendienst führt zu weniger Transparenz und erhöht das Risiko einer ineffizienten Austeuerung des Kundenangangs, fehlender Absätze und Reduzierung der Kundenzufriedenheit. Der Kundenangang im MM Vertical bei 2/3 alles Kunden (110.000 Kunden) muss entsprechend ausgesteuert werden durch Outboundkampagnen, Inboundzuführung und Außendiensttermine. In der Regel durch Quartalsplanung und wöchentliches Montoring. Dies wird über diverse Vertriebsfunktionen umgesetzt sowie über die TDG DV Midmarket und den Telekom Service über Sales und Care umgesetzt. Eine effiziente Aussteuerung erfordert Planung und Monitoring über alle Aktivitäten."
+    },
+    "time_criticality": {
+      "scale": 3,
+      "time": "",
+      "justification": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch: 01.07.2026 Siehe Nutzenstatement. Die Verzielung der auszuwertenden MA und Aussteuerung ist bereits ongoing für das Jahr 2025. Da ein Workaround gefunden wurde ist die Priorisierung reduziert worden für Q3. Jedoch besteht die Anforderung aufgrund NPS Logik und Vereinfachung der Systemlandschaft im Vertrieb bleibt das Thema strategisch wichtig für eine sinnvolle und effiziente Anwendungsarchitektur im Vertrieb"
+    }
+  },
+  "assignee": "Thomas Gibowski",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Wenn der Leiter Inside je Region die Terminauswertung wöchentlich in Magenta Force für Inside Sales abrufen und zur Steuerung nutzen kann, ist die Anforderung erfüllt."
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

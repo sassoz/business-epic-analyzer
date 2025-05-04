@@ -1,0 +1,43 @@
+{
+  "key": "SDN-7551",
+  "issue_type": "Epic",
+  "title": "Workflow: Enrichment and Issue New Network",
+  "status": "Review",
+  "description": "Description\nRequired Inputs:\nFinalized Workflow Description - until 02.12.\nParameters for this Workflow - until 02.12.\n\nBusiness Scope:\nImplementation of workflows in ServiceNow to provision an order",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "workflows are implemented in the dev environment based on the process descriptions",
+    "workflows are tested in the dev environment"
+  ],
+  "components": [],
+  "labels": [
+    "SD-LAN/WiFi",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20221116_SDLAN_Testcases.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2633625/20221116_SDLAN_Testcases.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-21T12:32:22.620+01:00"
+    },
+    {
+      "filename": "image-2022-11-21-12-55-15-195.png",
+      "url": "https://jira.telekom.de/secure/attachment/2633650/image-2022-11-21-12-55-15-195.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-11-21T12:55:15.470+01:00"
+    }
+  ]
+}

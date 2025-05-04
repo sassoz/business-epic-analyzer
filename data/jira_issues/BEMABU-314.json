@@ -1,0 +1,72 @@
+{
+  "key": "BEMABU-314",
+  "issue_type": "Business Epic",
+  "title": "PA - Integration Vertriebskanal in Magenta Force",
+  "status": "Closed",
+  "description": "Description\nFür wen? Im Bereich Telekom Shops Partneragenturen wird die Rolle für interne und externe Mitarbeiter benötigt. Konkret für den GK Leiter Zentral, für die VGL  , sowie für ausgewählte Mitarbeiter in den Shops der Telekom Partneragenturen. \nTelekom Partneragenturen arbeiten heute mit CIAM / My Card Verschlüsselung an den Telekom Administrationssystemen.\nWelches Bedürfnis? Kundenprojekte aus dem GK PA Vertrieb einstellen um das GK Geschäft steuern zu können.\nKampagnenfähigkeit des GK PA Vertrieb sicherstellen.\nDamit Buchungen in SeCe IT prozesskonform (Bonitätsprüfung nur über MagentaForce möglich) durchgeführt werden können. \nWie wird es gemacht? Die Mitarbeiter der Telekom Shop Partneragenturen, GK Leiter Zentral und VGL erhalten Zugang zu Magenta Force und können dort die notwendigen Funktionen zum Einstellen und Bearbeiten von Vorhaben nutzen und auswerten.\nWas ist der Mehrwert? Sicherstellung des GK Geschäfts bei den Telekom Shop Partneragenturen, einfache Zusammenarbeit, effektive Steuerung des Geschäfts\nWas ist der Differenzierer - das \"Warum\"? Unterstützt den Omnichannel Angang im GK Umfeld und fördert die Zusammenarbeit mit den Direktvertrieben (nicht Midmarket) und T-Shops.\n  Es werden keine flexiblen Listen angeboten. Es sollen starre Listen vorgegeben werden. Felder und Filter-Einstellungen tbd.\n  Änderungen bei den Partner Agenturen soll idealerweise über Patrick Nied kommuniziert werden (im Rahmen des bestehende Prozess der GK Shops) --> tbc.\n  Offen:\nRegionsstruktur\nAusgestaltung von Listen\nAusgestaltung von Berichten und Dahsboards\nMitbestimmung (BR)",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "Sicherstellung des GK Geschäfts bei den Telekom Shop Partneragenturen",
+      "cost_saving": "Effektive Steuerung des Geschäfts",
+      "risk_loss": "Prozesskonformität bei Buchungen in SeCe IT (Bonitätsprüfung nur über MagentaForce möglich)",
+      "justification": "Ermöglicht das Einstellen von Kundenprojekten aus dem GK PA Vertrieb zur Steuerung des GK Geschäfts und stellt die Kampagnenfähigkeit des GK PA Vertriebs sicher"
+    },
+    "strategic_enablement": {
+      "scale": 3,
+      "risk_minimization": "Sicherstellung prozesskonformer Buchungen in SeCe IT",
+      "strat_enablement": "Unterstützt den Omnichannel Angang im GK Umfeld und fördert die Zusammenarbeit mit den Direktvertrieben und T-Shops",
+      "justification": "Einfache Zusammenarbeit zwischen Telekom Shop Partneragenturen, GK Leiter Zentral und VGL durch Zugang zu Magenta Force"
+    },
+    "time_criticality": {
+      "scale": 2,
+      "time": "Nicht explizit angegeben",
+      "justification": "Notwendig für laufende Geschäftsprozesse, aber keine konkreten Zeitangaben im Text"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Beddies, Olaf",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "Mitarbeiter werden bzw. wurden geschult",
+    "Kennung werden bzw. wurden an Mitarbeiter in dem benannten Bereich versandt",
+    "Zugriff auf die Anwendung ist erfolgt",
+    "Support-Weg beim Störungen ist aufgebaut (via NIMBUS)",
+    "Weiterleitungen zwischen den (Segment-)Bereichen ist möglich (Weiterleitung als Lead)",
+    "Rollen- und Berechtigungskonzept ist erstellt und ist aktiv",
+    "Reporting ist sichergestellt --> tbd.",
+    "Zusätzliche Kennung sind im Forecast berücksichtigt\nzum Start: 45 Lizenzen (in Planung enthalten)\nTendenz zunehmend",
+    "zum Start: 45 Lizenzen (in Planung enthalten)",
+    "Tendenz zunehmend"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-100687",
+      "title": "MAGBUS-100687",
+      "summary": "MF: Telekom Partner Agenturen Onboarding",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100687",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

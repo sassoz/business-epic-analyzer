@@ -1,0 +1,46 @@
+{
+  "key": "BEMABU-2219",
+  "issue_type": "Business Epic",
+  "title": "LE - AI in MagentaForce (SDR Sales Representative Sales Assist)",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nFür alle vertrieblich agierenden Mitarbeiter aller Verticals welche MagentaForce als CRM System nutzen\ndie im CRM (MagentaForce) System arbeiten und ihren Kundenangang dort durchführen,\nist es notwendig eine Verbesserung der Arbeitsqualität als Hilfestellung im Vertrieb anzubieten,\nwodurch die Zeit von manuellen Recherchetätigkeiten und Schulungsaufwand erleichtert wird,\nso dass  dadurch die Verkaufschancen erhöht werden,\nund nicht zu viel Zeit in manuelle Vor-/Nachbearbeitungen investiert werden muss.\nDas Vorhaben schafft mehr Zeit für relevante Vertriebstätigkeiten und dadurch bessere Gewährleitung der Zielerreichung.\n  Agentforce Sales Coach befasst sich mit dem Problem der zeitlich eingeschränkten Vertriebsmanagern und dem Bedarf an schnellem durch die Bereitstellung von personalisiertem Coaching auf Abruf direkt aus einer Verkaufschance heraus unter Verwendung von CRM-Daten für den Kontext.\nEinstein Sales Coach hilft durch simulierte Kundengespräche bei der Vorbereitung von Kundenterminen.\nMitarbeiter:innen können durch das KI-geführte Coaching ihre Fähigkeiten weiterentwickeln, um Kundenbeziehungen noch erfolgreicher zu pflegen.\nEinstein Sales Coach Agent unterstützt  indem er eigenständig realitätsnahe Rollenspiele durchführt, die auf den jeweiligen Geschäftsabschluss zugeschnitten sind.\nAnschließend gibt er ein personalisiertes und objektives Feedback.\nWährend des Rollenspiels simuliert Einstein Kund:innen und nutzt generative KI, um Text in Sprache umzuwandeln.\nEinstein nutzt RAG, um zu simulieren, wie Kund:innen reagieren könnten.\nDie Antworten stützen sich auf relevante Daten, die in Salesforce gespeichert sind, beispielsweise Informationen über den Deal, den Account oder bestehende Korrespondenz.\nUser können so in realitätsnahen Szenarien üben, Angebote zu präsentieren, auf Einwände zu reagieren und zu verhandeln, bevor sie sich mit dem Kunden treffen.\nRollenspiel-Sitzungen\nRM-Datenintegration\nAutonomer Agent\nMehrwert:\nSteigerung der Produktivität des Verkaufsteams\nVerkäufer gehen vorbereitet in Meetings, um Kundengespräche\nKonsistentes Feedback über Stärken, verbesserungswürdige Bereiche und umsetzbare Schritte zur Förderung von Geschäften auf der Grundlage von CRM-Daten\nSchnelleres Onboarding von Vertriebsmitarbeitern\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n        MagentaForce DOM0201 Andrej Deckel  \n          BEO und ggf. Vertreter Markus Hellmold, Frank Nähring\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nDer Business Impact für Salesforce SDR (Sales Development Representative) ist erheblich und umfasst mehrere Aspekte, die zur Verbesserung der Vertriebsprozesse und zur Steigerung der Effizienz beitragen. Hier sind einige der wichtigsten Punkte:\n\nLead-Generierung und -Qualifizierung: Salesforce SDRs sind darauf spezialisiert, potenzielle Kunden zu identifizieren und zu qualifizieren. Dies führt zu einer höheren Anzahl qualifizierter Leads, die an das Vertriebsteam weitergeleitet werden können\n\nEffizienzsteigerung: Durch den Einsatz von AI und Automatisierungstools können SDRs ihre Aufgaben schneller und effizienter erledigen. Dies umfasst die automatische Erstellung neuer Leads und Opportunities sowie die Nutzung von Sprach-zu-Text-Funktionen, um Meeting-Notizen zu diktieren und zu analysieren\n\nVerbesserte Kundeninteraktionen: SDRs können personalisierte Outreach-Kampagnen durchführen und auf Kundenanfragen reagieren. Dies verbessert die Kundenbindung und erhöht die Wahrscheinlichkeit, dass Leads zu Kunden konvertieren\n\nErhöhte Verkaufschancen: Durch die Nutzung von AI-gestützten Empfehlungen können SDRs die richtigen Produkte zur richtigen Zeit anbieten, was die Verkaufschancen erhöht und den Umsatz steigert\n\nOptimierte Zusammenarbeit: Die Integration von Tools wie Microsoft Teams und LinkedIn ermöglicht es SDRs, effizienter mit dem Vertriebsteam zusammenzuarbeiten und relevante Informationen schnell auszutauschen\n\nInsgesamt trägt der Einsatz von Salesforce SDRs dazu bei, die Vertriebsprozesse zu optimieren, die Effizienz zu steigern und die Kundenzufriedenheit zu verbessern.",
+  "business_value": {
+    "business_impact": {
+      "scale": 13,
+      "revenue": "",
+      "cost_saving": "3,25 Mio EUR savings (umgerechnet gesparte Arbeitszeit 62.500 EUR / Woche)",
+      "risk_loss": "",
+      "justification": "Alelrdings ist dies kein Effizienzcase; Ambition ist, diese Zeit für mehr Real Selling Time zu nutzen Einsparung zusätzlicher Salescoaches durch Training von Verkaufsgesprächen mit dem KI Agenten Effizienzsteigerung 1 Sales Coach = 200.000 Euro p.a."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "",
+      "strat_enablement": "NPS Steigerung (Mitarbeiterzufriedenheit) Digitale Transformation und Einsatz AI Erhöhte Verkaufschancen",
+      "justification": "Durch die Verkaufschancen erhöht und den Umsatz steigert"
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch: 30.09.2025",
+      "justification": "Erhöhung der Hitrate und NPS Verbesserung"
+    }
+  },
+  "assignee": "Frank Nähring",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,68 @@
+{
+  "key": "ECC-9744",
+  "issue_type": "Epic",
+  "title": "AIPBL: new Cloud PBX additional package on workplace level",
+  "status": "Waiting",
+  "description": "Business Scope:\nI, as the administrator of the CloudPBX, can book the AI Powered Business Line add-on package at a workplace in the BSP Portal. Same as other features of the CloudPBX.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-05-12",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "The product should be an additional package at workplace of the CloudPBX.",
+    "The price is valid as a monthly assignment per workplace (same as the other additional packages)",
+    "The Admin can book or cancel the AIPBL function in the CloudPBX configuration portal.",
+    "The User can configure the function in a later point of time.",
+    "Information after the booking process of AIPBL will be sent to the user's e-mail address. (Text suggestion for Portal Team)",
+    "E-mail to users that the add-on package has been activated and can be used. incl. link to the help portal, how it works, as well as further information e.g. data protection (text suggestion for Portal Team)",
+    "E-mail to admin, the additional package has been booked/provided.",
+    "The user and admin should be provided with their own configuration page for further functions in the target solution at the latest.",
+    "After booking, the additional package is automatically activated",
+    "After booking, various parameters/triggers should be transferred to BWKS and STEAM on OTC (user, phone number, e-mail address for sending, CloudPBX instance)",
+    "Provisioning of FAC for Call Recording must be done",
+    "Applies to CompanyFlex CloudPBX and DeutschlandLAN CloudPBX",
+    "Pilot mode for WBV",
+    "Material number for additional package: 50356512 - Zusatz-Paket Voice AI Notes and price 1,99€ per month net",
+    "For CompanyFlex base packages provided before the feature launch, the first booking of the feature must pass through a consent dialog. For CompanyFlex base packages provided after the feature launch, this dialog does not need to be completed – similar to the implementation of the CompanyFlex feature \"Call Analytic Service.",
+    "In this dialog, the customer must agree to the following points: feature prices, modified privacy policy, ErgB-AV. The user should go through a dialog similar to the one for the Call Analytic Service.",
+    "After the user has completed the dialog an email with documents will be sent to his registered email address for the BSP portal. This email should be archived in DMS (Document Management System), similar to Call Analytic Service.",
+    "Based on the C4 event for the booking of the zMP (material number: xxx) at the company level, the DMS service will send the email notification using the template \"ServicePacksWereAccepted.\"",
+    "For attachment control in the template, the value \"3000\" will be passed for the attribute \"attachmentId.\"",
+    "The order position text will read \"ErgB-AV AIPBL zugestimmt\".\"",
+    "The new attachments (DSH and ErgB-AV) are stored in the DMS Flexkomm under the template and assigned to attachment ID-3000",
+    "In Addtion to the above we need a fourth checkbox for the terms of use. the customer muss check all four boxes to get to the next step. Link and Text will follow.",
+    "The new Materialnumber and the name of the new additional package is added to the mapping table of the new dms microservice ( 50356512 - Zusatz-Paket Voice AI Notes)",
+    "The consent dialog must be set up so that only the customer's users can complete it. Users in the service and sales role (“DTTS-Role”) should not be able to complete the consent dialog.",
+    "The E-Mail Template for the User of the Workplace should have addtional information about the \"Zusatzpaket\" and also a Link to the Terms of use."
+  ],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    },
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    },
+    {
+      "code": "Technik",
+      "title": "Technik "
+    }
+  ],
+  "labels": [
+    "CompanyFlex"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Bild.png",
+      "url": "https://jira.telekom.de/secure/attachment/5482040/Bild.png",
+      "mime_type": "image/png",
+      "size": "123 kB",
+      "date": "2025-03-10T13:42:13.720+01:00"
+    }
+  ]
+}

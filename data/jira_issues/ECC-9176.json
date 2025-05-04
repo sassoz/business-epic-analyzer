@@ -1,0 +1,28 @@
+{
+  "key": "ECC-9176",
+  "issue_type": "Epic",
+  "title": "BSP Classic: Refactoring new vue.js UI",
+  "status": "Backlog",
+  "description": "",
+  "business_value": {},
+  "assignee": "Stepanenko, Viktoriia",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Code optimizations are implemented in the new vue.js UI"
+  ],
+  "components": [
+    {
+      "code": "BSPclassic",
+      "title": "BSPclassic "
+    }
+  ],
+  "labels": [
+    "STO_STABILITY"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,32 @@
+{
+  "key": "MAGBUS-99989",
+  "issue_type": "Epic",
+  "title": "SEP: Analyse KEK Management B2B",
+  "status": "Closed",
+  "description": "Description\nIch als PO möchte dass wir gemeinsam mit den identifizierten Systemen eine Exploration der KEK Landschaft für B2B durchführen. Hierbei soll je Gesellschaft geprüft werden, welche KEK-Version genutzt wird und wie die KEK Strukturell in ihren IT-Systemen abgelegt wird.\nAnhand dieser Analyse soll gemeinsam mit der Fachseite ein gemeinsames Fachliches Zielbild erarbeitet werden. Anhand des neuen Zielbildes muss ein architekturelles Zielbild erarbeitet werden.\nEbenso ist durch die Transparenz der jeweiligen KEK-Strukturen in den IT-Systemen Übergangsregeln zu definieren und diese rechtlich Abzustimmen.\nDie Consent Data Platform (CDP) stellt ebenfalls für Q1 Ressourcen zur Analyse zur Verfügung\n \n\nBusiness Scope:\nIch als PO möchte dass wir die Analyse des KEK Management für B2B in Q1 unterstützen und gemeinsam mit der Fachseite und den Systemen ein einheitliches Zielbild erarbeiten",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "Eine Analye der KEK Landschaft in B2B ist für alle Gesellschaften (DTBS, TDG, MMS, T-Sec, IoT, International, T-System) ist erfolgt",
+    "Anhand der Analyse wurden Entscheidungen für ein gemeinsames fachliches und architekturelles Zielbild innerhalb B2B getroffen",
+    "Regeln für den Übergang eines Kunden von SME+ nach KMU (KMU nach Midmarket/LargeEnterprise) sind definiert"
+  ],
+  "components": [
+    {
+      "code": "SEP-DCM",
+      "title": "SEP-DCM "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

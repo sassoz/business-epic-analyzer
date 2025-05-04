@@ -1,0 +1,54 @@
+{
+  "key": "MAGBUS-100706",
+  "issue_type": "Portfolio Epic",
+  "title": "Inhouse Basic: Umbau des FKTO Service auf V2",
+  "status": "In Progress",
+  "description": "Description\n Story\nAls \nmöchte ich \num \n   Fragen / Hinweise:\n  Problemstellung (Problem Statement)\n...\nFachlicher Lösungswunsch (Feature Hypothese)\n...\nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nUseCases/Testcases \nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n        ",
+  "business_value": {},
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "2025-01-10",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "ACC1: Der Service wurde stabieler und sauber umgesetzt \nACC2: Es gibt eine unterschriebene Schnittstellenvereinbarung",
+    "ACC1: Der Service wurde stabieler und sauber umgesetzt",
+    "ACC2: Es gibt eine unterschriebene Schnittstellenvereinbarung"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "DO_SeCe-IT",
+      "title": "DO_SeCe-IT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    }
+  ],
+  "labels": [
+    "ADCL-PI27",
+    "DigiHub_DOM",
+    "EOS",
+    "O3",
+    "O3-POM",
+    "PI28",
+    "SeCe-IT"
+  ],
+  "realized_by": [
+    {
+      "key": "EOS-7106",
+      "title": "EOS-7106",
+      "summary": "FKTO (billing account) switch to Version 2 /FKTO Service auf V2 schwenken",
+      "url": "https://jira.telekom.de/browse/EOS-7106",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

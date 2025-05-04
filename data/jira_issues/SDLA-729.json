@@ -1,0 +1,63 @@
+{
+  "key": "SDLA-729",
+  "issue_type": "Portfolio Epic",
+  "title": "Customer Onboarding: Generic for all products",
+  "status": "Closed",
+  "description": "Description\n  For whom Telekom\nwho has to fulfill the order of a managed LAN / WiFi service\n\nBusiness Scope:\nThe customer will be onboarded in the system with the related data.\nCustomer onboarding in relevant tools\nReference to Network ID is transferred through all systems.",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q3_22",
+    "Q4_22"
+  ],
+  "acceptance_criteria": [
+    "Customer Onboarding successfully in the system SNow",
+    "Customer Onboarding successfully in the system SAP BRIM",
+    "Customer Onboarding successfully in the systems: eTTS, PMA-ISEM, eVA",
+    "Customer Onboarding succesfully in the systems: Netcracker and Juniper plattform",
+    "Reference to Network ID is transferred through all systems."
+  ],
+  "components": [],
+  "labels": [
+    "Assurance",
+    "CPQ",
+    "CPQIT",
+    "NGO",
+    "OKR_Q2_Get_ready_for_Juniper_MIST",
+    "PANDA",
+    "SDLA_VS_Assurance",
+    "SDLA_VS_Billing&Contract_Mgmt",
+    "SDLA_VS_Configuration&Offer",
+    "SDLA_VS_Digital_Customer_Touchpoints",
+    "SDLA_VS_Finance_Procurement&Logistic",
+    "SDLA_VS_Lead&Opportunity",
+    "SDLA_VS_Order_Management",
+    "SDLA_VS_Technical_Fulfillment&Domain_Orcherstration",
+    "SDX",
+    "SDxHub",
+    "SNOW@TC",
+    "SNOWTC",
+    "assurance"
+  ],
+  "realized_by": [
+    {
+      "key": "SDLA-730",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-730",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-731",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-731",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

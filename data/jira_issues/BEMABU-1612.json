@@ -1,0 +1,62 @@
+{
+  "key": "BEMABU-1612",
+  "issue_type": "Business Epic",
+  "title": "Q1 OneForce Casemanagement - Reporting",
+  "status": "Closed",
+  "description": "Description\nMit MagentaForce soll die Workflow-Lösung für Work im GrK-Bereich abgelöst werden. In Q3/24 soll der Schwenk von der IRRP zu MagentaForce gestartet werden. Es ist noch offen, ob der Schwenk schrittwiese oder in einem Zug erfolgt. Entsprechend werden dann für das Reporting analoge Kennzahlen zur heutigen IRRP-Lösung benötigt. \n  DoR Business Feature Status  \nBenefit Hypothesis includes:\nBusiness Value is clearly stated → INVEST\nAcceptance criteria are defined\nFunctional View is provided, e.g. as Business Workflow or Use Case Diagram → who are the first actors/End Users?\nY\nVersioned and visible in Roadmaps (e.g. Portfolio or Solution Roadmap).  \nRealization of the Version fits into one PI.  \nApproved by architects.  \nPrioritized within the program/solution backlog: WSJF template shoud be applied: \nhttps://mywiki.confluence.telekom.de/download/attachments/1432413926/20221027%20SD%20X%20Solution%20WSJF%20Template.xlsx?version=1&modificationDate=1666948872000&api=v2  \nUnderstood and estimated by all involved Digital Hubs/Agile Dev Teams who are realizing all relevant \"Running Software Artefacts\" to provide value for End Users.  \nDependencies are identified:\ninside the Solution (between Digital Hubs in Solution) or\noutside the Solution (external dependencies).\nAnd there are no external dependencies that can't be solved within the Solution/Hub and with the help of other Solutions/Hubs.\n  Real Business Features are classified as \"Business Feature\" in Jira (edit → Agile → Safe value type).  \nNon-functional requirements (NFRs) are identified (e.g. Load & Performance).  \nSecurity, privacy, working council approvals are labelled in Jira in case of relevance: (edit → Compliance → Compliance relevance). Y\nInitial high-level acceptance test cases, incl. test data (e.g. BDD: given-when-then) - test shift left - have been written. And also reviewed by BOs, PMs & POs.  \nPotential for test automation is identified.  \nAll the information relevant to development is linked: other stories/TBIs, relevant designs, confluence sources of information, screenshots, other vendor specs.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Mit MagentaForce soll die Workflow-Lösung für Work im GrK-Bereich abgelöst werden. In Q3/24 soll der Schwenk von der IRRP zu MagentaForce gestartet werden."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Ablösung der IRRP-Lösung durch MagentaForce",
+      "justification": "Es ist noch offen, ob der Schwenk schrittwiese oder in einem Zug erfolgt. Entsprechend werden dann für das Reporting analoge Kennzahlen zur heutigen IRRP-Lösung benötigt."
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "Q3/24",
+      "justification": "In Q3/24 soll der Schwenk von der IRRP zu MagentaForce gestartet werden."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Kevin Robeck",
+  "priority": "",
+  "target_start": "2024-03-01",
+  "target_end": "2024-12-31",
+  "fix_versions": [
+    "Q1_25",
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Operations"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Case Management Magenta Force Reporting - Anforderung OE47.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4629389/Case%20Management%20Magenta%20Force%20Reporting%20-%20Anforderung%20OE47.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "4.89 MB",
+      "date": "2024-06-12T10:09:12.748+02:00"
+    }
+  ]
+}

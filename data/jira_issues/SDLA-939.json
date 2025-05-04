@@ -1,0 +1,360 @@
+{
+  "key": "SDLA-939",
+  "issue_type": "Initiative",
+  "title": "Domain Extension SD WLAN & LAN Offering Q4",
+  "status": "Closed",
+  "description": "Business Scope:\nAttractive SD WAN product portfolio with SD WLAN & LAN option is marketable to address new customers in all segments with a competitive solution. Focus M / L first.\n\nThe new SD-WAN/WLAN product is a product which can be seperately and indipendend from SD-WAN booked. But, it is expected to be mostly marketed together with SD-WAN as a SD-Branch Offer. Therefore, it should rely on the same processes / experience and is seen as an extension of the existing SD-WAN product.\n\nAn extension of the product portfolio leads to long-term revenue assurance through a more cost-effective solution compared to the previous offering (complex, project-based). Economies of scale can be utilized through self-service and an automated platform chain (development, operating costs).\n\nThis product is an extension of Juniper SD-WAN. Therfore, the overall requirements for SD-WAN also apply to to LAN/WLAN. Processes should gernally apply to WAN/LAN/WLAN.",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q4_22"
+  ],
+  "acceptance_criteria": [
+    "Implemented vendor specific MIST controller (contract management, setup, configuration, connection, approval PSA/workers council)"
+  ],
+  "components": [],
+  "labels": [
+    "Assurance",
+    "CPQ",
+    "CPQIT",
+    "NGO",
+    "OKR_Q3_Get_ready_for_Juniper_MIST",
+    "PANDA",
+    "SDLA_VS_Assurance",
+    "SDLA_VS_Billing&Contract_Mgmt",
+    "SDLA_VS_Configuration&Offer",
+    "SDLA_VS_Digital_Customer_Touchpoints",
+    "SDLA_VS_Finance_Procurement&Logistic",
+    "SDLA_VS_Lead&Opportunity",
+    "SDLA_VS_Order_Management",
+    "SDLA_VS_Technical_Fulfillment&Domain_Orcherstration",
+    "SDX",
+    "SDxHub",
+    "SNOW@TC",
+    "SNOWTC",
+    "assurance"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-6976",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-6976",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-148",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-148",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "NGO-12401",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/NGO-12401",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-6001",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-6001",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "OMS-4104",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/OMS-4104",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-863",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-863",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDLA-893",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-893",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDPD-248",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDPD-248",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-167",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-167",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-4254",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4254",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5241",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5241",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5459",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5459",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5533",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5533",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5669",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5669",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5671",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5671",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5677",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5677",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5678",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5678",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5684",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5684",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5905",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5905",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5906",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5906",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-6495",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-6495",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-7198",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-7198",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-7647",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-7647",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-165",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-165",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-4243",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4243",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-4244",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4244",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-4246",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4246",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-4250",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4250",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-4262",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-4262",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5683",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5683",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5756",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5756",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5758",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5758",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-5917",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-5917",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDX-7348",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDX-7348",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2022-07-08_Roadmap MIST- DRAFT.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334394/2022-07-08_Roadmap%20MIST-%20DRAFT.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-25T14:55:47.000+02:00"
+    },
+    {
+      "filename": "20220719_Preismatrix_SDLAN.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334395/20220719_Preismatrix_SDLAN.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-25T14:56:37.000+02:00"
+    },
+    {
+      "filename": "Co-Mgt Use Cases.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334397/Co-Mgt%20Use%20Cases.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-25T14:55:27.000+02:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_2022-07-20_10-24-19.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334396/CPDMCATExcel_SDLAN_2022-07-20_10-24-19.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-25T14:54:34.000+02:00"
+    },
+    {
+      "filename": "LicenseMgmt_CUX_Meeting_01June2022_sent_final.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334398/LicenseMgmt_CUX_Meeting_01June2022_sent_final.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-25T14:52:02.000+02:00"
+    },
+    {
+      "filename": "Mist Licensing Model.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2334399/Mist%20Licensing%20Model.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2022-07-25T14:56:20.000+02:00"
+    },
+    {
+      "filename": "Price Model V4.0 LAN_WiFi.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334400/Price%20Model%20V4.0%20LAN_WiFi.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-25T14:56:32.000+02:00"
+    },
+    {
+      "filename": "Produktionsmodell SD LAN FolienNr, 1.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334401/Produktionsmodell%20SD%20LAN%20FolienNr%2C%201.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-07-25T14:54:56.000+02:00"
+    },
+    {
+      "filename": "SDLAN-Produktmodell_20220720_101629.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2334402/SDLAN-Produktmodell_20220720_101629.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-07-25T14:54:44.000+02:00"
+    },
+    {
+      "filename": "Site bundles.zip",
+      "url": "https://jira.telekom.de/secure/attachment/2334403/Site%20bundles.zip",
+      "mime_type": "application/zip",
+      "size": "",
+      "date": "2022-07-25T14:56:05.000+02:00"
+    },
+    {
+      "filename": "Site-bundles-v7.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2334404/Site-bundles-v7.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-07-25T14:55:15.000+02:00"
+    }
+  ]
+}

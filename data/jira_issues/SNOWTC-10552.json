@@ -1,0 +1,24 @@
+{
+  "key": "SNOWTC-10552",
+  "issue_type": "Epic",
+  "title": "Enabler: Trigger final configuration of hardware via NetCracker / Implement revised NC calls (new org, new site, activation, …) incl. new data mapping",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SDLA_VS_Order_Management",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

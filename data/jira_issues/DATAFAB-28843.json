@@ -1,0 +1,37 @@
+{
+  "key": "DATAFAB-28843",
+  "issue_type": "Epic",
+  "title": "Introduce business partner ID (GP-ID) for updating AKP export",
+  "status": "Closed",
+  "description": "Description\n1. Epic Description\nEpic (Requirement and Scope) \nTMSP is going to prepare and maintain a proper data synchronization between its system and the central customer base data management as data master (for TDG the central customer base database is called AKP oder Account Navigator). For that purpose a foreign key should be created in TMSP customer base data set. \nDuring customer set-up via SALES PORTAL an input field should be provided to register the appropriate reference. In TDG this reference is called Business Partner-ID (\"Geschäftspartner ID - GP-ID\") and is used by most business systems like MAGENTA-FORCE and ONE-FORCE to reference customer data, contacts and sales organization assignments.\nThe Business Partner ID (GP_ID) should be available as a dedicated attribute of the customer base data set. BI4BS should make use of this attribute to re-design the TMSP-AKP interface.\n  New features:\nAdd the mapping for Business Partner-ID (GP_ID) to TMSP-AKP interface export:\nto already existing 30 Übergeordnete Geschäftskundennummer (Kundennummer) column.\nAKP should be contacted for agreement and discussion\n  Benefits:\n1.    Improved data synchronization between TMSP and the central customer base data management system (AKP) \n2.    Enhanced referencing of customer data, contacts, and sales organization assignments in various business systems like MAGENTA-FORCE and ONE-FORCE .\n3.    Simplified customer set-up process via SALES PORTAL with an input field for registering the Business Partner ID.\nSpecific Deliverables  \nBusiness Partner-ID (GP_ID) as 30 Übergeordnete Geschäftskundennummer (Kundennummer) in ** TMSP-AKP interface export.\nUpdated Interface Agreement documentation.\nAcceptance Criteria (conditions which must be satisfied for the Epic to be accepted)\nNew Business Partner-ID (GP_ID) attribute is available in AKP export in 30 Übergeordnete Geschäftskundennummer (Kundennummer) column. \nGP_ID can be empty (null). Empty field should not lead to the error in aggregations/export jobs.\nOut of Scope\nCreation of new reports, system architecture changes. BI Launchpad reports are not affected.\nDependencies \nThe mapping in the source system is clear and accessible, and the changes have been approved by a business side.\n2. Technical / Solution Design / Compliance\nTechnical & Solution Design  \nThe proposed solution involves modifying existing folders to incorporate additional attributes and relationships, as well as updating the logic within the M2M Self Service Portal for creating necessary internal reports. This aligns with the architectural roadmap by ensuring compatibility with current systems and minimizing disruption. The implementation will utilize existing technologies and frameworks, focusing on improving performance while maintaining data integrity. The mapping in the source system is clear and accessible, ensuring a smooth integration process.\nCompliance evaluation\nDone.\n  3. NFR (if any)\nNon functional requirements\nNo.\n  4. SLA(if any)\nService Level Agreements\nN/A",
+  "business_value": {},
+  "assignee": "Patrick Glaser",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "2025_Q1"
+  ],
+  "acceptance_criteria": [
+    "New Business Partner-ID (GP_ID) attribute is available in AKP export in 30 Übergeordnete Geschäftskundennummer (Kundennummer) column.",
+    "GP_ID can be empty (null). Empty field should not lead to the error in aggregations/export jobs."
+  ],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "AM",
+    "DEV",
+    "M2M_Rep"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

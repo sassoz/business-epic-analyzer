@@ -1,0 +1,69 @@
+{
+  "key": "BEMABU-1967",
+  "issue_type": "Business Epic",
+  "title": "Q1 Erweiterung Codierung",
+  "status": "Closed",
+  "description": "Description\nUm eine Anbindung von EOS an MagentaForce zu schaffen, im Sinne eines Absprungpunkts/ direct Links aus Magenta Force zum passenden EOS-Vorgang, muss die Verschlüsselung bei EOS auf den Standard von MagentaForce erweitert werden.\n\nBusiness Scope:\nPain Points: Aktuell keine durchgängige sowie medienbruchfreie Interaktion zwischen Vertrieb & Service, fehlende durchgängige Kontaktdokumentation und E2E Transparenz, Kunde muss Anliegen oft mehrfach wiederholen\nZielbild: Wir geben unseren Mitarbeitern mit MAGENTAFORCE eine IT-Anwendung an die Hand, die es ihnen ermöglicht ihre Aufgaben schnell, intuitiv und erfolgreich zu erledigen. Kundenanliegen können durch überschaubare Erweiterungen von MAGENTAFORCE",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Aktuell keine durchgängige sowie medienbruchfreie Interaktion zwischen Vertrieb & Service, fehlende durchgängige Kontaktdokumentation und E2E Transparenz, Kunde muss Anliegen oft mehrfach wiederholen"
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Wir geben unseren Mitarbeitern mit MAGENTAFORCE eine IT-Anwendung an die Hand, die es ihnen ermöglicht ihre Aufgaben schnell, intuitiv und erfolgreich zu erledigen",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Kevin Robeck",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-03-31",
+  "fix_versions": [
+    "Q1_25",
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [
+    "Ein abgebildeter Link in MagentaForce muss beim anklicken dazu führen, dass der korrekte Auftrag in EOS aufgerufen wird."
+  ],
+  "components": [
+    {
+      "code": "DOM0200",
+      "title": "DOM0200 B2B Solution"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "EOS2.0",
+    "Operations",
+    "SGrK"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-99011",
+      "title": "MAGBUS-99011",
+      "summary": "EOS 2.0: Absprung von MF nach EOS",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99011",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-93862",
+      "title": "MAGBUS-93862",
+      "summary": "MF: Integration EOS - Link-Integration",
+      "url": "https://jira.telekom.de/browse/MAGBUS-93862",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

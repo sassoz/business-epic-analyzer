@@ -1,0 +1,61 @@
+```json
+{
+  "epicId": "BEMABU-1705",
+  "title": "Account Planning 2.0: Erweiterung zu BEMABU-662",
+  "ziele": {
+    "gesamtziel": "Bereitstellung einer PowerBI Komponente zur Integration in MagentaForce, die Kundeninformationen für den Vertrieb aus den BI-Systemen (ODW/Cai) bereitstellt. Zur Sicherstellung der Row-Level-Security werden weitere Nutzerinformationen aus MagentaForce benötigt. Das Ziel soll bis zum 31.12.2025 erreicht werden.",
+    "einzelziele": [
+      "Keine Informationen verfügbar"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Bereitstellung von Kundeninformationen für den Vertrieb aus den BI Systemen"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "Keine Informationen verfügbar",
+      "titel": "Keine Informationen verfügbar",
+      "funktionalitäten": [
+        "Keine Informationen verfügbar"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Keine Informationen verfügbar"
+  ],
+  "domainsAndITApplications": [
+    "PowerBI",
+    "MagentaForce",
+    "ODW/Cai",
+    "PBI ReportServer"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von Matthias, der die fehlenden Informationen zu den Nutzern über MagentaForce SSt an AIL zur Verfügung stellen wird",
+    "Abhängigkeit von der Bereitstellung von Territory-Informationen zu den Nutzern aus MagentaForce",
+    "Das Business Epic befindet sich im Status 'Funnel', was auf eine frühe Planungsphase hindeutet"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-12-31",
+    "fixVersions": ["2024"],
+    "meilensteine": [
+      {
+        "id": "Keine Informationen verfügbar",
+        "beschreibung": "Keine Informationen verfügbar",
+        "zeitraum": "Keine Informationen verfügbar"
+      }
+    ]
+  }
+}
+```

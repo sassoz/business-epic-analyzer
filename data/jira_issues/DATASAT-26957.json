@@ -1,0 +1,28 @@
+{
+  "key": "DATASAT-26957",
+  "issue_type": "Epic",
+  "title": "ODE: Casemanagement Service - Build up know how on ODE",
+  "status": "Closed",
+  "description": "Description\nFor the transfer of the key figures to the ODE, which is planned in the next step, the know-how in the team must be increased. Resources must be planned for this.\n******************************************************************************\nFür die im nächsten Schritt geplante Übernahme der Kennzahlen auf das ODE muss das Know how im Team vergrößert werden. Dazu sind Ressourcen einzuplanen.",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2024-12-26",
+  "target_end": "2025-03-26",
+  "fix_versions": [
+    "2025_Q1"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "CMServ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

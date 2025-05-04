@@ -1,0 +1,57 @@
+{
+  "key": "DATAFAB-5516",
+  "issue_type": "Portfolio Epic",
+  "title": "DATA - Accountplanning 2.0 / 360° Kundensicht",
+  "status": "Closed",
+  "description": "Description\nBitte beachten, dass in Canvas 10 PE nur eine Länge von 2 PI haben!\nQualicheck-Liste zur weiteren Bearbeitung durch die Expert Group als Attachment beigefügt. \n  Expert Group: Sven Peplau, Miriam Schultes\nDescription\nBusiness Epic Nutzen Statement \nBusiness Value\nBusiness Outcomes /Business Value\nBusiness Case:\n2023: 5 Mio €\n2024: 10 Mio €\n2025: 18,54 Mio €\n2026: 25 Mio €\nund 1.407.500 Minuten zusätzliche vertriebsaktive Zeit\n \n  In der COD habe ich den BV mit 13 und somit  > 6 mio € bewertet, weil die oben aufgeführten Werte erst über die Zeit realisiert werden (aufgrund der verspäteten Umsetzung werden die ersten 5 mio € erst 2024 realisiert), jedoch die 6 mio € wesentlich übersteigen.\nStrategischer Beitrag & zeitliche Kritikalität\nTime Criticality:\nDas Accountplanning ist für dieses Jahr priorisiert, die Implementierung in MagentaForce ist bis Ende Q3 geplant und die Kollegen dafür \"abgestellt\", Vorbereitungen laufen\nStrategic Enablement/Risk Reduktion: Die Accounter müssen weiterhin händisch Ihre Accounts planen, es gibt keine Aggregation für bspw. Regionalleiter, die 1.407.500 Min werden nicht realisiert und enstpechend kann die nicht freigewordene Zeit nicht für Vertrieb genutzt werden und das Potential von 5 Mio € im ersten Jahr kann nicht realisiert werden. Zusätzlich gibt es ein Akzeptanzproblem für das CRM-System, welches zentrale Funktionen weiterhin nicht abdeckt.\n  In der COD habe ich das Strategische Enablement/ die Riskreduction mit 13 bewertet, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können.\nIn der COD habe ich die zeitliche Kritikalität mit 13 beziffert, weil der Launch innerhalb der nächsten 6 Monate erfolgen muss: es werden bereits vorbereitende Maßnahmen in anderen Teams durchgeführt, der Vertrieb wartet auf das Accountplanning, um in der Vorhersage besser zu werden und die ambitionierten Ziele im GK erreichen zu können\nLeading Indicators\n•Die geforderten Informationen für ein standardisiertes Accountplanning (Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände) werden in MagentaForce korrekt angezeigt\n  MVP Scope & Akzeptanzkriterien\nMVP Scope & Akzeptanzkriterien\nMVP Scope\n#MVP\nAusweitung des MVP, um Finanzkennzahlen wie Deckungsbeitrag und Umsatz, aggregierte Bestände, Power Map zur Abbildung von Kundenstrukturen, Wettbewerberverträge, Auslaufende Verträge,\nIn Scope / Akzeptanzkriterien\n•  Daten und Reports stehen für die Anzeige in MagentaForce bereit\nOut of Scope\n•Keine neue Datenschnittstelle\nAbhängigkeiten & Eingangsvoraussetzungen\nAbhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\nMVP Accountplanning (https://jira.telekom.de/browse/BEMABU-173)\n  Eingangsvoraussetzungen, die vor Einführung realisiert sein müssen\nNicht bekannt\n ",
+  "business_value": {},
+  "assignee": "Thorsten Kasten",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "C10 PI 23_1",
+    "2024_Q2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    },
+    {
+      "code": "LPM_C10",
+      "title": "LPM_C10 "
+    }
+  ],
+  "labels": [
+    "Migrate2DataTribe",
+    "RM_2024"
+  ],
+  "realized_by": [
+    {
+      "key": "DATAAAA-157",
+      "title": "DATAAAA-157",
+      "summary": "Integration von PowerBI in MagentaForce",
+      "url": "https://jira.telekom.de/browse/DATAAAA-157",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "DATAFAB-720",
+      "title": "DATAFAB-720",
+      "summary": "MBN/MBC - Umsetzung BVA-Schema für One-Reporting mit Magenta-Force-Daten",
+      "url": "https://jira.telekom.de/browse/DATAFAB-720",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "C10 BEMABU-662_Qualicheck_Stufe_I-III.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2897572/C10%20BEMABU-662_Qualicheck_Stufe_I-III.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "1.57 MB",
+      "date": "2023-03-09T10:28:43.904+01:00"
+    }
+  ]
+}

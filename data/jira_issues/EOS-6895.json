@@ -1,0 +1,25 @@
+{
+  "key": "EOS-6895",
+  "issue_type": "Epic",
+  "title": "LOM to MAPI: Teilauftrag vervollständigen - Teil 2: Aufgaben für einfache Produkte",
+  "status": "Analysis",
+  "description": "Description\n Story\nAls User,\nmöchte ich mit den MAPIs umgehen können wir vorher über den LOM,\num in Zukunft weiter CRM-T Aufträge über EOS Vervollständigen zu können .\n   Fragen / Hinweise:\n...",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "2025-06-06",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "PI28-stretch"
+  ],
+  "acceptance_criteria": [
+    "Alle Aufgaben für die CRM-T Vervollständigung, für einfache Produkte, können in EOS bearbeitet werden.  \nTerminierung\netc.",
+    "Terminierung",
+    "etc."
+  ],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

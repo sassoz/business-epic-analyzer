@@ -1,0 +1,30 @@
+{
+  "key": "SDN-25993",
+  "issue_type": "Epic",
+  "title": "FIB: Additional Usability Features",
+  "status": "Review",
+  "description": "Description\nPrerequisites for the epic:\nThe integration on UAT has been done\nThe test can take place\nRequirements for this epic:\nThere are some improvements that are already known (as they needed to be deprioritized in Q2 in favour of delivering the MVP scope to UAT. Those requirements are added here.\nChange Log: \nChanges in Address data are shown in the Change Log\nKLS Input:\nThe Input \"Straße\" on the Excel File is generally not accepted by KLS as KLS expects \"Str.\" instead\nAs many of the users are taking the data from external sources (customers) who are used to fully write the streetnames, we should - if \"Straße\" is not found by KLS, convert \"Straße\" to \"Str.\" and check \nCopper Availability:\nThe initial request to Preorder@Cloud is pulling Copperdata that is only correct for the one CPL-ID that is delivered. For other CPL-IDs in the same KLS ID, the data can be completely different. As currently an orchestration (requesting the data on basis of the CPL-ID) is not done, a hint is shown along with the initial data. The updates need currently not to be done in FIB. \nShow a hint if copper is \"connected\"\nDE: Die Recherche-Ergebnisse gelten nur für die angegebene CPL-ID. In wenigen Fällen kann es mehr als eine CPL-ID an der KLS-ID geben. Wenn das der Fall ist, recherchieren Sie bitte die korrekte Verfügbarkeit manuell. Eine Abfrage aller CPL-IDs ist in Vorbereitung. \nEN:  The search results only apply to the specified CPL ID. In a few cases, there may be more than one CPL ID at the KLS ID. If this is the case, please research the correct availability manually. A query of all CPL IDs is in preparation. \n            ptance criteria are defined.    \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts    \nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA    \nDependencies are identified and there are no external dependencies that can´t be solved within the ART    \nNon-functional requirements (NFR) are identified.    \nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter     \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on    \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs    \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation    \nProcess dependency / adaptations has been defined    \n\nBusiness Scope:\nAs a PO of the FIB tool I want the complete scope of requirements to be implemented.",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2025-04-10",
+  "target_end": "2025-06-11",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "The Change Log is enhanced to also show changes in address data",
+    "the handling of the german \"Straße\" as \"Str.\" for the KLS integration is handled",
+    "A hint is shown for Copper Availability"
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

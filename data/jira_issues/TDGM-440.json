@@ -1,0 +1,52 @@
+{
+  "key": "TDGM-440",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B OnNet Security - Fixed - Comfort/Advanced Package",
+  "status": "Funnel",
+  "description": "",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DM_DOT",
+      "title": "DM_DOT DOT domain is affected"
+    },
+    {
+      "code": "DM_OneX",
+      "title": "DM_OneX OneX domain is affected"
+    },
+    {
+      "code": "iPF2025_KMU Push",
+      "title": "iPF2025_KMU Push iPF Cluster"
+    },
+    {
+      "code": "LoB_Fixed",
+      "title": "LoB_Fixed Fixed Line of Business is affected"
+    },
+    {
+      "code": "RM_MaxDOT/PushSME",
+      "title": "RM_MaxDOT/PushSME Roadmap Cluster"
+    },
+    {
+      "code": "TP_MaVi",
+      "title": "TP_MaVi MaVi Touchpoint is affected"
+    },
+    {
+      "code": "TP_OneShop",
+      "title": "TP_OneShop OneShop touchpoint is affected"
+    },
+    {
+      "code": "VS_Commerce",
+      "title": "VS_Commerce Value Stream Commerce is affected"
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

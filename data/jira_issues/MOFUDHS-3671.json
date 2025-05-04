@@ -1,0 +1,53 @@
+{
+  "key": "MOFUDHS-3671",
+  "issue_type": "Initiative",
+  "title": "GK: Data Mastership Mobile Telephony KEK/Permission Information/Accessibility/Business Partners",
+  "status": "Closed",
+  "description": "Description\nIn today's B2B environment, customer contacts are maintained in many different systems. Contact persons are often redundant and in different quality levels in the various systems. A consolidated view of the customer's contact person is not possible. Against this background, contact data cannot be used E2E today.\nThe establishment of a central contact data management system is intended to create a new master for customer-side contact persons for all business customers (mobile telephony, fixed network, mass and individual market). The new master should make the current customer contact information available at any time across all systems.\nThe central contact data management focuses mainly on the following key points:\nEstablishment of a uniform data structure (ContactMedium)\nEstablishment of a central data master (Sales Enablement Platform)\nCross-system exchange of consumers with the master system\nEstablishment of a lifecycle management system for customer contact data\n  For this Hub Mobile Access shall provide, synchronize and transfer ownership of the following data objects:\nBusiness Partners (Geschäftspartner)\nPermission Information (KEK, etc.)\nAccessibility (Erreichbarkeiten)\nThis approach is somewaht analogous to CDP in the private customer segment.\n  Data needed for MVP (Mail Kevin Meigel, 13.02.24)\ndesired for 30.06.2024. This date is dependent on the OCC retire, currently planned for this date.\nZu einem GK-Geschäftspartner benötigen wir alle Erreichbarkeiten des Geschäftspartners und der natürlichen Personen die für die Organisation/Business Partner tätig sind. Die KEK Aussage zu dem Geschäftspartner und die Kanal Permissionen zu den jeweiligen Erreichbarkeiten.\nFür die E-Mail-Adresse werden noch die Verifikationsinformationen benötigt, da Marketingmaßnahmen nur noch an 2-factor Authentifizierte Email-Adressen gesendet werden dürfen.\n  Da innerhalb GK ein eigenständiger Validierungsservice aufgebaut wird, wäre hier ein Service denkbar, bei welchem wir für eine uns bekannten Email-Adresse den Verifikationsstatus in Carmen abfragen können, bevor die Email-Adresse des Kunden mehrfach verifiziert wird.\n  Solltet ihr zu den Individuals (natürliche Personen) innerhalb einer Organisation ebenfalls einen Service anbieten, könnten wir uns hier auch Vorstellen diesen entsprechend zu konsumieren. Wo wir sehr wahrscheinlich eure Unterstützung benötigen, wäre bei der Initial Migration der Daten und das synchronisieren der Daten mit euch.\nEbenso das gleiche bei den KEK/Permission Informationen.\n\nBusiness Scope:\nData Mastership Mobile Telephony KEK/Permission Information/Accessibility/Business Partners",
+  "business_value": {},
+  "assignee": "Sven Ohnesorge",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "MPP_24.3",
+    "MPP_24.4"
+  ],
+  "acceptance_criteria": [
+    "The ownership of mobile phone contact data from Carmen has been transferred to SEP as the new master",
+    "Carmen is connected to the SEP and synchronizes the mobile phone contact data on the customer's side",
+    "contact data here refers to all data objects defined in the description."
+  ],
+  "components": [
+    {
+      "code": "Carmen CC",
+      "title": "Carmen CC "
+    },
+    {
+      "code": "CS-GO",
+      "title": "CS-GO "
+    },
+    {
+      "code": "Torero",
+      "title": "Torero "
+    },
+    {
+      "code": "Yoda",
+      "title": "Yoda "
+    }
+  ],
+  "labels": [
+    "reviewed_by_SASE"
+  ],
+  "realized_by": [
+    {
+      "key": "MOFUDHS-3820",
+      "title": "MOFUDHS-3820",
+      "summary": "GK: Anbindung von SEP an Carmen (KEK-/Permission-Event + Lese-Rest-APIs) - Beratung",
+      "url": "https://jira.telekom.de/browse/MOFUDHS-3820",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

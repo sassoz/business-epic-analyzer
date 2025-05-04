@@ -1,0 +1,66 @@
+{
+  "key": "BEMABU-1903",
+  "issue_type": "Business Epic",
+  "title": "B2B Standard: Testautomatisierung SeCe-IT und APIs",
+  "status": "In Progress",
+  "description": "Description\nClick to add description",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Andrej Deckl",
+  "priority": "",
+  "target_start": "2025-09-01",
+  "target_end": "2025-12-31",
+  "fix_versions": [
+    "PrioQ3_25",
+    "PrioQ4_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_unrated",
+    "IT-Enabler"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-11161",
+      "title": "ADCL-11161",
+      "summary": "B2B Standard: Test Automation APIs",
+      "url": "https://jira.telekom.de/browse/ADCL-11161",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

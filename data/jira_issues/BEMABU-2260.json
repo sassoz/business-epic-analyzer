@@ -1,0 +1,28 @@
+{
+  "key": "BEMABU-2260",
+  "issue_type": "Business Initiative",
+  "title": "Business Initiative Reporting MF Midmarket",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nDas Vorhaben ist notwendig aus der Reorganisation der GK Segmenten und den sich daraus ergebenden Veränderungen in den Vertriebsfunktionen und den fachlichen Anforderungen. Die Vertriebssegmente LE und Midmarket müssen zur operativen Steuerung ihrer Vertriebsmaßnahmen Funktionalitäten und Berichte einheitlich nutzen können, insbesondere dann, wenn sie in Selling-Team Struktur gemeinsam an den gleichen Kunden arbeiten. Nur so ist ein effizienter Kundenangang möglich und ein regulärer Austausch von Kundeninformationen und Ergebnissen von Maßnahmen möglich. Vertriebsaktive Zeit kann generiert und vor allem der internen NPS gesteigert werden.\nMaßnahme gehört zu den Enablern des NPS Programms bei T-Business \n  Business Value / Cost of Delay\n(siehe Ausfüllhilfe: https://wiki.telekom.de/x/UEVbfQ)\nBusiness Impact1)\nScale Revenue             Cost Saving/\nRisk loss 2) Begründung                                                                                                    \n        Strategic Enablement/Risk Reduktion\nScale     Risiko\nMinimierung     Strat.\nEnablement Begründung                                                                                                    \n20 Keine Verbesserung des NPS Wertes mit Hinblick auf Arbeitsfähigkeit in Magenta Force. Erfüllung eine Minimimalerwartung an ein CRM System     Für die Zusammenarbeit am selben Kundenstamm innerhalb eines Teams ist eine gleiche Sicht notwendig. Das zusenden von Screenshots zu Berichten an Kollegen um Termine vorzubereiten entspricht nicht den Erwartungen der Mitarbeiter (siehe NPS Befragung)\nTime Criticality \nScale Time Begründung                                                                                                    \n3    \n1) Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse\n2) Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit\nRahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMagenta Force DOM0201 <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nNach dem Start von Midmarket haben sich weitere Reportinganforderungen ergeben.\nFolgende Reports sind gewünscht:\n- TOP 30 Projekte je TK-ACM für die Funktionsgruppe TK Accountmanager und TK Expert Sales\n- TOP 100 TK-Projekte je Team für Vertriebsleiter und TK Expert Sales\n- TOP 70 TK-Projekte der Region für Regionalleiter und TK Expert Sales\n\nDiese Berichte werden darüber hinaus auch für die übrigen Fachbereiche IT und MK ebenfalls benötigt.\n\nDas BE wird noch mit den weiteren nötigen Informationen versehen sobald diese Verfügbar sind.",
+  "business_value": {},
+  "assignee": "Thomas Gibowski",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Wenn alle Vertriebsfunktionen einen gemeinsame und gleiche Sicht bzw. Berechtigung bei den ihnen zugewiesenen Kunden haben. Niemand muss für jemand anderen innerhalb eines Selling Teams Funktionen ausführen wegen fehlenden Berechtigungen"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,95 @@
+{
+  "epicId": "BEMABU-662",
+  "title": "Automatisierter Kundensteckbrief",
+  "ziele": {
+    "gesamtziel": "Das Business Epic 'Automatisierter Kundensteckbrief' verfolgt das Ziel, für den Vertrieb (insbesondere Seller und Accountverantwortliche) eine konsolidierte, automatisierte und transparente Sicht auf alle relevanten Kundeninformationen bereitzustellen. Diese Informationen werden aus verschiedenen Datenquellen in DataCubes (z.B. im BDI-Hub) zusammengeführt, verarbeitet und an Zielsysteme wie MagentaForce provisioniert. Dadurch wird die Entwicklung von für den Kunden relevanten und für den Vertrieb erfolgversprechenden Sales Stories ermöglicht, die Hitrate/Winrate gesteigert und die vertriebliche Effizienz erhöht. Geplanter Abschluss: 30.09.2025.",
+    "einzelziele": [
+      "Einbindung von bereitgestellten PowerBI-Berichten in MagentaForce, um relevante Kundeninformationen direkt im CRM-System verfügbar zu machen.",
+      "Bereitstellung einer One View Datenbasis auf GROOT, die alle verfügbaren Kundeninformationen in einer zentralen Sicht (SalesForce) zusammenführt.",
+      "Weiterentwicklung des Accountplanning 2.0 zur 360° Kundensicht, inklusive Integration von Finanzkennzahlen, aggregierten Beständen, Power Map, Wettbewerberverträgen und auslaufenden Verträgen."
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "Erwartete Umsatzsteigerung von 18,54 Mio € (2025) und 25 Mio € (2026) sowie Einsparung von 1.407.500 Minuten vertriebsaktiver Zeit durch Automatisierung der Datensammlung und -bereitstellung für Accountpläne. Die Accountmanager erhalten alle relevanten Informationen auf einen Blick, was die Nutzerfreundlichkeit und Effizienz deutlich erhöht."
+    },
+    "strategicEnablement": {
+      "skala": 20,
+      "beschreibung": "Fokussierung auf zielorientiertes Handeln im Vertrieb, Absicherung der Ziele im B2B-Bereich, Entwicklung relevanter Geschäftschancen und Unterstützung im gesamten Vertriebszyklus. Reduktion von Risiken durch Vermeidung manueller Prozesse und Verbesserung der Akzeptanz des CRM-Systems."
+    },
+    "timeCriticality": {
+      "skala": 3,
+      "beschreibung": "Die Umsetzung ist zeitkritisch, da der Launch innerhalb der nächsten 6 Monate erfolgen muss. Bereits laufende Vorbereitungen und die Abhängigkeit von anderen Teams erhöhen den Zeitdruck. Verzögerungen gefährden die Realisierung der Umsatzpotenziale und die Nutzung der freigesetzten vertriebsaktiven Zeit."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-105311",
+      "titel": "MF: Einbindung in MagentaForce von ersten bereitgestellten PowerBI-Berichten",
+      "funktionalitäten": [
+        "Integration von PowerBI-Berichten in MagentaForce (CRM-System)",
+        "Bereitstellung relevanter Kundeninformationen direkt im CRM",
+        "Ermöglichung einer einheitlichen Sicht auf Kunden für Accountmanager"
+      ]
+    },
+    {
+      "id": "DATAFAB-28432",
+      "titel": "DATA - One View Datenbereitstellung auf GROOT",
+      "funktionalitäten": [
+        "Zentrale Bereitstellung aller Kundeninformationen auf GROOT",
+        "Anbindung von Daten an BI-Systeme (PowerBI)",
+        "Erweiterung um zusätzliche Tabellen für Reporting-Anforderungen"
+      ]
+    },
+    {
+      "id": "DATAFAB-5516",
+      "titel": "DATA - Accountplanning 2.0 / 360° Kundensicht",
+      "funktionalitäten": [
+        "Erweiterung des Accountplanning um Finanzkennzahlen, aggregierte Bestände, Power Map, Wettbewerberverträge und auslaufende Verträge",
+        "Bereitstellung der Daten und Reports für die Anzeige in MagentaForce",
+        "Standardisierte Darstellung aller relevanten KPIs für Accountmanager"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Umsetzung des definierten Kundensteckbriefs (Details siehe Attachment am EPIC BEMABU-1892) in OneGK Reporting (Data Hub) und Einbindung in MagentaForce (CRM) mindestens als iFrame am jeweiligen Kunden (GP)",
+    "Die Umsetzung in OneGK erfolgt im Fachbereich außerhalb JIRA. Die Einbindung in MF erfolgt in Abhängigkeit zur OneGK Entwicklung.",
+    "Für das Fachbereichsteam ONE-Reporting wurde ein BVA-Schema realisiert, das die geforderten MagF-Daten sowie die zusätzlich benötigten Daten zu den Dimensionen Kunde und Produkt beinhaltet."
+  ],
+  "domainsAndITApplications": [
+    "Magenta Force",
+    "BDI",
+    "Data Tribe",
+    "PowerBI",
+    "GROOT",
+    "ODW"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von der Bereitstellung und Entwicklung in OneGK (Fachbereich außerhalb JIRA), die Voraussetzung für die Einbindung in MagentaForce ist.",
+    "Abhängigkeit von der technischen Klärung der Datenübertragung aus der Google Sovereign Cloud in PowerBI (M365 Cloud)/Power BI Premium.",
+    "Abhängigkeit zu MVP Accountplanning (BEMABU-173) und cross-funktionaler Zusammenarbeit mit anderen Teams.",
+    "Risiko der Verzögerung, falls vorbereitende Maßnahmen in anderen Teams nicht rechtzeitig abgeschlossen werden.",
+    "Risiko, dass die geplanten Umsatz- und Effizienzpotenziale nicht realisiert werden, falls die Umsetzung nicht bis zum geplanten Enddatum (30.09.2025) erfolgt."
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-04-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [
+      "Q3_25",
+      "PrioQ2_25"
+    ],
+    "meilensteine": [
+      {
+        "id": "DATAFAB-28432",
+        "beschreibung": "One View Datenbereitstellung auf GROOT (Start 2025-01-01, Ende 2025-12-31)",
+        "zeitraum": "2025-01-01 bis 2025-12-31"
+      },
+      {
+        "id": "DATAFAB-720",
+        "beschreibung": "Umsetzung BVA-Schema für One-Reporting mit Magenta-Force-Daten (Ende 2023-06-14)",
+        "zeitraum": "bis 2023-06-14"
+      }
+    ]
+  }
+}

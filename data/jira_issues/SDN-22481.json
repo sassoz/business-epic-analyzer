@@ -1,0 +1,104 @@
+{
+  "key": "SDN-22481",
+  "issue_type": "Initiative",
+  "title": "FTTH_FIB-Tool concept and implementation GUI, location mgt & IDB topics (Q2/25)",
+  "status": "Analysis",
+  "description": "Description\nFurther requirements for the FIB tool, where concept and implementation to be done Q2/2025 will be descripted here:\n(with focus on finalization interfaces to POM/IDB and PreOrder@Cloud, FIB-tool GUI functionality and migration from Interimssolution)\nOverview of topics (details see checklist below)\nlocation management (workflow) (replacement existing Panda Location Mgt with FIB-Tool)\nFIB-Tool will be accessible via Panda Account\nPreparation of all necessary steps for GoLive of FIB-Tool\nCapability \"Verfügbarkeitscheck\" using PreOrder@Cloud interface\nCapability \"Interessenten Management\" using interface to POM/IDB (TechPOM)\nMigration from FTTH Interimssolution Interessentenerfassung to FIB-Tool\ninterface to GIGA GS (FIO) for \"Standardbauweise\" see https://jira.telekom.de/browse/SDN-24218\nout-of-scope in first MVP for FIB-Tool\nno Public and Classified customers with extra security requirements \nno access for Offshore colleagues\nno Geo-customers\nExpand \"Standardbauweise\" for GK-customer\nWholebuy  \nFIB Stand alone?          \nSelf.Service",
+  "business_value": {},
+  "assignee": "Thomas Heider",
+  "priority": "",
+  "target_start": "2025-04-10",
+  "target_end": "2025-07-03",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "DOM0204",
+    "FTTH_by_LE"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-24221",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-24221",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-25875",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-25875",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-22082",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-22082",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-23522",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-23522",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-23671",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-23671",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-23692",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-23692",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-24073",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-24073",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-24208",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-24208",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-24213",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-24213",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-23958",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-23958",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

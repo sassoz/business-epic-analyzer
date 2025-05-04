@@ -1,0 +1,31 @@
+{
+  "key": "MAGBUS-91692",
+  "issue_type": "Epic",
+  "title": "Eventverarbeitung von Carmen implementieren - Business Partner & VP2",
+  "status": "Resolved",
+  "description": "Description\nFür alle bekannten Mobilfunk GP-Hüllen und Ansprechpartner, reagieren wir auf die Eventverarbeitung von Carmen um die Daten innerhalb des TMF632 der SEP aktuell zu halten.\n\nBusiness Scope:\nIch als PO möchte dass wir auf die Eventverarbeitung von Carmen reagieren und sowohl unsere GP-Hülle als auch das Individual aktuell halten",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 24"
+  ],
+  "acceptance_criteria": [
+    "Für vorhandene GP-Hüllen im TMF632 halten wir die Daten aktuell, indem wir auf die Eventverarbeitung von Carmen reagieren und Änderungen übernehmen.",
+    "Für vorhandene Ansprechpartner im TMF632 halten wir die Daten aktuell, indem wir auf die Eventverarbeitung von Carmen reagieren und Änderungen übernehmen."
+  ],
+  "components": [
+    {
+      "code": "SEP-Platform",
+      "title": "SEP-Platform "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

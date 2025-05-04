@@ -1,0 +1,76 @@
+{
+  "key": "BEMABU-2221",
+  "issue_type": "Business Epic",
+  "title": "Breitband & IT I MaRe GK FTTC (Magenta Regio GK für FTTC)",
+  "status": "Review",
+  "description": "Business Scope:\nHarmonisierung der CU-Wholebuy-Prozesse, Vereinfachung der Provisionierung im Service, Kostenreduktion.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "Kostenreduktion",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Harmonisierung der CU-Wholebuy-Prozesse, Vereinfachung der Provisionierung im Service",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Schacht, Dorthe",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Die bisherigen GK-Produkte CompanyFlex Regio, CompanyFlex MSN Regio sollen so umgebaut oder neu-gebaut werden, dass der Wholebuy-Access Anteil aus CRM-T heraus mit gebucht werden kann. Damit wird die Produktion von Regio-Produkten aus Sicht des KS mit der Regio-Produktion wie bei den PK-Produkten vereinheitlicht.",
+    "Info: Bislang muss der Wholebuy-Access aus Sicht des KS-Mitarbeits immer noch über das Congstar-AAX-System gebucht werden.",
+    "Die Produkte Business (Regio) Start und Business (Regio) Pro sollen neu gebaut werden.",
+    "1 Die Buchung der Produkte erfolgt für den KS nur noch in CRM-T (die Buchung des Wholebuy-Access über Congstar AAX entfällt für den KS).",
+    "2 Keine funktionalen Änderungen ggü. dem Endkunden für die betroffenen GK-Regio Produkte (Info: Arbeitsannahme ist, dass die Ablöse PlusNet vollständig umgesetzt wurde)",
+    "3 Die GK-Regio-Produkte werden neu durch die Tariffabrik abgebildet."
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0202",
+      "title": "DOM0202 Order2Cash"
+    },
+    {
+      "code": "DOM0802",
+      "title": "DOM0802 Copper OSS"
+    }
+  ],
+  "labels": [
+    "25_Q3_Wunsch",
+    "B2B_Prio",
+    "GK",
+    "GK-FTTH",
+    "MBC_MM",
+    "Portfolio",
+    "Portfolio_Breitband"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-103777",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-103777",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

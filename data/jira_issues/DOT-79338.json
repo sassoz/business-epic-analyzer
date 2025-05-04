@@ -1,0 +1,23 @@
+{
+  "key": "DOT-79338",
+  "issue_type": "Initiative",
+  "title": "LOM Retirement | Basic Integration - Order Enrichment",
+  "status": "In Progress",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Jayant Bhandari",
+  "priority": "",
+  "target_start": "2025-02-06",
+  "target_end": "2025-03-13",
+  "fix_versions": [
+    "MPP_25.3"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "LOM_Retirement"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

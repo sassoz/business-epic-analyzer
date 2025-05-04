@@ -1,0 +1,102 @@
+{
+  "key": "MAGBUS-84671",
+  "issue_type": "Portfolio Epic",
+  "title": "Inhouse Basic: Vertragsarten nach EOS übergeben",
+  "status": "In Progress",
+  "description": "Description\n Story\nAls Auftragsbearbeiter\nmöchte ich Vertragsinformationen (insbesondere zu Instandhaltungsverträgen bei SeCe-IT-Vorgängen) mit auf dem Kundenanschreiben andrucken,\num den Kunden angemessen über seine Vertragssituation zu informieren.\n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)\nEin bestelltes Produkt in SeCe-IT (Endgerät) kann mehreren Verträgen zugeordnet sein. Einem Kauf- oder einem Mietvertrag und einem Instandhaltungsvertrag. Diese Verträge werden heute nicht korrekt in EOS verarbeitet. EOS kennt pro Position nur einen Vertrag (Produktattribut). Weitere Verträge (insbesondere Instandhaltungsverträge) gehen verloren und können daher auch nicht auf der Auftragsbestätigung angedruckt werden. Seit Anbindung der SeCe-IT Schittstellung im Oktober 2020 wird dies von Anwendern bemängelt. Ohne die Instandhaltungsverträge in EOS, werden unvollständige Auftragsbestätigungen erzeugt oder es entstehen manuelle Mehraufwände beim Anwender.\nFachlicher Lösungswunsch (Feature Hypothese)\nAlle Verträge pro Position werden von EOS verarbeitet. Der Anwender kann diese inkl. Laufzeiten in EOS ablesen. Ebenfalls werden sämtliche Verträge pro Position in der Auftragsbestätigung mit angedruckt. \nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nUseCases/Testcases \nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n        ",
+  "business_value": {},
+  "assignee": "Bratzke, Florian",
+  "priority": "",
+  "target_start": "2025-02-28",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "ACC1: SeCe-IT übergibt , spätestens nach der VErtragsanlage (Status 810) die ** folgenden Informationen zum Vertrag der jeweiligen Vertragsarten (Kauf, Miete, Instandhaltung, Installation)  nach EOS.",
+    "Vertragsnummer\nNachtragsnummer\nVertragslaufzeit\nVertragspositionen",
+    "Vertragsnummer",
+    "Nachtragsnummer",
+    "Vertragslaufzeit",
+    "Vertragspositionen",
+    "ACC2: EOS zeigt die Daten in der GUI an \nDie neue Kachel ist innerhalb der Hauptposition zwischen der \"Standorte\"-Kachel und der \"Unterpositionen\"-Kachel platziert und sieht folgendermaßen aus:",
+    "Die neue Kachel ist innerhalb der Hauptposition zwischen der \"Standorte\"-Kachel und der \"Unterpositionen\"-Kachel platziert und sieht folgendermaßen aus:",
+    "Vertragsansicht in SeCe-IT:\nEOS benötigt keine AL-Nr oder Preise zu den Positionen",
+    "Vertragsansicht in SeCe-IT:\nEOS benötigt keine AL-Nr oder Preise zu den Positionen",
+    "EOS benötigt keine AL-Nr oder Preise zu den Positionen"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    },
+    {
+      "code": "SeCe-IT",
+      "title": "SeCe-IT "
+    }
+  ],
+  "labels": [
+    "DigiHub_DOM",
+    "EOS",
+    "PI28",
+    "SeCe-IT"
+  ],
+  "realized_by": [
+    {
+      "key": "EOS-1833",
+      "title": "EOS-1833",
+      "summary": "SeCe-IT contract types ( buy, rent, maintenance, installation) / SeCe-IT Vertragsarten (Kauf, Miete, Instandhaltung, Installation)",
+      "url": "https://jira.telekom.de/browse/EOS-1833",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-3015",
+      "title": "SECEIT-3015",
+      "summary": "Übermittlung Vertragsnummer über den POM",
+      "url": "https://jira.telekom.de/browse/SECEIT-3015",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12259",
+      "title": "ADCL-12259",
+      "summary": "[Inhouse] O3 Data structure updates & enhancements",
+      "url": "https://jira.telekom.de/browse/ADCL-12259",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-2110",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SECEIT-2110",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "EOS.png",
+      "url": "https://jira.telekom.de/secure/attachment/5328353/EOS.png",
+      "mime_type": "image/png",
+      "size": "105 kB",
+      "date": "2025-01-23T11:53:57.572+01:00"
+    },
+    {
+      "filename": "image-2025-01-23-11-53-38-583.png",
+      "url": "https://jira.telekom.de/secure/attachment/5328352/image-2025-01-23-11-53-38-583.png",
+      "mime_type": "image/png",
+      "size": "105 kB",
+      "date": "2025-01-23T11:53:38.780+01:00"
+    },
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5328354/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "174 kB",
+      "date": "2025-01-23T11:54:20.049+01:00"
+    }
+  ]
+}

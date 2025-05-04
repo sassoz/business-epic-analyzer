@@ -1,0 +1,31 @@
+{
+  "key": "SDN-23522",
+  "issue_type": "Epic",
+  "title": "FIB: Additional Data from Preorder@Cloud Interface",
+  "status": "Backlog",
+  "description": "Business Scope:\nAs a user of the FIB tool I want to be able to request availability on different technical plattforms and see the result in the tool to use it for my quotes.",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2025-04-10",
+  "target_end": "2025-06-11",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "The new version of the interface is implemented",
+    "Addtionally to the FTTH status, the FTTH columns in the table are filled automatically upon creating a location with Coutrycode = DE",
+    "the Mobile Status is filled too along with the FTTH columns",
+    "manual update is possible",
+    "For operational use, approximately 50,000 address queries per day are expected.",
+    "Responding to queries by the next business day is sufficient, meaning all requests can be received and answered during off-peak hours.",
+    "Additionally, the NFR (Non-Functional Requirements) of TMF-645 should apply."
+  ],
+  "components": [],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,42 @@
+{
+  "key": "OMS-1703",
+  "issue_type": "Epic",
+  "title": "PANDA: SDX Produktkonfiguration // Domain Extension (LAN + WIFI) (Design)",
+  "status": "Closed",
+  "description": "Description\nPANDA: SDX Produktkonfiguration // Domain Extension (LAN + WIFI) (Design)\nClick-dummy\nCheck current click-dummy Design with new decisions / product development\nInvision Link Click-dummy und Design Specs: https://telekom.invisionapp.com/share/HDQDILNRUXZ#/screens/345345780\nImplementation preparation\nCustom Tables\n1) Develop pricing custom tables\n2) Develop P+ product custom tables\nRules and Trigger\n3) Define rules and triggers for product configuration\nProduct views\n4) Define product summary views (Summary tab and summary on product view)\n5) Define Shopping Cart view",
+  "business_value": {},
+  "assignee": "Manfred Book (Inactive)",
+  "priority": "",
+  "target_start": "2022-07-31",
+  "target_end": "2022-12-15",
+  "fix_versions": [
+    "910_DESIGN",
+    "SD LAN/WIFI R1.0"
+  ],
+  "acceptance_criteria": [
+    "DOD1 Design click-dummy has been finalized and has been approved by Offering\nDOD2 Necessary Custom tables for pricing and P+ tables etc. are defined\nDOD3 Necessary rules and triggers for product configuration are defined\nDOD4 Necessary product views are defined\nDOD5 Necessary sales report / Leistungsschein are defined"
+  ],
+  "components": [
+    {
+      "code": "[PANDA_INC_SDX]",
+      "title": "[PANDA_INC_SDX] Reporting the issues of the product SDX"
+    }
+  ],
+  "labels": [
+    "DOMSOL",
+    "PIPQ3/22_planned",
+    "Product_Onboarding",
+    "SDx"
+  ],
+  "realized_by": [
+    {
+      "key": "SDLA-939",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDLA-939",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

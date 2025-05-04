@@ -1,0 +1,49 @@
+{
+  "key": "BEMABU-315",
+  "issue_type": "Business Epic",
+  "title": "TP - Integration Vertriebskanal in Magenta Force",
+  "status": "Backlog",
+  "description": "Business Scope:\nDer PVG Bereich „Telekom Partner“ verantwortet das Mobilfunkgeschäft über alle Kundensegmente XL,L,M,KMU (Public, Large Enterprise, Midmarket, Massmarket, Delivery, T-Digital) und das KMU AGB Festnetzgeschäft über externe Vertriebspartner.\n\nDiese Vertriebsoberfläche ist im Gegensatz zu den Own Shops (TS) sehr heterogen und setzt sich aus verschiedenen Formaten zusammen (GK Vertriebsbüros, Shops, Flächenmärkte, Door2Door, Spezialvertriebe, Exklusiv Partner). Diese Vertriebspartner sind eigenständige Unternehmer und agieren als Handelsvertreter für die Telekom.\n\nCa 45 eigene Telekom Accountmanager betreuen in 4 Vertriebsregionen diese jeweiligen Vertriebspartner, stellen die Schnittstelle zur Telekom her und verantworten den dort generierten Absatz.\n \nMagenta Force soll für 2 unterschiedliche Nutzergruppen und 2 unterschiedlichen Nutzenszenarien zur Verfügung gestellt werden:\n1.) Interne Mitarbeiter Telekom Partner:\nAbbildung der 4 Vertriebsregionen mit ihren ca. 45 Accountmanagern, je einem Leiter pro Region (4), 4 Key Account Managern und 4 Accountmanagern in der Zentrale und einem Leiter Zentrale.\n \n\nDie User zu 1.) sollen für ihre vertriebliche Arbeit mit dem Vertriebspartner die Möglichkeit gegeben werden bei Vertriebsprojekten zur Vermeidung von Channelkonflikten mit dem Direktvertrieb (gegenseitiges Unterbieten v. Preisen) und Ermittlung von Kundenbedürfnissen und Crossellingpotentialen Einsicht in die Vorhaben bei Kunden bekommen. Es sollen eigene Vertriebsvorhaben angelegt werden und damit die vorhandene Projektliste auf Excelbasis ablösen. Der Accountmanager /KAM soll die Vertriebsvorhaben in Stück / Umsatz in seinem Wirtschaftsraum auswerten können, der Leiter GK der Region soll alle vertrieblichen Vorhaben seiner Accountmanager und somit seiner Region auswerten können, der Leiter Zentral soll die Vorhaben der 4 Regionen in einer Bundessicht zusammengefasst auswerten können um Steuerbarkeit und Reporting zu gewährleisten.\nZusätzlich sollen die User 1.) das Lead und Kampagnenmanagement der User zu 2.) zuweisen , auswerten und steuern können.\nDie User zu 2.) sind externe Partner, die über ein Vertragswerk sehr eng an die Telekom gebunden sind und heute bereits über CIAM / TIKS Card als Magenta View User angebunden sind.\nEs soll eine Kampagnenfähigkeit hergestellt werden, ExPa Mitarbeiter sollen Kundenanliegen aus Kampagnen abarbeiteten können , Leads einstellen, sowie Vorhaben anlegen , die gerade für externe Partner erstmalig eine planbaren Angang (wiedervorlage) im Bestandskundengeschäft ermöglichen.--> Kundenansprache von ehemaligen Neukunden nach 18 Monaten zur Kundenbindung und Vertragsverlängerung.\nDie User zu 1. Leiter Region, AcM Leiter Zentral sollen eine Reportingfunktion Anzahl / Umsetzung über Kampagnen der User zu 2.) bekommen.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "Vermeidung von Channelkonflikten mit dem Direktvertrieb (gegenseitiges Unterbieten v. Preisen)",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Ermittlung von Kundenbedürfnissen und Crossellingpotentialen",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Nied, Patrick",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_PRIO_EXPL",
+    "B2B_Target",
+    "Cross-vertical",
+    "GK-KMC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

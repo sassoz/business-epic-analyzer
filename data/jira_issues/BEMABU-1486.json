@@ -1,0 +1,55 @@
+{
+  "key": "BEMABU-1486",
+  "issue_type": "Business Epic",
+  "title": "Synchronisation der KMU-B Ansprechpartner zwischen PK & GK",
+  "status": "Funnel",
+  "description": "Description\nProblembeschreibung (ggf. Nutzungstatement)\nIm B2B Umfeld werden heute kundenseitige Ansprechpartner in vielen verschiedenen Systeme gepflegt. Ansprechpartner liegen oft redundant und in unterschiedlichen Qualitätsleveln in den verschiedenen Systemen vor. Eine konsolidierte Sicht auf den kundenseitigen Ansprechpartner ist nicht möglich. Vor diesem Hintergrund sind Ansprechpartnerdaten heute nicht E2E nutzbar.\nDurch die Etablierung eines Zentralen Ansprechpartnerdatenmanagement soll ein neuer Master für kundenseitige Ansprechpartner für alle Geschäftskunden (Mobilfunk, Festnetz, Massen- und Individualmarkt) geschaffen werden. Der neue Master solle die aktuellen kundenseitigen Ansprechpartner-Informationen systemübergreifend zu jeder Zeit zur Verfügung stellen.\nDas Zentrale Ansprechpartnerdatenmanagement fokussiert sich im wesentlichen auf folgende Kernpunkte:\nEtablierung einer einheitlichen Datenstruktur (ContactMedium)\nEtablierung eines zentralen Datenmaster (Sales Enablement Platform)\nSystemübergreifender Austausch der Consumer mit dem Master-System\nEtablierung eines Lifecycle-Management für kundenseitige Ansprechpartnerdaten\n  Durch die Umsetzung des Kernpunkt \"Etablierung eines zentralen Datenmaster\" stellen wir den Single Point of Truth für kundenseitige Ansprechpartnerdaten für alle Geschäftskunden bereit.\nIm KMU-Basic Segment ist eine geteilte Masterschaft zwischen GK und PK notwendig.\n  Business Epic Outcome Hypothesis\n  Strategischer Beitrag & zeitliche Kritikalität",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "Etablierung eines zentralen Datenmaster (Sales Enablement Platform)",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Strategischer Beitrag & zeitliche Kritikalität"
+    }
+  },
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2024-12-31",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-94140",
+      "title": "MAGBUS-94140",
+      "summary": "Exploration: PartyManagement der CDP",
+      "url": "https://jira.telekom.de/browse/MAGBUS-94140",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

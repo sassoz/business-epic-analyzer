@@ -1,0 +1,49 @@
+{
+  "key": "SDN-22486",
+  "issue_type": "Initiative",
+  "title": "D!VE_PANDA - Exploration Nutzung in Lösungsgeschäft",
+  "status": "Analysis",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür alle Vertriebssegemente\ndie Kunden Angebote unter Zuhilfenahme eines Vorleisters untertreiben\nist es notwendig, den Digitalen Vorleistereinkauf auch in den Lösungsgeschäftsworkflows (Panda, Servicenow, TDN) verfügbar zu machen\nwodurch manueller Aufwand, ungelenkte Prozesse sowie Zeitverzug vermieden wird\nso dass wir Effizient und in hohem Tempo Angebote Compliance-Gerecht erstellen und in die Beauftragung geben können.\nund nicht manuell Angebote unter Zuhilfenahme diverser lokaler Tools erstellen und das eBanf Webportal händisch bedienen.\nBeteiligte\nPANDA Patricia Gloß\nDive  Pascal Werlein \nBusiness Epic Owner (BEO) Zalewski, Matthias - Pascal Werlein \n      D!VE is a tool which is currently connected to Flamingo and used for standard business. The tool enables the users to request offers by presuppliers or to upload offers by presuppliers, then give those offers to Flamingo. When a quote is won, the information needs to be given back to D!VE as D!VE is integrated into the order flow. \nFor PANDA two integration ways are possible, depending on business decisions regarding the current Flamingo integration:\nCopy the Flamingo integration (as D!VE can not deal with two different processes) \nIntegrate D!VE analogous to the current RPK integration in Integrated offer\n--> The decision will be met before the start of this exploration",
+  "business_value": {},
+  "assignee": "Angelo Pietra",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Architectural definition: PANDA-D!VE integration with Flamingo Logic or RPK Logic",
+    "Design a user journey how dive pre-provider parts can be added to a quote",
+    "Design a process how dive pre-provider part can be added to a quote",
+    "Define and clarify the scope of an implementation with all stakeholders",
+    "(Review the existing DIVE API (from Flamingo))"
+  ],
+  "components": [
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "SDN_Architektur",
+      "title": "SDN_Architektur Task for Architektur in SDN"
+    },
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "DOM0204",
+    "Q2/2025"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-25161",
+      "title": "SDN-25161",
+      "summary": "PANDA - Exploration DIVE in Solutions Business",
+      "url": "https://jira.telekom.de/browse/SDN-25161",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

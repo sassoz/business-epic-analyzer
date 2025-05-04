@@ -1,0 +1,34 @@
+{
+  "key": "DOT-70584",
+  "issue_type": "Epic",
+  "title": "PIM: enabling B2B addOns",
+  "status": "Closed",
+  "description": "Description\nFor B2B customer the following B2B products should be enabled:\nCompany Start\nCompany Pro\nBusiness DSL Start\nBusiness DSL Pro\nBusiness Glasfaser Start\nBusiness Glasfaser Pro\nAs these products might as well have addOns, the list of GK addOns have to be adjusted and the following addOns have to be removed from that list:\n  AddOn Material Number\nEntstörungsservice 8 Stunden 89711394",
+  "business_value": {},
+  "assignee": "Schmitt, Carsten",
+  "priority": "",
+  "target_start": "2025-01-23",
+  "target_end": "2025-02-05",
+  "fix_versions": [
+    "MPP_25.1.3"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Cap_Subscription_Mgmt",
+      "title": "Cap_Subscription_Mgmt "
+    },
+    {
+      "code": "Dom_Product",
+      "title": "Dom_Product "
+    },
+    {
+      "code": "Team_Whiskey",
+      "title": "Team_Whiskey "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

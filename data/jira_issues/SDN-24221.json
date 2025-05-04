@@ -1,0 +1,29 @@
+{
+  "key": "SDN-24221",
+  "issue_type": "Epic",
+  "title": "FIB: User Handling and Authentication",
+  "status": "Analysis",
+  "description": "Business Scope:\nAs a user of the FIB tool I want a seemless connection between the tool invoking the FIB tool (currently PANDA) on basis of my EntraID and the rights being set for me",
+  "business_value": {},
+  "assignee": "Jupitz, Carsten",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "the user can work seamlessly, changing from SAP CPQ to the FIB Tool (the locations tab) back and forth",
+    "The authentication is handed over (see logs)"
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "FTTH_by_LE"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

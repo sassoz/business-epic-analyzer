@@ -1,0 +1,86 @@
+```json
+{
+  "epicId": "BEMABU-1818",
+  "title": "Q1 Weiterentwicklung bestehender Lösung Case-Management",
+  "ziele": {
+    "gesamtziel": "Weiterentwicklung der Interimslösung des Case-Managements mit Unterstützung beim Flächenrollout (Scharfschaltung der Email2Case-Lösung), Umsetzung von UI-Anpassungen, Gewährleistung von Bug-Fixing und Implementierung der Ziellösung für das Reporting über Data-Tribe bis zum 31.03.2025.",
+    "einzelziele": [
+      "Folgetätigkeiten/Weiterentwicklungen im Kontext Service Case und Tätigkeiten für den Flächenrollout",
+      "Verfeinerung des Routings/Eskalationen via Omni-Channel",
+      "Auftragstracking und Mail2Case-Implementierung für 2025"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-99728",
+      "titel": "MF: Service Case - Weiterentwicklungen nach D1",
+      "funktionalitäten": [
+        "Folgetätigkeiten/Weiterentwicklungen im Kontext Service Case",
+        "Tätigkeiten für den Flächenrollout"
+      ]
+    },
+    {
+      "id": "MAGBUS-100774",
+      "titel": "MF: Service Case - Erweiterungen des Routings inkl. Omnichannel und Supervisor",
+      "funktionalitäten": [
+        "Folgetätigkeiten/Weiterentwicklungen im Kontext Service Case",
+        "Routing/Eskalationen via Omni-Channel verfeinern"
+      ]
+    },
+    {
+      "id": "MAGBUS-93463",
+      "titel": "MF: Auftragstracking und Mail2Case- Sammler für 2025",
+      "funktionalitäten": [
+        "Auftragstracking und Mail2Case-Implementierung für 2025"
+      ]
+    }
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce",
+    "IRRP",
+    "Email2Case",
+    "Data-Tribe"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Migration der Works für FN und EN von IRRP zu MagentaForce",
+    "Abhängigkeit vom Data-Tribe für die Reporting-Lösung",
+    "Alle drei Epics sind bereits abgeschlossen (Resolved/Closed), während das Business Epic noch 'In Progress' ist"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-01-01",
+    "umsetzungsende": "2025-03-31",
+    "fixVersions": ["PrioQ1_25", "PI 26", "PI 27", "MF 4.500"],
+    "meilensteine": [
+      {
+        "id": "MAGBUS-99728",
+        "beschreibung": "MF: Service Case - Weiterentwicklungen nach D1",
+        "zeitraum": "PI 26, PI 27"
+      },
+      {
+        "id": "MAGBUS-100774",
+        "beschreibung": "MF: Service Case - Erweiterungen des Routings inkl. Omnichannel und Supervisor",
+        "zeitraum": "PI 27, MF 4.500"
+      },
+      {
+        "id": "MAGBUS-93463",
+        "beschreibung": "MF: Auftragstracking und Mail2Case- Sammler für 2025",
+        "zeitraum": "PI 27"
+      }
+    ]
+  }
+}
+```

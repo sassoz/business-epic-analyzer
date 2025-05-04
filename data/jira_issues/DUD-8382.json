@@ -1,0 +1,83 @@
+{
+  "key": "DUD-8382",
+  "issue_type": "Epic",
+  "title": "Nutzen des Escrow-Services der DENIC",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nNutzen des Escrow-Services der DENIC.   (Implementation description see confluence https://mywiki.telekom.de/pages/viewpage.action?pageId=1155373973)\nDescription of Demand / Problem\nMit Wirkung vom 14. Mai 2018 ist die Betreiberorganisation des deutschen Namensraums .de im Internet, DENIC, Designierter Escrow Agent (DEA) für ICANN-akkreditierte Registrare. Neben dem bereits existierenden ist DENIC damit der einzige Anbieter weltweit, der einer Vereinbarung mit ICANN zufolge autorisiert ist, Registraren generischer Top Level Domains die verpflichtende Sicherung ihrer Geschäftsdaten (Registrar Data Escrow, RDE) für sie kostenneutral anzubieten.\nZu den Vorzügen des DENIC Escrow Service zählen neben seiner vollständigen DSGVO-Konformität nicht nur die Benutzerfreundlichkeit und Skalierbarkeit sowie die einfache Aufschaltung neuer Kunden, sondern insbesondere das hohe Sicherheitsniveau der implementierten Lösung.\nSpezifikation siehe (https://seu10.gdc-bln03.t-systems.com/svn/DUD/trunk/document/Gesamtprojekt/se-akte/p01-requirements-analysis/PRxxxxxxxx_Nutzen%20des%20Escrow-Services%20der%20DENIC):\nFurther Instructions.pdf\nrde-specs-09nov07-en.pdf\nRegistrar Data Escrow - Onboarding Process.pdf\nEin Urteil des EUGH kann auch so interpretiert werden, dass eine Datenübertragung nach IronMountain nicht erlaubt ist, siehe Kommentar vom 24.07.2020 und Domain-Recht-Newsletter_20200723.pdf\nEin weiterer Hinweis findet sich beim \"Bundesbeauftragten für Datenschutz und die Informationsfreiheit\" zum Schrems II Urteil:\nhttps://www.bfdi.bund.de/DE/Europa_International/International/Artikel/Auswirkungen-Schrems-II-Urteil.html\n(ausführlicher im Kommentar vom 03.02.2021)\nAcceptance Criteria\nsiehe DUD-9690\nChecklist\nDependencies fulfilled (Ticket dependencies).\nAccessibility / Barrierefreiheit: Principles fulfilled. Background-Prozess\nDoD: Verified by Scrum Master.",
+  "business_value": {},
+  "assignee": "Frank Breidenstein",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "21.2.0"
+  ],
+  "acceptance_criteria": [
+    "Options",
+    "CLOSED",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Validierung der RDE Deposit Dateien entsprechend der ICANN Validierungsregeln",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DORIS/Escrow",
+      "title": "DORIS/Escrow "
+    }
+  ],
+  "labels": [
+    "Analyse",
+    "DecouplingVelocity",
+    "EU-DSGVO",
+    "OperationalStability",
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Domain-Recht-Newsletter_20200723.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/1831464/Domain-Recht-Newsletter_20200723.pdf",
+      "mime_type": "application/pdf",
+      "size": "460 kB",
+      "date": "2020-07-24T07:19:04.000+02:00"
+    },
+    {
+      "filename": "Further Instructions.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/1831465/Further%20Instructions.pdf",
+      "mime_type": "application/pdf",
+      "size": "61 kB",
+      "date": "2019-03-14T12:54:20.000+01:00"
+    },
+    {
+      "filename": "Prüfschema-Schrems-II.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/1831466/Pr%C3%BCfschema-Schrems-II.pdf",
+      "mime_type": "application/pdf",
+      "size": "88 kB",
+      "date": "2021-02-03T07:15:26.000+01:00"
+    },
+    {
+      "filename": "rde-specs-09nov07-en.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/1831468/rde-specs-09nov07-en.pdf",
+      "mime_type": "application/pdf",
+      "size": "29 kB",
+      "date": "2019-03-14T12:54:20.000+01:00"
+    },
+    {
+      "filename": "Registrar Data Escrow - Onboarding Process.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/1831467/Registrar%20Data%20Escrow%20-%20Onboarding%20Process.pdf",
+      "mime_type": "application/pdf",
+      "size": "727 kB",
+      "date": "2019-03-14T12:54:21.000+01:00"
+    }
+  ]
+}

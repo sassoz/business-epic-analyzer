@@ -1,0 +1,36 @@
+{
+  "key": "DATAFAB-31892",
+  "issue_type": "Epic",
+  "title": "M2M Automotive Reporting Delivery",
+  "status": "Closed",
+  "description": "Description\n1. Epic Description\nEpic (Requirement and Scope) \nAd hoc reporting are sophisticated reports which are requested by management or other stakeholders and require higher Developer's attention. It should be generated and manually send to required persons.\nExample of currently most important provided reports are Automotive revenue data reports for Deutsche Telekom IoT GMBH.\nProblem:\nCurrently it is not possible to provide such reports automatically due to technical reasons. Because of that, these reports are provided by developers each 2 weeks.\nThis should be (and will be) improved to automatically delivery as soon as we would have technical possibility to do it on both sides.{}\n  Target Requirements/ User Stories:\nProvide Automotive revenue data reports for Deutsche Telekom IoT GMBH.\nBenefits:\nCustomer satisfaction because of providing important data.\nSpecific Deliverables  \nThe reports have to be send to every 1st and 16th of a month.\nThe data has to be sent by encrypted email.\nReports are the following:\nFilename: \"TMSP-TRAFFIC_Start_YYYY-MM-DD_End_YYYY-MM-DD.csv\"\nFilename: \"Automotive-Umsatz_Start_YYYY-MM-DD.csv\"\nAcceptance Criteria (conditions which must be satisfied for the Epic to be accepted)\nThe reports is sent to every 1st and 16th of a month.\nThe data is sent by encrypted email.\nOut of Scope\nCreation of new reports, system architecture changes. BI Launchpad reports are not affected.\nDependencies \nNone.\n2. Technical / Solution Design / Compliance\nTechnical & Solution Design  \nThe requirement is only to provide the reports from the existing attributes and already available data in the system. No new development is required.\nCompliance evaluation\nDone.\n3. NFR (if any)\nNon functional requirements\nNo.\n4. SLA(if any)\nService Level Agreements\nN/A\n ",
+  "business_value": {},
+  "assignee": "Katerina Soldatova",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-04-01",
+  "fix_versions": [
+    "2025_Q1"
+  ],
+  "acceptance_criteria": [
+    "Provide Automotive revenue data reports for Deutsche Telekom IoT GMBH."
+  ],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "AM",
+    "M2M_Rep",
+    "Service_Request"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,98 @@
+{
+  "key": "ADCL-11161",
+  "issue_type": "Portfolio Epic",
+  "title": "B2B Standard: Test Automation APIs",
+  "status": "In Progress",
+  "description": "Description\nTo In order to stabilize our services and decrease manual effort we to increase the test automation in our HUB.",
+  "business_value": {},
+  "assignee": "Huu An Nguyen",
+  "priority": "",
+  "target_start": "2025-01-10",
+  "target_end": "2025-04-04",
+  "fix_versions": [
+    "PI26",
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "Digihub_DOM",
+    "Enabler",
+    "Q1-25",
+    "Q4-24"
+  ],
+  "realized_by": [
+    {
+      "key": "ADCL-12361",
+      "title": "ADCL-12361",
+      "summary": "Increase test automation coverage_oPOM2_GGS, IRRP, TCMP PI28 part II",
+      "url": "https://jira.telekom.de/browse/ADCL-12361",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12406",
+      "title": "ADCL-12406",
+      "summary": "O3 Test Automation Enhancement oPOM1_II",
+      "url": "https://jira.telekom.de/browse/ADCL-12406",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12254",
+      "title": "ADCL-12254",
+      "summary": "O3 Test Automation Enhancement oPOM1_I",
+      "url": "https://jira.telekom.de/browse/ADCL-12254",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12359",
+      "title": "ADCL-12359",
+      "summary": "Increase test automation coverage_oPOM2_GGS, IRRP, TCMP PI 28 part I",
+      "url": "https://jira.telekom.de/browse/ADCL-12359",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12398",
+      "title": "ADCL-12398",
+      "summary": "O3/oPOM: Establish the new E2E integration test-chain for sprint related acceptance testing",
+      "url": "https://jira.telekom.de/browse/ADCL-12398",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-10480",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-10480",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11442",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11442",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11466",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11466",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11701",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11701",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-11832",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-11832",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

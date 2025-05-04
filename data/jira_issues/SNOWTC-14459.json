@@ -1,0 +1,24 @@
+{
+  "key": "SNOWTC-14459",
+  "issue_type": "Epic",
+  "title": "Interface SeCe-IT_Manage SIN+ Service Items in SN",
+  "status": "Closed",
+  "description": "Description\nIntegrate the SeCe-IT service catalog including the SIN-ID and the service model defined by SeCe-IT (according to SeCe-IT Service Items) in SN@TC.\nDevelop the constructors for creating the interface object for the interface (TMF 622) to SeCe-IT.\n  Checklist\nDoR Enabler Feature Status  \nBenefit Hypothesis includes: * Business Value is clearly stated\nAcceptance criteria are defined.\n ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "The SeCe-IT service catalog including the SIN-ID and the defined service model (according to SeCe-IT service items) is fully integrated in SN@TC and supplies the constructor with the data required to create the interface object.",
+    "The constructors for the interface (TMF 622) to SeCe-IT are available and generate a complete interface object required by the interface."
+  ],
+  "components": [],
+  "labels": [
+    "Sys_Architecture"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

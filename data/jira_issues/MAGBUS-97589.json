@@ -1,0 +1,26 @@
+{
+  "key": "MAGBUS-97589",
+  "issue_type": "Epic",
+  "title": "EOS Tiefenintegration Verarbeitung (Events)",
+  "status": "Funnel",
+  "description": "Description\nWie können wir Events aus EOS in MF Cases bearbeiten",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

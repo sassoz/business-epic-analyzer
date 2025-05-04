@@ -1,0 +1,45 @@
+{
+  "key": "BEMABU-2254",
+  "issue_type": "Business Epic",
+  "title": "SAP 002 Kundenummer beantragen für ISS 1.2 u. AcM TK/IT/MK/IoT",
+  "status": "Funnel",
+  "description": "Description\n \nFür die Rollen \"GK-Midmarket Inside Sales 1 (Hunting), GK-Midmarket Inside Sales 2 (Farming), GK-AcM TK, IoT, IT, MK\" benötigen wir die Funktionalität \"SAP002 Kundenummer beantragen\" bei der Stammdatenbearbeitung. so dass alle benannten Rollen die Möglichkeit erhalten eine SAP002 Kundenummer für den Kunden zu beantragen, um eine effizientere Pflege der Kundendaten sicher zustellen.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n< Magenta Force > DOM0201 <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter Zenar Mohamed \nSponsor/Fachseite VM Midmarket\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\n \n\nBusiness Scope:\n1.Verbesserung der Kundenbindung durch eine optimierte Pflege von Kundendaten\n2. Steigerung der Effizienz und Benutzerfreundlichkeit für Inside Sales 1. 2 und AcM TK/IoT/MK/IT",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "1-2 Mio €",
+      "cost_saving": "1-2 Mio € p.a.",
+      "risk_loss": "",
+      "justification": "Mit der Rollenweiterung schaffen durch die selbständige Beauftragung der Rollen \"GK-Midmarket Inside Sales 1 (Hunting), GK-Midmarket Inside Sales 2 (Farming), AcM IT,TK,MK,IoT\"   und die Entlastung des AcM1 und AcM2 vertriebsaktive Zeit. Das Segment Midmarket über 219.000 davon 50.000 Kunden ohne SAP-002 Kundennummer Laut Datenanalyse folgen monatlich im Schnitt ca. 40 Anlagen pro Monat. 480 neue SAP 002 Kundenummern p.a. x 24 h = 11.520 h p.a."
+    },
+    "strategic_enablement": {
+      "scale": 3,
+      "risk_minimization": "Reduktion von fehlerhaften D!VE-Auftragsprozessierungen",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "",
+      "justification": "Geplanter Umsetzungszeitraum Plan Start: tbd Plan Ende/Launch: tbd tbd"
+    }
+  },
+  "assignee": "Zenar Mohamed",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

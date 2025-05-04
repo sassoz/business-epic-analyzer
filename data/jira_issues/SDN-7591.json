@@ -1,0 +1,49 @@
+{
+  "key": "SDN-7591",
+  "issue_type": "Epic",
+  "title": "UI: Enrichment and Issue New Network",
+  "status": "Funnel",
+  "description": "Description\nRequired Inputs:\nScreens/Wireframes - until 02.12.\n\nBusiness Scope:\nImplementation of the Employee Portal in ServiceNow to provision an order",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "screens are implemented in the dev environment based on the process descriptions",
+    "screens are tested in the dev environment",
+    "frontend and backend is harmonized"
+  ],
+  "components": [
+    {
+      "code": "SDN",
+      "title": "SDN Altbestand SDLA - B2B Software Defined Networks"
+    }
+  ],
+  "labels": [
+    "SD-LAN/WiFi",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20221116_SDLAN_Testcases.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2633653/20221116_SDLAN_Testcases.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-21T12:55:52.125+01:00"
+    },
+    {
+      "filename": "image-2022-11-21-12-55-15-195.png",
+      "url": "https://jira.telekom.de/secure/attachment/2633654/image-2022-11-21-12-55-15-195.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-11-21T12:55:52.130+01:00"
+    }
+  ]
+}

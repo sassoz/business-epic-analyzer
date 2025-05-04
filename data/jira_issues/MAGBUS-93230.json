@@ -1,0 +1,54 @@
+{
+  "key": "MAGBUS-93230",
+  "issue_type": "Epic",
+  "title": "[NGMobile][Options][MOST] Identification and Delivery of Customer-Specific Options Recommendations",
+  "status": "Closed",
+  "description": "Description\nDescription: Develop a recommendation system that identifies and delivers customer-specific options for the most booked add-ons related to a selected tariff. The aim is to enhance customer engagement by presenting relevant options that were explicitly chosen by the customer and not automatically added. This system will require filtering based on bookable options, considering different contexts, and possibly involving a Nepal call for context-specific options. Additionally, the system will incorporate checks for option types, such as selectable, default-selected, included options, and exclude options priced at 0€.\nBusiness Value: By providing tailored option recommendations, the system increases customer satisfaction and engagement, potentially leading to higher conversion rates for add-on purchases. The focus on customer-specific choices aligns with personalized service goals, enhancing the overall user experience. Additionally, by optimizing the recommendation process and excluding irrelevant options, the solution contributes to improved system performance and efficiency.\nAcceptance Criteria:\nAccurately identify and display the most booked options related to the selected tariff.\nEnsure options are relevant to the customer's choices, avoiding automatically added ones.\nImplement context-specific checks for available options, including potential Nepal calls.\nIntegrate roleType in requests to tailor recommendations.\nExclude options priced at 0€ and validate option types such as selectable, default-selected, and included.\nPotentially Open:\nHow to improve performance\nOnly choose options bookable in the context of a given tariff\nAre we expecting the selected tariff in the request\nOnly show really booked options...\nno default selected or 0€ options\nIf we call Nepal we might need also \"roleType\" in the request",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "Accurately identify and display the most booked options related to the selected tariff.",
+    "Ensure options are relevant to the customer's choices, avoiding automatically added ones.",
+    "Implement context-specific checks for available options, including potential Nepal calls.",
+    "Integrate roleType in requests to tailor recommendations.",
+    "Exclude options priced at 0€ and validate option types such as selectable, default-selected, and included.",
+    "no default selected or 0€ options",
+    "Options",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [],
+  "labels": [
+    "MB_Phoenix",
+    "MB_checked",
+    "Q3_24"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "mb2b-documentation_preview.zip",
+      "url": "https://jira.telekom.de/secure/attachment/5186234/mb2b-documentation_preview.zip",
+      "mime_type": "application/zip",
+      "size": "184 kB",
+      "date": "2024-12-03T12:59:24.421+01:00"
+    }
+  ]
+}

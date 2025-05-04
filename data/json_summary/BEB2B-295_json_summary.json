@@ -1,0 +1,96 @@
+```json
+{
+  "epicId": "BEB2B-295",
+  "title": "Versandkosten (Mobilfunk-Endgeräte) - Stufe 1 Versandkosten für KMUB, Midmarket und BGE",
+  "ziele": {
+    "gesamtziel": "Erhebung von Versandkosten für Mobilfunk-Endgeräte bei Geschäftskunden (KMUB, Midmarket und BGE), um die bisher von der DT getragenen Kosten an den Kunden weiterzugeben und dadurch eine EBITDA-Margenerhöhung für 2025 und darüber hinaus zu erreichen. Die Umsetzung ist für den Zeitraum 01.07.2025 bis 30.09.2025 geplant.",
+    "einzelziele": [
+      "Berechnung von Versandkosten für Mobilfunk-Endgeräte bei KMUB, Midmarket und BGE-Kunden",
+      "Kostenneutrale Gestaltung des Versands von Geräten",
+      "Möglichkeit zur Rabattierung der Versandkosten (0%, 50%, 100%)",
+      "Erstellung verständlicher Rechnungen mit aufgeführten Versandkosten",
+      "Implementierung der Preisüberschreibung bei EG-Versandkosten in BOSS"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Dadurch werden Kosten, die die DT im Moment trägt, an den Kunden weitergegeben, so dass der Versand von Geräten kostenneutral wird, und nicht die Kosten der DT erhöht. Das Vorhaben schafft eine konkrete EBITDA-Margenerhöhung für das Jahr 2025 und darüber hinaus."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MOFUDHS-4358",
+      "titel": "GK: Versandkosten (Mobilfunk-Endgeräte, Festnetz und IT-Geschäft) Stufe 1 KMU",
+      "funktionalitäten": [
+        "Erhebung von Versandkosten für alle Versandarten bei GK-Kunden, die Mobilfunk-Endgeräte bestellen",
+        "Weitergabe der Kosten an den Kunden",
+        "Kostenneutrale Gestaltung des Versands von Geräten"
+      ]
+    },
+    {
+      "id": "BEB2B-320",
+      "titel": "Versandkosten für Geschäftskunden (Mobilfunk-Endgeräte, Festnetz und IT-Geschäft)",
+      "funktionalitäten": [
+        "Berechnung von Versandkosten für Mobilfunkendgeräte, Festnetz-Endgeräte und IT-Geschäft-Versand",
+        "Möglichkeit zur Rabattierung der Versandkosten (0%, 50%, 100%)",
+        "Erstellung verständlicher Rechnungen für jede Versandart",
+        "Möglichkeit zur nachträglichen Erstattung der berechneten Versandkosten"
+      ]
+    },
+    {
+      "id": "MOFUDHS-4424",
+      "titel": "GK: Rabattierte EG Versandkosten in BOSS",
+      "funktionalitäten": [
+        "Implementierung der Preisüberschreibung bei EG-Versandkosten in BOSS",
+        "Ablösung der bisherigen Funktionalität in CARMEN"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "In diesem EPIC werden bei KMUB, Midmarket und BGE- Kunden die Versandkosten für die Endgeräte berechnet.",
+    "Die Kosten sollen auf der Endgeräterechnung aufgeführt werden",
+    "Versandkosten werden für folgende Bereich berechnet\nMobilfunkendgeräte\nFestnetz-Endgeräte\nIT-Geschäft-Versand",
+    "Mobilfunkendgeräte",
+    "Festnetz-Endgeräte",
+    "IT-Geschäft-Versand",
+    "Es besteht die Möglichkeit die Versandkosten zu rabattieren auf 0%, 50% und 100%",
+    "Für jede Art wird dem Kunden eine verständlich Rechnung erstellt",
+    "Es besteht die Möglichkeit die (berechneten) Versandkosten ggf. im Nachgang einfach zu erstatten"
+  ],
+  "domainsAndITApplications": [
+    "BOSS",
+    "CARMEN"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit zwischen BOSS und CARMEN: Die Funktionalität zur Preisüberschreibung bei EG-Versandkosten soll von CARMEN nach BOSS migriert werden",
+    "Das Epic BEB2B-295 hat einen Zielzeitraum von 07/2025 bis 09/2025, während die zugehörigen Issues teilweise frühere Fix-Versionen (MPP_25.3, MPP_25.4) haben",
+    "Das Issue MOFUDHS-4424 hat den Status 'Waiting', was auf eine mögliche Verzögerung hindeuten könnte"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": ["MPP_25.3", "MPP_25.4"],
+    "meilensteine": [
+      {
+        "id": "MOFUDHS-4424",
+        "beschreibung": "GK: Rabattierte EG Versandkosten in BOSS",
+        "zeitraum": "MPP_25.3, MPP_25.4"
+      },
+      {
+        "id": "MOFUDHS-4358",
+        "beschreibung": "GK: Versandkosten (Mobilfunk-Endgeräte, Festnetz und IT-Geschäft) Stufe 1 KMU",
+        "zeitraum": "MPP_25.4"
+      }
+    ]
+  }
+}
+```

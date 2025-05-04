@@ -1,0 +1,29 @@
+{
+  "key": "DATASAT-24586",
+  "issue_type": "Epic",
+  "title": "ODW: Casemanagement Service: Development of a congruent database",
+  "status": "Closed",
+  "description": "Description\nFirst step\nThe new attributes in Kundenanliegen shall be added to the Kundenanliegen-entitity on Appl. Area SERV.\nFollowing Attributes are new:\nInbox_Channel__c\nNext_Call_Reason__c\nFeedback_Classification__c\nsource_system (origin__c)\nConfigurator__c\nExternal_ConfiguratorId__c\nInbox_Service__c\nInbox_Email__c\nEosId__c\nClass__c\nTransfer_Reason__c\nvbkz__c\nSecond step\nThe 14 key figures shall be implemented.\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2559345904\nNew information in Kundenanliegen_Historie for transfer_reason and class shall be provided. This information is usefull for creating keyfigure \"Vorgänge Eingang\" (Incoming issues).\nThird step\nCreate the reference information on ODW.\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2547674728\nFourth step\nDeploy tables for the export.\nDefine and deploy UC4 schedule.\nThe transfer form ODW to FCI shall be clarified.\nCreate data set for testing in production with Reinhard Sippel.\nEnlarge Harvester Information with load statistics information from ODW\nCompliance --> see Maintenance Epic\nsee DATASAT-26959\nATTENTION: User stories are still missing here.\nInitial delivery?\ndaily delta or daily full?",
+  "business_value": {},
+  "assignee": "Kathrin Lingertat",
+  "priority": "",
+  "target_start": "2025-03-27",
+  "target_end": "2025-04-16",
+  "fix_versions": [
+    "2025_Q1",
+    "2025_Q2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "CMServ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

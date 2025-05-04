@@ -1,0 +1,42 @@
+{
+  "key": "ADCL-12361",
+  "issue_type": "Epic",
+  "title": "Increase test automation coverage_oPOM2_GGS, IRRP, TCMP PI28 part II",
+  "status": "Backlog",
+  "description": "Description\nThe majority of tests are automated and run in production-like environments (CIT2); stories are implemented and fully tested every iteration (oPOM2 Health Radar target: Run (7-8))\nSuccessful builds trigger automatic deployment to production-like test environments (CIT2); all tests are automated; tests run in parallel and changes are fully validated after every commit (Fly (9-10))\nProcesses in scope: GGS/FTTH, IRRP, TCMP  \nIncrease test coverage for regression testing (for exisiting processes) up to 100%\nIncrease test coverage for new developments up to 80% (minimum)\nWrite test-cases\nBuild test-cases\nRun test-cases\nLink to test-strategy oPOM/O3: https://wiki.telekom.de/display/MBFY/O3-06-Testing ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "The majority of tests are automated and run in production-like environments; stories are implemented and fully tested every iteration (oPOM2 Health Radar target: Run (7-8))",
+    "Successful builds trigger automatic deployment to production-like test environments; all tests are automated; tests run in parallel and changes are fully validated after every commit (Fly (9-10))",
+    "Processes in scope: GGS/FTTH, IRRP, TCMP \nTest coverage for regression (for existing processes) is up to 100%\nNew developments up to 80%\nTest-cases have been written\nTest-cases have been built\nTest-cases have been run",
+    "Test coverage for regression (for existing processes) is up to 100%",
+    "New developments up to 80%\nTest-cases have been written\nTest-cases have been built\nTest-cases have been run",
+    "Test-cases have been written",
+    "Test-cases have been built",
+    "Test-cases have been run"
+  ],
+  "components": [],
+  "labels": [
+    "O3",
+    "Test",
+    "automation_test"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "DevOps-Health-Radar_oPOM2 (002).xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/5502077/DevOps-Health-Radar_oPOM2%20%28002%29.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "49 kB",
+      "date": "2025-03-14T13:11:49.694+01:00"
+    }
+  ]
+}

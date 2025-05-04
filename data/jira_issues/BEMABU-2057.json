@@ -1,0 +1,66 @@
+{
+  "key": "BEMABU-2057",
+  "issue_type": "Business Epic",
+  "title": "Magentaforce Hyperforce Migration",
+  "status": "Closed",
+  "description": "Description\nClick to add description",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Andrej Deckl",
+  "priority": "",
+  "target_start": "2025-01-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "PrioQ1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "IT-Enabler",
+    "MB_MF"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-87516",
+      "title": "MAGBUS-87516",
+      "summary": "MF: HyperForce",
+      "url": "https://jira.telekom.de/browse/MAGBUS-87516",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

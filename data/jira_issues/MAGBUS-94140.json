@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-94140",
+  "issue_type": "Epic",
+  "title": "Exploration: PartyManagement der CDP",
+  "status": "Funnel",
+  "description": "Description\nIch als PO möchte dass wir das PartyManagement der CDP explorieren und prüfen wie wir die Daten des KMU-B Segment mit der CDP synchronisieren können.\nDas Ziel ist eine 100%ige wechselseitige Synchronisation der KMU-B Ansprechpartner zwischen den beiden Systemen CDP & SEP\n\nBusiness Scope:\nIch als PO möchte dass wir das PartyManagement der CDP explorieren und prüfen wie wir die KMU-B Daten der CDP mit der SEP synchronisieren können",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Wir haben eine Entscheidung getroffen ob das PartyManagement für die weitere Entwicklung der SEP nutzbar ist",
+    "Es liegt ein grober Fahrplan vor wie wir die CDP an die SEP anbinden",
+    "Anforderungen zur Anbindung der CDP an die SEP liegen ebenfalls vor."
+  ],
+  "components": [
+    {
+      "code": "SEP-Platform",
+      "title": "SEP-Platform "
+    }
+  ],
+  "labels": [
+    "SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

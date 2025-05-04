@@ -1,0 +1,58 @@
+```json
+{
+  "epicId": "BEMABU-2288",
+  "title": "Bestands- & Änderungsgeschäfts SeCe-IT",
+  "ziele": {
+    "gesamtziel": "Das IT-System 'Flamingo', ein Angebots- und Auftragskonfigurator, soll in der Lage sein, die Geschäftsfälle Umzug, Produktwechsel sowie Kündigung/Neubereitstellung für das SeCe-IT vollständig und effizient abzubilden. Ziel ist es, eine benutzerfreundliche und automatisierte E2E-Prozessführung zu gewährleisten, die alle relevanten Daten berücksichtigt und eine reibungslose Abwicklung sicherstellt. Die Umsetzung ist für Q3/2025 geplant.",
+    "einzelziele": [
+      "Vollständige Abbildung der Geschäftsfälle Umzug, Produktwechsel sowie Kündigung/Neubereitstellung für SeCe-IT",
+      "Gewährleistung einer benutzerfreundlichen und automatisierten E2E-Prozessführung",
+      "Berücksichtigung aller relevanten Daten für eine reibungslose Abwicklung"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Keine Informationen verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2288",
+      "titel": "Bestands- & Änderungsgeschäfts SeCe-IT",
+      "funktionalitäten": [
+        "Abbildung des Geschäftsfalls Umzug für SeCe-IT",
+        "Abbildung des Geschäftsfalls Produktwechsel für SeCe-IT",
+        "Abbildung des Geschäftsfalls Kündigung/Neubereitstellung für SeCe-IT",
+        "Automatisierte E2E-Prozessführung"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "E2E-Umsetzung des Bestands- und Änderungsgeschäfts"
+  ],
+  "domainsAndITApplications": [
+    "Flamingo",
+    "SeCe-IT"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Das Business Epic befindet sich im Status 'Funnel', was darauf hindeutet, dass es sich noch in einer frühen Planungsphase befindet",
+    "Die genaue Spezifikation soll erst im Rahmen des Solution Intents folgen, was ein Risiko für die termingerechte Umsetzung darstellen könnte",
+    "Das Epic ist Teil der übergeordneten Business Initiative 'Q3/2025 - Optimierung AGB-Kette NPS', was auf zeitliche Abhängigkeiten hinweist"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "Keine Informationen verfügbar",
+    "umsetzungsende": "Keine Informationen verfügbar",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}
+```

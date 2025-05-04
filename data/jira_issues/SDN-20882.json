@@ -1,0 +1,76 @@
+{
+  "key": "SDN-20882",
+  "issue_type": "Epic",
+  "title": "[Creators] FTTH Interims solution: Send Interests to Technic POM",
+  "status": "Closed",
+  "description": "Description\nadd CoD (Business Value + RROE + time Criticality)\nadd Job size\n  add fix version (if pulled)\nset target End date (if pulled)\n  Contacts\nBusiness: Bernd Frauenknecht\nPOM (Technic) Birol Arduc\nSGRK: Enrico Dettmann\n  Wiki-Seite: https://wiki.telekom.de/pages/viewpage.action?pageId=2394326530\nDescription\nExample of a JSON is attached, 15.000 locations should be possible to send without \"Datendrehscheibe\".\nAccordingly, the preferred solution is a Standard RestAPI via Tardis to reduce IT effort for the interim solution\nPOM enters the data received into the prospective customer database and makes the data available to the technical department (Puma) with the source code \"GK Großkunde-FIB\". When a location reaches the expansion status \"VVMongoing\", an e-mail is sent to the address specified for the location. Otherwise, no further action (HTN recording, start line construction) is triggered.\n  Workflow:\nThe user select in Location Tab \"added to quote\" the sites he wants to send to POM (technic) in order to notify technic about a site interests by the customer, so that technic can plan their FTTH rollout.\nFor this, the button \"Request availabilty\" gets expanded by a button that is only available for dedicated users (due to Compliance-Alignment):\nEN: \"Send to FTTH interests-DB\".\nDE: \"In FTTH Interessenten-DB aufnehmen\"\nIn order to send sites to POM (technic) an CRM-T ID and email per site  mandatory in order to send sites to POM (technic).This email adress fill be an FMB and defined during the upload by the user\nThe selected sites (single and mass) will be send to POM (technic).\nA success /error notification will be saved within PANDA for the user pro request. If an error was send, the request can be started again.\nA information will be stored inside the location list pro location if a request has been send to POM (technic)\n  Necessary Data to be transferred to POM:\nNecessary Data to be transferred to POM:\nLabel: GK Großkunde-FIB (mandatory, as Default)\nKLS-ID (mandatory)\nPLZ (mandatory)\nCity (mandatory)\nStreet (mandatory)\nHouse Nbr (mandatory)\nExtension (if available, optional)\nCustomer name (mandatory)\nCRMT Customer-Number (mandatory)\nEmail adress (mandatory)\n  For the interim solution, do we have to prevent a location from being sent to POM a second time by a customer? Answer: No\nIs it \"harmful\" to hand over a location in VVM ongoing status, or better, to POM? Answer: No, it is not harmful.\nWhat happens if something like this is done? The specified e-mail address will receive a message. Nothing else will happen.\n  The data from the interim solution that was transferred to the prospect database can later be migrated to the FIB tool so that the FMBs can be replaced.\nEmail always FMB? - Yes, it will always be an FMB. We do not require an FMB check, this is ensured manually when the users are uploaded\n  out-of-scope: Geo-Data, VSNF-Data\n  DOR Status Comment\nAcceptance criteria are defined.  \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts interim solution by Alicia Riedel\nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA  \nDependencies are identified and there are no external dependencies that can´t be solved within the ART POM (technic)\nNon-functional requirements (NFR) are identified. 1.000-15.000 locations\nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter   \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on n.a.  \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs n.a.  \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation n.a.  \nProcess dependency / adaptations has been defined n.a.  \n\nBusiness Scope:\nAs a PANDA user in the FTTH enviornment, I want to have an interim solution where I can send customer locations to the technic who are interested in a FTTH rollout. The locations are then considered within the technic for their rollout plan",
+  "business_value": {},
+  "assignee": "Hendrik Charchulla",
+  "priority": "",
+  "target_start": "2024-10-17",
+  "target_end": "2024-12-18",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [
+    "For national sites:\nexpand selection for \"request availability\" to button \"send FTTH interests\"\nEmail always FMB needs to be entered per locations and is mandatory in order to send locations via POM\nselected locations (single and mass) - only DE - will be send to POM (technic) in order to notify technic about a site interests by customer for ther FTTH rollout plans \nsuccess notification will be saved within PANDA for the user\nAdd new Field \"CRMT-Number\" to the table, this is mandatory for sending data to TechPOM\nThe button to use the interface should only be available to dedicated users that are previously announced",
+    "expand selection for \"request availability\" to button \"send FTTH interests\"",
+    "Email always FMB needs to be entered per locations and is mandatory in order to send locations via POM",
+    "selected locations (single and mass) - only DE - will be send to POM (technic) in order to notify technic about a site interests by customer for ther FTTH rollout plans",
+    "success notification will be saved within PANDA for the user",
+    "Add new Field \"CRMT-Number\" to the table, this is mandatory for sending data to TechPOM",
+    "The button to use the interface should only be available to dedicated users that are previously announced",
+    "NFRs: at least 1500 sites shell be send within one request"
+  ],
+  "components": [],
+  "labels": [
+    "FTTH_by_LE",
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Businessfreigabe für FTTH Interimslösung Interessentenerfassung.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5303816/Businessfreigabe%20f%C3%BCr%20FTTH%20Interimsl%C3%B6sung%20Interessentenerfassung.msg",
+      "mime_type": "application/octet-stream",
+      "size": "203 kB",
+      "date": "2025-01-16T16:28:35.140+01:00"
+    },
+    {
+      "filename": "image-2024-08-12-14-04-41-956.png",
+      "url": "https://jira.telekom.de/secure/attachment/4806910/image-2024-08-12-14-04-41-956.png",
+      "mime_type": "image/png",
+      "size": "111 kB",
+      "date": "2024-08-12T14:04:42.610+02:00"
+    },
+    {
+      "filename": "image-2024-08-12-14-05-01-023.png",
+      "url": "https://jira.telekom.de/secure/attachment/4806913/image-2024-08-12-14-05-01-023.png",
+      "mime_type": "image/png",
+      "size": "47 kB",
+      "date": "2024-08-12T14:05:01.598+02:00"
+    },
+    {
+      "filename": "image-2024-08-21-09-58-14-914.png",
+      "url": "https://jira.telekom.de/secure/attachment/4830324/image-2024-08-21-09-58-14-914.png",
+      "mime_type": "image/png",
+      "size": "46 kB",
+      "date": "2024-08-21T09:58:15.309+02:00"
+    },
+    {
+      "filename": "image-2024-09-09-10-46-19-353.png",
+      "url": "https://jira.telekom.de/secure/attachment/4892091/image-2024-09-09-10-46-19-353.png",
+      "mime_type": "image/png",
+      "size": "12 kB",
+      "date": "2024-09-09T10:46:20.315+02:00"
+    },
+    {
+      "filename": "LocationPerCustomer_extended.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4899227/LocationPerCustomer_extended.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "10 kB",
+      "date": "2024-09-11T09:10:41.977+02:00"
+    }
+  ]
+}

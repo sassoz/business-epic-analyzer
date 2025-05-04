@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-100774",
+  "issue_type": "Epic",
+  "title": "MF: Service Case - Erweiterungen des Routings inkl. Omnichannel und Supervisor",
+  "status": "Resolved",
+  "description": "Description\nFolgetätigkeiten/ Weiterentwicklungen im Kontext Service Case.\nRouting/ Eskalationen via Omni-Channel verfeinern",
+  "business_value": {},
+  "assignee": "Noemi Anschlag",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27",
+    "MF 4.500"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

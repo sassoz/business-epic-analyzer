@@ -1,0 +1,28 @@
+{
+  "key": "ADCL-11622",
+  "issue_type": "Epic",
+  "title": "Reporting: Transport FTTH reporting information to DWH",
+  "status": "Resolved",
+  "description": "Description\nIn the digital landscape, the demand for high-speed connectivity continues to rise, and Fiber to the Home (FTTH) stands at the forefront of this evolution. To harness the true potential of FTTH networks, it is imperative to streamline and enhance the reporting of critical operational data to the Data Warehouse (DWH). This epic focuses on the seamless transportation of FTTH reporting information, ensuring that data flows efficiently and effectively into the DWH, paving the way for robust analytics and informed decision-making.\nObjectives\nData Integrity and Accuracy: Ensure that all FTTH reporting information is captured with high fidelity, minimizing data discrepancies and maximizing trust in analytics.\nScalability and Flexibility: Create a scalable architecture that accommodates the growing volume of FTTH data without compromising performance, making it adaptable to future enhancements.",
+  "business_value": {},
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "2025-03-14",
+  "target_end": "2025-04-03",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "FTTH order information is transported to the DWH",
+    "Transport is documented",
+    "An alert is sent if the transport doesn't work"
+  ],
+  "components": [],
+  "labels": [
+    "PI27",
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

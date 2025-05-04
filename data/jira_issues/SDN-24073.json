@@ -1,0 +1,37 @@
+{
+  "key": "SDN-24073",
+  "issue_type": "Epic",
+  "title": "FIB - Integrate FIB Tool in PANDA - AutoAdd Locations",
+  "status": "Backlog",
+  "description": "Business Scope:\nAs a user of PANDA and the integrated offer, I want Locations that are added to a quote and an AGP via external means, to be added to AGP and quote in the FIB tool to use them in the PANDA workflow.",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2025-04-10",
+  "target_end": "2025-06-11",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "When PANDA (CPQ or Integrated Offer Cart) gets locations connected to an AGP or a Quote from an external source, a check is done, if the locations are already added to the AGP",
+    "If they are already available in the AGP, they are added to the quote",
+    "If they are not yet added to the AGP, they are added to the AGP and the Quote.",
+    "If they are freshly added, the KLS check is run and the FTTH status is requested automatically"
+  ],
+  "components": [],
+  "labels": [
+    "FTTH_by_LE",
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Epic for Q2 - AutoAdd locations to FIB - Tasks in Sprint 3.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5337376/Epic%20for%20Q2%20-%20AutoAdd%20locations%20to%20FIB%20-%20Tasks%20in%20Sprint%203.msg",
+      "mime_type": "application/octet-stream",
+      "size": "",
+      "date": "2025-01-27T09:05:52.360+01:00"
+    }
+  ]
+}

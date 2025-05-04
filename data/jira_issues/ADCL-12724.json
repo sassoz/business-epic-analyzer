@@ -1,0 +1,25 @@
+{
+  "key": "ADCL-12724",
+  "issue_type": "Epic",
+  "title": "Flamingo UX/UI Improvements_II",
+  "status": "Backlog",
+  "description": "Description\n  As a PO of the O3 Team\nI would like to support several improvements of Flamingo UX/UI\nSo that business value for Sales & end customers is increased by faster realization of requests at better quality (resulting in NPS increases)\nFeatures i.e.:\nMAGBUS-104551 - Implementation of Speedport 7 in AGB Chain: Verify if any action (configuration) required at O3 & support E2E Tests\nMAGBUS-99457 Remove VP/VO Mapping from O3, final step at https://wiki.telekom.de/display/MBFY/VP-Nummern+Validierung as soon as Flamingo implementation is completed\nImprove Error Messages\ncheck # occurrences per error message + possibly derive more US in context\nhttps://wiki.telekom.de/pages/viewpage.action?spaceKey=MBFY&title=O3+-+Error+messages\nhttps://wiki-ref.telekom.de/display/MBFY/O3+-+Error+Messages\nFlamingo Overview:\nhttps://wiki.telekom.de/display/MBFY/BP%3A+Order+Placement+Error+messages\nhttps://wiki-ref.telekom.de/display/MBFY/BP%3A+Order+Placement+Error+messages\n   ",
+  "business_value": {},
+  "assignee": "Dirk Henning",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-O3-Template",
+    "ADCL-PI28",
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

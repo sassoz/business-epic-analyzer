@@ -1,0 +1,58 @@
+2025-05-04 13:10:41,784 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-05-04 13:10:43,598 - jira_scraper - INFO - Building issue tree for root issue: BEMABU-662
+2025-05-04 13:10:43,598 - jira_scraper - INFO - Searching JSON files in: /Users/A763630/Documents/GitHub/business-epic-analyzer/data/jira_issues
+2025-05-04 13:10:43,652 - jira_scraper - INFO - Number of nodes: 10
+2025-05-04 13:10:43,652 - jira_scraper - INFO - Number of edges: 9
+2025-05-04 13:10:44,165 - jira_scraper - INFO - Issue Tree saved: /Users/A763630/Documents/GitHub/business-epic-analyzer/data/issue_trees/BEMABU-662_issue_tree.png
+2025-05-04 13:10:44,166 - jira_scraper - INFO - Context saved to file: /Users/A763630/Documents/GitHub/business-epic-analyzer/logs/BEMABU-662_context.json
+2025-05-04 13:10:44,168 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+2025-05-04 13:11:00,145 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-04 13:11:00,165 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-05-04 13:11:00,166 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:11:00,167 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:11:00,168 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:12:03,558 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-05-04 13:13:30,095 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-05-04 13:13:32,123 - jira_scraper - INFO - Building issue tree for root issue: BEMABU-662
+2025-05-04 13:13:32,123 - jira_scraper - INFO - Searching JSON files in: /Users/A763630/Documents/GitHub/business-epic-analyzer/data/jira_issues
+2025-05-04 13:13:32,130 - jira_scraper - INFO - Number of nodes: 10
+2025-05-04 13:13:32,130 - jira_scraper - INFO - Number of edges: 9
+2025-05-04 13:13:32,386 - jira_scraper - INFO - Issue Tree saved: /Users/A763630/Documents/GitHub/business-epic-analyzer/data/issue_trees/BEMABU-662_issue_tree.png
+2025-05-04 13:13:32,387 - jira_scraper - INFO - Context saved to file: /Users/A763630/Documents/GitHub/business-epic-analyzer/logs/BEMABU-662_context.json
+2025-05-04 13:13:32,389 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+2025-05-04 13:13:49,476 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-04 13:13:49,492 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-05-04 13:13:49,493 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:13:49,493 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:13:49,494 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:13:49,498 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4.1-mini; provider = openai
+2025-05-04 13:15:16,056 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-04 13:15:16,119 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-05-04 13:15:16,119 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-mini-2025-04-14
+2025-05-04 13:15:16,120 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-mini-2025-04-14
+2025-05-04 13:15:16,121 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-mini-2025-04-14
+2025-05-04 13:18:48,207 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-05-04 13:19:24,377 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-05-04 13:19:27,586 - jira_scraper - INFO - Building issue tree for root issue: BEMABU-662
+2025-05-04 13:19:27,587 - jira_scraper - INFO - Searching JSON files in: /Users/A763630/Documents/GitHub/business-epic-analyzer/data/jira_issues
+2025-05-04 13:19:27,649 - jira_scraper - INFO - Number of nodes: 10
+2025-05-04 13:19:27,650 - jira_scraper - INFO - Number of edges: 9
+2025-05-04 13:19:28,227 - jira_scraper - INFO - Issue Tree saved: /Users/A763630/Documents/GitHub/business-epic-analyzer/data/issue_trees/BEMABU-662_issue_tree.png
+2025-05-04 13:19:28,238 - jira_scraper - INFO - Context saved to file: /Users/A763630/Documents/GitHub/business-epic-analyzer/logs/BEMABU-662_context.json
+2025-05-04 13:19:28,240 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+2025-05-04 13:19:44,761 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-04 13:19:44,776 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-05-04 13:19:44,777 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:19:44,777 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:19:44,778 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+2025-05-04 13:19:44,797 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4.1-mini; provider = openai
+2025-05-04 13:20:24,567 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-04 13:20:24,571 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-05-04 13:20:24,571 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-mini-2025-04-14
+2025-05-04 13:20:24,572 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-mini-2025-04-14
+2025-05-04 13:20:24,573 - LiteLLM - INFO - selected model name for cost calculation: openai/gpt-4.1-mini-2025-04-14

@@ -1,0 +1,60 @@
+```json
+{
+  "epicId": "BEMABU-2260",
+  "title": "Business Initiative Reporting MF Midmarket",
+  "ziele": {
+    "gesamtziel": "Einheitliche Nutzung von Funktionalitäten und Berichten für die Vertriebssegmente LE und Midmarket zur operativen Steuerung ihrer Vertriebsmaßnahmen, insbesondere bei gemeinsamer Arbeit an denselben Kunden in Selling-Team Struktur. Ziel ist ein effizienter Kundenangang, regulärer Austausch von Kundeninformationen und Steigerung des internen NPS. Geplante Umsetzung von Juli 2025 bis September 2025.",
+    "einzelziele": [
+      "Bereitstellung von TOP 30 Projekte je TK-ACM für die Funktionsgruppe TK Accountmanager und TK Expert Sales",
+      "Bereitstellung von TOP 100 TK-Projekte je Team für Vertriebsleiter und TK Expert Sales",
+      "Bereitstellung von TOP 70 TK-Projekte der Region für Regionalleiter und TK Expert Sales",
+      "Bereitstellung dieser Berichte auch für die übrigen Fachbereiche IT und MK"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Keine Verbesserung des NPS Wertes mit Hinblick auf Arbeitsfähigkeit in Magenta Force. Erfüllung eine Minimimalerwartung an ein CRM System"
+    },
+    "strategicEnablement": {
+      "skala": 20,
+      "beschreibung": "Für die Zusammenarbeit am selben Kundenstamm innerhalb eines Teams ist eine gleiche Sicht notwendig. Das zusenden von Screenshots zu Berichten an Kollegen um Termine vorzubereiten entspricht nicht den Erwartungen der Mitarbeiter (siehe NPS Befragung)"
+    },
+    "timeCriticality": {
+      "skala": 3,
+      "beschreibung": "Keine detaillierte Beschreibung verfügbar"
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2260",
+      "titel": "Business Initiative Reporting MF Midmarket",
+      "funktionalitäten": [
+        "TOP 30 Projekte je TK-ACM für die Funktionsgruppe TK Accountmanager und TK Expert Sales",
+        "TOP 100 TK-Projekte je Team für Vertriebsleiter und TK Expert Sales",
+        "TOP 70 TK-Projekte der Region für Regionalleiter und TK Expert Sales",
+        "Bereitstellung dieser Berichte auch für die übrigen Fachbereiche IT und MK",
+        "Gemeinsame und gleiche Sicht bzw. Berechtigung bei zugewiesenen Kunden für alle Vertriebsfunktionen"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Wenn alle Vertriebsfunktionen einen gemeinsame und gleiche Sicht bzw. Berechtigung bei den ihnen zugewiesenen Kunden haben. Niemand muss für jemand anderen innerhalb eines Selling Teams Funktionen ausführen wegen fehlenden Berechtigungen"
+  ],
+  "domainsAndITApplications": [
+    "Magenta Force",
+    "DOM0201"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Das Business Epic befindet sich im Status 'Funnel', was darauf hindeutet, dass es sich noch in einer frühen Phase befindet",
+    "Die Beschreibung erwähnt, dass das BE noch mit weiteren nötigen Informationen versehen wird, sobald diese verfügbar sind",
+    "Das Vorhaben ist Teil des NPS Programms bei T-Business und hat eine strategische Bedeutung für die Zusammenarbeit in Teams"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}
+```

@@ -1,0 +1,27 @@
+{
+  "key": "ADCL-9716",
+  "issue_type": "Epic",
+  "title": "Introduction of a new Cancellation Order Operation in O3 O-POM",
+  "status": "Closed",
+  "description": "Description\nIntroducing a new operation to support cancellation process in O3-OPOM. \n  The new operation Cancellation should be conformed to TMF-622 specification: It works asynchronously, creates the events and supports the defined states.\n  More over in: https://wiki.telekom.de/pages/viewpage.action?pageId=2091085091\n                      https://wiki.telekom.de/display/MBFY/O3+Cancellation+of+Order\n  This new operation will support new cancellation processes such as GGS cancellation process. It should be generic for other new cancellation processes of other production lines.",
+  "business_value": {},
+  "assignee": "Heinz-Gerd Bendels",
+  "priority": "",
+  "target_start": "2024-07-04",
+  "target_end": "2024-09-04",
+  "fix_versions": [
+    "PI 25"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-PI25",
+    "O3",
+    "O3-Architecture",
+    "O3-Enabler",
+    "PlanChangePI24"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

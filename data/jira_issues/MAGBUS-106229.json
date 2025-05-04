@@ -1,0 +1,32 @@
+{
+  "key": "MAGBUS-106229",
+  "issue_type": "Epic",
+  "title": "Freigabe KI gestützte Datenkonsolidierung im CCM",
+  "status": "In Progress",
+  "description": "Description\nIch als PO möchte dass wir mit Hilfe von LLMs eine Datenkonsolidierung in unserem CCM für die Ansprechpartner durchführen. Hierbei sollen nach definierten fachlichen Regeln eine Zusammenführung von Dubletten ermöglicht werden. Hierbei soll auch der Einsatz von KI vorgenommen werden.\n\nBusiness Scope:\nIch als PO möchte dass wir mit Hilfe von KI Tools eine Datenkonsolidierung in unserem CCM durchführen.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "manuelle Datenkonsolidierung auf DB Ebene",
+    "Definition der Matching-Regeln",
+    "Zusammenführen von Dubletten"
+  ],
+  "components": [
+    {
+      "code": "SEP-CCM",
+      "title": "SEP-CCM "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

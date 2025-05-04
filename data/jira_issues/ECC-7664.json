@@ -1,0 +1,48 @@
+{
+  "key": "ECC-7664",
+  "issue_type": "Epic",
+  "title": "CPBX Rufnummernverlängerung auf 13 Stellen",
+  "status": "Analysis",
+  "description": "Description\nUserStory\n Als Admin mit entsprechenden Rechten\n möchte ich 13-stellige Rufnummern verwenden können\n um jegliche Rufnummernlängen zu unterstützen.\n  Definition of Ready\n - Die User Story ist abgestimmt. (mandatory)\n - Es ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\n - Alle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\n - Die Provisionierungsanforderungen aus der Technik sind seitens DIVA WebCCo angenommen (anhand der Qualitätskriterien geprüft) und Informationen im Epic dokumentiert. (optional)\n - Der GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\n - Schnittstellenentwurf liegt vor. (optional)\n - Alle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\n - Alle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\nHINWEISE\n - HINWEIS\n - HINWEIS\nIT Verarbeitungssequenz bzw. Abläufe\n - Darstellung des Ablaufes von …… bis ….. in Anlage A oder Referenz auf Innovatormodell\n - Begründung, falls keine Darstellung des Ablaufes geplant ist.\nHINWEISE für den Prozesstest BSS\n - HINWEIS\n - HINWEIS\nHINWEISE für den Teil-Prozesstest BSS\n - HINWEIS\n - HINWEIS\nHINWEISE für den Prozesstest OSS\n - HINWEIS\n - HINWEIS\n  HINWEISE für den Prozesstest MCS\n - HINWEIS\n - HINWEIS\n    HINWEISE für den Betreiber\n - Einmalige Aktionen notwendig? Wenn ja, welche?\n - Bestands-Migrationen notwendig? Wenn ja, welche?\n - Änderungen an der Referenz Enterprise notwendig? Wenn ja, welche?\n - Abhängigkeiten zu Technik-Releases, Versionen von Datenbanken, Middleware, OS,…?\n - Die Beschreibung kann noch in der Production detailliert werden.  \n  Hinweis zum Template\nAlle Punkte sind in dem EPIC aufzuführen und zu beschreiben. Es ist zulässig. n.r. einzutragen, also „nicht relevant“",
+  "business_value": {},
+  "assignee": "Tobias Fischer",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "WBV flag should be implemented for this feature",
+    "Admin rights for the logged in Cloud PBX are required",
+    "Extended numbers must be displayed correctly when assigning numbers to Arbeitsplätze or service users (Gruppenfunktion, Vermittlungsplatz, Sprachdialogsystem). Means the added 13 digit numbers must be possible to select.",
+    "Additionally, the new length must be also available for assignment of an additional number (zusätzlich Rufnummern) to an Arbeitsplatz or service user.",
+    "In the number assigning dialogue, the 13th digit must be changed in the number length dropdown",
+    "Precondition: A numberblock (Dekade) must be added to the \"Verlängerte Rufnummernblock\" (Extended number block)",
+    "Extension is done under \"Mein Unternehmen → Rufnummern verwalten → Rufnummernverlägerung\"",
+    "For each decade under the extended numbers \"Verlängerte Rufnummernblöcke\" a button is displayed, which allows the extension to 13 digits:\nThe extension can either be done for a single number or a number block.\nAfter an admin defines the number or the range of the new extended numbers, the changes need to be saved.\nThe button is disabled if there is no possibility to add an additional phone number to a decade with 13 digits. A mouse over text is displayed, that no other 13 digit number can be added.",
+    "The extension can either be done for a single number or a number block.",
+    "After an admin defines the number or the range of the new extended numbers, the changes need to be saved.",
+    "The button is disabled if there is no possibility to add an additional phone number to a decade with 13 digits. A mouse over text is displayed, that no other 13 digit number can be added.",
+    "Displaying of to 13 digits extended numbers/numberblocks follows the method used for \"Verlängerte Rufnummernblöcke\" (Extended Numbers). The main entry is highlighted in magenta and a dropdown menu containing the to 13 digits extended numbers/numberblocks is added.",
+    "Potentially, to 13 digits extended numberblocks (Dekaden) could be highlighted with an icon/text hint",
+    "Already created extended numbers are shown under \"Mein Unternehmen → Rufnummern verwalten → Rufnummernverlängerung\" on the right side in \"Verlängerte Rufnummernblöcke\" (Extended Numbers)",
+    "For to 13 digits extended numbers/numberblocks a button is shown to undo the extension.",
+    "Undoing is only possible, if the ressources (extended number(s)) are unassigend (neither to an Arbeitsplatz nor to a service user). If this is not the case, an error is shown and shortening is not performed",
+    "Removal of Numberblocks (Dekaden) that contain to 13 digit extended numbers/numberblocks from the \"Verlängerte Rufnummernblöcke (Dekaden\") is possible, as long as all ressources are unassigned (following the current logic)"
+  ],
+  "components": [
+    {
+      "code": "hPBX-Portal",
+      "title": "hPBX-Portal "
+    },
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    }
+  ],
+  "labels": [
+    "CompanyFlex"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

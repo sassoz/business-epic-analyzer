@@ -1,0 +1,130 @@
+{
+  "key": "BESERV-862",
+  "issue_type": "Business Epic",
+  "title": "Q1 EOS 2.0 Case-Management Reporting",
+  "status": "In Progress",
+  "description": "Description\nAnforderung:\nIch als Reporter Business Support GK benötige die angeforderten Reportingdaten idealerweise integriert in das Tabulare Modell EWS, um die Daten optimal mittels PowerBI visualisieren zu können.\nBeschreibung:\nDie angeforderten Mengen und Zeiten in Kundensicht und Teamsicht aus MagentaForce sollen nicht in einem eigenen Datenmodell (Business Layer) bereitgestellt werden, sondern sollen abgebildet werden auf die bereits existierenden Kennzahlen und Dimensionen aus dem EWS Datenmodell, soweit möglich.\nEs soll über die Dimension System erkennbar sein, aus welcher Quelle die Daten stammen (heute IRRP und IN, zukünftig MagentaForce, Sprinklr, ..).\n  Begründung:\ndie Daten gehören fachlogisch zusammen. Egal aus welchem Routingsystem sie stammen und wie sie dort heißen (z.B. Workitem, Interaction, Case, ...), handelt es sich um vergleichbare Vorgänge.\nNur bei einer gemeinsamen Datenquelle (hier: EWS) lässt sich in PowerBI eine Live-Verbindung erstellen. Bei Nichtumsetzung müssten die Daten aus verschiedenen Quellen importiert werden und in dem jeweiligen Bericht zusammengeführt werden.\nWichtig auch für das Mengen(reduktions-)programm, Forecasting, Workload/-force-Planung, dass die Daten aus den verschiedenen Routingsystemen, die im Service genutzt werden, an einer Stelle zusammengeführt werden.",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "",
+      "cost_saving": "Reduzierung von Aufwand durch Vermeidung von Datenintegration in separaten Berichten",
+      "risk_loss": "Vermeidung von Dateninkonsistenzen durch separate Datenmodelle",
+      "justification": "Nur bei einer gemeinsamen Datenquelle lässt sich in PowerBI eine Live-Verbindung erstellen. Bei Nichtumsetzung müssten die Daten aus verschiedenen Quellen importiert werden."
+    },
+    "strategic_enablement": {
+      "scale": 4,
+      "risk_minimization": "Vermeidung von Datensilos und Inkonsistenzen",
+      "strat_enablement": "Unterstützung des Mengenreduktionsprogramms, Forecasting und Workload/Workforce-Planung",
+      "justification": "Wichtig für das Mengen(reduktions-)programm, Forecasting, Workload/-force-Planung, dass die Daten aus den verschiedenen Routingsystemen an einer Stelle zusammengeführt werden."
+    },
+    "time_criticality": {
+      "scale": 2,
+      "time": "Idealerweise zeitnah für optimale PowerBI-Visualisierung",
+      "justification": "Die Daten werden für aktuelle Visualisierungen in PowerBI benötigt und sollen verschiedene Routingsysteme (IRRP, IN, zukünftig MagentaForce, Sprinklr) integrieren."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Kevin Robeck",
+  "priority": "",
+  "target_start": "2024-02-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0300",
+      "title": "DOM0300 Data"
+    }
+  ],
+  "labels": [
+    "GrK",
+    "Operations",
+    "PrioQ1_25",
+    "ZMALI:GRK-3097d"
+  ],
+  "realized_by": [
+    {
+      "key": "DATASAT-22648",
+      "title": "DATASAT-22648",
+      "summary": "EOS 2.0: MagentaForceCasemanagement - Kennzahlen Prio 1",
+      "url": "https://jira.telekom.de/browse/DATASAT-22648",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATAFAB-27960",
+      "title": "DATAFAB-27960",
+      "summary": "DATA- Providing data products for EOS 2.0 Case-Management Reporting",
+      "url": "https://jira.telekom.de/browse/DATAFAB-27960",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-20657",
+      "title": "DATASAT-20657",
+      "summary": "[ODW] DATA- EOS 2.0 Case-Management Reporting [Anteil 2024]",
+      "url": "https://jira.telekom.de/browse/DATASAT-20657",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-26837",
+      "title": "DATASAT-26837",
+      "summary": "[ODE] EOS 2.0: MagentaForceCasemanagement - Kennzahlen Prio 2",
+      "url": "https://jira.telekom.de/browse/DATASAT-26837",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-26838",
+      "title": "DATASAT-26838",
+      "summary": "[ODE] EOS 2.0: MagentaForceCasemanagement - Abschluss der Implementierung",
+      "url": "https://jira.telekom.de/browse/DATASAT-26838",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-25870",
+      "title": "DATASAT-25870",
+      "summary": "DATA- EOS 2.0 Case-Management Reporting [Anteil 2025]",
+      "url": "https://jira.telekom.de/browse/DATASAT-25870",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2024-03-01_Steckbrief_RM25_MagentaForceCasemnagement.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4663848/2024-03-01_Steckbrief_RM25_MagentaForceCasemnagement.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "3.48 MB",
+      "date": "2024-06-24T10:56:32.013+02:00"
+    },
+    {
+      "filename": "2024-05-27_Steckbrief_RM24_EOS_2.0_MagentaForceCasemnagement.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4637587/2024-05-27_Steckbrief_RM24_EOS_2.0_MagentaForceCasemnagement.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "3.47 MB",
+      "date": "2024-06-14T10:03:25.732+02:00"
+    },
+    {
+      "filename": "Case Management Magenta Force Reporting - Anforderung OE47.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4629390/Case%20Management%20Magenta%20Force%20Reporting%20-%20Anforderung%20OE47.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "4.89 MB",
+      "date": "2024-06-12T10:09:46.130+02:00"
+    },
+    {
+      "filename": "Zuordnung_Domain_Canvas_Hubs_Applikationen (Stand 16.04.2024) (1).xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4618374/Zuordnung_Domain_Canvas_Hubs_Applikationen%20%28Stand%2016.04.2024%29%20%281%29.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "55 kB",
+      "date": "2024-06-07T21:11:30.066+02:00"
+    }
+  ]
+}

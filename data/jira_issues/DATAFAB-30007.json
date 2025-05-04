@@ -1,0 +1,32 @@
+{
+  "key": "DATAFAB-30007",
+  "issue_type": "Epic",
+  "title": "M2M Reports Optimization & Enhancement",
+  "status": "Funnel",
+  "description": "Description\nStatus Quo:\nAn optimization or additional development for existing reports is currently delivered by the BI4BS team based on a new story in JIRA. \n  Problem:\nBased on business needs it is required to change the logic in existing reports, add some new fields or adapt the existing ones. Changes are required to fix known issues, performance problems and improve usability\n  #MVP\nEnhance the M2M Reporting by adding new new column, change logic or fixing known issue. \n  #benefit\nStable environment\nCustomer satisfaction\n ",
+  "business_value": {},
+  "assignee": "mohammad.khalian@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "BI4BS_BO",
+      "title": "BI4BS_BO "
+    },
+    {
+      "code": "DVS_B2BA",
+      "title": "DVS_B2BA "
+    }
+  ],
+  "labels": [
+    "DEV",
+    "M2M_Rep",
+    "StandardReports"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

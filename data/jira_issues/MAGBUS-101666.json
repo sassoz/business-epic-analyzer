@@ -1,0 +1,37 @@
+{
+  "key": "MAGBUS-101666",
+  "issue_type": "Epic",
+  "title": "Exploration: Integration SeCe-IT in Flamingo pt 2",
+  "status": "Funnel",
+  "description": "Description\nHi everyone,\n  Thank you all for your participation and questions.\nThis is a summary, based on how i understood the discussion.\nPlease feel free to correct any misunderstandings, missed information so we are all on the same page.\n  Meeting Notes Dominique:\nInitial discussion of what solution we are currently decided on:\na: Solution: Live data\nc: Key constraints/design points\nInteractive – Assuming the Display of a given „default or initial“ Configuration\nFor each change in selection, e.g. a click on S4 for entstörservice\na request to SeCe-IT will be made reflecting this change and\nappropriate Data will be returned representing the new Configuration page configuration\nNOT:\nAll Catalog data loaded and implementation of domain logic\nFlamingo MS is, in this phase, a standardized User Interface for the Current Configuration provided by SeCe-IT\nFlamingo MS has no contextual / domain logic for the products, only Frontend logic\nPotential performance improvement – Caching\nList of Routers (or hardware in general)\nConfiguration page\nQuestions discussed:\nKIP – Kunden Individuelles Pricing\nSeCe-IT can call Prima and provide the modified list price\nTopics\nCaching of request / responses\nPreloading of a certain amount of data\nStandardized / DT compliance regarding the Rest URLs\nE.g.  what data in URL queries and what HTTP is used, e.g. POST(PATCH, PUT) instead of GET\nNext steps:\nSece-IT\nProvide a basic example of Rest Request-Response\nFlamingo\nHow could / should the UI look and feel like? UX, Frontend Architecture\nDifferent configurations currently offered in SeCe-IT Configurator e.g.\nRadio buttons, Combo boxes, Check boxes, Numerical fields etc\nDynamic display based on the data provided on a request to request basis\nStandardization, based on DT CI Standards and UX dev\nPerformance\nTriggers – When are configuration change requests sent\nCaching/Preloading\nOpen Questions:\nPerformance / Scaleability: How many Users and configurations are performed at a givenen moment? Could this be a relevant requirement for SeCe-IT/Flamingo design?\nDo we actually need to have a fully „chatty“ version, where every change results in a request, or can we make the assumption that only one or two attributes actually result in a changed UI\nExample: Kauf vs Gemietet (purchase vs rental)\nBased on a discussion with Olaf, this is one of the only attributes, which actually change the potential UI display.\nThis raises the question: Can we just load once per day, or at least in smaller batches?\nNote: A consequence of this solution would be potentially increased traffic and costs over the day (cloud, network etc) (ignoring Caching strategies and failover considerations)\n    As mentioned this is my understanding from the meeting, so please feel free to add any missing points, or correct any mistakes by replying to this email(e.g. with a different colour) or ping or email me on teams by Monday 17/03/25 😊\nI will then add the corrected content with our shared understanding to the wiki and share it.",
+  "business_value": {},
+  "assignee": "El Azzaoui, Karim",
+  "priority": "",
+  "target_start": "2025-03-13",
+  "target_end": "2025-04-02",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2025-03-18-11-17-00-213.png",
+      "url": "https://jira.telekom.de/secure/attachment/5511787/image-2025-03-18-11-17-00-213.png",
+      "mime_type": "image/png",
+      "size": "99 kB",
+      "date": "2025-03-18T11:17:00.391+01:00"
+    },
+    {
+      "filename": "WG_ Discussion about SeCeIT integration improvement pt_2.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5511782/WG_%20Discussion%20about%20SeCeIT%20integration%20improvement%20pt_2.msg",
+      "mime_type": "application/octet-stream",
+      "size": "447 kB",
+      "date": "2025-03-18T11:14:46.696+01:00"
+    }
+  ]
+}

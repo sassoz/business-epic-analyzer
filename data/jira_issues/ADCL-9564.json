@@ -1,0 +1,27 @@
+{
+  "key": "ADCL-9564",
+  "issue_type": "Epic",
+  "title": "Installation date information is made available through the POT API",
+  "status": "Closed",
+  "description": "Description\nPOT shall provide additional appointment information for its consumers. The appointment information is made available through standard TMF data structures for appointments. The information is available as values. The appointment information includes:\nInspection date\nBuilding connection date\nGF-TA installation date\nThe information is available for consumers by events and synchronous calls.",
+  "business_value": {},
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "2024-07-04",
+  "target_end": "2024-08-14",
+  "fix_versions": [
+    "PI 25"
+  ],
+  "acceptance_criteria": [
+    "Inspection date (Besichtigungsdatum) is available through the POT API",
+    "GF-TA installation date if is available through the POT API",
+    "Building connection date (Hausanschluss) is available through the POT API"
+  ],
+  "components": [],
+  "labels": [
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

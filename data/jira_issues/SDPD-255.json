@@ -1,0 +1,39 @@
+{
+  "key": "SDPD-255",
+  "issue_type": "Epic",
+  "title": "RtOC - MIST SD LAN/WLAN - Process design",
+  "status": "Closed",
+  "description": "Description\nAs a customer\nI want to receive an offer for a MIST SD LAN/WLAN solution that considers all my requirements, that makes clear which parameters and information I must contribute.\nSo that I can discuss details with the account manager and get an agreement on a final offer.\n  As a Telekom employee\nI want to know what my role is and which tasks and process steps I go through to create a customer offer for a MIST SD LAN/WLAN solution, with a top user experience. I want to create the offer in PANDA/CPQ.\nSo that I can record all customer requirements and the enquiry with all the information runs through to the order entry.",
+  "business_value": {},
+  "assignee": "Patrick Heich (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7",
+    "R1.1 SDx Platform"
+  ],
+  "acceptance_criteria": [
+    "The commissioning of the DTA is considered",
+    "Coupling information in the site are considered",
+    "A clear process is defined",
+    "It is clear who executes which tasks",
+    "Interfaces and parameters to other systems are defined and coordinated",
+    "Documentation is finished (Aris – Happy Path and Fallouts)"
+  ],
+  "components": [
+    {
+      "code": "OKR#9_PI7",
+      "title": "OKR#9_PI7 Issue an offer for SD LAN/WLAN product in PANDA/CPQ"
+    }
+  ],
+  "labels": [
+    "IT7.2",
+    "IT7.3",
+    "IT7.4",
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

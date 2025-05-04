@@ -1,0 +1,64 @@
+{
+  "key": "BEMABU-1990",
+  "issue_type": "Business Epic",
+  "title": "IT AE Netto",
+  "status": "Closed",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür alle MF User im VM ,\ndie bestimmte IT Produkte anbieten/verkaufen ,\nist es im Vorhaben notwendig den IT AE Netto Wert abzüglich der Marge darzustellen ,\nwodurch ein transparente Salesfunnnel Betrachtung ermöglicht wird\nso dass auch die Kollegen in der Steuerung ein aussagekräftiges Reporting erstellen können.\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nAbhängigkeit zum Magentaforce Pricebook \nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n< ... > DOM.... <verwende \"@Vorname Nachname\">  \n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter Thomas Gibowski & Thomas Koch \nSponsor/Fachseite GK VM \nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Transparente Salesfunnelbetrachtung unter Berücksichtigung der IT Marge."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Momentan haben wir keine IT Netto Betrachtung in MF Vorhaben, somit wäre eine zeitnahe Umsetzung wünschenswert."
+    }
+  },
+  "assignee": "Thomas Gibowski",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [
+    "Der IT Netto AE Wert muss sich automatisch aus dem ausgewählten Produktbetrag im Vorhaben, inkl. Abgleich der entsprechenden Margen berechnen. Ein Feld welches manuell vom MA beschrieben wird ist nicht zielführend."
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical",
+    "MagentaForce"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-99535",
+      "title": "MAGBUS-99535",
+      "summary": "MF: IT Netto AE",
+      "url": "https://jira.telekom.de/browse/MAGBUS-99535",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

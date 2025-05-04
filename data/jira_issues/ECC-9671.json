@@ -1,0 +1,24 @@
+{
+  "key": "ECC-9671",
+  "issue_type": "Portfolio Epic",
+  "title": "Webex Go 2025 - Technik",
+  "status": "Review",
+  "description": "",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Technik",
+      "title": "Technik "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,44 @@
+{
+  "key": "BEMABU-1883",
+  "issue_type": "Business Epic",
+  "title": "Webex Lifecycle 2025",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür GK-Kunden,\ndie Webex Services bei Telekom haben, erweitern oder neu nachfragen,\nist es notwendig, die Cisco Services gem. der Cisco Webex Roadmap bei DT einzuführen,\nwodurch Mehrwert und Kundenbindung verbessert wird,\nso dass  ein die Kundenzufriedenheit bestätigt und ausgebaut werdne kann,\nund DT nicht Kunden zu Wettbewerbern verliert.\nDas Vorhaben schafft Vertrauen in Telekom und Kundenbindung.\n(siehe Ausfüllhilfe: https://wiki.telekom.de/x/UEVbfQ)\nBusiness Impact1)\nScale Revenue             Cost Saving/\nRisk loss 2) Begründung                                                                                                    \n       <textl. Herleitung aus \"Business Value / Value Hypothese\">\nStrategic Enablement/Risk Reduktion\nScale     Risiko\nMinimierung     Strat.\nEnablement Begründung                                                                                                    \n        <textl. Herleitung aus \"Strategischer Beitrag\">\nTime Criticality \nScale Time Begründung                                                                                                    \n  Geplanter Umsetzungszeitraum\nPlan Start: 01.2025\nPlan Ende/Launch: 12.2025  \n1) Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse\n2) Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit\nRahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nPMA ISEM DOM0200 <verwende \"@Vorname Nachname\">  \nSAP/Brim DOM0202    \n< ... >      \n  BEO und ggf. Vertreter bernd.melcher@telekom.de \nSponsor/Fachseite GK-PMC\nWeitere Stakeholder SDU\nWeitere AnsprP  \nPlatz für sonstige Information.\n\nBusiness Scope:\nWeiterentwicklung des Webex-Portfolios gem. der Cisco Webex Roadmap.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Das Vorhaben schafft Vertrauen in Telekom und Kundenbindung."
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": "Geplanter Umsetzungszeitraum Plan Start: 01.2025 Plan Ende/Launch: 12.2025"
+    }
+  },
+  "assignee": "bernd.melcher@telekom.de",
+  "priority": "",
+  "target_start": "2024-07-16",
+  "target_end": "2026-01-31",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "<In Scope/Akzeptanzkriterien: siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>"
+  ],
+  "components": [],
+  "labels": [
+    "B2B_PRIO",
+    "Portfolio",
+    "Webex"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

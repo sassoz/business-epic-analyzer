@@ -1,0 +1,43 @@
+{
+  "key": "MAGBUS-99949",
+  "issue_type": "Portfolio Epic",
+  "title": "O3 stellt Daten aller O3 Order an Fiber-Cockpit bereit",
+  "status": "Funnel",
+  "description": "Description\n  Fiber Cockpit wertet aktuell nur AVIA aus\nWenn ein Tarif  dort bestellt wird, dann wird dieser Vorgang im Fiber Cockpit registriert und ausgewertet\nBeispiel: Absatzmenge von Business Glasfasertarifen, die Ranger im Oktober vermarktet hat.\n  Aktueller Status\nDie O3 Aufträge von Flamingo Nutzern werden aktuell nicht in einer  Datenbank erfasst und FiberCockpit zur Verfügung gestellt.\n  Ziellösung\nDie O3 Aufträge  in einer  Datenbank erfassen und FiberCockpit (Gesamtmenge - AVIA+O3) zur Verfügung stellen\nFormat der Anlieferung: Christoph Seng  (soll diese Infos haben)\n        Wichtige Ansprechpartner\nVolker Schmidt\nChristioph Seng\nMarco Martienssen\n      ",
+  "business_value": {},
+  "assignee": "Daniel Pauly",
+  "priority": "",
+  "target_start": "2025-09-28",
+  "target_end": "2026-01-09",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Erfolgsmessung: Durch detaillierte Berichte kann der Erfolg von Vorvermarktungsmaßnahmen genau gemessen werden. Dies ermöglicht es, den Return on Investment (ROI) zu bewerten und zu verstehen, welche Strategien am effektivsten sind.",
+    "Optimierung von Marketingstrategien: Mit den gewonnenen Erkenntnissen helfen Marketingstrategien zu optimieren",
+    "Verbesserte Kundenansprache: Durch das Verständnis, welche Angebote bei welchen Kundensegmenten gut ankommen, kann die Kundenansprache in der Vorvermarktung gezielter und persönlicher gestaltet werden.",
+    "Ressourcenallokation: Reporting und Monitoring ermöglichen es, Ressourcen effizienter einzusetzen, indem klar wird, welche Maßnahmen den größten wirtschaftlichen Erfolg versprechen",
+    "Marktverständnis: Sie bieten tiefe Einblicke in Marktbedürfnisse und Kundenpräferenzen, was für die zukünftige Produktentwicklung wertvoll sein kann."
+  ],
+  "components": [],
+  "labels": [
+    "ADCL-PI27",
+    "BB-FTTH",
+    "DigiHub_DOM",
+    "FTTH",
+    "GK-FTTH-03",
+    "O3",
+    "O3-POT",
+    "PI27",
+    "VGK_Josef"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "2024-11-19_Fiber_Utilization_Performance_KW46.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/5154016/2024-11-19_Fiber_Utilization_Performance_KW46.pdf",
+      "mime_type": "application/pdf",
+      "size": "1.13 MB",
+      "date": "2024-11-22T08:07:16.931+01:00"
+    }
+  ]
+}

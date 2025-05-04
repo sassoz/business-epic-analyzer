@@ -1,0 +1,26 @@
+{
+  "key": "DIGIVLEK-22860",
+  "issue_type": "Epic",
+  "title": "NPS: Exploration D!VE only workflow",
+  "status": "Closed",
+  "description": "Description\nEs soll exploriert werden wie ein Workflow der ausschließlich in D!VE - mit Integration von Magentaforce - aussehen kann.\nHieraus sollen Work Items abgeleitet und deren Aufwand bewertet werden. Um ein Nutzerfeedback in dieser frühen Phase zu ermöglichen, soll eine UI/UX-Demo in Form eines Klickdummies zur Verfügung gestellt und mit den Nutzenden verprobt werden.",
+  "business_value": {},
+  "assignee": "Pascal Werlein",
+  "priority": "",
+  "target_start": "2025-01-09",
+  "target_end": "2025-04-02",
+  "fix_versions": [
+    "PI27"
+  ],
+  "acceptance_criteria": [
+    "Umsetzbares D!VE Epic erstellt",
+    "UI/UX-Demo für Anwender erstellt",
+    "Workflow für einen D!VE Basis Workflow aus Sicht D!VE Team definiert",
+    "Detaillierte Anforderungen an umliegende Systeme gestellt"
+  ],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,30 @@
+{
+  "key": "MAGBUS-100687",
+  "issue_type": "Epic",
+  "title": "MF: Telekom Partner Agenturen Onboarding",
+  "status": "Closed",
+  "description": "Description\nFür wen? Im Bereich Telekom Shops Partneragenturen wird die Rolle für interne und externe Mitarbeiter benötigt. Konkret für den GK Leiter Zentral, für die VGL  , sowie für ausgewählte Mitarbeiter in den Shops der Telekom Partneragenturen. \nTelekom Partneragenturen arbeiten heute mit CIAM / My Card Verschlüsselung an den Telekom Administrationssystemen.\nWelches Bedürfnis? Kundenprojekte aus dem GK PA Vertrieb einstellen um das GK Geschäft steuern zu können.\nKampagnenfähigkeit des GK PA Vertrieb sicherstellen.\nDamit Buchungen in SeCe IT prozesskonform (Bonitätsprüfung nur über MagentaForce möglich) durchgeführt werden können. \nWie wird es gemacht? Die Mitarbeiter der Telekom Shop Partneragenturen, GK Leiter Zentral und VGL erhalten Zugang zu Magenta Force und können dort die notwendigen Funktionen zum Einstellen und Bearbeiten von Vorhaben nutzen und auswerten.\nWas ist der Mehrwert? Sicherstellung des GK Geschäfts bei den Telekom Shop Partneragenturen, einfache Zusammenarbeit, effektive Steuerung des Geschäfts\nWas ist der Differenzierer - das \"Warum\"? Unterstützt den Omnichannel Angang im GK Umfeld und fördert die Zusammenarbeit mit den Direktvertrieben (nicht Midmarket) und T-Shops.\n  Es werden keine flexiblen Listen angeboten. Es sollen starre Listen vorgegeben werden. Felder und Filter-Einstellungen tbd.\nÄnderungen bei den Partner Agenturen soll idealerweise über Patrick Nied kommuniziert werden (im Rahmen des bestehende Prozess der GK Shops) --> tbc.\nOffen:\nRegionsstruktur\nAusgestaltung von Listen\nAusgestaltung von Berichten und Dashboards\nMitbestimmung (BR)",
+  "business_value": {},
+  "assignee": "Jana Beyer",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27",
+    "MF 4.500"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF",
+    "MB_MF_T1"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,46 @@
+{
+  "key": "BEMABU-2216",
+  "issue_type": "Business Epic",
+  "title": "LE – SIA NextGen",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nSIA oder Alternative\nZiel ist immer: Umsatzwachstum.\nDas Investierte Buget in SIA (oder einer Alternative) muss immer einen messbaren Outcome liefern.\nAnzahl (und Ergebnis) generierter Handlungsempfehlungen Sales\nAnzahl (und Ergebnis) generierter Leads\nAnzahl (und Ergebnis) zentraler Maßnahmen für z.B. definierte Kundengruppen\nBasisfunktion: Alles was SIA heute auch hat (Führe ich hier nicht nochmal auf, denke die sind bekannt)\nNach wie vor nutzen >600 MA in T-Business aktiv SIA (Stand 11/2024):\nKMUT: 8%\nM: 20%\nLE: 51%\nPU: 20%\nVon daher möchte ich nochmal einordnen: So lange wir „nichts besseres“ haben (SIA) sollten wir daran festhalten.\nWenn wir Möglichkeiten sehen, für 330 TSD / Jahr „mehr fürs Geld“ zu bekommen (Aktive Leadgenerierung, Handlunsgempfehlungen für Sales aus externen Kundeninformationen). \nWeitere Use-Cases\nZwingend Basis Feature\nTiefe Integration in Salesforce (MagentaForce)\nBusiness Impact: Mehrwert Messbar machen. Weg von der „Kann-Option“ (Ich kann das Tool nutzen) hin zu: Ich bekomme aktiv generierte Informationen aus denen sich Vertriebsaktivitäten ableiten lassen.{}{}\nLead Engine\nAggregation von Kundeninformationen aus externen Datenquellen\nAI gestützte Identifizierung potenzieller Geschäftschancen aus den konsolidierten, externen Informationen\nAutomatisierte Leadgenerierung nach Salesforce (MagentaForce)\nBusiness Impact: Messbarer Mehrwert (Anzahl generierte Leads, nachfolgend daraus ableitbar: Neugeschäft aus den generierten Leads)\n{}{}\nAI gestützter Sales Assistant / Buying Center\nAggregation von Kundeninformationen / Aktivitäten aus externen Datenquellen\nAI gestützte Identifizierung potenzieller neuer Kundenkontakte / Veränderung von Kundenkontakten (Position / Job) aus z.B. LinkedIN, Xing etc\nAutomatisierte Handlungsempfehlungen für Sales als Actions nach CRM (Vorschlag, die jeweilige Person zu kontaktieren, weil beispielsweise Unternehmen XY einen neuen Bereichsleiter Max Mustermann eingestellt hat)\nBusiness Impact: Messbarer Mehrwert (Anzahl generierte Actions (Leads), nachfolgend daraus ableitbar: generierte Handlungsempfehlungen / Leads)\n{}\nSales Assistant / AI gestützte Analyse von Kundeninformationen\nAggregation von Kundeninformationen / Aktivitäten aus externen Datenquellen\nAI gestützte Aufbereitung der Kundeninformationen (Beispielsweise AI gestützte Analyse von Geschäftsberichten des Kunden und Aufbereitung für Sales als Summary mit Kernaussagen zu Strategie, Handlungsfelder etc)\nBusiness Impact: Messbarer Mehrwert: Real Selling Time (Vorbereitung auf Kundentermine, Wesentliche Quelle für strategische Kundenentwicklung / Account Planning\nAI / Analytics gestützte Analyse von Kundengruppen\nAggregation von Kundeninformationen / Aktivitäten aus externen Datenquellen\nAI gestützte Aufbereitung definierter Kundengruppe, wie:\nalle LE-Kunden\noder: alle Kunden einer Region\nmit Parametrisierung (Branche, Kundengröße, national/international, Anzahl Mitarbeiter) und Aufbereitung von Kenndaten als Ableitung von Handlungsempfehlungen für Sales (kohortenbasierter Vertriebsangang)\nBusiness Impact: Ableitung zentraler Vertriebsmaßnahmen, darüber Messbarkeit des Erfolges (Neugeschäft) mit den definierten Kundenkreisen\nLösungen die man sich anschauen, um weitere UseCases zu identifizieren:\nhttps://www.dealfront.com/de/\nhttps://www.databyte.de/\nLinkedIN Sales Navigator\nhttps://www.cognism.com/de/\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \n        MagentaForce DOM0201 Andrej Deckel  \n          BEO und ggf. Vertreter Jennifer Litterscheid\nSponsor/Fachseite <verwende \"@Nachname, Vorname\", um weitere Beteiligte einzufügen>\nWeitere Stakeholder <weitere Bereiche, wie z. B. Service, Technik, Wholesale, etc.>\nWeitere AnsprP <z. B. Stage Gate Projektnummer/Ersteller der Vorlage>\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.\n\nBusiness Scope:\nAggregation von Kundeninformationen aus externen Datenquellen.\nIdentifizierung potenzieller Geschäftschancen aus den konsolidierten, externen Informationen (Veränderung von Kundenkontakten, Handlungsempfehlungen, Kernaussagen, mit Parametrisierungen).",
+  "business_value": {
+    "business_impact": {
+      "scale": 13,
+      "revenue": "> 6.000 T€",
+      "cost_saving": ">1.500 T€",
+      "risk_loss": ">1.500 T€",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "mittelfristige Reduzierung von Wartungs- und Änderungsrisiken",
+      "strat_enablement": "Erhöht die Kundenerfahrung/-bindung oder das TD-Image in besonderem Maße, z. B. einzigartiger Login, Prozessvereinfachung oder disruptive/architektonische Innovation",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 8,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025",
+      "justification": ""
+    }
+  },
+  "assignee": "Litterscheid, Jennifer",
+  "priority": "",
+  "target_start": "2025-07-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

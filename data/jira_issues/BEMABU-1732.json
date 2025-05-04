@@ -1,0 +1,36 @@
+{
+  "key": "BEMABU-1732",
+  "issue_type": "Business Epic",
+  "title": "Synchronisation der KMU-B KEK/Permissions zwischen PK & GK",
+  "status": "Funnel",
+  "description": "Description\nProblembeschreibung (ggf. Nutzungstatement)\nIm B2B Umfeld werden heute die KEK/Permission Informationen in MagentaForce, T-IVU und Carmen gepflegt. Durch das DOT Programm wird mit der consentDP ein zentrales System auf PK Seite geschaffen, in welchem auch die KMU-B Daten enthalten sind. Durch die gemeinsame Datennutzung innerhalb des KMU-B Segment ist eine Synchronisation der Daten mit GK notwendig.\nDurch die Etablierung des DCM Data Consent Master auf GK-Seite soll ein neuer Master für die KEK und Kanal-Permissionen für alle Geschäftskunden (Mobilfunk, Festnetz, Massen- und Individualmarkt) geschaffen werden. Der neue Master solle die aktuellen KEK/Permission Informationen systemübergreifend zu jeder Zeit zur Verfügung stellen und einen Single Point of Truth darstellen.\nBusiness Epic Outcome Hypothesis\nVermeidung eines regulatorischen/rechtlichen Risikos durch unterschiedliche Datenbestände\nStrategischer Beitrag & zeitliche Kritikalität\nAbsicherung OCC-Reitrement Stufe 2 bis 31.12.2024\nLeading Indicators\nDie Masterschaft der KMU-B Daten liegen in der CDP und SEP vor\nUm die Datenqualität abzusichern ist eine Synchronisation der KMU-B Daten zwischen der CDP und SEP notwendig\nIn Scope / Akzeptanzkriterien\nDie KMU-B KEK/Permission Aussagen sind Inhaltlich in der CDP und SEP identisch\nDie Synchronisation der Daten ist sichergestellt\nDatenqualität darf nicht auseinander laufen\nOut of scope\nÄnderung der Produktionsstraßen\nÄnderungen an den Marketingprozessen\nAbhängigkeiten (auch technisch)/Wechselbeziehungen\nSystemische Abhängigkeit zwischen CDI, SEP und CDP\nVoraussetzungen\n ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2024-12-31",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-94141",
+      "title": "MAGBUS-94141",
+      "summary": "Exploration: PrivacyManagement der CDP",
+      "url": "https://jira.telekom.de/browse/MAGBUS-94141",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

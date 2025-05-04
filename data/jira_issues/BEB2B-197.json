@@ -1,0 +1,94 @@
+{
+  "key": "BEB2B-197",
+  "issue_type": "Business Epic",
+  "title": "OTC Solution Packages 2.0",
+  "status": "Review",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Name/Bezeichnung OTC Solution Packages 2.0 (Aktualisierung der bestehenden OTC Solution Packages)\nBusiness Epic ID BEGK-458\nBusiness Epic Owner Irina Pavlova, Kai Schmitz-Hofbauer\nSponsor/Tribe/Geschäftsbereich Evgenija Bavink, IT / GFGK\nBusiness Epic Nutzenstatement\nFür KMU-/ M-/ L-Kunden, deutsche mittelständische Kunden (abhängig von dem Leistungspaket),die ein einzelne oder mehrere OTC Service-Packages nutzen möchten,\nsind  5 Rund-um-Sorglos Servicepakete (inkl. Beratung, Installation und Betrieb) weiterzuentwickeln: ** Managed Infrastructure, Managed Workspace, Managed Cloud Backup, Managed Cloud Connect, Managed Applikation,\nwodurch  dem Kunden unterschiedliche IT-Dienstleistungen angeboten werden,\nso dass der Kunde sich besser auf sein eigenes Kerngeschäft konzentrieren kann,\nund nicht zum Wettbewerb abwandert.\nDas Vorhaben schafft den IT-Support für Kunden, die keine IT-Abteilung haben, oder bei welchen eigene IT-Admins voll ausgelastet sind oder keine relevanten Skills haben.\nEin Paket versteht sich als ein Bundle bestehend aus der OTC-Leistung (nicht Bestandteil dieses Epics, wird separat gebucht) und der Service-Leistung der ISP für verschiedene IT-Komponenten (Server, Next Cloud, Virtual Desktop Lösung, Backup, Cloud Connectivity, Applikationen).\nKlassifizierung Obligatory\nGesetzliche und regulatorische Anforderungen sind für die bevorstehenden Änderungen zunächst nicht relevant.\nBusiness Value\nBusiness Outcomes /Business Value\nCa.  4,3 Mio. € Umsatz bis 2028 inkl. Individualgeschäft (Cross- bzw. Upselling)\nUmsatzsteigerung mit Hilfe der Service-Pakete wird angestrebt. Außerdem wird dadurch der Verkauf von der Open Telekom Cloud gepusht, der OTC-Bekanntheitsgrad wird gesteigert. Bei erfolgreicher Leistung wird das Image der OTC verbessert bzw. gestärkt.\nDurch das standardisierte Angebot ist eine schnellere Beauftragung und Serviceerbringung möglich.\nDie Leistungen sind jetzt mit neuen Features versehen, die aus den Umfragen mit der Vertriebe und aus der Marktforschung entstanden sind. So passen sie besser an die Kundenbedürfnisse. \nKonsequenz, falls die Anforderung nicht umgesetzt wird: Umsatzverlust, Wettbewerbsfähigkeit der Leistung sinkt. Die entsprechende Beschlussvorlage erfolgte im Sommer 2023 (s.  Anhang).\nStrategischer Beitrag & zeitliche Kritikalität\nDas Angebot wird als Door Opener genutzt. Damit kommt der Vertrieb mit den Kunden ins Gespräch und hat bereits einige Beispielsangebote mit der Preisindikation in der Hand. Dadurch hat man Cross- und Upselling-Potenziale, die den anderen Leistungen zu Gunsten kommen.\nDie Vertriebe haben ein großes Interesse, die Leistungen zeitnah den Kunden anzubieten.\nBessere Vermarktungsmöglichkeit der Open Telekom Cloud durch die Kombination mit anderen Dienstleistungen.\nLeading Indicators\nVertriebs- bzw. Kundenfeedback. Die Leistung kann dann ggf. entsprechend angepasst werden.\nMVP Scope & Akzeptanzkriterien\nMVP Scope\nsiehe \"in Scope/Akzeptanzkriterien\"\nIn Scope / Akzeptanzkriterien\n• Leistungskonfigurator muss angepasst werden (in Prima+, SeCe-IT)\n• Leistungspakete erhalten in der neuen Auffassung zusätzliche Inhalte:\nManaged Infrastructure: Anwendungen Exchange, Active Directory und Antivirenscanner müssen abgebildet werden\nManaged Workspace: Applikationen NextCloud Office, Nextcloud HA und OneClick Plattform müssen abgebildet werden\nManaged Backup: Installation  Veeam Backup für M365 muss abgebildet werden\nManaged Cloud Connect: Silber Option in Betrieb wird gelöscht\nManaged Application: wird neu eingeführt\nZusätzlich werden die Preise angepasst. Die Struktur der Leistungen wird teilweise geändert.\n• Neue Inhalte der Leistungen müssen im Prima+ hinterlegt werden. Der Konfigurator in SeCe-IT muss ebenso optimiert werden, damit er benutzerfreundlich und intuitiv gestaltet ist.\nOut of Scope\nSeparate Betrachtung:\nVerbindung zwischen SeCe-IT und dem Service-Tool der ISP mySHS.\nDer Prozessablauf (SeCe-IT - mySHS) muss getestet werden. Die leistende Delivery-Einheiten der ISP müssen hinterlegt werden.\nAbhängigkeiten & Eingangsvoraussetzungen\nAbhängigkeiten/Wechselbeziehungen zu anderen Vorhaben/BEs\nDie Daten müssen zuerst in Prima+ hinterlegt werden. Dann kann der SeCe-IT Konfigurator gebaut werden.\nEingangsvoraussetzungen, die vor Einführung realisiert sein müssen\n-\nCrossfunktionale Zusammenarbeit\nZuordnung Applikationen/Domains\nBeteiligte Domains/Applikationen in der Tel-IT:   [siehe Feld \"Komponente/n\" im Jira-Issue]\nBeteiligte Applikationen Beteiligte\nDomains Ansprechpartner Bemerkungen                                                                  \nSeCe-IT DOM0201 Karsten Kemper  erste Abstimmung erfolgt\nPrima+ DOM0202 Arne Wallrabe\nMichael Gröger\nJens Strotmann  erste Abstimmung mit Arne Wallrabe und Patrick Kolling erfolgt\n26.3.24 Nachfolger von Jens Strotmann ist Michael Gröger\n< ... > DOM....    \n  Beteiligte Bereiche außerhalb des IT-Entwicklungsprozesses (wie bspw. in den Fachbereichen: Service, Wholesale, Finance, ...)\nBetroffene Bereiche                          Ansprechpartner Bemerkungen                                                                  \n< ... > verwende \"@Vorname Nachname\"   \n            Cost of Delay\nHier könnt ihr die Informationen zur Skalierung des Cost of Delay finden. → Cost of Delay (CoD) - Legende\nBusiness Impact1):\nScale     Revenue             Cost Saving/\nRisk loss 2)       Begründung                                                                                                    \n8 830 Tsd. €   \nDie Leistungen sind auf dem Markt gefragt und in der iPF bereits enthalten. Es ist geplant, im ersten Launch-Jahr sowohl neue Kunden zu gewinnen als auch zusätzlich das Lösungsgeschäft anzukurbeln. Bis 2028 geplanter Umsatz von 4,3 m€.\nDurch Automatisierung Einsparung von Vertriebsressourcen, da manuelle Angebotserstellung entfällt.\nStrategic Enablement/Risk Reduktion: \nScale     Risiko\nMinimierung     Strategisches\nEnablement Begründung                                                                                                    \n8 mittelfristige Reduzierung von Wartungs- und Änderungsrisiken Erhöht Kundenbindung und das TD-Image\nim besonderen Maße Durch die Push-Verkaufsmaßnahmen der Open Telekom Cloud und die Bestellprozessvereinfachung können sowohl Kundenbindung als auch Image der Telekom erhöht sowie Wettbewerbsfähigkeit erhalten werden.\nTime Criticality: \n  Scale     Time                                           Begründung                                                                                                    \n13 Geplanter Umsetzungszeitraum\nPlan Start: 18.03.24\nPlan Ende/Launch: 31.05.24 Business Impact soll schnellstmöglich erreicht werden.\n1) Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse\n2) Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit\n[siehe unter \"WSJF\" im Jira-Issue \"Business Value/RROE/Time Criticality\"]\nAnlagen zum Template und Sonstiges sind als \"Attachments/Anlagen\" im Jira-Issue hinzuzufügen (siehe unten).\n \n\nBusiness Scope:\nAbbildung neuer Inhalte der Leistungen in Prima+ und SeCe-IT sowie Optimierung des Konfigurators in SeCe-IT für die Service-Pakete:\nManaged Infrastructure, Managed Workspace, Managed Cloud Backup, Managed Cloud Connect, Managed Applikation.",
+  "business_value": {
+    "business_impact": {
+      "scale": 8,
+      "revenue": "830 Tsd. €",
+      "cost_saving": "Durch Automatisierung Einsparung von Vertriebsressourcen, da manuelle Angebotserstellung entfällt.",
+      "risk_loss": "",
+      "justification": "Die Leistungen sind auf dem Markt gefragt und in der iPF bereits enthalten. Es ist geplant, im ersten Launch-Jahr sowohl neue Kunden zu gewinnen als auch zusätzlich das Lösungsgeschäft anzukurbeln. Bis 2028 geplanter Umsatz von 4,3 m€."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "mittelfristige Reduzierung von Wartungs- und Änderungsrisiken",
+      "strat_enablement": "Erhöht Kundenbindung und das TD-Image im besonderen Maße",
+      "justification": "Durch die Push-Verkaufsmaßnahmen der Open Telekom Cloud und die Bestellprozessvereinfachung können sowohl Kundenbindung als auch Image der Telekom erhöht sowie Wettbewerbsfähigkeit erhalten werden."
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "Geplanter Umsetzungszeitraum Plan Start: 18.03.24 Plan Ende/Launch: 31.05.24",
+      "justification": "Business Impact soll schnellstmöglich erreicht werden."
+    }
+  },
+  "assignee": "Pavlova, Iryna",
+  "priority": "",
+  "target_start": "2024-03-18",
+  "target_end": "2025-07-30",
+  "fix_versions": [
+    "Q3_25"
+  ],
+  "acceptance_criteria": [
+    "Managed Infrastructure: Anwendungen Exchange, Active Directory und Antivirenscanner müssen abgebildet werden",
+    "Managed Workspace: Applikationen NextCloud Office, Nextcloud HA und OneClick Plattform müssen abgebildet werden",
+    "Managed Backup: Installation  Veeam Backup für M365 muss abgebildet werden",
+    "Managed Cloud Connect: Silber Option in Betrieb wird gelöscht",
+    "Managed Application: wird neu eingeführt"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "DOM0202",
+      "title": "DOM0202 Order2Cash"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "Portfolio"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Detaillierte Beschreibung und Abhängigkeiten.docx",
+      "url": "https://jira.telekom.de/secure/attachment/4778945/Detaillierte%20Beschreibung%20und%20Abh%C3%A4ngigkeiten.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "13 kB",
+      "date": "2024-08-01T14:46:20.081+02:00"
+    },
+    {
+      "filename": "OneB2B_GK_Beschlussvorlage_OTC Solution Packages 2.0_V1.0.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4398665/OneB2B_GK_Beschlussvorlage_OTC%20Solution%20Packages%202.0_V1.0.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "599 kB",
+      "date": "2024-03-21T11:23:28.007+01:00"
+    },
+    {
+      "filename": "OTC Pakete neue Struktur final 15072024.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4778947/OTC%20Pakete%20neue%20Struktur%20final%2015072024.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "23 kB",
+      "date": "2024-08-01T14:46:46.884+02:00"
+    },
+    {
+      "filename": "OTC Solution Packages_Konditionen_Prima_100724_final.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/4778944/OTC%20Solution%20Packages_Konditionen_Prima_100724_final.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "44 kB",
+      "date": "2024-08-01T14:46:20.052+02:00"
+    },
+    {
+      "filename": "SeCe-IT_Konfigurator.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4778946/SeCe-IT_Konfigurator.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "110 kB",
+      "date": "2024-08-01T14:46:20.311+02:00"
+    }
+  ]
+}

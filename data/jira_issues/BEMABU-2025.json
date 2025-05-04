@@ -1,0 +1,61 @@
+{
+  "key": "BEMABU-2025",
+  "issue_type": "Business Epic",
+  "title": "KI@MagentaForce – Stufe 2: Exploration von KI-Funktionalitäten im Rahmen eines PoC",
+  "status": "Analysis",
+  "description": "Description\nAls zweiter Schritt, um das zentrale Thema \"Künstliche Intelligenz\"  in das zentrale CRM-System MagentaForce - und somit in den Vertriebs- und Service-Alltag - einzubinden, sollen KI-Funktionalitäten von \"Einstein\" exploriert und idealerweise in Betrieb genommen werden.\n  Stufe 2) KI (ohne Data Cloud)\nMögliche Use Cases\nEinstein GPT for Sales (Einstein Assistance), u.a.\nKI-gestützte Zusammenfassungen zu Kunden (\"OnePager\" zur Terminvorbereitung)\nPlausibilitäts-Prüfungen bei Daten-Eingaben (z.B. bei Produkt-Kombinationen)\nKI-gestützte teil-automatisierte Anlage von Vorhaben, Ansprechpartnern oder Cases\nKI-gestützte Kundenkommunikation (z.B. teil-automatisiertes Erstellen von Kunden-Emails)\nEinstein GPT for Service (Einstein Assistance), u.a.\nKI-gestützte Zusammenfassungen zu Kunden oder zur Case-Historie eines Kunden\nKI-gestützte automatisierte Case Klassifizierung\nKI-gestützte teil-automatisierte Anlage von Cases oder Ansprechpartnern",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "Nicht quantifiziert",
+      "cost_saving": "Zeiteinsparung durch automatisierte Prozesse",
+      "risk_loss": "Nicht quantifiziert",
+      "justification": "Die KI-Funktionalitäten von Einstein ermöglichen Effizienzsteigerungen im Vertriebs- und Service-Alltag durch automatisierte Zusammenfassungen, Plausibilitätsprüfungen und teil-automatisierte Anlagen von Vorhaben, was zu Zeiteinsparungen führt."
+    },
+    "strategic_enablement": {
+      "scale": 4,
+      "risk_minimization": "Reduzierung von Fehleingaben durch Plausibilitätsprüfungen",
+      "strat_enablement": "Integration von KI in das zentrale CRM-System als strategische Initiative",
+      "justification": "Das Projekt ist der zweite Schritt zur Einbindung des zentralen Themas 'Künstliche Intelligenz' in MagentaForce und unterstützt damit die strategische Ausrichtung auf KI-gestützte Vertriebsprozesse."
+    },
+    "time_criticality": {
+      "scale": 3,
+      "time": "Mittelfristig",
+      "justification": "Als zweiter Schritt einer bereits laufenden Initiative zur KI-Integration sollte die Umsetzung zeitnah erfolgen, um den Anschluss an moderne KI-gestützte CRM-Funktionalitäten nicht zu verlieren."
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Mirco Svensson",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-100000",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-100000",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

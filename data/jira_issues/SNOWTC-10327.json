@@ -1,0 +1,57 @@
+{
+  "key": "SNOWTC-10327",
+  "issue_type": "Epic",
+  "title": "Enabler: SD-LAN/WiFI: Commercial and Technical Onboarding (based on Juniper MIST)",
+  "status": "Closed",
+  "description": "Description\nPre-Requisits:\nWorkflow for Commercial and Technical Onboarding ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "ServiceNow SD LAN/WiFi Release 0.9"
+  ],
+  "acceptance_criteria": [
+    "Commercial and Technical Onboarding for SD LAN/WiFi is implemented",
+    "Commercial and Technical Onboarding for SD LAN/WiFi is tested"
+  ],
+  "components": [],
+  "labels": [
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "SNOW@TC"
+  ],
+  "realized_by": [
+    {
+      "key": "SNOWTC-7531",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-7531",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SNOWTC-10694",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10694",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Customer Onboarding Process 28072022 (003).pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2503762/Customer%20Onboarding%20Process%2028072022%20%28003%29.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2022-08-10T16:10:09.000+02:00"
+    },
+    {
+      "filename": "IT-Architecture for this Business Feature.png",
+      "url": "https://jira.telekom.de/secure/attachment/2503763/IT-Architecture%20for%20this%20Business%20Feature.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-10T16:18:21.000+02:00"
+    }
+  ]
+}

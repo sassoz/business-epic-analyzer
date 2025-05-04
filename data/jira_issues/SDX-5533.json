@@ -1,0 +1,49 @@
+{
+  "key": "SDX-5533",
+  "issue_type": "Epic",
+  "title": "[SO] SD-LAN/WIFI NAC/802.1x",
+  "status": "Closed",
+  "description": "Description\n802.1X authentication works by using an authenticator port access entity (the switch) to block ingress traffic from a supplicant (end device) at the port until the supplicant's credentials are presented and match on the authentication server (a RADIUS server). When authenticated, the switch stops blocking traffic and opens the port to the supplicant.\nThe end device is authenticated in single supplicant mode, single-secure supplicant mode, or multiple supplicant mode:\nsingle supplicant—Authenticates only the first end device. All other end devices that connect later to the port are allowed full access without any further authentication. They effectively piggyback on the first end device’s authentication.\nsingle-secure supplicant—Allows only one end device to connect to the port. No other end device is allowed to connect until the first device logs out.\nmultiple supplicant—Allows multiple end devices to connect to the port. Each end device is authenticated individually.\n\nBusiness Scope:\nSD-LAN & SD-WIFI security feature which enable to authenticate and authorize end users.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2022-11-28",
+  "target_end": "2022-12-18",
+  "fix_versions": [
+    "PI6",
+    "PI7",
+    "Q4_22"
+  ],
+  "acceptance_criteria": [
+    "Deployment of Radius server",
+    "define requirements for RADIUS server (DT infrastructure vs. customer infra)",
+    "802.1X design for SD-LAN",
+    "NAC/802.1x - per MAC authentication/multiple supplicants",
+    "NAC/802.1x - Guest VLAN fallback",
+    "NAC/802.1x - MAC based authentication",
+    "NAC/802.1x - Fail-auth VLAN fallback",
+    "Confluence page",
+    "Test case definition",
+    "review session",
+    "Handover to SN",
+    "CPDM handover based deisgn"
+  ],
+  "components": [
+    {
+      "code": "Service Orchestrator",
+      "title": "Service Orchestrator "
+    }
+  ],
+  "labels": [
+    "PI#6",
+    "PI6",
+    "PI7",
+    "SDProduct",
+    "SDX_external",
+    "SDxHub",
+    "SNOW@TC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

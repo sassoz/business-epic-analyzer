@@ -1,0 +1,49 @@
+{
+  "key": "DUD-9567",
+  "issue_type": "Epic",
+  "title": "VeriSign Änderungen November 2020",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nFür den November 2020 hat VeriSign eine neue Software-Version angekündigt. Doris muss ggf. angepasst werden.\nDescription of Demand / Problem\n.COM/.NET SRS\nProduction Environment\nPlanned Outage & Software Update\nDate Sunday, November 08, 2020\nTime Frame 0100 - 0145 UTC\nDuration 45 minutes\nAvailability .COM/.NET SRS production environment will be taken offline\nAdditional Information See below.\nPlease note that during this maintenance window, a number of software \"Updates\" to make minor enhancements (as described below) are scheduled to be deployed into the .COM/.NET production environment. These Updates will be made available to registrars for testing in the .COM/.NET Operational Test and Evaluation (\"OT&E\") environment for thirty (30) days beginning on October 8, 2020 at 1600 UTC. We recommend that all registrars test their EPP client applications in the OT&E environment prior to the production deployment, as these minor enhancements may require changes to those EPP client applications.\nImplementation of an Updated EPP Login Security Extension\nVerisign will update the EPP Login Security Extension within Verisign's .com/.net Shared Registration System (\"SRS\") to implement draft-ietf-regext-login-security-10 (or later) which has the XML namespace \"urn:ietf:params:xml:ns:epp:loginSec-1.0\". (Prior to the update, the EPP Login Security Extension was based on draft-ietf-regext-login-security-02 using the \"urn:ietf:params:xml:ns:epp:loginSec-0.4\" XML namespace).\nUpdates to Error Response Codes\nVerisign will update the following error response codes:\nReturn 2004 \"Parameter value range error\" when an update domain or host command is attempting to add or remove non-client managed statuses.\nReturn 2103 \"Unimplemented extension\" when unsupported extensions are passed for a specific command.\nReturn 2200 \"Authentication error\" when the old and new passwords are the same. If supported by the client, the login security event will be included in the response.\nReturn 2305 \"Object association prohibits operation\" when an update domain command is removing a name server or status that is not linked or adding a name server that does not exist.\nReturn 2306 \"Parameter value policy error\" when the namestore extension is not passed in the command. The namestore extension will not be returned in the response.\nUpdate to Remove Support for Algorithm ids 1, 2, 3 and 6 and Add Support for Algorithm ids 15 and 16 in DS Data Interface\nVerisign will remove support for algorithm ids 1, 2, 3 and 6 and add support for algorithm ids 15 and 16 in element in DS Data Interface element. The element contains an algorithm value of the DNSKEY RR referred to by the DS record. These changes will affect the domain create and domain update commands. Any existing data using the algorithm ids that are being deprecated will not be impacted by this change.\nHere is the consolidated list of algorithm ids that will be supported by Verisign:\n5 - RSA/SHA-1\n7 - RSASHA1-NSEC3-SHA1\n8 - RSA/SHA-256\n10 - RSA/SHA-512\n12 - GOST R 34.10-2001\n13 - ECDSA Curve P-256 with SHA-256\n14 - ECDSA Curve P-384 with SHA-384\n15 - Ed25519\n16 - Ed448\n253 - Private algorithms - domain name\n254 - Private algorithms - OID\nNOTE: Please refer to https://tools.ietf.org/html/rfc8624 and http://iana.org/assignments/dns-sec-alg-numbers/ for more information.\nUpdate to Implement Additional Minor Enhancements\nVerisign will also make the following additional enhancements:\nRegistrars will be able to add DS records using all four attributes for uniqueness: keytag, digest type, algorithm and digest attributes. (Prior to the enhancement, the digest was the only field used for uniqueness for an update domain command).\nA status of \"inactive\" will be included for info domain responses when there are no name servers linked to a domain.\nAcceptance Criteria\nDoris ist auch nach dem 8. November in der Lage, mit VeriSign zu kommunizieren. Damit wird das Geschäft mit .com und .net Domains aufrecht erhalten.\nChecklist\n  DoD: Verified by Scrum Master.",
+  "business_value": {},
+  "assignee": "Daniel Schimek",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "20.9"
+  ],
+  "acceptance_criteria": [
+    "Options",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DORIS",
+      "title": "DORIS "
+    }
+  ],
+  "labels": [
+    "RegistrarStatus",
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "WG .COM.NET SRS Production Environment Planned Outage on November 08 2020 UTC.msg",
+      "url": "https://jira.telekom.de/secure/attachment/1832719/WG%20.COM.NET%20SRS%20Production%20Environment%20Planned%20Outage%20on%20November%2008%202020%20UTC.msg",
+      "mime_type": "application/octet-stream",
+      "size": "111 kB",
+      "date": "2020-08-13T09:28:43.000+02:00"
+    }
+  ]
+}

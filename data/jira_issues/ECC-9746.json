@@ -1,0 +1,19 @@
+{
+  "key": "ECC-9746",
+  "issue_type": "Epic",
+  "title": "internes Reporting AIPBL - Voice AI Notes",
+  "status": "Funnel",
+  "description": "Description\n Akzeptanzkriterien\n Akzeptanzkriterien\nÜbermittung der Voice AI Notes Materialnummern und Anzahl der Buchungen an DWH\nMaterialnummer: 50356512\nEs soll genauso wie die anderen Zusatz-Pakete übermittelt werden\nUserStory\nAls Telekom\n möchte ich die Schnittstelle zu DWH nutzen können\n um Auswertungen über die Buchung und Nutzung von Voice AI Notes im DWH beauftragen zu können.",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-03-13",
+  "target_end": "2025-09-08",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

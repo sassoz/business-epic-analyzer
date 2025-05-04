@@ -1,0 +1,31 @@
+{
+  "key": "MAGBUS-91699",
+  "issue_type": "Epic",
+  "title": "Eventverarbeitung von Carmen implementieren - KEK/Permissions",
+  "status": "Resolved",
+  "description": "Description\nWir binden uns an den von Carmen zur Verfügung gestellte Service zur Event-Verarbeitung der KEK-Aussage des Business Partner und der Permission Aussagen des VP2 an und reagieren auf diese.\n\nBusiness Scope:\nIch als PO möchte dass wir auf die Eventverarbeitung von Carmen reagieren um die KEK Aussage des Business Partner und die Permission Aussagen des VP2 aktuell zu halten",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 24"
+  ],
+  "acceptance_criteria": [
+    "Änderungen an der KEK des Business Partners erhalten wir per Event durch Carmen und verarbeiten diese Änderung im TMF644",
+    "Änderungen an den Permission Aussagen des VP2 erhalten wir per Event durch Carmen und verarbeiten diese Änderung im TMF644"
+  ],
+  "components": [
+    {
+      "code": "SEP-Platform",
+      "title": "SEP-Platform "
+    }
+  ],
+  "labels": [
+    "MB_SEP"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

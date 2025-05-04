@@ -1,0 +1,65 @@
+{
+  "key": "BEMABU-2085",
+  "issue_type": "Business Epic",
+  "title": "B2B Integration into MMKC 2.0 (Interims Solution)",
+  "status": "Funnel",
+  "description": "Description\nGeneral Information\nWith MaxDOT SME+ customers will find a new home in MMKC 2.0 maintained by B2C. As the development is still ongoing, the implementation of B2B customer needs for mobile contracts will be delayed to at least 2026. As the SME+ customers will already land within MMKC as they login, they are unable to use the native journeys for contract prolongation or tariff change as they are only available for B2C customers as of now. As an interims solution they should use the standard B2B system which has B2B contract specifications available. To make this as seemless as possible, the process should be integrated into MMKC 2.0 without jumping full into the other system.\n  Business Epic Nutzenstatement\nFür bestehende SME+ Mobilfunkkunden,\ndie Self-Service nutzen und im MMKC 2.0 angemeldet sind,\nist die Anbindung/ Integration Standard-B2B-Order-Systemen an MMKC 2.0 notwendig,\nwodurch Kunden deren Funktionalität integriert (ohne dass der Absprung an der Stelle bemerkt wird) nutzen können,\nso dass  sie Verträge verlängern oder Tarife ändern können,\nund nicht zum Wettbewerb wechseln.\nDas Vorhaben schafft erhöhte Kundenzufriedenheit und hilft zum Cross Selling.\n  For existing SME+ B2B mobile customers,\nwho use self-service and are logged into MMKC 2.0\nis a connection/integration the standard B2B ordering system to MMKC 2.0 necessary,\nso that customers can use theses functionalities\nto perform contract prolongation or tariff change\nand do not churn to competitors.\nThis issue increases customer satisfaction and helps with cross-selling.\n  see screenshot in the attachment and here: https://miro.com/app/board/uXjVPMjaetw=/ (Be_magenta!)\nRahmenbedingungen\nOut of Scope\n  Abhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nBEDC-77 Integration of KMU in MMKC 2.0 (deep-links in MMKC 2.0)\nBEMABU-2171 MBSP: Deep-links for Sales-Journeys needed\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMMKC 2.0/ MMA DOM0602 Nikolai Hnatiw \nIvan Mišić (Ivan.Misic@t.ht.hr) Nikolai - solution manager\n  BEO und ggf. Vertreter Kunz, Daniel Tom Lück Anna Sluka \nSponsor/Fachseite Adina Gebara/ GK KMU\nWeitere Stakeholder -\nWeitere AnsprP MMKC2.0 (Digital Care)\n \n\nBusiness Scope:\nInterims solution for B2B mobile journeys which are not available on OneX platforms in 2025",
+  "business_value": {
+    "business_impact": {
+      "scale": 8,
+      "revenue": ">786 T€",
+      "cost_saving": "Savings due to self service instead of customer service activities",
+      "risk_loss": "the additional churn risk is not rated",
+      "justification": "Savings due to self service instead of customer service activities; the additional churn risk is not rated."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "risk eliminated",
+      "strat_enablement": "relevant competitive advantage",
+      "justification": "We need to safeguard the SME+ mobile business growth in the B2B systems until the DOT readiness. The existing sub-level model must continue to operate within MBSP and other B2B systems due to DOT's limited implementation scope. That avoids customer and revenue move from B2B to B2C. Especially mobile revenues are counted via product category, not customer segment. Therefore we have the risk, that without additional invest in up- and cross sell customers can´t be developed in the right direction."
+    },
+    "time_criticality": {
+      "scale": 20,
+      "time": "PI 25.2",
+      "justification": "The integration of mobile B2B business for SME+ customers into DOT systems has been delayed to 2026. As a result, the existing B2B systems remain the home base not only for SME customers that do not migrate to DOT at all but also for SME+ customers with B2B mobile contracts in 2025. The implementation of the requirement in MMKC (dependencies) has already been planned for PI 25.2 (or later)."
+    }
+  },
+  "assignee": "Tom Lück",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-09-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "A seamless journey is provided to MMKC2.0 and MMA by the standard B2B system.",
+    "Redirected users are logged into the standard system via SSO",
+    "All native journeys from the standard system can be used, especially contract prolongation and tariff change",
+    "Invoices are available and ready to download",
+    "The user should not be lead to the dashboard nor recognize a redirection to another system at all",
+    "A return button is displayed on each page so that the user can return to MMKC at any time.",
+    "No menu, footer etc. from the standard system shall be displayed on the page so that the user does not realise that he is in a different system",
+    "The standard system provides everything needed for the acceptance criteria mentioned above regarding the customer experince within MMKC 2.0"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "Cross-vertical",
+    "GK-KMC",
+    "MaxDOT",
+    "MaxDOT_MF"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "MMKC_MBSP_Journey.JPG",
+      "url": "https://jira.telekom.de/secure/attachment/5428445/MMKC_MBSP_Journey.JPG",
+      "mime_type": "image/jpeg",
+      "size": "66 kB",
+      "date": "2025-02-21T16:40:16.582+01:00"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "key": "EOS-6740",
+  "issue_type": "Epic",
+  "title": "SeCe-IT archivierungspflichtige Dokumente bei Direktaufträgen ##VERWORFEN##",
+  "status": "Closed",
+  "description": "Description\n Story\nAls EOS-Anwender\nmöchte ich auch bei SeCe-IT Direktaufträgen archivierungspflichtige Dokumente automatisch am EOS Vorgang in den Anlagen finden und anschließend automatisch archiviert bekommen,\num das nicht manuell erledigen zu müssen.\n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)\nHeute findet der Mitarbeiter das Angebotsdokument bei SeCe-IT-Dierektaufträgen nur in SeCe-IT. Hier muss er dieses runter laden und im Anschluss am EOS Vorgang hochladen, damit das Dokument Archiviert werden kann. Somit hat der Mitarbeiter einen klaren Systemwechsel. \nFachlicher Lösungswunsch (Feature Hypothese)\nDas Angebotsdokument wird in EOS automatisch in den Anlagen angezeigt.\nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nNotwendige Änderungen (Erfolgt durch EOS Team)\nFolgende Auflistung dient als erste Orientierung bzgl. der notwendigen Änderungen an EOS zur Umsetzung dieses EPICs:\n....\n.....\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n  Technische CHECKLISTE\nDieser Abschnitt dient als Orientierung zur Prüfung, ob an \"alles\" gedacht wurde.\nDieser Abschnitt soll vor dem Refinement gelöscht werden!\nDie Checkliste für die Stories ist der Vorlage für Stories zu entnehmen (EOS-433)\nZur groben Orientierung hier noch die entsprechenden Stichpunkte:\nExport-Schnittstellen\nImport-Schnittstellen\nLöschkonzept\nBenutzeroberfläche / Dialoge\nRollen & Rechte\nKorrespondenz\nAufgaben\nAuftragsvervollständigung\nNachrichten\nKontakte\nAbhängigkeiten zwischen Domänen\nKommunikation\nWelche Stakeholer müssen über diese Änderung informiert werden?\nAL, TL, OPO, Reporting\nWie werden die Mitarbeiter über diese Änderung informiert?\nMüssen Magenta Infos Artikel geändert oder erstellt werden? News? Newsletter?\nSind Schulungen notwendig? WBT? BrainBite? \nIst eine zusätzliche Kommunikation über YaM notwendig?\nUsesCases / TestCases\nUseCase 1\nUseCase 2\n...",
+  "business_value": {},
+  "assignee": "Bratzke, Florian",
+  "priority": "",
+  "target_start": "2025-01-31",
+  "target_end": "2025-03-13",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Zusätzlich werden weitere Dokumente - ausgenommen vom Angebot - von EOS automatisch am Vorgang gespeichert, wenn diese von SeCe-IT am Vorgang übermittelt werden: \nService-Montagenachweis (SMN) – aktuell Archivierung in DMS in SeCe-IT\nÜbergabeprotokoll – aktuell Archivierung in DMS über SeCe-IT\nDatenerfassungsbeleg (DEB)\nUnterschriebenes Angebot",
+    "Service-Montagenachweis (SMN) – aktuell Archivierung in DMS in SeCe-IT",
+    "Übergabeprotokoll – aktuell Archivierung in DMS über SeCe-IT",
+    "Datenerfassungsbeleg (DEB)",
+    "Unterschriebenes Angebot",
+    "Folgende Dokumente liegen in SeCe-IT vor, müssen aber nicht archiviert werden: \nMontageauftrag (MtA)",
+    "Montageauftrag (MtA)",
+    "Jeder Anhang, welcher in SeCe-IT durch einen Bearbeiter im Info-Reiter (Kategorie ist egal) hochgeladen wird, wird automatisch und sofort Richtung EOS übermittelt\nDiese Dokumente werden in EOS in der Kachel \"Anlagen\" angezeigt \nDie Archivierung ist bei diesen Dokumenten automatisch beim Import mit \"Ja\" vorbelegt",
+    "Diese Dokumente werden in EOS in der Kachel \"Anlagen\" angezeigt",
+    "Die Archivierung ist bei diesen Dokumenten automatisch beim Import mit \"Ja\" vorbelegt",
+    "Die Archivierungsoption (\"Ja\" / \"Nein\") lässt sich durch den EOS Auftragsbearbeiter jederzeit im EOS Auftrag über ein Stift-Symbol ändern\nIm Änderungsdialog lässt sich zudem die Beschreibung des Dokuments anpassen und speichern",
+    "Im Änderungsdialog lässt sich zudem die Beschreibung des Dokuments anpassen und speichern",
+    "Alle Anlagen in EOS lassen sich durch die Auftragsbearbeiter über das Mülleimer-Symbol löschen (der Mülleimer ist nicht mehr ausgegraut)"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI27"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Bearbeiter-Wordings-Unterschiedlich.png",
+      "url": "https://jira.telekom.de/secure/attachment/5283335/Bearbeiter-Wordings-Unterschiedlich.png",
+      "mime_type": "image/png",
+      "size": "30 kB",
+      "date": "2025-01-10T12:22:49.395+01:00"
+    },
+    {
+      "filename": "Dateiupload.png",
+      "url": "https://jira.telekom.de/secure/attachment/5283340/Dateiupload.png",
+      "mime_type": "image/png",
+      "size": "294 kB",
+      "date": "2025-01-10T12:25:11.984+01:00"
+    },
+    {
+      "filename": "Drop-Down-Kategorie.png",
+      "url": "https://jira.telekom.de/secure/attachment/5283336/Drop-Down-Kategorie.png",
+      "mime_type": "image/png",
+      "size": "41 kB",
+      "date": "2025-01-10T12:23:13.774+01:00"
+    },
+    {
+      "filename": "image-2024-12-04-13-33-49-231.png",
+      "url": "https://jira.telekom.de/secure/attachment/5278236/image-2024-12-04-13-33-49-231.png",
+      "mime_type": "image/png",
+      "size": "13 kB",
+      "date": "2025-01-09T10:03:32.196+01:00"
+    }
+  ]
+}

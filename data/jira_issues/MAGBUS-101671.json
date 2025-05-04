@@ -1,0 +1,25 @@
+{
+  "key": "MAGBUS-101671",
+  "issue_type": "Epic",
+  "title": "Exploration of Decoupling of approval-workflows",
+  "status": "Closed",
+  "description": "Description\ntbd",
+  "business_value": {},
+  "assignee": "El Azzaoui, Karim",
+  "priority": "",
+  "target_start": "2025-03-13",
+  "target_end": "2025-04-02",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DCAP",
+    "DO_Flamingo",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

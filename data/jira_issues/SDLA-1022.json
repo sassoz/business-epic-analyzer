@@ -1,0 +1,106 @@
+{
+  "key": "SDLA-1022",
+  "issue_type": "Initiative",
+  "title": "Create second API NC@SIM (Service Inventory Mgt) between Netcracker and Servicenow Q4",
+  "status": "Funnel",
+  "description": "Description\n\nBusiness Scope:\nFaster go to Market by higher abstraction / less technical details on Product Level (PO / PS layer in CPDM) and higher direct usage of existing features in 2nd tier tools (NC/MIST/CSO).\n\nRequires changes to architecture as depicted on: https://mywiki.confluence.telekom.de/pages/viewpage.action?pageId=1387248819 , e.g.:\n* Self-Service requests target CFSS instead of Orders\n* queries against Service Inventory (e.g. current speed of a port is not maintained as part of Product Inventory in ServiceNow but instead queried on the fly using TMF-638)\n\nOnly selected features of the technical layer are exposed towards product (typically in an abstracted way in case of):\n* commercially relevant\n* specifically enabled self-service features which are to be charged per execution\n\nSyncronised Inventory by Service Inventory Management (NC@SIM) between Netcracker Orchestrator and ServiceNow established",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Solution Release SD LAN/WIFI R1.0"
+  ],
+  "acceptance_criteria": [
+    "Service Inventory Management (NC@SIM) between Netcracker Orchestrator and ServiceNow established"
+  ],
+  "components": [
+    {
+      "code": "SDN",
+      "title": "SDN B2B Software Defined Networks"
+    }
+  ],
+  "labels": [
+    "OKR_Q4_Umsetzung_Service_Inventory_Mgmt.API_NC@SIM(zwischen_Netcracker_und_SNow)",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SDxHub",
+    "SNOWTC"
+  ],
+  "realized_by": [
+    {
+      "key": "SNOWTC-10876",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SNOWTC-10876",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20220714_SDX-Simplification and Automation CMO-FMO.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334575/20220714_SDX-Simplification%20and%20Automation%20CMO-FMO.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "20220817_Simplification.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2334576/20220817_Simplification.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-06-20-13-41-33-172.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334577/image-2022-06-20-13-41-33-172.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-06-20-13-42-02-345.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334578/image-2022-06-20-13-42-02-345.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-06-29-15-55-41-993.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334579/image-2022-06-29-15-55-41-993.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-07-19-08-25-23-420.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334580/image-2022-07-19-08-25-23-420.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-08-19-11-53-03-681.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334581/image-2022-08-19-11-53-03-681.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-08-19-11-53-26-971.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334582/image-2022-08-19-11-53-26-971.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    },
+    {
+      "filename": "image-2022-08-19-12-15-44-153.png",
+      "url": "https://jira.telekom.de/secure/attachment/2334583/image-2022-08-19-12-15-44-153.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-08-19T14:32:42.000+02:00"
+    }
+  ]
+}

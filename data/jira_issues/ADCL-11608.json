@@ -1,0 +1,30 @@
+{
+  "key": "ADCL-11608",
+  "issue_type": "Epic",
+  "title": "[L2M] - Order Decomposition - Implement MAPI Integrations for Catalog, Offering Qualifications and Shopping Cart",
+  "status": "Closed",
+  "description": "Description\nAs part of LOM to M-API transition the current processing of Product selection , augmentation, qualification and communicating these with Shopping cart should be transformed to use M-APIs.",
+  "business_value": {},
+  "assignee": "Shantanu Bhavsar",
+  "priority": "",
+  "target_start": "2025-01-10",
+  "target_end": "2025-02-20",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "The Offering ID contains the Access Material number as well as ISP Material Number as per the designed nomenclature",
+    "The Tariff Offerings, addon Offering & Prices are fetched using M-API",
+    "Configuration can be synced with Shopping Cart",
+    "Order can be sent to EOS for enriching",
+    "Enriched Orders can be received from EOS",
+    "POQ validations can be executed via M-API"
+  ],
+  "components": [],
+  "labels": [
+    "ADCL-PI27"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

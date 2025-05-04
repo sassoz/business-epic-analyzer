@@ -1,0 +1,104 @@
+```json
+{
+  "epicId": "BEMABU-1735",
+  "title": "GK FTTH Monitoring und Reporting",
+  "ziele": {
+    "gesamtziel": "Erweiterung des Monitoring und Reporting für FTTH-basierte Festnetzabsätze über die MagentaBusiness IT-Kette, um Transparenz über die unterjährige Absatzentwicklung für Finanzen und Vertriebsteuerung zu schaffen. Ziel ist die Integration der Aufträge aus der Magenta-Business IT Strecke in das Fiber-Cockpit Reporting zur Auswertung aller FTTH-Absätze auf Segment-Ebene, inklusive der Vorvermarktungsmengen. Die Umsetzung soll bis Ende Juni 2025 abgeschlossen sein.",
+    "einzelziele": [
+      "Übermittlung der über Flamingo realisierten FTTH Tarifabsätze an die Fiber Reportingsysteme",
+      "Berücksichtigung und Ausweisung der GK Midmarket Absätze im Fiber Reporting (Magenta Socket)",
+      "Detaillierte Darstellung der Tarifabsätze VBKZ-spezifisch",
+      "Transport von FTTH-Auftragsinformationen zum Data Warehouse (DWH)",
+      "Datenanlieferung der FTTH-O3-Aufträge via POT an Fiber-Cockpit in der vorgegebenen Form und Zeit (tägliches Update)"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 20,
+      "beschreibung": "Umsatz-/Absatzsicherung ca. 10% vom Gesamtumsatz pro Jahr mit steigender Tendenz. Für 2025 werden 134.000 Tsd. € Umsatz und 107.000 Tsd. € EBITDA prognostiziert, mit steigenden Werten bis 2028 (332.000 Tsd. € Umsatz und 266.000 Tsd. € EBITDA)."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Schaffung von Absatz-/Ausbautransparenz für GK Fiber vor dem Management. Enabling von Vertriebs-/Kanalsteuerung, um entsprechende absatzsteigernde Maßnahmen zu ergreifen und durchzusteuern. Daten sämtlicher in Flamingo gebuchter FTTH-Aufträge werden in der vom FiberCockpit vorgegebenen Form und Zeit vom POT angeliefert."
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Die Erweiterung der Reportings ist dringend spätestens Anfang 2025 nachzuholen, um die Steuerung der vertrieblichen Absätze mit stark ansteigenden Hochlaufkurven zu gewährleisten. Andernfalls wären die geplanten Wachstumsziele für Breitband und FTTH im iPF-Zeitraum extrem gefährdet. Tägliches Update der Daten erforderlich."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "ADCL-11622",
+      "titel": "Reporting: Transport FTTH reporting information to DWH",
+      "funktionalitäten": [
+        "Sicherstellung der Datenintegrität und -genauigkeit bei der Erfassung aller FTTH-Berichtsinformationen",
+        "Schaffung einer skalierbaren Architektur für wachsende FTTH-Datenvolumen ohne Leistungseinbußen",
+        "Transport von FTTH-Auftragsinformationen zum Data Warehouse"
+      ]
+    },
+    {
+      "id": "BEMABU-2087",
+      "titel": "Datenanlieferung der FTTH-O3-Aufträge via POT an Fiber-Cockpit",
+      "funktionalitäten": [
+        "Erfassung aller GK-Aufträge, die über die neue teilautomatisierte MagentaBusiness-Prozesskette (MaBu-Prozesskette) über Flamingo gebucht wurden",
+        "Bereitstellung der für das Reporting im FiberCockpit benötigten Daten sämtlicher in Flamingo gebuchter FTTH-Aufträge (O3-Aufträge)",
+        "Ausweis der GK Midmarket Absätze im Fiber-Cockpit"
+      ]
+    },
+    {
+      "id": "MAGBUS-99949",
+      "titel": "O3 stellt Daten aller O3 Order an Fiber-Cockpit bereit",
+      "funktionalitäten": [
+        "Erfassung der O3 Aufträge in einer Datenbank",
+        "Bereitstellung der Gesamtmenge (AVIA+O3) für FiberCockpit",
+        "Anlieferung der Daten im von FiberCockpit vorgegebenen Format"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "FTTH order information is transported to the DWH",
+    "Transport is documented",
+    "An alert is sent if the transport doesn't work",
+    "Die für das Reporting im FiberCockpit benötigten Daten sämtlicher in Flamingo gebuchter FTTH-Aufträge (O3-Aufträge) werden in der von FiberCockpit vorgegebenen Form und Zeit (tägliches Update) vom POT angeliefert",
+    "Erfolgsmessung: Durch detaillierte Berichte kann der Erfolg von Vorvermarktungsmaßnahmen genau gemessen werden",
+    "Optimierung von Marketingstrategien: Mit den gewonnenen Erkenntnissen helfen Marketingstrategien zu optimieren",
+    "Verbesserte Kundenansprache: Durch das Verständnis, welche Angebote bei welchen Kundensegmenten gut ankommen",
+    "Ressourcenallokation: Reporting und Monitoring ermöglichen es, Ressourcen effizienter einzusetzen",
+    "Marktverständnis: Tiefe Einblicke in Marktbedürfnisse und Kundenpräferenzen",
+    "Produktanforderungen",
+    "Regulatorische Anforderungen"
+  ],
+  "domainsAndITApplications": [
+    "Flamingo",
+    "O3-POM",
+    "GIGA GS",
+    "CRMT",
+    "POT (Product Order Tracking)",
+    "Fiber-Cockpit",
+    "DWH"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Zeitliche Diskrepanz: Das Business Epic BEMABU-1735 hat ein geplantes Ende am 30.06.2025, während das Portfolio Epic MAGBUS-99949 erst am 09.01.2026 enden soll, was zu Verzögerungen führen könnte",
+    "Status-Risiko: Das Business Epic BEMABU-1735 und BEMABU-2087 befinden sich noch in der Analysephase, während ADCL-11622 bereits gelöst ist und MAGBUS-99949 sich noch im Funnel befindet",
+    "Verzögerungsrisiko: Das Business Epic wurde bereits in Q1 verzögert und die Umsetzung auf Q3 verschoben, was auf mögliche weitere Verzögerungen hindeutet",
+    "Abhängigkeit von externen Ansprechpartnern: Es werden mehrere Ansprechpartner (Volker Schmidt, Christoph Seng, Marco Martienssen) genannt, deren Verfügbarkeit und Mitwirkung kritisch sein könnte"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-04-01",
+    "umsetzungsende": "2025-06-30",
+    "fixVersions": ["Q3_25", "PrioQ1_25", "PrioQ2_25", "PI 27"],
+    "meilensteine": [
+      {
+        "id": "ADCL-11622",
+        "beschreibung": "Transport FTTH reporting information to DWH",
+        "zeitraum": "2025-03-14 bis 2025-04-03"
+      },
+      {
+        "id": "MAGBUS-99949",
+        "beschreibung": "O3 stellt Daten aller O3 Order an Fiber-Cockpit bereit",
+        "zeitraum": "2025-09-28 bis 2026-01-09"
+      }
+    ]
+  }
+}
+```

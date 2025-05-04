@@ -1,0 +1,66 @@
+{
+  "epicId": "BEIOT-190",
+  "title": "Product Onboarding Q3 / 2025",
+  "ziele": {
+    "gesamtziel": "Das Ziel des Business Epics ist es, für Geschäftskunden der Telekom (DTBS, TDG, DT IoT GmbH), die IoT-Lösungs- und Projektgeschäft beziehen möchten, das Produktonboarding in den Basissystemen der Telekom (TC-CPQ, Service Now, SAP BRIM) sowie die notwendigen Konfigurationen zur Abbildung von Produkten zu ermöglichen. Dadurch wird der Kaufprozess automatisiert, der Vertrieb befähigt, Produkte zu konfigurieren und Lösungen bereitzustellen, sowie die Dokumentation und Rechnungsstellung an Kunden sichergestellt. Das Ziel ist geplant für Q3/2025.",
+    "einzelziele": [
+      "Onboarding/Change/Cancellation von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in TC-CPQ (Panda)",
+      "Onboarding/Change/Cancellation von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in SAP BRIM",
+      "Onboarding/Change/Cancellation von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in Service Now",
+      "Anlagen/Change/Cancellation von Provider Order via API (TMF 622 bereits existent) in SAP BRIM"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 0,
+      "beschreibung": "Erwartete Umsatzsteigerung: 2025: 180k€, 2026: 250k€, 2027: 300k€. EBITDA: 2025: 30k€, 2026: 45k€, 2027: 55k€. Ohne Umsetzung ist das IoT-Lösungsgeschäft nicht beauftragbar, Leistungen können nicht erbracht werden, es fehlen einheitliche Service- und Provisionierungsprozesse, die Kundenzufriedenheit sinkt und Umsatzwachstum ist kaum realisierbar."
+    },
+    "strategicEnablement": {
+      "skala": 0,
+      "beschreibung": "Die Initiative ermöglicht die Realisierung einer Buchungsstrecke für alle Gesellschaften, schnelle und einfache Anpassungen von Preisen und Konditionen sowie die schnelle Einführung und Bearbeitung neuer Produkte. Sie schafft Transparenz durch klare Produktdefinitionen und optimiert Produktprozesse, Verbuchung, Mahnwesen und Boniprüfung."
+    },
+    "timeCriticality": {
+      "skala": 0,
+      "beschreibung": "Die zeitliche Kritikalität ist hoch, da das Online-Geschäft der IoT ohne die Umsetzung nicht realisierbar ist (z.B. Selfservice, Kundendatentransparenz)."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEIOT-190",
+      "titel": "Product Onboarding Q3 / 2025",
+      "funktionalitäten": [
+        "Onboarding, Änderung und Stornierung von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in TC-CPQ (Panda)",
+        "Onboarding, Änderung und Stornierung von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in SAP BRIM",
+        "Onboarding, Änderung und Stornierung von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in Service Now",
+        "Anlage, Änderung und Stornierung von Provider Orders via API (TMF 622 bereits existent) in SAP BRIM"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Onboarding/Change/Cancellation von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in TC-CPQ (Panda)",
+    "Onboarding/Change/Cancellation von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in SAP BRIM",
+    "Onboarding/Change/Cancellation von Produkten via API aus dem IoT Produktstammdatenmaster in Cloud Billing in Service Now",
+    "Anlagen/Change/Cancellation von Provider Order via API (TMF 622 bereits existent) in SAP BRIM"
+  ],
+  "domainsAndITApplications": [
+    "TC-CPQ (Panda)",
+    "SAP BRIM",
+    "Service Now",
+    "Order 2 Cash (Orca)",
+    "DOM0202"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit zu den Basissystemen TC-CPQ (Panda), SAP BRIM und Service Now für die Umsetzung der API-basierten Produktprozesse.",
+    "Risiko: Ohne Umsetzung ist das IoT-Lösungsgeschäft nicht beauftragbar, Leistungen können nicht erbracht werden, keine einheitlichen Service- und Provisionierungsprozesse.",
+    "Abhängigkeit von der Verfügbarkeit und Integration der APIs in den genannten IT-Systemen.",
+    "Keine Informationen zu externen Abhängigkeiten oder detaillierten Risiken bezüglich Terminen verfügbar."
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "Keine Informationen verfügbar",
+    "umsetzungsende": "Q3_25",
+    "fixVersions": [
+      "Q3_25"
+    ],
+    "meilensteine": []
+  }
+}

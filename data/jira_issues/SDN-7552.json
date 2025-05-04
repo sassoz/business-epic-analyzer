@@ -1,0 +1,65 @@
+{
+  "key": "SDN-7552",
+  "issue_type": "Epic",
+  "title": "UI: Customer Onboarding in SN@TC",
+  "status": "Review",
+  "description": "Description\nRequired Inputs:\nScreens/Wireframes - until 02.12.\n\nBusiness Scope:\nImplementation of the Employee Portal in ServiceNow to provision an order",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "screens are implemented in the dev environment based on the process descriptions",
+    "screens are tested in the dev environment",
+    "frontend and backend is harmonized"
+  ],
+  "components": [],
+  "labels": [
+    "SD-LAN/WiFi",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20221116_SDLAN_Testcases.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2633630/20221116_SDLAN_Testcases.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-21T12:36:35.460+01:00"
+    },
+    {
+      "filename": "componentModel_20221018.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2633631/componentModel_20221018.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-21T12:36:35.467+01:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_Solution_2022-10-18_13-14-18-1.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2633632/CPDMCATExcel_SDLAN_Solution_2022-10-18_13-14-18-1.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-11-21T12:36:35.481+01:00"
+    },
+    {
+      "filename": "image-2022-11-21-12-31-18-665.png",
+      "url": "https://jira.telekom.de/secure/attachment/2633633/image-2022-11-21-12-31-18-665.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-11-21T12:36:35.491+01:00"
+    },
+    {
+      "filename": "N22-0358 SDLAN-Produktmodell_20221018_131047-1.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2633634/N22-0358%20SDLAN-Produktmodell_20221018_131047-1.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-21T12:36:35.496+01:00"
+    }
+  ]
+}

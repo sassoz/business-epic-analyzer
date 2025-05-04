@@ -1,0 +1,31 @@
+{
+  "key": "ECC-8600",
+  "issue_type": "Epic",
+  "title": "VPW: Anpassung Storno und Terminverschiebung C4",
+  "status": "Backlog",
+  "description": "Description\n UserStory \n As Support\n I want to change the behaviour of cancellation for VPW in C4\n so that the cancellation order will be processed directly after the message arrives\nand not <Welches Problem/Fehlverhalten soll behoben werden?>",
+  "business_value": {},
+  "assignee": "Ronny Schulz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Storno eines einzigen Komplements:",
+    "Verschiebung eines einzigen Komplements: Analog zu „Storno eines einzigen Komplements",
+    "Storno nach Eintreffen beider Komplemente",
+    "Verschiebung nach Eintreffen beider Komplemente"
+  ],
+  "components": [
+    {
+      "code": "Hulk",
+      "title": "Hulk "
+    }
+  ],
+  "labels": [
+    "CompanyFlex"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

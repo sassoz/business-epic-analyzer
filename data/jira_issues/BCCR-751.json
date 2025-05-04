@@ -1,0 +1,63 @@
+{
+  "key": "BCCR-751",
+  "issue_type": "Initiative",
+  "title": "ViDA: eRechnung MWL (Analysis)",
+  "status": "In Progress",
+  "description": "Description\nBusiness Scope:\nDie e-Rechnung muss über die Prozessstrecke des Individualmarkts über Mars → CSB für Customer Touchpoints entwickelt werden.\nDie erstellten e-Rechnungen müssen für den Kunden über sein ReO- oder Nachfolge-Portal (MBSP) abrufbar sein.\nDie e-Rechnung muss auf Wunsch dem Kunden per verifizierter e-Mail auf BKTO-Ebene zugeschickt werden können.\nDie e-Rechnung muss ab 1.1.2027 allen Customer Touchpoints Kunden bereit gestellt werden können.\nNicht im Scope ist die Abrechnung von MWL Leistungen über die Massenmarktkette CRM-T / Abili-t oder die SAP Abrechnungskette\n  Planung: \nQ1/2025 Analyse: \nAbstimmung der architektonischen und prozessualen Ziellösung für die Umsetzung der E-Rechnung auf der definierten Porzesskette (unter Einbindung aller relevanten fachseitigen und IT-seitigen Stakeholdern  - innerhalb der Domäne und domänenübergreifend)\nSo wird die vom Gesetzgeber eingeforderte XML für e-Rechnung wird in den Billing Systemen erzeugt. Es ist eine Entscheidung zu finden auf welche Art und Weise die Stammdaten en zu den Billingsystemen gelangen und umgekehrt . \nQ2-Q3/2025 (bzw. bis spätestens Q1/2026) Umsetzung: Umsetzung der Billing-relevanten Anforderungen \n         ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "2025-1",
+    "2025-2"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "CL: Obligatory",
+      "title": "CL: Obligatory "
+    },
+    {
+      "code": "GF: B2B",
+      "title": "GF: B2B Kennzeichnet Leistungen aus dem Geschäftsfeld B2B"
+    }
+  ],
+  "labels": [
+    "2025-1g",
+    "2025-2y",
+    "Analysis_only",
+    "BCCR-K",
+    "HUBPSB",
+    "MAB",
+    "R",
+    "RankA",
+    "Sz2025"
+  ],
+  "realized_by": [
+    {
+      "key": "MAB-2090",
+      "title": "MAB-2090",
+      "summary": "Analyse eRechnung: MWL",
+      "url": "https://jira.telekom.de/browse/MAB-2090",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "PSB-970",
+      "title": "PSB-970",
+      "summary": "E-Rechnung: Analyse zur Lösungsfindung für MWL (TMF666)",
+      "url": "https://jira.telekom.de/browse/PSB-970",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "PSB-974",
+      "title": "PSB-974",
+      "summary": "E-Rechnung: Analyse zur Lösungsfindung für MWL (MARS)",
+      "url": "https://jira.telekom.de/browse/PSB-974",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

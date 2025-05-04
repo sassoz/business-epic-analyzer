@@ -1,0 +1,51 @@
+{
+  "key": "SDPD-252",
+  "issue_type": "Epic",
+  "title": "OtC - MIST SD LAN/WLAN - Process design",
+  "status": "Closed",
+  "description": "Description\nAs a customer\nI want to get a new MIST SD LAN/WIFI solution and to be informed about all the steps that I have to go through, and it is clear which parameters and information I have to contribute.\nSo that there are no obstacles caused by me at the start and I can use all the advantages from the MIST SD LAN/WIFI solution.\n  As a Telekom employee\nI want to know what my role is, and which tasks and process steps I go through for a new MIST SD LAN/WIFI by implementing a clean, straightforward and well documented process with clear responsibilities, where possible automated.\nSo that the customer receives a functional MIST SD LAN/WIFI solution.\n ",
+  "business_value": {},
+  "assignee": "Patrick Heich (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7",
+    "R1.1 SDx Platform"
+  ],
+  "acceptance_criteria": [
+    "The commissioning of the DTA is considered",
+    "Coupling information in the site are considered (one bill)",
+    "A clear process is defined",
+    "It is clear who executes which tasks",
+    "Interfaces and parameters to other systems are defined and coordinated",
+    "Documentation is finished (Aris – Happy Path and Fallouts)"
+  ],
+  "components": [
+    {
+      "code": "Billing",
+      "title": "Billing Billing process"
+    },
+    {
+      "code": "OKR#10_PI7",
+      "title": "OKR#10_PI7 Start Technical Onboarding in Snow for SD LAN/WLAN"
+    },
+    {
+      "code": "OKR#11_PI7",
+      "title": "OKR#11_PI7 Invoice generation for SD LAN/WLAN"
+    },
+    {
+      "code": "OtC",
+      "title": "OtC Onboarding, order, procurement, field service"
+    }
+  ],
+  "labels": [
+    "IT7.2",
+    "IT7.3",
+    "IT7.4",
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

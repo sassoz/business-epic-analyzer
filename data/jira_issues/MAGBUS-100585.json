@@ -1,0 +1,25 @@
+{
+  "key": "MAGBUS-100585",
+  "issue_type": "Epic",
+  "title": "[Comet Crew] Business Mobil Teamcards and 5. Gen Teamcards incl. OnNetSecurity - GoLive",
+  "status": "Closed",
+  "description": "Description\nWe expect the main work for the 5th generation of Business Mobil to happen in other teams, e.g. product administration in Nepal/Portfoliomanager and content editing in CoreMedia.\nScope\nWhile we don't expect any major changes compared to the 3rd and 4th generation, the new tariffs must be thoroughly tested before their launch, in particular:\nThe 5th generation of Business Mobil offers a default option: \"Security OnNet Basic\" (see epic MAGBUS-93367 from PI 25).\nThe T-shirt sizes of the \"Teamkarte\" subcontracts may be different from the T-shirt size of the main contract.\nWe reserve some development capacity for necessary adjustments:\nIn the order summary, options for the \"Teamkarte\" subcontracts should be displayed in the same form as the options for the \"Hauptkarte\" main contract.",
+  "business_value": {},
+  "assignee": "Peter Max Messelken",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 26",
+    "Q4_24"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Comet",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,37 @@
+{
+  "key": "SDN-6976",
+  "issue_type": "Epic",
+  "title": "TC Produkt Onboarding - SDX L - Combridge Schnittstelle (Design)",
+  "status": "Funnel",
+  "description": "Description\nAls ein User in PANDA möchte ich aus CPQ heraus für internationale Standorte für außerhalb der EU1 bei Combridge als Vorleister die Kosten der Konfiguration abfragen.\nHierfür soll ein webservice mit Combridge verwendet werden.\nDieser Service kann aus der produktkachel heraus über einen Button ausschließlich für Sites außerhalb der EU1 gestartet werden.\nDaraufhin werden die Konfigurationsdaten aus PANDA an Combridge übermittelt. Die Kosten werden daraufhin in PANDA zurück übermittelt.\n Hiermit soll der aktuelle Workaround via dem Combridge Excel file abgelöst werden\nDOD Absprache mit combridge bezüglich einer gegebenfalls schon existierenden Combridge webservice\nDOD Analyse der Schnittstelle inkl. Absprache mit Architekten für eine technische Anbindung\nDOD Analyse und Design innerhalb PANDA zum Anstoßen des Webservice\nDOD Beschreibung der Schnittstelle für eine Implementierung, Status \"Ready to implement\"",
+  "business_value": {},
+  "assignee": "Klara Bruns",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "[PANDA_INC_SDX]",
+      "title": "[PANDA_INC_SDX] Altbestand OMS - Reporting the issues of the product SDX"
+    }
+  ],
+  "labels": [
+    "DOMSOL",
+    "PIPQ4_planned",
+    "SDLA_immature",
+    "TC_Produkt_Onboarding"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/2127955/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2021-12-21T13:07:26.000+01:00"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "key": "SDN-20535",
+  "issue_type": "Epic",
+  "title": "FIB: expand requirements ( UX-Design )",
+  "status": "Closed",
+  "description": "Description\nGeneral Description:\nThe \"FIB Tool\" (FTTH Infrastructure Building) has the target to support the provisioning of FTTH infrastructure for large enterprise customers. Its aim is to provide the status of fiber availability for different locations to the user who can then offer fiber to his/her customer for these locations. \nThe FIB tool will be integrated with the Integrated offer (B2BOC), but also provide an interface definition and API to be integrated to other Offering Tools within Deutsche Telekom Geschäftskunden (such as FLAMINGO ...). \nIn order to pursue the strategy for B2BOC to replace SAPCPQ as PANDA offer application, the FIB tool will be a new microservice application that substitute s the SAPCPQ internal Locations Functionality.\nIn this epic the requirements for the FIB tool itself are described on basis of the existing locations functionality. \nFor the Roadmap refer to https://wiki.telekom.de/x/cwCTkQ. Task of this epic is to describe and prepare the implementation planned for Q1/25. \n  Contacts:\nStream Lead: Alexander Walter\nBusiness: Bernd Frauenknecht, Enrico Dettmann (SGRK/SBU), SSE?  Thomas Heider\nPOM (Technic): Birol Arduc\nPreorder@Cloud: Uwe Schoon (AM), Stefan Kitschke\n  Guardrails for FIB Tool targets: \nFIB is a project management / rollout management tool with a focus on address and location mgmt for larger customers/many locations\nFIB integrates into the existing application landscape and does not replace it (shell be possible to integrate from many systems, FLAMINGO, customer portal, Salesforce etc.)  --> clarify who (user) is allowed to use the interface with what data (which AGP number o.ä., restrictions) \n  Planned Process for the FIB-Tool: \n1: request fiber availability status\n2: Entry in technik database of interested parties\n3: Order removal, comply with HTN if necessary\n4: Order additional GT-TAs if necessary\n5: Order notifications/updates\nTodos in the Epic\nGenerate UX Design for location management (Import, Export, KLS, Projektkenner)  --> check if adjustments are needed, add availability check at preorder@cloud \nGenerate UX Design and process workflow within FIB, including:\nlocation management\nrequest fiber availability status \nEntry in technik database of interested parties\nQuality gate for state \"VVMongoing\" \nAnstoß der HTN Erfassung\nOrder removal, comply with HTN if necessary\nOrder Standardbauweise or additional GF-TAs if necessary\nOrder notifications/updates\nGenerate a UX Design for needed usability functions (Suggestion, error and duplicate handling, hints etc.)\nReview API for technical integration for Preorder@cloud TMF 645 (for 2)\nReview API for technical integration with GIGA Fio (Infrastructure Order) TMF xxx (for 7)  later, open business questions  \nReview API for technical integration POM (for 3)\nReview API for Landlord portal at GIGA (before 5)? TMF?? VDB WoWi??  later, open business questions\nReview APIs for technical integration of FIB Tool (for 1?)  \nClarify NIMBUS Requirements/ Process (incl. API) \nClarify Order Process with SNow (SetOrderState/ Glasfaser ID), Review API  - start together with PANDA\nAnalyze how to use the locations in the FIB for the cpq configurators  (epic 20535)\n    Dokumentation:\nWikipage:[ https://wiki.telekom.de/display/B2BSOM/FIB-Tool|https://wiki.telekom.de/display/B2BSOM/FIB-Tool]\nSharePoint: https://telekom.sharepoint.de/sites/B2B_OfferManagementSolution_all/Freigegebene%20Dokumente/Forms/AllItems.aspx?id=%2Fsites%2FB2B%5FOfferManagementSolution%5Fall%2FFreigegebene%20Dokumente%2FTeams%20und%20Tools%2FPanda%20Vega%2FFIB%20Tool%2FBusiness%20Requirements\n   out of scope: any implementation \n  Target Architecture for the complete process incl. FIB\n    DOR Status Comment\nAcceptance criteria are defined.  \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts n.a.  \nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated   \nThe Epics are documented within JIRA  \nDependencies are identified and there are no external dependencies that can´t be solved within the ART  \nNon-functional requirements (NFR) are identified. n.a.  \nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter  n.a.  \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on n.a.  \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs  \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation n.a.  \nProcess dependency / adaptations has been defined n.a  \nOverall sequence diagram: https://wiki.telekom.de/pages/viewpage.action?spaceKey=B2BSOM&title=PBI+Process+Flow\n \n\nBusiness Scope:\nThe epic creates the Requirements for the FIB Tool next steps.\n\nFIB shell be used especially for our L and XL customers as well as public, classified customers(?), M. (VBKZnummern aufschreiben)\nIn the 1st step FIB is prepared for customers that can be processed via D3 applications.\nFIB will be used by SSE, SBU, Services, Accountmanagement\nThe infrastructure workflow Tool (FIB) shell support:\n- FIB supports the overall process for large customers for infrastructure expansion with fiber optics\n1: Upload of mass data and create KLS ID\n2: request fibe availability status\n3: Entry in technik database of interested parties\n4: Quality Gate for state \"VVMongoning\"\n5: Anstoßen der HTN Erfassung\n6: Order removal, comply with HTN if necessary\n7: Order Bau in Standardbauweise oder additional GF-TAs if necessary\n8: Order notifications/updates\n- FIB is a project management / rollout management tool with a focus on address and location mgmt for larger customers/many locations\n- FIB integrates into the existing application landscape and does not replace it (shell be possible to integrate from many systems, SAP CPQ; customer portal, Salesforce etc.)",
+  "business_value": {},
+  "assignee": "Patricia Glöß",
+  "priority": "",
+  "target_start": "2024-10-17",
+  "target_end": "2025-01-08",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [
+    "Generate a UX Design for needed usability functions (Suggestion, error and dublicate handling etc.)",
+    "Generate UX Design for location management (Import, Export, KLS)",
+    "Generate UX Design and process workflow within FIB, including:\nlocation management\nrequest fibe availability status\nEntry in technik database of interested parties\nOrder removal, comply with HTN if necessary\nOrder additional GT-TAs if necessary\nOrder notifications/updates",
+    "Review API for technical integration for Preorder@cloud",
+    "Review APIs for technical integration of FIB Tool",
+    "Analyze how to use the locations in the FIB for the cpq configurators"
+  ],
+  "components": [
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "FTTH_by_LE",
+    "SDLA_VS_Configuration&Offer",
+    "UX_Design"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-09-04-10-22-43-900.png",
+      "url": "https://jira.telekom.de/secure/attachment/4880333/image-2024-09-04-10-22-43-900.png",
+      "mime_type": "image/png",
+      "size": "159 kB",
+      "date": "2024-09-04T10:22:44.124+02:00"
+    }
+  ]
+}

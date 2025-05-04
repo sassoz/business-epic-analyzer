@@ -1,0 +1,68 @@
+{
+  "key": "MAGBUS-95669",
+  "issue_type": "Portfolio Epic",
+  "title": "EOS 2.0: EOS Events an Magenta Force übergeben",
+  "status": "Resolved",
+  "description": "Description\n Story\nAls Magenta Force Bearbeiter\nmöchte ich Aufgaben, Wiedervorlagen und Verzögerungsgründe aus EOS an Magenta Force übergeben\num dem Mitarbeiter in Magenta Force die Möglichkeit zu geben die Informationen direkt in der Magenta Force Überischt zu sehen. \n   Fragen / Hinweise:\n...\nIdee: Wir fragen die operativen Anwender (ToDo noch offen)\n  In PI25 auf der Agenda: Für den EOS Auftrag gibt’s einen reproduzierbaren Link, über den man in den Auftrag springen kann. EOS-2237\n- Siehe dazu den Kommentar von Armin Steinmetz! Ohne eine Anpassung der Verschlüsselung bei EOS kann das Feature durch MF nicht genutzt werden. Die Umsetzung bei EOS muss spätestens in PI27 erfolgen. Dazu wird es ein eigenes PE geben. \n  Für\nPI25 (Q3) Analyse  (Ingo bei EOS + Matthias zur Unterstützung)\nPI26 (Q4)Entwicklung EOS:\nEOS baut einen \"Event-Store/Handler\" \nWVL, VZG und Aufgaben am Auftrag werden übergeben\n  Für PI25/PI26 MF:\nAnbindung an POT --> Epic (Kevin)\n  Für SGrK Anwender:\nEOS Wiedervorlagen\nIn MF anzeigen\nMF und EOS \"geben Info jeweils ans andere System weiter\"\nOut of Scope: Freitextfeld\nEOS Verzögerungsgründe\nIn MF anzeigen\nMF und EOS \"geben Info jeweils ans andere System weiter\"\nEOS Bemerkungsfelder\nOut of Scope\nEOS Aufgaben\nÜbergeben, werden in MF dann zu WVL am Case\nErscheinen der Aufgabe\n\"Erledigen\" der Aufgabe\nDurchführen der Aufgabe\nVerwerfen der Aufgabe\n  EOS Auftrags-Historie\nOut of Scope\nFür Vertriebs Anwender:\nAuftragstransparenz (wie VLT; Liefertermine,)  --> POT Anbindung?\nEOS Verzögerungsgründe\n    Problemstellung (Problem Statement)\nWenn Magenta Force in Zukunft als 1. Oberfläche für einen Case fungiert muss der Mitarbeiter jedoch immer nach EOS gehen um seine nächsten doings zu sehen. Somit muss der Mitarbeiter immer die Oberfläche wechseln. \nFachlicher Lösungswunsch (Feature Hypothese)\nDie in EOS befindlichen Aufgaben, Verzögerungsgründe und Wiedervorlagen werden an Magenta Force gespiegelt. So kann der Mitarbeiter in Magenta Force seine nächste Schritte sofort sehen und springt im Anschluss nach EOS zur eigentlichen Bearbeitung ab.\nWichtige Fachexperten (Key subject matter experts)\n...\nWie sieht der Prozess heute aus? Wie sieht der Prozess künftig aus?\ngrafische Prozessdarstellung Vorher Nachher\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nUseCases/Testcases \nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\nWichtige Ansprechpartner\n        ",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q1_25"
+  ],
+  "acceptance_criteria": [
+    "EOS publiziert sowohl Aufgaben, Wiedervorlagen als auch Verzögerungsgründe nach außen und VLT, Auftrag abgeschlossen.",
+    "Dies wird als Events publiziert (Tardis) welches dann durch Magenta Force konsumiert werden können.",
+    "Die Events enthalten (Payload):\nTyp des Events: z.B. Aufgabe, Verzögerungsgründe , Wiedervorlage, VLT (AuftragPositionenProduktionGestartet), Auftrag abgeschlossen, Auftrag erstellt\nName der Aufgabe/ VZG oder Wiedervorlage \nStatus (was machen wir bei VZG und WVL?) \nEOS-ID \nFremdauftragsnummer (eventuell Ticket-ID)\nDas Datum der Fälligkeit der Aufgabe/ Wiedervorlagedatum / VLT\nDescibtion\nggf. Verzögerungsgrund\nggf. Freitext bei Wiedervorlage",
+    "Typ des Events: z.B. Aufgabe, Verzögerungsgründe , Wiedervorlage, VLT (AuftragPositionenProduktionGestartet), Auftrag abgeschlossen, Auftrag erstellt",
+    "Name der Aufgabe/ VZG oder Wiedervorlage",
+    "Status (was machen wir bei VZG und WVL?)",
+    "EOS-ID",
+    "Fremdauftragsnummer (eventuell Ticket-ID)",
+    "Das Datum der Fälligkeit der Aufgabe/ Wiedervorlagedatum / VLT",
+    "Descibtion\nggf. Verzögerungsgrund\nggf. Freitext bei Wiedervorlage",
+    "ggf. Verzögerungsgrund",
+    "ggf. Freitext bei Wiedervorlage",
+    "Diese Events werden im Anschluss in Magenta Force als Wiedervorlagen angelegt.",
+    "Name des Events",
+    "Beispiel von EOS für ein Event",
+    "IRRP Link (Absprungpunkt zu EOS) Kann Magenta Force diesen Link \"auch\" Nutzten oder gibt es hier Hindernisse\nWas passiert wenn eine Case ID mitgegeben wird und keine Ticket ID (IRRP ID)  \nWas passiert wenn keine Doc ID mitgegeben wird",
+    "Was passiert wenn eine Case ID mitgegeben wird und keine Ticket ID (IRRP ID)",
+    "Was passiert wenn keine Doc ID mitgegeben wird",
+    "Wie ist der IRRP Link heute verschlüsselt",
+    "Magenta Force nutzt den heutigen Link wie der von der IRRP kommt um einen EOS Auftrag an zu legen. \ntechnische Prüfung nötig",
+    "technische Prüfung nötig",
+    "EOS liefert an Magenta Force die ATT ID nach der Anlage einer Order. \nODER: EOS liefert bei Events für Magenta Force immer die Case ID UND die EOS ID mit um bei Magenta Force Case zu identifizieren",
+    "ODER: EOS liefert bei Events für Magenta Force immer die Case ID UND die EOS ID mit um bei Magenta Force Case zu identifizieren"
+  ],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "EOS",
+    "EOS2.0",
+    "MagentaForce",
+    "PI27",
+    "SGrK",
+    "weitere"
+  ],
+  "realized_by": [
+    {
+      "key": "EOS-6607",
+      "title": "EOS-6607",
+      "summary": "EOS Sync MF: Informationen an Magenta Force geben / Give Event Data from EOS to Magenta Force",
+      "url": "https://jira.telekom.de/browse/EOS-6607",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-10556",
+      "title": "ADCL-10556",
+      "summary": "Support implementation of Case Management in Magenta Force (successor of O3-based IRRP processes)",
+      "url": "https://jira.telekom.de/browse/ADCL-10556",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

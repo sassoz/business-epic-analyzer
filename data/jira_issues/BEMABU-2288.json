@@ -1,0 +1,45 @@
+{
+  "key": "BEMABU-2288",
+  "issue_type": "Business Epic",
+  "title": "Bestands- & Änderungsgeschäfts SeCe-IT",
+  "status": "Funnel",
+  "description": "Description\nDas IT-System „Flamingo\", ein Angebots- und Auftragskonfigurator, soll in der Lage sein, die Geschäftsfälle Umzug, Produktwechsel sowie Kündigung/Neubereitstellung für das SeCe-IT vollständig und effizient abzubilden. Ziel ist es, eine benutzerfreundliche und automatisierte E2E-Prozessführung zu gewährleisten, die alle relevanten Daten berücksichtigt und eine reibungslose Abwicklung sicherstellt. \nGenaue Spezifikation folgt im Rahmen des Solution Intents.",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    }
+  },
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "E2E-Umsetzung des Bestands- und Änderungsgeschäfts"
+  ],
+  "components": [],
+  "labels": [
+    "Cross-vertical",
+    "DO_Flamingo",
+    "DO_SeCeIT",
+    "MB_CPQ"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

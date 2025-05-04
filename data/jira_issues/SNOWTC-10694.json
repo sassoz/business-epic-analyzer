@@ -1,0 +1,69 @@
+{
+  "key": "SNOWTC-10694",
+  "issue_type": "Epic",
+  "title": "SD-LAN/WiFi: TSM Product Catalog (Create Network and Site)",
+  "status": "Closed",
+  "description": "Description\nRequired Inputs:\nProduct Model (PO/PS) - attached\nTechnical Production Model (CFSS) - attached\n\nBusiness Scope:\nImplementation of catalog items in SNow at product / service / resource level",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "2022-10-18",
+  "target_end": "2022-11-24",
+  "fix_versions": [
+    "ServiceNow SD LAN/WiFi Release 0.9",
+    "Q4_2022"
+  ],
+  "acceptance_criteria": [
+    "all catalog items (catalogue) are implemented",
+    "Product Model synchronized between PANDA/SNow@TC/BRIM"
+  ],
+  "components": [],
+  "labels": [
+    "Accenture",
+    "OKR_Q4_Start_Implementierung_MVP_in_SNow_(inkl._Schnittstellen_im_Backend)",
+    "PI#7",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SNOW@TC",
+    "SNOWTC"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "componentModel_20221018.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2503908/componentModel_20221018.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-01T11:08:17.000+01:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_2022-07-20_10-24-19.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2503904/CPDMCATExcel_SDLAN_2022-07-20_10-24-19.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-08-24T12:00:13.000+02:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_Solution_2022-10-18_13-14-18.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2503905/CPDMCATExcel_SDLAN_Solution_2022-10-18_13-14-18.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-11-01T11:08:17.000+01:00"
+    },
+    {
+      "filename": "N22-0358 SDLAN-Produktmodell_20221018_131047.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2503906/N22-0358%20SDLAN-Produktmodell_20221018_131047.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-01T11:08:19.000+01:00"
+    },
+    {
+      "filename": "SDLAN-Produktmodell_20220720_101629.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2503907/SDLAN-Produktmodell_20220720_101629.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-08-24T12:00:12.000+02:00"
+    }
+  ]
+}

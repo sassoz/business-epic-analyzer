@@ -1,0 +1,40 @@
+{
+  "key": "MAGBUS-103797",
+  "issue_type": "Epic",
+  "title": "LE: Exploration OneForecasting",
+  "status": "Review",
+  "description": "Description\nAls (vorerst) Large Enterprise möchte ich\nden Forecastprozess stärker digitalisieren\ndie manuellen Aufwände für die Mitarbeiter bzgl. Umsatzforecasts (Order Backlog Management, SmartFC) stark reduzieren\ndie Präzision bzgl. Vorhersagequalität steigern,\num eine bessere und schnellere Steuerung des Vertriebs zu ermöglichen und die vertriebsaktive Zeit zu erhöhen.\n  Werthypothese:\nDas Vorhaben schafft Voraussetzungen für eine bessere Steuerung des Verticals zur Erreichung der geplanten Targets und das zeitnahe agieren um auf Geschäftsentwicklungen wirksam reagieren zu können.\nEffizienz Case, Expertenschätzung:\n200 ACM, 144 TSD Minuten (60 Min Zeitersparnis/Monat) = 200 TSD EUR/JAHR\n10 Finanzer, 5 Steuerer je 1 AT / Monat = 130 TSD / Jahr\nSavings Betrieb SMART (Smarter Forecast) = 250 TSD\nSumme: 580 TSD Jahr\nFinancial Case: Absicherung Umsatz / Neugeschäft; Sicherstellung Zielerreichung (Target Neugeschäft) gemäß iPF 2024:\nAE 2024: 2,6 Mrd. €, davon 132 Mio. € International\nThereof: Ziel AE über Neugeschäft 2024 à 0,9 Mrd. €\n  Beteiligte Applikationen:\nOneGK\nSmart BI\n  Weitere Informationen:\n...",
+  "business_value": {},
+  "assignee": "Boban Bekic",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [
+    "Ziel ist ein integrierter Forecast (und der Wegfall von SmartFC):\nQ1: Erstanalyse mit BI-Domain\nQ2: Exploration mit Magentaforce und BI inkl. Smart\nQ3/Q4: Start der ersten Realisierungen gemäß Ergebnis der Exploration"
+  ],
+  "components": [
+    {
+      "code": "MagentaForce",
+      "title": "MagentaForce "
+    }
+  ],
+  "labels": [
+    "MB_MF",
+    "MB_MF_T1",
+    "MB_MF_T2"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "screenshot-1.png",
+      "url": "https://jira.telekom.de/secure/attachment/5433444/screenshot-1.png",
+      "mime_type": "image/png",
+      "size": "287 kB",
+      "date": "2025-02-24T14:33:06.545+01:00"
+    }
+  ]
+}

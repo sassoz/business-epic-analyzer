@@ -1,0 +1,70 @@
+{
+  "key": "BEB2B-67",
+  "issue_type": "Business Epic",
+  "title": "Nearshore System Readiness in Magenta Force auf Vertragsebene sowie Anpassung des allgemeingültigen Rollenkonzepts auf das Need-To-Know Prinzip",
+  "status": "Funnel",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür alle Delivery Einheiten bzw. der Solution Business Unit in Ungarn und Slowakei (und weltweit) in den verschiedenen Funktionen und Teams\ndie unsere Kunden aus Nearshore/ Offshore heraus bedienen wollen\nist als Voraussetzung dafür die Compliance-gerechte Bereitstellung & Nutzung von Tools (für Realisierung, Order Management, Service Management und Assurance) auch außerhalb der EU sicher zu stellen\nso dass die Wettbewerbsfähigkeit bei gleichbleibender Qualität und wachsendem Fachkräftemangel in Deutschland erhalten bleibt bzw. erhöht wird.\nund nicht das Deals aufgrund von zu hochpreisigen oder zu geringen Onshore-Leistungen verloren werden bzw. die Prozessierung deutlich verlangsamt und die Datenqualität nicht sichergestellt wird.\nDas Vorhaben schafft\nschnellere Bearbeitung von Aufträgen, was zu schnelleren Realisierungszeiten, frühestmöglicher Fakturierung und gesteigerter Kundenzufriedenheit führt\nKonsequente Vermeidung von Redundanzen durch Unterschiede in den Zugriffsrechten\nZugriff auf die immer aktuellsten Status-Informationen in den nötigen Systemen ermöglicht eine schnelle Prozessierung und stellt Qualität sicher\nTransparenz über Bandbreitenprüfungen, Ansprechpartner und Kundendaten vor Kunde erhöht Professionalität \nEs wird eine tatsächliche E2E Bearbeitung des Vertrags ermöglicht\n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n Offshore Readiness\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\nsiehe Akzeptanzkriterien\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nICTO-19890Magenta Force DOM0201 Svensson, Mirco <M.Svensson@telekom.de>; Hoffmann, Matthias Johannes <Matthias-Johannes.Hoffmann@telekom.de> MagentaForce: T-Shirt Size S\nÜber Anlage neuer Rollen- und Berechtigungsstrukturen abbildbar.\n  BEO und ggf. Vertreter Viola Merten SBU OD Digitalization & (Maike Pletsch Digital Business and Transformation)\nSponsor/Fachseite Matthias Zalewski SBU OD Digitalization\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 20,
+      "revenue": "Zusätzliche Umsatzerlöse",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": "Preisliche Wettbewerbsfähigkeit im Solution Umfeld\nHöhere Dealabschlussrate im Solution Umfeld"
+    },
+    "strategic_enablement": {
+      "scale": 20,
+      "risk_minimization": "",
+      "strat_enablement": "von großer strategischer Bedeutung für die\ngesamte DTAG",
+      "justification": "Skalierbarkeit Delivery bei steigendem Fachkräftemangel und DE-Fluktuation durch Ruhestand"
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "Geplanter Umsetzungszeitraum\nPlan Start: 01.04.2025\nPlan Ende/Launch: 30.06.2025",
+      "justification": "Launch innerhalb der nächsten 4-6 Monate, Start ab 01.04.2025"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Viola Merten",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "1 Rolle & Recht für Ungarn\n1 Rolle & Recht für Slowakei\n1 Rolle & Recht für Rumänien\n1 Rolle & Recht für Portugal\nusw.",
+    "1 Rolle & Recht für Ungarn",
+    "1 Rolle & Recht für Slowakei",
+    "1 Rolle & Recht für Rumänien",
+    "1 Rolle & Recht für Portugal",
+    "usw.",
+    "a) Classified (VSnfD) = immer a, b, c, d",
+    "b) Onshore für MA in Deutschland = immer b, c, d",
+    "c) Nearshore = immer c, d",
+    "d) Offshore = immer d"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO_EXPL",
+    "B2B_Target",
+    "Operations"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "27.11.2024_NearshoreReadiness_MagentaForce_Flamingo_ZDF.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/5169853/27.11.2024_NearshoreReadiness_MagentaForce_Flamingo_ZDF.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "815 kB",
+      "date": "2024-11-27T18:15:25.640+01:00"
+    }
+  ]
+}

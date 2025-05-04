@@ -1,0 +1,29 @@
+{
+  "key": "MAGBUS-105000",
+  "issue_type": "Epic",
+  "title": "Production readiness tab including multiple BKTO CPQ part",
+  "status": "In Progress",
+  "description": "Description\nClick to add description",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2025-04-03",
+  "target_end": "2025-06-04",
+  "fix_versions": [
+    "PI 28"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "MB_CPQ",
+      "title": "MB_CPQ "
+    }
+  ],
+  "labels": [
+    "MB_CPQ",
+    "MB_PRT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

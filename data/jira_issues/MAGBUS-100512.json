@@ -1,0 +1,24 @@
+{
+  "key": "MAGBUS-100512",
+  "issue_type": "Epic",
+  "title": "Shopping Cart: Change database to MongoDB for NGMobile",
+  "status": "In Progress",
+  "description": "Description\nShoppingCart uses relational database, but it operates only on big JSON documents.\nSo the wrong database technology is in use.\nDue to wrong database ShoppingCart service has limited performance, which might not be sufficient for load after NGMobile.\nIn scope of this Epic we change the database to MongoDB and do some first steps about optimization.\nWe will keep the database change simple, so that we are ready for more performance tuning in case that is really required in the future.\nOther benefits of database change:\nWe get rid of hosting costs for MariaDB as a service, because we have already MongoDB in place for other applications.\nLower operations effort, because afterwards we will have only 1 database technology in place.\nMariaDB has several security issues reported in PSA - these will be fixed by this Epic.",
+  "business_value": {},
+  "assignee": "Elmar Brauch",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Comet",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

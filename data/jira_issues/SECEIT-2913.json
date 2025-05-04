@@ -1,0 +1,45 @@
+{
+  "key": "SECEIT-2913",
+  "issue_type": "Epic",
+  "title": "Inhouse Basic: Direkteinstieg - Erweiterung der Änderungsgeschäftsfälle",
+  "status": "Backlog",
+  "description": "Description\nEPIC bündelt alle Storys zum Theme  OrderServices -> Direkteinstieg SeCe IT über O3 nach EOS\n \nDie in Step1 nicht eingeführten Änderungsuntergeschäftsfälle sollen implementiert werden\n ",
+  "business_value": {},
+  "assignee": "Markus Fracke",
+  "priority": "",
+  "target_start": "2025-04-29",
+  "target_end": "2025-06-24",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DO_SeCeIT",
+    "MB_Decoupling",
+    "VS_enabling"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "flamingo_POST_O3_example.json",
+      "url": "https://jira.telekom.de/secure/attachment/5273957/flamingo_POST_O3_example.json",
+      "mime_type": "application/json",
+      "size": "36 kB",
+      "date": "2025-01-08T09:13:45.378+01:00"
+    },
+    {
+      "filename": "seceit-624720216-formatted.json",
+      "url": "https://jira.telekom.de/secure/attachment/5273958/seceit-624720216-formatted.json",
+      "mime_type": "application/json",
+      "size": "103 kB",
+      "date": "2025-01-08T09:13:45.401+01:00"
+    },
+    {
+      "filename": "specification (5).yaml",
+      "url": "https://jira.telekom.de/secure/attachment/5273959/specification%20%285%29.yaml",
+      "mime_type": "application/octet-stream",
+      "size": "166 kB",
+      "date": "2025-01-08T09:13:45.411+01:00"
+    }
+  ]
+}

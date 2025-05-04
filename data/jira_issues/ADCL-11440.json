@@ -1,0 +1,28 @@
+{
+  "key": "ADCL-11440",
+  "issue_type": "Epic",
+  "title": "Support E2E testing of product relocation and change processes part I",
+  "status": "Closed",
+  "description": "Description\nProcess information:\nRequirements:\nSupport E2E testing of product relocation & change processes.\nCreate test-automation scenarios for product relocation and change processes for oPOM\n[Hint] Key user-touchpoints are Flamingo and EOS and key integration is with LOM (Fxn-mediator)\nSolve bugs\nImplement ad-hoc requirements stemming from E2E testing\nLink for Documentation in Wiki:\noPOM testing of generic Product Change, please refer to:\nhttps://wiki.telekom.de/display/MBFY/BEMABU-1489%3A+Product+Change+in+O3\nFor Flamingo change order implementation, please refer to:\nhttps://wiki.telekom.de/pages/viewpage.action?pageId=2361048623 \nhttps://wiki.telekom.de/display/MBFY/Test+Data+and+Test+Cases \nTarget process (in progress):\n  Useful Links:\n...\nResources:\nFlamingo:\nSimon Keck (PM)\nAshtar Siegle (PO)\nDirk Berthold (PO)\nSimon Köppel (BA/Fachexperten)\nMartin Wendler (Fachseite & Auftragsübertragung)\nThorsten Gansen (Testing)\nMareen Jarick (Testing)\nKarim Azzaoui (Architekt/BA)\nStefan Fischer (Architekt)\nMBSP@FTTH:\nPO 360 Degrees/Portal: Matthias Lehmann\nBA 360 Degrees/Portal: Frank Gehlhaar\nBEO: Thorsten Hillemacher\nPO Team Comet (Cart/Checkout/POT): Andrea Öder\nBA Team Comet (Cart/Checkout/POT): Peter Max Messelken\nBA Team Comet (Cart/Checkout/POT): Stefan Wilkes\nPO GSP/Offer Preparation: Holger Peters\nBA GSP/Offer Preparation: Anil Kilickaplan\nFiber Deployment/GGS:\nTeam Dumbledore for Giga interfaces, incl. milestones, etc.:\nAndre Meyer (PO)\nArmela Memeti (BA)\nTeam Moon for FTTH/fiber availability checks:\nJürgen Kirch (PO)\nMagenta Force:\nBoban Bekic (PO)\nJürgen Brunner (BA)\nMatthias Johannes Hoffmann (BA/Architect)",
+  "business_value": {},
+  "assignee": "Fazli Ilter Satiroglu",
+  "priority": "",
+  "target_start": "2025-01-31",
+  "target_end": "2025-02-20",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [
+    "E2E testing of product relocation & change processes is supported",
+    "Test-automation scenarios for product relocation and change processes for oPOM are implemented",
+    "Bugs are solved",
+    "Ad-hoc requirements stemming from E2E testing are implemented"
+  ],
+  "components": [],
+  "labels": [
+    "O3"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

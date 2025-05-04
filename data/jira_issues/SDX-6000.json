@@ -1,0 +1,40 @@
+{
+  "key": "SDX-6000",
+  "issue_type": "Epic",
+  "title": "[SD]Simplification of Product Model and Implementation in all Systems Q3 Exploration",
+  "status": "Closed",
+  "description": "Description\n\nBusiness Scope:\nThe current Product Model and related Architecture of current mode of operations (CMO) shall be simplified exposing less technical features to the ServiceNow Portal (internal and external) using in addition the native vendor portals for additional technical enrichment of parameters in future mode of operations (FMO) and shall be implemented in all systems. For that purpose the Dataflow of Inventory of CMO shall be modified to FMO as shown in picture.\n\nThis will lead to a more consistent and less change prone PO/PS layer which is required to be implemented in multiple tools consistently (P+, CPQ, SN, ...). Thus to add a feature only a smaller portion of the tool chain will be affected reducing the implementation effort.",
+  "business_value": {},
+  "assignee": "Stefan Gula",
+  "priority": "",
+  "target_start": "",
+  "target_end": "2022-08-19",
+  "fix_versions": [
+    "PI7"
+  ],
+  "acceptance_criteria": [
+    "Support product model definition for SDX product",
+    "Support product model definition for SDX product"
+  ],
+  "components": [
+    {
+      "code": "SDx - SD Product",
+      "title": "SDx - SD Product "
+    }
+  ],
+  "labels": [
+    "PI#7",
+    "SDProduct"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2022-06-22-14-58-08-335.png",
+      "url": "https://jira.telekom.de/secure/attachment/2567299/image-2022-06-22-14-58-08-335.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2022-06-22T14:58:08.000+02:00"
+    }
+  ]
+}

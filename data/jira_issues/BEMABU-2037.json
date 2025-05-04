@@ -1,0 +1,74 @@
+{
+  "key": "BEMABU-2037",
+  "issue_type": "Business Epic",
+  "title": "LE: Weiterentwicklung Lead-Importtool (LACHS)",
+  "status": "Backlog",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "",
+      "justification": ""
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Litterscheid, Jennifer",
+  "priority": "",
+  "target_start": "2025-04-01",
+  "target_end": "2025-06-30",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "B2B_Prio",
+    "B2B_Target",
+    "Cross-vertical",
+    "GK-LEET"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-105202",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-105202",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "image-2024-11-21-14-38-15-603.png",
+      "url": "https://jira.telekom.de/secure/attachment/5152316/image-2024-11-21-14-38-15-603.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2024-11-21T14:38:15.912+01:00"
+    }
+  ]
+}

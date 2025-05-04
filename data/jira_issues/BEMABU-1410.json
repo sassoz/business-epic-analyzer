@@ -1,0 +1,115 @@
+{
+  "key": "BEMABU-1410",
+  "issue_type": "Business Epic",
+  "title": "Case Mgmt GrK in MagentaForce",
+  "status": "Closed",
+  "description": "Description\nDie interne Kommunikation zwischen SBU/Vertrieb und SGrK wird aktuell zu 70% via Mail abgewickelt (erhebliche Ineffizienzen durch mehrfache Rückfragen, keine Vertretungsmöglichkeiten etc. )\nZiel ist es, die unstrukturierte E-Mail Kommunikation zu stoppen und eine einheitliche Sicht auf den Kunden und zu gehörige Daten (z.B. Ansprechpartner) zu bekommen, so dass wir im Omnichannel Approach auskunftsfähig sind.\n360° Sicht auf den Kunden übergreifend im Sales & Service: Grundlage für eine gemeinsame Workflow basierte Bearbeitung der Kundenanliegen unabhängig von dem Kunden Touchpoint sowie durchgängige Kundenkontaktdokumentation\nE-Mail-to-Case: Automatischen Anlage eines Cases aus einer Kunden E-Mail (inkl. Klassifizierung)\nCall-to-Case: CTI-Integration mit Potential zur automatischen Anlage eines Cases und der Ablösung der Bearbeitungsoberfläche IRRP\nÜbergreifende, transparente Kommunikation sowohl intern wie auch extern mit dem Kunden – Omnichannel Angebot an den Kunden \nIn Scope 2024:\nGrundfunktionen zur übergreifenden Zusammenarbeit\nSchwenk der WORK-Bearbeitung für FN & EN Teams\nAnsteuerung von Robotics für einfache Geschäftsvorfälle \n  In Scope 2025:\nWeiterer Rollout auf die MoFu Teams\nSchwenk der CALL-Bearbeitung und CTI Integration\n  BEO: Sandra Ebert",
+  "business_value": {
+    "business_impact": {
+      "scale": 3,
+      "revenue": "",
+      "cost_saving": "Reduzierung von Ineffizienzen durch strukturierte Kommunikation",
+      "risk_loss": "Vermeidung von Informationsverlusten durch fehlende Vertretungsmöglichkeiten",
+      "justification": "Aktuell werden 70% der Kommunikation via Mail abgewickelt, was zu erheblichen Ineffizienzen durch mehrfache Rückfragen führt und keine Vertretungsmöglichkeiten bietet"
+    },
+    "strategic_enablement": {
+      "scale": 4,
+      "risk_minimization": "Reduzierung von Kommunikationsrisiken durch einheitliche Kundensicht",
+      "strat_enablement": "Omnichannel Approach mit 360° Sicht auf den Kunden übergreifend im Sales & Service",
+      "justification": "Schaffung einer Grundlage für gemeinsame Workflow-basierte Bearbeitung der Kundenanliegen unabhängig vom Kunden-Touchpoint sowie durchgängige Kundenkontaktdokumentation"
+    },
+    "time_criticality": {
+      "scale": 3,
+      "time": "Stufenweise Implementierung 2024-2025",
+      "justification": "In 2024 werden Grundfunktionen zur übergreifenden Zusammenarbeit implementiert, in 2025 folgt weiterer Rollout auf MoFu Teams und CTI Integration"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Hack, Lucas",
+  "priority": "",
+  "target_start": "2024-03-01",
+  "target_end": "2024-12-31",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "B2B_Prio",
+    "LaO_MF",
+    "LaO_TC",
+    "MaBu-TopThema-2024",
+    "Operations"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-91485",
+      "title": "MAGBUS-91485",
+      "summary": "MF: User & Rollen - Umsetzung PI 24",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91485",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-94436",
+      "title": "MAGBUS-94436",
+      "summary": "MF: Service GrK User & Rollen",
+      "url": "https://jira.telekom.de/browse/MAGBUS-94436",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-91120",
+      "title": "MAGBUS-91120",
+      "summary": "MF: Service GrK Case - Aufbau und Bearbeitung",
+      "url": "https://jira.telekom.de/browse/MAGBUS-91120",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-93434",
+      "title": "MAGBUS-93434",
+      "summary": "MF: Service GrK Case - Routing",
+      "url": "https://jira.telekom.de/browse/MAGBUS-93434",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-93866",
+      "title": "MAGBUS-93866",
+      "summary": "MF: Cases an IRRP übergeben",
+      "url": "https://jira.telekom.de/browse/MAGBUS-93866",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-94982",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-94982",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-95306",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-95306",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "MAGBUS-96946",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/MAGBUS-96946",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Case Mgmt. als Teil von EOS 2.0.png",
+      "url": "https://jira.telekom.de/secure/attachment/3262958/Case%20Mgmt.%20als%20Teil%20von%20EOS%202.0.png",
+      "mime_type": "image/png",
+      "size": "224 kB",
+      "date": "2023-08-28T13:44:29.907+02:00"
+    }
+  ]
+}

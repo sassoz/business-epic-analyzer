@@ -1,0 +1,19 @@
+{
+  "key": "SNOWTC-14552",
+  "issue_type": "Epic",
+  "title": "Interface SeCe-IT_Create Attachment \"zusätzliche Auftragspositionen\"",
+  "status": "Closed",
+  "description": "Description\nBased on the order data available after the report, SN is to create an \"additional order items\" file from defined data to supplement a DTA order.",
+  "business_value": {},
+  "assignee": "Jan Funke",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

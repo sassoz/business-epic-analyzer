@@ -1,0 +1,31 @@
+{
+  "key": "PSB-684",
+  "issue_type": "Epic",
+  "title": "BSL Sammler: Betriebliche Sonderleistungen MWL 2024-3_PI#4",
+  "status": "Closed",
+  "description": "Description\n Betroffene und vom Kunden abrufbare konfigurative Leistungen können sein z.B.:\nPreisänderungen im AGB Umfeld\nNeue individuelle Preispläne, bzw. Änderungen\nStornierung und Neuerstellung von Rechnungen/Anbietergütungen\nKonfigurative Änderungen in SRN Billing",
+  "business_value": {},
+  "assignee": "Hubert Sievert",
+  "priority": "",
+  "target_start": "2024-06-12",
+  "target_end": "2024-09-03",
+  "fix_versions": [
+    "2024-3_PSB_PI04"
+  ],
+  "acceptance_criteria": [
+    "Bearbeitung von Kunden gefordert Anforderung im Zuge der betrieblichen Sonderleistungen MWD sichergestellt."
+  ],
+  "components": [
+    {
+      "code": "PSB-Sirius",
+      "title": "PSB-Sirius PSB Hub Sirius Team"
+    }
+  ],
+  "labels": [
+    "MARS",
+    "PIP04"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

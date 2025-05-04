@@ -1,0 +1,26 @@
+{
+  "key": "ADCL-10000",
+  "issue_type": "Epic",
+  "title": "FTTH Import Erweiterung für Kooperationspartner",
+  "status": "Analysis",
+  "description": "Description\n Story\nAls EOS Nutzer\nmöchte ich den Kooperationspartner in EOS zur Anzeige bringen,\num die Information vor Mitarbeiter sichtbar zu machen und vor Kunde aussage fähig zu sein. \n   Fragen / Hinweise:\n...\nProblemstellung (Problem Statement)",
+  "business_value": {},
+  "assignee": "Jozef Remenec",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "AC1: Aus der O3 Order wird der Kooperationspartner importiert",
+    "AC2: Anzeige des Kooperationspartners in EOS am Teilauftrag"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI25",
+    "PI26",
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

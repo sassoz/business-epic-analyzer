@@ -1,0 +1,28 @@
+{
+  "key": "MAB-272",
+  "issue_type": "Epic",
+  "title": "TMF678: Connect MWL-Daten (Stufe 1)",
+  "status": "Funnel",
+  "description": "Description\nStory\nIch als Billing Massenmarkt möchte alle CSB MWL Rechnungen als TMF678 CustomerBill in einer Datenbank speichern, damit ich diese strukturierten Rechnungsdaten und Dokumente über das TMF678 meinen Konsumenten zur Verfügung stellen kann und somit ein Portal zur Rechnungsanzeige bei MBSP gebaut werden kann.\nDetails\nDie Umsetzung sieht ein Stufenkonzept vor. Dieses EPIC beschreibt die erste Stufe, die benötigt wird, um die Rechnungsanzeige bei MBSP zu bauen und so die ReO MWL zu ersetzten. \nGrobe Stufen Planung:\n1. CSB stellt zusätzlich zum bestehenden Weg die MWL Rechnungen im TMF678 bereit.\nReO und DORA erhalten die CSB Rechnungen auf dem bisherigen Wegen\nDie separate Schnittstelle für Druckrechnungen wird durch das TMF678 ersetzt. (Hierzu muss das Rechnungsmedium bekannt sein. s.u.\nToDo: Weitere Stufen beschreiben.\nIn der ersten Stufe stellt CSB vollständig generierte Rechnungen im TMF678 bereit. Diese Rechnungen umfassen:\nCustomerBillExt (Header/Kopfdaten der Rechnung)\nAppliedCustomerBillingRates (Rechnungspostionen)\nAttachment (PDF der Rechnung)\nNotwendig für Abschaltung REO Oberflächen sind folgende Punkte:\nAbrufbarkeit der Dokumente soll 18 Monate gegeben sein (EVNs kürzer=80 Tage)\nWir müssen die Dokumente (bis in die Vergangenheit = 18 Monate) nach TMF 678 migrieren, da sonst MBSP nur neue Dokumente anzeigen könnte\nProblem könnte sein, dass wir derzeit nicht genug Daten in ReO haben, um eine Migration durchzuführen. Eine Lösung könnte ein Parallelbetrieb sein, in dem der Datenbestand im TMF678 aufgebaut wird.\nRechnung/EVN muss als CSV generiert werden und im TMF678 abgelegt werden  (s.u. Rechnungsmedium und Formate )\nRechnungsformate und Einstellungen müssen für MBSP über ein API verfügbar sein (s.u. Rechnungsmedium und Formate )\nRechnungsmedium und Formate\nDas Rechnungsmedium muss, wenn alle Rechnungen aus CSB über das TMF678 bereitgestellt werden, entweder über KIT abgefragt werden können oder als Teil der generierten Rechnung von CSB im TMF678 gespeichert werden. \nDies wird für die Ansteuerung des Druckkanals, Email, ELFE, X-Rechnung und eRechnung benötigt. \nSpeziell für die Darstellung in ReO MWL und damit zukünftig für die Bereitstellung über MBSP sind dies die Formate die in der ReO MWL existieren in der TMF 678 übernommen werden müssen.\n(Quelle Benutzerhandbuch ReO MWL):\nAnbietervergütung PDF\nAnbietervergütung CSV\nEinzelverbindung CSV\nDetaillierte Information zur Anbietervergütung CSV\n  Rechnung PDF\nRechnung CSV\nEinzelverbindung CSV\nDetaillierte Information zur Rechnung CSV\nX-Rechnung\nDownload der Rechnung mit Signatur ((wenn E-Rechnung verpflichtend ist, muss sie wieder raus)\n  Offen\nDerzeit erhält ReO nicht nur aus CSB Daten sondern auch aus MARS:\nLeitungsfälle, für EVN, DIR, DIA und Tageswerte\nTrigger - bildet Klammer um Leistungsfälle, um auf dieser Basis EVN, DIR und DIA in ReO zu erzeugen. \nHier ist allerdings die Frage, ob zukünftig EVN, DIR, DIA und Tageswerte noch benötigt werden. Wenn ja muss geprüft werden, ob nicht auch CSB dieser liefern kann, damit für MWL Rechnungsdaten nur eine Schnittstelle entsteht.\n ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "Proton",
+      "title": "Proton "
+    }
+  ],
+  "labels": [
+    "Capex",
+    "Ein_PI",
+    "Proton"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

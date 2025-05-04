@@ -1,0 +1,62 @@
+{
+  "key": "DATASAT-23420",
+  "issue_type": "Initiative",
+  "title": "DVS_DFS_EOS 2.0: MagentaForceCasemanagement",
+  "status": "In Progress",
+  "description": "",
+  "business_value": {},
+  "assignee": "Heike Reitz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DVS_DFS",
+      "title": "DVS_DFS "
+    }
+  ],
+  "labels": [
+    "RM_2025"
+  ],
+  "realized_by": [
+    {
+      "key": "DATASAT-24053",
+      "title": "DATASAT-24053",
+      "summary": "ODW: Casemanagement Service: Development of a congruent database - part I",
+      "url": "https://jira.telekom.de/browse/DATASAT-24053",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "DATASAT-23953",
+      "title": "DATASAT-23953",
+      "summary": "FCI: Casemanagement Service: Provide data to MagFoCMS-database",
+      "url": "https://jira.telekom.de/browse/DATASAT-23953",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-26957",
+      "title": "DATASAT-26957",
+      "summary": "ODE: Casemanagement Service - Build up know how on ODE",
+      "url": "https://jira.telekom.de/browse/DATASAT-26957",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-24586",
+      "title": "DATASAT-24586",
+      "summary": "ODW: Casemanagement Service: Development of a congruent database",
+      "url": "https://jira.telekom.de/browse/DATASAT-24586",
+      "relation_type": "child"
+    },
+    {
+      "key": "DATASAT-26214",
+      "title": "DATASAT-26214",
+      "summary": "FCI: Deploy Casemanagement-data to EWS-Cube",
+      "url": "https://jira.telekom.de/browse/DATASAT-26214",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

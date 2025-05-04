@@ -1,0 +1,133 @@
+{
+  "epicId": "BEMABU-1857",
+  "title": "OneForecasting: LE - Forecast NextGen (Exploration Q2-25)",
+  "ziele": {
+    "gesamtziel": "Für alle Vertriebsmitarbeiter im Large Enterprise Bereich soll der Forecastprozess stärker digitalisiert werden, um manuelle Aufwände (Order Backlog Management, SmartFC) zu reduzieren und die Vorhersagequalität zu steigern. Dadurch wird eine bessere und schnellere Steuerung des Vertriebs möglich und der Vertrieb hat mehr Zeit für Kunden. Die Verbesserung soll auch für weitere Verticals nutzbar sein. Geplante Umsetzung bis 30.09.2025.",
+    "einzelziele": [
+      "Etablierung eines integrierten und automatisierten Forecasts in OneGK Reporting mit Provisionierung an Zielsysteme",
+      "Technische Erweiterung der SAP Backendsysteme zur Detaillierung des Order Backlog Managements",
+      "Provisionierung der Order Backlog Informationen aus SAP nach OneGK Reporting",
+      "Konsolidierte Sicht auf alle Bestandsverträge in MagentaForce via Schnittstelle zu CLM",
+      "Erweiterung OneGK Reporting um manuelle Hinterlegung notwendiger Adjustments",
+      "Exploration der Möglichkeiten eines hochautomatisierten Forecastprozesses",
+      "Entwicklung eines Zielbilds für den Forecastprozess in Large Enterprise",
+      "Perspektivisch: Abschaltung SmartFC"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "Effizienz Case mit Kosteneinsparung von 580 Tsd. EUR pro Jahr, bestehend aus: 200 Tsd. EUR/Jahr durch Zeitersparnis für 200 ACM, 130 Tsd. EUR/Jahr durch Einsparungen bei Finanzern und Steuerern, 250 Tsd. EUR durch Einsparungen beim Betrieb von SMART (Smarter Forecast)"
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "Mitigieren von Risiken falscher oder ungenauer Forecastwerte, Sicherstellung der Zielerreichung durch Transparenz zu OrderBacklog+Pipeline, Schaffung zusätzlicher Sales Kapazitäten durch Automatisierung, bessere Abstimmung zwischen Sales und Delivery, Enabler für optimierte Ressourcen-/Lagerplanung"
+    },
+    "timeCriticality": {
+      "skala": 8,
+      "beschreibung": "Verwirklichung der Umsetzung spätestens zum nächsten Geschäftsjahr. Ungenaue Forecasts führen zu potenziell falschen Management-Entscheidungen. Über den Forecast lassen sich Handlungsbedarfe ableiten, um die gewünschten Zielsetzungen erreichen zu können."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "MAGBUS-103797",
+      "titel": "LE: Exploration OneForecasting",
+      "funktionalitäten": [
+        "Stärkere Digitalisierung des Forecastprozesses",
+        "Reduzierung manueller Aufwände für Umsatzforecasts",
+        "Steigerung der Präzision bzgl. Vorhersagequalität",
+        "Exploration mit Magentaforce und BI inkl. Smart in Q2",
+        "Start der ersten Realisierungen gemäß Explorationsergebnis in Q3/Q4"
+      ]
+    },
+    {
+      "id": "DATAFAB-32009",
+      "titel": "LE: ONEPROCESS - One Forecasting (Day2)",
+      "funktionalitäten": [
+        "Integrierter Forecast und Wegfall von SmartFC",
+        "Koordination zwischen verschiedenen IT-Systemen (OneGK, Smart BI)",
+        "Umsetzung in Q1 und Q2 2025"
+      ]
+    },
+    {
+      "id": "DATAFAB-32010",
+      "titel": "LE: ONEPROCESS - One Forecasting (Day2)",
+      "funktionalitäten": [
+        "Erstellung eines Lösungskonzepts für OneGK-Anteil",
+        "Koordination mit anderen Teams/IT-Systemen (MagF, SMART BI)",
+        "Detaillierte Definition des funktionalen Umfangs"
+      ]
+    },
+    {
+      "id": "DATAFAB-32012",
+      "titel": "LE: ONEPROCESS - One Forecasting (Day2) - RevRecPro",
+      "funktionalitäten": [
+        "Spezifische Umsetzung für RevRecPro-Komponente",
+        "Integration in Gesamtlösung"
+      ]
+    },
+    {
+      "id": "DATAFAB-31963",
+      "titel": "One Forecasting (Day2): Solution Concept (OGK scope)",
+      "funktionalitäten": [
+        "Erstellung eines Lösungskonzepts für OGK-Anteil",
+        "Prüfung der technischen Machbarkeit",
+        "Klärung der Anforderungen bezüglich Autorisierung",
+        "Erstellung eines groben Zeitplans für Entwicklung und Go-Live",
+        "Identifikation potenzieller Risiken und Maßnahmen zur Risikominderung"
+      ]
+    },
+    {
+      "id": "DATAFAB-34211",
+      "titel": "One Forecasting (Day2): Solution Concept (OGK scope Q2)",
+      "funktionalitäten": [
+        "Fortsetzung der Konzeptarbeit für OGK-Anteil in Q2 2025",
+        "Weitere Detaillierung des funktionalen Umfangs",
+        "Koordination mit Partnersystemen"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Q1: Erstanalyse mit BI-Domain",
+    "Q2: Exploration mit Magentaforce und BI inkl. Smart",
+    "Q3/Q4: Start der ersten Realisierungen gemäß Ergebnis der Exploration"
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce (DOM0201)",
+    "OneGK (DOM0300)",
+    "Smart BI (DOM0300)",
+    "Prediction Engine (ISP)",
+    "SAP Backendsysteme",
+    "CLM (ServiceNow)"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von mehreren IT-Systemen und Domains (MagentaForce, OneGK, Smart BI, Prediction Engine)",
+    "Ressourcenengpass bei ISP für Prediction-Komponente (wurde in separates Business Epic BEMABU-2077 ausgelagert)",
+    "Komplexität durch Konsolidierung verschiedener Quellsegmente (GK-XL, GK-L, International) zum neuen Bereich LE",
+    "Zeitliche Abhängigkeit: Umsetzung soll spätestens zum nächsten Geschäftsjahr erfolgen",
+    "Technische Machbarkeit muss noch geprüft werden",
+    "Anforderungen bezüglich Autorisierung müssen noch geklärt werden"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": ["PrioQ2_25", "PI 28", "2025_Q1", "2025_Q2"],
+    "meilensteine": [
+      {
+        "id": "DATAFAB-31963",
+        "beschreibung": "Solution Concept (OGK scope)",
+        "zeitraum": "2024-12-19 bis 2025-04-02"
+      },
+      {
+        "id": "DATAFAB-34211",
+        "beschreibung": "Solution Concept (OGK scope Q2)",
+        "zeitraum": "2025-04-03 bis 2025-06-25"
+      },
+      {
+        "id": "MAGBUS-103797",
+        "beschreibung": "Exploration OneForecasting",
+        "zeitraum": "Q1-Q2 2025 (Erstanalyse und Exploration)"
+      }
+    ]
+  }
+}

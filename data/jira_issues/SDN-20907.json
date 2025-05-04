@@ -1,0 +1,100 @@
+{
+  "key": "SDN-20907",
+  "issue_type": "Initiative",
+  "title": "FTTH_Interims solution send FTTH interests (Q4/24)",
+  "status": "Closed",
+  "description": "Description\nContacts\nStream Lead: Alexander Walter\nBusiness: Bernd Frauenknecht, Enrico Dettmann (SGRK/SBU)\nPOM (Technic): Biral Arduc\n  Wiki-Seite: https://wiki.telekom.de/pages/viewpage.action?pageId=2394326530\n  Description\nExample of a JSON is attached, 15.000 locations should be possible to send without \"Datendrehscheibe\".\nAccordingly, the preferred solution is a Standard RestAPI via Tardis to reduce IT effort for the interim solution\nPOM enters the data received into the prospective customer database and makes the data available to the technical department (Puma) with the source code \"GK Großkunde-FIB\". When a location reaches the expansion status \"VVMongoing\", an e-mail is sent to the address specified for the location. Otherwise, no further action (HTN recording, start line construction) is triggered.\n  Workflow:\nThe user select in Location Tab \"added to quote\" the sites he wants to send to POM (technic) in order to notify technic about a site interests by the customer, so that technic can plan their FTTH rollout.\nFor this, the button \"Request availabilty\" gets expanded by a button:\nEN: \"Send FTTH interests\".\nDE: \"In FTTH Interessenten-DB aufnehmen\"\nIn order to send sites to POM (technic) an email per site  mandatory in order to send sites to POM (technic).This email adress fill be an FMB and will be inserted by CPQ automatically. (FMB = ?)\nThe selected sites (single and mass) will be send to POM (technic).\nA success /error notification will be saved within PANDA for the user pro request. If an error was send, the request can be started again.\nA information will be stored inside the location list pro location if a request has been send to POM (technic)\n  Necessary Data to be transferred to POM:\nLabel: GK Großkunde-FIB (mandatory, as Default)\nKLS-ID (mandatory) (Wird von Panda ergänzt, richtig?) (Ja)\nPLZ (mandatory)\nCity (mandatory)\nStreet (mandatory)\nStreet Nr (mandatory)\nExtension (if available, optional)\nCustomer name (mandatory)\nCustomer-Number (GP) (mandatory) \n(06.09.24 decision done to use the CRM-T (AGB Customer ID ) for POM, will be delivered beside the Excel template from user for each upload,\nalso the AGP needs to be entered in PANDA before the upload!)\nEmail address (mandatory) (where POM will send its feedback)\n  For the interim solution, do we have to prevent a location from being sent to POM a second time by a customer? Answer: No\nIs it \"harmful\" to hand over a location in VVM ongoing status, or better, to POM? Answer: No, it is not harmful.\nWhat happens if something like this is done? The specified e-mail address will receive a message. Nothing else will happen.\n  Die Daten aus der Interimslösung, die in die Interessentendatenbank übergeben wurden, können später in das FIB-Tool migriert werden, damit die FMBs abgelöst werden können.\nEmail always FMB? - Ja, es wird immer ein FMB sein. Wir benötigen keine FMB Prüfung, dies wird manuell beim Hochladen der Nutzer sichergestellt.\n  out-of-scope: Geo-Data, VSNF-Data\n      DOR Status Comment\nAcceptance criteria are defined.  \nThe Epics is approved by system architects (done on Epic level). The appoval was done in develpoment circles with subject matter experts interim solution by Alicia Riedel\nThe Epics is prioritized within the backlog (WSJF Method)    \nThe Epics are understood by Dev Teams and estimated     \nThe Epics are documented within JIRA  \nDependencies are identified and there are no external dependencies that can´t be solved within the ART POM (technic)\nNon-functional requirements (NFR) are identified. 1.000-15.000 locations\nSecurity and privacy approval required User Stories are labelled as those. Primary in the acording Jira Parameter   \nInitial high-level acceptance test cases written and reviewed by PO test cases we aggreed later on n.a.  \nAll the information relevant to development is linked: other stories, relevant designs, confluence sources of information, other specs n.a.  \nGUI Views have been defined (in form of click-dummy) and discussed with users for implementation n.a.  \nProcess dependency / adaptations has been defined n.a.  \n \n\nBusiness Scope:\nAs a PANDA user in the FTTH environment, I want to have an interim solution where I can send customer locations to the POM/IDB who are interested in a FTTH rollout. The locations are then considered within the technic for their rollout plan.\nIf a location has the status \"VVM ongoing\" a specified email address receives a message.",
+  "business_value": {},
+  "assignee": "Thomas Heider",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Q4_24"
+  ],
+  "acceptance_criteria": [
+    "For national sites:\nexpand selection for \"request availability\" to button \"send FTTH interests\"\nEmail always FMB needs to be entered per locations and is mandatory in order to send locations via POM\nselected locations (single and mass) - only DE - will be send to POM (technic) in order to notify technic about a site interests by customer for ther FTTH rollout plans \nsuccess notification about data load will be saved within PANDA for the user",
+    "expand selection for \"request availability\" to button \"send FTTH interests\"",
+    "Email always FMB needs to be entered per locations and is mandatory in order to send locations via POM",
+    "selected locations (single and mass) - only DE - will be send to POM (technic) in order to notify technic about a site interests by customer for ther FTTH rollout plans",
+    "success notification about data load will be saved within PANDA for the user",
+    "NFRs: at least 1500 sites shell be send within one request",
+    "location data (which where imported via Panda Excelformat) can be uploaded to POM",
+    "POM is daily checking the status of the location and sends update via mail when location status >= VVMongoing"
+  ],
+  "components": [
+    {
+      "code": "DOM0204",
+      "title": "DOM0204 SD X"
+    },
+    {
+      "code": "SDN_O2B",
+      "title": "SDN_O2B ValueStream Offer to Order"
+    }
+  ],
+  "labels": [
+    "DOM0204",
+    "FTTH_by_LE"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-20882",
+      "title": "SDN-20882",
+      "summary": "[Creators] FTTH Interims solution: Send Interests to Technic POM",
+      "url": "https://jira.telekom.de/browse/SDN-20882",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "15000_location_request.zip",
+      "url": "https://jira.telekom.de/secure/attachment/4806356/15000_location_request.zip",
+      "mime_type": "application/zip",
+      "size": "44 kB",
+      "date": "2024-08-12T13:24:46.001+02:00"
+    },
+    {
+      "filename": "20231114 Anforderung GK FIB Tool.docx",
+      "url": "https://jira.telekom.de/secure/attachment/4818876/20231114%20Anforderung%20GK%20FIB%20Tool.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "405 kB",
+      "date": "2024-08-16T09:49:49.639+02:00"
+    },
+    {
+      "filename": "Abgestimmte Antwort-Mail aus FTTH-Interessenten-DB.docx",
+      "url": "https://jira.telekom.de/secure/attachment/4921325/Abgestimmte%20Antwort-Mail%20aus%20FTTH-Interessenten-DB.docx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": "22 kB",
+      "date": "2024-09-19T09:06:19.784+02:00"
+    },
+    {
+      "filename": "FIB-Tool - Journey.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/4818877/FIB-Tool%20-%20Journey.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "859 kB",
+      "date": "2024-08-16T09:50:13.647+02:00"
+    },
+    {
+      "filename": "image-2024-08-12-13-55-54-599.png",
+      "url": "https://jira.telekom.de/secure/attachment/4806893/image-2024-08-12-13-55-54-599.png",
+      "mime_type": "image/png",
+      "size": "63 kB",
+      "date": "2024-08-12T13:55:54.858+02:00"
+    },
+    {
+      "filename": "image-2024-08-12-13-56-17-662.png",
+      "url": "https://jira.telekom.de/secure/attachment/4806894/image-2024-08-12-13-56-17-662.png",
+      "mime_type": "image/png",
+      "size": "46 kB",
+      "date": "2024-08-12T13:56:17.870+02:00"
+    },
+    {
+      "filename": "image-2024-08-20-09-16-50-533.png",
+      "url": "https://jira.telekom.de/secure/attachment/4826177/image-2024-08-20-09-16-50-533.png",
+      "mime_type": "image/png",
+      "size": "13 kB",
+      "date": "2024-08-20T09:16:50.762+02:00"
+    }
+  ]
+}

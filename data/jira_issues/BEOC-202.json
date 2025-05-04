@@ -1,0 +1,143 @@
+{
+  "key": "BEOC-202",
+  "issue_type": "Business Epic",
+  "title": "B2B Horizon 5 - CRM-T Scale Down - Phase 1",
+  "status": "Funnel",
+  "description": "Description\nGeneral Business Epic (BE) Information\nBusiness Epic Description\nFor non-SME+ customers from midmarket\nwho want to book new fixed-line contracts, manage existing contracts and have service requests,\nthe B2B touchpoints EOS and the O3 order service are to be adapted in such a way that communication with DOT no longer takes place via the LOM service in the direction of CRM-T, but via the Magenta API (M-APIs) in the new DOT world,\nso that\nthe ability to deploy fixed-line products is maintained (by migrating to the target architecture DOT),\nconverged products (MF/FN) can be enabled in the future,\nand the CRM-T legacy can be phased out.\nIn the first step, B2B can use it to provide fixed-line products (Business Start / Pro and Company Flex), and in a further step also mobile phone products (not this profile).",
+  "business_value": {
+    "business_impact": {
+      "scale": 0,
+      "revenue": "",
+      "cost_saving": "",
+      "risk_loss": "",
+      "justification": ""
+    },
+    "strategic_enablement": {
+      "scale": 0,
+      "risk_minimization": "",
+      "strat_enablement": "1.260.000 p.a.",
+      "justification": "Acts as enabler for SME+ migration to DOT (MaxDOT epic)\nAlignment according to target DOT architecture\nExtensive use of existing PK/DOT capabilities\nEnabling the retirement of the LOM\nFixed-mobile convergence"
+    },
+    "time_criticality": {
+      "scale": 0,
+      "time": "Start planned: End planned / Launch:",
+      "justification": ""
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Peter Mike Lange",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "<Additional delimitation information, what should not be realised through the Business Epic?>",
+    "<What will be implemented in subsequent stages or other projects, if applicable?>",
+    "<Are there any technical, scheduling or business dependencies? Does the BE relate to other requirements.>",
+    "<Which business epics have to be realized beforehand in order to implement or launch this requirement? E.g. also need for E2E testing resources >",
+    "FUNNEL",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-98902",
+      "title": "MAGBUS-98902",
+      "summary": "B2B/DOT: Easy B2B Products - Basic Integration for Order Decomposition & Placement in O3 & New Acquisition without frame agreement",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98902",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-98907",
+      "title": "MAGBUS-98907",
+      "summary": "B2B/DOT: Easy B2B Products - Read Frame Agreements & Place Order with Frame Agreement",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98907",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-98906",
+      "title": "MAGBUS-98906",
+      "summary": "B2B/DOT: Easy B2B Products - Product Change",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98906",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-98909",
+      "title": "MAGBUS-98909",
+      "summary": "B2B/DOT: Company Flex - New Product Acquisition (add location products)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98909",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-101866",
+      "title": "MAGBUS-101866",
+      "summary": "B2B/DOT: Company Flex - New Product Acquisition (create basic instance)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101866",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-98911",
+      "title": "MAGBUS-98911",
+      "summary": "B2B/DOT: Company Flex - Product Change",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98911",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-98914",
+      "title": "MAGBUS-98914",
+      "summary": "B2B/DOT: Fixed Net Move & Termination Processes (is NOT Like4Like)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98914",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-98908",
+      "title": "MAGBUS-98908",
+      "summary": "B2B/DOT: Create & Adapt Frame Agreements (is NOT Like4Like)",
+      "url": "https://jira.telekom.de/browse/MAGBUS-98908",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-102334",
+      "title": "MAGBUS-102334",
+      "summary": "B2B/DOT: Easy B2B Products - Basic Integration for Order Enrichment O3/EOS (techn. breakthrough) & New Acquisition",
+      "url": "https://jira.telekom.de/browse/MAGBUS-102334",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-104881",
+      "title": "MAGBUS-104881",
+      "summary": "B2B/DOT: Company Flex - Proof of Concept for New Location Product Acquisition",
+      "url": "https://jira.telekom.de/browse/MAGBUS-104881",
+      "relation_type": "child"
+    },
+    {
+      "key": "MAGBUS-106132",
+      "title": "MAGBUS-106132",
+      "summary": "B2B/DOT: Easy B2B Products & Company Flex - Improvements for Fixed Net Product Handling",
+      "url": "https://jira.telekom.de/browse/MAGBUS-106132",
+      "relation_type": "child"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

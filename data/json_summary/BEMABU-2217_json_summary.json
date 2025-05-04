@@ -1,0 +1,70 @@
+{
+  "epicId": "BEMABU-2217",
+  "title": "LE - AI in MagentaForce (CoPilot Usage / Sales Assist)",
+  "ziele": {
+    "gesamtziel": "Implementierung von KI-Funktionalitäten (CoPilot) in MagentaForce, um die Effizienz der vertrieblich agierenden Mitarbeiter zu steigern, die Kundendokumentation zu verbessern und mehr Zeit für relevante Vertriebstätigkeiten zu schaffen. Die Umsetzung ist für den Zeitraum vom 01.07.2025 bis 30.09.2025 geplant.",
+    "einzelziele": [
+      "Verkürzung der Zeit für manuelle Dokumentationen und Informationssuche",
+      "Stärkung und Verbesserung der Kundenbeziehung",
+      "Mehr Zeit für relevante Vertriebstätigkeiten schaffen",
+      "Bessere Gewährleistung der Zielerreichung im Vertrieb",
+      "Verbesserung der Vollständigkeit von Gesprächsnotizen",
+      "Steigerung des NPS (Nutzerzufriedenheit)"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "3,25 Mio EUR Einsparungen (umgerechnet gesparte Arbeitszeit 62.500 EUR / Woche). Allerdings ist dies kein Effizienzcase; Ambition ist, diese Zeit für mehr Real Selling Time zu nutzen. Mit dieser Funktion wird eine Verbesserung des NPS (Nutzerzufriedenheit via Net Promotor Score) erwartet (Ambition war 10 Punkte je NPS Frage)."
+    },
+    "strategicEnablement": {
+      "skala": 8,
+      "beschreibung": "NPS Steigerung (Mitarbeiterzufriedenheit), Digitale Transformation und Einsatz AI. Vereinfachter Arbeitsablauf spart Zeit und verbessert die Datengenauigkeit."
+    },
+    "timeCriticality": {
+      "skala": 8,
+      "beschreibung": "Geplanter Umsetzungszeitraum Plan Start: 01.07.2025 Plan Ende/Launch: 30.09.2025. Erhöhung der Hitrate und NPS Verbesserung."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2217",
+      "titel": "AI in MagentaForce (CoPilot Usage / Sales Assist)",
+      "funktionalitäten": [
+        "Durchsicht und Änderung von Notizen",
+        "Zusammenfassung von Besprechungen und Erkenntnissen",
+        "Aktualisierung von Kontaktinformationen",
+        "Nachforschungen über potenzielle Kunden",
+        "Erstellen neuer Verkaufschancen/Leads",
+        "Entwürfe für E-Mails",
+        "Automatische Zusammenfassung von Highlights",
+        "Analyse der Kundenstimmung",
+        "Extraktion von Vorschlägen für nächste Schritte aus Videoanrufen",
+        "Durchsuchen von Kundengesprächen nach bestimmten Details",
+        "Generierung von Vertriebs-E-Mails mit angepasstem Tonfall und Stil",
+        "Optimierung des Kundenservice durch Nutzung vertrauenswürdiger Unternehmensdaten",
+        "Automatische Zusammenfassungen und Vereinfachungen von Servicefällen",
+        "KI-gesteuerte Empfehlungen für Folgemaßnahmen",
+        "Intelligente Aufgabenplanung mit Flow und Apex"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Keine Informationen verfügbar"
+  ],
+  "domainsAndITApplications": [
+    "MagentaForce",
+    "DOM0201"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Das Business Epic befindet sich im Status 'Funnel', was darauf hindeutet, dass es sich noch in einer frühen Planungsphase befindet",
+    "Die Umsetzung ist für einen zukünftigen Zeitraum (07/2025-09/2025) geplant, was langfristige Planung erfordert",
+    "Abhängigkeit von der Domain DOM0201 und dem System MagentaForce"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2025-09-30",
+    "fixVersions": [],
+    "meilensteine": []
+  }
+}

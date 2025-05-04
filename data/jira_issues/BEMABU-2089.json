@@ -1,0 +1,65 @@
+{
+  "key": "BEMABU-2089",
+  "issue_type": "Business Epic",
+  "title": "Nearshorefähigkeit MagentaForce für Forderungsmanagement FN GK",
+  "status": "Backlog",
+  "description": "Description\nAllgemeine Informationen zum Business Epic (BE)\nBusiness Epic Nutzenstatement\nFür die TDG,\ndie einen jährlichen Forderungsbestand im Festnetzbereich von ca. 62 Mio. € gegenüber ihren Geschäftskunden ausweist,\nist es erforderlich ein kontinuierliches Forderungsmanagement durch die DTSE zu betreiben,\nwodurch bei den GK-Kunden Vereinbarungen getroffen werden können, die offenen Zahlungen zu begleichen,\nso dass  der Forderungsbestand - insbesondere bei älteren Forderungen - nicht weiter ansteigt,\nund nicht bis zu 15 % (ca. 10 Mio. jährlich ) zeitlich verspätet oder sogar als Forderungsausfall ausgebucht werden müssen.\nDas Vorhaben schafft sichert den Cash Flow der TDG und die Eigenfinanzierung des Konzerns ab und verhindert die Aufnahme von Fremdkapital.\nIm Debitorenprozess des Konzerns - operativ durch die DTSE-CUF verantwortet - werden Forderungen der Kunden bearbeitet, mit dem Ziel, \ndass die Zahlungen in vollem Umfang erfolgen und keine Zahlungsausfälle zum Nachteil des Konzerns eintreten. \nBislang wurden diese Prozesse im Forderungsmanagement in der DTSE in  Deutschland, mit deutschen Mitarbeitern, hpsl am Standort Leipzig, \nbearbeitet. Jedoch treten immer mehr Personalabgänge aufgrund der Altersstruktur auf, so dass diese inzwischen nicht mehr durch \nArbeitsverlagerungen zwischen den Abteilungen / Teams der Debitorenbuchhaltung in Leipzig möglich sind. \nAus diesem Grunde werden neue Arbeitskräfte im Nearshoring aufgebaut, um diese Prozesse auszuführen. Die setzt allerdings die Verfügbarkeit \ndieser (und mehrerer anderer Applikationen) im Nearshore voraus.   \n  Rahmenbedingungen\nIn Scope / Akzeptanzkriterien - Bitte Jira-Feld \"Akzeptanzkriterien\" befüllen!\nOut of Scope\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nAbhängigkeiten/Wechselbeziehungen - Eingangsvoraussetzungen\n<siehe Ausfüllhilfe https://wiki.telekom.de/x/UEVbfQ>\nCross Funktionale Zusammenarbeit\nBeteiligte IT-Applikationen /\nTechnik-Bereiche Beteiligte\nDomains (Tel-IT) Ansprechpartner Bemerkungen                                                                  \nMagentaForce DOM0201 Andrej Deckl  Hub: Digital Lead & Opportunity (DLO)\n< ... > DOM....    \n< ... >      \n  BEO und ggf. Vertreter Jochen Henke, Özgür Özcelik\nSponsor/Fachseite Janka Kmetzova und Renata Jelovecki Thürriegl / External Customer Services/Management in der DTSE\nWeitere Stakeholder Keine Relevanz\nWeitere AnsprP Keine Relevanz\nSonstiges \nHier ist bei Bedarf Platz für sonstige Information.",
+  "business_value": {
+    "business_impact": {
+      "scale": 13,
+      "revenue": "62.Mio € / Jahr",
+      "cost_saving": "Effizienzgewinn durch Nearshoring: 2025: 8 FTE x 50 k € = 400.000€",
+      "risk_loss": "Forderungsausfall bis zu 15 % des Umsatzes ca. 10 Mio. jährlich ab 2025",
+      "justification": "Die Nutzung von Magenta Force im Nearshoring ist erfolgskritisch für das Forderungsmanagement des Konzerns. Sicherstellung des Zahlungseingangs von rund 62 Mio € jährlich durch die Kunden aufgrund der Aktivität des Forderungsmanagements."
+    },
+    "strategic_enablement": {
+      "scale": 8,
+      "risk_minimization": "Aufbau von Ressourcen im Nearshore und Nutzung von Magenta Force. Verhindern eines jährlichen Forderungsausfalls bis zu 40 Mio € (bis Ende 2027)",
+      "strat_enablement": "",
+      "justification": "Eintritt des Risikos ohne Umsetzung dieser Maßnahme ab Q1 2025"
+    },
+    "time_criticality": {
+      "scale": 13,
+      "time": "Eintritt des Risikos ohne Umsetzung dieser Maßnahme ab Q1 2025",
+      "justification": "Verhindern eines jährlichen Forderungsausfalls bis zu 40 Mio € (bis Ende 2027)"
+    },
+    "footnotes": [
+      "Bezugszeitraum ist 12 Monate nach Launch für neue/zusätzliche Umsatzerlöse",
+      "Kosten für Risiken = Schadenshöhe x Eintrittswahrscheinlichkeit"
+    ]
+  },
+  "assignee": "Özgür Özcelik",
+  "priority": "",
+  "target_start": "2025-05-01",
+  "target_end": "2025-06-01",
+  "fix_versions": [
+    "PrioQ2_25"
+  ],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "DOM0201",
+      "title": "DOM0201 B2B Standard - Mass Market"
+    },
+    {
+      "code": "Top_Demand_2025",
+      "title": "Top_Demand_2025 Top Demand"
+    }
+  ],
+  "labels": [
+    "B2B_PRIO",
+    "B2B_Target",
+    "Cross-vertical"
+  ],
+  "realized_by": [
+    {
+      "key": "MAGBUS-101725",
+      "title": "MAGBUS-101725",
+      "summary": "MF: Nearshorefähigkeit MagentaForce für Forderungsmanagement FN GK",
+      "url": "https://jira.telekom.de/browse/MAGBUS-101725",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": []
+}

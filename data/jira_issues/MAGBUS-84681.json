@@ -1,0 +1,201 @@
+{
+  "key": "MAGBUS-84681",
+  "issue_type": "Portfolio Epic",
+  "title": "Inhouse Basic: Pinoerbetrieb für Auftragsabschluss (Faktura)",
+  "status": "In Progress",
+  "description": "",
+  "business_value": {},
+  "assignee": "Sven Kannberg",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "Q2_25"
+  ],
+  "acceptance_criteria": [
+    "Am EOS SeCe-IT-Teilauftrag gibt es einen neuen Button \"Teilauftrag nachverfolgen\"\n  Auf die Seite kann nach erfolgreicher Vervollständigung (nach erfolgreichem Klick auf \"Versenden\" oder \"in Nacharbeit versenden\") abgesprungen werden\nVorm Versenden ist der Button weiß und kann auch geklickt werden - wird dies aber getan, erscheint ein Pop-Up Fenster mit dem Hinweis:\n\"Bevor Sie diesen Teilauftrag nachverfolgen können, muss der Teilauftrag versendet worden sein.\"\nAuch Nicht-Bearbeiter können auf die Seite zugreifen (lesende Sicht)\nDie Logik ist die selbe wie oben, der Teilauftrag muss erst versendet worden sein, um die Seite öffnen zu können\nAuch nach Auftragsabschluss in EOS kann die Seite weiterhin geöffnet werden (lesende Sicht)\nSobald der Teilauftrag versendet wurde, wird der Button in magenta angezeigt \nin der lesenden Sicht (nicht Bearbeiter) ist der Button jederzeit weiß\nDas Icon lautet: assets/img/icons/new-window_outline.svg",
+    "Auf die Seite kann nach erfolgreicher Vervollständigung (nach erfolgreichem Klick auf \"Versenden\" oder \"in Nacharbeit versenden\") abgesprungen werden\nVorm Versenden ist der Button weiß und kann auch geklickt werden - wird dies aber getan, erscheint ein Pop-Up Fenster mit dem Hinweis:\n\"Bevor Sie diesen Teilauftrag nachverfolgen können, muss der Teilauftrag versendet worden sein.\"",
+    "Vorm Versenden ist der Button weiß und kann auch geklickt werden - wird dies aber getan, erscheint ein Pop-Up Fenster mit dem Hinweis:\n\"Bevor Sie diesen Teilauftrag nachverfolgen können, muss der Teilauftrag versendet worden sein.\"",
+    "\"Bevor Sie diesen Teilauftrag nachverfolgen können, muss der Teilauftrag versendet worden sein.\"",
+    "Auch Nicht-Bearbeiter können auf die Seite zugreifen (lesende Sicht)\nDie Logik ist die selbe wie oben, der Teilauftrag muss erst versendet worden sein, um die Seite öffnen zu können",
+    "Die Logik ist die selbe wie oben, der Teilauftrag muss erst versendet worden sein, um die Seite öffnen zu können",
+    "Auch nach Auftragsabschluss in EOS kann die Seite weiterhin geöffnet werden (lesende Sicht)",
+    "Sobald der Teilauftrag versendet wurde, wird der Button in magenta angezeigt \nin der lesenden Sicht (nicht Bearbeiter) ist der Button jederzeit weiß\nDas Icon lautet: assets/img/icons/new-window_outline.svg",
+    "in der lesenden Sicht (nicht Bearbeiter) ist der Button jederzeit weiß",
+    "Das Icon lautet: assets/img/icons/new-window_outline.svg",
+    "Mit Klick öffnet sich eine neue Seite mit der Überschrift \"Auftragsnachverfolgung [ATT AuftragsID - verlinkt]\nDarunter wird das Partnersystem, der Teilauftrag und der Standort angezeigt",
+    "Darunter wird das Partnersystem, der Teilauftrag und der Standort angezeigt"
+  ],
+  "components": [
+    {
+      "code": "ATT",
+      "title": "ATT "
+    },
+    {
+      "code": "O3-POM",
+      "title": "O3-POM "
+    },
+    {
+      "code": "SeCe-IT",
+      "title": "SeCe-IT "
+    }
+  ],
+  "labels": [
+    "DigiHub_DOM",
+    "EOS",
+    "PI28",
+    "SeCe-IT"
+  ],
+  "realized_by": [
+    {
+      "key": "EOS-6935",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/EOS-6935",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "ADCL-12295",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/ADCL-12295",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-3017",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SECEIT-3017",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-3057",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SECEIT-3057",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SECEIT-2112",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SECEIT-2112",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "A3.png",
+      "url": "https://jira.telekom.de/secure/attachment/5339163/A3.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-27T14:21:37.903+01:00"
+    },
+    {
+      "filename": "EOS Teilauftragsübersicht.png",
+      "url": "https://jira.telekom.de/secure/attachment/5355482/EOS%20Teilauftrags%C3%BCbersicht.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-31T10:31:29.048+01:00"
+    },
+    {
+      "filename": "Faktura-anstoßen.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526249/Faktura-ansto%C3%9Fen.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:08:04.326+01:00"
+    },
+    {
+      "filename": "FakturaCall.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526250/FakturaCall.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:08:15.357+01:00"
+    },
+    {
+      "filename": "Fakturierung .png",
+      "url": "https://jira.telekom.de/secure/attachment/5355493/Fakturierung%20.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-31T10:44:25.919+01:00"
+    },
+    {
+      "filename": "Hardware-Zustellung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526251/Hardware-Zustellung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:08:38.470+01:00"
+    },
+    {
+      "filename": "image-2025-01-22-11-55-10-796.png",
+      "url": "https://jira.telekom.de/secure/attachment/5322939/image-2025-01-22-11-55-10-796.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-22T11:55:10.914+01:00"
+    },
+    {
+      "filename": "image-2025-02-05-11-51-56-382.png",
+      "url": "https://jira.telekom.de/secure/attachment/5370627/image-2025-02-05-11-51-56-382.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-05T11:51:56.475+01:00"
+    },
+    {
+      "filename": "image-2025-02-26-11-44-42-063.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526253/image-2025-02-26-11-44-42-063.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:08:58.739+01:00"
+    },
+    {
+      "filename": "Leistungserbringung_sicherstellen.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526254/Leistungserbringung_sicherstellen.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:09:13.814+01:00"
+    },
+    {
+      "filename": "Reklamieren.png",
+      "url": "https://jira.telekom.de/secure/attachment/5339165/Reklamieren.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-27T14:25:08.135+01:00"
+    },
+    {
+      "filename": "SeCe-IT.png",
+      "url": "https://jira.telekom.de/secure/attachment/5339158/SeCe-IT.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-27T14:19:22.727+01:00"
+    },
+    {
+      "filename": "SeCe-IT 2.png",
+      "url": "https://jira.telekom.de/secure/attachment/5339159/SeCe-IT%202.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-01-27T14:19:41.367+01:00"
+    },
+    {
+      "filename": "SeCe-IT-Nachverfolgung - Absprung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5526248/SeCe-IT-Nachverfolgung%20-%20Absprung.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-03-21T12:07:40.749+01:00"
+    },
+    {
+      "filename": "See-IT Fertigmeldung .png",
+      "url": "https://jira.telekom.de/secure/attachment/5374796/See-IT%20Fertigmeldung%20.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-06T10:49:20.005+01:00"
+    },
+    {
+      "filename": "Übersicht der Hardware Positionen.png",
+      "url": "https://jira.telekom.de/secure/attachment/5370628/%C3%9Cbersicht%20der%20Hardware%20Positionen.png",
+      "mime_type": "image/png",
+      "size": "",
+      "date": "2025-02-05T11:52:17.274+01:00"
+    }
+  ]
+}

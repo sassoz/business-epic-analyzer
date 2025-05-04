@@ -1,0 +1,119 @@
+{
+  "key": "EOS-7099",
+  "issue_type": "Epic",
+  "title": "Transmission of the (Verzögerungsgrund - VZG) delay reason to SeCe-IT",
+  "status": "Analysis",
+  "description": "Description\n Story\nAs an AuftragVervollständiger,\nI would like to EOS transfers the in-house Verzögerungsgrund (delay reason) directly to SeCe-IT,\nto have this information communicated from EOS in SeCe-IT.\n   Fragen / Hinweise:\nGrundsätzlich gibt es zwei Möglichkeiten\n1. Der VZG wird nur noch für alle Teilaufträge - egal welches Fremdsystem - am Teilauftrag dokumentiert - Out of Scope\n2. Der VZG wird weiterhin übergreifend am EOS Auftrag dokumentiert inkl. am SeCe-IT Teilauftrag\nsiehe MiroBoard: https://miro.com/app/board/uXjVK1IVppM=/\nSeCe-IT VZG:\nEs können bis zu 8 SeCe-IT Teilaufträge an einem EOS Auftrag hängen\nProblemstellung (Problem Statement)\nAktuell müssen Verzögerungen direkt in SeCe-IT hinterlegt werden, da SeCe-IT die Basis für diverse Reportings ist. Dafür müssen die Anwender den SeCe-IT Teilauftrag immer in Nacharbeit nach SeCe-IT versenden, weil dort immer wenn der Auftrag länger als 2 Tage liegt, ein Verzögerungsgrund hinterlegt werden muss. \nCurrently, delays have to be stored directly in SeCe-IT, as SeCe-IT is the basis for various reports. To do this, users must always send the SeCe-IT partial order to SeCe-IT in follow-up, because a reason for delay must always be stored there if the order is longer than 2 days. \nFachlicher Lösungswunsch (Feature Hypothese)\nAuswahl in EOS direkt am Teilauftrag, damit dieser final versendet werden kann und der AW für die Phase 1 in SeCe-IT nicht mehr nach SeCe-IT abspringen muss. \nWichtige Fachexperten (Key subject matter experts)\n...\nExterne Abhängigkeiten (External Dependencies)\nWeitere von der Gesamtidee betroffene DigiHubs & Systeme (falls relevant und bereits bekannt):\nAbhängige fachliche Programme:\nLösung ist Voraussetzung für: …\nNicht funktionale Anforderungen (Non Functional Requirements)\nAnforderungen an die \"Qualität\", in der die geforderte Funktionalität zu erbringen ist (z.B. Performance, Reaktionszeiten, Verfügbarkeit, Erreichbarkeit, …).\nZielsetzung und Hauptergebnisse (Objectives and Key Results):\n..\nAnwender/Geschäftswert (User/Business Value)\nWovon/in welchem Umfang profitiert das Unternehmen/ der Kunde nach Umsetzung der Maßnahme?\nZeitliche Kritikalität (Timing Criticality )\n...\nRisikoreduzierung/Chancenwahrnehmung (Risk Reduction/Opportunity Enablement )\n...\nKosten der Verzögerung (Cost of Delay )\nWelche Auswirkungen/Folgen hat eine Nichtumsetzung der Anforderung auf das Unternehmen/ den Kunden/ andere Maßnahmen?\nNotwendige Änderungen (Erfolgt durch EOS Team)\nFolgende Auflistung dient als erste Orientierung bzgl. der notwendigen Änderungen an EOS zur Umsetzung dieses EPICs:\nNeue Vervollständigungsaufgabe \"Auftrag Vervollständigung Inhouse Verzögerungsgrund ändern\"\nNeuer Vervollständigungs-GAF inkl. Vervollständigungskomponente\nGAF \"Teilauftrag versenden\" um Validierung bei SeCe-IT erweitern\nDokumentation der Vervollständigungsaufgaben erweitern (Reihenfolge)\nService-Dreigestirn für die Anbindung des Services zum Abfragen der VZG bei SeCe-IT (falls notwendig)\nund zum Übermitteln, falls ein VZG ausgewählt wurde.\n Definition of Ready\nDie User Story des Epics ist abgestimmt. (mandatory)\nEs ist mindestens ein Akzeptanzkriterium dokumentiert. (mandatory)\nAlle blockierenden Aufgaben (Tasks) sind geschlossen. (mandatory)\nDer GUI-Prototyp für die neu zu erstellenden und anzupassenden Dialoge liegt vor. (optional)\nSchnittstellenentwurf liegt vor. (optional)\nAlle POs der annehmenden Systeme haben der Übernahme in das Product Backlog zugestimmt. (mandatory)\nAlle, zu Beginn als notwendig erkannten Inhalte sind als Entwurf abgestimmt, ggf. müssen die Inhalte in der Production detailliert werden. (mandatory)\n  Technische CHECKLISTE\nDieser Abschnitt dient als Orientierung zur Prüfung, ob an \"alles\" gedacht wurde.\nDieser Abschnitt soll vor dem Refinement gelöscht werden!\nDie Checkliste für die Stories ist der Vorlage für Stories zu entnehmen (EOS-433)\nZur groben Orientierung hier noch die entsprechenden Stichpunkte:\nExport-Schnittstellen\nImport-Schnittstellen\nLöschkonzept\nBenutzeroberfläche / Dialoge\nRollen & Rechte\nKorrespondenz\nAufgaben\nAuftragsvervollständigung\nNachrichten\nKontakte\nAbhängigkeiten zwischen Domänen\nKommunikation\nWelche Stakeholer müssen über diese Änderung informiert werden?\nAL, TL, OPO, Reporting\nABD: GK-ENK: Ayla Özkara; DTT: Peter Stirnberg; P&PT: Tanja Heß; TL CB05 Bastian Sichhart\nWie werden die Mitarbeiter über diese Änderung informiert?\nMüssen Magenta Infos Artikel geändert oder erstellt werden? News? Newsletter?\nSind Schulungen notwendig? WBT? BrainBite? \nIst eine zusätzliche Kommunikation über YaM notwendig?\nUsesCases / TestCases\nUseCase 1\nUseCase 2\n...",
+  "business_value": {},
+  "assignee": "Przybylski, Matthias",
+  "priority": "",
+  "target_start": "2025-04-04",
+  "target_end": "2025-05-15",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [
+    "AC1: EOS gets the current SeCe-IT delay reason informatzion from SeCe-IT and shows this value in completion task\nAC1.1: Call SeCe-IT Reminder-Service and receive values (GET call)\ndate is visible in EOS\nreason is visible in dropdown box\nmessage is visible in textarea field\nAC1.2: If no delay reason available, keep date, reason and message empty",
+    "AC1.1: Call SeCe-IT Reminder-Service and receive values (GET call)\ndate is visible in EOS\nreason is visible in dropdown box\nmessage is visible in textarea field",
+    "date is visible in EOS",
+    "reason is visible in dropdown box",
+    "message is visible in textarea field",
+    "AC1.2: If no delay reason available, keep date, reason and message empty",
+    "AC2: A change of \"Verzögerungsgrund\" in EOS completion for SeCe-IT order positions is transmitted to SeCe-IT with \"Übernehmen\" (\"Apply\")\nRegardless of whether\nAC2.1: it is a different VZG (delay reason) (new delay reason set -> POST call to SeCe-IT)\nAC2.2: or the user has changed from \"Yes\" to \"No\" (delay reason removed -> DELETE call to SeCe-IT)\nAC2.3: or the other way around (new delay reason set -> POST call to SeCe-IT)",
+    "Regardless of whether\nAC2.1: it is a different VZG (delay reason) (new delay reason set -> POST call to SeCe-IT)\nAC2.2: or the user has changed from \"Yes\" to \"No\" (delay reason removed -> DELETE call to SeCe-IT)\nAC2.3: or the other way around (new delay reason set -> POST call to SeCe-IT)",
+    "AC2.1: it is a different VZG (delay reason) (new delay reason set -> POST call to SeCe-IT)",
+    "AC2.2: or the user has changed from \"Yes\" to \"No\" (delay reason removed -> DELETE call to SeCe-IT)",
+    "AC2.3: or the other way around (new delay reason set -> POST call to SeCe-IT)",
+    "AC3: A mapping from \"Verzögerungsgrund\" (delay reason) to SeCe-IT accepted \"Wiedervorlagegrund\" (postponement reason) is done by EOS before calling the SeCe-IT ReminderService API of SeCe-IT (which handles postponements only)",
+    "AC4: Current implementation of GUI validation and behaviour is kept as it is",
+    "A change in SeCe-IT is transmitted to EOS",
+    "Reporting takes place via EOS VZG - DELAY REASON"
+  ],
+  "components": [],
+  "labels": [
+    "EOS-PI28",
+    "PI28",
+    "Verzögerungsgründe"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "Fehlermeldung.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505719/Fehlermeldung.png",
+      "mime_type": "image/png",
+      "size": "11 kB",
+      "date": "2025-03-17T09:33:33.404+01:00"
+    },
+    {
+      "filename": "image-2025-01-07-18-18-42-313.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505720/image-2025-01-07-18-18-42-313.png",
+      "mime_type": "image/png",
+      "size": "6 kB",
+      "date": "2025-03-17T09:33:33.426+01:00"
+    },
+    {
+      "filename": "image-2025-03-31-09-33-00-408.png",
+      "url": "https://jira.telekom.de/secure/attachment/5555864/image-2025-03-31-09-33-00-408.png",
+      "mime_type": "image/png",
+      "size": "67 kB",
+      "date": "2025-03-31T09:33:00.646+02:00"
+    },
+    {
+      "filename": "image-2025-03-31-09-35-06-975.png",
+      "url": "https://jira.telekom.de/secure/attachment/5555866/image-2025-03-31-09-35-06-975.png",
+      "mime_type": "image/png",
+      "size": "66 kB",
+      "date": "2025-03-31T09:35:07.150+02:00"
+    },
+    {
+      "filename": "Positionsdetailseite.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505721/Positionsdetailseite.png",
+      "mime_type": "image/png",
+      "size": "6 kB",
+      "date": "2025-03-17T09:33:33.438+01:00"
+    },
+    {
+      "filename": "screenshot-2.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505722/screenshot-2.png",
+      "mime_type": "image/png",
+      "size": "118 kB",
+      "date": "2025-03-17T09:33:33.448+01:00"
+    },
+    {
+      "filename": "SeCe-IT Verzögerungsgründe in EOS.msg",
+      "url": "https://jira.telekom.de/secure/attachment/5505723/SeCe-IT%20Verz%C3%B6gerungsgr%C3%BCnde%20in%20EOS.msg",
+      "mime_type": "application/octet-stream",
+      "size": "210 kB",
+      "date": "2025-03-17T09:33:33.458+01:00"
+    },
+    {
+      "filename": "Teilaufträge.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505724/Teilauftr%C3%A4ge.png",
+      "mime_type": "image/png",
+      "size": "145 kB",
+      "date": "2025-03-17T09:33:33.470+01:00"
+    },
+    {
+      "filename": "Verzögerungsgründe in SeCe-IT.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505725/Verz%C3%B6gerungsgr%C3%BCnde%20in%20SeCe-IT.png",
+      "mime_type": "image/png",
+      "size": "22 kB",
+      "date": "2025-03-17T09:33:33.481+01:00"
+    },
+    {
+      "filename": "VZG am SeCe-IT Auftrag.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505726/VZG%20am%20SeCe-IT%20Auftrag.png",
+      "mime_type": "image/png",
+      "size": "362 kB",
+      "date": "2025-03-17T09:33:33.491+01:00"
+    },
+    {
+      "filename": "VZG mit Datum.png",
+      "url": "https://jira.telekom.de/secure/attachment/5505727/VZG%20mit%20Datum.png",
+      "mime_type": "image/png",
+      "size": "82 kB",
+      "date": "2025-03-17T09:33:33.501+01:00"
+    }
+  ]
+}

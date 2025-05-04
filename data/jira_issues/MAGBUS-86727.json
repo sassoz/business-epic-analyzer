@@ -1,0 +1,24 @@
+{
+  "key": "MAGBUS-86727",
+  "issue_type": "Epic",
+  "title": "[NGMobile][RECO] Establish New Service for Recommendations",
+  "status": "Closed",
+  "description": "Description\nDescription: To build an effective recommendation engine, it is crucial to establish a comprehensive data context framework. This involves identifying, documenting, integrating, and storing all relevant data sources to ensure that the recommendation algorithms have access to accurate and complete data. This also includes configuring and testing the integration with various APIs. We will ensure that all tasks follow our architectural guidelines for consistency and scalability.\nTasks within this Epic:\nAWS Infrastructure\nDatabase\nAPI Integration\nTardis Integration\nConfiguration Files Structure\nDocumentation\ncreating relevant Wiki pages\nTesting and Validation\nTest Automation\nLoad test\nOutcome: Upon the completion of these tasks, we will be ready to utilize the new service. The service can be managed and further developed by any developer to optimize and enhance the recommendation engine. All tasks will be carried out in accordance with our architectural guidelines to ensure consistency, scalability, and maintainability.\nResources:\nHeading 1 Heading 2\nData Domain Finance & B2B https://yam-united.telekom.com/pages/data-tribe/apps/wiki/archive/list/view/0f6db1cf-6d49-40ae-b2c8-b40757f4b58f\nODL/ODW/ODE https://wiki.telekom.de/display/DATTRIB/MusGKteers+-+Documentation\nData Domain Wiki https://wiki.telekom.de/pages/viewpage.action?pageId=1575945186\nL-PIM https://developer.telekom.de/catalog/mabu/mabu-mbsp-product-inventory-management/g_api/production/2.4.2\nO-PIM https://developer.telekom.de/catalog/mabu/mabu-productInventory-b2b-std/g_api/production/1.14.2\nDocumentation https://wiki.telekom.de/display/MBFY/Carmen+Scale+Down\n   ",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI 27"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "MB_Phoenix",
+    "MB_checked"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,23 @@
+{
+  "key": "EOS-6890",
+  "issue_type": "Epic",
+  "title": "LOM to MAPI: Auftrag Updates: Teilauftrag importieren für M-API-Fulfillmentsystem - Teil 1 Updates nach dem Versenden",
+  "status": "Funnel",
+  "description": "Description\n Story\nAls User,\nmöchte ich mit den MAPIs umgehen können wir vorher über den LOM,\num in Zukunft weiter CRM-T Aufträge über EOS Vervollständigen zu können .\n   Fragen / Hinweise:\n...",
+  "business_value": {},
+  "assignee": "Schliwitzki, Jonas",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-05",
+  "fix_versions": [
+    "PI28-stretch"
+  ],
+  "acceptance_criteria": [
+    "Es ist möglich Updates über den O3 zu erhalten, wenn der Auftrag die Produktionsstraße CRM-T hat und über die MAPIs produziert wurde."
+  ],
+  "components": [],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

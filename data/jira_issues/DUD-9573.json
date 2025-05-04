@@ -1,0 +1,23 @@
+{
+  "key": "DUD-9573",
+  "issue_type": "Epic",
+  "title": "Änderung Abuse Tel. RDAP und Whois",
+  "status": "Closed",
+  "description": "Description\nManagement Summary\nDie Hotline-Rufnummer +49 7000 330 7345 wird kurzfristig abgeschaltet und soll in der WhoIs und in der RDAP-Ausgabe durch eine andere Nummer ersetzt werden.\nDescription of Demand / Problem\nIm RDAP und Whois (registrar.telekom.de )  wird eine Abuse Telefonnummer des Registrars ausgegeben. Die derzeitig angezeigte Telefonnummer  +49 7000 330 7345  wird im November abgeschaltet und muss durch die neue Telefonnummer  +49 180 5212095 ersetzt werden.\nDie neue Telefonnummer ist bereits aktiv, von daher kann die Anpassung schon vor November erfolgen.\nFalls die in der Whois ausgegebene Telefonnummer nicht von Doris ausgegeben wird, muss die Fachseite NIC Bremen/Oldenburg  die T-Systems beauftragen.",
+  "business_value": {},
+  "assignee": "Thomas Klaus Götz",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "CapEx",
+    "SPL",
+    "SP_Legacy"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

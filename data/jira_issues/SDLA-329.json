@@ -1,0 +1,29 @@
+{
+  "key": "SDLA-329",
+  "issue_type": "Initiative",
+  "title": "MIST - Setup UI and Workflows in ServiceNow",
+  "status": "Funnel",
+  "description": "Description\nFor a customer\nwho wants to use our product\nthe capability\nis a prerequisite\nthat contains all the efforts to setup the UI and workflow elements in ServiceNow \nso that we have a reliable connection between Juniper MIST UI Elements and workflows as well as ServiceNow\n  Business Hypothesis:\nCustomer can order MIST functionalities in ServiceNow frontend, we are able to sell more + increase in revenue",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "2022-01-13",
+  "target_end": "2022-03-10",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "the UIs are Realization",
+    "Workflows are realized",
+    "Created purchase order requisition for MIST",
+    "Updated Interface ServiceNow/NetCracker"
+  ],
+  "components": [
+    {
+      "code": "SDN",
+      "title": "SDN B2B Software Defined Networks"
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

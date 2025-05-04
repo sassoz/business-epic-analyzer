@@ -1,0 +1,61 @@
+{
+  "key": "B2BCA-3559",
+  "issue_type": "Epic",
+  "title": "Update on Registrar Data Escrow Specification Revisions",
+  "status": "Funnel",
+  "description": "Description\nManagement Summary\nICANN hat uns am 28.06.2024 über bevorstehende Änderungen beim Dienst \"Data Escrow\" informiert. Die Aktualisierung muss bis August 2025 erfolgen.\nDescription of Demand / Problem\nDie Abschnitte \"8.1 bis 8.3\" der \"Registration Data Policy\" ändern sich. ICANN hat hierzu noch keine detaillierten Änderungen bekanntgegeben, diese folgen in Kürze.\nDie ICANN-Organisation wird die Registrare über die aktualisierte Version 2024 der RDE-Spezifikation informieren.\nDie Version 2024 der RDE-Spezifikation tritt am 21. August 2025 in Kraft.\nRegistrare und DEAs KÖNNEN vor dem Datum des Inkrafttretens ab dem 21. August 2024 gemäß dem folgenden Umsetzungszeitplan implementieren:\n● Vor dem 21. August 2024 müssen Registrare weiterhin die Version 2007 der RDE-Spezifikation implementieren.\n● Zwischen dem 21. August 2024 und dem 20. August 2025 empfiehlt die ICANN-Organisation den Registraren, die Version 2024 der RDE-Spezifikation zu implementieren, die Registrare können jedoch weiterhin die Version 2007 der Registrar Data Escrow Specification implementieren.\n● Nach dem 21. August 2025 müssen Registrare die Version 2024 der RDE-Spezifikation implementieren, und die Version 2007 der RDE-Spezifikation gilt als veraltet.\nDie ICANN-Organisation ermutigt Registrare, sich mit ihrer DEA abzustimmen, bevor sie die Version 2024 der RDE-Spezifikation implementieren. \nNach Rücksprache mit DENIC, Data Escrow, wird ICANN die Spezifikationen noch veröffentlichen - aktuell liegen diese noch nicht vor.\nFolgende Daten sind minimum zu übertragen:\n \nICANN RDE Spec,Field Name,Abbreviation\n8.1.1,domain,domainname\n8.1.2,expiration-date,expire\n8.1.3,iana,ianaid\n8.1.4,rt-handle:name,rt-name\n8.1.5,rt-handle:address,rt-street\n8.1.6,rt-handle:city,\"rt-city,rt-town\"\n8.1.7,rt-handle:state,\"rt-state,rt-province\"\n8.1.8,rt-handle:zip,rt-zip\n8.1.9,rt-handle:country,rt-country\n8.1.10,rt-handle:phone,rt-phone\n8.1.11,rt-handle:email,\"rt-email,rt-mail\"\n3.4.1.3,bc-handle:name,bc-name\nweitere Informationen auf der Webseite https://welcome-rde.denic-services.de/rde-specs-2024\n  Acceptance Criteria\nWhen are the requirements met?\nChecklist\nDependencies fulfilled (Ticket dependencies).\nAccessibility / Barrierefreiheit: Principles fulfilled.\nDoD: Verified by PO/BA/TM",
+  "business_value": {},
+  "assignee": "Dennis Schultze",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI_11_2025",
+    "PI_12_2025"
+  ],
+  "acceptance_criteria": [
+    "Options",
+    "FUNNEL",
+    "IN PROGRESS",
+    "Add Link",
+    "All",
+    "Comments",
+    "History",
+    "Activity",
+    "Emails",
+    "Transitions",
+    "Git Roll Up",
+    "Git Commits",
+    "Smart Checklist History",
+    "Estimate (async mode)",
+    "Add a comment...\nPro tip: press m to comment"
+  ],
+  "components": [
+    {
+      "code": "DAVID",
+      "title": "DAVID "
+    }
+  ],
+  "labels": [
+    "B2BCA_PI11",
+    "B2BCA_PI12"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "HowTo_new_Registrar_Data_Escrow_Specifications-V1.4.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/5374368/HowTo_new_Registrar_Data_Escrow_Specifications-V1.4.pdf",
+      "mime_type": "application/pdf",
+      "size": "623 kB",
+      "date": "2025-02-06T10:44:59.724+01:00"
+    },
+    {
+      "filename": "Update on Registrar Data Escrow Specification Revisions.msg",
+      "url": "https://jira.telekom.de/secure/attachment/4694580/Update%20on%20Registrar%20Data%20Escrow%20Specification%20Revisions.msg",
+      "mime_type": "application/octet-stream",
+      "size": "161 kB",
+      "date": "2024-07-03T13:38:05.145+02:00"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "key": "SNOWTC-14460",
+  "issue_type": "Epic",
+  "title": "|MVP| Interface SeCe-IT_DTA-Order via TMF 622 as Consumer",
+  "status": "Closed",
+  "description": "",
+  "business_value": {},
+  "assignee": "Unassigned",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "An order coordinated with SeCe-IT can be sent by ServiceNow",
+    "Direct answers regarding receipt of the order can be accepted"
+  ],
+  "components": [],
+  "labels": [
+    "Sys_Architecture"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

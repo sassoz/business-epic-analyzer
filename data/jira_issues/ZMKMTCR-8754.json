@@ -1,0 +1,28 @@
+{
+  "key": "ZMKMTCR-8754",
+  "issue_type": "Epic",
+  "title": "Digitalisierung Zoom",
+  "status": "Open",
+  "description": "Description\nIn diesem Epic werden alle Userstories zusammengefasst, die dazu beitragen die Prozessierung des Produkts Zoom zu digitalisieren mit dem Ziel einen \"Zero Touch\" Prozess zu etablieren",
+  "business_value": {},
+  "assignee": "Nicole Meinhart",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [
+    {
+      "code": "ZMKM",
+      "title": "ZMKM ZMKM"
+    },
+    {
+      "code": "ZMKM_AD-CAPEX",
+      "title": "ZMKM_AD-CAPEX "
+    }
+  ],
+  "labels": [],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

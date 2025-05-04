@@ -1,0 +1,85 @@
+{
+  "key": "SDLA-1196",
+  "issue_type": "Initiative",
+  "title": "Product Catalogue Management for SD LAN/WiFi",
+  "status": "Funnel",
+  "description": "Description\n The PCM Module is enabled to retreive the commercial product and condition data from Prima+. Custom Tables used in CPQ to feed the configuration UIs are updated by the PCM to reflect the status currently maintained in Prima+ depending on product lifecycle status. Information not available from Prima+ is enriched before data distribution to CPQ is trigerred.\nContact persons: \nBusiness Epic Owner: Kaspar Dütting\nBusiness Owner Stefan Jung\nCPDM: Florian Skirl\nSales: Wilhelm Niemeier - Responsibilities are currently being clarified\nPrima+: Jörg Lödige\n Business Value: medium (low/medium/high) -> das manuelle Interptretieren des Produktmodells entfällt\n EDIT MW: Available data in Prima+ needs to be identified, SDWAN and MPM for instance have limitations regarding data availability from Prima on the Condition Catalog side.\n  Pre-requists:\n\nBusiness Scope:\nProdukt wird in Prima+ hinterlegt. CPQ hat Zugriff auf den Produktkatalog via API. Der Master für eine Angebots- und Auftragserstellung ist Prima+",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Solution Release SD LAN/WIFI R1.0"
+  ],
+  "acceptance_criteria": [
+    "Alle in Prima+ hinterlegten Informationen werden an CPQ übertragen",
+    "Preisinformationen/Konditionen werden manuell über das PCM Modul in CPQ angereichert",
+    "CustomTables für SD LAN/WiFi und Skripte dynamisch angelegt"
+  ],
+  "components": [],
+  "labels": [
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [
+    {
+      "key": "SDN-16880",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-16880",
+      "relation_type": "realized_by"
+    },
+    {
+      "key": "SDN-1883",
+      "title": "",
+      "summary": "",
+      "url": "https://jira.telekom.de/browse/SDN-1883",
+      "relation_type": "realized_by"
+    }
+  ],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "20221116_SDLAN_Testcases.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2625559/20221116_SDLAN_Testcases.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-16T15:07:56.347+01:00"
+    },
+    {
+      "filename": "CPDMCATExcel_SDLAN_Solution_2022-11-02_09-18-45.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2598753/CPDMCATExcel_SDLAN_Solution_2022-11-02_09-18-45.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-11-09T13:39:16.641+01:00"
+    },
+    {
+      "filename": "Juniper_Planning_for_Strategic_Planning.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2598756/Juniper_Planning_for_Strategic_Planning.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-09T13:45:23.844+01:00"
+    },
+    {
+      "filename": "N22-0358 SDLAN-Produktmodell_20221102_093853.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2598752/N22-0358%20SDLAN-Produktmodell_20221102_093853.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-09T13:39:17.033+01:00"
+    },
+    {
+      "filename": "pcm-process.pdf",
+      "url": "https://jira.telekom.de/secure/attachment/2598984/pcm-process.pdf",
+      "mime_type": "application/pdf",
+      "size": "",
+      "date": "2022-11-09T13:47:55.212+01:00"
+    },
+    {
+      "filename": "TCWL_Productmodel-Master_v1.1_2022-10-20 (2).xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2598764/TCWL_Productmodel-Master_v1.1_2022-10-20%20%282%29.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-11-09T13:58:27.663+01:00"
+    }
+  ]
+}

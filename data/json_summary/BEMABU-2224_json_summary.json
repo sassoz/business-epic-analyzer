@@ -1,0 +1,134 @@
+```json
+{
+  "epicId": "BEMABU-2224",
+  "title": "Mehrgewerke Angebotserstellung im Solution Business",
+  "ziele": {
+    "gesamtziel": "Digitalisierung des Angebotsprozesses für Mehrgewerke im Solution Business, um manuelle Aufwände zu reduzieren, Fehler zu vermeiden, die Angebotserstellungszeit zu verkürzen, das Pricing transparenter zu gestalten und die Nutzerzufriedenheit zu steigern. Die Umsetzung ist für den Zeitraum 01.07.2025 bis 30.06.2026 geplant.",
+    "einzelziele": [
+      "Bereitstellung eines Budget-Preis Kalkulations-Tools zur schnellen Ermittlung von Budgetpreisen für ENS-Blueprints durch Nicht-Experten",
+      "Schaffung einer zentralen technischen Bestandssicht für einen einfachen Zugriff auf sämtliche Kundenbestände und Rahmenverträge",
+      "Implementierung eines Smart Panda Import-Workflows für die Integration von Teilangeboten verschiedener Gewerke zu einem Gesamtangebot",
+      "Entwicklung eines zentralen Pricing in Panda Deal-View für eine transparente Preisfindung bei Mehrgewerke-Angeboten",
+      "Bereitstellung einer übergreifenden Document-Engine zur halbautomatischen Angebots-Dokumentengenerierung und Dokumentenablage"
+    ]
+  },
+  "businessValue": {
+    "businessImpact": {
+      "skala": 13,
+      "beschreibung": "Optimierung des TimeToMarket durch schnellere Angebotserstellung, Reduzierung manueller Aufwände, Erhöhung der Angebotsqualität und Nutzerzufriedenheit (NPS). Umsatzpotenzial von 5 Mio. € und Kosteneinsparungspotenzial von 0,5 Mio. € durch effizientere Prozesse."
+    },
+    "strategicEnablement": {
+      "skala": 13,
+      "beschreibung": "Verbesserung des NPS, Standardisierung des Lösungsgeschäfts, Herstellung von Nearshore/Offshore-Fähigkeit des komplexen Geschäfts und Schaffung von mehr Zeit vor dem Kunden."
+    },
+    "timeCriticality": {
+      "skala": 13,
+      "beschreibung": "Launch der ersten Implementierungen in 4-6 Monaten nach Projektstart. Die zeitliche Kritikalität ist hoch, da die Effekte über den gesamten Zeitraum zu betrachten sind und nicht alleine durch die erste Auslieferung erreicht werden."
+    }
+  },
+  "funktionen": [
+    {
+      "id": "BEMABU-2337",
+      "titel": "Budget-Preis Kalkulations-Tool",
+      "funktionalitäten": [
+        "Schnelle Ermittlung von Budgetpreisen von ENS-Blueprints durch Nicht-Experten",
+        "Unterstützung bei der Herstellung eines vollständigen und konsistenten Angebots",
+        "Einfache und schnelle Einbindung in den bestehenden Workflow der relevanten Rollen",
+        "Umwandlung eines Budgetpreis-Vorhabens in ein Lösungsvorhaben",
+        "Erweiterbarkeit mit weiteren Blueprints",
+        "Übernahme der Budget-Preis-Kalkulation als Grundgerüst in ein Angebot"
+      ]
+    },
+    {
+      "id": "BEMABU-2338",
+      "titel": "Zentrale technische Bestandssicht",
+      "funktionalitäten": [
+        "Einfacher Zugriff auf sämtliche Bestände und Rahmenverträge des Kunden",
+        "Einfache Einsicht der Daten in MagentaForce (360° Kundensicht)",
+        "Verwendung und Bearbeitung von Bestandsdaten/Standorte für die Kalkulation neuer Lösungen in Panda",
+        "Zentrale und vollständige Sicht auf Kundenbestände für schnellere, präzisere und individuell zugeschnittene Angebote"
+      ]
+    },
+    {
+      "id": "BEMABU-2339",
+      "titel": "Smart Panda Import-Workflow für Kalk.-Tool",
+      "funktionalitäten": [
+        "Import von Kalkulations-Daten aus verschiedenen Kalkulatoren und Systemen nach Panda",
+        "Erstellung einer Angebots-ID als Arbeitsbereich für die gemeinschaftliche Zusammenstellung einer Mehrgewerke-Lösung",
+        "Bereitstellung von vorgefertigten Solution-Blueprints und Platzhaltern für Angebotsteile",
+        "Zentrale Deal-Team Abbildung über MagentaForce, ZDF und Panda",
+        "Anforderung ausgewählter Bausteine bei Gewerken/Zulieferern via ZDF",
+        "Upload-Funktion in Panda für die Bereitstellung der Angebots-Bausteine durch Zulieferer",
+        "Datenübertragung zwischen Kalkulationstools mit Rückkanal für angepasste Preise"
+      ]
+    },
+    {
+      "id": "BEMABU-2340",
+      "titel": "Zentrales Pricing in Panda Deal-View",
+      "funktionalitäten": [
+        "Harmonisierte Darstellung von Produkten nach Typ/Kategorie und nach Standort/Filialstruktur",
+        "Erstellung individueller Angebotsstrukturen nach Kundenbedarf",
+        "Zentrales Pricing für Gesamt-Lösungen mit Möglichkeit, Kosten/Preise zu verwischen und zu organisieren",
+        "Anstoßen von Freigabe-Workflows Richtung MagentaForce",
+        "Transparente Preisfindung für ein aus mehreren Bestandteilen bestehendes Gesamtangebot"
+      ]
+    },
+    {
+      "id": "BEMABU-2341",
+      "titel": "Übergreifende Document-Engine",
+      "funktionalitäten": [
+        "Halbautomatische Angebots-Dokumentengenerierung für bindende und nicht-bindende Angebote",
+        "Erstellung von Dokumentenpaketen mit allen angebotsnotwendigen Dokumenten",
+        "Upload, Editieren und Löschen von Zusatzdokumenten",
+        "Möglichkeit zur Versendung erstellter Dokumente an den Kunden",
+        "Möglichkeit zur Archivierung erstellter Dokumente",
+        "Rollenkonzept und Workflow zur kontinuierlichen Pflege von Dokumenten und Textbausteinen",
+        "Mehrsprachigkeit der Dokumentenablage und DocEngine (deutsch/englisch)"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "Während der Exploration wird geprüft, ob eine vollständige Integration der \"alten\" Angebotstool und deren Retirements möglich ist.",
+    "Eine schnelle Ermittlung von Budgetpreisen von ENS-Blueprints durch Nicht-Experten ist möglich.",
+    "Die Budget-Preis-Kalkulation unterstützt in der Herstellung eines vollständigen und konsistenten Angebots.",
+    "Der Kalkulator kann einfach und schnell in den bestehenden Workflow der relevanten Rollen eingebunden werden.",
+    "Ein Budgetpreis-Vorhaben kann in ein Lösungsvorhaben umgewandelt werden.",
+    "Einfacher Zugriff auf sämtliche Bestände des Kunden für AcM, FV, Presales, Service Management.",
+    "Einfache Einsicht der Daten in MagentaForce (360° Kundensicht).",
+    "Import von Kalkulations-Daten aus verschiedenen Kalkulatoren und Systemen nach Panda ist möglich.",
+    "Erstellung einer Angebots-ID als Arbeitsbereich für die gemeinschaftliche Zusammenstellung einer Mehrgewerke-Lösung.",
+    "Zentrale Deal-Team Abbildung über MagentaForce, ZDF und Panda.",
+    "Harmonisierte Darstellung von Produkten nach Typ/Kategorie und nach Standort/Filialstruktur.",
+    "Zentrales Pricing für Gesamt-Lösung erstellen."
+  ],
+  "domainsAndITApplications": [
+    "PANDA (DOM0204)",
+    "ZDF (DOM0201)",
+    "MagentaForce (DOM0201)",
+    "Lotex (DOM0201)",
+    "SeCe-IT (DOM0201)",
+    "RPK",
+    "SIMPLE",
+    "D!VE"
+  ],
+  "abhängigkeitenUndRisiken": [
+    "Abhängigkeit von architekturaler Vorgabe für das Budget-Preis Kalkulations-Tool (SAP CPQ / Microservice / Magenta CPQ)",
+    "Abhängigkeit von Performance-Verbesserungen in PANDA für die Implementierung des Import-Workflows",
+    "Abhängigkeit von Zulieferungen des VEGA-Teams für die Document-Engine, u.a. Einführung von Produkt-IDs",
+    "Risiko durch die Vielzahl beteiligter IT-Systeme und deren Integration (PANDA, ZDF, MagentaForce, Lotex, SeCe-IT, RPK, SIMPLE, D!VE)",
+    "Zeitliche Diskrepanz: Business Epic hat Zieldatum 30.06.2026, aber keine der untergeordneten Epics haben ein Zieldatum definiert"
+  ],
+  "zeitplan": {
+    "umsetzungsstart": "2025-07-01",
+    "umsetzungsende": "2026-06-30",
+    "fixVersions": ["Q3_25", "Q4_25"],
+    "meilensteine": [
+      {
+        "id": "Keine Informationen verfügbar",
+        "beschreibung": "Keine Informationen verfügbar",
+        "zeitraum": "Keine Informationen verfügbar"
+      }
+    ]
+  }
+}
+```

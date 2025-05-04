@@ -1,0 +1,48 @@
+{
+  "key": "SDLA-1197",
+  "issue_type": "Initiative",
+  "title": "Design Product Inventory View for SD LAN/WiFi",
+  "status": "Funnel",
+  "description": "Description\nAs an Offeringmanager I want to enable my Servicemanager/Accounter/Engineer to make changes of an existing SD-LAN/WiFi network fully automated in same Portal as Service is provisioned (Suggestion ServiceNow). To make this the Product Inventory View is needed. To implement the Product Inventory View it is necessary to design it.\n  Approach:\nDesign Product Inventory View - Q1/23\nImplement Product Inventory View - Q2/23\n  Business Value: high (low/medium/high)  -> Schnellere Reaktionszeiten \n  Contact persons: \nBusiness Epic Owner: Kaspar Dütting\nBusiness Owner Stefan Jung\nSales: Wilhelm Niemeier - Responsibilities are currently being clarified\n\nBusiness Scope:\nSee the product inventory SDWLAN of the customer",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "Solution Release SD LAN/WIFI R1.0"
+  ],
+  "acceptance_criteria": [
+    "Clickdummy for Product Inventory View is available and has been approved for implementation",
+    "Required data for product inventory view has been identified (Excel)"
+  ],
+  "components": [],
+  "labels": [
+    "SDLA_VS_Configuration&Offer"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": [
+    {
+      "filename": "CPDMCATExcel_SDLAN_Solution_2022-11-02_09-18-45.xlsx",
+      "url": "https://jira.telekom.de/secure/attachment/2599178/CPDMCATExcel_SDLAN_Solution_2022-11-02_09-18-45.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": "",
+      "date": "2022-11-09T14:13:01.771+01:00"
+    },
+    {
+      "filename": "Juniper_Planning_for_Strategic_Planning.pptx",
+      "url": "https://jira.telekom.de/secure/attachment/2599179/Juniper_Planning_for_Strategic_Planning.pptx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": "",
+      "date": "2022-11-09T14:13:16.160+01:00"
+    },
+    {
+      "filename": "N22-0358 SDLAN-Produktmodell_20221102_093853.xml",
+      "url": "https://jira.telekom.de/secure/attachment/2599177/N22-0358%20SDLAN-Produktmodell_20221102_093853.xml",
+      "mime_type": "text/xml",
+      "size": "",
+      "date": "2022-11-09T14:13:02.197+01:00"
+    }
+  ]
+}

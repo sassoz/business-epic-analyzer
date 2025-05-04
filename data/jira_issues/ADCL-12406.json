@@ -1,0 +1,26 @@
+{
+  "key": "ADCL-12406",
+  "issue_type": "Epic",
+  "title": "O3 Test Automation Enhancement oPOM1_II",
+  "status": "Backlog",
+  "description": "Description\nContinue Test Automation activities according to O3 Test Strategy described at https://wiki.telekom.de/display/MBFY/O3-06-Testing\nTest stages in focus:\nO3 - Java Unit Tests\nO3 - Camunda Process Tests\nO3 - API Blackbox and Camunda Integration Test \nProduction Lines in scope:\nSeCeIT (in Focus for this PI)\nFXN and\nOrder Form\nApart, in order to facilitate testing at development environments prior to CIT2 the use of a mocking framework is to be established. Testing Improvements driven by DevOps/Cagdas:\nFor each new business case mocks and tests are created as needed (iteratively) - L\nAdjust applications to use either mock or actual service on the fly (iteratively) - S\nTeams create integrationtests to test their main business functionality - M\nEntire Regression Tests are to run on Playground on a daily basis and prior to any PROD deployment on CIT2 for applicable scope as per https://wiki.telekom.de/display/MBFY/O3+-+Deployment+Procedure",
+  "business_value": {},
+  "assignee": "Dirk Henning",
+  "priority": "",
+  "target_start": "2025-05-16",
+  "target_end": "2025-06-26",
+  "fix_versions": [
+    "PI28"
+  ],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "ADCL-PI28",
+    "O3-Architecture",
+    "O3-Enabler",
+    "test_automation"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

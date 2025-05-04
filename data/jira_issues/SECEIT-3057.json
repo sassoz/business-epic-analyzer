@@ -1,0 +1,23 @@
+{
+  "key": "SECEIT-3057",
+  "issue_type": "Epic",
+  "title": "Product Ordering Service - GetWell",
+  "status": "In Progress",
+  "description": "Description\nIn diesen EPIC werden alle Bugs/Storys zusammengefasst, die in der GetWell Phase zum Thema benötigt werden.\n ",
+  "business_value": {},
+  "assignee": "Markus Fracke",
+  "priority": "",
+  "target_start": "2025-04-03",
+  "target_end": "2025-06-24",
+  "fix_versions": [],
+  "acceptance_criteria": [],
+  "components": [],
+  "labels": [
+    "DO_SeCeIT",
+    "MB_Decoupling",
+    "VS_enabling"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

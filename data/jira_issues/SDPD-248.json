@@ -1,0 +1,35 @@
+{
+  "key": "SDPD-248",
+  "issue_type": "Epic",
+  "title": "C2C - MIST SD LAN/WLAN - Exploration for process adjustments",
+  "status": "Closed",
+  "description": "Description\nAnalysis of SDWAN defined processes for necessary adjustment to use in Juniper MIST SD LAN / WLAN (incl. Simplification).\n  Clarify open points for exploration with Márta Orsolya Völgyiné Nadabán and Viktor Matus. Need to clarify  also the timeline /deadline when the processes shall be finalized. \n  Consider topic for the simplification: \n Identify and explore impact of the architectural adaption for MIST LAN/WLAN (as worked out and explained in the architectural workshop/Tribe offsite workshops) on the respective process step ‘order of hardware’. Consider dependencies on other measures of the simplification program and align also with technical product management.\n ",
+  "business_value": {},
+  "assignee": "Patrick Heich (Inactive)",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [
+    "PI7",
+    "R1.1 SDx Platform"
+  ],
+  "acceptance_criteria": [
+    "It is transparent which processes have to be adapted",
+    "It is transparent which IT tools have to be adapted and how this has to be done",
+    "One entry point for the costumer considered (CPQ)",
+    "exploration includes also topic for simplification - Necessary adaptions in the process and related workflows and tools are known, prioritizes and aligned with dependencies of other measures in simplification program to have foundation implementation in processes and also other hubs to start the implementation of the process impact with the goal to simplify the overall process to gain faster time to market incl. automation approach."
+  ],
+  "components": [
+    {
+      "code": "OKR#6_PI6",
+      "title": "OKR#6_PI6 MIST conception was completed in Q2, and ready for implementation in Q3"
+    }
+  ],
+  "labels": [
+    "IT7.1",
+    "PI7"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

@@ -1,0 +1,29 @@
+{
+  "key": "ADCL-9538",
+  "issue_type": "Epic",
+  "title": "DevOps and stability improvements",
+  "status": "Closed",
+  "description": "Description\nThe different versions of the POT service (v1/v2/v3) are constantly maintained. All identified bugs are solved and deployed to production until end of the PI. The existing features are improved and smaller changes are implemented and deployed to production.",
+  "business_value": {},
+  "assignee": "Ronald Marco Martienssen",
+  "priority": "",
+  "target_start": "2024-07-04",
+  "target_end": "2024-09-25",
+  "fix_versions": [
+    "PI 25"
+  ],
+  "acceptance_criteria": [
+    "Bugs are fixed in all POT versions",
+    "All bugs are fixed at the end of the PI",
+    "Improvements for existing features are implemented",
+    "DevOps maintenance is done"
+  ],
+  "components": [],
+  "labels": [
+    "DigiHub_DOM",
+    "POT"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}

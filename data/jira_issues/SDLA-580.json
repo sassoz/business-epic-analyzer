@@ -1,0 +1,42 @@
+{
+  "key": "SDLA-580",
+  "issue_type": "Initiative",
+  "title": "Service Provisioning LAN/WiFi Q2",
+  "status": "Funnel",
+  "description": "Description\n  For whom Telekom\nwho has to fulfill the order of a managed LAN / WiFi service\nprovides hardware and the service itself to\na customer\nfor Installation and using the service\nDifferent from Manual processes\n\nBusiness Scope:\nAfter the customer has ordered, the hardware will be purchased, pre-staged (if necessary) and sent out to the customer. The licenses have been purchased. Possibly needed additional services (e.g. RMA Packages) are purchased. If requested, the field service has been ordered. These new assets are documented in our asset database. All legal, regulatory and compliance rules are fulfilled (e.g. accounting/activation). Processes are highly automated.",
+  "business_value": {},
+  "assignee": "stefan-jung@telekom.de",
+  "priority": "",
+  "target_start": "",
+  "target_end": "",
+  "fix_versions": [],
+  "acceptance_criteria": [
+    "Processes are defined and tested.",
+    "Business scope is fulfilled"
+  ],
+  "components": [
+    {
+      "code": "SDN",
+      "title": "SDN B2B Software Defined Networks"
+    }
+  ],
+  "labels": [
+    "Assurance",
+    "NGO",
+    "OKR_Q2_Get_ready_for_Juniper_MIST",
+    "SDLA_VS_Assurance",
+    "SDLA_VS_Billing&Contract_Mgmt",
+    "SDLA_VS_Digital_Customer_Touchpoints",
+    "SDLA_VS_Finance_Procurement&Logistic",
+    "SDLA_VS_Lead&Opportunity",
+    "SDLA_VS_Order_Management",
+    "SDX",
+    "SDxHub",
+    "SNOW@TC",
+    "SNOWTC",
+    "assurance"
+  ],
+  "realized_by": [],
+  "child_issues": [],
+  "attachments": []
+}
