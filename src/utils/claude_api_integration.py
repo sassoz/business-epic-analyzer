@@ -11,13 +11,6 @@ and response processing, returning structured JSON summaries that can be used fo
 generating HTML reports.
 """
 
-class ClaudeAPIClient:
-
-    def __init__(self, model: str = "claude-3-7-sonnet-latest", token_tracker=None):
-
-    def generate_summary(self, context, prompt=None, max_tokens=8000):
-
-
 import os
 import json
 from anthropic import Anthropic
