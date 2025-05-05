@@ -62,12 +62,12 @@ python src/main_scraper.py
 ```
 
 3. The script will:
-   - Log into JIRA using provided credentials
+   - Log into JIRA with windows account credentials using chrome browser (not JIRA API)
    - Scrape data from each Business Epic and related issues
    - Generate visualization graphs
    - Create context files for AI processing
    - Generate AI summaries
-   - Create HTML reports in the `output` directory
+   - Create HTML reports in the `data` directory
 
 ### Configuring Models
 
@@ -83,6 +83,6 @@ LLM_MODEL_SUMMARY = "gpt-4.1"
 
 The script generates several output files:
 
-- `output/[EPIC-KEY]_issue_tree.png` - Visualization of issue relationships
-- `output/[EPIC-KEY]_json_summary.json` - AI-generated summary in JSON format
-- `output/[EPIC-KEY]_summary.html` - Final HTML report with embedded visualizations
+- `data/issue_trees/[EPIC-KEY]_issue_tree.png` - Visualization of issue relationships
+- `data/json_summary/[EPIC-KEY]_json_summary.json` - AI-generated summary in JSON format
+- `data/html_reports/[EPIC-KEY]_summary.html` - Final HTML report with embedded visualizations
