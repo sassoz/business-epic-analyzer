@@ -67,7 +67,7 @@ LLM_MODEL_BUSINESS_VALUE = "claude-3-7-sonnet-latest"
 #LLM_MODEL_SUMMARY = "claude-3-7-sonnet-latest"
 LLM_MODEL_SUMMARY = "gpt-4.1"
 
-SCRAPE_HTML = False
+SCRAPE_HTML = True
 
 def get_business_epics_from_file():
     """Lädt Business Epics aus einer Textdatei."""
