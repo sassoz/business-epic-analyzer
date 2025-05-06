@@ -515,15 +515,17 @@ class TokenUsage:
 # Beispielverwendung
 if __name__ == "__main__":
     # Initialisiere TokenUsage
-    token_tracker = TokenUsage(log_file_path="logs/token_usage.jsonl")
+    token_tracker = TokenUsage(log_file_path="./logs/token_usage.jsonl")
 
     # Bericht für den aktuellen Tag generieren
     today = datetime.datetime.now().strftime("%Y-%m-%d")
+    output_format="txt"
+    output_file=f"./logs/token_report.{output_format}"
     report = token_tracker.generate_report(
         start_time=f"{today}T00:00:00",
         end_time=f"{today}T23:59:59",
-        output_format="",
-        output_file="token_report.txt"
+        output_format=output_format,
+        output_file=output_file
     )
 
-    print("Bericht generiert und gespeichert in 'token_report.html'")
+    print(f"Bericht generiert und gespeichert in '{output_file}'")

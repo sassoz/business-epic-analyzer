@@ -223,7 +223,7 @@ class EpicHtmlGenerator:
                     "role": "user",
                     "content": prompt}],
                 temperature=0,
-                max_tokens=4000,
+                max_tokens=6000,
                 num_retries=3
                 )
             response_content = response['choices'][0]['message']['content']

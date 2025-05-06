@@ -11,18 +11,12 @@ and response processing, returning structured JSON summaries that can be used fo
 generating HTML reports.
 """
 
-class ClaudeAPIClient:
-
-    def __init__(self, model: str = "claude-3-7-sonnet-latest", token_tracker=None):
-
-    def generate_summary(self, context, prompt=None, max_tokens=8000):
-
-
 import os
 import json
 from anthropic import Anthropic
 from litellm import completion
 from utils.logger_config import logger
+from utils.json_parser import LLMJsonParser
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
@@ -222,7 +216,28 @@ class ClaudeAPIClient:
                     task_name="summary_generation",
                 )
 
-            return result
+            # Parse the result using the custom parser
+            parser = LLMJsonParser()
+            result_json = parser.extract_and_parse_json(result)
+
+            # Stelle sicher, dass nie mehr als MAX_ACC_CRI Einträge bei Akzeptanzkriterien auftreten
+            try:
+                # Parse the JSON result
+                MAX_ACC_CRI = 10
+                # Check if acceptance_criteria exists and has more than 10 items
+                if "acceptance_criteria" in result_json and len(result_json["acceptance_criteria"]) > MAX_ACC_CRI:
+                    truncated_criteria = result_json["acceptance_criteria"][:MAX_ACC_CRI]
+                    truncated_criteria.append("[...]")
+                    result_json["acceptance_criteria"] = truncated_criteria
+                    result = json.dumps(result_json, ensure_ascii=False, indent=2)
+            except json.JSONDecodeError:
+                logger.error("Failed to parse JSON response from Claude API")
+                # Just return the original result if JSON parsing fails
+            except Exception as e:
+                logger.error(f"Error processing acceptance criteria: {e}")
+                # Just return the original result if any other error occurs
+
+            return result_json
 
         except Exception as e:
             logger.error(f"got exception in 'generate_summary': {e}")
