@@ -43,13 +43,14 @@ Usage Examples:
 
 import json
 import os
-import anthropic
 import re
+from utils.azure_ai_client import AzureAIClient
+from utils.prompt_loader import load_prompt_template
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 
-def process_description(description_text, api_key=None, model="claude-3-7-sonnet-latest", token_tracker=None):
+def process_description(description_text, model, token_tracker, azure_client: AzureAIClient):
     """
     Processes a description text, extracts business_value and shortens the description.
     Only returns business_value information when it actually exists in the text -
@@ -64,117 +65,32 @@ def process_description(description_text, api_key=None, model="claude-3-7-sonnet
     Returns:
         dict: Dictionary with shortened_description and business_value (can be empty)
     """
-    # Prüfe, ob API-Key vorhanden
-    if not api_key:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
-        if not api_key:
-            raise ValueError("Kein API-Key gefunden. Bitte als Parameter übergeben oder ANTHROPIC_API_KEY Umgebungsvariable setzen.")
 
-    # Claude-Client initialisieren
-    client = anthropic.Anthropic(api_key=api_key)
+    # Laden Sie die Prompt-Vorlage aus der YAML-Datei
+    prompt_template = load_prompt_template("business_impact_prompt.yaml", "user_prompt_template")
 
-    # Verbessertes Prompt für verlässlichere Ausgaben
-    prompt = f"""
-    Analysiere folgenden Beschreibungstext auf konkrete, explizite Informationen zum Geschäftswert (Business Value):
-
-    ```
-    {description_text}
-    ```
-
-    Fülle die folgende JSON-Struktur NUR mit Informationen, die EXPLIZIT im Text genannt werden.
-    Falls zu einem Feld keine eindeutigen Angaben im Text vorhanden sind, LASSE das Feld leer ("") oder setze den Wert auf 0.
-
-    Wichtig:
-    - Fülle nur Werte aus, die explizit im Text erwähnt sind
-    - Erfinde KEINE Daten oder Werte
-    - Falls der Text keinen "Business Value" oder "Geschäftswert" Abschnitt enthält, gib eine leere Struktur zurück
-    - Wenn keine Zahlenwerte/Skalen vorhanden sind, setze diese auf 0
-    - Bei jedem Feld, das du füllst, notiere in einem Kommentar die exakte Textstelle, die du als Quelle verwendest
-
-    Beispiel für einen strukturierten Business Value:
-    ```json
-    {{
-      "business_value": {{
-        "business_impact": {{
-          "scale": 3, // Explizit im Text: "Business Impact (Scale: 3)"
-          "revenue": "", // Keine explizite Angabe im Text
-          "cost_saving": "Aufwandsreduzierung durch optimierte Arbeit mit EOS", // Explizit im Text: "Cost Saving: Aufwandsreduzierung durch optimierte Arbeit mit EOS"
-          "risk_loss": "", // Keine explizite Angabe im Text
-          "justification": "Das Vorhaben schafft durch die optimierte Arbeit mit EOS einen schnelleren und auch besseren Serviceprozess, welcher in Aufwandsreduzierung resultiert." // Explizit im Text als Justification unter Business Impact
-        }},
-        "strategic_enablement": {{
-          "scale": 2, // Explizit im Text: "Strategic Enablement (Scale: 2)"
-          "risk_minimization": "", // Keine explizite Angabe im Text
-          "strat_enablement": "Optimierung des Serviceprozesses durch direkte Bearbeitung in EOS statt manuell in verschiedenen Produktionsstraßen", // Explizit im Text unter Strategic Enablement
-          "justification": "Die Nutzer arbeiten schneller und effizienter im System, können dadurch mehr Zeit für die Beratung der Kunden aufwänden." // Explizit im Text als Justification unter Strategic Enablement
-        }},
-        "time_criticality": {{
-          "scale": 2, // Explizit im Text: "Time Criticality (Scale: 2)"
-          "time": "Täglich", // Explizit im Text: "Time: Täglich"
-          "justification": "Für die MitarbeiterInnen aus SGrK, die täglich mit EOS arbeiten, ist es notwendig, dass diese AGB-Kette mit Features erweitert wird." // Explizit im Text als Justification unter Time Criticality
-        }}
-      }}
-    }}
-    ```
-
-    Ausgabeformat:
-    1. Wenn der Text KEINE business_value Informationen enthält, gib die leere Struktur zurück:
-    ```json
-    {{
-      "business_value": {{
-        "business_impact": {{
-          "scale": 0,
-          "revenue": "",
-          "cost_saving": "",
-          "risk_loss": "",
-          "justification": ""
-        }},
-        "strategic_enablement": {{
-          "scale": 0,
-          "risk_minimization": "",
-          "strat_enablement": "",
-          "justification": ""
-        }},
-        "time_criticality": {{
-          "scale": 0,
-          "time": "",
-          "justification": ""
-        }}
-      }}
-    }}
-    ```
-
-    2. Wenn der Text business_value Informationen enthält, fülle nur die entsprechenden Felder:
-    Gib NUR die befüllte JSON-Struktur zurück ohne zusätzlichen Text, beginnend mit {{.
-    """
-
-    # API-Anfrage senden
-    response = client.messages.create(
-        model = model,
-        max_tokens = 4000,
-        temperature = 0,
-        system="""Du bist ein präziser Datenextraktions-Assistent, der Texte analysiert und nur explizit genannte Informationen extrahiert.
-        1. Extrahiere nur Informationen, die EXPLIZIT im Text genannt werden
-        2. Erfinde NIEMALS Daten oder fülle Felder mit Annahmen
-        3. Wenn zu einem Feld keine Information vorhanden ist, lasse es leer ("") oder setze nummerische Werte auf 0
-        4. Gib nur die angeforderte JSON-Struktur zurück, ohne zusätzliche Erklärungen""",
-        messages=[
-            {"role": "user", "content": prompt}
-        ]
+    # Füllen Sie die Vorlage mit dem dynamischen Inhalt
+    prompt = prompt_template.format(description_text=description_text)
+    
+    # API-Anfrage senden über den neuen Client
+    response_data = azure_client.completion(
+        model_name=model,
+        user_prompt=prompt,
+        max_tokens=6000,
+        response_format={"type": "json_object"}
     )
+    response_text = response_data["text"]
 
-    # Extrahiere die JSON-Antwort
-    response_text = response.content[0].text
-    print(f"Token Tracker = {token_tracker}, Model = {model}\nUsage = {response.usage}")
     # Token-Nutzung loggen, wenn ein Tracker übergeben wurde
-    if token_tracker:
+    if token_tracker and "usage" in response_data:
         token_tracker.log_usage(
             model=model,
-            input_tokens=response.usage.input_tokens,
-            output_tokens=response.usage.output_tokens,
-            total_tokens=response.usage.input_tokens+response.usage.output_tokens,
+            input_tokens=response_data["usage"]["prompt_tokens"],
+            output_tokens=response_data["usage"]["completion_tokens"],
+            total_tokens=response_data["usage"]["total_tokens"],
             task_name="business_impact",
         )
+
 
     # JSON aus der Antwort extrahieren
     json_match = re.search(r'({[\s\S]*})', response_text)

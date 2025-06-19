@@ -52,7 +52,7 @@ class DataExtractor:
     structured business impact, strategic enablement and time criticality data.
     """
 
-    def __init__(self, description_processor=None, model="claude-3-7-sonnet-latest", token_tracker=None):
+    def __init__(self, description_processor=None, model="claude-3-7-sonnet-latest", token_tracker=None, azure_client=None):
         """
         Initialisiert den DataExtractor.
 
@@ -64,6 +64,7 @@ class DataExtractor:
         self.description_processor = description_processor
         self.model = model
         self.token_tracker = token_tracker
+        self.azure_client = azure_client
 
     @staticmethod
     def _find_child_issues(driver):
@@ -310,9 +311,9 @@ class DataExtractor:
                     # Verwende den injizierten Prozessor anstatt einer direkten Abhängigkeit
                     processed_text = self.description_processor(
                         data["description"],  # description_text
-                        None,                # api_key (let it use environment variable)
                         self.model,          # model
-                        self.token_tracker   # token_tracker
+                        self.token_tracker,   # token_tracker
+                        self.azure_client
                     )
                     data["description"] = processed_text['description']
                     data["business_value"] = processed_text['business_value']
@@ -690,6 +691,23 @@ class DataExtractor:
 
             if child_issues:
                 logger.info(f"{len(child_issues)} Child Issues zu den realized_by-Links hinzugefügt")
+
+
+            # Child Issues extrahieren und direkt im Datenobjekt speichern
+            child_issues_list = DataExtractor._find_child_issues(driver) #
+            if child_issues_list:
+                data["child_issues"] = []
+                for child_item in child_issues_list:
+                    # Struktur an die "realized_by" anlehnen für konsistente Verarbeitung
+                    child_issue_data = {
+                        "key": child_item.get("key"),
+                        "title": child_item.get("title", ""),
+                        "summary": child_item.get("summary", ""),
+                        "url": child_item.get("url"),
+                        "relation_type": "child"
+                    }
+                    data["child_issues"].append(child_issue_data)
+                logger.info(f"{len(data['child_issues'])} Child Issues direkt extrahiert.")
 
         except Exception as e:
             logger.info(f"Fehler beim Extrahieren der Daten für {issue_key}: {e}")

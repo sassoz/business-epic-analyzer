@@ -24,9 +24,11 @@ import re
 import mimetypes
 from pathlib import Path
 import json
+from utils.logger_config import logger
 from typing import Dict, Tuple, Optional
-from litellm import completion
+from openai import OpenAI
 from dotenv import load_dotenv
+from utils.prompt_loader import load_prompt_template
 from utils.config import EPIC_HTML_TEMPLATE, HTML_REPORTS_DIR, ISSUE_TREES_DIR
 
 class EpicHtmlGenerator:
@@ -52,10 +54,12 @@ class EpicHtmlGenerator:
         load_dotenv()
 
         self.template_path = template_path
+        self.client = OpenAI()
         self.model = model
         self.output_dir = output_dir
         self.template_html = self._load_template()
         self.token_tracker = token_tracker
+        self.prompt_template = load_prompt_template("html_generator_prompt.yaml", "user_prompt_template")
 
         # Mimetypes initialisieren
         if not mimetypes.inited:
@@ -124,7 +128,7 @@ class EpicHtmlGenerator:
                 img_path = os.path.join(ISSUE_TREES_DIR, f"{BE_key}_issue_tree.png")
 
                 if not os.path.exists(img_path):
-                    print(f"Warning: Image file not found at {img_path}")
+                    logger.error(f"Warning: Image file not found at {img_path}")
                     continue
 
                 try:
@@ -145,9 +149,9 @@ class EpicHtmlGenerator:
                     new_img_tag = img_tag.replace(img_src, data_uri)
                     html_content = html_content.replace(img_tag, new_img_tag)
 
-                    print(f"Image embedded: {img_src}")
+                    logger.info(f"Image embedded: {img_src}")
                 except Exception as e:
-                    print(f"Error processing image {img_src}: {str(e)}")
+                    logger.error(f"Error processing image {img_src}: {str(e)}")
 
         return html_content
 
@@ -176,57 +180,26 @@ class EpicHtmlGenerator:
         # Ausgabeverzeichnis sicherstellen
         output_dir = os.path.dirname(output_file)
         os.makedirs(output_dir, exist_ok=True)
+        
+        # Prompt für LLM erstellen, indem die geladene Vorlage formatiert wird
+        prompt = self.prompt_template.format(
+            template_html=self.template_html,
+            issue_content=issue_content
+        )
 
-        # Prompt für LLM erstellen
-        prompt = f"""
-        You are tasked with creating an HTML page based on a given input issue, following the format of a provided template. Here are the documents you'll be working with:
-
-        2. Template HTML:
-        <template_html>
-        {self.template_html}
-        </template_html>
-
-        3. Input Issue:
-        <input_issue>
-        {issue_content}
-        </input_issue>
-
-        Your task is to create an HTML page for the input issue that is formatted similarly to the template HTML. Follow these steps:
-
-        1. Analyze the structure of the template HTML. Pay attention to the overall layout, headings, paragraphs, and any special formatting.
-
-        2. Create a new HTML document using the same overall structure as the template. Replace the content with corresponding information from the issue content.
-
-        3. When creating the new HTML content, follow these guidelines:
-           a. Use the same HTML tags and structure as in the template.
-           b. Replace the template content with relevant information from the input issue.
-           c. If the input issue has additional information that was not included in the template do add this content - make sure that you use as much of the information of the imput issue as possible
-           c. Whenever a Jira issue is mentioned (e.g., BEMABU-1844, MAGBUS-101567, EOS-6935, ADCL-12295, SECEIT-3017, ...), format it as a link. The link should follow this pattern: https://jira.telekom.de/browse/ISSUE-NUMBER
-              For example: <a href="https://jira.telekom.de/browse/BEMABU-1844">BEMABU-1844</a>
-           d. Don't forget to add the PNG-Link; if the Business Epics Key is e.g. 'BEMABU-1844' the PNG-Link is 'BEMABU-1844_issue_tree.png'
-           e. NEVER MAKE UP FACTS!
-
-        4. Ensure that all the information from the input issue is included in the new HTML document, maintaining a similar structure and formatting as the template.
-
-        5. Double-check that all Jira issue references are correctly formatted as links.
-
-        Once you have created the new HTML document, output it within <html_output> tags. Make sure to include the entire HTML structure, including the <!DOCTYPE html> declaration, <html>, <head>, and <body> tags.
-        """
-
-        print(f"Sende Anfrage an Modell {self.model} über litellm...")
+        logger.info(f"Starte HTML-Generierung mit Model ''{self.model}'")
 
         try:
-            # litellm aufrufen
-            response = completion(
+            # OpenAI API aufrufen
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{
                     "role": "user",
                     "content": prompt}],
                 temperature=0,
-                max_tokens=6000,
-                num_retries=3
+                max_tokens=6000
                 )
-            response_content = response['choices'][0]['message']['content']
+            response_content = response.choices[0].message.content
 
             # Token-Nutzung loggen, wenn ein Tracker übergeben wurde
             if self.token_tracker:
@@ -248,10 +221,11 @@ class EpicHtmlGenerator:
             with open(output_file, 'w', encoding='utf-8') as file:
                 file.write(html_content)
 
+            logger.info(f"HTML-Summary erfolgreich erstellt für {BE_key}")
             return html_content
 
         except Exception as e:
-            raise Exception(f"Fehler beim Aufruf der LiteLLM API oder bei der HTML-Verarbeitung: {e}")
+            raise Exception(f"Fehler beim Aufruf der OpenAI API oder bei der HTML-Verarbeitung: {e}")
 
     def process_multiple_epics(self, be_file_path: str, json_dir: str = '../output') -> Dict[str, Dict[str, int]]:
         """
@@ -325,24 +299,3 @@ if __name__ == "__main__":
 
     # Mehrere Epics verarbeiten
     token_usage = generator.process_multiple_epics(args.file)
-
-    # Gesamte Token-Nutzung berechnen
-    total_input_tokens = sum(usage['input_tokens'] for usage in token_usage.values())
-    total_output_tokens = sum(usage['output_tokens'] for usage in token_usage.values())
-    total_tokens = sum(usage['total_tokens'] for usage in token_usage.values())
-
-    print("\nZusammenfassung der Token-Nutzung:")
-    print(f"Gesamt-Input-Tokens: {total_input_tokens}")
-    print(f"Gesamt-Output-Tokens: {total_output_tokens}")
-    print(f"Gesamt-Tokens: {total_tokens}")
-
-    # Token-Nutzung in Datei speichern
-    with open(os.path.join(args.output_dir, 'token_usage.json'), 'w', encoding='utf-8') as file:
-        json.dump({
-            'per_epic': token_usage,
-            'summary': {
-                'input_tokens': total_input_tokens,
-                'output_tokens': total_output_tokens,
-                'total_tokens': total_tokens
-            }
-        }, file, indent=2)

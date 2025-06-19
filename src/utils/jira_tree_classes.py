@@ -126,7 +126,6 @@ class JiraTreeGenerator:
         """
 
         logger.info(f"Building issue tree for root issue: {root_key}")
-        logger.info(f"Searching JSON files in: {self.json_dir}")
 
         # Create a directed graph
         G = nx.DiGraph()
@@ -250,7 +249,6 @@ class JiraTreeGenerator:
 
         # Show graph statistics
         logger.info(f"Number of nodes: {G.number_of_nodes()}")
-        logger.info(f"Number of edges: {G.number_of_edges()}")
 
         return G
 
@@ -275,9 +273,10 @@ class JiraTreeVisualizer:
         self.status_colors = {
             'Funnel': 'lightgray',
             'Backlog for Analysis': 'lightgray',
-            'Analysis': 'lightyellow',
-            'Backlog': 'lightyellow',
-            'Review': 'lightyellow',
+            'Analysis': 'lemonchiffon',
+            'Backlog': 'lemonchiffon',
+            'Review': 'lemonchiffon',
+            'Waiting': 'lightblue',
             'In Progress': 'lightgreen',
             'Deployment': 'lightgreen',
             'Validation': 'lightgreen',
@@ -342,7 +341,7 @@ class JiraTreeVisualizer:
 
         # Draw nodes grouped by status
         for status, nodes in nodes_by_status.items():
-            color = self.status_colors.get(status, 'lightcyan')
+            color = self.status_colors.get(status, 'peachpuff')
             nx.draw_networkx_nodes(G, pos, nodelist=nodes, node_size=NODE_SIZE, node_color=color, alpha=0.8)
 
         # Create labels with key

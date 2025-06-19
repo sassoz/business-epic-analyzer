@@ -21,9 +21,11 @@ Key features:
 import json
 import os
 import datetime
+import argparse
 from typing import Dict, List, Optional, Tuple, Union
 import pandas as pd
 from pathlib import Path
+from utils.logger_config import logger
 from utils.config import LOGS_DIR
 
 
@@ -55,13 +57,22 @@ class TokenUsage:
         "gpt-4.1-mini": {"input": 0.0004, "output": 0.0016},
         "gpt-4o": {"input": 0.0025, "output": 0.01},
         "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
-        "o3": {"input": 0.01, "output": 0.04},
+        "o3": {"input": 0.002, "output": 0.008},
+        "o3-pro": {"input": 0.02, "output": 0.08},
         "o4-mini": {"input": 0.0011, "output": 0.0044},
-        "claude-3-7-sonnet-latest": {"input": 0.003, "output": 0.015},
+        "o3-mini": {"input": 0.0011, "output": 0.0044},
+
         "claude-3-5-haiku": {"input": 0.0008, "output": 0.004},
-        "gemini-2.5-pro-preview-03-25": {"input": 0.00125, "output": 0.01},
-        "gemini-2.5-flash-preview-04-17": {"input": 0.00015, "output": 0.0035},
-        "gemini-2.0-flash": {"input": 0.0001, "output": 0.0004}
+        "claude-3-7-sonnet-latest": {"input": 0.003, "output": 0.015},
+        "claude-sonnet-4-20250514": {"input": 0.003, "output": 0.015},
+        "claude-opus-4-20250514": {"input": 0.015, "output": 0.075},
+
+        "eu.anthropic.claude-sonnet-4-20250514-v1:0": {"input": 0.003, "output": 0.015},
+        "eu.anthropic.claude-3-7-sonnet-20250219-v1:0": {"input": 0.003, "output": 0.015},
+
+        "gemini/gemini-2.5-pro": {"input": 0.00125, "output": 0.01},
+        "gemini/gemini-2.5-flash": {"input": 0.00030, "output": 0.0025},
+        "gemini/gemini-2.0-flash": {"input": 0.0001, "output": 0.0004},
         # Weitere Modelle hier hinzufügen
     }
 
@@ -109,6 +120,11 @@ class TokenUsage:
         """
         # Erstelle einen Nutzungseintrag mit Zeitstempel
         timestamp = datetime.datetime.now().isoformat()
+
+        # Überprüfe, ob reasoning tokens in den total_tokens enthalten sind
+        # falls ja, addiere die reasoning tokens zu den output_tokens
+        if (input_tokens+output_tokens) != total_tokens:
+            output_tokens = total_tokens - input_tokens
 
         # Berechne die Kosten, falls das Modell in der Preisstruktur vorhanden ist
         cost = self._calculate_cost(model, input_tokens, output_tokens)
@@ -463,19 +479,6 @@ class TokenUsage:
 
         return report
 
-    def update_model_pricing(self, model: str, input_price: float, output_price: float) -> None:
-        """
-        Aktualisiert oder fügt Preisinformationen für ein Modell hinzu.
-
-        Args:
-            model: Name des LLM-Modells
-            input_price: Preis pro 1000 Input-Tokens in USD
-            output_price: Preis pro 1000 Output-Tokens in USD
-        """
-        self.MODEL_PRICING[model] = {
-            "input": input_price,
-            "output": output_price
-        }
 
     def export_usage_data(self, output_file: str, format: str = "csv") -> bool:
         """
@@ -508,24 +511,57 @@ class TokenUsage:
             return True
 
         except Exception as e:
-            print(f"Fehler beim Exportieren der Daten: {e}")
+            logger.error(f"Fehler beim Exportieren der Daten: {e}")
             return False
 
 
 # Beispielverwendung
 if __name__ == "__main__":
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Generate token usage reports for different time periods.')
+    parser.add_argument('--time', choices=['day', 'week', 'month', 'year'], default = 'day',
+                        help='Time period for the report: day, week, month, or year')
+    args = parser.parse_args()
+
     # Initialisiere TokenUsage
-    token_tracker = TokenUsage(log_file_path="./logs/token_usage.jsonl")
+    token_tracker = TokenUsage(log_file_path="../logs/token_usage.jsonl")
+
+    # Aktuelles Datum
+    now = datetime.datetime.now()
+
+    # Zeitraum basierend auf dem Argument anpassen
+    if args.time == 'day':
+        # Aktueller Tag
+        start_time = now.strftime("%Y-%m-%d") + "T00:00:00"
+        end_time = now.strftime("%Y-%m-%d") + "T23:59:59"
+        time_desc = "des aktuellen Tages"
+    elif args.time == 'week':
+        # Berechne Wochenbeginn (Montag)
+        start_of_week = now - datetime.timedelta(days=now.weekday())
+        start_time = start_of_week.strftime("%Y-%m-%d") + "T00:00:00"
+        end_time = now.strftime("%Y-%m-%d") + "T23:59:59"
+        time_desc = "der aktuellen Woche"
+    elif args.time == 'month':
+        # Beginn des aktuellen Monats
+        start_time = now.strftime("%Y-%m") + "-01T00:00:00"
+        end_time = now.strftime("%Y-%m-%d") + "T23:59:59"
+        time_desc = "des aktuellen Monats"
+    elif args.time == 'year':
+        # Beginn des aktuellen Jahres
+        start_time = now.strftime("%Y") + "-01-01T00:00:00"
+        end_time = now.strftime("%Y-%m-%d") + "T23:59:59"
+        time_desc = "des aktuellen Jahres"
 
     # Bericht für den aktuellen Tag generieren
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     output_format="txt"
-    output_file=f"./logs/token_report.{output_format}"
+    file_ext = "txt"  # Dateiendung
+    output_file = f"../logs/token_report_{args.time}.{file_ext}"
     report = token_tracker.generate_report(
-        start_time=f"{today}T00:00:00",
-        end_time=f"{today}T23:59:59",
+        start_time=start_time,
+        end_time=end_time,
         output_format=output_format,
         output_file=output_file
     )
 
-    print(f"Bericht generiert und gespeichert in '{output_file}'")
+    print(f"Token Usage Bericht {time_desc} wurde für den Zeitraum {start_time} bis {end_time} generiert und in '{output_file}' gespeichert")

@@ -20,6 +20,7 @@ Key features:
 """
 
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -42,7 +43,7 @@ from utils.business_impact_api import process_description
 class JiraScraper:
     """Hauptklasse zum Scraping von Jira-Issues."""
 
-    def __init__(self, url, email, model="claude-3-7-sonnet-latest", token_tracker=None):
+    def __init__(self, url, email, model="o3-mini", token_tracker=None, azure_client=None):
         """
         Initialisiert den JiraScraper.
 
@@ -55,9 +56,12 @@ class JiraScraper:
         self.login_handler = JiraLoginHandler()
         self.driver = None
         self.processed_issues = set()  # Set zum Speichern bereits verarbeiteter Issues
-        self.data_extractor = DataExtractor(description_processor=process_description, model = model, token_tracker = token_tracker)
-
-
+        self.data_extractor = DataExtractor(
+            description_processor=process_description,
+            model=model,
+            token_tracker=token_tracker,
+            azure_client=azure_client # Dies funktioniert jetzt
+        )
 
     def extract_and_save_issue_data(self, issue_url, issue_key=None):
         """
@@ -106,65 +110,59 @@ class JiraScraper:
 
             return issue_data
 
+        except TimeoutException:
+            logger.error(f"Timeout beim Warten auf die Seite für Issue {issue_key}. Überspringe.")
+            return None
         except Exception as e:
-            logger.error(f"Fehler beim Verarbeiten von Issue {issue_key}: {str(e)}")
+            logger.error(f"Ein unerwarteter Fehler ist beim Verarbeiten von Issue {issue_key} aufgetreten: {e}")
             return None
 
+
     def process_related_issues(self, issue_data, current_url):
-        """
-        Verarbeitet rekursiv alle verwandten Issues (realized_by und Child Issues).
+            """
+            Verarbeitet rekursiv alle verwandten Issues (realized_by und Child Issues).
 
-        Args:
-            issue_data (dict): Die Daten des aktuellen Issues
-            current_url (str): Die URL der aktuellen Seite, zu der zurückgekehrt werden soll
-        """
-        if not issue_data:
-            return
+            Args:
+                issue_data (dict): Die Daten des aktuellen Issues
+                current_url (str): Die URL der aktuellen Seite (wird für die Rekursion benötigt)
+            """
+            if not issue_data:
+                return
 
-        try:
-            # 1. Verarbeite alle "is realized by" Issues
+            all_related_issues = []
             if "realized_by" in issue_data and issue_data["realized_by"]:
-                for realized_item in issue_data["realized_by"]:
-                    if "key" in realized_item and "url" in realized_item:
-                        related_key = realized_item["key"]
-                        related_url = realized_item["url"]
+                all_related_issues.extend(issue_data["realized_by"])
 
+            if "child_issues" in issue_data and issue_data["child_issues"]:
+                all_related_issues.extend(issue_data["child_issues"])
+
+            if not all_related_issues:
+                return
+
+            # Verarbeite alle gefundenen verwandten Issues
+            for related_item in all_related_issues:
+                try: # <-- Fehlerbehandlung für jedes einzelne verwandte Issue
+                    if "key" in related_item and "url" in related_item:
+                        related_key = related_item["key"]
+                        related_url = related_item["url"]
+
+                        # Die Schutzlogik greift hier wie gewohnt
                         if related_key not in self.processed_issues:
-                            logger.info(f"Folge 'realized by' Link: {related_key}")
-                            related_data = self.extract_and_save_issue_data(related_url, related_key)
+                            relation_type = related_item.get("relation_type", "related")
+                            logger.info(f"Folge '{relation_type}' Link: {related_key}")
 
-                            # Rekursiv auch die verwandten Issues dieses Issues verarbeiten
+                            # Rekursiver Aufruf für das nächste Ticket
+                            related_data = self.extract_and_save_issue_data(related_url, related_key)
                             if related_data:
+                                # WICHTIG: Die neue URL des Kind-Tickets wird übergeben
                                 self.process_related_issues(related_data, related_url)
 
-            # 2. Stelle sicher, dass wir auf der richtigen Seite sind für Child Issues
-            self.driver.get(current_url)
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "issue-content"))
-            )
+                except Exception as e:
+                    # Protokolliere den Fehler und fahre mit dem nächsten Item in der Schleife fort
+                    item_key = related_item.get('key', 'UNBEKANNT')
+                    logger.error(f"Fehler bei der Verarbeitung von Sub-Issue {item_key}: {e}", exc_info=True)
+                    continue # <-- Sehr wichtig, damit die Schleife weiterläuft
 
-            # 3. Verarbeite Child Issues
-            child_issues = self.find_child_issues()
-            for child_key, child_url in child_issues:
-                if child_key not in self.processed_issues:
-                    logger.info(f"Verarbeite Child Issue: {child_key}")
-                    child_data = self.extract_and_save_issue_data(child_url, child_key)
-
-                    # Rekursiv auch die verwandten Issues dieses Child Issues verarbeiten
-                    if child_data:
-                        self.process_related_issues(child_data, child_url)
-
-            # 4. Kehre zur ursprünglichen URL zurück (falls wir uns wegbewegt haben)
-            if self.driver.current_url != current_url:
-                self.driver.get(current_url)
-
-        except Exception as e:
-            logger.error(f"Fehler bei der Verarbeitung verwandter Issues: {str(e)}")
-            # Falls ein Fehler auftritt, versuche zur ursprünglichen URL zurückzukehren
-            try:
-                self.driver.get(current_url)
-            except:
-                pass
 
     def find_child_issues(self):
         """
