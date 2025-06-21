@@ -55,6 +55,7 @@ import os
 import sys
 import json
 import argparse
+import yaml
 from utils.jira_scraper import JiraScraper
 from utils.cleanup_story_json import cleanup_story_issues
 from utils.jira_tree_classes import JiraTreeGenerator, JiraTreeVisualizer, JiraContextGenerator

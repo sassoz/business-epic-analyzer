@@ -5,19 +5,19 @@ user_prompt_template: |
   1. Sichten Sie sorgfältig den unten angehängten JSON-Context der das Business Epic sowie die angehängten Portfolio Epics, Epics und anderen Jira-Issues umfasst
 
   2. Erstellen Sie eine umfassende Zusammenfassung der im Business Epic und den zugehörigen Issues beschriebenen Geschäftsanforderungen. Ihre Zusammenfassung sollte:
-     a. Gesamtziel des Business Epics und Liste der Einzelziele => nutze für das Gesamtziel insbesondere die {description} und {title} des Business Epics; nutze für die Einzelziele insbesondere die {description} und {title} aller über {realized_by} verbundenen Jira-Issues
-     b. Geschäftlicher Nutzen ("Business Value") => nutze dafür die {business_value} Inhalte des Business Epics
-     c. Liste der Schlüsselfunktionen oder angeforderte Funktionalitäten und erläutern => nutze dafür insbesondere die {description}, {title} und {key} aller Jira-Issues, die als {realized_by} mit dem Business Epic verbunden sind
-     d. Liste mit den Akzeptanzkriterie => nutze dafür ausschließlich die {acceptance_criteria} Inhalte aller Jira-Issues
+     a. Gesamtziel des Business Epics und Liste der Einzelziele jeweils präzise & verständlich zusammengefasst => nutze für das Gesamtziel insbesondere die {{{{description}} und {{{{title}} des Business Epics; nutze für die Einzelziele insbesondere die {{{{description}} und {{{{title}} aller über {{{{realized_by}} direkt mit dem Business Epic verbundenen Jira-Issues
+     b. Geschäftlicher Nutzen ("Business Value") => nutze dafür die {{{{business_value}} Inhalte des Business Epics
+     c. Liste der Schlüsselfunktionen oder angeforderte Funktionalitäten und erläutern => nutze dafür insbesondere die {{{{description}}, {{{{title}} und {{{{key}} aller Jira-Issues, die als {{{{realized_by}} mit dem Business Epic verbunden sind
+     d. Liste mit den Akzeptanzkriterie => nutze dafür ausschließlich die {{{{acceptance_criteria}} Inhalte aller Jira-Issues
      => Falls die angehängten Jira Issues zu den Punkten 3.a - 3.d keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
 
   3. Alle erwähnten spezifischen technischen Anforderungen hervorheben
-     a. Liste mit den beteiligten IT Applications und domains; nutze dafür insbesondere {components}; prüfe, ob in den {acceptance_criteria} ggf auch IT Applications enthalten sind; versuche NIEMALS die IT Applications auszuschreiben oder die Bedeutung der Abkürzungen zu erraten!
-     b. Abhängigkeiten & Risiken => prüfe {description}, {acceptance_criteria}, {status} und {target_end} aller Jira issues; sind große, fachliche Abhängigkeiten zwischen den Abliefergegenständen erkennbar? Gibt es externe Abhängigkeiten, die durch die Teams nicht direkt beeinflusst werden können? Gibt es Risiken für die vollständige, termingerechte Ablieferung aller JIRA Issues? Passen die {target_end} Daten des Business Epics zu denen der über {realized_by} verbundenen Jira Issue?
+     a. Liste mit den beteiligten IT Applications und domains; nutze dafür insbesondere {{{{components}}; prüfe, ob in den {{{{acceptance_criteria}} ggf auch IT Applications enthalten sind; versuche NIEMALS die IT Applications auszuschreiben oder die Bedeutung der Abkürzungen zu erraten!
+     b. Abhängigkeiten & Risiken => prüfe {{{{description}}, {{{{acceptance_criteria}}, {{{{status}} und {{{{target_end}} aller Jira issues; sind große, fachliche Abhängigkeiten zwischen den Abliefergegenständen erkennbar? Gibt es externe Abhängigkeiten, die durch die Teams nicht direkt beeinflusst werden können? Gibt es Risiken für die vollständige, termingerechte Ablieferung aller JIRA Issues? Passen die {{{{target_end}} Daten des Business Epics zu denen der über {{{{realized_by}} verbundenen Jira Issue?
      => Falls die angehängten Jira Issues zu den Punkten 4.a - 4.b keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
 
   4. Alle relevanten Zeitpläne, geplanter oder tatsächlicher Umsetzungsstart, Geplantes oder tatsächliches Umsetzungsende
-      => nutze dafür ausschließlich die {target_start}, {target_end} und {fix_versions} Inhalte aller Jira-Issues
+      => nutze dafür ausschließlich die {{{{target_start}}, {{{{target_end}} und {{{{fix_versions}} Inhalte aller Jira-Issues
       => Falls die angehängten Jira Issues zu den Punkten keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
 
   5. Formatieren Sie Ihre Zusammenfassung wie folgt:
@@ -32,33 +32,33 @@ user_prompt_template: |
   !!! Antworten Sie immer auf Deutsch!!!
 
   Antworte ausschließlich mit einem gültigen JSON-Objekt und ohne erklärenden Text.
-  {
+  {{
     "epicId": "EPIC-ID",
     "title": "Epic-Titel",
-    "ziele": {
+    "ziele": {{
       "gesamtziel": "Zusammenfassung des übergreifendes Ziels des Business Epics, wie dieses erreicht wird und zu welchem geplanten Zeitpunkt dieses Ziel erreicht wird",
       "einzelziele": [
         "Einzelziel 1",
         "Einzelziel 2",
         "Einzelziel 3"
       ]
-    },
-    "businessValue": {
-      "businessImpact": {
+    }},
+    "businessValue": {{
+      "businessImpact": {{
         "skala": 0,
         "beschreibung": "Beschreibung des Nutzens aus Umsatzsteigerung und/oder Kosteneinsparung"
-      },
-      "strategicEnablement": {
+      }},
+      "strategicEnablement": {{
         "skala": 0,
         "beschreibung": "Beschreibung des strategischen Nutzens"
-      },
-      "timeCriticality": {
+      }},
+      "timeCriticality": {{
         "skala": 0,
         "beschreibung": "Beschreibung der zeitlichen Kritikalität"
-      }
-    },
+      }}
+    }},
     "funktionen": [
-      {
+      {{
         "id": "TICKET-ID-1",
         "titel": "Funktionstitel 1",
         "funktionalitäten": [
@@ -66,8 +66,8 @@ user_prompt_template: |
           "Funktionalität 1.2",
           "Funktionalität 1.3"
         ]
-      },
-      {
+      }},
+      {{
         "id": "TICKET-ID-2",
         "titel": "Funktionstitel 2",
         "funktionalitäten": [
@@ -75,7 +75,7 @@ user_prompt_template: |
           "Funktionalität 2.2",
           "Funktionalität 2.3"
         ]
-      }
+      }}
     ],
     "acceptance_criteria": [
         "Acceptance Criteria 1",
@@ -92,24 +92,24 @@ user_prompt_template: |
         "Abhängigkeit/Risiko 2",
         "Abhängigkeit/Risiko 3"
     ],
-    "zeitplan": {
+    "zeitplan": {{
       "umsetzungsstart": "Startdatum",
       "umsetzungsende": "Enddatum",
       "fixVersions": ["Version 1", "Version 2"],
       "meilensteine": [
-        {
+        {{
           "id": "MILESTONE-ID-1",
           "beschreibung": "Meilensteinbeschreibung 1",
           "zeitraum": "Zeitraum des Meilensteins 1"
-        },
-        {
+        }},
+        {{
           "id": "MILESTONE-ID-2",
           "beschreibung": "Meilensteinbeschreibung 2",
           "zeitraum": "Zeitraum des Meilensteins 2"
-        }
+        }}
       ]
-    }
-  }
+    }}
+  }}
 
   ### JIRA-ISSUES ###
   {json_context}
