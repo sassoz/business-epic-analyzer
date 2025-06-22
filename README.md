@@ -71,14 +71,19 @@ Das Skript kann über die Befehlszeile mit den folgenden Argumenten gesteuert we
     python src/main_scraper.py --file meine_epics.txt
     ```
 
--   **Verarbeitung einer Liste ohne erneutes Scraping (nur Analyse und Bericht)**:
+-   **Verarbeitung einer Liste ohne erneutes Scraping (nur Analyse und HTML-Bericht)**:
     ```bash
-    python src/main_scraper.py --scraper false --file meine_epics.txt
+    python src/main_scraper.py --scraper false
     ```
 
 -   **Verarbeitung eines einzelnen Business Epics**:
     ```bash
     python src/main_scraper.py --issue BEMABU-12345
+    ```
+
+-   **Auswertung der verbrauchten Tokens**:
+    ```bash
+    python src/utils/token_usage_class.py --time week
     ```
 
 ## Project Structure
