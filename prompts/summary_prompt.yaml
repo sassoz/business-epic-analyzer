@@ -14,7 +14,7 @@ user_prompt_template: |
 
      d.) **Schlüsselfunktionen** oder angeforderte Funktionalitäten und erläutern => nutze dafür insbesondere die {{description}}, {{title}} und {{key}} aller Jira-Issues, die als {{realized_by}} mit dem Business Epic verbunden sind; fokussiere dich auf die konkrete Funktion ("WAS"); beschreibe diese in 1-2 kurzen, präzisen Sätzen; falls die Funktion sehr umfangreich ist, konzentriere dich auf die wichtigesten 1-2 Elemente der Funktion
 
-     e.) **Beteiligte Domains und IT Systeme** und domains; nutze dafür insbesondere {{components}}; versuche NIEMALS die IT Applications auszuschreiben oder die Bedeutung der Abkürzungen zu erraten! falls die angehängten Jira Issues keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
+     e.) **Beteiligte Domains und IT Systeme**; nutze dafür insbesondere {{components}}; prüfe, ob in den {{{{acceptance_criteria}} ggf auch IT Applications enthalten sind; versuche NIEMALS die IT Applications auszuschreiben oder die Bedeutung der Abkürzungen zu erraten! falls die angehängten Jira Issues keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
 
      f.) **Abhängigkeiten & Risiken** => prüfe {{description}}, {{acceptance_criteria}}, {{status}} und {{target_end}} aller Jira issues; gibt es klar erkennbare Risiken für die vollständige, termingerechte Ablieferung aller JIRA Issues? Passen die {{target_end}} Daten des Business Epics zu denen der über {{realized_by}} verbundenen Jira Issue? Formuliere Abhängigkeiten und Risiken jeweils in 1-2 kurzen, präzisen Sätzen; konzentriere dich auf maximal 2-3 Abhängigkeiten/Risiken mit der größten potentiellen Auswirkung aus das Projekt;
 
