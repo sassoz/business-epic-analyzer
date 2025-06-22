@@ -127,31 +127,34 @@ class EpicHtmlGenerator:
                 # Use direct path to issue tree in ISSUE_TREES_DIR
                 img_path = os.path.join(ISSUE_TREES_DIR, f"{BE_key}_issue_tree.png")
 
-                if not os.path.exists(img_path):
-                    logger.error(f"Warning: Image file not found at {img_path}")
-                    continue
+                if os.path.exists(img_path):
+                    try:
+                        # Get image MIME type
+                        mime_type, _ = mimetypes.guess_type(img_path)
+                        if not mime_type:
+                            mime_type = 'image/png'
 
-                try:
-                    # Get image MIME type
-                    mime_type, _ = mimetypes.guess_type(img_path)
-                    if not mime_type:
-                        mime_type = 'image/png'
+                        # Read and encode image as Base64
+                        with open(img_path, 'rb') as img_file:
+                            img_data = img_file.read()
+                            img_base64 = base64.b64encode(img_data).decode('utf-8')
 
-                    # Read and encode image as Base64
-                    with open(img_path, 'rb') as img_file:
-                        img_data = img_file.read()
-                        img_base64 = base64.b64encode(img_data).decode('utf-8')
+                        # Create data URI
+                        data_uri = f'data:{mime_type};base64,{img_base64}'
 
-                    # Create data URI
-                    data_uri = f'data:{mime_type};base64,{img_base64}'
+                        # Replace src attribute in img tag
+                        new_img_tag = img_tag.replace(img_src, data_uri)
+                        html_content = html_content.replace(img_tag, new_img_tag)
 
-                    # Replace src attribute in img tag
-                    new_img_tag = img_tag.replace(img_src, data_uri)
-                    html_content = html_content.replace(img_tag, new_img_tag)
-
-                    logger.info(f"Image embedded: {img_src}")
-                except Exception as e:
-                    logger.error(f"Error processing image {img_src}: {str(e)}")
+                        logger.info(f"Image embedded: {img_src}")
+                    except Exception as e:
+                        logger.error(f"Error processing image {img_src}: {str(e)}")
+                else:
+                    # ***** NEUE LOGIK *****
+                    # If the image file does not exist, replace the image tag with text.
+                    logger.warning(f"Jira hierarchy image not found for {BE_key}. Replacing with text.")
+                    replacement_text = "<p style='color: #6c757d; font-style: italic;'>keine Jira Hierarchie verfügbar</p>"
+                    html_content = html_content.replace(img_tag, replacement_text)
 
         return html_content
 
@@ -180,7 +183,7 @@ class EpicHtmlGenerator:
         # Ausgabeverzeichnis sicherstellen
         output_dir = os.path.dirname(output_file)
         os.makedirs(output_dir, exist_ok=True)
-        
+
         # Prompt für LLM erstellen, indem die geladene Vorlage formatiert wird
         prompt = self.prompt_template.format(
             template_html=self.template_html,
