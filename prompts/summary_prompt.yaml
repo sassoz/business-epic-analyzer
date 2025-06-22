@@ -4,23 +4,25 @@ user_prompt_template: |
   Ihre Aufgabe ist es, eine detaillierte Zusammenfassung der Geschäftsanforderungen zu erstellen, die in einem Business Epic und den zugehörigen Issues für Ihr IT-Team beschrieben sind. Folgen Sie diesen Schritten:
   1. Sichten Sie sorgfältig den unten angehängten JSON-Context der das Business Epic sowie die angehängten Portfolio Epics, Epics und anderen Jira-Issues umfasst
 
-  2. Erstellen Sie eine umfassende Zusammenfassung der im Business Epic und den zugehörigen Issues beschriebenen Geschäftsanforderungen. Ihre Zusammenfassung sollte:
-     a. Gesamtziel des Business Epics und Liste der Einzelziele jeweils präzise & verständlich zusammengefasst => nutze für das Gesamtziel insbesondere die {{{{description}} und {{{{title}} des Business Epics; nutze für die Einzelziele insbesondere die {{{{description}} und {{{{title}} aller über {{{{realized_by}} direkt mit dem Business Epic verbundenen Jira-Issues
-     b. Geschäftlicher Nutzen ("Business Value") => nutze dafür die {{{{business_value}} Inhalte des Business Epics
-     c. Liste der Schlüsselfunktionen oder angeforderte Funktionalitäten und erläutern => nutze dafür insbesondere die {{{{description}}, {{{{title}} und {{{{key}} aller Jira-Issues, die als {{{{realized_by}} mit dem Business Epic verbunden sind
-     d. Liste mit den Akzeptanzkriterie => nutze dafür ausschließlich die {{{{acceptance_criteria}} Inhalte aller Jira-Issues
-     => Falls die angehängten Jira Issues zu den Punkten 3.a - 3.d keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
+  2. Erstellen Sie eine umfassende Zusammenfassung der im Business Epic und den zugehörigen Issues beschriebenen Geschäftsanforderungen:
 
-  3. Alle erwähnten spezifischen technischen Anforderungen hervorheben
-     a. Liste mit den beteiligten IT Applications und domains; nutze dafür insbesondere {{{{components}}; prüfe, ob in den {{{{acceptance_criteria}} ggf auch IT Applications enthalten sind; versuche NIEMALS die IT Applications auszuschreiben oder die Bedeutung der Abkürzungen zu erraten!
-     b. Abhängigkeiten & Risiken => prüfe {{{{description}}, {{{{acceptance_criteria}}, {{{{status}} und {{{{target_end}} aller Jira issues; sind große, fachliche Abhängigkeiten zwischen den Abliefergegenständen erkennbar? Gibt es externe Abhängigkeiten, die durch die Teams nicht direkt beeinflusst werden können? Gibt es Risiken für die vollständige, termingerechte Ablieferung aller JIRA Issues? Passen die {{{{target_end}} Daten des Business Epics zu denen der über {{{{realized_by}} verbundenen Jira Issue?
-     => Falls die angehängten Jira Issues zu den Punkten 4.a - 4.b keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
+     a.) **Gesamtziel** des Business Epics präzise & verständlich zusammengefassen => nutze für das Gesamtziel insbesondere die {{description}} und {{title}} des Business Epics; stelle sicher, dass das Gesamtziel in 2-3 Sätzen beschrieben ist und klar wird, für wen etwas verbessert/verändert wird, was verbessert/verändert wird und was das Gesamtziel der geplanten Verbesserung/Verändeurng ist
 
-  4. Alle relevanten Zeitpläne, geplanter oder tatsächlicher Umsetzungsstart, Geplantes oder tatsächliches Umsetzungsende
-      => nutze dafür ausschließlich die {{{{target_start}}, {{{{target_end}} und {{{{fix_versions}} Inhalte aller Jira-Issues
-      => Falls die angehängten Jira Issues zu den Punkten keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
+     b.) **Einzelziele** präzise & verständlich zusammengefassen => nutze für die Einzelziele insbesondere die {{description}} und {{title}} aller über {{realized_by}} direkt mit dem Business Epic verbundenen Jira-Issues;  jedes Einzelziel sollte in 1-2 Sätzen beschrieben sein; fokussiere Dich auf die angetrebte Verbesserung/Veränderung; beschreibe nicht die Funktion! falls es mehr als 4 Einzelziele sind, versuche diese sinnvoll zusammenzufassen
 
-  5. Formatieren Sie Ihre Zusammenfassung wie folgt:
+     c.) **Geschäftlicher Nutzen ("Business Value")** => nutze dafür die {{{{business_value}} Inhalte des Business Epics; konzentriere Dich auf Zahlen/Daten falls vorhanden; formuliere kurz & präzise; falls die angehängten Jira Issues keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
+
+     d.) **Schlüsselfunktionen** oder angeforderte Funktionalitäten und erläutern => nutze dafür insbesondere die {{description}}, {{title}} und {{key}} aller Jira-Issues, die als {{realized_by}} mit dem Business Epic verbunden sind; fokussiere dich auf die konkrete Funktion ("WAS"); beschreibe diese in 1-2 kurzen, präzisen Sätzen; falls die Funktion sehr umfangreich ist, konzentriere dich auf die wichtigesten 1-2 Elemente der Funktion
+
+     e.) **Beteiligte Domains und IT Systeme** und domains; nutze dafür insbesondere {{components}}; versuche NIEMALS die IT Applications auszuschreiben oder die Bedeutung der Abkürzungen zu erraten! falls die angehängten Jira Issues keine Informationen beinhalten, schreibe 'Keine Informationen verfügbar'
+
+     f.) **Abhängigkeiten & Risiken** => prüfe {{description}}, {{acceptance_criteria}}, {{status}} und {{target_end}} aller Jira issues; gibt es klar erkennbare Risiken für die vollständige, termingerechte Ablieferung aller JIRA Issues? Passen die {{target_end}} Daten des Business Epics zu denen der über {{realized_by}} verbundenen Jira Issue? Formuliere Abhängigkeiten und Risiken jeweils in 1-2 kurzen, präzisen Sätzen; konzentriere dich auf maximal 2-3 Abhängigkeiten/Risiken mit der größten potentiellen Auswirkung aus das Projekt;
+
+     g.) **Akzeptanzkriterien** => nutze dafür ausschließlich die {{acceptance_criteria}} Inhalte aller Jira-Issues; übernehme Akzeptanzkriterien möglichst unverändert; falls es mehr als 5 Akzeptanzkrieterien gibt, konzentriere dich auf die am klarsten beschriebenen; falls die Akzeptanzkriterien nur aus einem einzelnen Wort bestehen, lasse sie weg; falls die angehängten Jira Issues keine Informationen oder 'tbd' beinhalten,schreibe 'Keine Informationen verfügbar'
+
+     h.) **Zeitplane** => nutze dafür ausschließlich die {{target_start}}, {{target_end}} und {{fix_versions}} Inhalte aller Jira-Issues; nutze für den Umsetzungsstart das {{target_start}} des Business Epics, nutze für den Umsetzungsende das {{target_end}} des Business Epics, nutze für die Meilensteine das {{target_end}} der unmittelbar mit dem Business Epic verbundenen Jira Issues
+
+  3. Formatieren Sie Ihre Zusammenfassung wie folgt:
      - Verwenden Sie klare, präzise Sprache, die für ein IT-Team geeignet ist
      - Organisieren Sie Informationen in einer logischen Struktur (z.B. Aufzählungspunkte, nummerierte Listen)
      - Fügen Sie Abschnittsüberschriften für eine einfache Navigation ein
