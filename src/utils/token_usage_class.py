@@ -25,9 +25,24 @@ import argparse
 from typing import Dict, List, Optional, Tuple, Union
 import pandas as pd
 from pathlib import Path
-from utils.logger_config import logger
-from utils.config import LOGS_DIR
 
+# ***** KORRIGIERTE LOGIK *****
+# Dieser try-except-Block behandelt Importe robust, unabhängig davon, wie das Skript ausgeführt wird.
+# - 'try': Funktioniert, wenn diese Datei als Modul importiert wird (z. B. von main_scraper.py).
+# - 'except': Dient als Fallback, wenn das Skript direkt ausgeführt wird und die übergeordneten Pakete nicht kennt.
+#   In diesem Fall wird der 'src'-Ordner zum Python-Pfad hinzugefügt, damit die 'utils'-Importe aufgelöst werden können.
+try:
+    from utils.logger_config import logger
+    from utils.config import LOGS_DIR, TOKEN_LOG_FILE
+
+except ModuleNotFoundError:
+    import sys
+    # Füge das übergeordnete Verzeichnis ('src') zum Suchpfad hinzu.
+    src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    if src_path not in sys.path:
+        sys.path.insert(0, src_path)
+    from utils.logger_config import logger
+    from utils.config import LOGS_DIR, TOKEN_LOG_FILE
 
 class TokenUsage:
     """
@@ -517,6 +532,7 @@ class TokenUsage:
 
 # Beispielverwendung
 if __name__ == "__main__":
+
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Generate token usage reports for different time periods.')
     parser.add_argument('--time', choices=['day', 'week', 'month', 'year'], default = 'day',
@@ -524,7 +540,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Initialisiere TokenUsage
-    token_tracker = TokenUsage(log_file_path="../logs/token_usage.jsonl")
+    token_tracker = TokenUsage(log_file_path=TOKEN_LOG_FILE)
 
     # Aktuelles Datum
     now = datetime.datetime.now()
@@ -556,7 +572,7 @@ if __name__ == "__main__":
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     output_format="txt"
     file_ext = "txt"  # Dateiendung
-    output_file = f"../logs/token_report_{args.time}.{file_ext}"
+    output_file = os.path.join(LOGS_DIR, f"token_report_{args.time}.{file_ext}")
     report = token_tracker.generate_report(
         start_time=start_time,
         end_time=end_time,

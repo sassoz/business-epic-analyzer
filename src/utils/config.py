@@ -10,13 +10,14 @@ SRC_DIR = os.path.join(BASE_DIR, 'src')
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-PROMPTS_DIR = os.path.join(BASE_DIR, 'prompts') 
+PROMPTS_DIR = os.path.join(BASE_DIR, 'prompts')
 
 # Data subdirectories
 JIRA_ISSUES_DIR = os.path.join(DATA_DIR, 'jira_issues')
 HTML_REPORTS_DIR = os.path.join(DATA_DIR, 'html_reports')
 ISSUE_TREES_DIR = os.path.join(DATA_DIR, 'issue_trees')
 JSON_SUMMARY_DIR = os.path.join(DATA_DIR, 'json_summary')
+TOKEN_LOG_FILE = os.path.join(LOGS_DIR, "token_usage.jsonl")
 
 # Ensure directories exist
 for directory in [LOGS_DIR, JIRA_ISSUES_DIR, HTML_REPORTS_DIR, ISSUE_TREES_DIR, JSON_SUMMARY_DIR]:
