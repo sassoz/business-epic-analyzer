@@ -54,3 +54,5 @@ __pycache__/
 # Ignoriere die Liste der Business Epics, da diese benutzerspezifisch ist
 # Es wird empfohlen, stattdessen eine Vorlagendatei wie 'BE_Liste.example.txt' zu committen
 BE_Liste*.txt
+/src/utils/__pycache__
+/src/utils/__pycache__

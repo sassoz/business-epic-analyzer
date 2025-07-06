@@ -717,21 +717,19 @@ class DataExtractor:
 
     def extract_activity_details(self, html_content):
         """
-        Extrahiert und filtert die Aktivitätsdetails (Benutzer, Feldname, alter Wert, neuer Wert, Zeitstempel)
-        aus dem übergebenen HTML-Inhalt einer JIRA-Seite.
+        Extrahiert und filtert die Aktivitätsdetails. Kann jetzt mehrere
+        Änderungen innerhalb einer einzigen Aktion korrekt verarbeiten.
         """
         soup = BeautifulSoup(html_content, 'lxml')
         action_containers = soup.find_all('div', class_='actionContainer')
 
         extracted_data = []
-        ignored_fields = ['Checklists', 'Link', 'Remote Link', 'Kommentar oder Erstellung']
+        ignored_fields = ['Checklists', 'Remote Link', 'Link', 'Kommentar oder Erstellung']
 
         for container in action_containers:
+            # Benutzer und Zeitstempel gelten für alle Änderungen in diesem Container
             user_name = "N/A"
             timestamp_iso = "N/A"
-            activity_name = "Kommentar oder Erstellung"
-            old_value = "N/A"
-            new_value = "N/A"
 
             details_block = container.find('div', class_='action-details')
             if not details_block:
@@ -747,48 +745,49 @@ class DataExtractor:
 
             body_block = container.find('div', class_='action-body')
             if body_block:
-                activity_name_tag = body_block.find('td', class_='activity-name')
-                if activity_name_tag:
+                # NEUE LOGIK: Finde alle Zeilen (tr) mit Änderungen
+                change_rows = body_block.find_all('tr')
+                for row in change_rows:
+                    activity_name_tag = row.find('td', class_='activity-name')
+                    if not activity_name_tag:
+                        continue
+
                     activity_name = activity_name_tag.get_text(strip=True)
+                    if activity_name in ignored_fields:
+                        continue
 
-                if activity_name in ignored_fields:
-                    continue
+                    old_value = "N/A"
+                    new_value = "N/A"
 
-                old_val_tag = body_block.find('td', class_='activity-old-val')
-                if old_val_tag:
-                    old_value = old_val_tag.get_text(strip=True)
+                    old_val_tag = row.find('td', class_='activity-old-val')
+                    if old_val_tag:
+                        old_value = old_val_tag.get_text(strip=True)
 
-                new_val_tag = body_block.find('td', class_='activity-new-val')
-                if new_val_tag:
-                    full_text = new_val_tag.get_text(strip=True)
+                    new_val_tag = row.find('td', class_='activity-new-val')
+                    if new_val_tag:
+                        full_text = new_val_tag.get_text(strip=True)
 
-                    if activity_name == 'Status':
-                        try:
-                            new_value = full_text.split(':')[1].split('[')[0].strip().upper()
-                        except IndexError:
-                            new_value = full_text.strip().upper()
-
-                    # NEU: Spezifische Bereinigung für 'Fix Version/s'
-                    elif activity_name == 'Fix Version/s':
-                        match = re.search(r'(Q\d_\d{2})', full_text)
-                        if match:
-                            new_value = match.group(1) # Extrahiert nur den 'Qx_yy' Teil
+                        if activity_name == 'Status':
+                            try:
+                                new_value = full_text.split(':')[1].split('[')[0].strip().upper()
+                            except IndexError:
+                                new_value = full_text.strip().upper()
+                        elif activity_name == 'Fix Version/s':
+                            match = re.search(r'(Q\d_\d{2})', full_text)
+                            new_value = match.group(1) if match else full_text
+                        elif activity_name in ['Acceptance Criteria', 'Description']:
+                            new_value = '[...]'
                         else:
-                            new_value = full_text # Fallback, falls kein Muster gefunden wird
+                            new_value = full_text if len(full_text) <= 100 else full_text[:100] + "..."
 
-                    elif activity_name in ['Acceptance Criteria', 'Description']:
-                        new_value = '[...]'
-                    else:
-                        new_value = full_text if len(full_text) <= 100 else full_text[:100] + "..."
-            else:
-                continue
+                    # Erstelle für jede einzelne Änderung einen eigenen Eintrag
+                    extracted_data.append({
+                        'benutzer': user_name,
+                        'feld_name': activity_name,
+                        'alter_wert': old_value,
+                        'neuer_wert': new_value,
+                        'zeitstempel_iso': timestamp_iso
+                    })
 
-            extracted_data.append({
-                'benutzer': user_name,
-                'feld_name': activity_name,
-                'alter_wert': old_value,
-                'neuer_wert': new_value,
-                'zeitstempel_iso': timestamp_iso
-            })
-
+        # Die finale Liste wird wie gewohnt umgedreht, um chronologisch zu sein
         return extracted_data[::-1]
