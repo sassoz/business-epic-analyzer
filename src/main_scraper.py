@@ -64,13 +64,14 @@ from utils.epic_html_generator import EpicHtmlGenerator
 from utils.token_usage_class import TokenUsage
 from utils.logger_config import logger
 from utils.json_parser import LLMJsonParser
-from utils.config import JIRA_ISSUES_DIR, DATA_DIR, HTML_REPORTS_DIR, JSON_SUMMARY_DIR
+
+# KORRIGIERTER IMPORT
+from utils.project_analyzer import ProjectAnalyzer
 
 from utils.config import (
     JIRA_ISSUES_DIR,
-    DATA_DIR,
-    HTML_REPORTS_DIR,
     JSON_SUMMARY_DIR,
+    HTML_REPORTS_DIR,
     LLM_MODEL_HTML_GENERATOR,
     LLM_MODEL_BUSINESS_VALUE,
     LLM_MODEL_SUMMARY,
@@ -86,178 +87,112 @@ def load_prompt(filename, key):
         with open(file_path, 'r', encoding='utf-8') as file:
             prompts = yaml.safe_load(file)
             return prompts[key]
-    except FileNotFoundError:
-        logger.error(f"Prompt-Datei nicht gefunden: {file_path}")
-        sys.exit(1) # Beendet das Skript, wenn ein Prompt fehlt
-    except KeyError:
-        logger.error(f"Schlüssel '{key}' nicht in der Prompt-Datei '{filename}' gefunden.")
+    except (FileNotFoundError, KeyError) as e:
+        logger.error(f"Fehler beim Laden des Prompts: {e}")
         sys.exit(1)
 
 def get_business_epics_from_file(file_path=None):
     """Lädt Business Epics aus einer Textdatei."""
     print("\n=== Telekom Jira Issue Extractor und Analyst ===")
-    print("Bitte geben Sie den Pfad zur TXT-Datei mit Business Epics ein (oder drücken Sie Enter für 'BE_Liste.txt'):")
     if not file_path:
-        file_path = "BE_Liste.txt"
-    # Überprüfe, ob die Datei existiert
-    if os.path.exists(file_path):
-        file_to_try = file_path
-    # Falls nicht, versuche es mit .txt-Erweiterung
-    elif os.path.exists(file_path + ".txt"):
-        file_to_try = file_path + ".txt"
-        print(f"Hinweis: Verwende Datei '{file_to_try}'")
-    else:
-        print(f"FEHLER: Die Datei {file_path} oder {file_path}.txt existiert nicht.")
+        file_path = input("Bitte geben Sie den Pfad zur TXT-Datei mit Business Epics ein (oder drücken Sie Enter für 'BE_Liste.txt'): ")
+        if not file_path:
+            file_path = "BE_Liste.txt"
+
+    file_to_try = file_path if os.path.exists(file_path) else f"{file_path}.txt"
+    if not os.path.exists(file_to_try):
+        print(f"FEHLER: Die Datei {file_to_try} existiert nicht.")
         return []
 
-    # Business Epics aus der Datei lesen
-    business_epics = []
     with open(file_to_try, 'r') as file:
-        for line in file:
-            epic = line.strip()
-            if epic:  # Leere Zeilen ignorieren
-                business_epics.append(epic)
+        business_epics = [line.strip() for line in file if line.strip()]
     print(f"{len(business_epics)} Business Epics gefunden.")
     return business_epics
 
-
 def main():
     """Hauptfunktion zum Ausführen des Skripts mit Befehlszeilenparametern."""
-    # Befehlszeilenparameter definieren
     parser = argparse.ArgumentParser(description='Jira Issue Link Scraper')
     parser.add_argument('--scraper', type=lambda x: x.lower() == 'true', default=DEFAULT_SCRAPE_HTML,
-                        help=f'Aktiviert oder deaktiviert das Scraping von Jira (True/False, Standard: {DEFAULT_SCRAPE_HTML})')
-    parser.add_argument('--issue', type=str, default=None,
-                    help='Spezifische Jira-Issue-ID zur Verarbeitung (z.B. BEMABU-12345)')
-    parser.add_argument('--file', type=str, default=None,
-                        help='Pfad zur TXT-Datei mit Business Epics (Standard: Interaktive Eingabe oder "BE_Liste.txt")')
-
+                        help=f'Aktiviert das Scraping (True/False, Standard: {DEFAULT_SCRAPE_HTML})')
+    parser.add_argument('--issue', type=str, default=None, help='Spezifische Jira-Issue-ID zur Verarbeitung')
+    parser.add_argument('--file', type=str, default=None, help='Pfad zur TXT-Datei mit Business Epics')
     args = parser.parse_args()
-    SCRAPE_HTML = args.scraper
 
-    """Hauptfunktion zum Ausführen des Skripts."""
-    # Initialisiere den Token-Tracker einmal
-    token_tracker = TokenUsage(log_file_path="logs/token_usage.jsonl")  # Ohne Datum für kontinuierliches Logging
-
-    # Überprüfe, ob eine spezifische Issue-ID übergeben wurde
-    if args.issue:
-        # Wenn ja, verwende diese als einziges Business Epic
-        business_epics = [args.issue]
-        print(f"Verarbeite einzelnes Issue: {args.issue}")
-    else:
-        # Ansonsten lade Business Epics aus der Datei
-        business_epics = get_business_epics_from_file(args.file)
+    token_tracker = TokenUsage()
+    business_epics = [args.issue] if args.issue else get_business_epics_from_file(args.file)
 
     if not business_epics:
         print("Keine Business Epics gefunden. Programm wird beendet.")
         return
 
-    email = JIRA_EMAIL
-    json_dir = JIRA_ISSUES_DIR
-    output_dir = DATA_DIR
+    if args.scraper:
+        business_value_system_prompt = load_prompt("business_value_prompt.yaml", "system_prompt")
+        azure_extraction_client = AzureAIClient(system_prompt=business_value_system_prompt)
 
-
-    # Stelle sicher, dass die Ausgabeverzeichnisse existieren
-    os.makedirs(output_dir, exist_ok=True)
-
-    # 1. Client für allgemeine Aufgaben (z.B. die Zusammenfassung)
-    azure_summary_client = AzureAIClient(system_prompt="Du bist ein hilfreicher Assistent für die Analyse von Jira-Tickets.")
-
-    # 2. Spezialisierter Client für die Datenextraktion aus dem Business Value
-    business_value_system_prompt = load_prompt("business_value_prompt.yaml", "system_prompt")
-    azure_extraction_client = AzureAIClient(system_prompt=business_value_system_prompt)
-
-    # Initialisiere den Scraper nur einmal mit dem ersten Epic
-    if business_epics and SCRAPE_HTML==True:
-        first_epic = business_epics[0]
-        first_url = f"https://jira.telekom.de/browse/{first_epic}"
         scraper = JiraScraper(
-            first_url,
-            email,
+            f"https://jira.telekom.de/browse/{business_epics[0]}",
+            JIRA_EMAIL,
             model=LLM_MODEL_BUSINESS_VALUE,
             token_tracker=token_tracker,
             azure_client=azure_extraction_client
         )
-
-        # Verarbeite alle Business Epics
         for i, epic in enumerate(business_epics):
             print(f"\n\n=============================================================\nVerarbeite Business Epic {i+1}/{len(business_epics)}: {epic}")
-            # Für das erste Epic verwenden wir den bereits initialisierten Scraper
-            if i == 0:
-                scraper.run()
-            else:
-                # Für alle weiteren Epics aktualisieren wir nur die URL und setzen den Zustand zurück
-                new_url = f"https://jira.telekom.de/browse/{epic}"
-                scraper.url = new_url
-                scraper.processed_issues = set()  # Zurücksetzen der verarbeiteten Issues
-                scraper.run(skip_login=True)  # Überspringe den Login-Prozess für folgende Epics
+            scraper.url = f"https://jira.telekom.de/browse/{epic}"
+            scraper.processed_issues = set()
+            scraper.run(skip_login=(i > 0))
 
-        # Browser am Ende schließen
         if scraper.login_handler:
             scraper.login_handler.close()
+        cleanup_story_issues(JIRA_ISSUES_DIR)
 
-        # Bereinige Jira Issues um mögliche Story Einträge
-        cleanup_story_issues(json_dir)
-
-    # Initialisiere die Klassen für die Verarbeitung
-    generator = JiraTreeGenerator(json_dir=json_dir)
+    # Verarbeitung nach dem Scraping
+    azure_summary_client = AzureAIClient(system_prompt="Du bist ein hilfreicher Assistent für die Analyse von Jira-Tickets.")
+    generator = JiraTreeGenerator(json_dir=JIRA_ISSUES_DIR)
     visualizer = JiraTreeVisualizer(format='png')
     context_generator = JiraContextGenerator()
-    html_generator = EpicHtmlGenerator(model = LLM_MODEL_HTML_GENERATOR, token_tracker=token_tracker)
+    html_generator = EpicHtmlGenerator(model=LLM_MODEL_HTML_GENERATOR, token_tracker=token_tracker)
     parser = LLMJsonParser()
 
-    # Erstelle Visualisierungen und Zusammenfassungen für alle Business Epics
     for epic in business_epics:
-        # Build the tree using the generator
+        print(f"\n--- Starte Verarbeitung für {epic} ---")
         tree = generator.build_issue_tree(epic)
-        if tree is None:
-            print(f"Fehler bei der Erstellung des Trees für {epic}")
-            continue
+        if not tree:
+            logger.error(f"Fehler bei der Erstellung des Trees für {epic}"); continue
 
-        # Create visualization
         visualizer.visualize(tree, epic)
 
-        # Generate context
+        # KORRIGIERTE ANALYSE-LOGIK
+        logger.info(f"Starte umfassende Analyse für Epic {epic}...")
+        project_analyzer = ProjectAnalyzer(epic_id=epic)
+
+        activity_analysis_result = project_analyzer.analyze_dynamics()
+        if activity_analysis_result:
+            output_filename = os.path.join(JSON_SUMMARY_DIR, f"activity_analysis_{epic}.json")
+            with open(output_filename, 'w', encoding='utf-8') as f:
+                json.dump(activity_analysis_result, f, indent=4)
+            logger.info(f"Aktivitäts-Analyse in '{output_filename}' gespeichert.")
+
+        # Restlicher Workflow
         json_context = context_generator.generate_context(tree, epic)
         if not json_context:
-            logger.error(f"Fehler bei der Erstellung des Kontexts für {epic}")
-            continue
+            logger.error(f"Fehler bei der Erstellung des Kontexts für {epic}"); continue
 
-        # Prompt
         summary_prompt_template = load_prompt("summary_prompt.yaml", "user_prompt_template")
         summary_prompt = summary_prompt_template.format(json_context=json_context)
+        response_data = azure_summary_client.completion(model_name=LLM_MODEL_SUMMARY, user_prompt=summary_prompt, max_tokens=20000, response_format={"type": "json_object"})
 
-        # Rufen Sie den neuen Client für die Zusammenfassung auf
-        response_data = azure_summary_client.completion(
-            model_name=LLM_MODEL_SUMMARY,  # z.B. "o3-mini"
-            user_prompt=summary_prompt,
-            max_tokens=20000,
-            response_format={"type": "json_object"} # Fordert eine JSON-Ausgabe an
-        )
-
-        # Loggen Sie die Token-Nutzung
         if token_tracker and "usage" in response_data:
-            token_tracker.log_usage(
-                model=LLM_MODEL_SUMMARY,
-                input_tokens=response_data["usage"]["prompt_tokens"],
-                output_tokens=response_data["usage"]["completion_tokens"],
-                total_tokens=response_data["usage"]["total_tokens"],
-                task_name="summary_generation"
-            )
+            token_tracker.log_usage(model=LLM_MODEL_SUMMARY, input_tokens=response_data["usage"]["prompt_tokens"], output_tokens=response_data["usage"]["completion_tokens"], total_tokens=response_data["usage"]["total_tokens"], task_name="summary_generation")
 
         json_summary = parser.extract_and_parse_json(response_data["text"])
-
-        if json_summary != '{}':
+        if json_summary and json_summary != '{}':
             with open(os.path.join(JSON_SUMMARY_DIR, f"{epic}_json_summary.json"), 'w', encoding='utf-8') as file:
                 json.dump(json_summary, file)
-
-            # HTML generieren und speichern
             html_file = os.path.join(HTML_REPORTS_DIR, f"{epic}_summary.html")
-            html_content = html_generator.generate_epic_html(json_summary, epic, html_file)
+            html_generator.generate_epic_html(json_summary, epic, html_file)
         else:
             logger.error(f"Fehler bei der Erstellung der JSON_Summary für {epic}")
-            continue
-
 
 if __name__ == "__main__":
     main()

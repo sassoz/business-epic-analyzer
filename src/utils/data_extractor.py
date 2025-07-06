@@ -21,6 +21,7 @@ Key features:
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from bs4 import BeautifulSoup
 import re
 from utils.logger_config import logger
 
@@ -713,3 +714,81 @@ class DataExtractor:
             logger.info(f"Fehler beim Extrahieren der Daten für {issue_key}: {e}")
 
         return data
+
+    def extract_activity_details(self, html_content):
+        """
+        Extrahiert und filtert die Aktivitätsdetails (Benutzer, Feldname, alter Wert, neuer Wert, Zeitstempel)
+        aus dem übergebenen HTML-Inhalt einer JIRA-Seite.
+        """
+        soup = BeautifulSoup(html_content, 'lxml')
+        action_containers = soup.find_all('div', class_='actionContainer')
+
+        extracted_data = []
+        ignored_fields = ['Checklists', 'Link', 'Remote Link', 'Kommentar oder Erstellung']
+
+        for container in action_containers:
+            user_name = "N/A"
+            timestamp_iso = "N/A"
+            activity_name = "Kommentar oder Erstellung"
+            old_value = "N/A"
+            new_value = "N/A"
+
+            details_block = container.find('div', class_='action-details')
+            if not details_block:
+                continue
+
+            user_tag = details_block.find('a', class_='user-hover')
+            if user_tag:
+                user_name = user_tag.get_text(strip=True)
+
+            time_tag = details_block.find('time', class_='livestamp')
+            if time_tag:
+                timestamp_iso = time_tag.get('datetime', 'N/A')
+
+            body_block = container.find('div', class_='action-body')
+            if body_block:
+                activity_name_tag = body_block.find('td', class_='activity-name')
+                if activity_name_tag:
+                    activity_name = activity_name_tag.get_text(strip=True)
+
+                if activity_name in ignored_fields:
+                    continue
+
+                old_val_tag = body_block.find('td', class_='activity-old-val')
+                if old_val_tag:
+                    old_value = old_val_tag.get_text(strip=True)
+
+                new_val_tag = body_block.find('td', class_='activity-new-val')
+                if new_val_tag:
+                    full_text = new_val_tag.get_text(strip=True)
+
+                    if activity_name == 'Status':
+                        try:
+                            new_value = full_text.split(':')[1].split('[')[0].strip().upper()
+                        except IndexError:
+                            new_value = full_text.strip().upper()
+
+                    # NEU: Spezifische Bereinigung für 'Fix Version/s'
+                    elif activity_name == 'Fix Version/s':
+                        match = re.search(r'(Q\d_\d{2})', full_text)
+                        if match:
+                            new_value = match.group(1) # Extrahiert nur den 'Qx_yy' Teil
+                        else:
+                            new_value = full_text # Fallback, falls kein Muster gefunden wird
+
+                    elif activity_name in ['Acceptance Criteria', 'Description']:
+                        new_value = '[...]'
+                    else:
+                        new_value = full_text if len(full_text) <= 100 else full_text[:100] + "..."
+            else:
+                continue
+
+            extracted_data.append({
+                'benutzer': user_name,
+                'feld_name': activity_name,
+                'alter_wert': old_value,
+                'neuer_wert': new_value,
+                'zeitstempel_iso': timestamp_iso
+            })
+
+        return extracted_data[::-1]

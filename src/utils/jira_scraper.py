@@ -99,11 +99,36 @@ class JiraScraper:
                 EC.presence_of_element_located((By.ID, "issue-content"))
             )
 
+            try:
+                logger.info(f"Versuche für Issue {issue_key}, alle Aktivitäten zu laden...")
+                # 1. Auf "All"-Tab klicken
+                all_tab_link_element = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "li#all-tabpanel a"))
+                )
+                self.driver.execute_script("arguments[0].click();", all_tab_link_element)
+                time.sleep(1)
+
+                # 2. Schleife für "Load more older events"
+                while True:
+                    try:
+                        load_more_button = WebDriverWait(self.driver, 3).until(
+                            EC.element_to_be_clickable((By.CLASS_NAME, "show-more-all-tabpanel"))
+                        )
+                        logger.debug(f"     'Load more'-Button für {issue_key} gefunden, klicke...")
+                        self.driver.execute_script("arguments[0].click();", load_more_button)
+                        time.sleep(2)
+                    except TimeoutException:
+                        logger.info(f"Alle Aktivitäten für Issue {issue_key} wurden geladen.")
+                        break
+            except Exception as tab_error:
+                logger.warning(f"Konnte für Issue {issue_key} nicht alle Aktivitäten laden. Fahre mit Standard-HTML fort. Fehler: {tab_error}")
+
             # Hole den HTML-Inhalt
             html_content = self.driver.page_source
 
             # Verwende die Instanzmethode des DataExtractors anstelle der statischen Methode
             issue_data = self.data_extractor.extract_issue_data(self.driver, issue_key)
+            issue_data['activities'] = self.data_extractor.extract_activity_details(html_content)
 
             # Speichere die extrahierten Daten
             FileExporter.process_and_save_issue(self.driver, issue_key, html_content, issue_data)
