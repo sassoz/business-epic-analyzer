@@ -6,7 +6,7 @@ It coordinates multiple components to create a comprehensive knowledge base from
 
 WORKFLOW:
 1. Retrieves Business Epic IDs from a text file (default: BE_Liste.txt)
-2. [Optional] Scrapes Jira issues recursively (controlled by SCRAPE_HTML flag):
+2. [Optional] Scrapes Jira issues recursively (controlled by --scraper flag):
    - Logs into Jira using the provided credentials
    - Extracts data from each issue page
    - Follows "is realized by" links and child issues recursively
@@ -31,13 +31,15 @@ CONFIGURATION:
 - LLM_MODEL_HTML_GENERATOR: Model for HTML generation (default: gpt-4.1-mini)
 - LLM_MODEL_BUSINESS_VALUE: Model for business value extraction (default: claude-3-7-sonnet-latest)
 - LLM_MODEL_SUMMARY: Model for summary generation (default: gpt-4.1)
-- SCRAPE_HTML: Controls whether to perform web scraping (default: False)
+- DEFAULT_SCRAPE_HTML: Controls the default scraping behavior (default: 'false')
 
 USAGE:
 1. Ensure a text file containing Business Epic IDs (one per line) is available
-2. Run the script: python main_scraper.py
-3. If prompted, enter the path to the Business Epic file or press Enter for default
-4. The script will process all epics and generate output files in the configured directories
+2. Run the script with the desired --scraper flag:
+   - python main_scraper.py --scraper true  (Scrapes and analyzes)
+   - python main_scraper.py --scraper only  (Only scrapes)
+   - python main_scraper.py --scraper false (Only analyzes, this is the default)
+3. The script will process all epics and generate output files in the configured directories
 
 OUTPUT DIRECTORIES:
 - JIRA_ISSUES_DIR: Extracted JSON data
@@ -77,7 +79,8 @@ from utils.config import (
     LLM_MODEL_SUMMARY,
     DEFAULT_SCRAPE_HTML,
     JIRA_EMAIL,
-    PROMPTS_DIR
+    PROMPTS_DIR,
+    SCRAPER_CHECK_DAYS
 )
 
 def load_prompt(filename, key):
@@ -112,8 +115,12 @@ def get_business_epics_from_file(file_path=None):
 def main():
     """Hauptfunktion zum Ausführen des Skripts mit Befehlszeilenparametern."""
     parser = argparse.ArgumentParser(description='Jira Issue Link Scraper')
-    parser.add_argument('--scraper', type=lambda x: x.lower() == 'true', default=DEFAULT_SCRAPE_HTML,
-                        help=f'Aktiviert das Scraping (True/False, Standard: {DEFAULT_SCRAPE_HTML})')
+    # Das Argument --scraper wurde angepasst, um 'check' zu akzeptieren
+    parser.add_argument('--scraper',
+                        type=str.lower,
+                        choices=['true', 'false', 'only', 'check'], # NEU: 'check' hinzugefügt
+                        default='false' if not DEFAULT_SCRAPE_HTML else 'true',
+                        help='Steuert das Verhalten: "true" (Scrapen & Analysieren), "false" (nur Analysieren), "only" (nur Scrapen), "check" (Scrapen wenn älter als 7 Tage)')
     parser.add_argument('--issue', type=str, default=None, help='Spezifische Jira-Issue-ID zur Verarbeitung')
     parser.add_argument('--file', type=str, default=None, help='Pfad zur TXT-Datei mit Business Epics')
     args = parser.parse_args()
@@ -125,7 +132,9 @@ def main():
         print("Keine Business Epics gefunden. Programm wird beendet.")
         return
 
-    if args.scraper:
+    # Schritt 2: Optionales Scraping basierend auf dem neuen --scraper-Wert
+    if args.scraper in ['true', 'only', 'check']: # NEU: 'check' in die Bedingung aufgenommen
+        print(f"\n--- Scraping-Modus gestartet (Mode: {args.scraper}) ---")
         business_value_system_prompt = load_prompt("business_value_prompt.yaml", "system_prompt")
         azure_extraction_client = AzureAIClient(system_prompt=business_value_system_prompt)
 
@@ -134,7 +143,9 @@ def main():
             JIRA_EMAIL,
             model=LLM_MODEL_BUSINESS_VALUE,
             token_tracker=token_tracker,
-            azure_client=azure_extraction_client
+            azure_client=azure_extraction_client,
+            scrape_mode=args.scraper, # NEU: Übergabe des Modus
+            check_days=SCRAPER_CHECK_DAYS # NEU: Übergabe der Tage
         )
         for i, epic in enumerate(business_epics):
             print(f"\n\n=============================================================\nVerarbeite Business Epic {i+1}/{len(business_epics)}: {epic}")
@@ -144,9 +155,14 @@ def main():
 
         if scraper.login_handler:
             scraper.login_handler.close()
-        cleanup_story_issues(JIRA_ISSUES_DIR)
 
-    # Verarbeitung nach dem Scraping
+    # Wenn der Modus 'only' ist, wird das Skript hier beendet
+    if args.scraper == 'only':
+        print("\n--- Scraping abgeschlossen. Programm wird wie gewünscht beendet. ---")
+        return
+
+    # Schritt 3: Analyse der Epics
+    print("\n--- Analyse-Modus gestartet ---")
     azure_summary_client = AzureAIClient(system_prompt="Du bist ein hilfreicher Assistent für die Analyse von Jira-Tickets.")
     generator = JiraTreeGenerator(json_dir=JIRA_ISSUES_DIR)
     visualizer = JiraTreeVisualizer(format='png')
@@ -162,7 +178,6 @@ def main():
 
         visualizer.visualize(tree, epic)
 
-        # KORRIGIERTE ANALYSE-LOGIK
         logger.info(f"Starte umfassende Analyse für Epic {epic}...")
         project_analyzer = ProjectAnalyzer(epic_id=epic)
 
@@ -173,7 +188,6 @@ def main():
                 json.dump(activity_analysis_result, f, indent=4)
             logger.info(f"Aktivitäts-Analyse in '{output_filename}' gespeichert.")
 
-        # Restlicher Workflow
         json_context = context_generator.generate_context(tree, epic)
         if not json_context:
             logger.error(f"Fehler bei der Erstellung des Kontexts für {epic}"); continue

@@ -26,7 +26,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import os
 import time
+from datetime import datetime, timedelta
+from utils.config import JIRA_ISSUES_DIR
 import subprocess
 import re
 import json
@@ -43,39 +46,54 @@ from utils.business_impact_api import process_description
 class JiraScraper:
     """Hauptklasse zum Scraping von Jira-Issues."""
 
-    def __init__(self, url, email, model="o3-mini", token_tracker=None, azure_client=None):
+    def __init__(self, url, email, model="o3-mini", token_tracker=None, azure_client=None, scrape_mode='true', check_days=7):
         """
         Initialisiert den JiraScraper.
 
         Args:
             url (str): Die Jira-URL
             email (str): Die E-Mail-Adresse für den Login
+            scrape_mode (str): Der Modus ('true', 'only', 'check')
+            check_days (int): Anzahl der Tage für die Gültigkeitsprüfung im 'check' Modus
         """
         self.url = url
         self.email = email
         self.login_handler = JiraLoginHandler()
         self.driver = None
-        self.processed_issues = set()  # Set zum Speichern bereits verarbeiteter Issues
+        self.processed_issues = set()
+        self.scrape_mode = scrape_mode # NEU
+        self.check_days = check_days # NEU
         self.data_extractor = DataExtractor(
             description_processor=process_description,
             model=model,
             token_tracker=token_tracker,
-            azure_client=azure_client # Dies funktioniert jetzt
+            azure_client=azure_client
         )
+
+    def _should_skip_due_to_age(self, issue_key):
+        """Prüft, ob ein Issue aufgrund seines Alters übersprungen werden soll."""
+        if self.scrape_mode != 'check':
+            return False
+
+        issue_file_path = os.path.join(JIRA_ISSUES_DIR, f"{issue_key}.json")
+        if not os.path.exists(issue_file_path):
+            return False # Datei existiert nicht, also nicht überspringen
+
+        file_mod_time = os.path.getmtime(issue_file_path)
+        modified_date = datetime.fromtimestamp(file_mod_time)
+        if datetime.now() - modified_date < timedelta(days=self.check_days):
+            logger.info(f"Issue {issue_key} existiert bereits und ist aktuell. Überspringe erneutes Laden.")
+            return True # Datei ist aktuell, also überspringen
+
+        logger.info(f"Issue {issue_key} existiert, ist aber älter als {self.check_days} Tage. Wird erneut geladen.")
+        return False # Datei ist veraltet, also nicht überspringen
+
 
     def extract_and_save_issue_data(self, issue_url, issue_key=None):
         """
         Extrahiert und speichert die Daten eines einzelnen Issues.
-
-        Args:
-            issue_url (str): Die URL des Issues
-            issue_key (str, optional): Der Issue-Key, falls bereits bekannt
-
-        Returns:
-            dict: Die extrahierten Daten oder None, wenn das Issue bereits verarbeitet wurde
         """
         if not issue_key:
-            # Extrahiere Issue-Key aus der URL, falls nicht angegeben
             issue_key = issue_url.split('/browse/')[1] if '/browse/' in issue_url else None
 
         if not issue_key:
@@ -83,7 +101,12 @@ class JiraScraper:
             return None
 
         if issue_key in self.processed_issues:
-            logger.info(f"Issue {issue_key} wurde bereits verarbeitet, überspringe...")
+            logger.info(f"Issue {issue_key} wurde bereits in diesem Durchlauf verarbeitet, überspringe...")
+            return None
+
+        # NEUE Logik zur Prüfung des Dateialters
+        if self._should_skip_due_to_age(issue_key):
+            self.processed_issues.add(issue_key) # Wichtig: Auch übersprungene als "verarbeitet" markieren
             return None
 
         try:
@@ -93,6 +116,7 @@ class JiraScraper:
             # Navigiere zur Issue-Seite
             self.driver.get(issue_url)
             logger.info(f"Verarbeite Issue: {issue_key}")
+            print(f"{datetime.now().strftime('%H:%M:%S')} Verarbeite Issue: {issue_key}")
 
             # Warte, bis die Seite geladen ist
             WebDriverWait(self.driver, 10).until(

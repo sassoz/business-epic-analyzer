@@ -33,6 +33,7 @@ LLM_MODEL_SUMMARY = "o3-mini"
 
 # Default Flags
 DEFAULT_SCRAPE_HTML = True
+SCRAPER_CHECK_DAYS = 7
 
 # Credentials
 JIRA_EMAIL ="ralf.niemeyer@telekom.de"

@@ -18,8 +18,14 @@ zwei Grafiken ausgegeben:
 2.  Ein Histogramm, das die Verteilung der bereinigten Durchlaufzeiten visualisiert.
 
 Usage:
-    python -m src.utils.epic_timeline_analyzer <EPIC_ID>
-    Beispiel: python -m src.utils.epic_timeline_analyzer BEMABU-2054
+    - Für ein einzelnes Epic:
+      python -m src.utils.epic_timeline_analyzer --epic_id BEMABU-2054
+
+    - Für eine Liste von Epics aus einer Datei:
+      python -m src.utils.epic_timeline_analyzer --file pfad/zur/deiner_liste.txt
+
+    - Interaktive Eingabe:
+      python -m src.utils.epic_timeline_analyzer
 """
 import os
 import sys
@@ -114,7 +120,7 @@ class EpicTimelineAnalyzer:
                                  (key, type, creation_date, closing_date) oder None,
                                  wenn keine analysierbaren Issues gefunden wurden.
         """
-        logger.info("Starte dynamische Entdeckung aller Child-Issues...")
+        logger.info(f"Starte dynamische Entdeckung aller Child-Issues für {self.epic_id}...")
         initial_tree = self.tree_generator.build_issue_tree(self.epic_id)
         if not initial_tree:
             logger.error(f"Konnte initialen Issue-Baum für '{self.epic_id}' nicht erstellen.")
@@ -144,7 +150,7 @@ class EpicTimelineAnalyzer:
                 net_add_activities.extend(act for act in activities if act.get('neuer_wert'))
 
         if not net_add_activities:
-            logger.warning("Keine Netto-'Hinzufügen'-Aktivitäten gefunden.")
+            logger.warning(f"Keine Netto-'Hinzufügen'-Aktivitäten für Epic {self.epic_id} gefunden.")
             return None
 
         required_child_keys = {self._parse_key(act['neuer_wert']) for act in net_add_activities}
@@ -152,7 +158,7 @@ class EpicTimelineAnalyzer:
 
         missing_keys = [key for key in required_child_keys if key and not os.path.exists(os.path.join(self.json_dir, f"{key}.json"))]
         if missing_keys:
-            print(f"\n--- {len(missing_keys)} fehlende Child-Issues werden von Jira nachgeladen... ---")
+            print(f"\n--- {len(missing_keys)} fehlende Child-Issues für Epic {self.epic_id} werden von Jira nachgeladen... ---")
             scraper = JiraScraper(f"https://jira.telekom.de/browse/{missing_keys[0]}", JIRA_EMAIL, model=LLM_MODEL_BUSINESS_VALUE)
             for i, key in enumerate(missing_keys):
                 print(f"Lade Issue {i+1}/{len(missing_keys)}: {key}")
@@ -191,7 +197,7 @@ class EpicTimelineAnalyzer:
                 continue
 
         if not timeline_data:
-            logger.warning("Keine gültigen 'Story'- oder 'Bug'-Issues zur Analyse gefunden.")
+            logger.warning(f"Keine gültigen 'Story'- oder 'Bug'-Issues zur Analyse für {self.epic_id} gefunden.")
             return None
         return pd.DataFrame(timeline_data)
 
@@ -272,7 +278,7 @@ class EpicTimelineAnalyzer:
 
         closed_df = df.dropna(subset=['closing_date']).copy()
         if closed_df.empty:
-            logger.warning("Keine abgeschlossenen Issues für die Laufzeit-Analyse gefunden.")
+            logger.warning(f"Keine abgeschlossenen Issues für die Laufzeit-Analyse von {self.epic_id} gefunden.")
             return
 
         closed_df['lead_time_days'] = (closed_df['closing_date'] - closed_df['creation_date']).dt.days
@@ -280,7 +286,7 @@ class EpicTimelineAnalyzer:
         positive_lead_time_df = closed_df[closed_df['lead_time_days'] >= 0].copy()
 
         if positive_lead_time_df.empty:
-            logger.warning("Nach dem Filtern auf positive Laufzeiten bleiben keine Issues für die Analyse übrig.")
+            logger.warning(f"Nach dem Filtern auf positive Laufzeiten bleiben für {self.epic_id} keine Issues für die Analyse übrig.")
             return None
 
         stories_lead_time = positive_lead_time_df[positive_lead_time_df['type'] == 'Story']['lead_time_days']
@@ -314,44 +320,76 @@ class EpicTimelineAnalyzer:
 
         return stats
 
+def get_epics_from_input(epic_id_arg: str | None, file_arg: str | None) -> list[str]:
+    """Lädt Business Epics entweder aus einem Argument oder einer Datei."""
+    if epic_id_arg:
+        return [epic_id_arg]
+
+    file_path = file_arg
+    if not file_path:
+        file_path = input("Bitte geben Sie den Pfad zur TXT-Datei mit Business Epics ein (oder drücken Sie Enter für 'BE_Liste.txt'): ")
+        if not file_path:
+            file_path = "BE_Liste.txt"
+
+    file_to_try = file_path if os.path.exists(file_path) else f"{file_path}.txt"
+    if not os.path.exists(file_to_try):
+        print(f"FEHLER: Die Datei {file_to_try} existiert nicht.")
+        return []
+
+    with open(file_to_try, 'r') as file:
+        business_epics = [line.strip() for line in file if line.strip()]
+    print(f"{len(business_epics)} Business Epics in '{file_to_try}' gefunden.")
+    return business_epics
+
 # Hauptausführung
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Analysiert die Erstellungs-, Abschluss- und Laufzeit-Timeline eines Epics.")
-    parser.add_argument("epic_id", type=str, help="Die ID des Business Epics (z.B. BEMABU-2054).")
+    parser = argparse.ArgumentParser(description="Analysiert die Erstellungs-, Abschluss- und Laufzeit-Timeline eines oder mehrerer Jira Epics.")
+    parser.add_argument("--epic_id", type=str, help="Die ID eines einzelnen Business Epics, das analysiert werden soll.")
+    parser.add_argument("--file", type=str, help="Der Pfad zu einer TXT-Datei, die eine Liste von Business Epic IDs enthält (eine pro Zeile).")
     args = parser.parse_args()
 
-    analyzer = EpicTimelineAnalyzer(epic_id=args.epic_id)
-    df_timeline = analyzer.analyze_timeline()
+    epics_to_process = get_epics_from_input(args.epic_id, args.file)
 
-    if df_timeline is not None and not df_timeline.empty:
-        print(f"\n--- Analyse der Timeline von {len(df_timeline)} Stories & Bugs ---")
-        df_timeline['creation_date'] = pd.to_datetime(df_timeline['creation_date'], utc=True)
-        df_timeline['closing_date'] = pd.to_datetime(df_timeline['closing_date'], utc=True)
+    if not epics_to_process:
+        print("Keine Business Epics zur Verarbeitung gefunden. Das Programm wird beendet.")
+        sys.exit(0)
 
-        new_pivot = pd.pivot_table(df_timeline, index=df_timeline['creation_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
-        closed_pivot = pd.pivot_table(df_timeline.dropna(subset=['closing_date']), index=df_timeline.dropna(subset=['closing_date'])['closing_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
+    for i, epic_id in enumerate(epics_to_process):
+        print(f"\n\n==================================================================")
+        print(f" Verarbeite Epic {i+1}/{len(epics_to_process)}: {epic_id}")
+        print(f"==================================================================")
 
-        print("\n=== Monatlich neu erstellte Issues ===")
-        print(new_pivot)
-        print("\n=== Monatlich abgeschlossene Issues ===")
-        print(closed_pivot)
+        analyzer = EpicTimelineAnalyzer(epic_id=epic_id)
+        df_timeline = analyzer.analyze_timeline()
 
-        analyzer.create_timeline_plot(df_timeline)
+        if df_timeline is not None and not df_timeline.empty:
+            print(f"\n--- Analyse der Timeline von {len(df_timeline)} Stories & Bugs für {epic_id} ---")
+            df_timeline['creation_date'] = pd.to_datetime(df_timeline['creation_date'], utc=True)
+            df_timeline['closing_date'] = pd.to_datetime(df_timeline['closing_date'], utc=True)
 
-        lead_time_stats = analyzer.create_lead_time_histogram(df_timeline)
-        if lead_time_stats:
-            print("\n=== Analyse der bereinigten Durchlaufzeiten (in Tagen) ===")
-            print("Hinweis: Issues mit negativer Laufzeit (Abschluss vor Epic-Zuordnung) wurden für diese Statistik entfernt.")
-            if 'Story' in lead_time_stats and not lead_time_stats['Story'].empty:
-                print("\n--- Stories ---")
-                print(f"Durchschnitt: {lead_time_stats['Story']['mean']:.1f} Tage")
-                print(f"Median:       {lead_time_stats['Story']['50%']:.1f} Tage")
-                print(f"Schnellste:   {lead_time_stats['Story']['min']:.0f} Tage | Langsamste: {lead_time_stats['Story']['max']:.0f} Tage")
-            if 'Bug' in lead_time_stats and not lead_time_stats['Bug'].empty:
-                print("\n--- Bugs ---")
-                print(f"Durchschnitt: {lead_time_stats['Bug']['mean']:.1f} Tage")
-                print(f"Median:       {lead_time_stats['Bug']['50%']:.1f} Tage")
-                print(f"Schnellste:   {lead_time_stats['Bug']['min']:.0f} Tage | Langsamste: {lead_time_stats['Bug']['max']:.0f} Tage")
+            new_pivot = pd.pivot_table(df_timeline, index=df_timeline['creation_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
+            closed_pivot = pd.pivot_table(df_timeline.dropna(subset=['closing_date']), index=df_timeline.dropna(subset=['closing_date'])['closing_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
 
-    else:
-        print(f"Keine 'Story'- oder 'Bug'-Issues für das Epic {args.epic_id} gefunden, die analysiert werden konnten.")
+            print("\n=== Monatlich neu erstellte Issues ===")
+            print(new_pivot)
+            print("\n=== Monatlich abgeschlossene Issues ===")
+            print(closed_pivot)
+
+            analyzer.create_timeline_plot(df_timeline)
+
+            lead_time_stats = analyzer.create_lead_time_histogram(df_timeline)
+            if lead_time_stats:
+                print("\n=== Analyse der bereinigten Durchlaufzeiten (in Tagen) ===")
+                print("Hinweis: Issues mit negativer Laufzeit (Abschluss vor Epic-Zuordnung) wurden für diese Statistik entfernt.")
+                if 'Story' in lead_time_stats and not lead_time_stats['Story'].empty:
+                    print("\n--- Stories ---")
+                    print(f"Durchschnitt: {lead_time_stats['Story']['mean']:.1f} Tage")
+                    print(f"Median:       {lead_time_stats['Story']['50%']:.1f} Tage")
+                    print(f"Schnellste:   {lead_time_stats['Story']['min']:.0f} Tage | Langsamste: {lead_time_stats['Story']['max']:.0f} Tage")
+                if 'Bug' in lead_time_stats and not lead_time_stats['Bug'].empty:
+                    print("\n--- Bugs ---")
+                    print(f"Durchschnitt: {lead_time_stats['Bug']['mean']:.1f} Tage")
+                    print(f"Median:       {lead_time_stats['Bug']['50%']:.1f} Tage")
+                    print(f"Schnellste:   {lead_time_stats['Bug']['min']:.0f} Tage | Langsamste: {lead_time_stats['Bug']['max']:.0f} Tage")
+        else:
+            print(f"\n---> Keine 'Story'- oder 'Bug'-Issues für das Epic {epic_id} gefunden, die analysiert werden konnten.")
