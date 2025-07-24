@@ -7,15 +7,31 @@ dynamische Entdeckungsmethode, um alle verknüpften Issues anhand der
 Jira-Aktivitäten zu finden und lädt bei Bedarf fehlende Daten automatisch
 von Jira nach.
 
-Die Analyse umfasst:
-- Den Zeitpunkt der Zuordnung zum Epic (Erstellung im Kontext des Epics).
-- Den Zeitpunkt des Abschlusses ('Resolved' oder 'Closed').
-- Die Durchlaufzeit (Lead Time) von der Zuordnung bis zum Abschluss.
+Funktionsweise:
+1.  **Dynamische Entdeckung:** Statt einer statischen Baumstruktur analysiert das
+    Skript die Aktivitäten des Haupt-Epics. Es identifiziert alle Issues, die
+    jemals über das Feld 'Epic Child' mit dem Epic verknüpft wurden.
+2.  **Datenvalidierung und Nachladen:** Das Skript prüft, ob für alle entdeckten
+    Child-Issues lokale JSON-Dateien existieren. Fehlende oder veraltete
+    Issues (gemäß scrape_mode='check') werden automatisch über eine **einmalig
+    aufgebaute, persistente Jira-Session** nachgeladen.
+3.  **Timeline-Analyse:** Für alle relevanten Issues vom Typ 'Story' oder 'Bug'
+    werden folgende Zeitpunkte extrahiert:
+    - Der Zeitpunkt der Zuordnung zum Epic (Erstellung im Kontext des Epics).
+    - Der Zeitpunkt des Abschlusses ('Resolved' oder 'Closed').
+    - Die Durchlaufzeit (Lead Time) von der Zuordnung bis zum Abschluss.
+4.  **Visualisierung:** Die Ergebnisse werden sowohl tabellarisch als auch in Form
+    von zwei Grafiken ausgegeben:
+    - Eine Swimlane-Timeline, die den monatlichen Zu- und Abfluss von Issues zeigt.
+    - Ein Histogramm, das die Verteilung der bereinigten Durchlaufzeiten visualisiert.
 
-Die Ergebnisse werden sowohl tabellarisch in der Konsole als auch in Form von
-zwei Grafiken ausgegeben:
-1.  Eine Swimlane-Timeline, die den monatlichen Zu- und Abfluss von Issues zeigt.
-2.  Ein Histogramm, das die Verteilung der bereinigten Durchlaufzeiten visualisiert.
+Besonderheiten:
+- **Effizient:** Führt bei der Verarbeitung mehrerer Epics nur einen einzigen
+  Login-Vorgang durch und verwendet die Session wieder.
+- **Robust:** Lädt fehlende Daten selbstständig nach, anstatt mit einem Fehler
+  abzubrechen.
+- **Präzise:** Die Analyse basiert auf dem tatsächlichen Aktivitätsverlauf statt
+  auf der finalen Baumstruktur, was eine genauere zeitliche Zuordnung ermöglicht.
 
 Usage:
     - Für ein einzelnes Epic:
@@ -23,9 +39,6 @@ Usage:
 
     - Für eine Liste von Epics aus einer Datei:
       python -m src.utils.epic_timeline_analyzer --file pfad/zur/deiner_liste.txt
-
-    - Interaktive Eingabe:
-      python -m src.utils.epic_timeline_analyzer
 """
 import os
 import sys
@@ -36,6 +49,12 @@ import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import warnings
+warnings.filterwarnings(
+    "ignore",
+    message="Converting to PeriodArray/Index representation will drop timezone information.",
+    category=UserWarning
+)
 
 # Pfad-Konfiguration
 src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -45,59 +64,46 @@ if src_dir not in sys.path:
 from utils.logger_config import logger
 from utils.jira_tree_classes import JiraTreeGenerator
 from utils.jira_scraper import JiraScraper
-from utils.config import JIRA_ISSUES_DIR, ISSUE_TREES_DIR, JIRA_EMAIL, LLM_MODEL_BUSINESS_VALUE
+from utils.config import JIRA_ISSUES_DIR, PLOT_DIR, JIRA_EMAIL, LLM_MODEL_BUSINESS_VALUE, SCRAPER_CHECK_DAYS
 
 
 class EpicTimelineAnalyzer:
     """Orchestriert die Analyse der Erstellungs-, Abschluss- und Laufzeit-Timeline eines Epics.
 
     Diese Klasse kapselt die gesamte Logik zur dynamischen Entdeckung von Issues,
-    zum Nachladen von Daten und zur Erstellung der analytischen Auswertungen
-    (Tabellen und Grafiken).
+    zum Nachladen von Daten mittels einer wiederverwendbaren Scraper-Instanz und
+    zur Erstellung der analytischen Auswertungen (Tabellen und Grafiken).
 
     Attributes:
-        epic_id (str): Die Jira-ID des zu analysierenden Epics (z.B. "BEMABU-2054").
-        json_dir (str): Der Pfad zum Verzeichnis mit den lokalen JSON-Dateien der Issues.
+        epic_id (str): Die Jira-ID des zu analysierenden Epics.
+        json_dir (str): Der Pfad zum Verzeichnis mit den lokalen JSON-Dateien.
         tree_generator (JiraTreeGenerator): Eine Instanz zur Erstellung der initialen Issue-Hierarchie.
+        scraper (JiraScraper | None): Eine optionale, bereits authentifizierte Scraper-Instanz.
     """
 
-    def __init__(self, epic_id: str, json_dir: str = JIRA_ISSUES_DIR):
+    def __init__(self, epic_id: str, json_dir: str = JIRA_ISSUES_DIR, scraper: JiraScraper | None = None):
         """Initialisiert den Analyzer.
 
         Args:
             epic_id (str): Die Jira-ID des zu analysierenden Epics.
             json_dir (str, optional): Der Pfad zum Verzeichnis der JSON-Dateien.
-                                      Standardwert ist JIRA_ISSUES_DIR aus der Konfiguration.
+            scraper (JiraScraper | None, optional): Eine existierende, bereits authentifizierte
+                JiraScraper-Instanz zur Wiederverwendung der Session.
         """
         self.epic_id = epic_id
         self.json_dir = json_dir
         self.tree_generator = JiraTreeGenerator(json_dir=self.json_dir)
+        self.scraper = scraper
         logger.info(f"EpicTimelineAnalyzer für '{self.epic_id}' initialisiert.")
 
     def _parse_key(self, value_str: str) -> str | None:
-        """Extrahiert einen JIRA-Key aus einem String mithilfe von regulären Ausdrücken.
-
-        Args:
-            value_str (str): Der String, aus dem der Key extrahiert werden soll.
-
-        Returns:
-            str | None: Der gefundene Jira-Key oder None, wenn kein Key gefunden wurde.
-        """
+        """Extrahiert einen JIRA-Key aus einem String mithilfe von regulären Ausdrücken."""
         if not value_str: return None
         match = re.search(r'([A-Z]+-\d+)', value_str)
         return match.group(1) if match else None
 
     def _clean_status_name(self, raw_name: str) -> str:
-        """Bereinigt rohe Status-Namen, um die Vergleichbarkeit zu gewährleisten.
-
-        Entfernt z.B. ID-Zusätze wie '[ 16 ]' aus den Status-Namen.
-
-        Args:
-            raw_name (str): Der rohe Status-Name aus den Jira-Aktivitäten.
-
-        Returns:
-            str: Der bereinigte Status-Name in Großbuchstaben.
-        """
+        """Bereinigt rohe Status-Namen, um die Vergleichbarkeit zu gewährleisten."""
         if not raw_name: return "N/A"
         if '[' in raw_name:
             try:
@@ -107,18 +113,18 @@ class EpicTimelineAnalyzer:
         return raw_name.strip().upper()
 
     def analyze_timeline(self) -> pd.DataFrame | None:
-        """Führt die vollständige, kombinierte Analyse des Epic-Lebenszyklus durch.
+        """Führt die vollständige Analyse durch, inkl. dynamischer Entdeckung und Nachladen.
 
         Diese Methode ist der zentrale Orchestrator. Sie führt folgende Schritte aus:
         1.  Dynamische Entdeckung aller Child-Issues anhand der 'Epic Child'-Aktivitäten.
-        2.  Automatisches Nachladen fehlender Issue-Daten von Jira via JiraScraper.
+        2.  Automatisches Nachladen fehlender oder veralteter Issue-Daten von Jira
+            über die bereitgestellte, persistente Scraper-Instanz.
         3.  Extraktion der Erstellungs- (Zuordnung zum Epic) und Abschlussdaten für
             alle relevanten 'Story'- und 'Bug'-Issues.
 
         Returns:
             pd.DataFrame | None: Ein pandas DataFrame mit den aufbereiteten Timeline-Daten
-                                 (key, type, creation_date, closing_date) oder None,
-                                 wenn keine analysierbaren Issues gefunden wurden.
+                                 oder None, wenn keine analysierbaren Issues gefunden wurden.
         """
         logger.info(f"Starte dynamische Entdeckung aller Child-Issues für {self.epic_id}...")
         initial_tree = self.tree_generator.build_issue_tree(self.epic_id)
@@ -126,18 +132,26 @@ class EpicTimelineAnalyzer:
             logger.error(f"Konnte initialen Issue-Baum für '{self.epic_id}' nicht erstellen.")
             return None
 
-        initial_activities = []
+        activities_with_source = []
         for key in set(initial_tree.nodes()):
             file_path = os.path.join(self.json_dir, f"{key}.json")
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     issue_data = json.load(f)
-                    initial_activities.extend(issue_data.get('activities', []))
+                    for activity in issue_data.get('activities', []):
+                        # Speichere die Quell-ID zusammen mit der Aktivität
+                        activities_with_source.append((key, activity))
             except (FileNotFoundError, json.JSONDecodeError):
                 continue
 
         from collections import defaultdict
-        child_activities = [act for act in initial_activities if act.get('feld_name') == 'Epic Child']
+        child_activities = []
+        for source_key, act in activities_with_source:
+            if act.get('feld_name') == 'Epic Child':
+                # Hier ist die gewünschte Log-Ausgabe
+                logger.info(f"'Epic Child' Aktivität in Quell-Issue '{source_key}' identifiziert.")
+                child_activities.append(act)
+
         daily_activity_groups = defaultdict(list)
         for act in child_activities:
             child_key = self._parse_key(act.get('neuer_wert')) or self._parse_key(act.get('alter_wert'))
@@ -157,16 +171,17 @@ class EpicTimelineAnalyzer:
         logger.info(f"{len(required_child_keys)} einzigartige Child-Issues durch Aktivitäten entdeckt.")
 
         missing_keys = [key for key in required_child_keys if key and not os.path.exists(os.path.join(self.json_dir, f"{key}.json"))]
+
         if missing_keys:
-            print(f"\n--- {len(missing_keys)} fehlende Child-Issues für Epic {self.epic_id} werden von Jira nachgeladen... ---")
-            scraper = JiraScraper(f"https://jira.telekom.de/browse/{missing_keys[0]}", JIRA_EMAIL, model=LLM_MODEL_BUSINESS_VALUE)
-            for i, key in enumerate(missing_keys):
-                print(f"Lade Issue {i+1}/{len(missing_keys)}: {key}")
-                scraper.url = f"https://jira.telekom.de/browse/{key}"
-                scraper.run(skip_login=(i > 0))
-            if scraper.login_handler:
-                scraper.login_handler.close()
-            print("--- Nachladen abgeschlossen. ---")
+            if self.scraper:
+                print(f"\n--- {len(missing_keys)} fehlende Child-Issues für Epic {self.epic_id} werden über bestehende Session nachgeladen... ---")
+                for i, key in enumerate(missing_keys):
+                    print(f"Lade Issue {i+1}/{len(missing_keys)}: {key}")
+                    issue_url = f"https://jira.telekom.de/browse/{key}"
+                    self.scraper.extract_and_save_issue_data(issue_url, key)
+                print("--- Nachladen für dieses Epic abgeschlossen. ---")
+            else:
+                logger.warning("Fehlende Issues gefunden, aber es wurde kein Scraper für das automatische Nachladen bereitgestellt.")
 
         logger.info("Analysiere Erstellungs- und Abschlussdaten für alle entdeckten Issues...")
         timeline_data = []
@@ -202,16 +217,7 @@ class EpicTimelineAnalyzer:
         return pd.DataFrame(timeline_data)
 
     def create_timeline_plot(self, df: pd.DataFrame):
-        """Erstellt eine "Swimlane"-Grafik für neue und abgeschlossene Issues.
-
-        Die Grafik besteht aus zwei übereinanderliegenden, synchronisierten
-        Balkendiagrammen (Subplots), die den monatlichen Zufluss (neu erstellte Issues)
-        und Abfluss (abgeschlossene Issues) visualisieren.
-
-        Args:
-            df (pd.DataFrame): Der DataFrame mit den aufbereiteten Timeline-Daten,
-                               erzeugt von `analyze_timeline`.
-        """
+        """Erstellt eine "Swimlane"-Grafik für neue und abgeschlossene Issues."""
         if df is None or df.empty: return
 
         df['creation_month'] = df['creation_date'].dt.to_period('M')
@@ -236,11 +242,21 @@ class EpicTimelineAnalyzer:
         for container in ax1.containers:
             ax1.bar_label(container, label_type='center', fontsize=10, color='white', fontweight='bold')
 
-        closed_pivot.plot(kind='bar', stacked=True, ax=ax2, color=[colors.get('Bug_Closed', 'darkred'), colors.get('Story_Closed', 'darkblue')])
-        ax2.set_title("Swimlane 2: Monatlich abgeschlossene Issues (Abfluss)", fontsize=14)
+        if not closed_pivot.empty:
+            closed_pivot.plot(kind='bar', stacked=True, ax=ax2, color=[colors.get('Bug_Closed', 'darkred'), colors.get('Story_Closed', 'darkblue')])
+            ax2.set_title("Swimlane 2: Monatlich abgeschlossene Issues (Abfluss)", fontsize=14)
+            for container in ax2.containers:
+                ax2.bar_label(container, label_type='center', fontsize=10, color='white', fontweight='bold')
+        else:
+            # Wenn keine Daten vorhanden sind, zeichnen wir eine leere Grafik mit einer Nachricht
+            ax2.set_title("Swimlane 2: Monatlich abgeschlossene Issues (Abfluss)", fontsize=14)
+            ax2.text(0.5, 0.5, 'Keine abgeschlossenen Issues gefunden', horizontalalignment='center', verticalalignment='center', transform=ax2.transAxes, fontsize=12, color='gray')
+            ax2.set_yticks([]) # Entfernt die y-Achsen-Striche für eine saubere Optik
+
         ax2.set_ylabel("Anzahl Issues")
         ax2.set_xlabel("Monat")
         ax2.grid(axis='y', linestyle='--', alpha=0.7)
+
         for container in ax2.containers:
             ax2.bar_label(container, label_type='center', fontsize=10, color='white', fontweight='bold')
 
@@ -255,25 +271,13 @@ class EpicTimelineAnalyzer:
         fig.legend(handles=legend_patches, loc='upper right', fontsize=12, bbox_to_anchor=(0.9, 0.95))
         plt.tight_layout(rect=[0, 0, 1, 0.96])
 
-        output_path = os.path.join(ISSUE_TREES_DIR, f"{self.epic_id}_swimlane_timeline.png")
+        output_path = os.path.join(PLOT_DIR, f"{self.epic_id}_swimlane_timeline.png")
         plt.savefig(output_path, dpi=150, bbox_inches='tight')
         logger.info(f"Swimlane-Grafik gespeichert unter: {output_path}")
         plt.close(fig)
 
     def create_lead_time_histogram(self, df: pd.DataFrame):
-        """Erstellt ein Histogramm der bereinigten Durchlaufzeiten.
-
-        Die Methode visualisiert die Verteilung der Zeit (in Tagen), die
-        von der Zuordnung eines Issues zum Epic bis zu dessen Abschluss vergeht.
-        Issues mit negativer Laufzeit ("Altfälle") werden herausgefiltert.
-
-        Args:
-            df (pd.DataFrame): Der DataFrame mit den aufbereiteten Timeline-Daten.
-
-        Returns:
-            dict | None: Ein Dictionary mit deskriptiven Statistiken (Mittelwert,
-                         Median etc.) oder None, wenn keine Daten vorhanden sind.
-        """
+        """Erstellt ein Histogramm der bereinigten Durchlaufzeiten."""
         if df is None or df.empty: return
 
         closed_df = df.dropna(subset=['closing_date']).copy()
@@ -313,7 +317,7 @@ class EpicTimelineAnalyzer:
         ax.legend()
         ax.grid(axis='y', linestyle='--', alpha=0.7)
 
-        output_path = os.path.join(ISSUE_TREES_DIR, f"{self.epic_id}_lead_time_histogram.png")
+        output_path = os.path.join(PLOT_DIR, f"{self.epic_id}_lead_time_histogram.png")
         plt.savefig(output_path, dpi=150, bbox_inches='tight')
         logger.info(f"Laufzeit-Histogramm gespeichert unter: {output_path}")
         plt.close(fig)
@@ -354,42 +358,70 @@ if __name__ == '__main__':
         print("Keine Business Epics zur Verarbeitung gefunden. Das Programm wird beendet.")
         sys.exit(0)
 
-    for i, epic_id in enumerate(epics_to_process):
-        print(f"\n\n==================================================================")
-        print(f" Verarbeite Epic {i+1}/{len(epics_to_process)}: {epic_id}")
-        print(f"==================================================================")
+    scraper_instance = None
+    try:
+        print("\n--- Initialisiere Jira-Session für alle anstehenden Operationen... ---")
+        scraper_instance = JiraScraper(
+            "https://jira.telekom.de",
+            JIRA_EMAIL,
+            model=LLM_MODEL_BUSINESS_VALUE,
+            scrape_mode='check',
+            check_days=SCRAPER_CHECK_DAYS
+        )
 
-        analyzer = EpicTimelineAnalyzer(epic_id=epic_id)
-        df_timeline = analyzer.analyze_timeline()
-
-        if df_timeline is not None and not df_timeline.empty:
-            print(f"\n--- Analyse der Timeline von {len(df_timeline)} Stories & Bugs für {epic_id} ---")
-            df_timeline['creation_date'] = pd.to_datetime(df_timeline['creation_date'], utc=True)
-            df_timeline['closing_date'] = pd.to_datetime(df_timeline['closing_date'], utc=True)
-
-            new_pivot = pd.pivot_table(df_timeline, index=df_timeline['creation_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
-            closed_pivot = pd.pivot_table(df_timeline.dropna(subset=['closing_date']), index=df_timeline.dropna(subset=['closing_date'])['closing_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
-
-            print("\n=== Monatlich neu erstellte Issues ===")
-            print(new_pivot)
-            print("\n=== Monatlich abgeschlossene Issues ===")
-            print(closed_pivot)
-
-            analyzer.create_timeline_plot(df_timeline)
-
-            lead_time_stats = analyzer.create_lead_time_histogram(df_timeline)
-            if lead_time_stats:
-                print("\n=== Analyse der bereinigten Durchlaufzeiten (in Tagen) ===")
-                print("Hinweis: Issues mit negativer Laufzeit (Abschluss vor Epic-Zuordnung) wurden für diese Statistik entfernt.")
-                if 'Story' in lead_time_stats and not lead_time_stats['Story'].empty:
-                    print("\n--- Stories ---")
-                    print(f"Durchschnitt: {lead_time_stats['Story']['mean']:.1f} Tage")
-                    print(f"Median:       {lead_time_stats['Story']['50%']:.1f} Tage")
-                    print(f"Schnellste:   {lead_time_stats['Story']['min']:.0f} Tage | Langsamste: {lead_time_stats['Story']['max']:.0f} Tage")
-                if 'Bug' in lead_time_stats and not lead_time_stats['Bug'].empty:
-                    print("\n--- Bugs ---")
-                    print(f"Durchschnitt: {lead_time_stats['Bug']['mean']:.1f} Tage")
-                    print(f"Median:       {lead_time_stats['Bug']['50%']:.1f} Tage")
-                    print(f"Schnellste:   {lead_time_stats['Bug']['min']:.0f} Tage | Langsamste: {lead_time_stats['Bug']['max']:.0f} Tage")
+        login_success = scraper_instance.login_handler.login(scraper_instance.url, scraper_instance.email)
+        if not login_success:
+            print("Login fehlgeschlagen. Das Programm kann fehlende Issues nicht nachladen.")
+            scraper_instance = None
         else:
-            print(f"\n---> Keine 'Story'- oder 'Bug'-Issues für das Epic {epic_id} gefunden, die analysiert werden konnten.")
+            scraper_instance.driver = scraper_instance.login_handler.driver
+            print("--- Session erfolgreich initialisiert. ---\n")
+
+        # Die Hauptschleife über alle Epics
+        for i, epic_id in enumerate(epics_to_process):
+            print(f"\n\n==================================================================")
+            print(f" Verarbeite Epic {i+1}/{len(epics_to_process)}: {epic_id}")
+            print(f"==================================================================")
+
+            analyzer = EpicTimelineAnalyzer(epic_id=epic_id, scraper=scraper_instance)
+            df_timeline = analyzer.analyze_timeline()
+
+            # KORREKTUR: Der folgende Block wurde NACH INNEN in die Schleife verschoben.
+            # ------------------- START DES VERSCHOBENEN BLOCKS -------------------
+            if df_timeline is not None and not df_timeline.empty:
+                print(f"\n--- Analyse der Timeline von {len(df_timeline)} Stories & Bugs für {epic_id} ---")
+                df_timeline['creation_date'] = pd.to_datetime(df_timeline['creation_date'], utc=True)
+                df_timeline['closing_date'] = pd.to_datetime(df_timeline['closing_date'], utc=True)
+
+                new_pivot = pd.pivot_table(df_timeline, index=df_timeline['creation_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
+                closed_pivot = pd.pivot_table(df_timeline.dropna(subset=['closing_date']), index=df_timeline.dropna(subset=['closing_date'])['closing_date'].dt.to_period('M'), columns='type', values='key', aggfunc='count', fill_value=0)
+
+                print("\n=== Monatlich neu erstellte Issues ===")
+                print(new_pivot)
+                print("\n=== Monatlich abgeschlossene Issues ===")
+                print(closed_pivot)
+
+                analyzer.create_timeline_plot(df_timeline)
+
+                lead_time_stats = analyzer.create_lead_time_histogram(df_timeline)
+                if lead_time_stats:
+                    print("\n=== Analyse der bereinigten Durchlaufzeiten (in Tagen) ===")
+                    print("Hinweis: Issues mit negativer Laufzeit (Abschluss vor Epic-Zuordnung) wurden für diese Statistik entfernt.")
+                    if 'Story' in lead_time_stats and not lead_time_stats['Story'].empty:
+                        print("\n--- Stories ---")
+                        print(f"Durchschnitt: {lead_time_stats['Story']['mean']:.1f} Tage")
+                        print(f"Median:       {lead_time_stats['Story']['50%']:.1f} Tage")
+                        print(f"Schnellste:   {lead_time_stats['Story']['min']:.0f} Tage | Langsamste: {lead_time_stats['Story']['max']:.0f} Tage")
+                    if 'Bug' in lead_time_stats and not lead_time_stats['Bug'].empty:
+                        print("\n--- Bugs ---")
+                        print(f"Durchschnitt: {lead_time_stats['Bug']['mean']:.1f} Tage")
+                        print(f"Median:       {lead_time_stats['Bug']['50%']:.1f} Tage")
+                        print(f"Schnellste:   {lead_time_stats['Bug']['min']:.0f} Tage | Langsamste: {lead_time_stats['Bug']['max']:.0f} Tage")
+            else:
+                print(f"\n---> Keine 'Story'- oder 'Bug'-Issues für das Epic {epic_id} gefunden, die analysiert werden konnten.")
+            # ------------------- ENDE DES VERSCHOBENEN BLOCKS -------------------
+
+    finally:
+        if scraper_instance and scraper_instance.login_handler:
+            print("\n--- Schließe Jira-Session. ---")
+            scraper_instance.login_handler.close()

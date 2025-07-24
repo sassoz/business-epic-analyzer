@@ -1,265 +1,142 @@
 """
-Business Impact API Module
+Business Impact API Module (Pydantic Version)
+==============================================
 
-This module provides functionality for extracting business value metrics from Jira issue descriptions
-using AI-powered analysis. It processes textual descriptions to identify and extract structured
-business value data, which helps in prioritizing and evaluating the impact of business requirements.
+This module provides an AI-powered capability to analyze a given text description,
+separate the core narrative from business value information, and structure that
+business value data into a predefined schema.
 
-Key Components:
----------------
-1. process_description(): Extracts business value data from a description text
-2. transform_json_file(): Processes a JSON file containing Jira issue data
+AI-powered Separation with Pydantic
+-----------------------------------
+The module defines a strict data model using Pydantic classes. This model is
+passed directly to the AI using the 'instructor' library, which forces the AI's
+JSON output to conform to the required schema. This proactive approach minimizes
+validation errors, reduces hallucinations, and ensures type safety.
 
-Business Value Structure:
-------------------------
-The module extracts and structures business value into three main categories:
-- Business Impact: Measures direct revenue/cost effects
-  - Scale (0-5)
-  - Revenue impact
-  - Cost savings
-  - Risk/loss mitigation
-  - Justification
-
-- Strategic Enablement: Measures strategic alignment and benefits
-  - Scale (0-5)
-  - Risk minimization
-  - Strategic enablement details
-  - Justification
-
-- Time Criticality: Measures urgency and timing importance
-  - Scale (0-5)
-  - Time frequency/horizon
-  - Justification
-
-
-Usage Examples:
+Key Components
 --------------
-1. Process a description directly:
-   ```python
-   result = process_description(description_text)
-   business_value = result["business_value"]
-   shortened_description = result["description"]
+- **Pydantic Models**: `BusinessImpact`, `StrategicEnablement`, `TimeCriticality`,
+  and `BusinessValue` define the nested structure for the extracted data. `AIResponse`
+  is the top-level model the AI is instructed to populate.
+- **process_description()**: The primary function that takes raw text, communicates
+  with the AI, and returns the separated, structured data.
+- **get_empty_business_value_dict()**: A helper function to generate a default
+  empty result, used when input is empty or in case of an error.
+
+The data model is defined by the following Pydantic classes:
+- AIResponse
+  - cleaned_description: str
+  - business_value: BusinessValue
+    - business_impact: BusinessImpact
+    - strategic_enablement: StrategicEnablement
+    - time_criticality: TimeCriticality
 """
 
-import json
 import os
-import re
+import json
+from pydantic import BaseModel, Field
+from typing import Optional
+
 from utils.azure_ai_client import AzureAIClient
 from utils.prompt_loader import load_prompt_template
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
+class BusinessImpact(BaseModel):
+    """Data model for the financial and operational impact of a task."""
+    scale: int = Field(..., description="The overall impact scale (0-5).")
+    revenue: Optional[str] = Field("", description="Details on revenue generation.")
+    cost_saving: Optional[str] = Field("", description="Details on cost savings.")
+    risk_loss: Optional[str] = Field("", description="Details on mitigating financial risks or losses.")
+    justification: Optional[str] = Field("", description="A narrative explaining the business impact.")
 
-def process_description(description_text, model, token_tracker, azure_client: AzureAIClient):
+class StrategicEnablement(BaseModel):
+    """Data model for the strategic value and alignment of a task."""
+    scale: int = Field(..., description="The overall strategic importance scale (0-5).")
+    risk_minimization: Optional[str] = Field("", description="Details on minimizing non-financial risks.")
+    strat_enablement: Optional[str] = Field("", description="Details on how this enables strategic initiatives.")
+    justification: Optional[str] = Field("", description="A narrative explaining the strategic value.")
+
+class TimeCriticality(BaseModel):
+    """Data model for the urgency and time-based factors of a task."""
+    scale: int = Field(..., description="The overall time criticality scale (0-5).")
+    time: Optional[str] = Field("", description="The frequency or time horizon (e.g., 'Daily', 'Q3 2025').")
+    justification: Optional[str] = Field("", description="A narrative explaining why this is time-critical.")
+
+class BusinessValue(BaseModel):
+    """A container for all business value dimensions."""
+    business_impact: BusinessImpact
+    strategic_enablement: StrategicEnablement
+    time_criticality: TimeCriticality
+
+class AIResponse(BaseModel):
+    """The top-level Pydantic model that the AI is instructed to populate."""
+    cleaned_description: str = Field(..., description="The description text, cleaned of any business value information.")
+    business_value: BusinessValue
+
+
+def get_empty_business_value_dict() -> dict:
     """
-    Processes a description text, extracts business_value and shortens the description.
-    Only returns business_value information when it actually exists in the text -
-    does not invent any data.
+    Returns a default empty business value structure as a dictionary.
 
-    Args:
-        description_text (str): The description text to process
-        api_key (str, optional): Claude API key, if not set via environment variable
-        model (str, optional): The AI model to use for processing
-        token_tracker (TokenUsage, optional): Instance to track token usage
+    This is used as a fallback for empty inputs or processing errors.
 
     Returns:
-        dict: Dictionary with shortened_description and business_value (can be empty)
+        dict: A dictionary representing an empty BusinessValue object.
     """
-
-    # Laden Sie die Prompt-Vorlage aus der YAML-Datei
-    prompt_template = load_prompt_template("business_impact_prompt.yaml", "user_prompt_template")
-
-    # Füllen Sie die Vorlage mit dem dynamischen Inhalt
-    prompt = prompt_template.format(description_text=description_text)
-    
-    # API-Anfrage senden über den neuen Client
-    response_data = azure_client.completion(
-        model_name=model,
-        user_prompt=prompt,
-        max_tokens=6000,
-        response_format={"type": "json_object"}
+    # Erstellt eine leere Instanz des Pydantic-Modells und wandelt sie in ein dict um
+    # (Creates an empty instance of the Pydantic model and converts it to a dict)
+    empty_bv = BusinessValue(
+        business_impact=BusinessImpact(scale=0),
+        strategic_enablement=StrategicEnablement(scale=0),
+        time_criticality=TimeCriticality(scale=0)
     )
-    response_text = response_data["text"]
+    return empty_bv.model_dump()
 
-    # Token-Nutzung loggen, wenn ein Tracker übergeben wurde
-    if token_tracker and "usage" in response_data:
-        token_tracker.log_usage(
-            model=model,
-            input_tokens=response_data["usage"]["prompt_tokens"],
-            output_tokens=response_data["usage"]["completion_tokens"],
-            total_tokens=response_data["usage"]["total_tokens"],
-            task_name="business_impact",
-        )
+def process_description(description_text: str, model: str, token_tracker, azure_client: AzureAIClient) -> dict:
+    """
+    Analyzes a description using the native Azure OpenAI structured output (Pydantic).
+    """
+    if not description_text:
+        return {"description": "", "business_value": get_empty_business_value_dict()}
 
-
-    # JSON aus der Antwort extrahieren
-    json_match = re.search(r'({[\s\S]*})', response_text)
-    if not json_match:
-        raise ValueError("Konnte keine gültige JSON-Struktur aus der Claude-Antwort extrahieren.")
-
-    # Entferne eventuell vorhandene Kommentare aus der JSON-Antwort
-    json_text = re.sub(r'//.*', '', json_match.group(1))
+    prompt_template = load_prompt_template("business_impact_prompt.yaml", "user_prompt_template")
+    prompt = prompt_template.format(description_text=description_text)
 
     try:
-        business_value_json = json.loads(json_text)
-    except json.JSONDecodeError:
-        # Wenn das JSON trotz Bereinigung nicht geparst werden kann,
-        # erstelle eine leere Struktur
-        business_value_json = {
-            "business_value": {
-                "business_impact": {
-                    "scale": 0,
-                    "revenue": "",
-                    "cost_saving": "",
-                    "risk_loss": "",
-                    "justification": ""
-                },
-                "strategic_enablement": {
-                    "scale": 0,
-                    "risk_minimization": "",
-                    "strat_enablement": "",
-                    "justification": ""
-                },
-                "time_criticality": {
-                    "scale": 0,
-                    "time": "",
-                    "justification": ""
-                }
-            }
+        # NEUER, NATIVER AUFRUF mit .parse()
+        completion = azure_client.openai_client.beta.chat.completions.parse(
+            model=model,
+            messages=[
+                {"role": "system", "content": "Extract the event information from the user's description and separate it from the core text."},
+                {"role": "user", "content": prompt}
+            ],
+            response_format=AIResponse, # Direkt die Pydantic-Klasse übergeben
+        )
+
+        # Das Ergebnis ist bereits ein Pydantic-Objekt
+        ai_response_object = completion.choices[0].message.parsed
+
+        # Token-Erfassung funktioniert weiterhin
+        if token_tracker and hasattr(completion, 'usage') and completion.usage:
+             usage = completion.usage
+             token_tracker.log_usage(
+                model=model,
+                input_tokens=usage.prompt_tokens,
+                output_tokens=usage.completion_tokens,
+                total_tokens=usage.total_tokens,
+                task_name="business_impact_native_pydantic", # Name zur Unterscheidung angepasst
+            )
+
+        return {
+            "description": ai_response_object.cleaned_description.strip(),
+            "business_value": ai_response_object.business_value.model_dump(),
         }
 
-    # Überprüfe, ob tatsächlich business_value-Informationen extrahiert wurden
-    has_business_value = False
-    bv = business_value_json.get("business_value", {})
-
-    # Prüfe für jeden Abschnitt, ob nicht-leere Werte vorhanden sind
-    for section in ["business_impact", "strategic_enablement", "time_criticality"]:
-        section_data = bv.get(section, {})
-        for key, value in section_data.items():
-            if key != "scale" and value:  # Wenn ein nicht-leerer Wert gefunden wurde
-                has_business_value = True
-                break
-            elif key == "scale" and value != 0:  # Wenn eine Skala ungleich 0 gefunden wurde
-                has_business_value = True
-                break
-        if has_business_value:
-            break
-
-    # Kürze die description, um den Business Value Teil zu entfernen, aber nur wenn tatsächlich
-    # Business Value-Informationen gefunden wurden
-    if has_business_value:
-        # Suche nach "Business Value / Cost of Delay" Abschnitt
-        shortened_description = re.sub(
-            r'Business Value / Cost of Delay.*?(?=Rahmenbedingungen|$)',
-            '',
-            description_text,
-            flags=re.DOTALL
-        )
-
-        # Entferne doppelte Leerzeilen und bereinige Text
-        shortened_description = re.sub(r'\n{3,}', '\n\n', shortened_description.strip())
-    else:
-        # Wenn kein business_value gefunden wurde, behalte den vollständigen Text bei
-        shortened_description = description_text
-
-    return {
-        "description": shortened_description,
-        "business_value": business_value_json.get("business_value", {}),
-    }
-
-
-def transform_json_file(input_file, api_key=None, output_file=None):
-    """
-    Transforms a BEMABU JSON file using Claude API, extracts business_value information
-    and updates the structure. Only adds business_value information if it's
-    actually present in the text.
-
-    Args:
-        input_file (str): Path to the input JSON file
-        api_key (str, optional): Claude API key, if not set via environment variable
-        output_file (str, optional): Name of the output file (Default: input_file_transformed.json)
-
-    Returns:
-        str: Path to the transformed output file
-    """
-    # JSON-Datei einlesen
-    with open(input_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    # Beschreibungstext extrahieren
-    description_text = data.get("description", "")
-    if not description_text:
-        raise ValueError("Keine 'description' im JSON gefunden.")
-
-    # Verarbeite den Beschreibungstext
-    processed_data = process_description(description_text, api_key)
-
-    # Aktualisiere die JSON-Daten
-    data["description"] = processed_data["description"]
-
-    # Füge business_value nach description ein, aber nur wenn wirklich
-    # business_value-Informationen gefunden wurden
-    business_value = processed_data["business_value"]
-
-    # Überprüfe, ob der business_value Daten enthält (nicht nur leere Felder)
-    has_content = False
-    for section in ["business_impact", "strategic_enablement", "time_criticality"]:
-        section_data = business_value.get(section, {})
-        for key, value in section_data.items():
-            if key != "scale" and value:
-                has_content = True
-                break
-            elif key == "scale" and value != 0:
-                has_content = True
-                break
-        if has_content:
-            break
-
-    # Aktualisiere die JSON-Daten mit neuen business_value nur wenn Informationen gefunden wurden
-    if has_content:
-        # Füge business_value nach description ein
-        items = list(data.items())
-        new_items = []
-
-        for i, (key, value) in enumerate(items):
-            new_items.append((key, value))
-            if key == "description":
-                new_items.append(("business_value", business_value))
-
-        # Erstelle die aktualisierte JSON
-        data = dict(new_items)
-
-    # Bestimme Ausgabedateinamen
-    if not output_file:
-        output_file = input_file
-
-    # Ursprüngliche Datei umbennen
-    old_file = os.path.splitext(input_file)[0] + "_old" + os.path.splitext(input_file)[1]
-    os.rename(input_file, old_file)
-
-    # Schreibe in Ausgabedatei
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    return output_file
-
-# Beispielaufruf
-if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser(description="Transformiert BEMABU JSON-Dateien mit Claude API")
-    parser.add_argument("input_file", help="Pfad zur Eingabe-JSON-Datei")
-    parser.add_argument("--api_key", help="Claude API-Key (optional, falls nicht über Umgebungsvariable gesetzt)")
-    parser.add_argument("--output_file", help="Name der Ausgabedatei (optional)")
-
-    args = parser.parse_args()
-
-    try:
-        output_path = transform_json_file(
-            args.input_file,
-            api_key=args.api_key,
-            output_file=args.output_file
-        )
-        print(f"Transformation erfolgreich. Ausgabe gespeichert unter: {output_path}")
     except Exception as e:
-        print(f"Fehler: {str(e)}")
+        # Das Error-Handling bleibt identisch
+        print(f"Error creating Pydantic object from AI response: {e}. Returning original description and empty business value.")
+        return {
+            "description": description_text.strip(),
+            "business_value": get_empty_business_value_dict(),
+        }

@@ -3,7 +3,7 @@ import sys
 import yaml
 from .logger_config import logger # Annahme, dass logger_config in utils liegt
 
-PROMPTS_DIR = "prompts"
+from utils.config import PROMPTS_DIR
 
 def load_prompt_template(filename: str, key: str) -> str:
     """

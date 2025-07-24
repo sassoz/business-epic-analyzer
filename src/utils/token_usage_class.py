@@ -580,4 +580,4 @@ if __name__ == "__main__":
         output_file=output_file
     )
 
-    print(f"Token Usage Bericht {time_desc} wurde für den Zeitraum {start_time} bis {end_time} generiert und in '{output_file}' gespeichert")
+    print(f"\nToken Usage Bericht {time_desc} wurde für den Zeitraum {start_time[:10]} bis {end_time[:10]} generiert\n")

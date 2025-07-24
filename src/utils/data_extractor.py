@@ -1,26 +1,25 @@
 """
-Module for extracting structured data from JIRA issue web pages.
+Modul zur Extraktion strukturierter Daten von JIRA-Issue-Webseiten.
 
-This module provides functionality to parse and extract data from JIRA web pages
-using Selenium. It handles the extraction of various fields and relationships
-from JIRA issues, including titles, descriptions, statuses, assignees, business
-values, acceptance criteria, attachments, and relationship links.
+Dieses Modul bietet die Funktionalität, Daten von JIRA-Webseiten mittels
+Selenium zu parsen und zu extrahieren. Es ist darauf ausgelegt, eine Vielzahl
+von Feldern und Beziehungen aus JIRA-Issues zu verarbeiten, darunter Titel,
+Beschreibungen, Status, Verantwortliche, Story Points, Akzeptanzkriterien,
+Anhänge sowie verschiedene Arten von Issue-Verknüpfungen.
 
-The main class, DataExtractor, implements robust extraction methods with fallback
-strategies to handle different JIRA UI layouts and configurations. It includes
-special handling for business value information, which can be processed by external
-AI services to extract structured business impact metrics.
-
-Key features:
-- Extracts structured data from JIRA issue web pages
-- Handles "is realized by" links and child issues
-- Supports extraction of business value data
-- Provides fallback extraction mechanisms for robustness
-- Integrates with business impact AI processing
+Die Hauptklasse, DataExtractor, implementiert robuste Extraktionsmethoden mit
+Fallback-Strategien, um verschiedene JIRA-UI-Layouts und Konfigurationen
+abzudecken. Eine Schlüsselfunktion ist die Vereinheitlichung aller
+gefundenen Beziehungen (z.B. 'is realized by', 'child issues', 'issues in epic')
+in einer einzigen, konsistenten Liste namens `issue_links`.
 """
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from bs4 import BeautifulSoup
 import re
 from utils.logger_config import logger
@@ -28,29 +27,29 @@ from utils.logger_config import logger
 
 class DataExtractor:
     """
-    Class for extracting structured data from JIRA issue web pages.
+    Klasse zur Extraktion strukturierter Daten von JIRA-Issue-Webseiten.
 
-    This class handles the extraction of various fields and data elements from JIRA
-    web pages using Selenium. It implements robust extraction methods with multiple
-    fallback strategies to ensure reliable data extraction across different JIRA
-    configurations and UI layouts.
+    Diese Klasse ist darauf spezialisiert, eine Vielzahl von Feldern und
+    Datenelementen von JIRA-Seiten mithilfe von Selenium zu extrahieren. Sie
+    implementiert robuste Extraktionsmethoden mit mehrstufigen Fallback-
+    Strategien, um eine zuverlässige Datenextraktion über verschiedene JIRA-
+    Konfigurationen und UI-Layouts hinweg zu gewährleisten.
 
-    Key features:
-    - Extracts issue metadata (key, title, status, type, priority)
-    - Captures description and business scope text
-    - Processes business value data via external AI service (optional)
-    - Extracts acceptance criteria and fix versions
-    - Captures attachment information (files, images)
-    - Identifies related issues ('realized by' links and child issues)
-    - Supports temporal data (target start/end dates)
+    Kernfunktionen:
+    - Extrahiert Metadaten (Schlüssel, Titel, Status, Typ, Priorität, etc.).
+    - Erfasst Beschreibungs- und "Business Scope"-Texte.
+    - Verarbeitet optional "Business Value"-Daten über einen externen
+      KI-Dienst.
+    - Extrahiert Akzeptanzkriterien und "Fix Versions".
+    - Erfasst Anhanginformationen (Dateien, Bilder).
+    - Identifiziert und vereinheitlicht verwandte Issues ('realized by' Links,
+      Child-Issues und 'Issues in epic') in einer einzigen `issue_links`-Liste.
+    - Unterstützt Zeitdaten (z.B. Target Start/End).
 
-    The class uses primary extraction methods first, then falls back to alternative
-    extraction strategies if the primary methods fail. This ensures maximum data
-    extraction even when JIRA's UI structure varies.
-
-    When a description_processor is provided (typically an AI service), the class
-    can analyze business value information from issue descriptions, extracting
-    structured business impact, strategic enablement and time criticality data.
+    Die Klasse verwendet zuerst primäre Extraktionsmethoden und greift dann auf
+    alternative Strategien zurück, falls die primären Methoden fehlschlagen.
+    Dies stellt eine maximale Datenextraktion sicher, auch wenn die UI-Struktur
+    von JIRA variiert.
     """
 
     def __init__(self, description_processor=None, model="claude-3-7-sonnet-latest", token_tracker=None, azure_client=None):
@@ -58,25 +57,51 @@ class DataExtractor:
         Initialisiert den DataExtractor.
 
         Args:
-            description_processor (callable, optional): Eine Funktion, die Beschreibungstexte verarbeitet
-                                                     und business_value extrahiert.
-                                                     Falls None, wird kein Business Value extrahiert.
+            description_processor (callable, optional): Eine Funktion, die
+                Beschreibungstexte verarbeitet, um z.B. strukturierte
+                Business-Value-Daten zu extrahieren. Falls None, wird dieser
+                Schritt übersprungen.
+            model (str, optional): Das KI-Modell, das für den
+                `description_processor` verwendet wird.
+            token_tracker (TokenUsage, optional): Ein Objekt zur Verfolgung der
+                API-Token-Nutzung.
+            azure_client (AzureAIClient, optional): Der Client für die
+                Kommunikation mit dem KI-Dienst.
         """
         self.description_processor = description_processor
         self.model = model
         self.token_tracker = token_tracker
         self.azure_client = azure_client
 
+
+    def _extract_story_points(self, driver):
+        """
+        Extrahiert die Story Points von der Seite.
+
+        Die Methode ist robust und prüft zuerst, ob der Wert in einem
+        <input>-Feld vorliegt (wie es beim Bearbeiten eines Issues der Fall ist)
+        und greift andernfalls auf den sichtbaren Text des Containers zurück.
+        """
+        try:
+            # Finde das <strong>-Element mit dem Titel "Story Points" und wähle
+            # das direkt folgende <div>-Geschwisterelement aus.
+            value_container = driver.find_element(By.XPATH, "//strong[@title='Story Points']/following-sibling::div[1]")
+
+            # Prüfe, ob sich der Wert in einem <input>-Feld befindet
+            try:
+                input_element = value_container.find_element(By.TAG_NAME, "input")
+                return input_element.get_attribute("value")
+            except NoSuchElementException:
+                # Wenn kein <input>, nimm den sichtbaren Text des Containers
+                return value_container.text.strip()
+        except NoSuchElementException:
+            # Wenn das Feld gar nicht existiert
+            return "n/a"
+
     @staticmethod
     def _find_child_issues(driver):
         """
-        Sucht nach Child Issues auf der aktuellen Seite.
-
-        Args:
-            driver (webdriver): Die Browser-Instanz
-
-        Returns:
-            list: Liste von Dictionaries mit Informationen zu Child Issues
+        Sucht nach Child Issues in der dedizierten Tabelle auf der Seite.
         """
         child_issues = []
 
@@ -117,7 +142,7 @@ class DataExtractor:
 
                     except Exception as e:
                         summary_text = ""
-                        logger.debug(f"Konnte Summary für Child Issue {child_key} nicht extrahieren: {e}")
+                        logger.debug(f"Konnte Summary für Child Issue {child_key} nicht extrahieren")
 
                     # Füge die Informationen zur child_issues-Liste hinzu
                     child_issue_item = {
@@ -138,13 +163,11 @@ class DataExtractor:
     @staticmethod
     def _extract_business_scope(driver):
         """
-        Extrahiert den Business Scope-Text aus der Jira-Seite.
+        Extrahiert den "Business Scope"-Text aus der Jira-Seite.
 
-        Args:
-            driver (webdriver): Die Browser-Instanz
-
-        Returns:
-            str: Der extrahierte Business Scope-Text oder leerer String, wenn nicht gefunden
+        Implementiert mehrere Fallback-Mechanismen, um den Text auch aus
+        komplexeren HTML-Strukturen (z.B. 'flooded' divs) zuverlässig zu
+        extrahieren.
         """
         business_scope = ""
 
@@ -199,526 +222,353 @@ class DataExtractor:
 
     def extract_issue_data(self, driver, issue_key):
         """
-        Extrahiert die wichtigsten Daten eines Jira-Issues in ein strukturiertes Format.
+        Extrahiert umfassende Daten eines Jira-Issues in ein strukturiertes Format.
 
-        Args:
-            driver (webdriver): Die Browser-Instanz
-            issue_key (str): Der Jira-Issue-Key (z.B. "JIRA-1234")
+        Diese Methode ist der primäre Extraktionsmotor. Sie durchsucht die
+        Jira-Seite systematisch nach einer Vielzahl von Metadaten und Inhalten.
 
-        Returns:
-            dict: Die extrahierten Daten
+        Ein Schlüsselmerkmal ist die Aggregation aller gefundenen Issue-
+        Beziehungen ("is realized by", "child issues", "issues in epic") in
+        eine einzige Liste `issue_links`. Jeder Eintrag in dieser Liste wird mit
+        einem `relation_type` versehen, um die Art der Beziehung für die
+        nachgelagerte Verarbeitung klar zu kennzeichnen.
+
+        Für kritische Felder wie "Issue Type" und "Acceptance Criteria" sind
+        Fallback-Methoden implementiert, um die Extraktion auch bei
+        abweichenden UI-Strukturen zu gewährleisten.
         """
         data = {
             "key": issue_key,
-            "issue_type": "",          # Wird mit dem Wert aus dem Title-Attribut gefüllt
+            "issue_type": "",
             "title": "",
             "status": "",
+            "resolution": "",  # <-- Hinzugefügt
+            "story_points": "n/a",
             "description": "",
             "business_value": {},
             "assignee": "",
             "priority": "",
             "target_start": "",
             "target_end": "",
-            "fix_versions": [],           # Liste der FixVersions
-            "acceptance_criteria": [],  # Liste der Acceptance Criteria
+            "fix_versions": [],
+            "acceptance_criteria": [],
             "components": [],
-            "labels": [],              # Liste der Labels
-            "realized_by": [],         # Liste der "is realized by" Links
-            "child_issues": [],        # Neue Liste für Child Issues
-            "attachments": [],         # Neue Liste für Anhänge
+            "labels": [],
+            "issue_links": [],
+            "attachments": [],
         }
 
+        # Title
         try:
-            # Title
-            try:
-                title_elem = driver.find_element(By.XPATH, "//h2[@id='summary-val']")
-                data["title"] = title_elem.text.strip()
-                logger.info(f"Titel gefunden: {data['title']}")
-            except Exception as e:
-                logger.info(f"Titel nicht gefunden: {e}")
-
-            # Description
-            try:
-                desc_elem = driver.find_element(By.XPATH, "//div[contains(@id, 'description') or contains(@class, 'description')]")
-                data["description"] = desc_elem.text
-                logger.info(f"Beschreibung gefunden ({len(desc_elem.text)} Zeichen)")
-            except Exception as e:
-                logger.info(f"Beschreibung nicht gefunden: {e}")
-
-            # Business Scope extrahieren und zur Description hinzufügen:
-            try:
-                business_scope = DataExtractor._extract_business_scope(driver)
-                if business_scope:
-                    # Zur bestehenden Description hinzufügen
-                    if data["description"]:
-                        data["description"] += "\n\nBusiness Scope:\n" + business_scope
-                    else:
-                        data["description"] = "Business Scope:\n" + business_scope
-                    logger.info(f"Business Scope zur Description hinzugefügt ({len(business_scope)} Zeichen)")
-            except Exception as e:
-                logger.info(f"Business Scope konnte nicht extrahiert werden: {e}")
-
-
-            # Status
-            try:
-                # Look for the dropdown button with the status using the class pattern
-                status_button = driver.find_element(By.XPATH, "//a[contains(@class, 'aui-dropdown2-trigger') and contains(@class, 'opsbar-transitions__status-category_')]")
-
-                # Extract the dropdown-text span within this button
-                status_span = status_button.find_element(By.XPATH, ".//span[@class='dropdown-text']")
-
-                data["status"] = status_span.text
-                logger.info(f"Status gefunden: {status_span.text}")
-            except Exception as e:
-                logger.info(f"Status nicht gefunden: {e}")
-
-            # Assignee
-            try:
-                assignee_elem = driver.find_element(By.XPATH, "//span[contains(@id, 'assignee') or contains(@class, 'assignee')]")
-                data["assignee"] = assignee_elem.text
-                logger.info(f"Assignee gefunden: {assignee_elem.text}")
-            except Exception as e:
-                logger.info(f"Assignee nicht gefunden: {e}")
-
-            # Issue Type - basierend auf dem alt-Attribut des Icons
-            try:
-                # Suche nach dem Element mit class="name" und Label für "issuetype"
-                issue_type_label = driver.find_element(By.XPATH, "//strong[contains(@class, 'name')]//label[@for='issuetype']")
-
-                # Gehe zum übergeordneten span-Element
-                issue_type_container = driver.find_element(By.XPATH, "//span[@id='type-val']")
-
-                # Finde das Bild mit dem alt-Attribut
-                issue_type_img = issue_type_container.find_element(By.XPATH, ".//img[@alt]")
-
-                # Extrahiere den Typ aus dem alt-Attribut (Format "Icon: [Type]")
-                alt_text = issue_type_img.get_attribute("alt")
-
-                # Verwende regulären Ausdruck um den Typ zu extrahieren
-                import re
-                match = re.match(r'Icon:\s+(.*)', alt_text)
-                if match:
-                    issue_type = match.group(1).strip()
-                    data["issue_type"] = issue_type
-                    logger.info(f"Issue Type gefunden (aus alt-Attribut): {issue_type}")
-                else:
-                    # Fallback auf title-Attribut, wenn alt-Attribut nicht dem erwarteten Format entspricht
-                    issue_type = issue_type_img.get_attribute("title")
-                    data["issue_type"] = issue_type
-                    logger.info(f"Issue Type gefunden (aus title-Attribut): {issue_type}")
-
-                # Bei issue_type "Business Epic" auch Business Value befüllen
-                if issue_type == 'Business Epic' and self.description_processor is not None:
-                    # Verwende den injizierten Prozessor anstatt einer direkten Abhängigkeit
-                    processed_text = self.description_processor(
-                        data["description"],  # description_text
-                        self.model,          # model
-                        self.token_tracker,   # token_tracker
-                        self.azure_client
-                    )
-                    data["description"] = processed_text['description']
-                    data["business_value"] = processed_text['business_value']
-                    logger.info(f"Business Value ergänzt")
-
-            except Exception as e:
-                # Fallback-Methode, falls die erste Methode fehlschlägt
-                try:
-                    # Alternative Suche nach dem Issue-Type
-                    issue_type_elements = driver.find_elements(By.XPATH,
-                        "//img[contains(@alt, 'Icon:') or contains(@alt, 'Type:')]")
-
-                    for img in issue_type_elements:
-                        alt_text = img.get_attribute("alt")
-                        if alt_text:
-                            match = re.match(r'Icon:\s+(.*)', alt_text)
-                            if match:
-                                issue_type = match.group(1).strip()
-                                data["issue_type"] = issue_type
-                                logger.info(f"Issue Type mit Fallback-Methode gefunden (aus alt-Attribut): {issue_type}")
-                                break
-
-                        # Wenn kein passender alt-Text gefunden wurde, versuchen wir es mit title
-                        issue_type = img.get_attribute("title")
-                        if issue_type:
-                            data["issue_type"] = issue_type
-                            logger.info(f"Issue Type mit Fallback-Methode gefunden (aus title-Attribut): {issue_type}")
-                            break
-
-                except Exception as fallback_e:
-                    logger.info(f"Issue Type mit beiden Methoden nicht gefunden: {e}, {fallback_e}")
-
-
-            # fixVersion Daten extrahieren
-            try:
-               fix_version_span = driver.find_element(By.XPATH, "//span[@id='fixVersions-field']")
-               fix_version_links = fix_version_span.find_elements(By.XPATH, ".//a[contains(@href, '/issues/')]")
-
-               for link in fix_version_links:
-                   # Extract text between > and </a>
-                   link_html = link.get_attribute("outerHTML")
-                   match = re.search(r'>([^<]+)</a>', link_html)
-                   if match:
-                       version = match.group(1).strip()
-                       if version and version not in data["fix_versions"]:
-                           data["fix_versions"].append(version)
-
-               logger.info(f"{len(data['fix_versions'])} Fix Versions gefunden: {', '.join(data['fix_versions'])}")
-            except Exception as e:
-               # Fallback method
-               try:
-                   fix_version_elements = driver.find_elements(By.XPATH,
-                       "//strong[contains(@title, 'Fix Version') or contains(text(), 'Fix Version')]/following::span[1]//a[contains(@href, '/issues/')]")
-
-                   for elem in fix_version_elements:
-                       link_html = elem.get_attribute("outerHTML")
-                       match = re.search(r'>([^<]+)</a>', link_html)
-                       if match:
-                           version = match.group(1).strip()
-                           if version and version not in data["fix_versions"]:
-                               data["fix_versions"].append(version)
-
-                   logger.info(f"Mit Fallback-Methode {len(data['fix_versions'])} Fix Versions gefunden")
-               except Exception as fallback_e:
-                   logger.info(f"Fix Versions nicht gefunden: {e}, {fallback_e}")
-
-
-            # Target Start und Target End Daten extrahieren
-            try:
-                # Suche nach den Target-Datum-Elementen
-                try:
-                    # Target Start-Datum extrahieren
-                    target_start_span = driver.find_element(By.XPATH, "//span[@data-name='Target start']")
-                    target_start_time = target_start_span.find_element(By.XPATH, ".//time[@datetime]")
-                    target_start_datetime = target_start_time.get_attribute("datetime")
-                    data["target_start"] = target_start_datetime
-                    logger.info(f"Target Start-Datum gefunden: {target_start_datetime}")
-                except Exception as e:
-                    logger.info(f"Target Start-Datum nicht gefunden")
-
-                # Target End-Datum extrahieren
-                try:
-                    target_end_span = driver.find_element(By.XPATH, "//span[@data-name='Target end']")
-                    target_end_time = target_end_span.find_element(By.XPATH, ".//time[@datetime]")
-                    target_end_datetime = target_end_time.get_attribute("datetime")
-                    data["target_end"] = target_end_datetime
-                    logger.info(f"Target End-Datum gefunden: {target_end_datetime}")
-                except Exception as e:
-                    logger.info(f"Target End-Datum nicht gefunden")
-            except Exception as e:
-                # Fallback-Methode mit direkten Klassen
-                try:
-                    # Versuche die spezifischen dd-Elemente mit den Klassen zu finden
-                    target_start_dd = driver.find_element(By.XPATH, "//dd[contains(@class, 'type-jpo-custom-field-baseline-start')]")
-                    target_end_dd = driver.find_element(By.XPATH, "//dd[contains(@class, 'type-jpo-custom-field-baseline-end')]")
-
-                    # Extrahiere die datetime-Werte aus den time-Elementen
-                    target_start_time = target_start_dd.find_element(By.XPATH, ".//time[@datetime]")
-                    target_end_time = target_end_dd.find_element(By.XPATH, ".//time[@datetime]")
-
-                    data["target_start"] = target_start_time.get_attribute("datetime")
-                    data["target_end"] = target_end_time.get_attribute("datetime")
-
-                    logger.info(f"Target Start-Datum mit Fallback gefunden: {data['target_start']}")
-                    logger.info(f"Target End-Datum mit Fallback gefunden: {data['target_end']}")
-                except Exception as fallback_e:
-                    logger.info(f"Target-Datumsangaben mit beiden Methoden nicht gefunden: {e}, {fallback_e}")
-
-
-            # Attachments extrahieren
-            try:
-                # Suche nach dem ol-Element mit id="attachment_thumbnails"
-                attachments_list = driver.find_element(By.XPATH, "//ol[@id='attachment_thumbnails' and contains(@class, 'item-attachments')]")
-
-                # Finde alle Listenelemente, die Anhänge repräsentieren
-                attachment_items = attachments_list.find_elements(By.XPATH, ".//li[contains(@class, 'attachment-content')]")
-
-                # Extrahiere die Informationen für jeden Anhang
-                for item in attachment_items:
-                    try:
-                        # Extrahiere den Download-URL
-                        download_url = item.get_attribute("data-downloadurl")
-
-                        if download_url:
-                            # Parse den Download-URL, der im Format "MIME-Type:Dateiname:URL" vorliegt
-                            parts = download_url.split(":", 2)
-                            if len(parts) >= 3:
-                                mime_type = parts[0]
-                                file_name = parts[1]
-                                url = parts[2]
-
-                                # Größe des Anhangs (falls vorhanden)
-                                try:
-                                    size_element = item.find_element(By.XPATH, ".//dd[contains(@class, 'attachment-size')]")
-                                    file_size = size_element.text.strip()
-                                except:
-                                    file_size = ""
-
-                                # Datum des Anhangs (falls vorhanden)
-                                try:
-                                    date_element = item.find_element(By.XPATH, ".//time[@datetime]")
-                                    date_time = date_element.get_attribute("datetime")
-                                except:
-                                    date_time = ""
-
-                                # Füge ein strukturiertes Objekt für jeden Anhang hinzu
-                                attachment_item = {
-                                    "filename": file_name,
-                                    "url": url,
-                                    "mime_type": mime_type,
-                                    "size": file_size,
-                                    "date": date_time
-                                }
-
-                                # Füge zur Attachments-Liste hinzu
-                                data["attachments"].append(attachment_item)
-                    except Exception as item_error:
-                        logger.info(f"Fehler beim Extrahieren eines Anhangs: {item_error}")
-
-                logger.info(f"{len(data['attachments'])} Anhänge gefunden")
-            except Exception as e:
-                # Fallback-Methode
-                try:
-                    # Alternative Suche nach Anhängen
-                    attachment_links = driver.find_elements(By.XPATH,
-                        "//div[contains(@class, 'attachment-thumb')]//a[contains(@href, '/secure/attachment/')]")
-
-                    for link in attachment_links:
-                        try:
-                            file_name = link.get_attribute("title").split(" – ")[0] if link.get_attribute("title") else ""
-                            url = link.get_attribute("href")
-
-                            if url and file_name and not any(att["filename"] == file_name for att in data["attachments"]):
-                                # Füge ein strukturiertes Objekt für jeden Anhang hinzu
-                                attachment_item = {
-                                    "filename": file_name,
-                                    "url": url,
-                                    "mime_type": "",  # Kann im Fallback nicht zuverlässig ermittelt werden
-                                    "size": "",       # Kann im Fallback nicht zuverlässig ermittelt werden
-                                    "date": ""        # Kann im Fallback nicht zuverlässig ermittelt werden
-                                }
-
-                                # Füge zur Attachments-Liste hinzu
-                                data["attachments"].append(attachment_item)
-                        except Exception as link_error:
-                            continue
-
-                    logger.info(f"Mit Fallback-Methode {len(data['attachments'])} Anhänge gefunden")
-                except Exception as fallback_e:
-                    logger.info(f"Keine Anhänge gefunden")
-
-        # Acceptance Criteria - robuster Ansatz
-            try:
-                # Suche nach dem Element mit title="Acceptance Criteria"
-                acceptance_title = driver.find_element(By.XPATH, "//strong[@title='Acceptance Criteria']")
-
-                # Finde das label-Element und hole die for-ID
-                label_elem = acceptance_title.find_element(By.XPATH, ".//label")
-                field_id = label_elem.get_attribute("for")
-
-                # Finde das zugehörige Feld über die ID
-                acceptance_field = driver.find_element(By.XPATH, f"//div[@id='{field_id}-val']")
-
-                # Suche nach allen Listenelementen innerhalb des Feldes
-                criteria_items = acceptance_field.find_elements(By.XPATH, ".//ul/li")
-
-                # Falls keine Listenelemente gefunden wurden, suche nach Paragraphen
-                if not criteria_items:
-                    criteria_items = acceptance_field.find_elements(By.XPATH, ".//p")
-
-                # Extrahiere den Text aus jedem Listenelement
-                for item in criteria_items:
-                    criterion_text = item.text.strip()
-                    if criterion_text:  # Nur hinzufügen, wenn nicht leer
-                        data["acceptance_criteria"].append(criterion_text)
-
-                logger.info(f"{len(data['acceptance_criteria'])} Acceptance Criteria gefunden")
-            except Exception as e:
-                # Fallback-Methode, falls der erste Ansatz fehlschlägt
-                try:
-                    # Allgemeinere Suche nach Elementen, die "Acceptance Criteria" enthalten
-                    acceptance_elements = driver.find_elements(By.XPATH,
-                        "//*[contains(text(), 'Acceptance Criteria') or contains(@title, 'Acceptance Criteria')]")
-
-                    if acceptance_elements:
-                        # Suche nach der nächsten Liste im DOM
-                        for elem in acceptance_elements:
-                            # Versuche, die nächste ul zu finden
-                            ul_elements = driver.find_elements(By.XPATH,
-                                f"//ul[preceding::*[contains(text(), 'Acceptance Criteria')]][1]//li")
-
-                            if ul_elements:
-                                for item in ul_elements:
-                                    criterion_text = item.text.strip()
-                                    if criterion_text and criterion_text not in data["acceptance_criteria"]:
-                                        data["acceptance_criteria"].append(criterion_text)
-
-                    logger.info(f"Mit Fallback-Methode {len(data['acceptance_criteria'])} Acceptance Criteria gefunden")
-                except Exception as fallback_e:
-                    logger.info(f"Acceptance Criteria mit beiden Methoden nicht gefunden: {e}, {fallback_e}")
-
-            # Labels - basierend auf dem Screenshot
-            try:
-                # Suche nach ul-Element mit der Klasse "labels"
-                labels_ul = driver.find_element(By.XPATH, "//ul[contains(@class, 'labels')]")
-
-                # Finde alle Link-Elemente innerhalb der Listenelemente
-                label_links = labels_ul.find_elements(By.XPATH, ".//li/a[@title]")
-
-                # Extrahiere den Titel jedes Labels
-                for label_link in label_links:
-                    label_title = label_link.get_attribute("title")
-                    if label_title:  # Nur hinzufügen, wenn nicht leer
-                        data["labels"].append(label_title)
-
-                logger.info(f"{len(data['labels'])} Labels gefunden: {', '.join(data['labels'])}")
-            except Exception as e:
-                # Fallback-Methode, falls der erste Ansatz fehlschlägt
-                try:
-                    # Alternative Suche nach Labels
-                    label_elements = driver.find_elements(By.XPATH, "//div[contains(@class, 'labels-wrap')]//a[contains(@class, 'lozenge')]")
-
-                    for elem in label_elements:
-                        label_text = elem.get_attribute("title") or elem.text.strip()
-                        if label_text and label_text not in data["labels"]:
-                            data["labels"].append(label_text)
-
-                    logger.info(f"Mit Fallback-Methode {len(data['labels'])} Labels gefunden")
-                except Exception as fallback_e:
-                    logger.info(f"Labels mit beiden Methoden nicht gefunden: {e}, {fallback_e}")
-
-            # Components extrahieren
-            try:
-                # Suche nach dem Container mit id="components-val"
-                components_container = driver.find_element(By.XPATH, "//span[@id='components-field']")
-
-                # Finde alle Links innerhalb des Containers
-                component_links = components_container.find_elements(By.XPATH, ".//a[contains(@href, '/issues/')]")
-
-                # Extrahiere den Text und Titel jedes Components
-                for comp_link in component_links:
-                    component_code = comp_link.text.strip()
-                    component_title = comp_link.get_attribute("title")
-
-                    if component_code:
-                        # Füge ein strukturiertes Objekt für jede Component hinzu
-                        component_item = {
-                            "code": component_code,
-                            "title": component_title
-                        }
-                        data["components"].append(component_item)
-
-                logger.info(f"{len(data['components'])} Components gefunden: {', '.join([comp['code'] for comp in data['components']])}")
-            except Exception as e:
-                # Fallback-Methode
-                try:
-                    # Alternative Suche nach Components
-                    component_elements = driver.find_elements(By.XPATH,
-                        "//strong[contains(@title, 'Component') or contains(@class, 'name')]"
-                        "/following::span[contains(@class, 'value')]//a[contains(@href, 'component')]")
-
-                    for elem in component_elements:
-                        component_code = elem.text.strip()
-                        component_title = elem.get_attribute("title")
-
-                        if component_code and not any(comp["code"] == component_code for comp in data["components"]):
-                            component_item = {
-                                "code": component_code,
-                                "title": component_title
-                            }
-                            data["components"].append(component_item)
-
-                    logger.info(f"Mit Fallback-Methode {len(data['components'])} Components gefunden")
-                except Exception as fallback_e:
-                    logger.info(f"Keine Components gefunden")  # Geändert zu info statt warning
-
-
-            # "is realized by" Links extrahieren
-            try:
-                # Allgemeine Suche nach Links, die auf "is realized by" hinweisen
-                link_elements = driver.find_elements(By.XPATH,
-                    "//dl[contains(@class, 'links-list')]/dt[contains(text(), 'is realized by') or @title='is realized by']"
-                    "/..//a[contains(@class, 'issue-link')]")
-
-                for link in link_elements:
-                    issue_key_attr = link.get_attribute("data-issue-key")
-                    link_text = link.text.strip()
-                    link_href = link.get_attribute("href")
-
-                    # Optional: Versuche, den Summary-Text zu finden
-                    parent_element = link.find_element(By.XPATH, "./ancestor::div[contains(@class, 'link-content')]")
-                    try:
-                        summary_element = parent_element.find_element(By.XPATH, ".//span[contains(@class, 'link-summary')]")
-                        summary_text = summary_element.text.strip()
-                    except:
-                        summary_text = ""
-
-                    realized_by_item = {
-                        "key": issue_key_attr or link_text,
-                        "title": link_text,
-                        "summary": summary_text,
-                        "url": link_href
-                    }
-
-                    # Nur hinzufügen, wenn noch nicht vorhanden
-                    if not any(item["key"] == realized_by_item["key"] for item in data["realized_by"]):
-                        data["realized_by"].append(realized_by_item)
-
-                logger.info(f"{len(data['realized_by'])} 'is realized by' Links gefunden")
-            except Exception as e:
-                logger.info(f"'is realized by' Links konnten nicht gefunden werden: {e}")
-
-
-            # Child Issues extrahieren
-            child_issues = DataExtractor._find_child_issues(driver)
-
-            # Füge Child Issues zu den realized_by-Links hinzu
-            for child in child_issues:
-                # Prüfen, ob das Child Issue bereits in realized_by enthalten ist
-                if not any(item["key"] == child["key"] for item in data["realized_by"]):
-                    # Füge das Child Issue mit dem Type-Attribut "child" hinzu
-                    child_realized_item = {
-                        "key": child["key"],
-                        "title": child["title"],
-                        "summary": child["summary"],
-                        "url": child["url"],
-                        "relation_type": "child"  # Markiere als Child Issue
-                    }
-                    data["realized_by"].append(child_realized_item)
-
-            # Markiere existierende realized_by Items als "realized_by" Beziehungstyp
-            for item in data["realized_by"]:
-                if "relation_type" not in item:
-                    item["relation_type"] = "realized_by"
-
-            if child_issues:
-                logger.info(f"{len(child_issues)} Child Issues zu den realized_by-Links hinzugefügt")
-
-
-            # Child Issues extrahieren und direkt im Datenobjekt speichern
-            child_issues_list = DataExtractor._find_child_issues(driver) #
-            if child_issues_list:
-                data["child_issues"] = []
-                for child_item in child_issues_list:
-                    # Struktur an die "realized_by" anlehnen für konsistente Verarbeitung
-                    child_issue_data = {
-                        "key": child_item.get("key"),
-                        "title": child_item.get("title", ""),
-                        "summary": child_item.get("summary", ""),
-                        "url": child_item.get("url"),
-                        "relation_type": "child"
-                    }
-                    data["child_issues"].append(child_issue_data)
-                logger.info(f"{len(data['child_issues'])} Child Issues direkt extrahiert.")
-
+            title_elem = driver.find_element(By.XPATH, "//h2[@id='summary-val']")
+            data["title"] = title_elem.text.strip()
+            logger.info(f"Titel gefunden: {data['title']}")
         except Exception as e:
-            logger.info(f"Fehler beim Extrahieren der Daten für {issue_key}: {e}")
+            logger.info(f"Titel nicht gefunden: {e}")
+
+        # Description
+        try:
+            desc_elem = driver.find_element(By.XPATH, "//div[contains(@id, 'description') or contains(@class, 'description')]")
+            data["description"] = desc_elem.text
+            logger.info(f"Beschreibung gefunden ({len(desc_elem.text)} Zeichen)")
+        except Exception as e:
+            logger.info(f"Beschreibung nicht gefunden: {e}")
+
+        # Business Scope extrahieren und zur Description hinzufügen:
+        try:
+            business_scope = DataExtractor._extract_business_scope(driver)
+            if business_scope:
+                if data["description"]:
+                    data["description"] += "\n\nBusiness Scope:\n" + business_scope
+                else:
+                    data["description"] = "Business Scope:\n" + business_scope
+                logger.info(f"Business Scope zur Description hinzugefügt ({len(business_scope)} Zeichen)")
+        except Exception as e:
+            logger.info(f"Business Scope konnte nicht extrahiert werden")
+
+        # Status
+        try:
+            status_button = driver.find_element(By.XPATH, "//a[contains(@class, 'aui-dropdown2-trigger') and contains(@class, 'opsbar-transitions__status-category_')]")
+            status_span = status_button.find_element(By.XPATH, ".//span[@class='dropdown-text']")
+            data["status"] = status_span.text
+            logger.info(f"Status gefunden: {status_span.text}")
+        except Exception as e:
+            logger.info(f"Status nicht gefunden")
+
+        # Story Points
+        data["story_points"] = self._extract_story_points(driver)
+        logger.info(f"Story Points direkt extrahiert: {data['story_points']}")
+
+        # Assignee
+        try:
+            assignee_elem = driver.find_element(By.XPATH, "//span[contains(@id, 'assignee') or contains(@class, 'assignee')]")
+            data["assignee"] = assignee_elem.text
+            logger.info(f"Assignee gefunden: {assignee_elem.text}")
+        except Exception as e:
+            logger.info(f"Assignee nicht gefunden")
+
+        # Resolution <-- NEUER BLOCK START
+        try:
+            resolution_elem = driver.find_element(By.XPATH, "//span[@id='resolution-val']")
+            data["resolution"] = resolution_elem.text.strip()
+            logger.info(f"Resolution gefunden: {data['resolution']}")
+        except Exception as e:
+            # Dies ist ein erwarteter Fall für offene Issues.
+            logger.info(f"Resolution nicht gefunden (normal bei 'Unresolved' Issues)")
+        # NEUER BLOCK ENDE -->
+
+        # Issue Type
+        try:
+            issue_type_container = driver.find_element(By.XPATH, "//span[@id='type-val']")
+            issue_type_img = issue_type_container.find_element(By.XPATH, ".//img[@alt]")
+            alt_text = issue_type_img.get_attribute("alt")
+            match = re.match(r'Icon:\s+(.*)', alt_text)
+            if match:
+                issue_type = match.group(1).strip()
+                data["issue_type"] = issue_type
+                logger.info(f"Issue Type gefunden (aus alt-Attribut): {issue_type}")
+            else:
+                issue_type = issue_type_img.get_attribute("title")
+                data["issue_type"] = issue_type
+                logger.info(f"Issue Type gefunden (aus title-Attribut): {issue_type}")
+        except Exception as e:
+            # Fallback-Block für Issue Type
+            logger.info(f"Issue Type mit primärer Methode nicht gefunden, starte Fallback...")
+            try:
+                issue_type_elements = driver.find_elements(By.XPATH, "//img[contains(@alt, 'Icon:')]")
+                for img in issue_type_elements:
+                    alt_text = img.get_attribute("alt")
+                    if alt_text:
+                        match = re.match(r'Icon:\s+(.*)', alt_text)
+                        if match:
+                            issue_type = match.group(1).strip()
+                            data["issue_type"] = issue_type
+                            logger.info(f"Issue Type mit Fallback-Methode gefunden (aus alt-Attribut): {issue_type}")
+                            break
+                if not data["issue_type"]:
+                    logger.warning("Issue Type auch mit Fallback-Methode nicht gefunden.")
+            except Exception as fallback_e:
+                logger.error(f"Issue Type mit beiden Methoden nicht gefunden: {e}, {fallback_e}")
+
+        # Business Value nur bei 'Business Epic' verarbeiten
+        if data["issue_type"] == 'Business Epic' and self.description_processor is not None:
+            try:
+                processed_text = self.description_processor(
+                    data["description"], self.model, self.token_tracker, self.azure_client
+                )
+                data["description"] = processed_text['description']
+                data["business_value"] = processed_text['business_value']
+                logger.info(f"Business Value ergänzt")
+            except Exception as bv_error:
+                logger.error(f"Fehler bei der Verarbeitung des Business Value: {bv_error}")
+
+        # fixVersion Daten
+        try:
+           fix_version_span = driver.find_element(By.XPATH, "//span[@id='fixVersions-field']")
+           fix_version_links = fix_version_span.find_elements(By.XPATH, ".//a[contains(@href, '/issues/')]")
+           for link in fix_version_links:
+               link_html = link.get_attribute("outerHTML")
+               match = re.search(r'>([^<]+)</a>', link_html)
+               if match:
+                   version = match.group(1).strip()
+                   if version and version not in data["fix_versions"]:
+                       data["fix_versions"].append(version)
+           logger.info(f"{len(data['fix_versions'])} Fix Versions gefunden: {', '.join(data['fix_versions'])}")
+        except Exception as e:
+           logger.info(f"Fix Versions nicht gefunden")
+
+        # Target Start und Target End Daten
+        try:
+            target_start_span = driver.find_element(By.XPATH, "//span[@data-name='Target start']")
+            target_start_time = target_start_span.find_element(By.XPATH, ".//time[@datetime]")
+            data["target_start"] = target_start_time.get_attribute("datetime")
+            logger.info(f"Target Start-Datum gefunden: {data['target_start']}")
+        except Exception as e:
+            logger.info(f"Target Start-Datum nicht gefunden")
+        try:
+            target_end_span = driver.find_element(By.XPATH, "//span[@data-name='Target end']")
+            target_end_time = target_end_span.find_element(By.XPATH, ".//time[@datetime]")
+            data["target_end"] = target_end_time.get_attribute("datetime")
+            logger.info(f"Target End-Datum gefunden: {data['target_end']}")
+        except Exception as e:
+            logger.info(f"Target End-Datum nicht gefunden")
+
+        # Attachments
+        try:
+            attachments_list = driver.find_element(By.XPATH, "//ol[@id='attachment_thumbnails' and contains(@class, 'item-attachments')]")
+            attachment_items = attachments_list.find_elements(By.XPATH, ".//li[contains(@class, 'attachment-content')]")
+            for item in attachment_items:
+                try:
+                    download_url = item.get_attribute("data-downloadurl")
+                    if download_url:
+                        parts = download_url.split(":", 2)
+                        if len(parts) >= 3:
+                            attachment_item = {
+                                "filename": parts[1], "url": parts[2], "mime_type": parts[0],
+                                "size": item.find_element(By.XPATH, ".//dd[contains(@class, 'attachment-size')]").text.strip(),
+                                "date": item.find_element(By.XPATH, ".//time[@datetime]").get_attribute("datetime")
+                            }
+                            data["attachments"].append(attachment_item)
+                except Exception as item_error:
+                    logger.info(f"Fehler beim Extrahieren eines Anhangs: {item_error}")
+            logger.info(f"{len(data['attachments'])} Anhänge gefunden")
+        except Exception as e:
+            logger.info(f"Keine Anhänge gefunden")
+
+        # Acceptance Criteria
+        try:
+            acceptance_title = driver.find_element(By.XPATH, "//strong[@title='Acceptance Criteria']")
+            label_elem = acceptance_title.find_element(By.XPATH, ".//label")
+            field_id = label_elem.get_attribute("for")
+            acceptance_field = driver.find_element(By.XPATH, f"//div[@id='{field_id}-val']")
+            criteria_items = acceptance_field.find_elements(By.XPATH, ".//ul/li")
+            if not criteria_items: criteria_items = acceptance_field.find_elements(By.XPATH, ".//p")
+            for item in criteria_items:
+                criterion_text = item.text.strip()
+                if criterion_text: data["acceptance_criteria"].append(criterion_text)
+            logger.info(f"{len(data['acceptance_criteria'])} Acceptance Criteria gefunden")
+        except Exception as e:
+            # Fallback-Block für Acceptance Criteria
+            logger.info(f"Acceptance Criteria mit primärer Methode nicht gefunden, starte Fallback...")
+            try:
+                acceptance_elements = driver.find_elements(By.XPATH, "//*[contains(text(), 'Acceptance Criteria') or contains(@title, 'Acceptance Criteria')]")
+                if acceptance_elements:
+                    ul_elements = driver.find_elements(By.XPATH, "//ul[preceding::*[contains(text(), 'Acceptance Criteria')]][1]//li")
+                    if ul_elements:
+                        for item in ul_elements:
+                            criterion_text = item.text.strip()
+                            if criterion_text and criterion_text not in data["acceptance_criteria"]:
+                                data["acceptance_criteria"].append(criterion_text)
+                logger.info(f"Mit Fallback-Methode {len(data['acceptance_criteria'])} Acceptance Criteria gefunden")
+            except Exception as fallback_e:
+                logger.error(f"Acceptance Criteria mit beiden Methoden nicht gefunden")
+
+        # Labels
+        try:
+            labels_ul = driver.find_element(By.XPATH, "//ul[contains(@class, 'labels')]")
+            label_links = labels_ul.find_elements(By.XPATH, ".//li/a[@title]")
+            for label_link in label_links:
+                label_title = label_link.get_attribute("title")
+                if label_title: data["labels"].append(label_title)
+            logger.info(f"{len(data['labels'])} Labels gefunden: {', '.join(data['labels'])}")
+        except Exception as e:
+            logger.info(f"Labels nicht gefunden")
+
+        # Components
+        try:
+            components_container = driver.find_element(By.XPATH, "//span[@id='components-field']")
+            component_links = components_container.find_elements(By.XPATH, ".//a[contains(@href, '/issues/')]")
+            for comp_link in component_links:
+                component_code = comp_link.text.strip()
+                if component_code: data["components"].append({"code": component_code, "title": comp_link.get_attribute("title")})
+            logger.info(f"{len(data['components'])} Components gefunden: {', '.join([comp['code'] for comp in data['components']])}")
+        except Exception as e:
+            logger.info(f"Keine Components gefunden")
+
+        # 1. "is realized by" Links extrahieren und direkt zu 'issue_links' hinzufügen
+        try:
+            link_elements = driver.find_elements(By.XPATH,
+                "//dl[contains(@class, 'links-list')]/dt[contains(text(), 'is realized by') or @title='is realized by']"
+                "/..//a[contains(@class, 'issue-link')]")
+
+            for link in link_elements:
+                issue_key_attr = (link.get_attribute("data-issue-key") or link.text.strip()).replace('\u200b', '')
+
+                # Optional: Versuche, den Summary-Text zu finden
+                summary_text = ""
+                try:
+                    parent_element = link.find_element(By.XPATH, "./ancestor::div[contains(@class, 'link-content')]")
+                    summary_element = parent_element.find_element(By.XPATH, ".//span[contains(@class, 'link-summary')]")
+                    summary_text = summary_element.text.strip()
+                except:
+                    pass # Summary ist optional
+
+                link_item = {
+                    "key": issue_key_attr,
+                    "title": link.text.strip(),
+                    "summary": summary_text,
+                    "url": link.get_attribute("href"),
+                    "relation_type": "realized_by"  # Beziehungstyp direkt hier setzen
+                }
+
+                # Nur hinzufügen, wenn der Key noch nicht in der Zielliste ist
+                if not any(item["key"] == link_item["key"] for item in data["issue_links"]):
+                    data["issue_links"].append(link_item)
+
+            if link_elements:
+                logger.info(f"{len(link_elements)} 'is realized by' Links zu 'issue_links' hinzugefügt.")
+        except Exception as e:
+            logger.info(f"'is realized by' Links konnten nicht gefunden werden")
+
+        # 2. Child Issues extrahieren und direkt zu 'issue_links' hinzufügen
+        try:
+            child_issues = DataExtractor._find_child_issues(driver) # Nur einmal aufrufen
+            initial_link_count = len(data["issue_links"])
+
+            for child in child_issues:
+                # Prüfen, ob das Child Issue bereits in der Zielliste ist
+                if not any(item["key"] == child["key"] for item in data["issue_links"]):
+                    child["relation_type"] = "child"  # Beziehungstyp setzen
+                    data["issue_links"].append(child)
+
+            added_children = len(data["issue_links"]) - initial_link_count
+            if added_children > 0:
+                logger.info(f"{added_children} Child Issues zu 'issue_links' hinzugefügt.")
+        except Exception as e:
+             logger.info(f"Fehler bei der Verarbeitung von Child Issues")
+
+
+        # 3. "Issues in epic" extrahieren und direkt zu 'issue_links' hinzufügen
+        try:
+            # Kurzes, explizites Warten auf den Container, der per JS nachgeladen wird
+            wait = WebDriverWait(driver, 2)
+            wait.until(EC.element_to_be_clickable((By.ID, "greenhopper-epics-issue-web-panel-label")))
+
+            issue_table = driver.find_element(By.ID, "ghx-issues-in-epic-table")
+            issue_rows = issue_table.find_elements(By.XPATH, ".//tr[contains(@class, 'issuerow')]")
+
+            if issue_rows:
+                logger.info(f"{len(issue_rows)} 'Issues in epic' in der Tabelle gefunden.")
+                for row in issue_rows:
+                    try:
+                        key = row.get_attribute('data-issuekey')
+                        if not any(item["key"] == key for item in data["issue_links"]):
+                            url_element = row.find_element(By.XPATH, f".//a[@href='/browse/{key}']")
+                            title_element = row.find_element(By.XPATH, ".//td[contains(@class, 'ghx-summary')]")
+
+                            data["issue_links"].append({
+                                "key": key,
+                                "title": title_element.text.strip(),
+                                "summary": title_element.text.strip(),
+                                "url": url_element.get_attribute('href'),
+                                "relation_type": "issue_in_epic"
+                            })
+                    except Exception as row_error:
+                        logger.warning(f"Konnte eine Zeile im 'Issues in epic'-Panel nicht parsen: {row_error}")
+        except TimeoutException:
+            # Normalfall für Issues, die keine Epics sind. Kein Fehler.
+            logger.info("Abschnitt 'Issues in epic' nicht gefunden oder nicht rechtzeitig geladen.")
+        except Exception as e:
+            logger.info(f"Ein unerwarteter Fehler ist bei der Extraktion von 'Issues in epic' aufgetreten")
 
         return data
 
+
     def extract_activity_details(self, html_content):
         """
-        Extrahiert und filtert die Aktivitätsdetails. Kann jetzt mehrere
-        Änderungen innerhalb einer einzigen Aktion korrekt verarbeiten.
+        Extrahiert und verarbeitet Aktivitätsdetails aus dem HTML-Inhalt.
+
+        Diese Methode parst den Aktivitätsstrom (z.B. aus den "Verlauf" oder
+        "Alle" Tabs), um eine chronologische Liste von Feldänderungen zu
+        erstellen. Sie kann Aktionen, bei denen ein Benutzer mehrere Felder
+        gleichzeitig ändert, korrekt in einzelne Events aufschlüsseln.
+
+        Ein wesentlicher Teil der Funktionalität ist die Nachverarbeitung und
+        Normalisierung der extrahierten Werte. So werden beispielsweise Werte
+        für 'Status' oder 'Sprint' von Präfixen und IDs bereinigt, lange Texte
+        wie 'Description' auf ein Kürzel '[...]' reduziert und Issue-Keys aus
+        Feldern wie 'Epic Link' standardisiert. Dies gewährleistet saubere und
+        konsistente Ausgabedaten für die weitere Analyse.
         """
         soup = BeautifulSoup(html_content, 'lxml')
         action_containers = soup.find_all('div', class_='actionContainer')
@@ -756,29 +606,38 @@ class DataExtractor:
                     if activity_name in ignored_fields:
                         continue
 
-                    old_value = "N/A"
-                    new_value = "N/A"
+                    # Roh-Werte extrahieren, um sie sauber verarbeiten zu können
+                    old_value_raw = row.find('td', class_='activity-old-val').get_text(strip=True) if row.find('td', class_='activity-old-val') else ""
+                    new_value_raw = row.find('td', class_='activity-new-val').get_text(strip=True) if row.find('td', class_='activity-new-val') else ""
 
-                    old_val_tag = row.find('td', class_='activity-old-val')
-                    if old_val_tag:
-                        old_value = old_val_tag.get_text(strip=True)
+                    old_value, new_value = old_value_raw, new_value_raw
 
-                    new_val_tag = row.find('td', class_='activity-new-val')
-                    if new_val_tag:
-                        full_text = new_val_tag.get_text(strip=True)
+                    # START DER ÄNDERUNG: Zentralisierte und erweiterte Verarbeitungslogik
+                    if activity_name in ['Epic Child', 'Epic Link']:
+                        old_match = re.search(r'([A-Z]+-\d+)', old_value_raw)
+                        old_value = old_match.group(1) if old_match else old_value_raw
+                        new_match = re.search(r'([A-Z]+-\d+)', new_value_raw)
+                        new_value = new_match.group(1) if new_match else new_value_raw
 
+                    elif activity_name in ['Status', 'Sprint', 'Fix Version/s']:
+                        # Bereinigt Werte wie "Prefix:Value[...id...]" zu "Value" für alte und neue Werte
+                        if old_value_raw:
+                            old_value = old_value_raw.split(':')[-1].split('[')[0].strip()
+                        if new_value_raw:
+                            new_value = new_value_raw.split(':')[-1].split('[')[0].strip()
+
+                        # Für Status, den Wert zusätzlich in Großbuchstaben umwandeln
                         if activity_name == 'Status':
-                            try:
-                                new_value = full_text.split(':')[1].split('[')[0].strip().upper()
-                            except IndexError:
-                                new_value = full_text.strip().upper()
-                        elif activity_name == 'Fix Version/s':
-                            match = re.search(r'(Q\d_\d{2})', full_text)
-                            new_value = match.group(1) if match else full_text
-                        elif activity_name in ['Acceptance Criteria', 'Description']:
-                            new_value = '[...]'
-                        else:
-                            new_value = full_text if len(full_text) <= 100 else full_text[:100] + "..."
+                            old_value = old_value.upper()
+                            new_value = new_value.upper()
+
+                    elif activity_name == 'Fix Version/s':
+                        match = re.search(r'(Q\d_\d{2})', new_value_raw)
+                        new_value = match.group(1) if match else new_value_raw
+
+                    elif activity_name in ['Acceptance Criteria', 'Description']:
+                        new_value = '[...]' if new_value_raw else ''
+                    # ENDE DER ÄNDERUNG
 
                     # Erstelle für jede einzelne Änderung einen eigenen Eintrag
                     extracted_data.append({
