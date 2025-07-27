@@ -15,12 +15,32 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        header {
+        /* MODIFIED: Header styles are now split into a container and two boxes */
+        .header-container {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+            align-items: stretch;
+        }
+
+        .title-box {
             background-color: #E20074;
             color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 5px;
-            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .status-box {
+            background-color: #E20074;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
         h1 {
             margin: 0;
@@ -48,6 +68,9 @@
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .full-width-box {
+          flex-basis: 100%;
         }
         .feature-card {
             background-color: #fff;
@@ -98,9 +121,9 @@
             text-decoration: underline;
         }
         .hierarchy-section {
-            margin-top: 40px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
+            margin-top: 10px;
+            /*border-top: 1px solid #ccc;*/
+            padding-top: 10px;
         }
         .hierarchy-image {
             width: 100%;
@@ -113,13 +136,18 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1><a href="https://jira.telekom.de/browse/BEMABU-2067" class="jira-link" style="color: white; text-decoration: none;">BEMABU-2067</a>: Q2 2025 EOS Workflow: Voice, Inhouse und FTTH Auftragsnachverfolgung</h1>
-    </header>
+    <div class="header-container">
+        <div class="title-box">
+            <h1><a href="https://jira.telekom.de/browse/BEMABU-2067" class="jira-link" style="color: white; text-decoration: none;">BEMABU-2067</a>: Q2 2025 EOS Workflow: Voice, Inhouse und FTTH Auftragsnachverfolgung</h1>
+        </div>
+        <div class="status-box">
+            IN PROGRESS
+        </div>
+    </div>
 
     <div class="container">
         <div class="info-box">
-             <h2>Überblick und Gesamtziel</h2>
+             <h2>Gesamtziel</h2>
              <p>Das Business Epic <a href="https://jira.telekom.de/browse/BEMABU-2067" class="jira-link">BEMABU-2067</a> zielt darauf ab, die Arbeitsabläufe in EOS für die Auftragsnachverfolgung von Voice, Inhouse und FTTH zu verbessern und zu automatisieren. Dadurch sollen Aufträge direkt in EOS bearbeitet und nachverfolgt werden, wodurch manuelle Bearbeitungen in den Produktionssystemen CRM-T, SeCe-IT und FTTH entfallen und ein schnellerer, effizienterer Service ermöglicht wird.</p>
         </div>
 
@@ -193,56 +221,58 @@
         </ul>
     </div>
 
+    <h2>Größe & Komplexität</h2>
     <div class="container">
         <div class="info-box">
-            <h2>Beteiligte Domains und IT-Systeme</h3>
-            <ul>
-                <li>EOS</li>
-                <li>CRM-T</li>
-                <li>SeCe-IT</li>
-                <li>FTTH</li>
-            </ul>
+          <p>Jira Issues <strong>Gesamt</strong>: 110</p>
+          <p> - davon <strong>Epics</strong>: 16</p>
+          <p> - davon <strong>Stories</strong>: 88</p>
+          <p></p>
+          <p>Beteiligte IT-Bereiche: 3</p>
+          <p>- 91 Issues: API Decoupling Layer Standard Business</p>
+          <p>- 15 Issues: Eine Oberfläche Service</p>
+          <p>-  2 Issues: Magenta Business</p>
         </div>
         <div class="info-box">
-            <h2>Abhängigkeiten und Risiken</h3>
-            <ul>
-                <li>Abhängigkeit von korrekter Datenlieferung aus O3/POT für Ausbaustatus und Plantermin</li>
-                <li>Unterschiedliche Bezeichnungen in MagentaInfos und CRM-T müssen berücksichtigt werden</li>
-                <li>Integration verschiedener Versanddienstleister (DHL, DPD) mit unterschiedlichen Tracking-Mechanismen</li>
-                <li>O3 darf keine Kontaktmedien vom NE4 auf den NE3 übertragen</li>
-                <li>Speziellere Hardware geht über das Beschaffungsmanagement und wird mit DPD verschickt</li>
-            </ul>
+          <p>Das Projekt ist mit einer Größe von 16 Epics und 88 Stories extrem groß.</p>
+          <p>Mit 3 beteiligten IT Bereichen und einem sehr klaren Tätigkeitsschwerpunkt im Bereich "API Decoupling Layer Standard Business" hat das Projekt eine vergleichsweise geringe Steuerungskomplexität</p>
         </div>
     </div>
 
-    <h2>Akzeptanz-Kriterien</h2>
+    <h2>Zeitplan, Workflow, Time Creep</h2>
     <div class="container">
         <div class="info-box">
             <ul>
-                <li>Erstes Akzeptanzkriterium ...</li>
-                <li>Zweites Akzeptanzkriterium ...</li>
-                <li>Drittes Akzeptanzkriterium ...</li>
-            </ul>
-        </div>
-    </div>
-
-    <h2>Zeitplan</h2>
-    <div class="container">
-        <div class="info-box">
-            <h3>Wichtige Meilensteine</h3>
-            <ul>
-                <li><strong>Geplanter Umsetzungsstart:</strong> April 2025</p>
-                <li><strong>Geplantes Umsetzungsende:</strong> Juni 2025</p>
+                <li><strong>Target Start:</strong> April 2025</p>
+                <li><strong>Target End:</strong> Juni 2025</p>
                 <li><strong>Fix Versions:</strong> Q2_25, PrioQ2_25</p>
             </ul>
-            <h3>Abliefergegenstände</h3>
+        </div>
+        <div class="info-box">
             <ul>
-                <li><strong><a href="https://jira.telekom.de/browse/MAGBUS-97682" class="jira-link">MAGBUS-97682</a> (FTTH Nachbesserungen):</strong> Start 09/2024
-                <li><strong><a href="https://jira.telekom.de/browse/EOS-7079" class="jira-link">EOS-7079</a> (Automatische Zwischeninfos):</strong> 04/2025 - 06/2025
-                <li><strong><a href="https://jira.telekom.de/browse/MAGBUS-84364" class="jira-link">MAGBUS-84364</a> (Sendungsverfolgung):</strong> 04/2025 - 06/2025
+                <li><strong>FUNNEL :</strong> 3 Monate, 7 Tage</p>
+                <li><strong>ANALYSIS :</strong> 26 Tage</p>
+                <li><strong>IN PROGRESS :</strong> 3 Monate, 10 Tage</p>
+                <li><strong>CODING TIME :</strong> 9 Monate, 22 Tage</p>
+            </ul>
+        </div>
+        <div class="info-box full-width-box">
+          <p><strong>Status im Verhältnis zum geplanten Enddatum</strong></p>
+          <p>Das Hauptprojekt BEMABU-2067 hat als Umsetzungsende den 02.07.2025 geplant. Während EOS-6668 und MAGBUS-97682 zwar verspätet, jedoch noch vor diesem Datum abschließen (Endtermine 2025-04-24 bzw. 2025-06-26), weist MAGBUS-99313 mit einem neuen Zieltermin am 04.01.2026 einen kritischen Rückstand auf. Diese erhebliche Terminverschiebung gefährdet die fristgerechte Fertigstellung des Gesamtprojekts.</p>
+          <p><strong>Größe und Häufigkeit der Verzögerungen</strong></p>
+            <ul>
+                <li>EOS-6668: erfuhr eine große Terminverschiebung von ca. 5 Monaten (von 2024-07-03 auf 2024-12-18) und eine weitere von ca. 3 Monaten (von 2024-12-18 auf 2025-03-13). Zusätzlich kam eine moderate Verschiebung von ca. 1,5 Monaten (von 2025-03-13 auf 2025-04-24) hinzu.</p>
+                <li>MAGBUS-97682: erfuhr eine Verschiebung von ca. 3 Monaten (von 2025-04-03 auf 2025-06-26)</p>
+                <li>MAGBUS-99313: erfuhr eine erhebliche Terminänderung von ca. 6 Monaten (von 2025-06-26 auf 2026-01-04)</p
             </ul>
         </div>
     </div>
+
+    <div class="hierarchy-section">
+        <h2>Backlog</h2>
+        <img src="BEMABU-2067_backlog_development.png" alt="BEMABU-2067 Backlog Übersicht" class="hierarchy-image">
+    </div>
+
     <div class="hierarchy-section">
         <h2>Jira Hierarchie</h2>
         <img src="BEMABU-2067_issue_tree.png" alt="BEMABU-2067 Jira Hierarchy: Q2 2025 EOS Workflow: Voice, Inhouse und FTTH Auftragsnachverfolgung" class="hierarchy-image">

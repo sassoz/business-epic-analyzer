@@ -18,7 +18,7 @@ user_prompt_template: |
 
   #### 2. **Status im Verhältnis zum geplanten Enddatum**
   - Bewerte den aktuellen Status des Hauptprojekts `{epic_id}` im Vergleich zu seinem geplanten Enddatum (insbesondere dem Datum aus dem JSON-Summary und dem letzten Target end im Time Creep).
-  - Gehe darauf ein, ob die Zieltermine kritisch sind (z.B. wegen gesetzlicher Fristen) und ob die Verschiebungen die fristgerechte Fertigstellung gefährden.
+  - Gehe darauf ein, ob die Zieltermine kritisch sind und ob die Verschiebungen die fristgerechte Fertigstellung gefährden.
 
   **Beigefügte Informationen:**
 

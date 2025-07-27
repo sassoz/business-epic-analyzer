@@ -69,11 +69,15 @@ class ProjectDataProvider:
                         except (ValueError, TypeError):
                             points = 0
 
+                    # KORREKTUR: Füge die fehlenden Felder hinzu
                     cache[issue_key] = {
                         'type': data.get('issue_type'),
                         'status': data.get('status'),
                         'resolution': data.get('resolution'),
-                        'points': points
+                        'points': points,
+                        'target_start': data.get('target_start'),
+                        'target_end': data.get('target_end'),
+                        'fix_versions': data.get('fix_versions')
                     }
             except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
                 logger.warning(f"Konnte Details für Issue '{issue_key}' nicht laden: {e}")

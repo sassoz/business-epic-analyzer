@@ -370,14 +370,14 @@ class JiraContextGenerator:
 
         # Logik zur Dateispeicherung
         # Hinweis: Das `output_file` Argument überschreibt den Standardpfad.
-        if output_file is None:
-            context_file = os.path.join(LOGS_DIR, f"{root_key}_context.json")
-        else:
-            context_file = output_file
-            os.makedirs(os.path.dirname(context_file), exist_ok=True)
-
-        with open(context_file, 'w', encoding='utf-8') as file:
-            file.write(json_str)
-            logger.info(f"Context saved to file: {context_file}")
-
+        #if output_file is None:
+        #    context_file = os.path.join(LOGS_DIR, f"{root_key}_context.json")
+        #else:
+        #    context_file = output_file
+        #    os.makedirs(os.path.dirname(context_file), exist_ok=True)
+#
+#        with open(context_file, 'w', encoding='utf-8') as file:
+#            file.write(json_str)
+#            logger.info(f"Context saved to file: {context_file}")
+#
         return json_str

@@ -159,41 +159,35 @@ class EpicHtmlGenerator:
         return html_content
 
 
-    def generate_epic_html(self, issue_content: str, BE_key: str, output_file: Optional[str] = None) -> Tuple[str, Dict[str, int]]:
+    def generate_epic_html(self, complete_epic_data: dict, BE_key: str, output_file: Optional[str] = None):
         """
-        Generiert eine HTML-Datei mit eingebetteten Bildern aus dem übergebenen Inhalt.
+        Generiert eine HTML-Datei aus dem vollständigen, fusionierten Datenobjekt.
 
         Args:
-            issue_content: Inhalt des Issues als String (JSON-Format)
+            complete_epic_data: Das umfassende Dictionary mit allen Analyse- und Inhaltsdaten.
             BE_key: Business Epic Key (z.B. "BEMABU-1825")
             output_file: Optionaler Dateipfad für die Ausgabe-HTML-Datei
-
-        Returns:
-            Tuple aus generiertem HTML-Inhalt und Token-Nutzung (dict mit input_tokens, output_tokens, total_tokens)
-
-        Raises:
-            Exception: Bei Fehlern in der API-Kommunikation oder HTML-Verarbeitung
         """
-        # Wenn kein output_file-Parameter angegeben wurde, einen aus BE_key und output_dir erstellen
         if output_file is None:
             if self.output_dir is None:
                 raise ValueError("Entweder output_file oder output_dir muss angegeben werden")
             output_file = os.path.join(self.output_dir, f"{BE_key}_summary.html")
 
-        # Ausgabeverzeichnis sicherstellen
         output_dir = os.path.dirname(output_file)
         os.makedirs(output_dir, exist_ok=True)
 
-        # Prompt für LLM erstellen, indem die geladene Vorlage formatiert wird
+        # WICHTIG: Das 'complete_epic_data'-Dictionary muss in einen JSON-String
+        # umgewandelt werden, bevor es in den Prompt eingefügt wird.
+        data_as_json_string = json.dumps(complete_epic_data, indent=2, ensure_ascii=False)
+
         prompt = self.prompt_template.format(
             template_html=self.template_html,
-            issue_content=issue_content
+            complete_epic_data=data_as_json_string
         )
 
-        logger.info(f"Starte HTML-Generierung mit Model ''{self.model}'")
+        logger.info(f"Starte HTML-Generierung mit Model '{self.model}' für {BE_key}")
 
         try:
-            # OpenAI API aufrufen
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{
@@ -201,34 +195,32 @@ class EpicHtmlGenerator:
                     "content": prompt}],
                 temperature=0,
                 max_tokens=6000
-                )
+            )
             response_content = response.choices[0].message.content
 
-            # Token-Nutzung loggen, wenn ein Tracker übergeben wurde
             if self.token_tracker:
                 self.token_tracker.log_usage(
                     model=self.model,
                     input_tokens=response.usage.prompt_tokens,
                     output_tokens=response.usage.completion_tokens,
                     total_tokens=response.usage.total_tokens,
-                    task_name="html_generation",
+                    task_name=f"html_generation",
                 )
 
-            # HTML aus Antwort extrahieren
             html_content = self._extract_html(response_content)
-
-            # Bilder in HTML-Inhalt einbetten
             html_content = self._embed_images_in_html(html_content, output_dir, BE_key)
 
-            # HTML in Ausgabedatei speichern
             with open(output_file, 'w', encoding='utf-8') as file:
                 file.write(html_content)
 
-            logger.info(f"HTML-Summary erfolgreich erstellt für {BE_key}")
+            logger.info(f"HTML-Summary erfolgreich erstellt für {BE_key} unter {output_file}")
             return html_content
 
         except Exception as e:
-            raise Exception(f"Fehler beim Aufruf der OpenAI API oder bei der HTML-Verarbeitung: {e}")
+            # Fügen Sie mehr Details zur Fehlermeldung hinzu
+            logger.error(f"Fehler beim Aufruf der OpenAI API oder bei der HTML-Verarbeitung für {BE_key}: {e}", exc_info=True)
+            raise Exception(f"Fehler bei der HTML-Verarbeitung für {BE_key}: {e}")
+
 
     def process_multiple_epics(self, be_file_path: str, json_dir: str = '../output') -> Dict[str, Dict[str, int]]:
         """

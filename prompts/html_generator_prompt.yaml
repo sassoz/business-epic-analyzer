@@ -1,34 +1,40 @@
 # prompts/html_generator_prompt.yaml
 user_prompt_template: |
-  You are tasked with creating an HTML page based on a given input issue, following the format of a provided template. Here are the documents you'll be working with:
+  You are an expert assistant tasked with creating a rich HTML report page from a comprehensive JSON data object, following the structure of a provided HTML template.
 
-  2. Template HTML:
+  Here are the documents you will work with:
+
+  1. Template HTML:
   <template_html>
   {template_html}
   </template_html>
 
-  3. Input Issue:
-  <input_issue>
-  {issue_content}
-  </input_issue>
+  2. Complete Epic Data Object (JSON):
+  <complete_epic_data>
+  {complete_epic_data}
+  </complete_epic_data>
 
-  Your task is to create an HTML page for the input issue that is formatted similarly to the template HTML. Follow these steps:
+  Your task is to create a new HTML page by accurately populating the template with the provided data. Follow these steps meticulously:
 
-  1. Analyze the structure of the template HTML. Pay attention to the overall layout, headings, paragraphs, and any special formatting.
+  1.  **Analyze the Template Structure**: Understand the different sections of the template HTML (e.g., "Überblick", "Business Value", "Größe & Komplexität", "Zeitplan").
 
-  2. Create a new HTML document using the same overall structure as the template. Replace the content with corresponding information from the issue content.
+  2.  **Map JSON Data to HTML Sections**: Create the new HTML document by replacing the placeholder content in the template with the corresponding information from the `{{complete_epic_data}}` JSON. Use the following mapping guide:
+      * **Main Header**: Use the `epicId` and `title` fields.
+      * **Status Box**: Use the `status` field to populate the content of the `<div class="status-box">`.
+      * **"Überblick und Gesamtziel" & "Einzelziele"**: Use the content from the `ziele` object.
+      * **"Geschäftlicher Nutzen (Business Value)"**: Use the data from the `businessValue` object for the "Business Impact", "Strategic Enablement", and "Time Criticality" sections.
+      * **"Schlüsselfunktionen"**: Iterate through the `funktionen` array to create the feature cards.
+      * **"Größe & Komplexität"**: Use the data from the `scope_summary` object. Populate the fields for total issues, epics, stories, and the distribution of issues across IT areas (`project_issue_distribution`).
+      * **"Zeitplan, Workflow, Time Creep"**:
+          * For Zeitplan ("Target Start", "Target End" und "Fix Versions") use the json data `target_start`, `target_end` und `fix_versions`; format "Target Start" and "Target End" as "DD.MM.YYYY"
+          * For the workflow durations ("FUNNEL", "ANALYSIS", "CODING TIME" etc.), use the data from `status_and_duration_summary`; if there are no data for certain workflow durations omit this worksflow step completely
+          * For the text summary about delays and status, use the content of the `time_creep_summary_llm` string.
+      * **"Backlog" Image**: Use the image path provided in `backlog_development_plot_path` as the `src` for the backlog image tag.
+      * **"Jira Hierarchie" Image**: The path for this image is constructed as `{{epicId}}_issue_tree.png`.
 
-  3. When creating the new HTML content, follow these guidelines:
-      a. Use the same HTML tags and structure as in the template.
-      b. Replace the template content with relevant information from the input issue.
-      c. If the input issue has additional information that was not included in the template do add this content - make sure that you use as much of the information of the imput issue as possible
-      c. Whenever a Jira issue is mentioned (e.g., BEMABU-1844, MAGBUS-101567, EOS-6935, ADCL-12295, SECEIT-3017, ...), format it as a link. The link should follow this pattern: https://jira.telekom.de/browse/ISSUE-NUMBER
-          For example: <a href="https://jira.telekom.de/browse/BEMABU-1844">BEMABU-1844</a>
-      d. Don't forget to add the PNG-Link; if the Business Epics Key is e.g. 'BEMABU-1844' the PNG-Link is 'BEMABU-1844_issue_tree.png'
-      e. NEVER MAKE UP FACTS!
+  3.  **Adhere to General Formatting Rules**:
+      * **Jira Links**: Whenever a Jira issue ID (e.g., BEMABU-2067, MAGBUS-99313) is mentioned, format it as a link: `<a href="https://jira.telekom.de/browse/ISSUE-ID">ISSUE-ID</a>`.
+      * **Data Integrity**: NEVER MAKE UP FACTS. Only use information explicitly provided in the `{{complete_epic_data}}` object. If data for a section is missing, state that clearly (e.g., "Keine Daten verfügbar").
+      * **Structure**: Strictly maintain the HTML tags and class structures from the template.
 
-  4. Ensure that all the information from the input issue is included in the new HTML document, maintaining a similar structure and formatting as the template.
-
-  5. Double-check that all Jira issue references are correctly formatted as links.
-
-  Once you have created the new HTML document, output it within <html_output> tags. Make sure to include the entire HTML structure, including the <!DOCTYPE html> declaration, <html>, <head>, and <body> tags.
+  4.  **Final Output**: Enclose the complete, final HTML document within `<html_output>` tags. Ensure the entire structure, including `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`, is present.

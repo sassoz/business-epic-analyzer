@@ -31,10 +31,11 @@ from features.scope_analyzer import ScopeAnalyzer
 from features.dynamics_analyzer import DynamicsAnalyzer
 from features.status_analyzer import StatusAnalyzer
 from features.time_creep_analyzer import TimeCreepAnalyzer
-from features.backlog_analyzer import BacklogAnalyzer # +++ NEU +++
-# Importiere den NEUEN AnalysisRunner
+from features.backlog_analyzer import BacklogAnalyzer
+# Importiere den AnalysisRunner
 from features.analysis_runner import AnalysisRunner
-# --- ENDE IMPORTE ---
+# +++ GEÄNDERTER IMPORT für die JSON-Zusammenfassung +++
+from features.json_summary_generator import JsonSummaryGenerator
 
 
 from utils.config import (
@@ -54,14 +55,13 @@ from utils.config import (
     JIRA_TREE_FULL
 )
 
-# +++ NEU: Zentrale Liste der zu verwendenden Analyzer +++
-# Um eine Analyse hinzuzufügen oder zu entfernen, muss nur diese Liste geändert werden.
+# Zentrale Liste der zu verwendenden Analyzer
 ANALYZERS_TO_RUN = [
     ScopeAnalyzer,
     #DynamicsAnalyzer,
     StatusAnalyzer,
-    #TimeCreepAnalyzer,
-    BacklogAnalyzer # +++ NEU +++
+    TimeCreepAnalyzer,
+    BacklogAnalyzer
 ]
 
 
@@ -69,7 +69,6 @@ def prevent_screensaver(stop_event):
     """
     Läuft in einem separaten Thread und drückt alle 8 Minuten die Leertaste via
     AppleScript, um den System-Bildschirmschoner zu verhindern.
-    Beendet sich, sobald das `stop_event` gesetzt wird.
     """
     logger.info("Keep-Awake-Thread gestartet. Drückt alle 8 Minuten die Leertaste.")
     while not stop_event.is_set():
@@ -142,45 +141,38 @@ def load_prompt(filename, key):
 def get_business_epics_from_file(file_path=None):
     """
     Lädt und extrahiert Business Epic IDs aus einer Textdatei.
-    Filtert gezielt nach dem Muster 'PROJEKT-123' und ignoriert andere Zeichen.
     """
     print("\n=== Telekom Jira Issue Extractor und Analyst ===")
     if not file_path:
-        # Fragt nach dem Dateipfad, wenn keiner übergeben wird
         file_path = input("Bitte geben Sie den Pfad zur TXT-Datei mit Business Epics ein (oder drücken Sie Enter für 'BE_Liste.txt'): ")
         if not file_path:
             file_path = "BE_Liste.txt"
 
-    # Prüft, ob die Datei existiert
     file_to_try = file_path if os.path.exists(file_path) else f"{file_path}.txt"
     if not os.path.exists(file_to_try):
         print(f"FEHLER: Die Datei {file_to_try} existiert nicht.")
         return []
 
     business_epics = []
-    # Regex-Muster, um eine Zeichenfolge zu finden, die mit Buchstaben beginnt,
-    # gefolgt von einem Bindestrich und Zahlen (z.B. "BEMABU-314").
     epic_id_pattern = re.compile(r'[A-Z][A-Z0-9]*-\d+')
 
     with open(file_to_try, 'r', encoding='utf-8') as file:
         for line in file:
-            # Sucht in jeder Zeile nach dem Muster
             match = epic_id_pattern.search(line)
             if match:
-                # Fügt nur den gefundenen Key zur Liste hinzu
                 business_epics.append(match.group(0))
 
     print(f"{len(business_epics)} Business Epics gefunden.")
     return business_epics
-    
+
 def main():
     """
     Hauptfunktion zur Orchestrierung des Skripts.
     """
     parser = argparse.ArgumentParser(description='Jira Issue Link Scraper')
     parser.add_argument('--scraper', type=str.lower, choices=['true', 'false', 'check'], default='check', help='Steuert das Scraping')
-    parser.add_argument('--analyse', type=str.lower, choices=['true', 'false'], default='true', help='Steuert die modulare Analyse')
-    parser.add_argument('--html_summary', type=str.lower, choices=['true', 'false'], default='false', help='Erstellt eine HTML-Zusammenfassung mit Jira Tree Visualisierung.')
+    # +++ ANPASSUNG: Choices für html_summary erweitert +++
+    parser.add_argument('--html_summary', type=str.lower, choices=['true', 'false', 'check'], default='false', help="Erstellt JSON-Zusammenfassung und HTML-Report. 'true': immer neu; 'check': aus Cache, falls vorhanden; 'false': keine Erstellung.")
     parser.add_argument('--issue', type=str, default=None, help='Spezifische Jira-Issue-ID')
     parser.add_argument('--file', type=str, default=None, help='Pfad zur TXT-Datei mit Business Epics')
     args = parser.parse_args()
@@ -217,93 +209,121 @@ def main():
         else:
             print("\n--- Scraping übersprungen (Mode: 'false') ---")
 
-        # --- NEU STRUKTURIERTER ANALYSE- UND REPORTING-BLOCK ---
-        if args.analyse == 'true' or args.html_summary == 'true':
+        # +++ NEUE, VEREINHEITLICHTE LOGIK FÜR ANALYSE UND REPORTING +++
+        if args.html_summary != 'false':
             print("\n--- Analyse / Reporting gestartet ---")
-            # Initialisiere die Werkzeuge, die für alle Epics wiederverwendet werden
-            # `azure_summary_client` no longer needs system prompt here as ConsoleReporter initializes its own
-            azure_summary_client = AzureAIClient() # Initialized without system prompt as ConsoleReporter sets its own
+
+            # Initialisierung der benötigten Clients und Generatoren
+            azure_summary_client = AzureAIClient()
             visualizer = JiraTreeVisualizer(format='png')
             context_generator = JiraContextGenerator()
             html_generator = EpicHtmlGenerator(model=LLM_MODEL_HTML_GENERATOR, token_tracker=token_tracker)
-            parser = LLMJsonParser()
-            reporter = ConsoleReporter() # ConsoleReporter now initializes its own AzureAIClient and TokenUsage
+            json_parser = LLMJsonParser()
             analysis_runner = AnalysisRunner(ANALYZERS_TO_RUN)
+            json_summary_generator = JsonSummaryGenerator()
+            reporter = ConsoleReporter()
+
 
             for epic in business_epics:
                 print(f"\n--- Starte Verarbeitung für {epic} ---")
+                complete_epic_data = None
+                complete_summary_path = os.path.join(JSON_SUMMARY_DIR, f"{epic}_complete_summary.json")
 
-                # 1. Modulare Analysen ausführen, wenn --analyse=true (mit vollem Tree)
-                if args.analyse == 'true':
-                    print(f"\n--- Führe modulare Analysen für {epic} mit JIRA_TREE_FULL aus ---")
-                    # Lade Daten mit der vollen Hierarchie
+                # Schritt 1: Prüfen, ob eine gecachte Datei verwendet werden soll ('check'-Modus)
+                if args.html_summary == 'check' and os.path.exists(complete_summary_path):
+                    logger.info(f"Lade vollständige Zusammenfassung aus Cache: {complete_summary_path}")
+                    try:
+                        with open(complete_summary_path, 'r', encoding='utf-8') as f:
+                            complete_epic_data = json.load(f)
+                    except (json.JSONDecodeError, IOError) as e:
+                        logger.info(f"Konnte Cache-Datei nicht lesen ({e}). Erstelle Zusammenfassung neu.")
+
+                # Schritt 2: Wenn keine Cache-Datei vorhanden oder '--html_summary true', alles neu generieren
+                if complete_epic_data is None:
+                    logger.info("Keine gültige Cache-Datei gefunden oder Neuerstellung erzwungen. Generiere alle Daten...")
+
+                    # 2a: Metrische Analysen durchführen
                     data_provider = ProjectDataProvider(epic_id=epic, hierarchy_config=JIRA_TREE_FULL)
                     if not data_provider.is_valid():
-                        logger.error(f"Fehler: Konnte keine gültigen Daten für Analyse von Epic '{epic}' laden. Analyse wird übersprungen.")
-                    else:
-                        analysis_results = analysis_runner.run_analyses(data_provider)
-                        # Ergebnisse berichten und spezielle Aktionen durchführen
-                        if "ScopeAnalyzer" in analysis_results:
-                            reporter.report_scope(analysis_results["ScopeAnalyzer"])
-                        if "StatusAnalyzer" in analysis_results:
-                            reporter.report_status(analysis_results["StatusAnalyzer"], data_provider.epic_id)
-                        if "TimeCreepAnalyzer" in analysis_results:
-                           creep_results = analysis_results["TimeCreepAnalyzer"]
-                           # Pass the data_provider to report_time_creep
-                           reporter.report_time_creep(creep_results, data_provider)
-                           reporter.create_activity_and_creep_plot(creep_results, data_provider.all_activities, data_provider.epic_id)
-                        # +++ NEU +++
-                        if "BacklogAnalyzer" in analysis_results:
-                            reporter.report_backlog(analysis_results["BacklogAnalyzer"])
-                            reporter.create_backlog_plot(analysis_results["BacklogAnalyzer"], data_provider.epic_id)
+                        logger.error(f"Fehler: Konnte keine gültigen Daten für Analyse von Epic '{epic}' laden. Verarbeitung wird übersprungen.")
+                        continue
+                    print(f"     - Erstelle Analyse für {epic}")
+                    analysis_results = analysis_runner.run_analyses(data_provider)
+                    reporter.create_backlog_plot(analysis_results.get("BacklogAnalyzer", {}), epic)
 
+                    # Optional: Konsolen-Reporting der Analyse-Ergebnisse
+                    #reporter.report_scope(analysis_results.get("ScopeAnalyzer", {}))
+                    #reporter.report_status(analysis_results.get("StatusAnalyzer", {}), epic)
+                    #reporter.report_time_creep(analysis_results.get("TimeCreepAnalyzer",{}))
+                    #reporter.create_activity_and_creep_plot(analysis_results.get("TimeCreepAnalyzer",{}), data_provider.all_activities, epic)
+                    #reporter.report_backlog(analysis_results.get("BacklogAnalyzer", {}))
 
-                # 2. HTML-Zusammenfassung erstellen, wenn --html_summary=true (nur mit Management-Tree)
-                if args.html_summary == 'true':
-                    print(f"\n--- Erstelle HTML Summary für {epic} mit JIRA_TREE_MANAGEMENT ---")
-
-                    # Erzeuge nur den Baum, der für die Visualisierung und den Kontext benötigt wird.
-                    # Dies ist effizienter als einen vollen ProjectDataProvider zu laden.
+                    # 2b: Inhaltliche Zusammenfassung per LLM erstellen
                     tree_generator_mgmt = JiraTreeGenerator(allowed_types=JIRA_TREE_MANAGEMENT)
                     issue_tree_mgmt = tree_generator_mgmt.build_issue_tree(epic)
-
-                    if not issue_tree_mgmt or issue_tree_mgmt.number_of_nodes() == 0:
-                        logger.error(f"Fehler: Konnte keinen Management-Baum für Epic '{epic}' erstellen. HTML-Report wird übersprungen.")
-                        continue
-
-                    # 2a. Baum-Visualisierung erstellen
-                    logger.info(f"Erstelle Baum-Visualisierung für {epic}...")
-                    visualizer.visualize(issue_tree_mgmt, epic)
-
-                    # 2b. KI-gestützte Zusammenfassung und HTML-Report
-                    logger.info(f"Starte KI-Zusammenfassung für Epic {epic}...")
+                    visualizer.visualize(issue_tree_mgmt, epic) # Baum-Visualisierung erstellen
                     json_context = context_generator.generate_context(issue_tree_mgmt, epic)
-                    if not json_context or json_context == '{}':
-                        logger.error(f"Fehler bei der Erstellung des Kontexts für {epic}; HTML-Report wird übersprungen.")
-                        continue
-
                     summary_prompt_template = load_prompt("summary_prompt.yaml", "user_prompt_template")
                     summary_prompt = summary_prompt_template.format(json_context=json_context)
-                    response_data = azure_summary_client.completion(model_name=LLM_MODEL_SUMMARY, user_prompt=summary_prompt, max_tokens=20000, response_format={"type": "json_object"})
 
+                    print(f"     - Erstelle Summary für {epic}")
+
+                    response_data = azure_summary_client.completion(
+                        model_name=LLM_MODEL_SUMMARY,
+                        user_prompt=summary_prompt,
+                        max_tokens=20000,
+                        response_format={"type": "json_object"}
+                    )
+
+                    # Token-Nutzung loggen
                     if token_tracker and "usage" in response_data:
-                        usage_info = response_data["usage"]
+                        usage = response_data["usage"]
                         token_tracker.log_usage(
                             model=LLM_MODEL_SUMMARY,
-                            input_tokens=usage_info.prompt_tokens,
-                            output_tokens=usage_info.completion_tokens,
-                            total_tokens=usage_info.total_tokens,
-                            task_name="summary_generation"
+                            input_tokens=usage.prompt_tokens,
+                            output_tokens=usage.completion_tokens,
+                            total_tokens=usage.total_tokens,
+                            task_name=f"summary_generation"
                         )
 
-                    json_summary = parser.extract_and_parse_json(response_data["text"])
-                    if json_summary and json_summary != '{}':
-                        with open(os.path.join(JSON_SUMMARY_DIR, f"{epic}_json_summary.json"), 'w', encoding='utf-8') as file:
-                            json.dump(json_summary, file)
-                        html_file = os.path.join(HTML_REPORTS_DIR, f"{epic}_summary.html")
-                        html_generator.generate_epic_html(json_summary, epic, html_file)
-                    else:
-                        logger.error(f"Fehler bei der Erstellung der JSON_Summary für {epic}")
+                    content_summary = json_parser.extract_and_parse_json(response_data["text"])
+
+                    # Status aus dem DataProvider holen
+                    epic_status = data_provider.issue_details.get(epic, {}).get('status', 'Unbekannt')
+                    target_start_status = data_provider.issue_details.get(epic, {}).get('target_start', 'Unbekannt')
+                    target_end_status = data_provider.issue_details.get(epic, {}).get('target_end', 'Unbekannt')
+                    fix_version_status = data_provider.issue_details.get(epic, {}).get('fix_versions', 'Unbekannt')
+
+                    # Ein neues, geordnetes Dictionary erstellen und den Status einfügen
+                    ordered_content_summary = {
+                        "epicId": content_summary.get("epicId"),
+                        "title": content_summary.get("title"),
+                        "status": epic_status,
+                        "target_start": target_start_status,
+                        "target_end": target_end_status,
+                        "fix_versions": fix_version_status
+                    }
+                    # Den Rest der ursprünglichen Zusammenfassung hinzufügen
+                    ordered_content_summary.update({k: v for k, v in content_summary.items() if k not in ordered_content_summary})
+                    content_summary = ordered_content_summary
+
+                    # 2c: Alle Daten fusionieren und als eine JSON-Datei speichern
+                    complete_epic_data = json_summary_generator.generate_and_save_complete_summary(
+                        analysis_results=analysis_results,
+                        content_summary=content_summary,
+                        epic_id=epic
+                    )
+
+                # Schritt 3: HTML-Datei aus den vollständigen Daten (neu oder aus Cache) erstellen
+                if complete_epic_data:
+                    print(f"     - Erstelle HTML-File für {epic}")
+                    logger.info(f"Erstelle HTML-Report für {epic}...")
+                    html_file = os.path.join(HTML_REPORTS_DIR, f"{epic}_summary.html")
+                    # Der Generator erhält nun das vollständige, zusammengeführte Datenobjekt
+                    html_generator.generate_epic_html(complete_epic_data, epic, html_file)
+                else:
+                    logger.error(f"Konnte keine vollständigen Daten für die HTML-Erstellung von {epic} erzeugen.")
+
         else:
             print("\n--- Analyse und HTML-Summary übersprungen ---")
 

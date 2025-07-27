@@ -70,24 +70,7 @@ class StatusAnalyzer:
     def analyze(self, data_provider: ProjectDataProvider) -> dict:
         """
         Führt die Analyse der Statuswechsel und Laufzeiten durch.
-
-        Diese Methode sammelt alle Statusänderungen und berechnet die Verweildauer
-        des Haupt-Epics in jedem Status. Zusätzlich ermittelt sie den Start-
-        und Endzeitpunkt der aktiven Entwicklungsphase basierend auf dem
-        Status der untergeordneten Stories.
-
-        Args:
-            data_provider (ProjectDataProvider): Das Datenprovider-Objekt mit Zugriff
-                auf alle Projektdaten.
-
-        Returns:
-            dict: Ein Dictionary mit den Analyseergebnissen, das folgende Schlüssel enthält:
-                - 'all_status_changes' (list): Eine Liste aller Statuswechsel.
-                - 'epic_status_durations' (dict): Die Verweildauer des Epics pro Status.
-                - 'coding_start_time' (str | None): ISO-Zeitstempel, wann die erste
-                  Story in 'In Progress' ging.
-                - 'coding_end_time' (str | None): ISO-Zeitstempel, wann die letzte
-                  Story auf 'Resolved' oder 'Closed' gesetzt wurde.
+        ...
         """
         all_activities = data_provider.all_activities
         issue_details = data_provider.issue_details
@@ -116,9 +99,26 @@ class StatusAnalyzer:
                 if self._clean_status_name(activity.get('neuer_wert')) in ['RESOLVED', 'CLOSED']:
                     end_time = activity.get('zeitstempel_iso')
 
+        # NEUE LOGIK: Berechnung der 'coding_duration'
+        coding_duration_str = "Nicht gestartet"
+        if start_time:
+            start_dt = datetime.fromisoformat(start_time)
+            # Wenn end_time nicht gesetzt ist, das aktuelle Datum verwenden
+            end_dt = datetime.fromisoformat(end_time) if end_time else datetime.now().astimezone()
+
+            duration = end_dt - start_dt
+            total_days = duration.days
+            months = total_days // 30
+            days = total_days % 30
+            if months == 0:
+                coding_duration_str = f"{days} Tage"
+            else:
+                coding_duration_str = f"{months} Monate, {days} Tage"
+
         return {
             "all_status_changes": all_status_changes,
             "epic_status_durations": durations,
             "coding_start_time": start_time,
-            "coding_end_time": end_time
+            "coding_end_time": end_time,  # Das ursprüngliche Enddatum bleibt für die Transparenz null
+            "coding_duration": coding_duration_str # Das neu berechnete Feld
         }

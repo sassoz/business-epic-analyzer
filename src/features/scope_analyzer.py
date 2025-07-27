@@ -47,9 +47,28 @@ class ScopeAnalyzer:
                 - 'total_story_points' (int): Gesamtsumme der Story Points.
                 - 'stories_per_epic_counts' (list): Liste mit der Anzahl Stories pro Epic.
                 - 'epic_breakdown' (dict): Aufschlüsselung, welches Epic welche Kinder hat.
-                - 'project_count' (int): Anzahl der beteiligten Jira-Projekte.
-                - 'project_distribution' (dict): Verteilung der Issues auf die Projekte.
+                - 'project_count' (int): Anzahl der beteiligten Jira-Projekte nach Konsolidierung.
+                - 'project_distribution' (dict): Verteilung der Issues auf die vollständigen Projektnamen.
         """
+        # Mapping von Projekt-Abkürzung zu vollem Namen basierend auf Jira_Projects.txt
+        project_name_map = {
+            "MAGBUS": "Magenta Business", "ADCL": "API Decoupling Layer Standard Business",
+            "BMC": "Billing Migration Center", "REO": "RechnungOnline", "MAB": "Massenmarkt Billing",
+            "PSB": "Prepaid, Partner Services & Billing Hub", "SONAR": "SIRIUS (SONAR/MARS)",
+            "BCCR": "Billing, Collection & Credit Risk", "CRMFN": "CRM Festnetz", "B2BCA": "B2B Classic Access",
+            "TDGM": "TDG Massmarket (OneX, MAVI, DOT, ...)", "ONEX": "TDG Massmarket (OneX, MAVI, DOT, ...)",
+            "CVS": "TDG Massmarket (OneX, MAVI, DOT, ...)", "MABUCPS": "TCMP/MBC Plattform",
+            "COSM": "TCMP/MBC Plattform", "TCMPPF": "TCMP/MBC Plattform", "ECC": "TCMP/MBC Plattform",
+            "ECCMST": "TCMP/MBC Plattform", "HPBXCC": "TCMP/MBC Plattform", "MOFUDHS": "Mobilfunk DigiHub",
+            "OMSOE": "OMS/OE", "CC": "Carmen CRM", "BSP": "Business Service Portal", "DATAFAB": "Data Domain",
+            "DATASAT": "Data Domain", "DATAAAA": "Data Domain", "BDI": "Data Domain", "SECEIT": "SeCe-IT",
+            "EOS": "Eine Oberfläche Service", "DIGIVLEK": "D!VE", "TVPP": "T-VPP", "TF": "Tariffabrik",
+            "SNOWTC": "SNow@TC", "SDX": "SNP Plattform", "SDN": "SNP Plattform", "SDLA": "SNP Plattform",
+            "OMS": "SNP Plattform", "SCS": "SAP SCS", "POCONFIG": "Prima+", "ORCA": "Order2Cash",
+            "DUD": "David & Doris", "DPM": "Digital Product Mgmt", "DMSDO": "DMS", "DHEI": "Tardis",
+            "CANCAFLC": "Copper Access & Fixed Line CRM", "BCT": "B2B Classic TC"
+        }
+
         issue_details = data_provider.issue_details
         issue_tree = data_provider.issue_tree
         root_epic_id = data_provider.epic_id
@@ -80,14 +99,30 @@ class ScopeAnalyzer:
             for epic_key in epic_keys
         ]
 
-        project_distribution = {}
+        # 1. Zähle Issues pro Projekt-Abkürzung
+        project_distribution_abbr = {}
         for key, details in issue_details.items():
             issue_type = details.get('type')
             if key == root_epic_id or issue_type in ['Business Epic', 'Bug']:
                 continue
             prefix = key.split('-')[0]
-            project_distribution[prefix] = project_distribution.get(prefix, 0) + 1
-        project_count = len(project_distribution)
+            project_distribution_abbr[prefix] = project_distribution_abbr.get(prefix, 0) + 1
+
+        # 2. Konsolidiere die Zählungen basierend auf dem vollen Projektnamen
+        project_distribution_full = {}
+        for abbr, count in project_distribution_abbr.items():
+            # Finde den vollen Namen; nutze Abkürzung als Fallback
+            full_name = project_name_map.get(abbr, abbr)
+            project_distribution_full[full_name] = project_distribution_full.get(full_name, 0) + count
+
+        # NEU: 3. Sortiere das Dictionary absteigend nach der Anzahl der Issues
+        sorted_project_distribution = dict(sorted(
+            project_distribution_full.items(),
+            key=lambda item: item[1],
+            reverse=True
+        ))
+
+        project_count = len(sorted_project_distribution)
 
         return {
             "total_issues": total_issues,
@@ -97,5 +132,5 @@ class ScopeAnalyzer:
             "stories_per_epic_counts": stories_per_epic_counts,
             "epic_breakdown": epic_breakdown,
             "project_count": project_count,
-            "project_distribution": project_distribution
+            "project_distribution": sorted_project_distribution # Rückgabe der konsolidierten Liste
         }
