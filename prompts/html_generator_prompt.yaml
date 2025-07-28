@@ -24,7 +24,9 @@ user_prompt_template: |
       * **"Überblick und Gesamtziel" & "Einzelziele"**: Use the content from the `ziele` object.
       * **"Geschäftlicher Nutzen (Business Value)"**: Use the data from the `businessValue` object for the "Business Impact", "Strategic Enablement", and "Time Criticality" sections.
       * **"Schlüsselfunktionen"**: Iterate through the `funktionen` array to create the feature cards.
-      * **"Größe & Komplexität"**: Use the data from the `scope_summary` object. Populate the fields for total issues, epics, stories, and the distribution of issues across IT areas (`project_issue_distribution`).
+      * **"Größe & Komplexität"**: This section has two text boxes.
+          * **Left Box**: Use the data from the `scope_summary` object to list the statistics: `total_issues`, `total_epics_found`, `total_stories_found`, and the issue distribution from `project_distribution`.
+          * **Right Box**: Use **only** the text content from the `scope_summary.scope_evaluation` field to populate this box.
       * **"Zeitplan, Workflow, Time Creep"**:
           * For Zeitplan ("Target Start", "Target End" und "Fix Versions") use the json data `target_start`, `target_end` und `fix_versions`; format "Target Start" and "Target End" as "DD.MM.YYYY"
           * For the workflow durations ("FUNNEL", "ANALYSIS", "CODING TIME" etc.), use the data from `status_and_duration_summary`; if there are no data for certain workflow durations omit this worksflow step completely

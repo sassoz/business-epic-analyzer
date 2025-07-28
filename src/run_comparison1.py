@@ -1,3 +1,22 @@
+"""
+Orchestriert einen KI-gestützten Workflow zur Qualitätsverbesserung.
+
+Dieses Skript liest die Daten eines oder mehrerer Business Epics aus lokalen
+JSON-Dateien. Für jedes Epic führt es die folgenden Schritte aus:
+1.  Es sendet die ursprüngliche, oft unstrukturierte 'description' an ein
+    Azure OpenAI-Sprachmodell (LLM).
+2.  Das LLM generiert daraus eine bereinigte, prägnante neue Beschreibung und
+    extrahiert einen strukturierten 'business_value' im JSON-Format. Die
+    Antwort wird mithilfe der 'instructor'-Bibliothek direkt in ein
+    Pydantic-Modell validiert.
+3.  Anschließend wird ein zweiter Prompt an das LLM gesendet, der die alte
+    und die neue Version des Business Value enthält. Das LLM vergleicht beide
+    Versionen und bewertet die Qualität, den Informationsgewinn und den
+    Informationsverlust.
+4.  Alle Ergebnisse (neue Beschreibung, neuer Business Value, KI-Bewertung)
+    werden für jedes verarbeitete Epic in einer zentralen JSONL-Datei
+    ('data/comparison_results.jsonl') gespeichert.
+"""
 import os
 import json
 import sys

@@ -134,7 +134,7 @@ class TimeCreepAnalyzer:
 
             time_creep_str = "\n".join(formatted_time_creep_events)
             if not time_creep_str:
-                return f"Das Business Epic {epic_id} weist bislang keine signifikanten Terminverschiebungen auf."
+                return f"Das Business Epic {epic_id} weist keine signifikanten Terminverschiebungen auf."
 
             # 2. Lade die rohe JSON-Datei des Business Epics als Kontext
             raw_epic_data = None
@@ -181,7 +181,7 @@ class TimeCreepAnalyzer:
             return llm_response.get("text", "LLM-Antwort konnte nicht verarbeitet werden.")
 
         except Exception as e:
-            logger.error(f"Fehler bei der Generierung der LLM Time Creep Summary für {epic_id}: {e}", exc_info=True)
+            logger.error(f"Fehler bei der Generierung der LLM Time Creep Summary für {epic_id}", exc_info=True)
             return "LLM-Zusammenfassung fehlgeschlagen aufgrund eines internen Fehlers."
 
     def analyze(self, data_provider: ProjectDataProvider) -> dict:

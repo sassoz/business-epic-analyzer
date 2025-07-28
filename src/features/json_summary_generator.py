@@ -64,7 +64,8 @@ class JsonSummaryGenerator:
             "total_epics": scope_res.get("total_epics_found", 0),
             "total_stories": scope_res.get("total_stories_found", 0),
             "involved_projects_count": scope_res.get("project_count", 0),
-            "project_issue_distribution": scope_res.get("project_distribution", {})
+            "project_issue_distribution": scope_res.get("project_distribution", {}),
+            "scope_evaluation": scope_res.get("scope_evaluation", "Keine Bewertung verfügbar.")
         }
 
         # Status- & Laufzeit-Daten extrahieren und formatieren

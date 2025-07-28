@@ -1,3 +1,19 @@
+"""
+Liest Jira Business Epics aus lokalen JSON-Dateien, filtert und sortiert sie.
+
+Dieses Skript durchsucht ein vordefiniertes Verzeichnis ('data/jira_issues') nach
+JSON-Exporten von Jira-Vorgängen. Es identifiziert alle 'Business Epics',
+schließt Vorgänge mit dem Status 'Withdrawn' oder 'Rejected' aus und sortiert
+die verbleibenden Epics.
+
+Die Sortierung erfolgt in zwei Stufen:
+1.  Nach einer benutzerdefinierten Reihenfolge der Status (CUSTOM_STATUS_ORDER).
+2.  Innerhalb jedes Status wird nach der 'fix_version' sortiert.
+
+Das Ergebnis ist eine auf der Konsole ausgegebene, gruppierte Liste der
+Business-Epic-Keys, die für einen schnellen Überblick über den aktuellen
+Stand der Epics im Funnel und in der Entwicklung dient.
+"""
 import os
 import json
 import time

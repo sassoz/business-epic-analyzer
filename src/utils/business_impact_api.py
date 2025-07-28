@@ -125,7 +125,7 @@ def process_description(description_text: str, model: str, token_tracker, azure_
                 input_tokens=usage.prompt_tokens,
                 output_tokens=usage.completion_tokens,
                 total_tokens=usage.total_tokens,
-                task_name="business_impact_native_pydantic", # Name zur Unterscheidung angepasst
+                task_name="business_impact",
             )
 
         return {

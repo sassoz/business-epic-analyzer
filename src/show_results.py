@@ -1,3 +1,19 @@
+"""
+Zeigt die Ergebnisse der KI-gestützten Vergleichsanalyse formatiert an.
+
+Dieses Skript ist ein reines Anzeigewerkzeug und das Gegenstück zu
+'run_comparison1.py'. Seine einzige Aufgabe ist es, die von jenem Skript
+erzeugte Ergebnisdatei ('data/comparison_results.jsonl') zu lesen.
+
+Für jedes in der Datei gefundene Business Epic werden die Analyseergebnisse
+übersichtlich und menschenlesbar auf der Konsole ausgegeben. Die Ausgabe
+ist klar strukturiert und hebt die folgenden Punkte hervor:
+- Die Gesamtbewertung der KI.
+- Eine Zusammenfassung der Bewertung.
+- Aufgelisteter Informationsgewinn und -verlust.
+- Die neue, vom LLM bereinigte Beschreibung.
+- Der neue, vom LLM extrahierte Business Value im formatierten JSON-Format.
+"""
 import json
 import os
 import textwrap

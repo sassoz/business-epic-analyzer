@@ -23,19 +23,18 @@ from utils.token_usage_class import TokenUsage
 from utils.logger_config import logger
 from utils.json_parser import LLMJsonParser
 
-# --- IMPORTE für die modulare Analyse ---
 from utils.project_data_provider import ProjectDataProvider
 from features.console_reporter import ConsoleReporter
+from features.json_summary_generator import JsonSummaryGenerator
+
 # Importiere die spezifischen Analyzer-Klassen
 from features.scope_analyzer import ScopeAnalyzer
 from features.dynamics_analyzer import DynamicsAnalyzer
 from features.status_analyzer import StatusAnalyzer
 from features.time_creep_analyzer import TimeCreepAnalyzer
 from features.backlog_analyzer import BacklogAnalyzer
-# Importiere den AnalysisRunner
 from features.analysis_runner import AnalysisRunner
-# +++ GEÄNDERTER IMPORT für die JSON-Zusammenfassung +++
-from features.json_summary_generator import JsonSummaryGenerator
+
 
 
 from utils.config import (

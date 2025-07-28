@@ -2,10 +2,21 @@
 """
 Führt eine Scope- und Status-Analyse für Jira Business Epics durch.
 
-Dieses Skript identifiziert relevante Business Epics aus einem lokalen
-JSON-Datensatz, analysiert deren Umfang sowie Status-Laufzeiten, schreibt
-die detaillierten Ergebnisse in eine CSV-Datei, gibt eine statistische
-Zusammenfassung aus und erstellt Scatter-Plots inklusive Trendlinien und R²-Wert.
+Dieses Skript analysiert eine Menge von Business Epics mit dem Status
+'In Progress' oder 'Closed' aus einem lokalen JSON-Datensatz. Das Hauptziel ist
+es, Korrelationen zwischen dem Umfang eines Business Epics (Anzahl der
+zugehörigen technischen Epics und User Stories) und der "Coding-Dauer"
+(Zeit zwischen dem ersten Wechsel in 'In Progress' und dem Wechsel zu 'Closed')
+zu finden.
+
+Der Workflow umfasst:
+1.  Filtern relevanter Business Epics aus den JSON-Dateien.
+2.  Für jedes Epic den Umfang und die Statuslaufzeiten analysieren.
+3.  Die detaillierten Ergebnisse in eine zentrale CSV-Datei schreiben.
+4.  Eine statistische Quartilsanalyse der Ergebnisse auf der Konsole ausgeben.
+5.  Zwei Scatter-Plots ('epics_vs_duration' und 'stories_vs_duration')
+    erstellen und speichern, die die Korrelationen visualisieren, inklusive
+    einer Regressionsgeraden und des Bestimmtheitsmaßes R².
 """
 
 import os
