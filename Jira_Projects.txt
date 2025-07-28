@@ -1,0 +1,46 @@
+MAGBUS; Magenta Business
+ADCL; API Decoupling Layer Management for Standard Business
+BMC; Billing Migration Center
+REO; RechnungOnline
+MAB; Massenmarkt Billing
+PSB; Prepaid, Partner Services & Billing Hub
+SONAR; SIRIUS (SONAR/MARS)
+BCCR; Billing, Collection & Credit Risk
+CRMFN; CRM Festnetz
+B2BCA; B2B Classic Access
+TDGM; TDG Massmarket (OneX, MAVI, DOT, ...)
+MABUCPS; TCMP/MBC Plattform
+COSM; TCMP/MBC Plattform
+MOFUDHS; Mobilfunk DigiHub
+OMSOE; OMS/OE
+CC; Carmen CRM
+ECC; MBC
+ECCMST; MBC
+HPBXCC; MBC
+BSP; Business Service Portal
+DATAFAB; Data Domain
+SECEIT; SeCe-IT
+EOS; Eine Oberfläche Service
+DIGIVLEK; D!VE
+TVPP; T-VPP
+TF; Tariffabrik
+TCMPPF; TCMP/MBC Plattform
+SNOWTC; SNow@TC
+SDX; SNP Plattform
+SDN; SNP Plattform
+SDLA; SNP Plattform
+SCS; SAP SCS
+POCONFIG; Prima+
+ORCA; Order2Cash
+ONEX; TDG Massmarket (OneX, MAVI, DOT, ...)
+OMS; SNP Plattform
+DUD; David & Doris
+DPM; Digital Product Mgmt
+DMSDO; DMS
+DHEI; Tardis
+DATASAT; Data Domain
+DATAAAA; Data Domain
+CVS; TDG Massmarket (OneX, MAVI, DOT, ...)
+CANCAFLC; Copper Access & Fixed Line CRM
+BDI; Data Domain
+BCT; B2B Classic TC
