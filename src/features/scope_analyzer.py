@@ -119,11 +119,11 @@ class ScopeAnalyzer:
             size_evaluation = "ein Business Epic ohne (bislang) erkennbare Umsetzungsanteile"
         elif num_epics < 2 or num_stories < 10:
             size_evaluation = "ein vergleichsweise sehr kleines Business Epic"
-        elif num_epics < 4 or num_stories < 20:
+        elif num_epics < 5 or num_stories < 20:
             size_evaluation = "ein vergleichsweise eher kleines Business Epic"
-        elif num_epics < 7 or num_stories < 35:
+        elif num_epics < 10 or num_stories < 35:
             size_evaluation = "ein Business Epic mit vergleichsweise normaler Größe"
-        elif num_epics < 15 or num_stories < 70:
+        elif num_epics < 20 or num_stories < 70:
             size_evaluation = "ein vergleichsweise großes Business Epic"
         else:
             size_evaluation = "ein vergleichsweise sehr großes Business Epic"
@@ -160,7 +160,7 @@ class ScopeAnalyzer:
         # +++ ENDE NEUE LOGIK +++
 
         return {
-            "total_issues": total_issues,
+            "total_issues_found": total_issues,
             "total_epics_found": num_epics,
             "total_stories_found": num_stories,
             "total_story_points": total_story_points,

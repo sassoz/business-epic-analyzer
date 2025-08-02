@@ -164,7 +164,7 @@ class TimeCreepAnalyzer:
                 model_name=LLM_MODEL_TIME_CREEP,
                 user_prompt=full_user_prompt,
                 temperature=0.2,
-                max_tokens=4000
+                max_tokens=10000
             )
 
             # Token-Nutzung loggen
@@ -187,12 +187,31 @@ class TimeCreepAnalyzer:
     def analyze(self, data_provider: ProjectDataProvider) -> dict:
         """
         Führt die Hauptanalyse der Terminänderungen durch und generiert eine Zusammenfassung.
+        FOKUS: Nur der Root-Knoten und seine direkten Nachfolger werden analysiert,
+        um die Aufmerksamkeit auf die übergeordnete Ebene zu lenken.
         """
         issue_tree = data_provider.issue_tree
         all_activities = data_provider.all_activities
         issue_details = data_provider.issue_details
+        root_node_key = data_provider.epic_id # Der Startpunkt der Analyse
+
         ALLOWED_TYPES = {'Business Epic', 'Portfolio Epic', 'Initiative', 'Epic'}
         ALLOWED_FIELDS = {'Target end', 'Fix Version/s'}
+
+        # --- NEUE LOGIK START ---
+        # 1. Bestimme die zu analysierenden Knoten: Root + direkte Nachfolger
+        if not issue_tree.has_node(root_node_key):
+            logger.error(f"Root-Knoten {root_node_key} nicht im Issue-Graphen gefunden.")
+            return {
+                "issue_tree_with_creep": issue_tree,
+                "time_creep_events": [],
+                "llm_time_creep_summary": "Analyse nicht möglich, da Root-Knoten fehlt."
+            }
+
+        # Erstelle eine Liste, die nur den Root-Knoten und seine direkten Kinder enthält.
+        nodes_to_analyze = [root_node_key] + list(issue_tree.successors(root_node_key))
+        logger.info(f"Analysiere Time Creep für Root-Knoten '{root_node_key}' und seine {len(list(issue_tree.successors(root_node_key)))} direkten Nachfolger.")
+        # --- NEUE LOGIK ENDE ---
 
         activities_by_issue = {}
         for activity in all_activities:
@@ -200,10 +219,17 @@ class TimeCreepAnalyzer:
             if key:
                 activities_by_issue.setdefault(key, []).append(activity)
 
-        for issue_key, issue_activities in activities_by_issue.items():
-            if issue_details.get(issue_key, {}).get('type') not in ALLOWED_TYPES or not issue_tree.has_node(issue_key):
+        # --- GEÄNDERTE SCHLEIFE ---
+        # Iteriere nur über die zuvor definierte, eingeschränkte Liste von Knoten.
+        for issue_key in nodes_to_analyze:
+            issue_activities = activities_by_issue.get(issue_key, [])
+            if not issue_activities:
                 continue
 
+            if issue_details.get(issue_key, {}).get('type') not in ALLOWED_TYPES:
+                continue
+
+            # Die folgende Detailanalyse für ein einzelnes Issue bleibt unverändert.
             relevant_activities = sorted([a for a in issue_activities if a.get('feld_name') in ALLOWED_FIELDS], key=lambda x: x['zeitstempel_iso'])
             if not relevant_activities: continue
 
@@ -261,19 +287,20 @@ class TimeCreepAnalyzer:
                 events.sort(key=lambda x: x['timestamp'])
                 issue_tree.nodes[issue_key]['time_creep_events'] = events
 
-        # Sammle alle Events für die LLM-Zusammenfassung
+        # Sammle alle Events für die LLM-Zusammenfassung (jetzt nur noch von den relevanten Knoten)
         all_events = []
-        for node_key in issue_tree.nodes:
-            if 'time_creep_events' in issue_tree.nodes[node_key]:
+        for node_key in nodes_to_analyze:
+            if 'time_creep_events' in issue_tree.nodes.get(node_key, {}):
                 all_events.extend(issue_tree.nodes[node_key]['time_creep_events'])
 
         all_events.sort(key=lambda x: x.get('timestamp', ''))
 
-        # Generiere die LLM-Zusammenfassung
+        # Generiere die LLM-Zusammenfassung basierend auf den gefilterten Events
         llm_summary = self._generate_llm_summary(all_events, data_provider)
 
-        # Füge die Zusammenfassung als Attribut zum Graphen hinzu
-        issue_tree.nodes[data_provider.epic_id]['llm_time_creep_summary'] = llm_summary
+        # Füge die Zusammenfassung als Attribut zum Root-Knoten hinzu
+        if issue_tree.has_node(root_node_key):
+            issue_tree.nodes[root_node_key]['llm_time_creep_summary'] = llm_summary
 
         return {
             "issue_tree_with_creep": issue_tree,

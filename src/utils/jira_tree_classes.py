@@ -1,4 +1,5 @@
 # src/utils/jira_tree_classes.py
+# src/utils/jira_tree_classes.py
 """
 Modul zum Erstellen, Visualisieren und Verarbeiten von JIRA-Issue-Beziehungsbäumen.
 
@@ -22,7 +23,8 @@ from utils.config import (
     ISSUE_TREES_DIR,
     JSON_SUMMARY_DIR,
     LOGS_DIR,
-    JIRA_TREE_MANAGEMENT
+    JIRA_TREE_MANAGEMENT,
+    ISSUE_LOG_FILE # <-- NEUER IMPORT
 )
 
 
@@ -52,6 +54,27 @@ class JiraTreeGenerator:
         self.json_dir = json_dir
         # Verwende die übergebene Konfiguration, oder greife auf den Standard zurück
         self.allowed_hierarchy_types = allowed_types if allowed_types is not None else JIRA_TREE_MANAGEMENT
+
+    # +++ NEUE METHODE zum Protokollieren fehlender Issues +++
+    def _log_missing_issue(self, issue_key: str):
+        """
+        Protokolliert einen fehlenden Issue-Key in der zentralen Log-Datei.
+        Verhindert doppelte Einträge, um die Datei sauber zu halten.
+        """
+        try:
+            existing_keys = set()
+            # Prüfen, ob die Log-Datei bereits existiert und Einträge hat
+            if os.path.exists(ISSUE_LOG_FILE):
+                with open(ISSUE_LOG_FILE, 'r', encoding='utf-8') as f:
+                    existing_keys = {line.strip() for line in f}
+
+            # Nur schreiben, wenn der Key noch nicht in der Datei ist
+            if issue_key not in existing_keys:
+                with open(ISSUE_LOG_FILE, 'a', encoding='utf-8') as f:
+                    f.write(f"{issue_key}\n")
+                logger.info(f"Fehlender Key '{issue_key}' wurde zur Nachverfolgung in {ISSUE_LOG_FILE} hinzugefügt.")
+        except Exception as e:
+            logger.error(f"Fehler beim Schreiben des fehlenden Keys '{issue_key}' in die Log-Datei: {e}")
 
 
     def read_jira_issue(self, file_path):
@@ -129,6 +152,7 @@ class JiraTreeGenerator:
         file_path = self.find_json_for_key(root_key)
         if not file_path:
             logger.error(f"Error: No JSON file found for root key {root_key}")
+            self._log_missing_issue(root_key) # Auch der Root-Key könnte fehlen
             return None
 
         root_data = self.read_jira_issue(file_path)
@@ -177,6 +201,7 @@ class JiraTreeGenerator:
                     child_file_path = self.find_json_for_key(child_key)
                     if not child_file_path:
                         logger.warning(f"Skipping child {child_key}: JSON file not found.")
+                        self._log_missing_issue(child_key) # <-- HIER WIRD DIE NEUE METHODE AUFGERUFEN
                         continue
 
                     child_data = self.read_jira_issue(child_file_path)

@@ -14,7 +14,8 @@ def setup_logger():
     # Verhindern, dass bei jedem Import neue Handler hinzugefügt werden
     if logger.hasHandlers():
         logger.handlers.clear()
-
+        
+    logger.propagate = False
     # Pfad für die Log-Datei
     os.makedirs(LOGS_DIR, exist_ok=True)
     log_file_path = os.path.join(LOGS_DIR, "jira_scraper.log")

@@ -35,6 +35,7 @@ LLM_MODEL_HTML_GENERATOR = "gpt-4.1-mini"
 LLM_MODEL_BUSINESS_VALUE = "gpt-4.1"
 LLM_MODEL_TIME_CREEP = "o3-mini"
 LLM_MODEL_SUMMARY = "o3-mini"
+LLM_MODEL_TRANSLATOR = "gpt-4.1"
 
 # Default Flags
 DEFAULT_SCRAPE_HTML = 'check'
@@ -44,6 +45,14 @@ SCRAPER_CHECK_DAYS = 14  # lädt nur dann ein Jira Issue wenn es älter als x Ta
 JIRA_EMAIL ="ralf.niemeyer@telekom.de"
 
 # Konfiguration für die Jira Tree Ansichten
+MAX_JIRA_TREE_CONTEXT_SIZE = 30
+
+JIRA_TREE_MANAGEMENT_LIGHT = {
+    "Business Initiative": ["realized_by", "child"],
+    "Business Epic": ["realized_by", "child"],
+    "Portfolio Epic": ["realized_by", "child"],
+}
+
 JIRA_TREE_MANAGEMENT = {
     "Business Initiative": ["realized_by", "child"],
     "Business Epic": ["realized_by", "child"],
@@ -56,5 +65,5 @@ JIRA_TREE_FULL = {
     "Business Epic": ["realized_by", "child"],
     "Portfolio Epic": ["realized_by", "child"],
     "Initiative": ["realized_by", "child"],
-    "Epic": ["issue_in_epic"],
+    "Epic": ["issue_in_epic", "realized_by"],
 }

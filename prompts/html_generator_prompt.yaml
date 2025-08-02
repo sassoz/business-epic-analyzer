@@ -29,8 +29,8 @@ user_prompt_template: |
           * **Right Box**: Use **only** the text content from the `scope_summary.scope_evaluation` field to populate this box.
       * **"Zeitplan, Workflow, Time Creep"**:
           * For Zeitplan ("Target Start", "Target End" und "Fix Versions") use the json data `target_start`, `target_end` und `fix_versions`; format "Target Start" and "Target End" as "DD.MM.YYYY"
-          * For the workflow durations ("FUNNEL", "ANALYSIS", "CODING TIME" etc.), use the data from `status_and_duration_summary`; if there are no data for certain workflow durations omit this worksflow step completely
-          * For the text summary about delays and status, use the content of the `time_creep_summary_llm` string.
+          * For the workflow durations ("FUNNEL", "ANALYSIS", "CODING TIME" etc.), use the data from `epic_status_durations` and `coding_duration`; if there are no data for certain workflow durations omit this worksflow step completely
+          * For the text summary about delays and status, use the content of the `time_creep_summary_llm` string. never use any `<pre style='...'</pre>` tags
       * **"Backlog" Image**: Use the image path provided in `backlog_development_plot_path` as the `src` for the backlog image tag.
       * **"Jira Hierarchie" Image**: The path for this image is constructed as `{{epicId}}_issue_tree.png`.
 

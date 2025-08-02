@@ -273,6 +273,28 @@ class JiraScraper:
                 if key not in existing_keys:
                     f.write(f"{key}\n")
 
+    def login(self):
+        """
+        Führt den Login-Prozess durch und initialisiert den WebDriver.
+
+        Verwendet die in der Instanz gespeicherten Konfigurationsdaten
+        (URL, E-Mail, Passwort) und den LoginHandler.
+
+        Returns:
+            bool: True bei Erfolg, andernfalls False.
+        """
+        logger.info("Starte Login-Prozess...")
+        # Nutzt self.pwd, das im Konstruktor geladen wurde
+        login_success = self.login_handler.login(self.url, self.email, self.pwd)
+        if not login_success:
+            logger.error("Login fehlgeschlagen. Breche ab.")
+            return False
+
+        # Speichert den initialisierten driver für spätere Verwendung
+        self.driver = self.login_handler.driver
+        return True
+
+
     def run(self, skip_login=False):
         """
         Orchestriert den gesamten Scraping-Prozess für das in der Instanz
@@ -291,10 +313,9 @@ class JiraScraper:
         try:
             self.issues_to_retry.clear()
             if not skip_login:
-                logger.info("Starte Login-Prozess...")
-                login_success = self.login_handler.login(self.url, self.email, self.pwd)
-                if not login_success: logger.error("Login fehlgeschlagen. Breche ab."); return
-                self.driver = self.login_handler.driver
+                if not self.login():
+                    return
+
             issue_key = self.url.split('/browse/')[1]
             logger.info(f"Beginne mit Start-Issue: {issue_key}")
 

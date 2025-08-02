@@ -61,6 +61,7 @@ class JsonSummaryGenerator:
         # Scope-Daten extrahieren
         scope_res = results.get('ScopeAnalyzer', {})
         scope_summary = {
+            "total_issues": scope_res.get("total_issues_found", 0),
             "total_epics": scope_res.get("total_epics_found", 0),
             "total_stories": scope_res.get("total_stories_found", 0),
             "involved_projects_count": scope_res.get("project_count", 0),

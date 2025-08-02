@@ -15,6 +15,7 @@ Ein umfassendes Tool, das die Extraktion, Analyse, Visualisierung und Berichters
   * Erstellt mit GraphViz automatisch Baumdiagramme der Vorgangshierarchie.  
   * Generiert Plots zur Entwicklung des Backlogs.  
 * **Intelligente HTML-Berichterstellung**: Fusioniert alle Analyse-Metriken und qualitativen Zusammenfassungen in einem einzigen Datenobjekt und generiert daraus mithilfe eines LLMs einen formatierten, leicht lesbaren HTML-Bericht.  
+* **Automatisierte Übersetzung**: Übersetzt die generierten deutschen HTML-Berichte mithilfe eines spezialisierten LLMs ins Englische, wobei Fachterminologie erhalten bleibt.  
 * **Flexible Konfiguration & Steuerung**: Ermöglicht die einfache Konfiguration von JIRA-Zugängen, LLM-Modellen und Skriptverhalten über eine Konfigurationsdatei, Umgebungsvariablen und Kommandozeilen-Argumente.
 
 ## **Analyse-Workflow**
@@ -27,7 +28,8 @@ Der Prozess ist in mehrere logische Schritte unterteilt, um eine hohe Datenquali
 4. **Inhaltliche Analyse (main\_scraper.py)**: Ein LLM wird verwendet, um aus dem reinen Inhalt der JIRA-Tickets eine qualitative Zusammenfassung zu erstellen.  
 5. **Visualisierung (jira\_tree\_classes.py, console\_reporter.py)**: Parallel zur Analyse werden die Hierarchie-Graphen und Backlog-Diagramme als Bilddateien generiert.  
 6. **Synthese (json\_summary\_generator.py)**: Die Ergebnisse aus **allen** metrischen Analysen (Schritt 3\) und der inhaltlichen Analyse (Schritt 4\) werden zu einer einzigen, umfassenden JSON-Datei (\*\_complete\_summary.json) zusammengeführt.  
-7. **Berichterstellung (epic\_html\_generator.py)**: Diese finale JSON-Datei dient als Kontext für ein weiteres LLM, das mithilfe einer HTML-Vorlage den finalen, formatierten Bericht generiert und die zuvor erstellten Visualisierungen einbettet.
+7. **Berichterstellung (epic\_html\_generator.py)**: Diese finale JSON-Datei dient als Kontext für ein weiteres LLM, das mithilfe einer HTML-Vorlage den finalen, formatierten Bericht generiert und die zuvor erstellten Visualisierungen einbettet.  
+8. **Übersetzung (html\_translator.py)**: (Optional) Der generierte deutsche HTML-Bericht wird eingelesen, alle Textinhalte werden extrahiert und in einem einzigen Batch-Aufruf an ein LLM zur Übersetzung ins Englische gesendet.
 
 ## **Quick Start**
 
@@ -48,11 +50,11 @@ Der Prozess ist in mehrere logische Schritte unterteilt, um eine hohe Datenquali
 3. JIRA-Vorgänge definieren:  
    Erstellen Sie eine Textdatei (z. B. BE\_Liste.txt) und fügen Sie die JIRA Business Epic-Keys hinzu (einer pro Zeile).  
 4. **Skript ausführen**:  
-   python src/main\_scraper.py \--file BE\_Liste.txt \--scraper check \--html\_summary true
+   python src/main\_scraper.py \--file BE\_Liste.txt \--scraper check \--html\_summary true \--translate check
 
 5. Ergebnisse prüfen:  
    Die generierten Artefakte finden Sie im data-Verzeichnis:  
-   * data/html\_reports/: Fertige HTML-Berichte.  
+   * data/html\_reports/: Fertige HTML-Berichte (deutsche und englische Versionen).  
    * data/issue\_trees/: PNG-Visualisierungen der Hierarchien.  
    * data/json\_summary/: Finale, zusammengeführte JSON-Berichte.  
    * data/jira\_issues/: Rohe JSON-Daten aus JIRA.  
@@ -66,6 +68,7 @@ Das Skript wird über src/main\_scraper.py gesteuert:
 | :---- | :---- | :---- | :---- |
 | \--scraper | true/false/check | check | **true**: Erzwingt das erneute Scrapen aller Daten. \<br\> **false**: Überspringt das Scraping komplett. \<br\> **check**: Scrapt nur Issues, deren lokale Dateien veraltet sind. |
 | \--html\_summary | true/false/check | false | **true**: Erzwingt die komplette Neu-Analyse und HTML-Erstellung. \<br\> **false**: Überspringt Analyse & Reporting. \<br\> **check**: Nutzt eine gecachte Analyse-Datei (\*\_complete\_summary.json), falls vorhanden, sonst wird neu analysiert. |
+| \--translate | true/false/check | false | **true**: Erzwingt die Übersetzung ins Englische. \<br\> **false**: Überspringt die Übersetzung. \<br\> **check**: Übersetzt nur, wenn die englische HTML-Datei noch nicht existiert. |
 | \--issue | string | None | Verarbeitet eine einzelne, spezifische JIRA-Issue-ID anstelle einer Datei. |
 | \--file | string | None | Pfad zur .txt-Datei mit den Business Epic-Keys. Wenn nicht angegeben, wird interaktiv danach gefragt. |
 
@@ -73,6 +76,9 @@ Das Skript wird über src/main\_scraper.py gesteuert:
 
 * **Standard-Durchlauf (empfohlen)**: Veraltete Daten neu scrapen, Analyse aus Cache laden (falls vorhanden), HTML-Bericht neu erstellen.  
   python src/main\_scraper.py \--file BE\_Liste.txt \--scraper check \--html\_summary check
+
+* **HTML-Berichte erstellen und ins Englische übersetzen**:  
+  python src/main\_scraper.py \--file BE\_Liste.txt \--html\_summary check \--translate check
 
 * **Nur Analyse und Reporting (ohne Scraping)**:  
   python src/main\_scraper.py \--file BE\_Liste.txt \--scraper false \--html\_summary true
@@ -100,16 +106,14 @@ jira-business-epic-analyzer/
 ├── logs/  
 │   └── token\_usage.jsonl \# Protokoll der LLM-Token-Nutzung  
 ├── prompts/              \# YAML-Dateien mit den LLM-Prompts  
-│   ├── business\_value\_prompt.yaml  
-│   ├── html\_generator\_prompt.yaml  
-│   ├── summary\_prompt.yaml  
-│   └── time\_creep\_summary.yaml  
+│   ├── ...  
 ├── src/  
 │   ├── features/         \# Module für die metrische Analyse  
 │   │   ├── ...  
 │   ├── utils/            \# Hilfsmodule und Clients  
 │   │   ├── azure\_ai\_client.py  
 │   │   ├── config.py  
+│   │   ├── html\_translator.py \# NEU: Modul für die Übersetzung  
 │   │   ├── jira\_scraper.py  
 │   │   └── ...  
 │   └── main\_scraper.py   \# Hauptskript zur Orchestrierung  
@@ -117,6 +121,21 @@ jira-business-epic-analyzer/
 │   └── epic-html\_template.html \# HTML-Vorlage für Berichte  
 ├── .env                    \# Umgebungsvariablen (API-Schlüssel etc.)  
 └── README.md
+
+## **Automatisierte Übersetzung**
+
+Das Tool verfügt über eine integrierte Funktion zur automatischen Übersetzung der generierten deutschen HTML-Berichte ins Englische. Dieser Prozess wird durch das Modul src/utils/html\_translator.py gesteuert.
+
+### **Funktionsweise**
+
+Die Übersetzung nutzt eine effiziente **Batch-Strategie**:
+
+1. Alle zu übersetzenden Textinhalte (inkl. Überschriften, Listen, Tabellen und Bildbeschreibungen) werden aus der deutschen HTML-Datei extrahiert.  
+2. Diese Textsammlung wird in einem einzigen Aufruf an ein auf Telekommunikations- und IT-Jargon spezialisiertes LLM gesendet.  
+3. Das LLM gibt ein strukturiertes JSON-Objekt mit den Übersetzungen zurück.  
+4. Das Skript fügt die englischen Texte wieder in die ursprüngliche HTML-Struktur ein und speichert das Ergebnis als neue Datei (\*\_summary\_englisch.html).
+
+Dieser Ansatz gewährleistet eine hohe Geschwindigkeit und eine kontextuell genaue Übersetzung der Fachterminologie. Die Funktion wird über das Kommandozeilenargument \--translate gesteuert.
 
 ## **Prompt Templates**
 

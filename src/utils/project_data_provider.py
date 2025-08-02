@@ -69,9 +69,9 @@ class ProjectDataProvider:
                         except (ValueError, TypeError):
                             points = 0
 
-                    # KORREKTUR: Füge die fehlenden Felder hinzu
                     cache[issue_key] = {
                         'type': data.get('issue_type'),
+                        'title': data.get('title'),
                         'status': data.get('status'),
                         'resolution': data.get('resolution'),
                         'points': points,

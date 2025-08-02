@@ -1,22 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Führt eine Scope- und Status-Analyse für Jira Business Epics durch.
-
-Dieses Skript analysiert eine Menge von Business Epics mit dem Status
-'In Progress' oder 'Closed' aus einem lokalen JSON-Datensatz. Das Hauptziel ist
-es, Korrelationen zwischen dem Umfang eines Business Epics (Anzahl der
-zugehörigen technischen Epics und User Stories) und der "Coding-Dauer"
-(Zeit zwischen dem ersten Wechsel in 'In Progress' und dem Wechsel zu 'Closed')
-zu finden.
-
-Der Workflow umfasst:
-1.  Filtern relevanter Business Epics aus den JSON-Dateien.
-2.  Für jedes Epic den Umfang und die Statuslaufzeiten analysieren.
-3.  Die detaillierten Ergebnisse in eine zentrale CSV-Datei schreiben.
-4.  Eine statistische Quartilsanalyse der Ergebnisse auf der Konsole ausgeben.
-5.  Zwei Scatter-Plots ('epics_vs_duration' und 'stories_vs_duration')
-    erstellen und speichern, die die Korrelationen visualisieren, inklusive
-    einer Regressionsgeraden und des Bestimmtheitsmaßes R².
+Führt eine Scope- und Status-Analyse für Jira Business Epics durch und
+erstellt Top-20-Listen der größten und längsten Projekte.
 """
 
 import os
@@ -29,6 +14,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import numpy as np
+import collections
 
 # Fügt das Projekt-Root-Verzeichnis zum Python-Pfad hinzu
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -45,6 +31,49 @@ from utils.config import JIRA_ISSUES_DIR, JIRA_TREE_FULL
 # --- Globale Konfigurationen ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_CSV_FILE = os.path.join(BASE_DIR, 'scope_and_status_analysis_results.csv')
+
+
+def count_and_print_issue_summary(directory: str):
+    """
+    Durchsucht das angegebene Verzeichnis, zählt alle Jira-Issues nach Typ
+    und gibt eine formatierte Zusammenfassung aus.
+    """
+    issue_counts = collections.defaultdict(int)
+    logger.info(f"Durchsuche Verzeichnis nach allen Issue-Typen: {directory}")
+    if not os.path.isdir(directory):
+        logger.error(f"Fehler: Das Verzeichnis '{directory}' wurde nicht gefunden.")
+        return
+    for filename in os.listdir(directory):
+        if not filename.endswith('.json'):
+            continue
+        file_path = os.path.join(directory, filename)
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            issue_type = data.get('issue_type')
+            if issue_type:
+                issue_counts[issue_type] += 1
+        except Exception as e:
+            logger.error(f"Fehler bei der Verarbeitung von {filename}: {e}")
+
+    if not issue_counts:
+        logger.warning("Keine Jira-Issues zum Zählen gefunden.")
+        return
+
+    print("\n" + "="*23)
+    print("===== JIRA ISSUES =====")
+
+    for issue_type, count in sorted(issue_counts.items(), key=lambda item: item[1], reverse=True):
+        type_name = issue_type
+        # Einfache Pluralisierung für die Ausgabe
+        if type_name.endswith('y'):
+            type_name = type_name[:-1] + "ies"
+        elif not type_name.endswith('s'):
+            type_name += "s"
+
+        print(f"{count} {type_name}")
+
+    print("="*23 + "\n")
 
 
 def load_and_filter_business_epics(target_statuses: List[str]) -> List[str]:
@@ -126,12 +155,8 @@ def print_quartile_analysis(results: List[Dict[str, Any]]):
     print("="*50 + "\n")
 
 
-# AKTUALISIERTE FUNKTION zum Erstellen der Plots mit R²
 def create_scatter_plots(results: List[Dict[str, Any]]):
-    """
-    Erstellt und speichert zwei Scatter-Plots inklusive einer Regressionsgeraden
-    und dem Bestimmtheitsmaß R².
-    """
+    # Unverändert
     logger.info("Erstelle Scatter-Plots mit Regressionsgeraden und R²-Werten...")
     if not results:
         logger.warning("Keine Daten zum Erstellen der Scatter-Plots vorhanden.")
@@ -149,13 +174,12 @@ def create_scatter_plots(results: List[Dict[str, Any]]):
         plt.figure(figsize=(10, 6))
         y1 = df_plottable['coding_duration_days']
         x1 = df_plottable['total_epics_found']
-        plt.xlim(right=25)
+        #plt.xlim(right=25)
 
         plt.scatter(x1, y1, alpha=0.7, label='Business Epics')
 
         m1, b1 = np.polyfit(x1, y1, 1)
 
-        # R²-Wert berechnen
         y1_pred = m1 * x1 + b1
         ss_res1 = np.sum((y1 - y1_pred)**2)
         ss_tot1 = np.sum((y1 - np.mean(y1))**2)
@@ -163,7 +187,6 @@ def create_scatter_plots(results: List[Dict[str, Any]]):
 
         plt.plot(x1, m1*x1 + b1, color='red', linewidth=2, label=f'Trendlinie (y={m1:.2f}x + {b1:.2f})')
 
-        # Titel mit R²-Wert aktualisieren
         plt.title(f'Anzahl technischer Epics vs. Coding-Dauer (R² = {r2_1:.2f})')
         plt.ylabel('Coding-Dauer [Tage]')
         plt.xlabel('Anzahl gefundener technischer Epics')
@@ -182,13 +205,12 @@ def create_scatter_plots(results: List[Dict[str, Any]]):
         plt.figure(figsize=(10, 6))
         y2 = df_plottable['coding_duration_days']
         x2 = df_plottable['total_stories_found']
-        plt.xlim(right=150)
+        #plt.xlim(right=150)
 
         plt.scatter(x2, y2, alpha=0.7, label='Business Epics')
 
         m2, b2 = np.polyfit(x2, y2, 1)
 
-        # R²-Wert berechnen
         y2_pred = m2 * x2 + b2
         ss_res2 = np.sum((y2 - y2_pred)**2)
         ss_tot2 = np.sum((y2 - np.mean(y2))**2)
@@ -196,7 +218,6 @@ def create_scatter_plots(results: List[Dict[str, Any]]):
 
         plt.plot(x2, m2*x2 + b2, color='red', linewidth=2, label=f'Trendlinie (y={m2:.2f}x + {b2:.2f})')
 
-        # Titel mit R²-Wert aktualisieren
         plt.title(f'Anzahl Stories vs. Coding-Dauer (R² = {r2_2:.2f})')
         plt.ylabel('Coding-Dauer [Tage]')
         plt.xlabel('Anzahl gefundener Stories')
@@ -211,10 +232,74 @@ def create_scatter_plots(results: List[Dict[str, Any]]):
         logger.error(f"Fehler beim Erstellen des 'Stories vs. Dauer'-Plots: {e}")
 
 
+def print_top_20_reports(results: List[Dict[str, Any]]):
+    """
+    Erstellt und druckt die Top 20 Listen für die größten und längsten Projekte.
+    """
+    if not results:
+        logger.info("Keine Daten für die Top-20-Analyse vorhanden.")
+        return
+
+    df = pd.DataFrame(results)
+
+    # Berechne die Gesamtzahl der Jira-Issues
+    df['total_jira_issues'] = df['total_epics_found'] + df['total_stories_found']
+
+    # --- Top 20 Größte IT Projekte ---
+    print("\n" + "="*80)
+    print("                 🏆 Top 20 Größte IT Projekte (nach Anzahl Issues) 🏆")
+    print("="*80)
+
+    df_largest = df.sort_values(by='total_jira_issues', ascending=False).head(20)
+
+    output_largest = df_largest[[
+        'business_epic_key',
+        'total_jira_issues',
+        'coding_duration_days',
+        'title'
+    ]].copy()
+    output_largest.rename(columns={
+        'business_epic_key': 'Key',
+        'total_jira_issues': '# Issues',
+        'coding_duration_days': 'Coding-Dauer (Tage)',
+        'title': 'Titel'
+    }, inplace=True)
+
+    print(output_largest.to_string(index=False))
+    print("="*80)
+
+
+    # --- Top 20 Längste IT Projekte ---
+    print("\n" + "="*80)
+    print("                 ⏳ Top 20 Längste IT Projekte (nach Coding-Dauer) ⏳")
+    print("="*80)
+
+    df_longest = df.dropna(subset=['coding_duration_days']).sort_values(by='coding_duration_days', ascending=False).head(20)
+
+    output_longest = df_longest[[
+        'business_epic_key',
+        'total_jira_issues',
+        'coding_duration_days',
+        'title'
+    ]].copy()
+    output_longest.rename(columns={
+        'business_epic_key': 'Key',
+        'total_jira_issues': '# Issues',
+        'coding_duration_days': 'Coding-Dauer (Tage)',
+        'title': 'Titel'
+    }, inplace=True)
+
+    print(output_longest.to_string(index=False))
+    print("="*80 + "\n")
+
+
 def main():
-    # Unverändert
     start_time = time.time()
     logger.info("Starte die Scope- und Status-Analyse für Business Epics.")
+
+    # +++ NEUER TEIL: Zähle und zeige alle Issue-Typen zu Beginn an +++
+    count_and_print_issue_summary(JIRA_ISSUES_DIR)
+    # +++ ENDE NEUER TEIL +++
 
     target_statuses = ["In Progress", "Closed"]
     epics_to_analyze = load_and_filter_business_epics(target_statuses)
@@ -255,6 +340,10 @@ def main():
 
             combined_result = {**scope_result}
             combined_result['business_epic_key'] = epic_key
+
+            # HINWEIS: Stelle sicher, dass 'title' in _build_issue_details_cache hinzugefügt wurde!
+            combined_result['title'] = data_provider.issue_details.get(epic_key, {}).get('title', 'N/A')
+
             combined_result['coding_start_time'] = coding_start
             combined_result['coding_end_time'] = coding_end
             combined_result['coding_duration_days'] = coding_duration_days
@@ -263,6 +352,8 @@ def main():
             all_analysis_results.append(combined_result)
         except Exception as e:
             logger.error(f"Ein unerwarteter Fehler ist bei der Analyse von {epic_key} aufgetreten: {e}", exc_info=True)
+
+    print_top_20_reports(all_analysis_results)
 
     write_results_to_csv(all_analysis_results, OUTPUT_CSV_FILE)
 
