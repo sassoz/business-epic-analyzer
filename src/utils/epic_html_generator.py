@@ -29,7 +29,7 @@ from typing import Dict, Tuple, Optional
 from openai import OpenAI
 from dotenv import load_dotenv
 from utils.prompt_loader import load_prompt_template
-from utils.config import EPIC_HTML_TEMPLATE, HTML_REPORTS_DIR, ISSUE_TREES_DIR
+from utils.config import EPIC_HTML_TEMPLATE, HTML_REPORTS_DIR, ISSUE_TREES_DIR, PLOT_DIR
 
 class EpicHtmlGenerator:
     """
@@ -108,56 +108,67 @@ class EpicHtmlGenerator:
         # Wenn nichts gefunden wurde, vollständige Antwort zurückgeben
         return response
 
-    def _embed_images_in_html(self, html_content: str, output_dir: str, BE_key: str) -> str:
-        """Embeds images directly in HTML content using Base64 encoding."""
-        # Find all image tags in HTML
-        img_pattern = re.compile(r'<img\s+[^>]*src=["\']([^"\']+)["\'][^>]*>')
-        img_matches = img_pattern.finditer(html_content)
+    def _embed_images_in_html(self, html_content: str, BE_key: str) -> str:
+        """
+        Bettet alle lokalen Bilder aus vordefinierten Verzeichnissen direkt
+        als Base64 in den HTML-Inhalt ein.
+        """
+        # NEU: Liste der Verzeichnisse, in denen nach Bildern gesucht werden soll
+        SEARCH_DIRS = [ISSUE_TREES_DIR, PLOT_DIR]
 
-        for match in img_matches:
+        # Finde alle Bild-Tags im HTML
+        img_pattern = re.compile(r'<img\s+[^>]*src=["\']([^"\']+)["\'][^>]*>')
+
+        # finditer() wird verwendet, um eine veränderbare Kopie für die Iteration zu erstellen
+        for match in list(img_pattern.finditer(html_content)):
             img_tag = match.group(0)
             img_src = match.group(1)
 
-            # Skip already embedded or remote images
+            # Überspringe bereits eingebettete oder externe Bilder
             if img_src.startswith('data:') or img_src.startswith('http'):
                 continue
 
-            # Check if image matches the BE_key pattern
-            if f"{BE_key}_issue_tree.png" in img_src:
-                # Use direct path to issue tree in ISSUE_TREES_DIR
-                img_path = os.path.join(ISSUE_TREES_DIR, f"{BE_key}_issue_tree.png")
+            # GEÄNDERT: Verallgemeinerte Logik zur Dateisuche
+            found_path = None
+            filename = os.path.basename(img_src) # Isoliert den Dateinamen
 
-                if os.path.exists(img_path):
-                    try:
-                        # Get image MIME type
-                        mime_type, _ = mimetypes.guess_type(img_path)
-                        if not mime_type:
-                            mime_type = 'image/png'
+            for search_dir in SEARCH_DIRS:
+                potential_path = os.path.join(search_dir, filename)
+                if os.path.exists(potential_path):
+                    found_path = potential_path
+                    logger.info(f"Bild '{filename}' gefunden in '{search_dir}'")
+                    break # Stoppe die Suche, sobald die Datei gefunden wurde
 
-                        # Read and encode image as Base64
-                        with open(img_path, 'rb') as img_file:
-                            img_data = img_file.read()
-                            img_base64 = base64.b64encode(img_data).decode('utf-8')
+            # Wenn die Bilddatei in einem der Verzeichnisse gefunden wurde...
+            if found_path:
+                try:
+                    # Bild-MIME-Typ ermitteln
+                    mime_type, _ = mimetypes.guess_type(found_path)
+                    if not mime_type:
+                        mime_type = 'image/png'  # Standard-Fallback
 
-                        # Create data URI
-                        data_uri = f'data:{mime_type};base64,{img_base64}'
+                    # Bild lesen und als Base64 kodieren
+                    with open(found_path, 'rb') as img_file:
+                        img_data = img_file.read()
+                        img_base64 = base64.b64encode(img_data).decode('utf-8')
 
-                        # Replace src attribute in img tag
-                        new_img_tag = img_tag.replace(img_src, data_uri)
-                        html_content = html_content.replace(img_tag, new_img_tag)
+                    # Data-URI erstellen
+                    data_uri = f'data:{mime_type};base64,{img_base64}'
 
-                        logger.info(f"Image embedded: {img_src}")
-                    except Exception as e:
-                        logger.error(f"Error processing image {img_src}: {str(e)}")
-                else:
-                    # ***** NEUE LOGIK *****
-                    # If the image file does not exist, replace the image tag with text.
-                    logger.warning(f"Jira hierarchy image not found for {BE_key}. Replacing with text.")
-                    replacement_text = "<p style='color: #6c757d; font-style: italic;'>keine Jira Hierarchie verfügbar</p>"
-                    html_content = html_content.replace(img_tag, replacement_text)
+                    # Ersetze das src-Attribut im img-Tag
+                    new_img_tag = img_tag.replace(img_src, data_uri)
+                    html_content = html_content.replace(img_tag, new_img_tag)
+
+                    logger.info(f"Bild erfolgreich eingebettet: {filename}")
+                except Exception as e:
+                    logger.error(f"Fehler bei der Verarbeitung des Bildes {filename}: {str(e)}")
+            else:
+                # Wenn die Bilddatei nicht gefunden wurde, ersetze den Tag durch Text
+                logger.warning(f"Bilddatei '{filename}' nicht gefunden. Ersetze durch Text.")
+                replacement_text = f"<p style='color: #6c757d; font-style: italic;'>Grafik '{filename}' nicht verfügbar</p>"
+                html_content = html_content.replace(img_tag, replacement_text)
 
         return html_content
-
 
     def generate_epic_html(self, complete_epic_data: dict, BE_key: str, output_file: Optional[str] = None):
         """
@@ -208,7 +219,7 @@ class EpicHtmlGenerator:
                 )
 
             html_content = self._extract_html(response_content)
-            html_content = self._embed_images_in_html(html_content, output_dir, BE_key)
+            html_content = self._embed_images_in_html(html_content, BE_key)
 
             with open(output_file, 'w', encoding='utf-8') as file:
                 file.write(html_content)
